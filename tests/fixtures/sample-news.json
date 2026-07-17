@@ -1,0 +1,22 @@
+[
+  {
+    "news_id": "news-001",
+    "player_id": "player-wr-002",
+    "source": "fixture-news",
+    "headline": "Nico West limited in practice",
+    "summary": "Fixture injury note for testing questionable status handling.",
+    "impact": "medium",
+    "published_at": "2026-09-09T18:00:00Z",
+    "ingested_at": "2026-09-09T18:05:00Z"
+  },
+  {
+    "news_id": "news-002",
+    "player_id": "player-rb-005",
+    "source": "fixture-news",
+    "headline": "Miles Hart placed on injured reserve",
+    "summary": "Confirmed IR move; roster slot must be addressed.",
+    "impact": "high",
+    "published_at": "2026-09-10T14:00:00Z",
+    "ingested_at": "2026-09-10T14:05:00Z"
+  }
+]

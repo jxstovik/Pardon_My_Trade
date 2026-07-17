@@ -2,19 +2,21 @@
 
 Documentation-first foundation for an autonomous Fantasy Sports General Manager.
 
-Current milestone: Phase 0 - Documentation Sprint (complete). MVP in progress.
+Current milestone: Phase 0 - Documentation Sprint (complete). MVP complete; V1 (Daily Fantasy General Manager) implemented.
 
-Current implementation target: MVP - Single League Assistant (recommendation-only).
+Current implementation target: Version 1 - Daily Fantasy General Manager.
 
-Built so far:
+Built so far (MVP + V1):
 
-- Canonical domain models (`src/models`).
+- Canonical domain models (`src/models`, including `v1.ts` V1 types).
 - Fixture platform adapter (read-only) and a real read-only Sleeper adapter (`src/adapters`).
-- Knowledge repository interface + in-memory implementation (`src/knowledge`).
+- Knowledge repository interface + in-memory and SQLite implementations (`src/knowledge`).
 - Deterministic rule engine: lineup legality, scoring, eligibility, waiver/trade/completeness validation (`src/rules`).
 - Decision engine: lineup, waiver, drop, and trade candidate generation + weekly report inputs (`src/decisions`).
 - Recommendation engine: candidate ranking, evidence attachment, contract validation, and weekly report generation (`src/recommendations`).
-- End-to-end weekly-report pipeline (`src/pipeline`).
+- V1 services: scheduler (`src/scheduler`), news ingestion (`src/news`), projection consensus engine (`src/projections`), injury monitor / manager profiles / league intelligence (`src/intelligence`), historical tracking + V1 store (`src/history`), notifications (`src/notifications`).
+- End-to-end pipelines: `weekly-report` and `refresh` (`src/pipeline`).
+- Local web GUI: HTTP API + single-page app (`src/api`, `public/index.html`).
 
 The MVP is being built fixture-first and credential-free. Live fantasy platform logins, GitHub remote setup, and AI provider keys are intentionally postponed.
 
@@ -39,7 +41,13 @@ npm run build
 npm test
 npm run pmt -- import-fixture
 npm run pmt -- weekly-report [leagueExternalId] [teamExternalId]
+npm run refresh [leagueExternalId] [teamExternalId]
+npm run serve
 ```
+
+`npm run refresh` runs the full V1 refresh pipeline (news ingestion, projection consensus, injury alerts, manager-profile updates, historical recording, weekly report, and notifications). `npm run serve` starts a local web GUI at `http://localhost:3000` backed by file-backed SQLite stores under `data/`; use the **Run Refresh** button to trigger a refresh and view the weekly report, alerts, manager profiles, and news.
+
+Environment overrides: `PMT_DATA_DIR`, `PMT_PORT`, `PMT_NEWS_PATH`, `PMT_FIXTURE_PATH`.
 
 Credential-free fixture verification is also available through PowerShell:
 

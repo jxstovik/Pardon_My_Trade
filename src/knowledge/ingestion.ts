@@ -8,10 +8,15 @@ export async function ingestFixtureSnapshot(
   fixturePath: string,
   repository: KnowledgeRepository
 ): Promise<LeagueSnapshot> {
+  const parsed = await loadFixtureSnapshotSource(fixturePath);
+  await repository.saveLeagueSnapshot(parsed);
+  return parsed;
+}
+
+export async function loadFixtureSnapshotSource(fixturePath: string): Promise<LeagueSnapshot> {
   const absolutePath = resolve(fixturePath);
   const raw = await readFile(absolutePath, "utf8");
   const parsed = JSON.parse(raw) as unknown;
   assertLeagueSnapshot(parsed);
-  await repository.saveLeagueSnapshot(parsed);
   return parsed;
 }

@@ -1,6 +1,19 @@
+import { mkdir } from "node:fs/promises";
+import { join } from "node:path";
 import { createDefaultConfig } from "./config/app-config.js";
 import { FixturePlatformReader } from "./adapters/fixture/fixture-platform-reader.js";
-import { runWeeklyReport } from "./pipeline/weekly-report.js";
+import { ScoringRuleEngine } from "./rules/rule-engine.js";
+import { DefaultDecisionEngine } from "./decisions/decision-engine.js";
+import { DefaultRecommendationEngine } from "./recommendations/recommendation-engine.js";
+import { SqliteKnowledgeRepository } from "./knowledge/sqlite-knowledge-repository.js";
+import { SqliteV1Store } from "./history/sqlite-v1-store.js";
+import { InMemoryKnowledgeRepository } from "./knowledge/in-memory-knowledge-repository.js";
+import { InMemoryV1Store } from "./history/v1-store.js";
+import { FixtureNewsSource } from "./news/news-source.js";
+import { ConsoleNotificationProvider, FileNotificationProvider } from "./notifications/notification-provider.js";
+import { loadFixtureSnapshotSource, ingestFixtureSnapshot } from "./knowledge/ingestion.js";
+import { runRefresh } from "./pipeline/refresh.js";
+import { createApiServer } from "./api/server.js";
 
 const command = process.argv[2] ?? "help";
 
@@ -13,7 +26,7 @@ async function main(): Promise<void> {
       return;
     case "version":
     case "--version":
-      console.log("pardon-my-trade 0.1.0");
+      console.log("pardon-my-trade 0.2.0");
       return;
     case "import-fixture": {
       const config = createDefaultConfig();
@@ -35,6 +48,7 @@ async function main(): Promise<void> {
       return;
     }
     case "weekly-report": {
+      const { runWeeklyReport } = await import("./pipeline/weekly-report.js");
       const config = createDefaultConfig();
       const leagueExternalId = process.argv[3] ?? "pmt-demo-football";
       const teamExternalId = process.argv[4] ?? "team-001";
@@ -57,6 +71,75 @@ async function main(): Promise<void> {
       }, null, 2));
       return;
     }
+    case "refresh": {
+      const config = createDefaultConfig();
+      const leagueExternalId = process.argv[3] ?? "pmt-demo-football";
+      const teamExternalId = process.argv[4] ?? "team-001";
+      const repository = new InMemoryKnowledgeRepository();
+      const v1Store = new InMemoryV1Store();
+      const ruleEngine = new ScoringRuleEngine();
+      const decisionEngine = new DefaultDecisionEngine(ruleEngine);
+      const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
+      const newsPath = process.env.PMT_NEWS_PATH ?? "tests/fixtures/sample-news.json";
+
+      const summary = await runRefresh({
+        fixturePath: config.fixturePath,
+        newsPath,
+        leagueExternalId,
+        teamExternalId,
+        repository,
+        v1Store,
+        ruleEngine,
+        decisionEngine,
+        recommendationEngine,
+        notificationProviders: [new ConsoleNotificationProvider()]
+      });
+      console.log(JSON.stringify(summary, null, 2));
+      return;
+    }
+    case "serve": {
+      const config = createDefaultConfig();
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      await mkdir(dataDir, { recursive: true });
+
+      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+      const v1Store = new SqliteV1Store({ filePath: join(dataDir, "pmt-v1.db") });
+      const ruleEngine = new ScoringRuleEngine();
+      const decisionEngine = new DefaultDecisionEngine(ruleEngine);
+      const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
+      const newsPath = process.env.PMT_NEWS_PATH ?? "tests/fixtures/sample-news.json";
+
+      const initialSource = await loadFixtureSnapshotSource(config.fixturePath);
+      try {
+        await ingestFixtureSnapshot(config.fixturePath, repository);
+      } catch {
+        // Snapshot already ingested from a previous run; reuse existing.
+      }
+      const initialSnapshot = await repository.getLeagueSnapshot(initialSource.snapshot_id) ?? initialSource;
+
+      const doRefresh = () => runRefresh({
+        fixturePath: config.fixturePath,
+        newsPath,
+        leagueExternalId: "pmt-demo-football",
+        teamExternalId: "team-001",
+        repository,
+        v1Store,
+        ruleEngine,
+        decisionEngine,
+        recommendationEngine,
+        notificationProviders: [
+          new ConsoleNotificationProvider(),
+          new FileNotificationProvider(join(dataDir, "notifications.log"))
+        ]
+      });
+
+      const port = Number(process.env.PMT_PORT ?? 3000);
+      const server = createApiServer({ repository, v1Store, refresh: doRefresh, initialSnapshot });
+      server.listen(port, () => {
+        console.log(`Pardon My Trade GUI running at http://localhost:${port}`);
+      });
+      return;
+    }
     default:
       throw new Error(`Unknown command: ${command}`);
   }
@@ -70,6 +153,12 @@ Usage:
   pmt version
   pmt import-fixture
   pmt weekly-report [leagueExternalId] [teamExternalId]
+  pmt refresh [leagueExternalId] [teamExternalId]
+  pmt serve
+
+V1 adds scheduled refresh, news ingestion, injury alerts, projection
+consensus, manager profiles, historical tracking, and notifications,
+surfaced through a local web GUI (pmt serve).
 
 MVP status:
   Read-only fixture import and weekly recommendation report are available.
