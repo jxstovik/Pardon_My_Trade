@@ -1,0 +1,22 @@
+{
+  "name": "pardon-my-trade",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Recommendation-only fantasy sports general manager MVP.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clean.ps1",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/tests/**/*.test.js",
+    "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1",
+    "pmt": "node dist/src/cli.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
