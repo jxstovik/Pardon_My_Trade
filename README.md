@@ -55,6 +55,19 @@ Credential-free fixture verification is also available through PowerShell:
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1
 ```
 
+## Hooking up a real league (Sleeper)
+
+The Sleeper adapter (`src/adapters/sleeper`) reads public league data from Sleeper's API **read-only and without credentials** (public leagues; consistent with ADR-0005). The `import-sleeper` command assembles a canonical `LeagueSnapshot` from a live league and stores it in the SQLite knowledge store:
+
+```text
+npm run pmt -- import-sleeper <your-sleeper-league-id> [season]
+npm run serve
+```
+
+After import, open `http://localhost:3000` — `serve` loads the most recently imported snapshot and the **Run Refresh** button runs the full V1 pipeline against your league.
+
+**Current limitation:** a `LeagueSnapshot` also requires `projections` and `news`, which the Sleeper adapter does not yet provide. Until a projection/news source is connected, imported leagues show structure, rosters, standings, free agents, and waiver order, but weekly reports will have zero projected points and no waiver/trade candidates. You can supply your own data by passing `projections`/`news` into `buildSnapshotFromPlatform` (see `src/knowledge/ingestion.ts`), or wait for the V2 projection-ingestion work package. Live platform logins and any league actions remain intentionally out of scope.
+
 ## Documentation Package
 
 - [System Vision](docs/01-system-vision.md)

@@ -1,7 +1,9 @@
-import { mkdir } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { createDefaultConfig } from "./config/app-config.js";
 import { FixturePlatformReader } from "./adapters/fixture/fixture-platform-reader.js";
+import { SleeperPlatformReader } from "./adapters/sleeper/sleeper-platform-reader.js";
+import { buildSnapshotFromPlatform } from "./knowledge/ingestion.js";
 import { ScoringRuleEngine } from "./rules/rule-engine.js";
 import { DefaultDecisionEngine } from "./decisions/decision-engine.js";
 import { DefaultRecommendationEngine } from "./recommendations/recommendation-engine.js";
@@ -97,6 +99,34 @@ async function main(): Promise<void> {
       console.log(JSON.stringify(summary, null, 2));
       return;
     }
+    case "import-sleeper": {
+      const leagueId = process.argv[3];
+      if (!leagueId) {
+        throw new Error("import-sleeper requires a Sleeper league id: pmt import-sleeper <leagueId> [season]");
+      }
+      const season = process.argv[4] ?? new Date().getFullYear().toString();
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      await mkdir(dataDir, { recursive: true });
+
+      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+      const reader = new SleeperPlatformReader();
+      const snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
+
+      await repository.saveLeagueSnapshot(snapshot);
+      const pointer = { snapshot_id: snapshot.snapshot_id, league_id: snapshot.league.league_id };
+      await writeFile(join(dataDir, "last-snapshot.json"), JSON.stringify(pointer), "utf8");
+
+      console.log(JSON.stringify({
+        message: "Imported Sleeper league snapshot (read-only).",
+        snapshotId: snapshot.snapshot_id,
+        league: snapshot.league.name,
+        teams: snapshot.league.teams.length,
+        players: snapshot.players.length,
+        freeAgents: snapshot.free_agents.length,
+        note: "Projections and news are empty until a projection source is connected. Run `pmt serve` to view."
+      }, null, 2));
+      return;
+    }
     case "serve": {
       const config = createDefaultConfig();
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
@@ -115,7 +145,19 @@ async function main(): Promise<void> {
       } catch {
         // Snapshot already ingested from a previous run; reuse existing.
       }
-      const initialSnapshot = await repository.getLeagueSnapshot(initialSource.snapshot_id) ?? initialSource;
+      const initialSnapshot0 = await repository.getLeagueSnapshot(initialSource.snapshot_id) ?? initialSource;
+      let initialSnapshot = initialSnapshot0;
+
+      try {
+        const pointerRaw = await readFile(join(dataDir, "last-snapshot.json"), "utf8");
+        const pointer = JSON.parse(pointerRaw) as { snapshot_id: string };
+        const imported = await repository.getLeagueSnapshot(pointer.snapshot_id);
+        if (imported) {
+          initialSnapshot = imported;
+        }
+      } catch {
+        // No previously imported snapshot; fall back to the fixture.
+      }
 
       const doRefresh = () => runRefresh({
         fixturePath: config.fixturePath,
@@ -154,6 +196,7 @@ Usage:
   pmt import-fixture
   pmt weekly-report [leagueExternalId] [teamExternalId]
   pmt refresh [leagueExternalId] [teamExternalId]
+  pmt import-sleeper <sleeperLeagueId> [season]
   pmt serve
 
 V1 adds scheduled refresh, news ingestion, injury alerts, projection
