@@ -2,23 +2,43 @@
 
 Documentation-first foundation for an autonomous Fantasy Sports General Manager.
 
-Current milestone: Phase 0 - Documentation Sprint.
+Current milestone: Phase 0 - Documentation Sprint (complete). MVP in progress.
 
-Current implementation target: MVP Phase 1-3.
+Current implementation target: MVP - Single League Assistant (recommendation-only).
+
+Built so far:
+
+- Canonical domain models (`src/models`).
+- Fixture platform adapter (read-only) and a real read-only Sleeper adapter (`src/adapters`).
+- Knowledge repository interface + in-memory implementation (`src/knowledge`).
+- Deterministic rule engine: lineup legality, scoring, eligibility, waiver/trade/completeness validation (`src/rules`).
+- Decision engine: lineup, waiver, drop, and trade candidate generation + weekly report inputs (`src/decisions`).
+- Recommendation engine: candidate ranking, evidence attachment, contract validation, and weekly report generation (`src/recommendations`).
+- End-to-end weekly-report pipeline (`src/pipeline`).
 
 The MVP is being built fixture-first and credential-free. Live fantasy platform logins, GitHub remote setup, and AI provider keys are intentionally postponed.
 
+## Storage
+
+The knowledge layer implements the `KnowledgeRepository` interface. Two implementations are available:
+
+- `InMemoryKnowledgeRepository` — default for tests and short-lived CLI runs (immutable snapshots per ADR-0004).
+- `SqliteKnowledgeRepository` — local file-backed SQLite store (via `better-sqlite3`), the recommended MVP default for development and production per `docs/09-knowledge-base.md`.
+
+Snapshots are immutable: re-saving an existing `snapshot_id` throws. Recommendations and decision audits are upserted by id.
+
 ## Local Development
 
-The current implementation is TypeScript with a read-only fixture adapter.
+The current implementation is TypeScript with read-only fixture and Sleeper adapters.
 
-Planned commands once Node.js dependencies are installed:
+Commands:
 
 ```text
 npm install
 npm run build
 npm test
 npm run pmt -- import-fixture
+npm run pmt -- weekly-report [leagueExternalId] [teamExternalId]
 ```
 
 Credential-free fixture verification is also available through PowerShell:

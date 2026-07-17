@@ -1,5 +1,6 @@
 import { createDefaultConfig } from "./config/app-config.js";
 import { FixturePlatformReader } from "./adapters/fixture/fixture-platform-reader.js";
+import { runWeeklyReport } from "./pipeline/weekly-report.js";
 
 const command = process.argv[2] ?? "help";
 
@@ -33,6 +34,29 @@ async function main(): Promise<void> {
       }, null, 2));
       return;
     }
+    case "weekly-report": {
+      const config = createDefaultConfig();
+      const leagueExternalId = process.argv[3] ?? "pmt-demo-football";
+      const teamExternalId = process.argv[4] ?? "team-001";
+
+      const result = await runWeeklyReport(config.fixturePath, leagueExternalId, teamExternalId);
+      console.log(JSON.stringify({
+        team: result.team.name,
+        lineupValid: result.lineupEvaluationValid,
+        projectedPoints: result.inputs.currentProjectedPoints,
+        lineupCandidates: result.inputs.lineupCandidates.length,
+        waiverCandidates: result.inputs.waiverCandidates.length,
+        dropCandidates: result.inputs.dropCandidates.length,
+        tradeCandidates: result.inputs.tradeCandidates.length,
+        recommendation: {
+          id: result.report.recommendation_id,
+          type: result.report.type,
+          confidence: result.report.confidence,
+          status: result.report.status
+        }
+      }, null, 2));
+      return;
+    }
     default:
       throw new Error(`Unknown command: ${command}`);
   }
@@ -45,9 +69,11 @@ Usage:
   pmt help
   pmt version
   pmt import-fixture
+  pmt weekly-report [leagueExternalId] [teamExternalId]
 
 MVP status:
-  Read-only fixture import is available. Live platform logins are intentionally postponed.
+  Read-only fixture import and weekly recommendation report are available.
+  Live platform logins are intentionally postponed.
 `);
 }
 
