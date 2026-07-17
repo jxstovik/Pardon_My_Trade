@@ -1,0 +1,219 @@
+{
+  "snapshot_id": "snapshot-2026-week-01",
+  "league": {
+    "schema_version": "1.0.0",
+    "created_at": "2026-07-10T00:00:00Z",
+    "updated_at": "2026-07-10T00:00:00Z",
+    "source_system": "fixture",
+    "source_record_id": "pmt-demo-football",
+    "league_id": "league-001",
+    "external_id": "pmt-demo-football",
+    "platform": "fixture",
+    "sport": "football",
+    "season": "2026",
+    "name": "Pardon My Trade Demo League",
+    "teams": [
+      {
+        "schema_version": "1.0.0",
+        "created_at": "2026-07-10T00:00:00Z",
+        "updated_at": "2026-07-10T00:00:00Z",
+        "source_system": "fixture",
+        "source_record_id": "team-001",
+        "team_id": "team-001",
+        "external_id": "team-001",
+        "league_id": "league-001",
+        "manager_id": "manager-001",
+        "name": "The Waiver Wires",
+        "roster": {
+          "team_id": "team-001",
+          "starters": [
+            { "slot_id": "team-001-QB-1", "slot_type": "QB", "allowed_positions": ["QB"], "locked": false, "player_id": "player-qb-001" },
+            { "slot_id": "team-001-RB-1", "slot_type": "RB", "allowed_positions": ["RB"], "locked": false, "player_id": "player-rb-001" },
+            { "slot_id": "team-001-RB-2", "slot_type": "RB", "allowed_positions": ["RB"], "locked": false, "player_id": "player-rb-002" },
+            { "slot_id": "team-001-WR-1", "slot_type": "WR", "allowed_positions": ["WR"], "locked": false, "player_id": "player-wr-001" },
+            { "slot_id": "team-001-WR-2", "slot_type": "WR", "allowed_positions": ["WR"], "locked": false, "player_id": "player-wr-002" },
+            { "slot_id": "team-001-TE-1", "slot_type": "TE", "allowed_positions": ["TE"], "locked": false, "player_id": "player-te-001" },
+            { "slot_id": "team-001-FLEX-1", "slot_type": "FLEX", "allowed_positions": ["RB", "WR", "TE"], "locked": false, "player_id": "player-wr-003" },
+            { "slot_id": "team-001-K-1", "slot_type": "K", "allowed_positions": ["K"], "locked": false, "player_id": "player-k-001" },
+            { "slot_id": "team-001-DST-1", "slot_type": "DST", "allowed_positions": ["DST"], "locked": false, "player_id": "player-dst-001" }
+          ],
+          "bench": [
+            { "slot_id": "team-001-BN-1", "slot_type": "BN", "allowed_positions": ["QB", "RB", "WR", "TE", "K", "DST"], "locked": false, "player_id": "player-qb-002" },
+            { "slot_id": "team-001-BN-2", "slot_type": "BN", "allowed_positions": ["QB", "RB", "WR", "TE", "K", "DST"], "locked": false, "player_id": "player-rb-003" },
+            { "slot_id": "team-001-BN-3", "slot_type": "BN", "allowed_positions": ["QB", "RB", "WR", "TE", "K", "DST"], "locked": false, "player_id": "player-wr-004" },
+            { "slot_id": "team-001-BN-4", "slot_type": "BN", "allowed_positions": ["QB", "RB", "WR", "TE", "K", "DST"], "locked": false, "player_id": "player-te-002" },
+            { "slot_id": "team-001-BN-5", "slot_type": "BN", "allowed_positions": ["QB", "RB", "WR", "TE", "K", "DST"], "locked": false, "player_id": "player-rb-004" },
+            { "slot_id": "team-001-BN-6", "slot_type": "BN", "allowed_positions": ["QB", "RB", "WR", "TE", "K", "DST"], "locked": false, "player_id": "player-wr-005" }
+          ],
+          "injured_reserve": [
+            { "slot_id": "team-001-IR-1", "slot_type": "IR", "allowed_positions": ["QB", "RB", "WR", "TE"], "locked": false, "player_id": "player-rb-005" }
+          ],
+          "taxi": [],
+          "last_updated_at": "2026-07-10T00:00:00Z"
+        },
+        "standings": { "wins": 0, "losses": 0, "ties": 0, "points_for": 0, "points_against": 0, "rank": 1 },
+        "transaction_history": []
+      },
+      {
+        "schema_version": "1.0.0",
+        "created_at": "2026-07-10T00:00:00Z",
+        "updated_at": "2026-07-10T00:00:00Z",
+        "source_system": "fixture",
+        "source_record_id": "team-002",
+        "team_id": "team-002",
+        "external_id": "team-002",
+        "league_id": "league-001",
+        "manager_id": "manager-002",
+        "name": "Fourth And Long",
+        "roster": { "team_id": "team-002", "starters": [], "bench": [], "injured_reserve": [], "taxi": [], "last_updated_at": "2026-07-10T00:00:00Z" },
+        "standings": { "wins": 0, "losses": 0, "ties": 0, "points_for": 0, "points_against": 0, "rank": 2 },
+        "transaction_history": []
+      },
+      {
+        "schema_version": "1.0.0",
+        "created_at": "2026-07-10T00:00:00Z",
+        "updated_at": "2026-07-10T00:00:00Z",
+        "source_system": "fixture",
+        "source_record_id": "team-003",
+        "team_id": "team-003",
+        "external_id": "team-003",
+        "league_id": "league-001",
+        "manager_id": "manager-003",
+        "name": "Bye Week Blues",
+        "roster": { "team_id": "team-003", "starters": [], "bench": [], "injured_reserve": [], "taxi": [], "last_updated_at": "2026-07-10T00:00:00Z" },
+        "standings": { "wins": 0, "losses": 0, "ties": 0, "points_for": 0, "points_against": 0, "rank": 3 },
+        "transaction_history": []
+      },
+      {
+        "schema_version": "1.0.0",
+        "created_at": "2026-07-10T00:00:00Z",
+        "updated_at": "2026-07-10T00:00:00Z",
+        "source_system": "fixture",
+        "source_record_id": "team-004",
+        "team_id": "team-004",
+        "external_id": "team-004",
+        "league_id": "league-001",
+        "manager_id": "manager-004",
+        "name": "Trade Bait",
+        "roster": { "team_id": "team-004", "starters": [], "bench": [], "injured_reserve": [], "taxi": [], "last_updated_at": "2026-07-10T00:00:00Z" },
+        "standings": { "wins": 0, "losses": 0, "ties": 0, "points_for": 0, "points_against": 0, "rank": 4 },
+        "transaction_history": []
+      }
+    ],
+    "roster_settings": {
+      "slots": [
+        { "slot": "QB", "count": 1, "positions": ["QB"] },
+        { "slot": "RB", "count": 2, "positions": ["RB"] },
+        { "slot": "WR", "count": 2, "positions": ["WR"] },
+        { "slot": "TE", "count": 1, "positions": ["TE"] },
+        { "slot": "FLEX", "count": 1, "positions": ["RB", "WR", "TE"] },
+        { "slot": "K", "count": 1, "positions": ["K"] },
+        { "slot": "DST", "count": 1, "positions": ["DST"] }
+      ],
+      "bench_count": 6,
+      "injured_reserve_count": 1,
+      "taxi_count": 0
+    },
+    "scoring_settings": {
+      "scoring_type": "ppr",
+      "rules": [
+        { "rule_id": "pass-yd", "category": "passing", "stat": "passing_yards", "points": 0.04, "conditions": {}, "applies_to_positions": ["QB"] },
+        { "rule_id": "pass-td", "category": "passing", "stat": "passing_touchdowns", "points": 4, "conditions": {}, "applies_to_positions": ["QB"] },
+        { "rule_id": "int", "category": "passing", "stat": "interceptions", "points": -2, "conditions": {}, "applies_to_positions": ["QB"] },
+        { "rule_id": "rush-yd", "category": "rushing", "stat": "rushing_yards", "points": 0.1, "conditions": {}, "applies_to_positions": ["QB", "RB", "WR", "TE"] },
+        { "rule_id": "rush-td", "category": "rushing", "stat": "rushing_touchdowns", "points": 6, "conditions": {}, "applies_to_positions": ["QB", "RB", "WR", "TE"] },
+        { "rule_id": "rec", "category": "receiving", "stat": "receptions", "points": 1, "conditions": {}, "applies_to_positions": ["RB", "WR", "TE"] },
+        { "rule_id": "rec-yd", "category": "receiving", "stat": "receiving_yards", "points": 0.1, "conditions": {}, "applies_to_positions": ["RB", "WR", "TE"] },
+        { "rule_id": "rec-td", "category": "receiving", "stat": "receiving_touchdowns", "points": 6, "conditions": {}, "applies_to_positions": ["RB", "WR", "TE"] }
+      ]
+    },
+    "waiver_settings": { "type": "faab", "budget": 100, "claim_deadline": "2026-09-09T03:00:00Z" },
+    "trade_settings": { "enabled": true, "deadline": "2026-11-18T05:00:00Z", "review_type": "league_vote" },
+    "schedule": [
+      {
+        "schema_version": "1.0.0",
+        "created_at": "2026-07-10T00:00:00Z",
+        "updated_at": "2026-07-10T00:00:00Z",
+        "source_system": "fixture",
+        "source_record_id": "matchup-001",
+        "matchup_id": "matchup-001",
+        "league_id": "league-001",
+        "scoring_period": "2026-W01",
+        "team_id": "team-001",
+        "opponent_team_id": "team-002",
+        "projected_points_for": 118.4,
+        "projected_points_against": 114.7
+      }
+    ],
+    "import_metadata": {
+      "imported_at": "2026-07-10T00:00:00Z",
+      "source": "fixture",
+      "adapter_version": "0.1.0"
+    }
+  },
+  "managers": [
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "manager-001", "manager_id": "manager-001", "display_name": "Jordan", "contact_preferences": {}, "observed_behavior_profile": { "trade_activity": "moderate" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "manager-002", "manager_id": "manager-002", "display_name": "Avery", "contact_preferences": {}, "observed_behavior_profile": { "trade_activity": "low" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "manager-003", "manager_id": "manager-003", "display_name": "Casey", "contact_preferences": {}, "observed_behavior_profile": { "trade_activity": "high" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "manager-004", "manager_id": "manager-004", "display_name": "Riley", "contact_preferences": {}, "observed_behavior_profile": { "trade_activity": "moderate" } }
+  ],
+  "players": [
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-qb-001", "player_id": "player-qb-001", "external_id": "player-qb-001", "sport": "football", "full_name": "Caleb Meridian", "team": "CHI", "positions": ["QB"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["QB", "SUPER_FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-qb-001" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-qb-002", "player_id": "player-qb-002", "external_id": "player-qb-002", "sport": "football", "full_name": "Rowan Fields", "team": "SEA", "positions": ["QB"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["QB", "SUPER_FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-qb-002" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-rb-001", "player_id": "player-rb-001", "external_id": "player-rb-001", "sport": "football", "full_name": "Marcus Vale", "team": "DET", "positions": ["RB"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["RB", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-rb-001" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-rb-002", "player_id": "player-rb-002", "external_id": "player-rb-002", "sport": "football", "full_name": "Devin Stone", "team": "ATL", "positions": ["RB"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["RB", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-rb-002" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-rb-003", "player_id": "player-rb-003", "external_id": "player-rb-003", "sport": "football", "full_name": "Theo Grant", "team": "MIA", "positions": ["RB"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["RB", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-rb-003" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-rb-004", "player_id": "player-rb-004", "external_id": "player-rb-004", "sport": "football", "full_name": "Jalen North", "team": "LV", "positions": ["RB"], "status": "bye", "injury_status": "active", "eligibility": { "eligible_slots": ["RB", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-rb-004" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-rb-005", "player_id": "player-rb-005", "external_id": "player-rb-005", "sport": "football", "full_name": "Miles Hart", "team": "NYG", "positions": ["RB"], "status": "injured_reserve", "injury_status": "injured_reserve", "eligibility": { "eligible_slots": ["RB", "FLEX", "IR"], "injured_reserve_eligible": true, "taxi_eligible": false }, "external_ids": { "fixture": "player-rb-005" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-wr-001", "player_id": "player-wr-001", "external_id": "player-wr-001", "sport": "football", "full_name": "Evan Lane", "team": "CIN", "positions": ["WR"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["WR", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-wr-001" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-wr-002", "player_id": "player-wr-002", "external_id": "player-wr-002", "sport": "football", "full_name": "Nico West", "team": "HOU", "positions": ["WR"], "status": "questionable", "injury_status": "questionable", "eligibility": { "eligible_slots": ["WR", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-wr-002" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-wr-003", "player_id": "player-wr-003", "external_id": "player-wr-003", "sport": "football", "full_name": "Luca Pierce", "team": "LAR", "positions": ["WR"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["WR", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-wr-003" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-wr-004", "player_id": "player-wr-004", "external_id": "player-wr-004", "sport": "football", "full_name": "Owen Sharp", "team": "BUF", "positions": ["WR"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["WR", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-wr-004" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-wr-005", "player_id": "player-wr-005", "external_id": "player-wr-005", "sport": "football", "full_name": "Parker Reed", "team": "BAL", "positions": ["WR"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["WR", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-wr-005" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-te-001", "player_id": "player-te-001", "external_id": "player-te-001", "sport": "football", "full_name": "Graham Knox", "team": "KC", "positions": ["TE"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["TE", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-te-001" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-te-002", "player_id": "player-te-002", "external_id": "player-te-002", "sport": "football", "full_name": "Finn Cole", "team": "DAL", "positions": ["TE"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["TE", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-te-002" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-k-001", "player_id": "player-k-001", "external_id": "player-k-001", "sport": "football", "full_name": "Sam Vale", "team": "SF", "positions": ["K"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["K"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-k-001" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "player-dst-001", "player_id": "player-dst-001", "external_id": "player-dst-001", "sport": "football", "full_name": "Denver Defense", "team": "DEN", "positions": ["DST"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["DST"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "player-dst-001" } }
+  ],
+  "free_agents": [
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "fa-rb-001", "player_id": "fa-rb-001", "external_id": "fa-rb-001", "sport": "football", "full_name": "Kieran Moss", "team": "ARI", "positions": ["RB"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["RB", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "fa-rb-001" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "fa-wr-001", "player_id": "fa-wr-001", "external_id": "fa-wr-001", "sport": "football", "full_name": "Silas King", "team": "GB", "positions": ["WR"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["WR", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "fa-wr-001" } },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "fa-te-001", "player_id": "fa-te-001", "external_id": "fa-te-001", "sport": "football", "full_name": "Jonah Parks", "team": "MIN", "positions": ["TE"], "status": "active", "injury_status": "active", "eligibility": { "eligible_slots": ["TE", "FLEX"], "injured_reserve_eligible": false, "taxi_eligible": false }, "external_ids": { "fixture": "fa-te-001" } }
+  ],
+  "waiver_state": {
+    "schema_version": "1.0.0",
+    "created_at": "2026-07-10T00:00:00Z",
+    "updated_at": "2026-07-10T00:00:00Z",
+    "source_system": "fixture",
+    "source_record_id": "waiver-state-001",
+    "league_id": "league-001",
+    "waiver_order": ["team-004", "team-003", "team-002", "team-001"],
+    "faab_budgets": {
+      "team-001": 100,
+      "team-002": 100,
+      "team-003": 100,
+      "team-004": 100
+    }
+  },
+  "projections": [
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "proj-player-qb-001", "projection_id": "proj-player-qb-001", "player_id": "player-qb-001", "source": "fixture", "scoring_period": "2026-W01", "projected_stats": { "passing_yards": 258, "passing_touchdowns": 1.8, "interceptions": 0.7, "rushing_yards": 24 }, "projected_points": 20.1, "floor": 13.2, "ceiling": 28.8, "confidence": 0.72 },
+    { "schema_version": "1.0.0", "created_at": "2026-07-10T00:00:00Z", "updated_at": "2026-07-10T00:00:00Z", "source_system": "fixture", "source_record_id": "proj-fa-rb-001", "projection_id": "proj-fa-rb-001", "player_id": "fa-rb-001", "source": "fixture", "scoring_period": "2026-W01", "projected_stats": { "rushing_yards": 64, "rushing_touchdowns": 0.4, "receptions": 3.1, "receiving_yards": 22 }, "projected_points": 14.1, "floor": 7.2, "ceiling": 21.4, "confidence": 0.61 }
+  ],
+  "news": [
+    {
+      "schema_version": "1.0.0",
+      "created_at": "2026-07-10T00:00:00Z",
+      "updated_at": "2026-07-10T00:00:00Z",
+      "source_system": "fixture",
+      "source_record_id": "news-001",
+      "news_id": "news-001",
+      "player_id": "player-wr-002",
+      "source": "fixture",
+      "headline": "Nico West limited in practice",
+      "summary": "Fixture injury note for testing questionable status handling.",
+      "impact": "medium",
+      "published_at": "2026-09-09T18:00:00Z",
+      "ingested_at": "2026-09-09T18:05:00Z"
+    }
+  ]
+}
