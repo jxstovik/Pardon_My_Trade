@@ -1,0 +1,49 @@
+{
+  "athletes": [
+    {
+      "id": "4037",
+      "athlete": {
+        "id": "4037",
+        "displayName": "Christian McCaffrey",
+        "position": { "abbreviation": "RB" },
+        "team": { "abbreviation": "SF" }
+      },
+      "projections": {
+        "points": { "total": 21.4 },
+        "stats": [
+          { "name": "rushingYards", "value": 95 },
+          { "name": "rushingTouchdowns", "value": 0.7 },
+          { "name": "receptions", "value": 3.2 },
+          { "name": "receivingYards", "value": 28 }
+        ]
+      }
+    },
+    {
+      "id": "3139477",
+      "athlete": {
+        "id": "3139477",
+        "displayName": "CeeDee Lamb",
+        "position": { "abbreviation": "WR" },
+        "team": { "abbreviation": "DAL" }
+      },
+      "projections": {
+        "points": 18.1,
+        "stats": [
+          { "name": "receptions", "value": 6.1 },
+          { "name": "receivingYards", "value": 84 },
+          { "name": "receivingTouchdowns", "value": 0.5 }
+        ]
+      }
+    },
+    {
+      "id": "10000",
+      "athlete": {
+        "id": "10000",
+        "displayName": "Unmatched Player",
+        "position": { "abbreviation": "QB" },
+        "team": { "abbreviation": "GB" }
+      },
+      "projections": { "points": 12, "stats": [] }
+    }
+  ]
+}

@@ -5,3 +5,10 @@ node_modules/
 !.env.example
 coverage/
 *.log
+
+# V1 local data and logs
+data/
+*.db
+*.db-shm
+*.db-wal
+*.log

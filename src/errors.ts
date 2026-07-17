@@ -1,7 +1,12 @@
 export type ErrorSource =
   | "config"
   | "fixture_adapter"
+  | "sleeper_adapter"
   | "platform_adapter"
+  | "knowledge"
+  | "rule_engine"
+  | "decision_engine"
+  | "recommendation_engine"
   | "validation";
 
 export class PmtError extends Error {
