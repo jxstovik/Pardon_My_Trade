@@ -16,10 +16,13 @@ import { ConsoleNotificationProvider, FileNotificationProvider } from "./notific
 import { loadFixtureSnapshotSource, ingestFixtureSnapshot } from "./knowledge/ingestion.js";
 import { runRefresh } from "./pipeline/refresh.js";
 import { createApiServer } from "./api/server.js";
+import { loadEnv } from "./config/load-env.js";
 import { EspnPlatformReader } from "./adapters/espn/espn-platform-reader.js";
+import { EspnProjectionSource } from "./projections/espn-projection-source.js";
 import { JsonModelStore } from "./probabilistic/model-store.js";
+import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProjectionCandidates } from "./agents/snapshot-integration.js";
 import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
-import { runOrchestrator } from "./agents/ff-orchestrator.js";
+import { runOrchestrator, buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
 import { ActionQueue, JsonActionQueueStore } from "./agents/action-queue.js";
 import type { ModelPrior, Observation } from "./probabilistic/bayesian-model.js";
 import type { OrchestratorInput } from "./agents/types.js";
@@ -27,6 +30,7 @@ import type { OrchestratorInput } from "./agents/types.js";
 const command = process.argv[2] ?? "help";
 
 async function main(): Promise<void> {
+  loadEnv();
   switch (command) {
     case "help":
     case "--help":
@@ -195,23 +199,51 @@ async function main(): Promise<void> {
         throw new Error("import-espn requires a league id: pmt import-espn <leagueId> [season]");
       }
       const season = process.argv[4] ?? new Date().getFullYear().toString();
+      const teamId = process.argv[5];
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
       await mkdir(dataDir, { recursive: true });
 
       const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
       const reader = new EspnPlatformReader();
-      const snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
+      let snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
+
+      // Best-effort: seed model priors with real ESPN projections (no cookies needed).
+      try {
+        const projectionSource = new EspnProjectionSource();
+        const candidates = await projectionSource.fetchProjections("football", season, `${season}-W01`);
+        snapshot = mergeProjectionCandidates(snapshot, candidates);
+      } catch {
+        // Projections unavailable; priors fall back to position baselines.
+      }
+
       await repository.saveLeagueSnapshot(snapshot);
       const pointer = { snapshot_id: snapshot.snapshot_id, league_id: snapshot.league.league_id };
       await writeFile(join(dataDir, "last-snapshot.json"), JSON.stringify(pointer), "utf8");
 
+      const chosenTeam = teamId ?? snapshot.league.teams[0].team_id;
+      const priors = buildPriorsFromSnapshot(snapshot);
+      const models = buildModelsForOrchestrator(priors, []);
+      const modelStore = new JsonModelStore(join(dataDir, "models.json"));
+      await modelStore.saveAll([...models.values()]);
+
+      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const input = buildOrchestratorInputFromSnapshot(snapshot, chosenTeam, models);
+      const result = await runOrchestrator({ input, priors, queue, autoApproveLowRisk: false });
+
       console.log(JSON.stringify({
-        message: "Imported ESPN league snapshot (read/write adapter).",
+        message: "Imported ESPN league snapshot and ran the FF_Orchestrator.",
         snapshotId: snapshot.snapshot_id,
         league: snapshot.league.name,
+        team: chosenTeam,
         teams: snapshot.league.teams.length,
         players: snapshot.players.length,
-        freeAgents: snapshot.free_agents.length
+        freeAgents: snapshot.free_agents.length,
+        projections: snapshot.projections.length,
+        lineupExpectedPoints: Math.round(result.lineupExpectedPoints * 100) / 100,
+        starters: result.lineup.map((s) => s.playerId),
+        waiverCandidates: result.waiverCandidates.length,
+        tradeCandidates: result.tradeCandidates.length,
+        queuedForApproval: result.queued.length
       }, null, 2));
       return;
     }
@@ -328,7 +360,7 @@ Usage:
   pmt weekly-report [leagueExternalId] [teamExternalId]
   pmt refresh [leagueExternalId] [teamExternalId]
   pmt import-sleeper <sleeperLeagueId> [season]
-  pmt import-espn <espnLeagueId> [season]
+  pmt import-espn <espnLeagueId> [season] [teamId]
   pmt build-models <priors.json> [observations.json]
   pmt ff-run <config.json> [--auto]
   pmt action-queue
