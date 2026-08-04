@@ -400,7 +400,7 @@ Usage:
   pmt action-reject <actionId>
   pmt razzball-login
   pmt season-refresh [season] [week]
-  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--no-save] [--persist] [--max N]
+  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--auto] [--ppr] [--no-save] [--persist] [--max N]
   pmt projections --clear-cache
   pmt projections --cache-stats
   pmt serve

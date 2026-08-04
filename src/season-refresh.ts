@@ -5,6 +5,7 @@ import { SqliteKnowledgeRepository } from "./knowledge/sqlite-knowledge-reposito
 import type { LeagueSnapshot, Projection } from "./models/types.js";
 import { buildProjectionSources } from "./projections/projection-source-registry.js";
 import { matchProjectionsToRoster } from "./projections/projection-matching.js";
+import { getCurrentScoringPeriod } from "./seasons/nfl-calendar.js";
 import { buildPriorsFromSnapshot } from "./agents/snapshot-integration.js";
 import { buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
 import { JsonModelStore } from "./probabilistic/model-store.js";
@@ -49,7 +50,9 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   }
 
   const season = options.season ?? snapshot.league.season;
-  const scoringPeriod = options.week ? `${season}-W${options.week}` : `${season}-ROS`;
+  const scoringPeriod = options.week
+    ? `${season}-W${options.week}`
+    : getCurrentScoringPeriod(new Date(), season);
 
   const sources = buildProjectionSources({ sources: options.sources ?? process.env.PMT_PROJECTION_SOURCES, season, dataDir });
   const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];

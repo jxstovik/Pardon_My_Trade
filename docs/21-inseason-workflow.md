@@ -35,10 +35,11 @@ discussed for the `feature/DraftKat` work and is meant to be picked up day-to-da
 - [x] `pmt season-refresh [season] [week]` (see `src/season-refresh.ts`).
 - [x] `pmt projections --persist` bridge.
 
-## Phase 2 — Season calendar
-- [ ] `src/seasons/nfl-calendar.ts`: `getCurrentScoringPeriod(date)` → `YYYY-Wnn`
+## Phase 2 — Season calendar (DONE)
+- [x] `src/seasons/nfl-calendar.ts`: `getCurrentScoringPeriod(date)` → `YYYY-Wnn`
   (bye weeks / offseason handling). Used by `season-refresh` and URL/week args so
-  nothing hardcodes the week.
+  nothing hardcodes the week. `pmt projections --auto` resolves the current week
+  from the calendar.
 
 ## Phase 3 — Wire the scheduler (daily/weekly)
 - [ ] In `pmt serve` (already long-running + scheduler), register season jobs

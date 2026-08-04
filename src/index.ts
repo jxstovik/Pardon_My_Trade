@@ -33,6 +33,7 @@ export * from "./projections/razzball-auth.js";
 export * from "./projections/recommendation-writer.js";
 export * from "./projections/projection-source-registry.js";
 export * from "./season-refresh.js";
+export * from "./seasons/nfl-calendar.js";
 export * from "./recommendations/recommendation-engine.js";
 export * from "./rules/rule-engine.js";
 export * from "./scheduler/scheduler.js";

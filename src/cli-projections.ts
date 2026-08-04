@@ -8,6 +8,7 @@ import { loginRazzball } from "./projections/razzball-auth.js";
 import { saveRecommendation } from "./projections/recommendation-writer.js";
 import { SqliteKnowledgeRepository } from "./knowledge/sqlite-knowledge-repository.js";
 import { persistCandidates } from "./season-refresh.js";
+import { getCurrentScoringPeriod, weekFromScoringPeriod } from "./seasons/nfl-calendar.js";
 import type { ProjectionCandidate, ProjectionSource } from "./projections/projection-source.js";
 
 /**
@@ -98,6 +99,15 @@ export async function runProjectionsCommand(args: string[]): Promise<void> {
 
   const source = buildSource(sourceArg, position, flags, cache);
   const season = process.env.ESPN_SEASON ?? new Date().getFullYear().toString();
+
+  // `--auto` resolves the current NFL week from the calendar when no explicit
+  // `--week N` was supplied, so weekly pulls track the season automatically.
+  if (flags["auto"] && flags["week"] === undefined) {
+    const period = getCurrentScoringPeriod(new Date(), season);
+    const autoWeek = weekFromScoringPeriod(period);
+    if (autoWeek !== undefined) flags["week"] = String(autoWeek);
+  }
+
   const scoringPeriod = typeof flags["week"] === "string" ? `${season}-W${flags["week"]}` : `${season}-ROS`;
 
   const candidates = await source.fetchProjections("football", season, scoringPeriod);
