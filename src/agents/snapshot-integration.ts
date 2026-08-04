@@ -188,6 +188,34 @@ export function mergeProjectionCandidates(
   };
 }
 
+/**
+ * Merge a set of `Projection` records (already matched to roster players) into
+ * a snapshot, de-duplicating by `player_id` while preferring higher-confidence
+ * entries for ties. Returns a new snapshot; the input is not mutated.
+ */
+export function mergeProjections(
+  snapshot: LeagueSnapshot,
+  projections: ReadonlyArray<Projection>
+): LeagueSnapshot {
+  if (projections.length === 0) return snapshot;
+
+  const byPlayer = new Map<string, Projection>();
+  for (const existing of snapshot.projections) {
+    byPlayer.set(existing.player_id, existing);
+  }
+  for (const projection of projections) {
+    const current = byPlayer.get(projection.player_id);
+    if (!current || projection.confidence >= current.confidence) {
+      byPlayer.set(projection.player_id, projection);
+    }
+  }
+
+  return {
+    ...snapshot,
+    projections: [...byPlayer.values()]
+  };
+}
+
 function normalizeName(name: string): string {
   return name.trim().toLowerCase().replace(/\s+/g, " ");
 }

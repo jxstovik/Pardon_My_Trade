@@ -19,6 +19,10 @@ import { createApiServer } from "./api/server.js";
 import { loadEnv } from "./config/load-env.js";
 import { EspnPlatformReader } from "./adapters/espn/espn-platform-reader.js";
 import { EspnProjectionSource } from "./projections/espn-projection-source.js";
+import { buildProjectionSources } from "./projections/projection-source-registry.js";
+import { matchProjectionsToRoster } from "./projections/projection-matching.js";
+import { mergeProjections } from "./agents/snapshot-integration.js";
+import { runProjectionsCommand, runRazzballLogin } from "./cli-projections.js";
 import { JsonModelStore } from "./probabilistic/model-store.js";
 import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProjectionCandidates } from "./agents/snapshot-integration.js";
 import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
@@ -207,13 +211,24 @@ async function main(): Promise<void> {
       const reader = new EspnPlatformReader();
       let snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
 
-      // Best-effort: seed model priors with real ESPN projections (no cookies needed).
-      try {
-        const projectionSource = new EspnProjectionSource();
-        const candidates = await projectionSource.fetchProjections("football", season, `${season}-W01`);
-        snapshot = mergeProjectionCandidates(snapshot, candidates);
-      } catch {
-        // Projections unavailable; priors fall back to position baselines.
+      // Best-effort: seed model priors with real projections from the
+      // configured sources (default: ESPN only; opt in via
+      // PMT_PROJECTION_SOURCES=razzball,fftoday,espn). Matched to roster
+      // players by name so imported leagues use real projected points.
+      const projectionSources = buildProjectionSources({
+        sources: process.env.PMT_PROJECTION_SOURCES,
+        season,
+        dataDir
+      });
+      const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];
+      for (const source of projectionSources) {
+        try {
+          const candidates = await source.fetchProjections("football", season, `${season}-W01`);
+          const projections = matchProjectionsToRoster(candidates, rosterPlayers, `${season}-W01`, source.name);
+          snapshot = mergeProjections(snapshot, projections);
+        } catch {
+          // Source unavailable; fall back to remaining sources / baselines.
+        }
       }
 
       await repository.saveLeagueSnapshot(snapshot);
@@ -345,6 +360,14 @@ async function main(): Promise<void> {
       console.log(JSON.stringify({ actionId: rejected.actionId, status: rejected.status }, null, 2));
       return;
     }
+    case "razzball-login": {
+      await runRazzballLogin();
+      return;
+    }
+    case "projections": {
+      await runProjectionsCommand(process.argv.slice(3));
+      return;
+    }
     default:
       throw new Error(`Unknown command: ${command}`);
   }
@@ -366,6 +389,10 @@ Usage:
   pmt action-queue
   pmt action-approve <actionId>
   pmt action-reject <actionId>
+  pmt razzball-login
+  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--no-save] [--max N]
+  pmt projections --clear-cache
+  pmt projections --cache-stats
   pmt serve
 
 V1 adds scheduled refresh, news ingestion, injury alerts, projection
