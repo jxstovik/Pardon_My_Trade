@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 import { PmtError } from "../errors.js";
-import type { DecisionAudit, LeagueSnapshot, Recommendation } from "../models/types.js";
+import type { DecisionAudit, LeagueSnapshot, Projection, Recommendation } from "../models/types.js";
 import type { KnowledgeRepository } from "./repository.js";
 
 export interface SqliteKnowledgeOptions {
@@ -46,7 +46,23 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
     const row = this.db
       .prepare("SELECT data FROM league_snapshots WHERE snapshot_id = ?")
       .get(snapshotId) as { data: string } | undefined;
-    return row ? (JSON.parse(row.data) as LeagueSnapshot) : undefined;
+    if (!row) return undefined;
+    const snapshot = JSON.parse(row.data) as LeagueSnapshot;
+
+    // Attach the latest stored projections for this league's season so the
+    // snapshot reflects fresh pulls without mutating the immutable snapshot row.
+    const season = snapshot.league.season;
+    const stored = await this.getProjectionsBySeason(season);
+    if (stored.length > 0) {
+      const merged = [...snapshot.projections];
+      for (const p of stored) {
+        const key = `${p.player_id}|${p.source}|${p.scoring_period}`;
+        const idx = merged.findIndex((x) => `${x.player_id}|${x.source}|${x.scoring_period}` === key);
+        if (idx >= 0) merged[idx] = p; else merged.push(p);
+      }
+      return { ...snapshot, projections: merged };
+    }
+    return snapshot;
   }
 
   async saveRecommendation(recommendation: Recommendation): Promise<void> {
@@ -100,6 +116,49 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
     return rows.map((row) => JSON.parse(row.data) as Recommendation);
   }
 
+  async upsertProjections(projections: Projection[]): Promise<void> {
+    const stmt = this.db.prepare(
+      `INSERT INTO projections (projection_id, player_id, source, scoring_period, league_id, data, created_at, updated_at)
+       VALUES (@projection_id, @player_id, @source, @scoring_period, @league_id, @data, @ts, @ts)
+       ON CONFLICT(projection_id) DO UPDATE SET
+         player_id = excluded.player_id,
+         source = excluded.source,
+         scoring_period = excluded.scoring_period,
+         league_id = excluded.league_id,
+         data = excluded.data,
+         updated_at = excluded.updated_at`
+    );
+    const ts = new Date().toISOString();
+    const tx = this.db.transaction((items: Projection[]) => {
+      for (const p of items) {
+        stmt.run({
+          projection_id: p.projection_id,
+          player_id: p.player_id,
+          source: p.source,
+          scoring_period: p.scoring_period,
+          league_id: "",
+          data: JSON.stringify(p),
+          ts
+        });
+      }
+    });
+    tx(projections);
+  }
+
+  async getProjections(scoringPeriod: string): Promise<Projection[]> {
+    const rows = this.db
+      .prepare("SELECT data FROM projections WHERE scoring_period = ?")
+      .all(scoringPeriod) as Array<{ data: string }>;
+    return rows.map((row) => JSON.parse(row.data) as Projection);
+  }
+
+  private async getProjectionsBySeason(season: string): Promise<Projection[]> {
+    const rows = this.db
+      .prepare("SELECT data FROM projections WHERE scoring_period LIKE ?")
+      .all(`${season}-%`) as Array<{ data: string }>;
+    return rows.map((row) => JSON.parse(row.data) as Projection);
+  }
+
   close(): void {
     this.db.close();
   }
@@ -128,6 +187,18 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
         created_at TEXT NOT NULL
       );
       CREATE INDEX IF NOT EXISTS idx_recommendations_league ON recommendations(league_id);
+      CREATE TABLE IF NOT EXISTS projections (
+        projection_id TEXT PRIMARY KEY,
+        player_id TEXT NOT NULL,
+        source TEXT NOT NULL,
+        scoring_period TEXT NOT NULL,
+        league_id TEXT NOT NULL,
+        data TEXT NOT NULL,
+        created_at TEXT NOT NULL,
+        updated_at TEXT
+      );
+      CREATE INDEX IF NOT EXISTS idx_projections_period ON projections(scoring_period);
+      CREATE INDEX IF NOT EXISTS idx_projections_player ON projections(player_id);
     `);
   }
 }

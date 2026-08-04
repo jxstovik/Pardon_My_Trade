@@ -23,6 +23,7 @@ import { buildProjectionSources } from "./projections/projection-source-registry
 import { matchProjectionsToRoster } from "./projections/projection-matching.js";
 import { mergeProjections } from "./agents/snapshot-integration.js";
 import { runProjectionsCommand, runRazzballLogin } from "./cli-projections.js";
+import { runSeasonRefresh } from "./season-refresh.js";
 import { JsonModelStore } from "./probabilistic/model-store.js";
 import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProjectionCandidates } from "./agents/snapshot-integration.js";
 import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
@@ -364,6 +365,14 @@ async function main(): Promise<void> {
       await runRazzballLogin();
       return;
     }
+    case "season-refresh": {
+      const season = process.argv[3];
+      const weekArg = process.argv[4];
+      const week = weekArg ? Number(weekArg) : undefined;
+      const summary = await runSeasonRefresh({ season, week });
+      console.log(JSON.stringify(summary, null, 2));
+      return;
+    }
     case "projections": {
       await runProjectionsCommand(process.argv.slice(3));
       return;
@@ -390,7 +399,8 @@ Usage:
   pmt action-approve <actionId>
   pmt action-reject <actionId>
   pmt razzball-login
-  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--no-save] [--max N]
+  pmt season-refresh [season] [week]
+  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--no-save] [--persist] [--max N]
   pmt projections --clear-cache
   pmt projections --cache-stats
   pmt serve
