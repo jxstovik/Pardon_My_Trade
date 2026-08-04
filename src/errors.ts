@@ -3,6 +3,7 @@ export type ErrorSource =
   | "fixture_adapter"
   | "sleeper_adapter"
   | "platform_adapter"
+  | "projection_source"
   | "knowledge"
   | "rule_engine"
   | "decision_engine"

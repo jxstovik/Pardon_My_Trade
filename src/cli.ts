@@ -16,10 +16,25 @@ import { ConsoleNotificationProvider, FileNotificationProvider } from "./notific
 import { loadFixtureSnapshotSource, ingestFixtureSnapshot } from "./knowledge/ingestion.js";
 import { runRefresh } from "./pipeline/refresh.js";
 import { createApiServer } from "./api/server.js";
+import { loadEnv } from "./config/load-env.js";
+import { EspnPlatformReader } from "./adapters/espn/espn-platform-reader.js";
+import { EspnProjectionSource } from "./projections/espn-projection-source.js";
+import { buildProjectionSources } from "./projections/projection-source-registry.js";
+import { matchProjectionsToRoster } from "./projections/projection-matching.js";
+import { mergeProjections } from "./agents/snapshot-integration.js";
+import { runProjectionsCommand, runRazzballLogin } from "./cli-projections.js";
+import { JsonModelStore } from "./probabilistic/model-store.js";
+import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProjectionCandidates } from "./agents/snapshot-integration.js";
+import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
+import { runOrchestrator, buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
+import { ActionQueue, JsonActionQueueStore } from "./agents/action-queue.js";
+import type { ModelPrior, Observation } from "./probabilistic/bayesian-model.js";
+import type { OrchestratorInput } from "./agents/types.js";
 
 const command = process.argv[2] ?? "help";
 
 async function main(): Promise<void> {
+  loadEnv();
   switch (command) {
     case "help":
     case "--help":
@@ -182,6 +197,177 @@ async function main(): Promise<void> {
       });
       return;
     }
+    case "import-espn": {
+      const leagueId = process.argv[3];
+      if (!leagueId) {
+        throw new Error("import-espn requires a league id: pmt import-espn <leagueId> [season]");
+      }
+      const season = process.argv[4] ?? new Date().getFullYear().toString();
+      const teamId = process.argv[5];
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      await mkdir(dataDir, { recursive: true });
+
+      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+      const reader = new EspnPlatformReader();
+      let snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
+
+      // Best-effort: seed model priors with real projections from the
+      // configured sources (default: ESPN only; opt in via
+      // PMT_PROJECTION_SOURCES=razzball,fftoday,espn). Matched to roster
+      // players by name so imported leagues use real projected points.
+      const projectionSources = buildProjectionSources({
+        sources: process.env.PMT_PROJECTION_SOURCES,
+        season,
+        dataDir
+      });
+      const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];
+      for (const source of projectionSources) {
+        try {
+          const candidates = await source.fetchProjections("football", season, `${season}-W01`);
+          const projections = matchProjectionsToRoster(candidates, rosterPlayers, `${season}-W01`, source.name);
+          snapshot = mergeProjections(snapshot, projections);
+        } catch {
+          // Source unavailable; fall back to remaining sources / baselines.
+        }
+      }
+
+      await repository.saveLeagueSnapshot(snapshot);
+      const pointer = { snapshot_id: snapshot.snapshot_id, league_id: snapshot.league.league_id };
+      await writeFile(join(dataDir, "last-snapshot.json"), JSON.stringify(pointer), "utf8");
+
+      const chosenTeam = teamId ?? snapshot.league.teams[0].team_id;
+      const priors = buildPriorsFromSnapshot(snapshot);
+      const models = buildModelsForOrchestrator(priors, []);
+      const modelStore = new JsonModelStore(join(dataDir, "models.json"));
+      await modelStore.saveAll([...models.values()]);
+
+      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const input = buildOrchestratorInputFromSnapshot(snapshot, chosenTeam, models);
+      const result = await runOrchestrator({ input, priors, queue, autoApproveLowRisk: false });
+
+      console.log(JSON.stringify({
+        message: "Imported ESPN league snapshot and ran the FF_Orchestrator.",
+        snapshotId: snapshot.snapshot_id,
+        league: snapshot.league.name,
+        team: chosenTeam,
+        teams: snapshot.league.teams.length,
+        players: snapshot.players.length,
+        freeAgents: snapshot.free_agents.length,
+        projections: snapshot.projections.length,
+        lineupExpectedPoints: Math.round(result.lineupExpectedPoints * 100) / 100,
+        starters: result.lineup.map((s) => s.playerId),
+        waiverCandidates: result.waiverCandidates.length,
+        tradeCandidates: result.tradeCandidates.length,
+        queuedForApproval: result.queued.length
+      }, null, 2));
+      return;
+    }
+    case "build-models": {
+      const priorsPath = process.argv[3] ?? process.env.PMT_PRIORS_PATH;
+      if (!priorsPath) {
+        throw new Error("build-models requires a priors JSON file: pmt build-models <priors.json> [observations.json]");
+      }
+      const observationsPath = process.argv[4];
+      const priors = JSON.parse(await readFile(priorsPath, "utf8")) as ModelPrior[];
+      const observations: Observation[] = observationsPath
+        ? (JSON.parse(await readFile(observationsPath, "utf8")) as Observation[])
+        : [];
+
+      let models = buildModels(priors);
+      models = applyObservations(models, observations);
+
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      const store = new JsonModelStore(join(dataDir, "models.json"));
+      await store.saveAll([...models.values()]);
+
+      const ranked = rankByValue(models.values()).slice(0, 10);
+      console.log(JSON.stringify({
+        built: models.size,
+        topByValue: ranked.map((r) => ({
+          player: r.model.playerName,
+          position: r.model.position,
+          expectedPoints: Math.round(r.expectedPoints * 100) / 100,
+          value: Math.round(r.value * 100) / 100,
+          p12: Math.round(r.probabilities[12] * 1000) / 1000
+        }))
+      }, null, 2));
+      return;
+    }
+    case "ff-run": {
+      const configPath = process.argv[3];
+      if (!configPath) {
+        throw new Error("ff-run requires a config JSON: pmt ff-run <config.json> [--auto]");
+      }
+      const autoApproveLowRisk = process.argv.includes("--auto");
+      const config = JSON.parse(await readFile(configPath, "utf8")) as {
+        input: OrchestratorInput;
+        priors: ModelPrior[];
+        observations?: Observation[];
+      };
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+
+      const result = await runOrchestrator({
+        input: config.input,
+        priors: config.priors,
+        observations: config.observations,
+        queue,
+        autoApproveLowRisk
+      });
+
+      console.log(JSON.stringify({
+        team: result.teamId,
+        lineupExpectedPoints: Math.round(result.lineupExpectedPoints * 100) / 100,
+        starters: result.lineup.map((s) => s.playerId),
+        waiverCandidates: result.waiverCandidates.length,
+        tradeCandidates: result.tradeCandidates.length,
+        executed: result.executed.map((a) => a.type),
+        queuedForApproval: result.queued.map((q) => ({ actionId: q.actionId, type: q.action.type, risk: q.risk }))
+      }, null, 2));
+      return;
+    }
+    case "action-queue": {
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const pending = await queue.pending();
+      console.log(JSON.stringify({
+        pending: pending.length,
+        actions: pending.map((q) => ({
+          actionId: q.actionId,
+          type: q.action.type,
+          risk: q.risk,
+          rationale: q.rationale,
+          expiresAt: q.expiresAt
+        }))
+      }, null, 2));
+      return;
+    }
+    case "action-approve": {
+      const actionId = process.argv[3];
+      if (!actionId) throw new Error("action-approve requires an action id: pmt action-approve <actionId>");
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const approved = await queue.approve(actionId);
+      console.log(JSON.stringify({ actionId: approved.actionId, status: approved.status }, null, 2));
+      return;
+    }
+    case "action-reject": {
+      const actionId = process.argv[3];
+      if (!actionId) throw new Error("action-reject requires an action id: pmt action-reject <actionId>");
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const rejected = await queue.reject(actionId);
+      console.log(JSON.stringify({ actionId: rejected.actionId, status: rejected.status }, null, 2));
+      return;
+    }
+    case "razzball-login": {
+      await runRazzballLogin();
+      return;
+    }
+    case "projections": {
+      await runProjectionsCommand(process.argv.slice(3));
+      return;
+    }
     default:
       throw new Error(`Unknown command: ${command}`);
   }
@@ -197,15 +383,27 @@ Usage:
   pmt weekly-report [leagueExternalId] [teamExternalId]
   pmt refresh [leagueExternalId] [teamExternalId]
   pmt import-sleeper <sleeperLeagueId> [season]
+  pmt import-espn <espnLeagueId> [season] [teamId]
+  pmt build-models <priors.json> [observations.json]
+  pmt ff-run <config.json> [--auto]
+  pmt action-queue
+  pmt action-approve <actionId>
+  pmt action-reject <actionId>
+  pmt razzball-login
+  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--no-save] [--max N]
+  pmt projections --clear-cache
+  pmt projections --cache-stats
   pmt serve
 
 V1 adds scheduled refresh, news ingestion, injury alerts, projection
 consensus, manager profiles, historical tracking, and notifications,
 surfaced through a local web GUI (pmt serve).
 
-MVP status:
-  Read-only fixture import and weekly recommendation report are available.
-  Live platform logins are intentionally postponed.
+DraftKat (feature/DraftKat) adds the ESPN read/write adapter, a
+probabilistic Bayesian player-model engine (plan Open Claw Agent Fantasy
+section 5), and the FF_Orchestrator agent with a human-approval action
+queue for high-risk moves (trades, drops). Live ESPN logins require
+ESPN_LEAGUE_ID (+ ESPN_S2, SWID) in the environment.
 `);
 }
 

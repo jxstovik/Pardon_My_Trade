@@ -18,6 +18,12 @@ Built so far (MVP + V1):
 - End-to-end pipelines: `weekly-report` and `refresh` (`src/pipeline`).
 - Local web GUI: HTTP API + single-page app (`src/api`, `public/index.html`).
 
+Built in the `feature/DraftKat` branch (plan: *Open Claw Agent Fantasy*):
+
+- **ESPN read/write adapter** (`src/adapters/espn`): implements `PlatformReader` (read) and adds write actions — `setRoster`, `addDrop`, `proposeTrade` — using ESPN cookie auth (`ESPN_S2`, `SWID`).
+- **Probabilistic player-model engine** (`src/probabilistic`): per-player Bayesian Gaussian model with EWMA updating (plan §5), `P(x > τ)` thresholds (8/12/18), and position-scarcity value; file/JSON and in-memory stores.
+- **FF_Orchestrator agent** (`src/agents`): skills for lineup optimization, waiver scanning, trade proposal, and execute-or-queue, with a **human-approval action queue** for high-risk moves (trades, drops). Low-risk set-roster applies automatically when `--auto` is set.
+
 The MVP is being built fixture-first and credential-free. Live fantasy platform logins, GitHub remote setup, and AI provider keys are intentionally postponed.
 
 ## Storage
@@ -42,12 +48,34 @@ npm test
 npm run pmt -- import-fixture
 npm run pmt -- weekly-report [leagueExternalId] [teamExternalId]
 npm run refresh [leagueExternalId] [teamExternalId]
+npm run pmt -- import-espn <espnLeagueId> [season]
+npm run pmt -- build-models <priors.json> [observations.json]
+npm run pmt -- ff-run <config.json> [--auto]
+npm run pmt -- action-queue
+npm run pmt -- action-approve <actionId>
+npm run pmt -- action-reject <actionId>
 npm run serve
 ```
 
 `npm run refresh` runs the full V1 refresh pipeline (news ingestion, projection consensus, injury alerts, manager-profile updates, historical recording, weekly report, and notifications). `npm run serve` starts a local web GUI at `http://localhost:3000` backed by file-backed SQLite stores under `data/`; use the **Run Refresh** button to trigger a refresh and view the weekly report, alerts, manager profiles, and news.
 
-Environment overrides: `PMT_DATA_DIR`, `PMT_PORT`, `PMT_NEWS_PATH`, `PMT_FIXTURE_PATH`.
+### DraftKat: ESPN agentic workflow
+
+The `feature/DraftKat` branch implements the *Open Claw Agent Fantasy* plan: an ESPN read/write adapter, a probabilistic Bayesian player-model engine (plan §5), and the `FF_Orchestrator` agent with a human-approval action queue.
+
+```text
+# Build per-player models from history (priors) + weekly observations
+npm run pmt -- build-models examples/draftkat-priors.json examples/draftkat-observations.json
+
+# Run the orchestrator; queues trades/drops for human approval
+npm run pmt -- ff-run examples/draftkat-config.json
+npm run pmt -- action-queue
+npm run pmt -- action-approve <actionId>
+```
+
+Live ESPN actions require `ESPN_LEAGUE_ID` (and `ESPN_S2`, `SWID`) in the environment; `import-espn` and the write actions are exercised against the real ESPN API, while the model engine and orchestrator are fully tested credential-free (see `examples/draftkat-config.json`).
+
+Environment overrides: `PMT_DATA_DIR`, `PMT_PORT`, `PMT_NEWS_PATH`, `PMT_FIXTURE_PATH`, `ESPN_LEAGUE_ID`, `ESPN_SEASON`, `ESPN_S2`, `SWID`, `PMT_PRIORS_PATH`.
 
 Credential-free fixture verification is also available through PowerShell:
 
@@ -89,6 +117,7 @@ After import, open `http://localhost:3000` — `serve` loads the most recently i
 - [Development Guide](docs/17-development-guide.md)
 - [Interface Catalog](docs/18-interface-catalog.md)
 - [Configuration Specification](docs/19-configuration.md)
+- [DraftKat: ESPN Agentic Workflow](docs/20-draftkat-espn-agent.md)
 - [ADR Index](docs/adr/README.md)
 
 ## Phase 0 Exit Criteria

@@ -1,0 +1,56 @@
+{
+  "input": {
+    "teamId": "1",
+    "rosterSlots": [
+      { "playerId": "101", "slot": "QB" },
+      { "playerId": "102", "slot": "RB" },
+      { "playerId": "103", "slot": "RB" },
+      { "playerId": "104", "slot": "WR" },
+      { "playerId": "105", "slot": "WR" },
+      { "playerId": "106", "slot": "TE" },
+      { "playerId": "107", "slot": "FLEX" },
+      { "playerId": "108", "slot": "K" },
+      { "playerId": "109", "slot": "DST" },
+      { "playerId": "110", "slot": "BN" }
+    ],
+    "starterCounts": [
+      { "slot": "QB", "count": 1 },
+      { "slot": "RB", "count": 2 },
+      { "slot": "WR", "count": 2 },
+      { "slot": "TE", "count": 1 },
+      { "slot": "FLEX", "count": 1 },
+      { "slot": "K", "count": 1 },
+      { "slot": "DST", "count": 1 }
+    ],
+    "freeAgents": [{ "playerId": "301", "position": "RB", "projectedPoints": 25 }],
+    "opponents": [
+      {
+        "teamId": "2",
+        "players": [
+          { "playerId": "201", "position": "RB" },
+          { "playerId": "202", "position": "RB" }
+        ]
+      }
+    ]
+  },
+  "priors": [
+    { "playerId": "101", "playerName": "Q", "position": "QB", "historyMean": 18, "historyVar": 4 },
+    { "playerId": "102", "playerName": "RB1", "position": "RB", "historyMean": 14, "historyVar": 4 },
+    { "playerId": "103", "playerName": "RB2", "position": "RB", "historyMean": 9, "historyVar": 4 },
+    { "playerId": "104", "playerName": "WR1", "position": "WR", "historyMean": 13, "historyVar": 4 },
+    { "playerId": "105", "playerName": "WR2", "position": "WR", "historyMean": 11, "historyVar": 4 },
+    { "playerId": "106", "playerName": "TE1", "position": "TE", "historyMean": 8, "historyVar": 4 },
+    { "playerId": "107", "playerName": "Flex", "position": "RB", "historyMean": 12, "historyVar": 4 },
+    { "playerId": "108", "playerName": "K1", "position": "K", "historyMean": 9, "historyVar": 1 },
+    { "playerId": "109", "playerName": "DST1", "position": "DST", "historyMean": 7, "historyVar": 1 },
+    { "playerId": "110", "playerName": "Bench", "position": "WR", "historyMean": 4, "historyVar": 4 },
+    { "playerId": "201", "playerName": "OppRB", "position": "RB", "historyMean": 20, "historyVar": 4 },
+    { "playerId": "202", "playerName": "OppRB2", "position": "RB", "historyMean": 15, "historyVar": 4 },
+    { "playerId": "301", "playerName": "FreeRB", "position": "RB", "historyMean": 25, "historyVar": 4 }
+  ],
+  "observations": [
+    { "playerId": "101", "week": 1, "points": 22 },
+    { "playerId": "102", "week": 1, "points": 16 },
+    { "playerId": "103", "week": 1, "points": 7 }
+  ]
+}
