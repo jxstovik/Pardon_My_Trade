@@ -29,6 +29,13 @@ import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProje
 import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
 import { runOrchestrator, buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
 import { ActionQueue, JsonActionQueueStore } from "./agents/action-queue.js";
+import { InMemoryScheduler } from "./scheduler/scheduler.js";
+import { registerSeasonJobs, runDailySeasonJob } from "./seasons/season-jobs.js";
+import { runSeasonOrchestration } from "./seasons/season-orchestration.js";
+import type { SeasonJobDeps } from "./seasons/season-jobs.js";
+import type { KnowledgeRepository } from "./knowledge/repository.js";
+import type { V1Store } from "./history/v1-store.js";
+import type { NotificationProvider } from "./notifications/notification-provider.js";
 import type { ModelPrior, Observation } from "./probabilistic/bayesian-model.js";
 import type { OrchestratorInput } from "./agents/types.js";
 
@@ -196,6 +203,13 @@ async function main(): Promise<void> {
       server.listen(port, () => {
         console.log(`Pardon My Trade GUI running at http://localhost:${port}`);
       });
+
+      if (process.argv.includes("--scheduler")) {
+        const scheduler = new InMemoryScheduler();
+        const jobs = registerSeasonJobs(scheduler, buildSeasonJobDeps(dataDir, { repository, v1Store }));
+        scheduler.start();
+        console.log(`Season scheduler started: ${jobs.map((job) => `${job.jobId}@${job.time}`).join(", ")}`);
+      }
       return;
     }
     case "import-espn": {
@@ -366,11 +380,37 @@ async function main(): Promise<void> {
       return;
     }
     case "season-refresh": {
-      const season = process.argv[3];
-      const weekArg = process.argv[4];
+      const positionals = process.argv.slice(3).filter((arg) => !arg.startsWith("--"));
+      const season = positionals[0];
+      const weekArg = positionals[1];
       const week = weekArg ? Number(weekArg) : undefined;
-      const summary = await runSeasonRefresh({ season, week });
+      const force = process.argv.includes("--force");
+      const summary = await runSeasonRefresh({ season, week, force });
       console.log(JSON.stringify(summary, null, 2));
+      return;
+    }
+    case "daemon": {
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      await mkdir(dataDir, { recursive: true });
+      const scheduler = new InMemoryScheduler(() => new Date(), 60_000, true);
+      const jobs = registerSeasonJobs(scheduler, buildSeasonJobDeps(dataDir));
+      scheduler.start();
+      console.log(JSON.stringify({
+        message: "Pardon My Trade season daemon running (Ctrl+C to stop).",
+        dataDir,
+        jobs: jobs.map((job) => ({ jobId: job.jobId, name: job.name, time: job.time, days: job.days }))
+      }, null, 2));
+
+      if (process.argv.includes("--run-now")) {
+        await runDailySeasonJob(buildSeasonJobDeps(dataDir));
+      }
+
+      const shutdown = () => {
+        scheduler.stop();
+        process.exit(0);
+      };
+      process.on("SIGINT", shutdown);
+      process.on("SIGTERM", shutdown);
       return;
     }
     case "projections": {
@@ -380,6 +420,57 @@ async function main(): Promise<void> {
     default:
       throw new Error(`Unknown command: ${command}`);
   }
+}
+
+/**
+ * Wire the in-season scheduled jobs (doc 21 Phase 3) to the real pipeline:
+ * projections -> news/injuries -> orchestrator -> notifications. Shared SQLite
+ * handles are reused when `serve` already opened them.
+ */
+function buildSeasonJobDeps(
+  dataDir: string,
+  shared?: { repository: KnowledgeRepository; v1Store: V1Store }
+): SeasonJobDeps {
+  const config = createDefaultConfig();
+  const repository = shared?.repository ?? new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+  const v1Store = shared?.v1Store ?? new SqliteV1Store({ filePath: join(dataDir, "pmt-v1.db") });
+  const ruleEngine = new ScoringRuleEngine();
+  const decisionEngine = new DefaultDecisionEngine(ruleEngine);
+  const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
+  const newsPath = process.env.PMT_NEWS_PATH ?? "tests/fixtures/sample-news.json";
+  const providers: NotificationProvider[] = [
+    new ConsoleNotificationProvider(),
+    new FileNotificationProvider(join(dataDir, "notifications.log"))
+  ];
+
+  return {
+    dataDir,
+    refresh: () => runRefresh({
+      fixturePath: config.fixturePath,
+      newsPath,
+      leagueExternalId: process.env.PMT_LEAGUE_EXTERNAL_ID ?? "pmt-demo-football",
+      teamExternalId: process.env.PMT_TEAM_EXTERNAL_ID ?? "team-001",
+      repository,
+      v1Store,
+      ruleEngine,
+      decisionEngine,
+      recommendationEngine,
+      notificationProviders: providers
+    }),
+    seasonRefresh: (options) => runSeasonRefresh({ ...options, repository }),
+    orchestrate: (options) => runSeasonOrchestration({ ...options, repository }),
+    notify: async (notifications) => {
+      for (const notification of notifications) {
+        await v1Store.saveNotification(notification);
+        for (const provider of providers) {
+          await provider.send(notification);
+        }
+      }
+    },
+    log: (result) => {
+      console.log(JSON.stringify(result));
+    }
+  };
 }
 
 function printHelp(): void {
@@ -399,11 +490,12 @@ Usage:
   pmt action-approve <actionId>
   pmt action-reject <actionId>
   pmt razzball-login
-  pmt season-refresh [season] [week]
-  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--auto] [--ppr] [--no-save] [--persist] [--max N]
+  pmt season-refresh [season] [week] [--force]
+  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--auto] [--ppr] [--force] [--no-save] [--persist] [--max N]
   pmt projections --clear-cache
   pmt projections --cache-stats
-  pmt serve
+  pmt daemon [--run-now]
+  pmt serve [--scheduler]
 
 V1 adds scheduled refresh, news ingestion, injury alerts, projection
 consensus, manager profiles, historical tracking, and notifications,
@@ -414,6 +506,11 @@ probabilistic Bayesian player-model engine (plan Open Claw Agent Fantasy
 section 5), and the FF_Orchestrator agent with a human-approval action
 queue for high-risk moves (trades, drops). Live ESPN logins require
 ESPN_LEAGUE_ID (+ ESPN_S2, SWID) in the environment.
+
+The in-season loop (pmt daemon, or pmt serve --scheduler) runs the daily
+projection pull + advisory pass Mon-Sat, a Sunday lineup-lock reminder, and
+a Tuesday waiver/trade sweep. Jobs pause automatically in the offseason and
+never execute a move: high-risk actions wait for pmt action-approve.
 `);
 }
 

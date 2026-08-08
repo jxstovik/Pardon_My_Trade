@@ -57,3 +57,28 @@ test("runSeasonRefresh errors clearly when no snapshot is imported", async () =>
     await rm(dir, { recursive: true, force: true });
   }
 });
+
+test("runSeasonRefresh skips a broken source instead of aborting the run", async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = (async () => new Response("missing", { status: 404 })) as unknown as typeof fetch;
+  const dir = await mkdtemp(join(tmpdir(), "pmt-season-"));
+  try {
+    const repository = new SqliteKnowledgeRepository({ memory: true });
+    const snapshot = makeSnapshot(
+      [makePlayer({ full_name: "Derrick Henry", player_id: "p1", positions: ["RB"] })],
+      { snapshotId: "snap-skip", season: "2026" }
+    );
+    await repository.saveLeagueSnapshot(snapshot);
+    await writeFile(join(dir, "last-snapshot.json"), JSON.stringify({ snapshot_id: "snap-skip", league_id: "lg-1" }), "utf8");
+
+    const summary = await runSeasonRefresh({ repository, dataDir: dir, sources: "fftoday" });
+
+    assert.equal(summary.projectionsStored, 0);
+    assert.deepEqual(summary.errors, [], "a down source is skipped, not an error");
+    assert.ok(Object.keys(summary.skipped).length > 0, "the skipped source is reported");
+    assert.match(Object.values(summary.skipped)[0], /404/);
+  } finally {
+    globalThis.fetch = originalFetch;
+    await rm(dir, { recursive: true, force: true });
+  }
+});

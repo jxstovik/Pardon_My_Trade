@@ -17,6 +17,8 @@ export interface SeasonRefreshOptions {
   readonly sources?: string;
   readonly season?: string;
   readonly week?: number;
+  /** Bypass the 1h projection fetch cache. */
+  readonly force?: boolean;
 }
 
 export interface SeasonRefreshSummary {
@@ -24,6 +26,8 @@ export interface SeasonRefreshSummary {
   readonly season: string;
   readonly scoringPeriod: string;
   readonly sources: Record<string, number>;
+  /** Sources that were unavailable and skipped, keyed by source name. */
+  readonly skipped: Record<string, string>;
   readonly projectionsStored: number;
   readonly playersUpdated: number;
   readonly modelsRebuilt: number;
@@ -54,16 +58,26 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
     ? `${season}-W${options.week}`
     : getCurrentScoringPeriod(new Date(), season);
 
-  const sources = buildProjectionSources({ sources: options.sources ?? process.env.PMT_PROJECTION_SOURCES, season, dataDir });
+  const sources = buildProjectionSources({
+    sources: options.sources ?? process.env.PMT_PROJECTION_SOURCES,
+    season,
+    dataDir,
+    force: options.force
+  });
   const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];
 
   const stored: Projection[] = [];
   const sourceBreakdown: Record<string, number> = {};
+  const skipped: Record<string, string> = {};
   const errors: string[] = [];
 
   for (const source of sources) {
     try {
       const candidates = await source.fetchProjections("football", season, scoringPeriod);
+      if (source.lastSkipReason) {
+        skipped[source.name] = source.lastSkipReason;
+        continue;
+      }
       const matched = matchProjectionsToRoster(candidates, rosterPlayers, scoringPeriod, source.name);
       stored.push(...matched);
       sourceBreakdown[source.name] = matched.length;
@@ -89,6 +103,7 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
     season,
     scoringPeriod,
     sources: sourceBreakdown,
+    skipped,
     projectionsStored: stored.length,
     playersUpdated: playerIds.size,
     modelsRebuilt: models.size,
@@ -118,7 +133,7 @@ export async function persistCandidates(
   return matched.length;
 }
 
-async function loadLastSnapshotPointer(dataDir: string): Promise<{ snapshot_id: string; league_id: string }> {
+export async function loadLastSnapshotPointer(dataDir: string): Promise<{ snapshot_id: string; league_id: string }> {
   try {
     const raw = await readFile(join(dataDir, "last-snapshot.json"), "utf8");
     return JSON.parse(raw) as { snapshot_id: string; league_id: string };

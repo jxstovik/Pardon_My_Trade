@@ -56,17 +56,18 @@ function parseFlags(args: string[]): { flags: Record<string, string | boolean>; 
 function buildSource(sourceArg: string, position: string, flags: Record<string, string | boolean>, cache: RecommendationCache): ProjectionSource {
   const week = flags["week"] !== undefined ? Number(flags["week"]) : undefined;
   const ppr = flags["ppr"] === true;
+  const force = flags["force"] === true;
   if (sourceArg === "espn") {
     return new EspnProjectionSource();
   }
   if (sourceArg === "razzball" || sourceArg === "razzball-premium") {
     const premium = sourceArg === "razzball-premium";
     const kind = premium ? "pigskinonator" : (week !== undefined ? "weekly" : "ros");
-    return new RazzballProjectionSource({ position, kind, week, ppr, fetchImpl: globalThis.fetch, cache });
+    return new RazzballProjectionSource({ position, kind, week, ppr, force, fetchImpl: globalThis.fetch, cache });
   }
   if (sourceArg === "fftoday") {
     const kind = week !== undefined ? "weekly" : "season";
-    return new FFTodayProjectionSource({ position, kind, week, fetchImpl: globalThis.fetch, cache });
+    return new FFTodayProjectionSource({ position, kind, week, force, fetchImpl: globalThis.fetch, cache });
   }
   throw new Error(`Unknown projection source: ${sourceArg}. Use razzball, razzball-premium, fftoday, or espn.`);
 }
@@ -94,7 +95,7 @@ export async function runProjectionsCommand(args: string[]): Promise<void> {
   const position = positionals[1] ?? "rb";
 
   if (!sourceArg) {
-    throw new Error("projections requires a source: pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--no-save] [--persist] [--max N]");
+    throw new Error("projections requires a source: pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--force] [--no-save] [--persist] [--max N]");
   }
 
   const source = buildSource(sourceArg, position, flags, cache);

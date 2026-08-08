@@ -16,6 +16,13 @@ export interface FFTodayProjectionSourceOptions {
   readonly cache?: RecommendationCache;
   readonly dataDir?: string;
   readonly maxRows?: number;
+  /** Bypass the 1h fetch cache. */
+  readonly force?: boolean;
+  /**
+   * Tolerate fetch/parse failures (FFToday currently 404s some pages) by
+   * returning no candidates and recording `lastSkipReason` instead of throwing.
+   */
+  readonly optional?: boolean;
 }
 
 const POSITION_POSID: Record<string, string> = {
@@ -64,6 +71,7 @@ export function buildFFTDayUrl(options: {
 
 export class FFTodayProjectionSource implements ProjectionSource {
   readonly name: string;
+  lastSkipReason?: string;
   private readonly position: string;
   private readonly kind: FFTodayKind;
   private readonly season?: string;
@@ -72,6 +80,8 @@ export class FFTodayProjectionSource implements ProjectionSource {
   private readonly cache?: RecommendationCache;
   private readonly dataDir: string;
   private readonly maxRows?: number;
+  private readonly force: boolean;
+  private readonly optional: boolean;
 
   constructor(options: FFTodayProjectionSourceOptions) {
     this.position = options.position.toLowerCase();
@@ -82,10 +92,13 @@ export class FFTodayProjectionSource implements ProjectionSource {
     this.cache = options.cache;
     this.dataDir = options.dataDir ?? "data";
     this.maxRows = options.maxRows;
+    this.force = options.force ?? false;
+    this.optional = options.optional ?? false;
     this.name = `fftoday-${this.position}`;
   }
 
   async fetchProjections(_sport: string, season: string, _scoringPeriod: string): Promise<ProjectionCandidate[]> {
+    this.lastSkipReason = undefined;
     const url = buildFFTDayUrl({
       position: this.position,
       kind: this.kind,
@@ -93,13 +106,23 @@ export class FFTodayProjectionSource implements ProjectionSource {
       week: this.week
     });
 
-    const entry = await fetchWithCache(url, {
-      fetchImpl: this.fetchImpl,
-      cache: this.cache ?? new RecommendationCache({ directory: this.cacheDir() }),
-      source: "fftoday"
-    });
-
-    return this.parse(entry.body);
+    try {
+      const entry = await fetchWithCache(url, {
+        fetchImpl: this.fetchImpl,
+        cache: this.cache ?? new RecommendationCache({ directory: this.cacheDir() }),
+        source: "fftoday",
+        force: this.force
+      });
+      return this.parse(entry.body);
+    } catch (cause) {
+      // FFToday breaks source-side often enough (404s, markup churn) that a
+      // multi-source run must survive it; `optional` sources skip instead.
+      if (this.optional) {
+        this.lastSkipReason = (cause as Error).message;
+        return [];
+      }
+      throw cause;
+    }
   }
 
   private parse(html: string): ProjectionCandidate[] {

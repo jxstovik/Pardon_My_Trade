@@ -48,3 +48,15 @@ test("RazzballProjectionSource premium without cookie throws a clear error", asy
   const source = new RazzballProjectionSource({ position: "rb", kind: "pigskinonator", fetchImpl: fakeFetch(html) });
   await assert.rejects(() => source.fetchProjections("football", "2026", "2026-W01"), /premium/i);
 });
+
+test("optional premium source falls back to no candidates when the session is missing", async () => {
+  const html = await readFile("tests/fixtures/razzball-rb-ros.html", "utf8");
+  const source = new RazzballProjectionSource({
+    position: "rb",
+    kind: "pigskinonator",
+    fetchImpl: fakeFetch(html),
+    optional: true
+  });
+  assert.deepEqual(await source.fetchProjections("football", "2026", "2026-W01"), []);
+  assert.match(source.lastSkipReason ?? "", /premium/i);
+});
