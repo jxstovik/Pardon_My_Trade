@@ -58,3 +58,54 @@ test("FFTodayProjectionSource throws when no table is present", async () => {
     await cleanup();
   }
 });
+
+test("optional FFTodayProjectionSource skips a 404 instead of aborting", async () => {
+  const { cache, cleanup } = await isolatedCache();
+  const notFound = (async () => new Response("missing", { status: 404 })) as unknown as typeof fetch;
+  try {
+    const source = new FFTodayProjectionSource({ position: "rb", fetchImpl: notFound, cache, optional: true });
+    const candidates = await source.fetchProjections("football", "2026", "2026-ROS");
+    assert.deepEqual(candidates, []);
+    assert.match(source.lastSkipReason ?? "", /404/);
+  } finally {
+    await cleanup();
+  }
+});
+
+test("optional FFTodayProjectionSource skips an unparseable page", async () => {
+  const { cache, cleanup } = await isolatedCache();
+  try {
+    const source = new FFTodayProjectionSource({
+      position: "rb",
+      fetchImpl: fakeFetch("<html><body>no table</body></html>"),
+      cache,
+      optional: true
+    });
+    assert.deepEqual(await source.fetchProjections("football", "2026", "2026-ROS"), []);
+    assert.match(source.lastSkipReason ?? "", /parseable/i);
+  } finally {
+    await cleanup();
+  }
+});
+
+test("--force bypasses the fetch cache", async () => {
+  const { cache, cleanup } = await isolatedCache();
+  const html = await readFile("tests/fixtures/fftoday-rb-proj.html", "utf8");
+  let calls = 0;
+  const countingFetch = (async () => {
+    calls += 1;
+    return new Response(html, { status: 200, headers: { "content-type": "text/html" } });
+  }) as unknown as typeof fetch;
+  try {
+    const cached = new FFTodayProjectionSource({ position: "rb", fetchImpl: countingFetch, cache });
+    await cached.fetchProjections("football", "2026", "2026-ROS");
+    await cached.fetchProjections("football", "2026", "2026-ROS");
+    assert.equal(calls, 1, "second call is served from cache");
+
+    const forced = new FFTodayProjectionSource({ position: "rb", fetchImpl: countingFetch, cache, force: true });
+    await forced.fetchProjections("football", "2026", "2026-ROS");
+    assert.equal(calls, 2, "forced call refetches");
+  } finally {
+    await cleanup();
+  }
+});

@@ -23,11 +23,23 @@ import { buildProjectionSources } from "./projections/projection-source-registry
 import { matchProjectionsToRoster } from "./projections/projection-matching.js";
 import { mergeProjections } from "./agents/snapshot-integration.js";
 import { runProjectionsCommand, runRazzballLogin } from "./cli-projections.js";
+import { runSeasonRefresh } from "./season-refresh.js";
 import { JsonModelStore } from "./probabilistic/model-store.js";
 import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProjectionCandidates } from "./agents/snapshot-integration.js";
 import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
 import { runOrchestrator, buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
 import { ActionQueue, JsonActionQueueStore } from "./agents/action-queue.js";
+import { InMemoryScheduler } from "./scheduler/scheduler.js";
+import { registerSeasonJobs, runDailySeasonJob } from "./seasons/season-jobs.js";
+import { runSeasonOrchestration } from "./seasons/season-orchestration.js";
+import { DraftSession } from "./draft/draft-session.js";
+import { loadEspnCredentials } from "./adapters/espn/espn-auth.js";
+import { EspnPlatformClient } from "./adapters/espn/espn-platform-client.js";
+import type { DraftPickEvent } from "./draft/feed/draft-feed.js";
+import type { SeasonJobDeps } from "./seasons/season-jobs.js";
+import type { KnowledgeRepository } from "./knowledge/repository.js";
+import type { V1Store } from "./history/v1-store.js";
+import type { NotificationProvider } from "./notifications/notification-provider.js";
 import type { ModelPrior, Observation } from "./probabilistic/bayesian-model.js";
 import type { OrchestratorInput } from "./agents/types.js";
 
@@ -195,6 +207,13 @@ async function main(): Promise<void> {
       server.listen(port, () => {
         console.log(`Pardon My Trade GUI running at http://localhost:${port}`);
       });
+
+      if (process.argv.includes("--scheduler")) {
+        const scheduler = new InMemoryScheduler();
+        const jobs = registerSeasonJobs(scheduler, buildSeasonJobDeps(dataDir, { repository, v1Store }));
+        scheduler.start();
+        console.log(`Season scheduler started: ${jobs.map((job) => `${job.jobId}@${job.time}`).join(", ")}`);
+      }
       return;
     }
     case "import-espn": {
@@ -364,13 +383,172 @@ async function main(): Promise<void> {
       await runRazzballLogin();
       return;
     }
+    case "season-refresh": {
+      const positionals = process.argv.slice(3).filter((arg) => !arg.startsWith("--"));
+      const season = positionals[0];
+      const weekArg = positionals[1];
+      const week = weekArg ? Number(weekArg) : undefined;
+      const force = process.argv.includes("--force");
+      const summary = await runSeasonRefresh({ season, week, force });
+      console.log(JSON.stringify(summary, null, 2));
+      return;
+    }
+    case "daemon": {
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      await mkdir(dataDir, { recursive: true });
+      const scheduler = new InMemoryScheduler(() => new Date(), 60_000, true);
+      const jobs = registerSeasonJobs(scheduler, buildSeasonJobDeps(dataDir));
+      scheduler.start();
+      console.log(JSON.stringify({
+        message: "Pardon My Trade season daemon running (Ctrl+C to stop).",
+        dataDir,
+        jobs: jobs.map((job) => ({ jobId: job.jobId, name: job.name, time: job.time, days: job.days }))
+      }, null, 2));
+
+      if (process.argv.includes("--run-now")) {
+        await runDailySeasonJob(buildSeasonJobDeps(dataDir));
+      }
+
+      const shutdown = () => {
+        scheduler.stop();
+        process.exit(0);
+      };
+      process.on("SIGINT", shutdown);
+      process.on("SIGTERM", shutdown);
+      return;
+    }
     case "projections": {
       await runProjectionsCommand(process.argv.slice(3));
+      return;
+    }
+    case "draft-pick": {
+      const args = process.argv.slice(3);
+      const positional = args.filter((a) => !a.startsWith("--"));
+      const [roundStr, roundPickStr, teamId, playerExternalId] = positional;
+      const round = Number(roundStr);
+      const roundPick = Number(roundPickStr);
+      if (!round || !roundPick || !teamId || !playerExternalId) {
+        throw new Error("usage: pmt draft-pick <round> <roundPick> <teamId> <playerExternalId> [--pickNo N]");
+      }
+      const pickNoArg = args.find((a) => a.startsWith("--pickNo"));
+      const pickNo = pickNoArg ? Number(pickNoArg.split("=")[1]) : undefined;
+      const session = new DraftSession({ manualStoragePath: resolveDraftStore() });
+      const event = session.recordManualPick({ round, roundPick, teamId, playerExternalId, pickNo });
+      console.log(JSON.stringify(event));
+      return;
+    }
+    case "draft-watch": {
+      const args = process.argv.slice(3);
+      const intervalMs = Number(getArg(args, "--interval-ms", "15000"));
+      const espnDraftId = getArg(args, "--espn-draft-id");
+      const once = args.includes("--once");
+      const asJson = args.includes("--json");
+      let client: EspnPlatformClient | undefined;
+      if (espnDraftId) {
+        try {
+          client = new EspnPlatformClient({ credentials: loadEspnCredentials() });
+        } catch {
+          client = undefined;
+        }
+      }
+      const session = new DraftSession({
+        intervalMs,
+        espnDraftId,
+        client,
+        manualStoragePath: resolveDraftStore(),
+        onPick: (picks) => {
+          if (asJson) {
+            console.log(JSON.stringify(picks));
+          } else {
+            for (const p of picks) console.log(formatPick(p));
+          }
+        }
+      });
+      if (once) {
+        const picks = await session.pollOnce();
+        console.log(asJson ? JSON.stringify(picks) : picks.map(formatPick).join("\n"));
+        return;
+      }
+      console.log(`Watching draft via ${session.feedName}. Ctrl-C to stop.`);
+      session.startWatching();
+      const stop = () => {
+        session.stopWatching();
+        process.exit(0);
+      };
+      process.on("SIGINT", stop);
+      process.on("SIGTERM", stop);
+      await new Promise<void>(() => {});
       return;
     }
     default:
       throw new Error(`Unknown command: ${command}`);
   }
+}
+
+/**
+ * Wire the in-season scheduled jobs (doc 21 Phase 3) to the real pipeline:
+ * projections -> news/injuries -> orchestrator -> notifications. Shared SQLite
+ * handles are reused when `serve` already opened them.
+ */
+function buildSeasonJobDeps(
+  dataDir: string,
+  shared?: { repository: KnowledgeRepository; v1Store: V1Store }
+): SeasonJobDeps {
+  const config = createDefaultConfig();
+  const repository = shared?.repository ?? new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+  const v1Store = shared?.v1Store ?? new SqliteV1Store({ filePath: join(dataDir, "pmt-v1.db") });
+  const ruleEngine = new ScoringRuleEngine();
+  const decisionEngine = new DefaultDecisionEngine(ruleEngine);
+  const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
+  const newsPath = process.env.PMT_NEWS_PATH ?? "tests/fixtures/sample-news.json";
+  const providers: NotificationProvider[] = [
+    new ConsoleNotificationProvider(),
+    new FileNotificationProvider(join(dataDir, "notifications.log"))
+  ];
+
+  return {
+    dataDir,
+    refresh: () => runRefresh({
+      fixturePath: config.fixturePath,
+      newsPath,
+      leagueExternalId: process.env.PMT_LEAGUE_EXTERNAL_ID ?? "pmt-demo-football",
+      teamExternalId: process.env.PMT_TEAM_EXTERNAL_ID ?? "team-001",
+      repository,
+      v1Store,
+      ruleEngine,
+      decisionEngine,
+      recommendationEngine,
+      notificationProviders: providers
+    }),
+    seasonRefresh: (options) => runSeasonRefresh({ ...options, repository }),
+    orchestrate: (options) => runSeasonOrchestration({ ...options, repository }),
+    notify: async (notifications) => {
+      for (const notification of notifications) {
+        await v1Store.saveNotification(notification);
+        for (const provider of providers) {
+          await provider.send(notification);
+        }
+      }
+    },
+    log: (result) => {
+      console.log(JSON.stringify(result));
+    }
+  };
+}
+
+function resolveDraftStore(): string {
+  return process.env.PMT_DRAFT_STORE ?? join(process.cwd(), ".pmt", "draft-manual.jsonl");
+}
+
+function getArg(args: readonly string[], flag: string, fallback?: string): string | undefined {
+  const hit = args.find((a) => a === flag || a.startsWith(`${flag}=`));
+  if (!hit) return fallback;
+  if (hit.includes("=")) return hit.split("=")[1];
+  return fallback;
+}
+
+function formatPick(p: DraftPickEvent): string {
+  return `pick ${p.pickNo} (r${p.round}.${p.roundPick}) team=${p.teamId} player=${p.playerExternalId} via=${p.source}`;
 }
 
 function printHelp(): void {
@@ -390,10 +568,14 @@ Usage:
   pmt action-approve <actionId>
   pmt action-reject <actionId>
   pmt razzball-login
-  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--no-save] [--max N]
+  pmt season-refresh [season] [week] [--force]
+  pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--auto] [--ppr] [--force] [--no-save] [--persist] [--max N]
   pmt projections --clear-cache
   pmt projections --cache-stats
-  pmt serve
+  pmt daemon [--run-now]
+  pmt serve [--scheduler]
+  pmt draft-pick <round> <roundPick> <teamId> <playerExternalId> [--pickNo N]
+  pmt draft-watch [--espn-draft-id ID] [--interval-ms N] [--once] [--json]
 
 V1 adds scheduled refresh, news ingestion, injury alerts, projection
 consensus, manager profiles, historical tracking, and notifications,
@@ -404,6 +586,11 @@ probabilistic Bayesian player-model engine (plan Open Claw Agent Fantasy
 section 5), and the FF_Orchestrator agent with a human-approval action
 queue for high-risk moves (trades, drops). Live ESPN logins require
 ESPN_LEAGUE_ID (+ ESPN_S2, SWID) in the environment.
+
+The in-season loop (pmt daemon, or pmt serve --scheduler) runs the daily
+projection pull + advisory pass Mon-Sat, a Sunday lineup-lock reminder, and
+a Tuesday waiver/trade sweep. Jobs pause automatically in the offseason and
+never execute a move: high-risk actions wait for pmt action-approve.
 `);
 }
 

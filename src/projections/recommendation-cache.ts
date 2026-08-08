@@ -128,10 +128,14 @@ export async function fetchWithCache(
     source: string;
     headers?: Record<string, string>;
     cookies?: string;
+    /** Bypass the TTL and refetch, overwriting any cached entry. */
+    force?: boolean;
   }
 ): Promise<CacheEntry> {
-  const cached = await options.cache.get(url);
-  if (cached) return cached;
+  if (!options.force) {
+    const cached = await options.cache.get(url);
+    if (cached) return cached;
+  }
 
   const fetchImpl = options.fetchImpl ?? globalThis.fetch;
   const headers: Record<string, string> = {
