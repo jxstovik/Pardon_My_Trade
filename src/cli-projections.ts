@@ -1,9 +1,14 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { RecommendationCache, DEFAULT_CACHE_TTL_MS } from "./projections/recommendation-cache.js";
 import { RazzballProjectionSource } from "./projections/razzball-projection-source.js";
 import { FFTodayProjectionSource } from "./projections/fftoday-projection-source.js";
 import { EspnProjectionSource } from "./projections/espn-projection-source.js";
 import { loginRazzball } from "./projections/razzball-auth.js";
 import { saveRecommendation } from "./projections/recommendation-writer.js";
+import { SqliteKnowledgeRepository } from "./knowledge/sqlite-knowledge-repository.js";
+import { persistCandidates } from "./season-refresh.js";
+import { getCurrentScoringPeriod, weekFromScoringPeriod } from "./seasons/nfl-calendar.js";
 import type { ProjectionCandidate, ProjectionSource } from "./projections/projection-source.js";
 
 /**
@@ -51,17 +56,18 @@ function parseFlags(args: string[]): { flags: Record<string, string | boolean>; 
 function buildSource(sourceArg: string, position: string, flags: Record<string, string | boolean>, cache: RecommendationCache): ProjectionSource {
   const week = flags["week"] !== undefined ? Number(flags["week"]) : undefined;
   const ppr = flags["ppr"] === true;
+  const force = flags["force"] === true;
   if (sourceArg === "espn") {
     return new EspnProjectionSource();
   }
   if (sourceArg === "razzball" || sourceArg === "razzball-premium") {
     const premium = sourceArg === "razzball-premium";
     const kind = premium ? "pigskinonator" : (week !== undefined ? "weekly" : "ros");
-    return new RazzballProjectionSource({ position, kind, week, ppr, fetchImpl: globalThis.fetch, cache });
+    return new RazzballProjectionSource({ position, kind, week, ppr, force, fetchImpl: globalThis.fetch, cache });
   }
   if (sourceArg === "fftoday") {
     const kind = week !== undefined ? "weekly" : "season";
-    return new FFTodayProjectionSource({ position, kind, week, fetchImpl: globalThis.fetch, cache });
+    return new FFTodayProjectionSource({ position, kind, week, force, fetchImpl: globalThis.fetch, cache });
   }
   throw new Error(`Unknown projection source: ${sourceArg}. Use razzball, razzball-premium, fftoday, or espn.`);
 }
@@ -89,11 +95,20 @@ export async function runProjectionsCommand(args: string[]): Promise<void> {
   const position = positionals[1] ?? "rb";
 
   if (!sourceArg) {
-    throw new Error("projections requires a source: pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--no-save] [--max N]");
+    throw new Error("projections requires a source: pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--ppr] [--force] [--no-save] [--persist] [--max N]");
   }
 
   const source = buildSource(sourceArg, position, flags, cache);
   const season = process.env.ESPN_SEASON ?? new Date().getFullYear().toString();
+
+  // `--auto` resolves the current NFL week from the calendar when no explicit
+  // `--week N` was supplied, so weekly pulls track the season automatically.
+  if (flags["auto"] && flags["week"] === undefined) {
+    const period = getCurrentScoringPeriod(new Date(), season);
+    const autoWeek = weekFromScoringPeriod(period);
+    if (autoWeek !== undefined) flags["week"] = String(autoWeek);
+  }
+
   const scoringPeriod = typeof flags["week"] === "string" ? `${season}-W${flags["week"]}` : `${season}-ROS`;
 
   const candidates = await source.fetchProjections("football", season, scoringPeriod);
@@ -125,6 +140,24 @@ export async function runProjectionsCommand(args: string[]): Promise<void> {
   console.log(markdown);
   if (!flags["no-save"]) {
     console.log(`\nSaved: ${path}`);
+  }
+
+  if (flags["persist"]) {
+    const dataDir = process.env.PMT_DATA_DIR ?? "data";
+    const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+    const pointerRaw = await readFile(join(dataDir, "last-snapshot.json"), "utf8").catch(() => undefined);
+    if (pointerRaw) {
+      const pointer = JSON.parse(pointerRaw) as { snapshot_id: string };
+      const snapshot = await repository.getLeagueSnapshot(pointer.snapshot_id);
+      if (snapshot) {
+        const stored = await persistCandidates(repository, snapshot, source, candidates, scoringPeriod, dataDir);
+        console.log(`Persisted ${stored} matched projections to the store (${scoringPeriod}).`);
+      } else {
+        console.log("No imported snapshot found; run `pmt import-espn <leagueId>` before --persist.");
+      }
+    } else {
+      console.log("No imported snapshot found; run `pmt import-espn <leagueId>` before --persist.");
+    }
   }
 }
 

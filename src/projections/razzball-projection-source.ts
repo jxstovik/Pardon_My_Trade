@@ -18,6 +18,13 @@ export interface RazzballProjectionSourceOptions {
   readonly dataDir?: string;
   readonly cookiePath?: string;
   readonly maxRows?: number;
+  /** Bypass the 1h fetch cache. */
+  readonly force?: boolean;
+  /**
+   * Tolerate fetch/parse failures by returning no candidates and recording
+   * `lastSkipReason`, so a multi-source run is never aborted by one page.
+   */
+  readonly optional?: boolean;
 }
 
 const POSITION_SLUGS: Record<string, string> = {
@@ -72,6 +79,7 @@ export function buildRazzballUrl(options: {
 
 export class RazzballProjectionSource implements ProjectionSource {
   readonly name: string;
+  lastSkipReason?: string;
   private readonly position: string;
   private readonly kind: RazzballKind;
   private readonly week?: number;
@@ -81,6 +89,8 @@ export class RazzballProjectionSource implements ProjectionSource {
   private readonly dataDir: string;
   private readonly cookiePath?: string;
   private readonly maxRows?: number;
+  private readonly force: boolean;
+  private readonly optional: boolean;
 
   constructor(options: RazzballProjectionSourceOptions) {
     this.position = options.position.toLowerCase();
@@ -92,11 +102,14 @@ export class RazzballProjectionSource implements ProjectionSource {
     this.dataDir = options.dataDir ?? "data";
     this.cookiePath = options.cookiePath;
     this.maxRows = options.maxRows;
+    this.force = options.force ?? false;
+    this.optional = options.optional ?? false;
     const premium = this.kind === "pigskinonator" ? "premium-" : "";
     this.name = `razzball-${premium}${this.position}`;
   }
 
   async fetchProjections(_sport: string, _season: string, _scoringPeriod: string): Promise<ProjectionCandidate[]> {
+    this.lastSkipReason = undefined;
     const url = buildRazzballUrl({ position: this.position, kind: this.kind, week: this.week });
     const premium = this.kind === "pigskinonator";
 
@@ -108,23 +121,35 @@ export class RazzballProjectionSource implements ProjectionSource {
         cookies = undefined;
       }
       if (!cookies) {
+        const message = "Razzball premium URL requires a saved session. Run `pmt razzball-login` first.";
+        if (this.optional) return this.skip(message);
         throw new PmtError({
           code: "RAZZBALL_PREMIUM_REQUIRED",
-          message: "Razzball premium URL requires a saved session. Run `pmt razzball-login` first.",
+          message,
           source: "projection_source",
           retryable: false
         });
       }
     }
 
-    const entry = await fetchWithCache(url, {
-      fetchImpl: this.fetchImpl,
-      cache: this.cache ?? new RecommendationCache({ directory: this.cacheDir() }),
-      source: "razzball",
-      cookies
-    });
+    try {
+      const entry = await fetchWithCache(url, {
+        fetchImpl: this.fetchImpl,
+        cache: this.cache ?? new RecommendationCache({ directory: this.cacheDir() }),
+        source: "razzball",
+        cookies,
+        force: this.force
+      });
+      return this.parse(entry.body);
+    } catch (cause) {
+      if (this.optional) return this.skip((cause as Error).message);
+      throw cause;
+    }
+  }
 
-    return this.parse(entry.body);
+  private skip(reason: string): ProjectionCandidate[] {
+    this.lastSkipReason = reason;
+    return [];
   }
 
   private parse(html: string): ProjectionCandidate[] {

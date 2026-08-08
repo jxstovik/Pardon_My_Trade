@@ -12,3 +12,6 @@ data/
 *.db-shm
 *.db-wal
 *.log
+
+# Windows download markers (WSL/NTFS alternate data streams)
+*:Zone.Identifier

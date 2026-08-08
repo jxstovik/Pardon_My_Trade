@@ -75,7 +75,19 @@ npm run pmt -- action-approve <actionId>
 
 Live ESPN actions require `ESPN_LEAGUE_ID` (and `ESPN_S2`, `SWID`) in the environment; `import-espn` and the write actions are exercised against the real ESPN API, while the model engine and orchestrator are fully tested credential-free (see `examples/draftkat-config.json`).
 
-Environment overrides: `PMT_DATA_DIR`, `PMT_PORT`, `PMT_NEWS_PATH`, `PMT_FIXTURE_PATH`, `ESPN_LEAGUE_ID`, `ESPN_SEASON`, `ESPN_S2`, `SWID`, `PMT_PRIORS_PATH`.
+### In-season loop
+
+Once a league is imported, the scheduled in-season workflow (see `docs/21-inseason-workflow.md`) keeps projections, recommendations, and notifications current without re-importing:
+
+```text
+npm run pmt -- season-refresh [season] [week] [--force]
+npm run pmt -- daemon [--run-now]     # headless scheduler
+npm run pmt -- serve -- --scheduler   # GUI + scheduler
+```
+
+Jobs: daily 06:00 Mon–Sat (premium login → projections → news/injuries → orchestrator → notifications), Sunday 11:00 lineup-lock reminder, Tuesday 13:00 waiver + trade sweep. They pause automatically outside the NFL regular season, tolerate a down projection source (alerting instead of aborting), and never execute a move — high-risk actions wait for `pmt action-approve`.
+
+Environment overrides: `PMT_DATA_DIR`, `PMT_PORT`, `PMT_NEWS_PATH`, `PMT_FIXTURE_PATH`, `PMT_PROJECTION_SOURCES`, `PMT_SEASON_DAILY_TIME`, `PMT_SEASON_LINEUP_LOCK_TIME`, `PMT_SEASON_WAIVER_TIME`, `ESPN_LEAGUE_ID`, `ESPN_SEASON`, `ESPN_S2`, `SWID`, `PMT_PRIORS_PATH`, `RAZZBALL_USERNAME`, `RAZZBALL_PASSWORD`.
 
 Credential-free fixture verification is also available through PowerShell:
 

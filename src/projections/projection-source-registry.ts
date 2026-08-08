@@ -21,6 +21,13 @@ export interface BuildProjectionSourcesOptions {
   readonly cache?: RecommendationCache;
   readonly fetchImpl?: typeof fetch;
   readonly onUnsupported?: (name: string) => void;
+  /** Bypass the 1h fetch cache for every built source. */
+  readonly force?: boolean;
+  /**
+   * Tolerate a broken source instead of throwing. Defaults to true: a fan-out
+   * run should never abort because one position page is down.
+   */
+  readonly optional?: boolean;
 }
 
 export function buildProjectionSources(options: BuildProjectionSourcesOptions = {}): ProjectionSource[] {
@@ -32,6 +39,8 @@ export function buildProjectionSources(options: BuildProjectionSourcesOptions = 
   const dataDir = options.dataDir ?? "data";
   const cache = options.cache ?? new RecommendationCache({ directory: joinCache(dataDir) });
   const season = options.season ?? new Date().getFullYear().toString();
+  const force = options.force ?? false;
+  const optional = options.optional ?? true;
   const out: ProjectionSource[] = [];
 
   for (const token of raw.split(",")) {
@@ -46,7 +55,9 @@ export function buildProjectionSources(options: BuildProjectionSourcesOptions = 
           kind: "ros",
           fetchImpl: options.fetchImpl,
           cache,
-          dataDir
+          dataDir,
+          force,
+          optional
         }));
       }
     } else if (name === "fftoday") {
@@ -56,7 +67,9 @@ export function buildProjectionSources(options: BuildProjectionSourcesOptions = 
           kind: "season",
           season,
           fetchImpl: options.fetchImpl,
-          cache
+          cache,
+          force,
+          optional
         }));
       }
     } else if (name === "fantasypros") {
