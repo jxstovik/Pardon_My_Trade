@@ -38,10 +38,11 @@ missing input, and the value is in the join:
 
 The composite is the product, not any one feed.
 
-## Branch prerequisite (read first)
+## Branch prerequisite (resolved)
 
-This branch (`feature/DraftKat`) does **not** contain the season-workflow work
-that lives on `feature/season-workflow`:
+This branch (`feature/DraftKat`) now **contains** the season-workflow work
+(merged via commit `9532104` "Merge feature/season-workflow into feature/DraftKat").
+The previously-missing pieces are present:
 
 - `src/seasons/nfl-calendar.ts` (season/week resolution)
 - `src/season-refresh.ts` + projection persistence
@@ -51,11 +52,9 @@ that lives on `feature/season-workflow`:
 - `ScheduledJob.days` and the season job runner
 
 The draft agent depends on projection persistence (Phase 3 valuation) and the
-`--force`/tolerant-source behaviour (Phase 5 live resilience).
-
-- [ ] **Decision required:** merge `feature/season-workflow` into
-  `feature/DraftKat` before Phase 3, or cherry-pick the projection-persistence
-  and tolerant-source commits. Do not re-implement them here.
+`--force`/tolerant-source behaviour (Phase 5 live resilience), both now
+available. **Decision taken:** full merge (not cherry-pick), so Phase 3 can
+proceed without re-implementation.
 
 ## Architecture
 
@@ -94,14 +93,24 @@ Reuse, do not fork:
   `assertRecommendation` and renders in the existing GUI.
 - `KnowledgeRepository` for all new tables.
 
-### Known adapter constraint (verified)
+### Known adapter constraint (resolved)
 
-`EspnPlatformClient.leagueBase()` hardcodes
-`.../seasons/{season}/segments/1/leagues/{leagueId}` and `getJson()` builds
-every URL from it. The kona draft board needs
-`.../segments/0/leaguedefaults/3` (and `X-Fantasy-Filter` on a **GET** for
-pagination, which the client currently only sets on `postJson`). Phase 2 must
-widen the client rather than spawn a second ESPN HTTP path.
+`EspnPlatformClient` previously hardcoded
+`.../seasons/{season}/segments/1/leagues/{leagueId}` and only set
+`X-Fantasy-Filter` on `postJson`. It has been widened (this plan's pre-Phase-2
+work) so kona needs no second HTTP path:
+
+- `getJson<T>(path, options?)` now takes `EspnGetOptions` (`view`, `filter`,
+  `query`, `scope`) **or** the legacy `string[]` view form (backwards
+  compatible). `filter` is serialized into `X-Fantasy-Filter` on GET.
+- `EspnRequestScope` supports `segment`, `leagueId`, `leagueDefaults`, and
+  `readHost`, so `segments/0/leaguedefaults/3` on the `lm-api-reads` host is a
+  one-line call.
+- `postJson` routes through the same `resolveBase`, so league-scoped writes are
+  unchanged.
+
+Verified by `tests/espn-platform-client.test.ts` (league GET, leaguedefaults +
+GET filter, POST filter).
 
 ### New recommendation type
 
@@ -147,8 +156,9 @@ Nothing else joins without this.
 
 ## Phase 2 — Static draft board (22a + 22c)
 
-- [ ] Widen `EspnPlatformClient` with an explicit-path `getJsonAbsolute(path, {view, filter})`
-  supporting `segments/0/leaguedefaults/3` and a GET `X-Fantasy-Filter`.
+- [x] Widen `EspnPlatformClient` with an explicit-path `getJson(path, {view, filter, query, scope})`
+  supporting `segments/0/leaguedefaults/3` and a GET `X-Fantasy-Filter`. (Done
+  pre-Phase-2; see "Known adapter constraint (resolved)".)
 - [ ] `KonaDraftSource`: paginate via `x-fantasy-filter` `{players:{limit,offset}}`;
   parse `draftRanksByRankType` (PPR/STANDARD/SUPERFLEX/ELIMINATION),
   `auctionValue`, `averageDraftPosition`, `ownership.percentOwned`. Parse
@@ -183,15 +193,45 @@ Nothing else joins without this.
   budget, pick clock, next pick number; pure reducer `applyPick(state, pick)`.
 - [ ] Snake pick-number maths (round, direction, my next pick) from league size
   and draft position.
-- [ ] `feed/manual-feed.ts`: `pmt draft-pick <player> [--team <id>]` — the
-  always-works operator path.
-- [ ] `feed/espn-poll-feed.ts`: poll the ESPN draft-detail view.
-  **The live pick feed is unverified** — spike it first; if it does not hold,
+
+### Live feed + poller (scaffolded in this pre-Phase-4 pass)
+
+The feed layer is built so Phase 4's `state.ts` slots straight in. Decisions
+taken:
+
+- [x] `src/draft/feed/draft-feed.ts`: `DraftPickEvent`, `DraftFeed`,
+  `ManualDraftFeed` (durable JSONL when `storagePath` given), and
+  `FallbackDraftFeed`. The composite **merges** both feeds and de-duplicates by
+  `pickNo` (primary wins), rather than exclusively falling back — because the
+  ESPN live endpoint is unverified and may report success while returning
+  nothing, which would otherwise drop the human's manual picks and empty the
+  board.
+- [x] `src/draft/feed/espn-draft-poll-feed.ts`: `EspnDraftPollFeed` polls
+  `…/draft/{draftId}?view=draftDetail`. **Unverified** — any error marks it
+  unavailable and contributes nothing; parsing is best-effort and returns no
+  events on unexpected shapes. Must be confirmed against a real draft response
+  (Phase 4 spike) before relied on.
+- [x] `src/draft/feed/draft-poller.ts`: `DraftPoller(intervalMs, onPicks)` —
+  seconds-granularity, injectable timers, auto-stops after `maxErrors`
+  consecutive failures, fires an immediate poll on `start()`. Deliberately
+  separate from `InMemoryScheduler` (daily `HH:MM`, 60s poll), which is
+  unsuitable for a 60–90s pick clock.
+- [x] `src/draft/draft-session.ts`: `DraftSession` binds the composite feed +
+  poller, accumulates the observed board, records manual picks, and exposes
+  `startWatching`/`stopWatching`/`pollOnce`/`getBoard`.
+- [x] CLI: `pmt draft-pick <round> <roundPick> <teamId> <playerExternalId>
+  [--pickNo N]` (writes the durable manual backup) and `pmt draft-watch
+  [--espn-draft-id ID] [--interval-ms N] [--once] [--json]` (runs the composite
+  feed; manual is always present as the backup).
+- [ ] Remaining: `state.ts` reducer, snake maths, ESPN feed verification spike,
+  and per-pick persistence of `DraftState` so a crash mid-draft resumes.
+
+- [ ] `feed/manual-feed.ts` → superseded by `src/draft/feed/*` above; the
+  `pmt draft-pick` operator path is the always-works backup.
+- [ ] `feed/espn-poll-feed.ts` → superseded by `src/draft/feed/espn-draft-poll-feed.ts`.
+- [ ] **The live pick feed is unverified** — spike it first; if it does not hold,
   manual feed is the shipped path and polling stays behind
   `PMT_DRAFT_FEED=espn|manual`.
-- [ ] Second-granularity poller (draft clocks are ~60–90s). `InMemoryScheduler`
-  matches `HH:MM` at a 60s poll and is unsuitable; add a small
-  `DraftPoller(intervalMs)` rather than bending the scheduler.
 - [ ] Persist state after every pick so a crash mid-draft resumes.
 
 ## Phase 5 — The agent

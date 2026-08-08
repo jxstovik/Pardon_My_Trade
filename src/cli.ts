@@ -32,6 +32,10 @@ import { ActionQueue, JsonActionQueueStore } from "./agents/action-queue.js";
 import { InMemoryScheduler } from "./scheduler/scheduler.js";
 import { registerSeasonJobs, runDailySeasonJob } from "./seasons/season-jobs.js";
 import { runSeasonOrchestration } from "./seasons/season-orchestration.js";
+import { DraftSession } from "./draft/draft-session.js";
+import { loadEspnCredentials } from "./adapters/espn/espn-auth.js";
+import { EspnPlatformClient } from "./adapters/espn/espn-platform-client.js";
+import type { DraftPickEvent } from "./draft/feed/draft-feed.js";
 import type { SeasonJobDeps } from "./seasons/season-jobs.js";
 import type { KnowledgeRepository } from "./knowledge/repository.js";
 import type { V1Store } from "./history/v1-store.js";
@@ -417,6 +421,65 @@ async function main(): Promise<void> {
       await runProjectionsCommand(process.argv.slice(3));
       return;
     }
+    case "draft-pick": {
+      const args = process.argv.slice(3);
+      const positional = args.filter((a) => !a.startsWith("--"));
+      const [roundStr, roundPickStr, teamId, playerExternalId] = positional;
+      const round = Number(roundStr);
+      const roundPick = Number(roundPickStr);
+      if (!round || !roundPick || !teamId || !playerExternalId) {
+        throw new Error("usage: pmt draft-pick <round> <roundPick> <teamId> <playerExternalId> [--pickNo N]");
+      }
+      const pickNoArg = args.find((a) => a.startsWith("--pickNo"));
+      const pickNo = pickNoArg ? Number(pickNoArg.split("=")[1]) : undefined;
+      const session = new DraftSession({ manualStoragePath: resolveDraftStore() });
+      const event = session.recordManualPick({ round, roundPick, teamId, playerExternalId, pickNo });
+      console.log(JSON.stringify(event));
+      return;
+    }
+    case "draft-watch": {
+      const args = process.argv.slice(3);
+      const intervalMs = Number(getArg(args, "--interval-ms", "15000"));
+      const espnDraftId = getArg(args, "--espn-draft-id");
+      const once = args.includes("--once");
+      const asJson = args.includes("--json");
+      let client: EspnPlatformClient | undefined;
+      if (espnDraftId) {
+        try {
+          client = new EspnPlatformClient({ credentials: loadEspnCredentials() });
+        } catch {
+          client = undefined;
+        }
+      }
+      const session = new DraftSession({
+        intervalMs,
+        espnDraftId,
+        client,
+        manualStoragePath: resolveDraftStore(),
+        onPick: (picks) => {
+          if (asJson) {
+            console.log(JSON.stringify(picks));
+          } else {
+            for (const p of picks) console.log(formatPick(p));
+          }
+        }
+      });
+      if (once) {
+        const picks = await session.pollOnce();
+        console.log(asJson ? JSON.stringify(picks) : picks.map(formatPick).join("\n"));
+        return;
+      }
+      console.log(`Watching draft via ${session.feedName}. Ctrl-C to stop.`);
+      session.startWatching();
+      const stop = () => {
+        session.stopWatching();
+        process.exit(0);
+      };
+      process.on("SIGINT", stop);
+      process.on("SIGTERM", stop);
+      await new Promise<void>(() => {});
+      return;
+    }
     default:
       throw new Error(`Unknown command: ${command}`);
   }
@@ -473,6 +536,21 @@ function buildSeasonJobDeps(
   };
 }
 
+function resolveDraftStore(): string {
+  return process.env.PMT_DRAFT_STORE ?? join(process.cwd(), ".pmt", "draft-manual.jsonl");
+}
+
+function getArg(args: readonly string[], flag: string, fallback?: string): string | undefined {
+  const hit = args.find((a) => a === flag || a.startsWith(`${flag}=`));
+  if (!hit) return fallback;
+  if (hit.includes("=")) return hit.split("=")[1];
+  return fallback;
+}
+
+function formatPick(p: DraftPickEvent): string {
+  return `pick ${p.pickNo} (r${p.round}.${p.roundPick}) team=${p.teamId} player=${p.playerExternalId} via=${p.source}`;
+}
+
 function printHelp(): void {
   console.log(`Pardon My Trade CLI
 
@@ -496,6 +574,8 @@ Usage:
   pmt projections --cache-stats
   pmt daemon [--run-now]
   pmt serve [--scheduler]
+  pmt draft-pick <round> <roundPick> <teamId> <playerExternalId> [--pickNo N]
+  pmt draft-watch [--espn-draft-id ID] [--interval-ms N] [--once] [--json]
 
 V1 adds scheduled refresh, news ingestion, injury alerts, projection
 consensus, manager profiles, historical tracking, and notifications,
