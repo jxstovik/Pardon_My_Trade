@@ -61,7 +61,7 @@ Main CLI is `src/cli.ts`. Subcommands: `import-fixture`, `weekly-report`,
 - Env is loaded from `.env` via `loadEnv()`. Copy `.env.example` to `.env`.
   Key knobs: `PMT_DATA_DIR`, `PMT_FIXTURE_PATH`, `PMT_PROJECTION_SOURCES`
   (`espn,razzball,fftoday` to opt in — unset = ESPN only, deterministic tests).
-- Node 20+ required (`.nvmrc` = `20`). `type: "module"` — ESM with NodeNext
+- Node 26 required (`.nvmrc` = `26`). `type: "module"` — ESM with NodeNext
   resolution, so imports must include the `.js` extension even for `.ts` files.
 
 ## Where the docs actually live
