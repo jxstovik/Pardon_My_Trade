@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pardon My Trade — Draft Harness</title>
+  <link rel="stylesheet" href="draft.css" />
+</head>
+<body>
+  <header>
+    <h1>Pardon My Trade — Draft Harness</h1>
+    <div class="meta" id="meta">Connecting…</div>
+  </header>
+
+  <main class="draft-grid">
+    <section class="panel" id="panel-board">
+      <h2>Live Draft Board</h2>
+      <div id="board-status" class="status"></div>
+      <div id="board-list" class="scroll"></div>
+      <form id="pick-form" class="pick-form">
+        <input type="number" name="round" placeholder="Round" min="1" required />
+        <input type="number" name="roundPick" placeholder="Rd Pick" min="1" required />
+        <input type="text" name="teamId" placeholder="Team ID" required />
+        <input type="text" name="playerExternalId" placeholder="Player ID" required />
+        <button type="submit">Record pick</button>
+      </form>
+    </section>
+
+    <section class="panel panel-wide" id="panel-best">
+      <h2>Best Available</h2>
+      <div id="best-list" class="scroll"></div>
+    </section>
+
+    <section class="panel" id="panel-roster">
+      <h2>My Roster &amp; Needs</h2>
+      <div id="roster-needs"></div>
+      <div id="roster-starters"></div>
+    </section>
+
+    <section class="panel panel-full" id="panel-chat">
+      <h2>Chat</h2>
+      <div id="chat-log" class="scroll chat-log"></div>
+      <form id="chat-form" class="chat-form">
+        <input type="text" name="message" placeholder="Ask the draft assistant…" autocomplete="off" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="status" id="status" style="padding:0 24px 20px;"></div>
+
+  <script src="draft.js"></script>
+</body>
+</html>

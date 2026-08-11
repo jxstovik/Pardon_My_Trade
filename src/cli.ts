@@ -16,6 +16,8 @@ import { ConsoleNotificationProvider, FileNotificationProvider } from "./notific
 import { loadFixtureSnapshotSource, ingestFixtureSnapshot } from "./knowledge/ingestion.js";
 import { runRefresh } from "./pipeline/refresh.js";
 import { createApiServer } from "./api/server.js";
+import { DraftController } from "./draft/draft-controller.js";
+import { attachDraftWebSocket } from "./api/draft-ws.js";
 import { loadEnv } from "./config/load-env.js";
 import { EspnPlatformReader } from "./adapters/espn/espn-platform-reader.js";
 import { EspnProjectionSource } from "./projections/espn-projection-source.js";
@@ -437,6 +439,84 @@ async function main(): Promise<void> {
       console.log(JSON.stringify(event));
       return;
     }
+    case "draft-harness": {
+      const config = createDefaultConfig();
+      const snapshot = await loadFixtureSnapshotSource(config.fixturePath);
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      await mkdir(dataDir, { recursive: true });
+
+      const draftConfig = {
+        format: config.draft.format,
+        teams: config.draft.teams,
+        myTeamId: config.draft.myTeamId,
+        draftPosition: config.draft.draftPosition
+      };
+
+      let client: EspnPlatformClient | undefined;
+      if (config.draft.feed === "espn" && config.draft.espnDraftId) {
+        try {
+          client = new EspnPlatformClient({ credentials: loadEspnCredentials() });
+        } catch {
+          client = undefined;
+        }
+      }
+
+      const controller = new DraftController({
+        snapshot,
+        config: draftConfig,
+        dataDir,
+        espnDraftId: config.draft.feed === "espn" ? config.draft.espnDraftId : undefined,
+        client,
+        intervalMs: config.draft.pollMs,
+        onSnapshot: (snap) => hub?.broadcast(snap)
+      });
+      await controller.init();
+
+      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+      const v1Store = new SqliteV1Store({ filePath: join(dataDir, "pmt-v1.db") });
+      const ruleEngine = new ScoringRuleEngine();
+      const decisionEngine = new DefaultDecisionEngine(ruleEngine);
+      const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
+      const newsPath = process.env.PMT_NEWS_PATH ?? "tests/fixtures/sample-news.json";
+
+      const server = createApiServer({
+        repository,
+        v1Store,
+        refresh: () => runRefresh({
+          fixturePath: config.fixturePath,
+          newsPath,
+          leagueExternalId: "pmt-demo-football",
+          teamExternalId: "team-001",
+          repository,
+          v1Store,
+          ruleEngine,
+          decisionEngine,
+          recommendationEngine,
+          notificationProviders: [new ConsoleNotificationProvider()]
+        }),
+        initialSnapshot: snapshot,
+        draft: controller
+      });
+
+      const port = Number(process.env.PMT_PORT ?? 3000);
+      const hub = attachDraftWebSocket(server, controller);
+      controller.startWatching();
+
+      server.listen(port, () => {
+        console.log(`Pardon My Trade draft harness running at http://localhost:${port}/draft`);
+        console.log(`Feed: ${config.draft.feed}${config.draft.espnDraftId ? ` (espn ${config.draft.espnDraftId})` : ""} | seat ${draftConfig.draftPosition} of ${draftConfig.teams}`);
+      });
+
+      const shutdown = () => {
+        hub?.close();
+        controller.stopWatching();
+        process.exit(0);
+      };
+      process.on("SIGINT", shutdown);
+      process.on("SIGTERM", shutdown);
+      await new Promise<void>(() => {});
+      return;
+    }
     case "draft-watch": {
       const args = process.argv.slice(3);
       const intervalMs = Number(getArg(args, "--interval-ms", "15000"));
@@ -576,6 +656,7 @@ Usage:
   pmt serve [--scheduler]
   pmt draft-pick <round> <roundPick> <teamId> <playerExternalId> [--pickNo N]
   pmt draft-watch [--espn-draft-id ID] [--interval-ms N] [--once] [--json]
+  pmt draft-harness [--scheduler]
 
 V1 adds scheduled refresh, news ingestion, injury alerts, projection
 consensus, manager profiles, historical tracking, and notifications,
