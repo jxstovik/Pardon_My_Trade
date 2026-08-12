@@ -1,5 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { mkdtempSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { createDefaultConfig } from "../src/config/app-config.js";
 import { loadFixtureSnapshotSource } from "../src/knowledge/ingestion.js";
 import {
@@ -79,10 +82,11 @@ test("survival decreases as more picks occur before my turn", () => {
 
 test("DraftController records a manual pick and updates the board", async () => {
   const snapshot = await loadFixtureSnapshotSource(createDefaultConfig().fixturePath);
+  const dataDir = mkdtempSync(join(tmpdir(), "pmt-draft-"));
   const controller = new DraftController({
     snapshot,
     config: { format: "snake", teams: 4, myTeamId: "team-001", draftPosition: 1 },
-    dataDir: undefined
+    dataDir
   });
   await controller.init();
   const updated = controller.recordManualPick({
