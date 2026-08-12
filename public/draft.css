@@ -1,0 +1,180 @@
+:root {
+  --bg: #0f1420;
+  --panel: #18202f;
+  --panel-2: #1f293b;
+  --text: #e6ebf2;
+  --muted: #93a1b5;
+  --accent: #4f9dff;
+  --good: #3ecf8e;
+  --warn: #ffb454;
+  --bad: #ff6b6b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  padding: 18px 24px;
+  background: var(--panel);
+  border-bottom: 1px solid #243044;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 { font-size: 18px; margin: 0; }
+header .meta { color: var(--muted); font-size: 13px; }
+
+main.draft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1fr;
+  grid-template-areas:
+    "board best roster"
+    "chat  chat  chat";
+  gap: 16px;
+  padding: 20px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+#panel-board { grid-area: board; }
+#panel-best { grid-area: best; }
+#panel-roster { grid-area: roster; }
+#panel-chat { grid-area: chat; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #243044;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.status { font-size: 13px; color: var(--muted); min-height: 18px; }
+
+.scroll {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 120px;
+  max-height: 60vh;
+}
+
+button {
+  background: var(--accent);
+  color: #06101f;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: default; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--panel-2);
+  color: var(--muted);
+  margin-right: 6px;
+}
+.badge.high { background: rgba(255,107,107,0.18); color: var(--bad); }
+.badge.good { background: rgba(62,207,142,0.18); color: var(--good); }
+
+.empty { color: var(--muted); font-style: italic; }
+
+/* Board + best lists */
+.row {
+  padding: 6px 8px;
+  border-bottom: 1px solid #243044;
+  font-size: 13px;
+}
+.row.top { background: rgba(79,157,255,0.12); }
+
+/* Need badges */
+.need {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin: 4px 6px 4px 0;
+  background: rgba(255,107,107,0.18);
+  color: var(--bad);
+}
+.need.filled {
+  background: rgba(62,207,142,0.18);
+  color: var(--good);
+}
+
+/* Bars */
+.bar {
+  position: relative;
+  height: 8px;
+  background: var(--panel-2);
+  border-radius: 999px;
+  margin: 4px 0;
+  overflow: hidden;
+}
+.bar > span {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  background: var(--accent);
+  border-radius: 999px;
+}
+.upsidbars { display: flex; gap: 4px; margin: 4px 0; }
+.upsidbars .ubar {
+  flex: 1;
+  height: 6px;
+  background: var(--panel-2);
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+}
+.upsidbars .ubar > span {
+  position: absolute; top: 0; left: 0; bottom: 0;
+  background: var(--warn);
+  border-radius: 999px;
+}
+
+/* Forms */
+.pick-form, .chat-form {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.pick-form input, .chat-form input {
+  background: var(--panel-2);
+  border: 1px solid #243044;
+  color: var(--text);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.pick-form input { width: 64px; }
+.chat-form input { flex: 1; }
+
+/* Chat */
+.chat-log { display: flex; flex-direction: column; gap: 8px; max-height: 30vh; }
+.msg { font-size: 13px; padding: 8px 10px; border-radius: 8px; }
+.msg.system { background: var(--panel-2); color: var(--muted); }
+.msg.user { background: rgba(79,157,255,0.15); color: var(--text); align-self: flex-end; max-width: 80%; }
+.msg.assistant { background: var(--panel-2); color: var(--text); max-width: 80%; }
+.msg .role { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); display: block; margin-bottom: 2px; }
+
+@media (max-width: 900px) {
+  main.draft-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "board" "best" "roster" "chat";
+  }
+}

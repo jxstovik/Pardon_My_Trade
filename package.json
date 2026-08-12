@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig.json",
     "clean": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clean.ps1",
     "lint": "tsc -p tsconfig.json --noEmit",
-    "test": "npm run build && node --test dist/tests/",
+    "test": "npm run build && node --test dist/tests/*.test.js",
     "serve": "npm run build && npm run pmt -- serve",
     "refresh": "npm run build && npm run pmt -- refresh",
     "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1",
@@ -20,9 +20,11 @@
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^22.0.0",
+    "@types/ws": "^8.5.10",
     "typescript": "^5.5.0"
   },
   "dependencies": {
-    "better-sqlite3": "^12.11.1"
+    "better-sqlite3": "^12.11.1",
+    "ws": "^8.18.0"
   }
 }

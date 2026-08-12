@@ -2,7 +2,7 @@ export type Sport = "football" | "baseball" | "basketball" | "hockey" | "soccer"
 export type Platform = "fixture" | "sleeper" | "espn" | "yahoo" | "cbs" | "nfl";
 export type PlayerPosition = "QB" | "RB" | "WR" | "TE" | "K" | "DST" | "FLEX" | "SUPER_FLEX" | "BN" | "IR" | "P" | "C" | "1B" | "2B" | "3B" | "SS" | "OF" | "UTIL";
 export type PlayerStatus = "active" | "questionable" | "doubtful" | "out" | "injured_reserve" | "suspended" | "bye" | "unknown";
-export type RecommendationType = "lineup" | "bench" | "waiver_claim" | "drop" | "trade" | "weekly_report" | "alert" | "playoff_plan" | "season_strategy";
+export type RecommendationType = "lineup" | "bench" | "waiver_claim" | "drop" | "trade" | "weekly_report" | "alert" | "playoff_plan" | "season_strategy" | "draft_pick";
 export type RecommendationStatus = "draft" | "ready" | "viewed" | "accepted" | "rejected" | "expired" | "superseded";
 export type RiskLevel = "low" | "medium" | "high";
 
