@@ -1,0 +1,612 @@
+[
+  {
+    "player_id": "00-0034857",
+    "player_name": "Josh Allen",
+    "team": "382.7",
+    "razzball_points": 382.7,
+    "metamodel_mean": 22.903727812907928,
+    "standard_deviation": 8.099717178884426,
+    "p10": 12.519890389578094,
+    "p90": 33.28756523623776
+  },
+  {
+    "player_id": "00-0039910",
+    "player_name": "Jayden Daniels",
+    "team": "333.6",
+    "razzball_points": 333.6,
+    "metamodel_mean": 21.633217775998805,
+    "standard_deviation": 8.102389587297072,
+    "p10": 11.245954325083959,
+    "p90": 32.02048122691365
+  },
+  {
+    "player_id": "00-0036389",
+    "player_name": "Jalen Hurts",
+    "team": "328.0",
+    "razzball_points": 328.0,
+    "metamodel_mean": 19.4300723200417,
+    "standard_deviation": 8.097314099352296,
+    "p10": 9.049315644672054,
+    "p90": 29.81082899541134
+  },
+  {
+    "player_id": "00-0033077",
+    "player_name": "Dak Prescott",
+    "team": "316.2",
+    "razzball_points": 316.2,
+    "metamodel_mean": 15.21728247914923,
+    "standard_deviation": 8.097564040048242,
+    "p10": 4.836205379807383,
+    "p90": 25.598359578491078
+  },
+  {
+    "player_id": "00-0034796",
+    "player_name": "Lamar Jackson",
+    "team": "311.8",
+    "razzball_points": 311.8,
+    "metamodel_mean": 21.016889645966323,
+    "standard_deviation": 8.097932134149604,
+    "p10": 10.635340649986532,
+    "p90": 31.398438641946115
+  },
+  {
+    "player_id": "00-0039851",
+    "player_name": "Drake Maye",
+    "team": "309.7",
+    "razzball_points": 309.7,
+    "metamodel_mean": 15.147546738024685,
+    "standard_deviation": 8.09700049789866,
+    "p10": 4.767192099718603,
+    "p90": 25.527901376330767
+  },
+  {
+    "player_id": "00-0033873",
+    "player_name": "Patrick Mahomes",
+    "team": "299.1",
+    "razzball_points": 299.1,
+    "metamodel_mean": 17.16197114083525,
+    "standard_deviation": 8.097182025003233,
+    "p10": 6.781383784781104,
+    "p90": 27.54255849688939
+  },
+  {
+    "player_id": "00-0039918",
+    "player_name": "Caleb Williams",
+    "team": "299.1",
+    "razzball_points": 299.1,
+    "metamodel_mean": 16.62546610961911,
+    "standard_deviation": 8.097176813821592,
+    "p10": 6.24488543429983,
+    "p90": 27.00604678493839
+  },
+  {
+    "player_id": "00-0036355",
+    "player_name": "Justin Herbert",
+    "team": "294.6",
+    "razzball_points": 294.6,
+    "metamodel_mean": 16.25126483242681,
+    "standard_deviation": 8.098402513027658,
+    "p10": 5.869112810725351,
+    "p90": 26.633416854128267
+  },
+  {
+    "player_id": "00-0026498",
+    "player_name": "Matthew Stafford",
+    "team": "294.3",
+    "razzball_points": 294.3,
+    "metamodel_mean": 15.18239396432783,
+    "standard_deviation": 8.097160378582872,
+    "p10": 4.801834358984587,
+    "p90": 25.562953569671073
+  },
+  {
+    "player_id": "00-0036264",
+    "player_name": "Jordan Love",
+    "team": "292.1",
+    "razzball_points": 292.1,
+    "metamodel_mean": 14.645836233948371,
+    "standard_deviation": 8.097027758256692,
+    "p10": 4.265446647863293,
+    "p90": 25.02622582003345
+  },
+  {
+    "player_id": "00-0039732",
+    "player_name": "Bo Nix",
+    "team": "289.6",
+    "razzball_points": 289.6,
+    "metamodel_mean": 17.373401428116896,
+    "standard_deviation": 8.097216191619687,
+    "p10": 6.992770270460458,
+    "p90": 27.754032585773334
+  },
+  {
+    "player_id": "00-0036442",
+    "player_name": "Joe Burrow",
+    "team": "289.4",
+    "razzball_points": 289.4,
+    "metamodel_mean": 20.343073575132227,
+    "standard_deviation": 8.100750089915422,
+    "p10": 9.957911959860654,
+    "p90": 30.7282351904038
+  },
+  {
+    "player_id": "00-0036971",
+    "player_name": "Trevor Lawrence",
+    "team": "287.0",
+    "razzball_points": 287.0,
+    "metamodel_mean": 17.2699394192945,
+    "standard_deviation": 8.097316004599376,
+    "p10": 6.889180301398099,
+    "p90": 27.650698537190898
+  },
+  {
+    "player_id": "00-0035710",
+    "player_name": "Daniel Jones",
+    "team": "276.5",
+    "razzball_points": 276.5,
+    "metamodel_mean": 13.530453281624778,
+    "standard_deviation": 8.097198602813892,
+    "p10": 3.149844672817368,
+    "p90": 23.911061890432187
+  },
+  {
+    "player_id": "00-0039163",
+    "player_name": "C.J. Stroud",
+    "team": "275.2",
+    "razzball_points": 275.2,
+    "metamodel_mean": 13.233183212531644,
+    "standard_deviation": 8.098052621660372,
+    "p10": 2.8514797515630477,
+    "p90": 23.61488667350024
+  },
+  {
+    "player_id": "00-0034855",
+    "player_name": "Baker Mayfield",
+    "team": "273.9",
+    "razzball_points": 273.9,
+    "metamodel_mean": 19.36376168993547,
+    "standard_deviation": 8.097296010038002,
+    "p10": 8.98302820506675,
+    "p90": 29.744495174804186
+  },
+  {
+    "player_id": "00-0033106",
+    "player_name": "Jared Goff",
+    "team": "271.7",
+    "razzball_points": 271.7,
+    "metamodel_mean": 19.593475258071503,
+    "standard_deviation": 8.100415239699247,
+    "p10": 9.208742920777068,
+    "p90": 29.978207595365937
+  },
+  {
+    "player_id": "00-0035228",
+    "player_name": "Kyler Murray",
+    "team": "268.6",
+    "razzball_points": 268.6,
+    "metamodel_mean": 14.930730999484428,
+    "standard_deviation": 8.097689540152896,
+    "p10": 4.549493009008415,
+    "p90": 25.31196898996044
+  },
+  {
+    "player_id": "00-0037834",
+    "player_name": "Brock Purdy",
+    "team": "268.2",
+    "razzball_points": 268.2,
+    "metamodel_mean": 15.282068308189107,
+    "standard_deviation": 8.09830468822917,
+    "p10": 4.90004169787931,
+    "p90": 25.664094918498904
+  },
+  {
+    "player_id": "00-0034869",
+    "player_name": "Sam Darnold",
+    "team": "265.7",
+    "razzball_points": 265.7,
+    "metamodel_mean": 19.5097694041554,
+    "standard_deviation": 8.097339584473863,
+    "p10": 9.128980056859907,
+    "p90": 29.89055875145089
+  },
+  {
+    "player_id": "00-0039150",
+    "player_name": "Bryce Young",
+    "team": "248.1",
+    "razzball_points": 248.1,
+    "metamodel_mean": 16.44078513691341,
+    "standard_deviation": 8.097175664967317,
+    "p10": 6.0602059344253085,
+    "p90": 26.82136433940151
+  },
+  {
+    "player_id": "00-0038128",
+    "player_name": "Malik Willis",
+    "team": "236.8",
+    "razzball_points": 236.8,
+    "metamodel_mean": 9.469201418449806,
+    "standard_deviation": 8.098066686043895,
+    "p10": 0.0,
+    "p90": 19.85092290995808
+  },
+  {
+    "player_id": "00-0033119",
+    "player_name": "Jacoby Brissett",
+    "team": "221.0",
+    "razzball_points": 221.0,
+    "metamodel_mean": 8.741607016099458,
+    "standard_deviation": 8.099684446486703,
+    "p10": 0.0,
+    "p90": 19.12540247649541
+  },
+  {
+    "player_id": "00-0030565",
+    "player_name": "Geno Smith",
+    "team": "219.9",
+    "razzball_points": 219.9,
+    "metamodel_mean": 12.806547100034912,
+    "standard_deviation": 8.097690777562395,
+    "p10": 2.425307523199921,
+    "p90": 23.187786676869905
+  },
+  {
+    "player_id": "00-0023459",
+    "player_name": "Aaron Rodgers",
+    "team": "207.5",
+    "razzball_points": 207.5,
+    "metamodel_mean": 14.687067162783958,
+    "standard_deviation": 8.097038998517531,
+    "p10": 4.306663166684482,
+    "p90": 25.067471158883436
+  },
+  {
+    "player_id": "00-0033537",
+    "player_name": "Deshaun Watson",
+    "team": "192.2",
+    "razzball_points": 192.2,
+    "metamodel_mean": 13.06594024068558,
+    "standard_deviation": 8.098922994319123,
+    "p10": 2.683120961968463,
+    "p90": 23.448759519402696
+  },
+  {
+    "player_id": "00-0036212",
+    "player_name": "Tua Tagovailoa",
+    "team": "95.5",
+    "razzball_points": 95.5,
+    "metamodel_mean": 16.6565680061702,
+    "standard_deviation": 8.097852050683224,
+    "p10": 6.275121677194306,
+    "p90": 27.038014335146094
+  },
+  {
+    "player_id": "00-0029604",
+    "player_name": "Kirk Cousins",
+    "team": "51.4",
+    "razzball_points": 51.4,
+    "metamodel_mean": 13.195720820812676,
+    "standard_deviation": 8.09851125140253,
+    "p10": 2.8134293965146338,
+    "p90": 23.57801224511072
+  },
+  {
+    "player_id": "00-0026158",
+    "player_name": "Joe Flacco",
+    "team": "13.4",
+    "razzball_points": 13.4,
+    "metamodel_mean": 13.54421226745487,
+    "standard_deviation": 8.097531543994554,
+    "p10": 3.1631768280538513,
+    "p90": 23.92524770685589
+  },
+  {
+    "player_id": "00-0036972",
+    "player_name": "Mac Jones",
+    "team": "11.0",
+    "razzball_points": 11.0,
+    "metamodel_mean": 13.694659550514706,
+    "standard_deviation": 8.097878407880488,
+    "p10": 3.3131794316119194,
+    "p90": 24.076139669417493
+  },
+  {
+    "player_id": "00-0034771",
+    "player_name": "Mason Rudolph",
+    "team": "10.1",
+    "razzball_points": 10.1,
+    "metamodel_mean": 14.77607743521991,
+    "standard_deviation": 8.097527998325797,
+    "p10": 4.39504654136624,
+    "p90": 25.15710832907358
+  },
+  {
+    "player_id": "00-0031503",
+    "player_name": "Jameis Winston",
+    "team": "8.8",
+    "razzball_points": 8.8,
+    "metamodel_mean": 18.175450787029796,
+    "standard_deviation": 8.097104486598194,
+    "p10": 7.79496283521091,
+    "p90": 28.55593873884868
+  },
+  {
+    "player_id": "00-0033949",
+    "player_name": "Joshua Dobbs",
+    "team": "2.7",
+    "razzball_points": 2.7,
+    "metamodel_mean": 14.141118132640237,
+    "standard_deviation": 8.097406035436299,
+    "p10": 3.760243595210902,
+    "p90": 24.521992670069572
+  },
+  {
+    "player_id": "00-0035264",
+    "player_name": "Jarrett Stidham",
+    "team": "2.6",
+    "razzball_points": 2.6,
+    "metamodel_mean": 11.16087584611491,
+    "standard_deviation": 8.100793285389503,
+    "p10": 0.7756588542455667,
+    "p90": 21.546092837984254
+  },
+  {
+    "player_id": "00-0038416",
+    "player_name": "Tyson Bagent",
+    "team": "2.5",
+    "razzball_points": 2.5,
+    "metamodel_mean": 7.684092253599532,
+    "standard_deviation": 8.09927452337691,
+    "p10": 0.0,
+    "p90": 18.06736219256873
+  },
+  {
+    "player_id": "00-0035704",
+    "player_name": "Drew Lock",
+    "team": "2.5",
+    "razzball_points": 2.5,
+    "metamodel_mean": 12.738372652592286,
+    "standard_deviation": 8.097524161042202,
+    "p10": 2.3573466781361834,
+    "p90": 23.11939862704839
+  },
+  {
+    "player_id": "00-0036945",
+    "player_name": "Justin Fields",
+    "team": "2.5",
+    "razzball_points": 2.5,
+    "metamodel_mean": 13.559223408570025,
+    "standard_deviation": 8.09844579513307,
+    "p10": 3.1770158992094295,
+    "p90": 23.94143091793062
+  },
+  {
+    "player_id": "00-0034577",
+    "player_name": "Kyle Allen",
+    "team": "2.5",
+    "razzball_points": 2.5,
+    "metamodel_mean": 3.2233534112110234,
+    "standard_deviation": 8.103160598790842,
+    "p10": 0.0,
+    "p90": 13.611605298860884
+  },
+  {
+    "player_id": "00-0032268",
+    "player_name": "Marcus Mariota",
+    "team": "2.5",
+    "razzball_points": 2.5,
+    "metamodel_mean": 8.73747807418791,
+    "standard_deviation": 8.110476666378704,
+    "p10": 0.0,
+    "p90": 19.135109160485406
+  },
+  {
+    "player_id": "00-0028118",
+    "player_name": "Tyrod Taylor",
+    "team": "2.5",
+    "razzball_points": 2.5,
+    "metamodel_mean": 10.262444624914032,
+    "standard_deviation": 8.098235780924849,
+    "p10": 0.0,
+    "p90": 20.64438289605969
+  },
+  {
+    "player_id": "00-0038400",
+    "player_name": "Tanner McKee",
+    "team": "2.4",
+    "razzball_points": 2.4,
+    "metamodel_mean": 10.829528696334371,
+    "standard_deviation": 8.097790217749411,
+    "p10": 0.4481616371796253,
+    "p90": 21.21089575548912
+  },
+  {
+    "player_id": "00-0033319",
+    "player_name": "Nick Mullens",
+    "team": "2.4",
+    "razzball_points": 2.4,
+    "metamodel_mean": 9.050197800633137,
+    "standard_deviation": 8.099485324961469,
+    "p10": 0.0,
+    "p90": 19.43373798723374
+  },
+  {
+    "player_id": "00-0035993",
+    "player_name": "Tyler Huntley",
+    "team": "2.4",
+    "razzball_points": 2.4,
+    "metamodel_mean": 11.355251744696416,
+    "standard_deviation": 8.100524938832836,
+    "p10": 0.9703787731127207,
+    "p90": 21.74012471628011
+  },
+  {
+    "player_id": "00-0037012",
+    "player_name": "Trey Lance",
+    "team": "2.4",
+    "razzball_points": 2.4,
+    "metamodel_mean": 7.8984826209268055,
+    "standard_deviation": 8.0986886412713,
+    "p10": 0.0,
+    "p90": 18.281001459036613
+  },
+  {
+    "player_id": "00-0038476",
+    "player_name": "Tommy DeVito",
+    "team": "2.3",
+    "razzball_points": 2.3,
+    "metamodel_mean": 10.284876747673342,
+    "standard_deviation": 8.097868489929695,
+    "p10": 0.0,
+    "p90": 20.666344151763212
+  },
+  {
+    "player_id": "00-0036898",
+    "player_name": "Davis Mills",
+    "team": "2.3",
+    "razzball_points": 2.3,
+    "metamodel_mean": 6.461288244751455,
+    "standard_deviation": 8.09929664675241,
+    "p10": 0.0,
+    "p90": 16.844586545888045
+  },
+  {
+    "player_id": "00-0035100",
+    "player_name": "Jake Browning",
+    "team": "2.3",
+    "razzball_points": 2.3,
+    "metamodel_mean": 14.073759859468042,
+    "standard_deviation": 8.100946661020402,
+    "p10": 3.6883462400398876,
+    "p90": 24.459173478896197
+  },
+  {
+    "player_id": "00-0038102",
+    "player_name": "Kenny Pickett",
+    "team": "2.0",
+    "razzball_points": 2.0,
+    "metamodel_mean": 6.246502854619623,
+    "standard_deviation": 8.100827655202039,
+    "p10": 0.0,
+    "p90": 16.63176390858864
+  },
+  {
+    "player_id": "00-0039376",
+    "player_name": "Spencer Rattler",
+    "team": "2.0",
+    "razzball_points": 2.0,
+    "metamodel_mean": 11.028984601223254,
+    "standard_deviation": 8.10023650862783,
+    "p10": 0.6444813971623748,
+    "p90": 21.413487805284134
+  },
+  {
+    "player_id": "00-0037077",
+    "player_name": "Sam Howell",
+    "team": "0.2",
+    "razzball_points": 0.2,
+    "metamodel_mean": 10.55816668557625,
+    "standard_deviation": 8.097816070868568,
+    "p10": 0.17676648272274598,
+    "p90": 20.939566888429752
+  },
+  {
+    "player_id": "00-0026300",
+    "player_name": "Josh Johnson",
+    "team": "0.2",
+    "razzball_points": 0.2,
+    "metamodel_mean": 4.856647817276197,
+    "standard_deviation": 8.112101266344341,
+    "p10": 0.0,
+    "p90": 15.256361640729644
+  },
+  {
+    "player_id": "00-0036879",
+    "player_name": "Sam Ehlinger",
+    "team": "0.2",
+    "razzball_points": 0.2,
+    "metamodel_mean": 6.934987356853197,
+    "standard_deviation": 8.099349534749622,
+    "p10": 0.0,
+    "p90": 17.318353460402214
+  },
+  {
+    "player_id": "00-0037013",
+    "player_name": "Zach Wilson",
+    "team": "0.2",
+    "razzball_points": 0.2,
+    "metamodel_mean": 13.273057745978843,
+    "standard_deviation": 8.101296237457676,
+    "p10": 2.8871959695581015,
+    "p90": 23.658919522399586
+  },
+  {
+    "player_id": "00-0038579",
+    "player_name": "Aidan O\u2019Connell",
+    "team": "0.1",
+    "razzball_points": 0.1,
+    "metamodel_mean": 12.651651814553109,
+    "standard_deviation": 8.098674454425888,
+    "p10": 2.269151163979121,
+    "p90": 23.034152465127097
+  },
+  {
+    "player_id": "00-0039152",
+    "player_name": "Will Levis",
+    "team": "0.1",
+    "razzball_points": 0.1,
+    "metamodel_mean": 12.613310571520573,
+    "standard_deviation": 8.09806590397378,
+    "p10": 2.2315900826261874,
+    "p90": 22.99503106041496
+  },
+  {
+    "player_id": "00-0039164",
+    "player_name": "Anthony Richardson",
+    "team": "0.1",
+    "razzball_points": 0.1,
+    "metamodel_mean": 15.373031920048534,
+    "standard_deviation": 8.097009654246794,
+    "p10": 4.992665543304145,
+    "p90": 25.753398296792923
+  },
+  {
+    "player_id": "00-0027973",
+    "player_name": "Andy Dalton",
+    "team": "0.1",
+    "razzball_points": 0.1,
+    "metamodel_mean": 11.446267725410978,
+    "standard_deviation": 8.098484177171292,
+    "p10": 1.0640110102773814,
+    "p90": 21.828524440544577
+  },
+  {
+    "player_id": "00-0032434",
+    "player_name": "Brandon Allen",
+    "team": "0.1",
+    "razzball_points": 0.1,
+    "metamodel_mean": 5.305024404432951,
+    "standard_deviation": 8.103429382802593,
+    "p10": 0.0,
+    "p90": 15.693620873185875
+  },
+  {
+    "player_id": "00-0028986",
+    "player_name": "Case Keenum",
+    "team": "0.1",
+    "razzball_points": 0.1,
+    "metamodel_mean": 9.01477132537416,
+    "standard_deviation": 8.098510503152754,
+    "p10": 0.0,
+    "p90": 19.39706179041599
+  },
+  {
+    "player_id": "00-0032950",
+    "player_name": "Carson Wentz",
+    "team": "0.1",
+    "razzball_points": 0.1,
+    "metamodel_mean": 11.239717672354049,
+    "standard_deviation": 8.099700612110443,
+    "p10": 0.8559014876284614,
+    "p90": 21.623533857079636
+  }
+]

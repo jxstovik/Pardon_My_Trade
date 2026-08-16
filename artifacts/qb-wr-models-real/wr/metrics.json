@@ -1,0 +1,38 @@
+[
+  {
+    "split": "training",
+    "model": "nflverse-history-bootstrap-ridge",
+    "samples": 12569,
+    "mae": 5.275952,
+    "rmse": 6.902828,
+    "bias": 0.000607,
+    "p10_p90_coverage": 0.833718
+  },
+  {
+    "split": "training",
+    "model": "prior-player-history-baseline",
+    "samples": 12569,
+    "mae": 5.358218,
+    "rmse": 7.075975,
+    "bias": 0.259855,
+    "p10_p90_coverage": null
+  },
+  {
+    "split": "validation",
+    "model": "nflverse-history-bootstrap-ridge",
+    "samples": 2132,
+    "mae": 5.075041,
+    "rmse": 6.795833,
+    "bias": -0.083382,
+    "p10_p90_coverage": 0.843809
+  },
+  {
+    "split": "validation",
+    "model": "prior-player-history-baseline",
+    "samples": 2132,
+    "mae": 5.10369,
+    "rmse": 6.93347,
+    "bias": 0.07843,
+    "p10_p90_coverage": null
+  }
+]

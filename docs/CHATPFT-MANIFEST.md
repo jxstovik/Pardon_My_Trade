@@ -16,16 +16,18 @@ per-player fallback when a metamodel or stronger source is unavailable.
 - Added deterministic per-player fallback resolution with widened Razzball uncertainty.
 - Added fixture-friendly pure contracts so historical backtests can be added without changing the refresh pipeline.
 - Added historical position baselines, ensemble variance aggregation, rolling backtests, and interval calibration metrics.
+- Added real-data QB/WR training from nflverse outcomes with Razzball projection/ranking provenance and SQLite model artifacts.
 
 ## Grand Scheme
 
 1. Contracts and provenance: complete initial slice.
 2. Historical source evaluation and Razzball fallback: complete initial slice; integrate into refresh next.
 3. Probabilistic baselines and backtesting: initial historical baseline, ensemble, rolling backtest, and calibration implementation complete.
-4. Position models: QB, RB, WR, TE, K, DST using historical usage, team context, and explicit cross-position dependencies.
-5. Ensembles: hierarchical Bayesian, distributional boosting, bootstrap trees, regularized baselines, stacking, and Monte Carlo simulation.
-6. Calibration: rolling time splits, pinball loss, CRPS/log score, bias, interval coverage, and conformal adjustments.
-7. Runtime integration: persist distributions, expose metrics, update recommendations and draft valuation.
+4. Real QB/WR training: complete initial model run; replace conditional player-week data with a full availability panel and add historical point-level Razzball snapshots next.
+5. Position models: QB, RB, WR, TE, K, DST using historical usage, team context, and explicit cross-position dependencies.
+6. Ensembles: hierarchical Bayesian, distributional boosting, bootstrap trees, regularized baselines, stacking, and Monte Carlo simulation.
+7. Calibration: rolling time splits, pinball loss, CRPS/log score, bias, interval coverage, and conformal adjustments.
+8. Runtime integration: persist distributions, expose metrics, update recommendations and draft valuation.
 
 ## Data Rules
 
