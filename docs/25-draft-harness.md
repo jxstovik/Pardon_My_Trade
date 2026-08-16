@@ -59,6 +59,30 @@ WebSocket (`/ws/draft`) and stays live as picks land.
 
 Stop with `Ctrl+C`. The harness runs in the foreground.
 
+### GUI smoke test
+
+For a guided end-to-end check, use a separate terminal:
+
+```bash
+npm run test:draft-interactive
+```
+
+The command builds the project, starts an isolated temporary harness on a
+random available port, and prints the exact URL to open. Keep that terminal
+open while checking the browser. Do not substitute `localhost:3000`: the
+guided test intentionally uses a different port and shuts the server down
+when you press Enter. For a normal persistent GUI session, use the fixed-port
+command instead:
+
+```bash
+npm run build
+PMT_PORT=3000 PMT_DRAFT_FEED=manual npm run pmt -- draft-harness
+```
+
+Then open `http://127.0.0.1:3000/draft` on the same machine and keep the
+terminal running. On PowerShell, set `$env:PMT_PORT="3000"` and
+`$env:PMT_DRAFT_FEED="manual"` before running the command.
+
 ### Modes (how to run it)
 
 | Mode | What it does | How to enable |

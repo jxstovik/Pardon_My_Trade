@@ -10,6 +10,7 @@
     "lint": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test dist/tests/*.test.js",
     "serve": "npm run build && npm run pmt -- serve",
+    "test:draft-interactive": "npm run build && node scripts/interactive-draft-harness-test.mjs",
     "refresh": "npm run build && npm run pmt -- refresh",
     "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1",
     "pmt": "node dist/src/cli.js"
