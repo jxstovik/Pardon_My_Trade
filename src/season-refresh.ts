@@ -10,6 +10,7 @@ import { buildPriorsFromSnapshot } from "./agents/snapshot-integration.js";
 import { buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
 import { JsonModelStore } from "./probabilistic/model-store.js";
 import type { ProjectionCandidate, ProjectionSource } from "./projections/projection-source.js";
+import { buildRuntimeProbabilisticProjections, loadHistoricalData, saveProbabilisticProjections } from "./projections/runtime.js";
 
 export interface SeasonRefreshOptions {
   readonly repository?: KnowledgeRepository;
@@ -97,6 +98,21 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   await modelStore.saveAll([...models.values()]);
 
   const playerIds = new Set(stored.map((p) => p.player_id));
+
+  const historyPath = process.env.PMT_HISTORICAL_DATA_PATH;
+  if (historyPath) {
+    const history = await loadHistoricalData(historyPath);
+    const rows = rosterPlayers.map((player) => ({
+      playerId: player.player_id,
+      position: (player.positions[0] ?? "WR") as import("./models/types.js").PlayerPosition,
+      scoringPeriod,
+      history: history.filter((observation) => observation.playerId === player.player_id).map((observation) => observation.points),
+      sourceMean: stored.find((projection) => projection.player_id === player.player_id)?.projected_points
+    }));
+    const external = stored.filter((projection) => projection.source !== "razzball").map((projection) => ({ playerId: projection.player_id, source: projection.source, projectedPoints: projection.projected_points, scoringPeriod: projection.scoring_period }));
+    const razzball = stored.filter((projection) => projection.source.includes("razzball")).map((projection) => ({ playerId: projection.player_id, source: projection.source, projectedPoints: projection.projected_points, scoringPeriod: projection.scoring_period }));
+    await saveProbabilisticProjections(join(dataDir, "probabilistic-projections.json"), buildRuntimeProbabilisticProjections(rows, external, razzball, history));
+  }
 
   return {
     snapshotId: pointer.snapshot_id,

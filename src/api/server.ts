@@ -87,6 +87,20 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
       return;
     }
 
+    if (path === "/modeling" || path === "/modeling.html") {
+      await serveFile(res, join(publicDir, "modeling.html"), "text/html; charset=utf-8");
+      return;
+    }
+
+    if (path === "/api/modeling/preview" && req.method === "GET") {
+      sendJson(res, 200, {
+        positions: ["QB", "RB", "WR", "TE", "K", "DST"],
+        sources: ["historical", "razzball", "espn", "fftoday"],
+        features: ["recent_points", "season_points", "availability", "team_pace", "qb_dependency", "offensive_line"]
+      });
+      return;
+    }
+
     if (path === "/" || path === "/index.html") {
       await serveFile(res, join(publicDir, "index.html"), "text/html; charset=utf-8");
       return;
