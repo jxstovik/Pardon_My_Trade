@@ -34,6 +34,7 @@ export interface ApiServer extends Server {
 export function createApiServer(deps: ApiServerDeps): ApiServer {
   const publicDir = deps.publicDir ?? join(process.cwd(), "public");
   const modelingDir = resolve(deps.modelingDir ?? join(process.cwd(), "artifacts", "wr-2024-replay"));
+  const artifactsRoot = resolve(join(process.cwd(), "artifacts"));
   const state: { snapshot?: LeagueSnapshot } = { snapshot: deps.initialSnapshot };
 
   const server = createServer((req, res) => {
@@ -48,6 +49,7 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
   async function handle(req: IncomingMessage, res: ServerResponse): Promise<void> {
     const url = new URL(req.url ?? "/", "http://localhost");
     const path = url.pathname;
+    const activeModelingDir = modelingDirectory(url);
 
     if (path === "/api/health") {
       sendJson(res, 200, { status: "ok", version: "0.2.0" });
@@ -100,7 +102,7 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
     }
 
     if (path === "/api/modeling/preview" && req.method === "GET") {
-      const replay = await readModelingJson("walkforward-manifest.json").catch(() => undefined);
+      const replay = await readModelingJson("walkforward-manifest.json", activeModelingDir).catch(() => undefined);
       sendJson(res, 200, {
         positions: ["QB", "RB", "WR", "TE", "K", "DST"],
         sources: ["historical", "razzball", "espn", "fftoday"],
@@ -112,24 +114,24 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
 
     if (path === "/api/modeling/replay" && req.method === "GET") {
       sendJson(res, 200, {
-        preseason: await readModelingJson("manifest.json").catch(() => null),
-        walkforward: await readModelingJson("walkforward-manifest.json").catch(() => null),
-        promotion: await readModelingJson("promotion-decision.json").catch(() => null),
-        metrics: await readModelingJson("weekly-metrics.json").catch(() => [])
+        preseason: await readModelingJson("manifest.json", activeModelingDir).catch(() => null),
+        walkforward: await readModelingJson("walkforward-manifest.json", activeModelingDir).catch(() => null),
+        promotion: await readModelingJson("promotion-decision.json", activeModelingDir).catch(() => null),
+        metrics: await readModelingJson("weekly-metrics.json", activeModelingDir).catch(() => [])
       });
       return;
     }
 
     if (path === "/api/modeling/checkpoints" && req.method === "GET") {
-      sendJson(res, 200, await readModelingJsonl("checkpoints.jsonl"));
+      sendJson(res, 200, await readModelingJsonl("checkpoints.jsonl", activeModelingDir));
       return;
     }
 
     if (path === "/api/modeling/metrics" && req.method === "GET") {
       sendJson(res, 200, {
-        weekly: await readModelingJson("weekly-metrics.json").catch(() => []),
-        subgroups: await readModelingJson("subgroup-metrics.json").catch(() => []),
-        comparisons: await readModelingJson("model-comparisons.json").catch(() => [])
+        weekly: await readModelingJson("weekly-metrics.json", activeModelingDir).catch(() => []),
+        subgroups: await readModelingJson("subgroup-metrics.json", activeModelingDir).catch(() => []),
+        comparisons: await readModelingJson("model-comparisons.json", activeModelingDir).catch(() => [])
       });
       return;
     }
@@ -138,7 +140,7 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
       const targetPeriod = url.searchParams.get("period");
       const playerId = url.searchParams.get("playerId");
       const regime = url.searchParams.get("regime");
-      const rows = await readModelingJsonl("weekly-predictions.jsonl");
+      const rows = await readModelingJsonl("weekly-predictions.jsonl", activeModelingDir);
       sendJson(res, 200, rows.filter((row) =>
         (!targetPeriod || row.target_period === targetPeriod) &&
         (!playerId || row.player_id === playerId) &&
@@ -150,15 +152,15 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
     if (path.startsWith("/api/modeling/artifact/") && req.method === "GET") {
       const name = decodeURIComponent(path.slice("/api/modeling/artifact/".length));
       const allowed = new Set([
-        "manifest.json", "walkforward-manifest.json", "preseason_predictions.json", "features.jsonl", "results.json", "weekly-predictions.jsonl",
+        "manifest.json", "walkforward-manifest.json", "preseason_predictions.json", "predictions.json", "features.jsonl", "results.json", "weekly-predictions.jsonl",
         "weekly-outcomes.jsonl", "weekly-metrics.json", "subgroup-metrics.json", "model-comparisons.json",
-        "promotion-decision.json", "phase8-report.md", "attribution.jsonl", "rank-benchmark.svg", "checkpoints.sqlite"
+        "promotion-decision.json", "phase8-report.md", "attribution.jsonl", "rank-benchmark.svg", "checkpoints.sqlite", "qb-preseason.sqlite", "rb-preseason.sqlite", "wr-preseason.sqlite", "te-preseason.sqlite"
       ]);
       if (!allowed.has(name) || name.includes("/") || name.includes("\\")) {
         sendJson(res, 404, { error: "Not found" });
         return;
       }
-      await serveFile(res, join(modelingDir, name));
+      await serveFile(res, join(activeModelingDir, name));
       return;
     }
 
@@ -182,12 +184,20 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
     sendJson(res, 404, { error: "Not found" });
   }
 
-  async function readModelingJson(name: string): Promise<any> {
-    return JSON.parse(await readFile(join(modelingDir, name), "utf8"));
+  function modelingDirectory(url: URL): string {
+    const season = url.searchParams.get("season");
+    const position = url.searchParams.get("position")?.toLowerCase();
+    if (!season || !position || !["qb", "rb", "wr", "te"].includes(position)) return modelingDir;
+    const suffix = season === "2026" ? "preseason" : "replay";
+    return resolve(join(artifactsRoot, `${position}-${season}-${suffix}`));
   }
 
-  async function readModelingJsonl(name: string): Promise<any[]> {
-    const raw = await readFile(join(modelingDir, name), "utf8");
+  async function readModelingJson(name: string, directory = modelingDir): Promise<any> {
+    return JSON.parse(await readFile(join(directory, name), "utf8"));
+  }
+
+  async function readModelingJsonl(name: string, directory = modelingDir): Promise<any[]> {
+    const raw = await readFile(join(directory, name), "utf8");
     return raw.split("\n").filter(Boolean).map((line) => JSON.parse(line));
   }
 

@@ -1,6 +1,13 @@
 const $ = (id) => document.getElementById(id);
 const state = { replay: null, checkpoints: [], metrics: null };
 
+function scope(path) {
+  const url = new URL(path, window.location.origin);
+  url.searchParams.set("season", $("season").value);
+  url.searchParams.set("position", $("position").value);
+  return `${url.pathname}${url.search}`;
+}
+
 async function getJson(path) {
   const response = await fetch(path);
   if (!response.ok) throw new Error(`${response.status} ${path}`);
@@ -50,7 +57,7 @@ async function renderPredictions() {
   const period = $("period").value;
   const regime = $("regime").value;
   const playerId = $("player-id").value.trim();
-  const query = new URLSearchParams({ period, regime });
+  const query = new URLSearchParams({ period, regime, season: $("season").value, position: $("position").value });
   if (playerId) query.set("playerId", playerId);
   const rows = await getJson(`/api/modeling/predictions?${query}`);
   $("player-note").textContent = `${rows.length} rows · ${period}`;
@@ -60,7 +67,7 @@ async function renderPredictions() {
 async function load() {
   try {
     [state.replay, state.checkpoints, state.metrics] = await Promise.all([
-      getJson("/api/modeling/replay"), getJson("/api/modeling/checkpoints"), getJson("/api/modeling/metrics")
+      getJson(scope("/api/modeling/replay")), getJson(scope("/api/modeling/checkpoints")), getJson(scope("/api/modeling/metrics"))
     ]);
     renderReplay();
     renderPeriods();
@@ -73,4 +80,6 @@ async function load() {
 
 $("load").addEventListener("click", () => { void renderPredictions(); });
 $("regime").addEventListener("change", () => { renderMetrics(); void renderPredictions(); });
+$("season").addEventListener("change", () => { void load(); });
+$("position").addEventListener("change", () => { void load(); });
 void load();

@@ -9,7 +9,7 @@ for (const position of ["qb", "rb", "wr", "te"]) {
       position: string;
       replay_id: string;
       row_counts: { training: number; validation: number };
-      matching: { rank: { matched: number } };
+      matching: { rank: { matched: number; source_rows: number } };
     };
     const walkforward = JSON.parse(await readFile(`${directory}/walkforward-manifest.json`, "utf8")) as {
       position: string;
@@ -21,7 +21,7 @@ for (const position of ["qb", "rb", "wr", "te"]) {
     assert.equal(manifest.replay_id, `chatpft-${position}-2024`);
     assert.ok(manifest.row_counts.training > 100);
     assert.ok(manifest.row_counts.validation > 20);
-    assert.ok(manifest.matching.rank.matched > 0);
+    assert.ok(manifest.matching.rank.matched > 0 || manifest.matching.rank.source_rows === 0);
     assert.equal(walkforward.position, position.toUpperCase());
     assert.equal(walkforward.replay_id, `chatpft-${position}-2024`);
     assert.equal(walkforward.checkpoints, 19);

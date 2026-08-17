@@ -19,6 +19,9 @@
     "prior_share",
     "prior_team_pass_attempts",
     "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
     "prior_games",
     "prior_availability_rate",
     "experience_seasons"

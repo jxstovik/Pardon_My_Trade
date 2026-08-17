@@ -14,7 +14,7 @@
       "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
       "bytes": 7211865,
       "cached": true,
-      "retrieved_at": "2026-08-17T22:20:15.360637+00:00",
+      "retrieved_at": "2026-08-17T23:08:31.722516+00:00",
       "name": "nflverse_player_stats",
       "status": "downloaded",
       "parsed_rows": 4463
@@ -35,7 +35,7 @@
       "sha256": "22a3854961aeda8f4bcd9931d63aa2d8a0c905627d9de678f383ce7d602f19ef",
       "bytes": 179977,
       "cached": true,
-      "retrieved_at": "2026-08-17T22:20:47.657315+00:00",
+      "retrieved_at": "2026-08-17T23:08:48.632292+00:00",
       "parsed_rows": 50
     },
     {
@@ -54,7 +54,7 @@
       "sha256": "a66fb137490b15585d747b11dee77bd1624bd110954082c636dcdde741847cd4",
       "bytes": 234006,
       "cached": true,
-      "retrieved_at": "2026-08-17T22:21:27.472402+00:00",
+      "retrieved_at": "2026-08-17T23:08:50.141120+00:00",
       "parsed_rows": 0
     }
   ],
@@ -88,6 +88,9 @@
       "prior_share",
       "prior_team_pass_attempts",
       "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
       "prior_games",
       "prior_availability_rate",
       "experience_seasons"
@@ -99,6 +102,9 @@
       "prior_share": 0.8237357505466131,
       "prior_team_pass_attempts": 34.376366274332845,
       "prior_team_rush_attempts": 26.602392233545167,
+      "prior_usage_trend": 0.38062077711166487,
+      "prior_role_stability": 0.2106055517998674,
+      "prior_team_pass_trend": 0.01152157264362975,
       "prior_games": 26.047117662542774,
       "prior_availability_rate": 0.724635137901787,
       "experience_seasons": 1.8249539352461175
@@ -110,22 +116,91 @@
       "prior_share": 0.31554203595430375,
       "prior_team_pass_attempts": 4.4697332008764326,
       "prior_team_rush_attempts": 3.720448648181711,
+      "prior_usage_trend": 2.5512019656772975,
+      "prior_role_stability": 0.2479506822552173,
+      "prior_team_pass_trend": 0.1729102847630181,
       "prior_games": 22.53498094369669,
       "prior_availability_rate": 0.35466879275525026,
       "experience_seasons": 1.5969662577728543
     },
     "coefficients": [
-      14.081763622005836,
-      3.6835704546627825,
-      -1.336986839743985,
-      -0.26777661361956306,
-      1.9509188357754799,
-      0.4122718278918864,
-      0.08828897566278458,
-      1.361369424185447,
-      0.6325977832999388,
-      -1.4926266006819793
+      14.081763622005838,
+      3.6585264157683195,
+      -1.222327738967917,
+      -0.24541199705473038,
+      1.9958526764546813,
+      0.386590632006996,
+      0.10406546147292253,
+      0.6342106103092768,
+      0.0616908131611246,
+      -0.007255602833104877,
+      1.4118721836217953,
+      0.662538078181765,
+      -1.5475117870746895
     ],
-    "residual_standard_deviation": 7.934395683983514
-  }
+    "residual_standard_deviation": 7.910845424032514
+  },
+  "rookie_model": {
+    "model_version": "qb-2024-preseason-rookie-ridge-v1",
+    "position": "QB",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 13.706124880838894,
+      "prior_usage_per_game": 28.404321576104227,
+      "prior_efficiency": 7.097278438665931,
+      "prior_share": 0.7064272155975855,
+      "prior_team_pass_attempts": 34.745653456806934,
+      "prior_team_rush_attempts": 25.86807730718598,
+      "prior_usage_trend": 0.2794258329414199,
+      "prior_role_stability": 0.3892068970047223,
+      "prior_team_pass_trend": -0.0037717474629429693,
+      "prior_games": 5.141086749285034,
+      "prior_availability_rate": 0.28561593051583517,
+      "experience_seasons": 0.0
+    },
+    "scales": {
+      "prior_points_per_game": 6.9489078377288,
+      "prior_usage_per_game": 11.827993570840382,
+      "prior_efficiency": 2.0866734113713146,
+      "prior_share": 0.38910954388401064,
+      "prior_team_pass_attempts": 4.851805013548763,
+      "prior_team_rush_attempts": 3.7365778115531265,
+      "prior_usage_trend": 1.9497754344692861,
+      "prior_role_stability": 0.387013894399904,
+      "prior_team_pass_trend": 0.17604149681764383,
+      "prior_games": 4.295686883031671,
+      "prior_availability_rate": 0.23864927127953725,
+      "experience_seasons": 1e-06
+    },
+    "coefficients": [
+      12.738322211630113,
+      3.479217827536113,
+      -1.3674914473863407,
+      -0.2126866466660961,
+      3.3840843719660856,
+      0.5768935790718757,
+      0.10898886370177983,
+      0.46269445209520765,
+      0.12024776946412398,
+      0.2099053106294675,
+      0.06713929546977922,
+      0.06713929546997875,
+      0.0
+    ],
+    "residual_standard_deviation": 8.031629836158608
+  },
+  "rookie_training_rows": 1049
 }

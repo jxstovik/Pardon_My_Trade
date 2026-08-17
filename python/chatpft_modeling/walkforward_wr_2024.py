@@ -179,7 +179,9 @@ def fit_model(training: list[dict[str, Any]]) -> RidgeModel:
 
 
 def prediction(row: dict[str, Any], model: RidgeModel, expected_games: float, model_id: str, target_week: int, regime: str) -> dict[str, Any]:
-    weekly = model.predict(row)
+    is_rookie = row.get("experience_seasons", 0) == 0
+    uncertainty_multiplier = 1.25 if is_rookie and ACTIVE_POSITION == "QB" else (1.15 if is_rookie else 1.0)
+    weekly = model.predict(row, uncertainty_multiplier)
     remaining = max(1, 19 - target_week)
     return {
         "replay_id": REPLAY_ID,
@@ -359,6 +361,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     identity_rank_rows = [{"name": value["player_name"], "team": value["team"], "rank": value["actual_rank"]} for value in totals.values()]
     identity_source, _ = source_matches(identity_rank_rows, totals)
     preseason_model = RidgeModel.fit(historical, position)
+    rookie_historical = [row for row in historical if row.get("experience_seasons", 0) == 0]
+    preseason_rookie_model = RidgeModel.fit(rookie_historical if len(rookie_historical) >= 20 else historical, position, f"{position.lower()}-2024-walkforward-rookie-ridge-v1")
     checkpoints: list[dict[str, Any]] = []
     all_predictions: list[dict[str, Any]] = []
     all_outcomes: list[dict[str, Any]] = []
@@ -405,6 +409,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         target_feature_by_player = {player_id: next((row for row in features if row["player_id"] == player_id and row["season"] == SEASON and row["week"] == target_week), None) for player_id in eligible}
         adaptive_training = historical + [row for row in features if row["season"] == SEASON and row["week"] < target_week]
         adaptive_model = RidgeModel.fit(adaptive_training, position)
+        adaptive_rookie_rows = [row for row in adaptive_training if row.get("experience_seasons", 0) == 0]
+        adaptive_rookie_model = RidgeModel.fit(adaptive_rookie_rows if len(adaptive_rookie_rows) >= 20 else adaptive_training, position, f"{position.lower()}-2024-walkforward-rookie-ridge-v1")
         for regime, model, use_target_features in [
             ("frozen_preseason", preseason_model, False),
             ("frozen_weights_adaptive_features", preseason_model, True),
@@ -413,10 +419,11 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             forecast_rows = []
             for player_id in eligible:
                 target_feature = target_feature_by_player.get(player_id)
-                feature = target_feature if use_target_features and target_feature else preseason_features.get(player_id, history_summary([], [], None, SEASON))
+                feature = target_feature if use_target_features and target_feature else preseason_features.get(player_id, history_summary([], [], None, SEASON, position))
                 feature = {**feature, "player_id": player_id, "player_name": (target_feature or {}).get("player_name", ""), "team": (target_feature or {}).get("team", "")}
                 expected_games = min(17.0, max(1.0, feature.get("prior_availability_rate", 0.5) * 17.0))
-                forecast_rows.append(prediction(feature, model, expected_games, f"{position.lower()}-2024-{regime}", target_week, regime))
+                active_model = (preseason_rookie_model if regime != "adaptive_expanding" else adaptive_rookie_model) if feature.get("experience_seasons", 0) == 0 else model
+                forecast_rows.append(prediction(feature, active_model, expected_games, f"{position.lower()}-2024-{regime}", target_week, regime))
             assign_ranks(forecast_rows, "mean", "predicted_rank")
             source_forecast_rows = [row for row in forecast_rows if row["player_id"] in source_rank]
             assign_ranks(source_forecast_rows, "mean", "source_common_predicted_rank")
@@ -513,7 +520,7 @@ def subgroup_metrics(predictions: list[dict[str, Any]]) -> list[dict[str, Any]]:
         groups = {"all": rows, "rookie": [row for row in rows if row["as_of_groups"]["rookie"]], "veteran": [row for row in rows if not row["as_of_groups"]["rookie"]], "prior_games_0": [row for row in rows if row["as_of_groups"]["prior_games_bucket"] == "0"], "prior_games_1_5": [row for row in rows if row["as_of_groups"]["prior_games_bucket"] == "1-5"], "prior_games_6_16": [row for row in rows if row["as_of_groups"]["prior_games_bucket"] == "6-16"], "prior_games_17_plus": [row for row in rows if row["as_of_groups"]["prior_games_bucket"] == "17+"]}
         for subgroup, values in groups.items():
             metrics = metric_rows(values)
-            result.append({"regime": regime, "subgroup": subgroup, "minimum_samples": 30, "minimum_weeks": 8, "status": "ok" if len(values) >= 30 and len({row["target_period"] for row in values}) >= 8 else "insufficient_data", **metrics})
+            result.append({"regime": regime, "subgroup": subgroup, "samples": len(values), "unique_players": len({row["player_id"] for row in values}), "unique_weeks": len({row["target_period"] for row in values}), "minimum_samples": 30, "minimum_weeks": 8, "status": "ok" if len(values) >= 30 and len({row["target_period"] for row in values}) >= 8 else "insufficient_data", **{key: value for key, value in metrics.items() if key != "samples"}})
     return result
 
 

@@ -8,6 +8,9 @@
     "prior_share",
     "prior_team_pass_attempts",
     "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
     "prior_games",
     "prior_availability_rate",
     "experience_seasons"
@@ -19,6 +22,9 @@
     "prior_share": 0.18260995159560628,
     "prior_team_pass_attempts": 34.343309216762954,
     "prior_team_rush_attempts": 26.608319471522176,
+    "prior_usage_trend": 0.18169789315961657,
+    "prior_role_stability": 0.2929985271568165,
+    "prior_team_pass_trend": 0.020661107767907423,
     "prior_games": 23.871916864905472,
     "prior_availability_rate": 0.7208102054727822,
     "experience_seasons": 1.5818204582446476
@@ -30,21 +36,27 @@
     "prior_share": 0.10436331341143973,
     "prior_team_pass_attempts": 4.563185742713421,
     "prior_team_rush_attempts": 3.7465855319987678,
+    "prior_usage_trend": 0.8934127638919958,
+    "prior_role_stability": 0.23443694537800158,
+    "prior_team_pass_trend": 0.4841953951850284,
     "prior_games": 19.879535703110072,
     "prior_availability_rate": 0.3533174120181185,
     "experience_seasons": 1.4884590170595973
   },
   "coefficients": [
     9.034020282959839,
-    2.6367341094325805,
-    -2.1660049706633244,
-    0.08370585665892738,
-    3.9129495816375095,
-    0.21868990700949836,
-    -0.07146578517436407,
-    0.7042602558435737,
-    0.17391947793611678,
-    -0.9254417655798881
+    2.620642118977013,
+    -2.250350304365406,
+    0.059714286389830305,
+    4.083819850336443,
+    0.24172675457933837,
+    -0.03878282028428776,
+    0.48529253304618003,
+    0.12118177132926541,
+    -0.06729901102315222,
+    0.7311560443016596,
+    0.2339610578688745,
+    -0.9467495561326503
   ],
-  "residual_standard_deviation": 6.851768921999098
+  "residual_standard_deviation": 6.8349722861472
 }

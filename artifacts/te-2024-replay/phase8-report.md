@@ -12,66 +12,66 @@ This report is generated from real nflverse outcomes and archive-first source at
 
 | Period | Regime | Samples | MAE | RMSE | P10-P90 coverage | P50 pinball |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| 2024-W1 | frozen_preseason | 62 | 3.843 | 4.960 | 0.855 | 1.921 |
-| 2024-W1 | frozen_weights_adaptive_features | 62 | 3.843 | 4.961 | 0.855 | 1.922 |
-| 2024-W1 | adaptive_expanding | 62 | 3.843 | 4.961 | 0.855 | 1.922 |
-| 2024-W2 | frozen_preseason | 60 | 3.896 | 4.817 | 0.850 | 1.948 |
-| 2024-W2 | frozen_weights_adaptive_features | 60 | 3.622 | 4.411 | 0.850 | 1.811 |
-| 2024-W2 | adaptive_expanding | 60 | 3.592 | 4.401 | 0.867 | 1.796 |
-| 2024-W3 | frozen_preseason | 61 | 3.879 | 5.029 | 0.902 | 1.940 |
-| 2024-W3 | frozen_weights_adaptive_features | 61 | 3.708 | 4.962 | 0.869 | 1.854 |
-| 2024-W3 | adaptive_expanding | 61 | 3.693 | 4.960 | 0.869 | 1.847 |
-| 2024-W4 | frozen_preseason | 57 | 3.519 | 4.384 | 0.860 | 1.760 |
-| 2024-W4 | frozen_weights_adaptive_features | 57 | 3.432 | 4.404 | 0.842 | 1.716 |
-| 2024-W4 | adaptive_expanding | 57 | 3.408 | 4.385 | 0.842 | 1.704 |
-| 2024-W5 | frozen_preseason | 56 | 4.007 | 5.601 | 0.786 | 2.004 |
-| 2024-W5 | frozen_weights_adaptive_features | 56 | 4.043 | 5.403 | 0.804 | 2.021 |
-| 2024-W5 | adaptive_expanding | 56 | 4.039 | 5.421 | 0.804 | 2.019 |
-| 2024-W6 | frozen_preseason | 51 | 4.031 | 5.088 | 0.843 | 2.016 |
-| 2024-W6 | frozen_weights_adaptive_features | 51 | 3.899 | 4.853 | 0.882 | 1.949 |
-| 2024-W6 | adaptive_expanding | 51 | 3.906 | 4.870 | 0.882 | 1.953 |
-| 2024-W7 | frozen_preseason | 61 | 4.307 | 5.463 | 0.852 | 2.154 |
-| 2024-W7 | frozen_weights_adaptive_features | 61 | 3.908 | 5.002 | 0.869 | 1.954 |
-| 2024-W7 | adaptive_expanding | 61 | 3.913 | 5.025 | 0.869 | 1.957 |
-| 2024-W8 | frozen_preseason | 70 | 4.038 | 5.876 | 0.843 | 2.019 |
-| 2024-W8 | frozen_weights_adaptive_features | 70 | 3.873 | 5.510 | 0.857 | 1.937 |
-| 2024-W8 | adaptive_expanding | 70 | 3.870 | 5.520 | 0.857 | 1.935 |
-| 2024-W9 | frozen_preseason | 61 | 4.762 | 6.239 | 0.721 | 2.381 |
-| 2024-W9 | frozen_weights_adaptive_features | 61 | 4.094 | 5.459 | 0.787 | 2.047 |
-| 2024-W9 | adaptive_expanding | 61 | 4.101 | 5.466 | 0.787 | 2.050 |
-| 2024-W10 | frozen_preseason | 57 | 3.195 | 4.030 | 0.895 | 1.597 |
-| 2024-W10 | frozen_weights_adaptive_features | 57 | 3.150 | 4.099 | 0.895 | 1.575 |
-| 2024-W10 | adaptive_expanding | 57 | 3.142 | 4.094 | 0.895 | 1.571 |
-| 2024-W11 | frozen_preseason | 62 | 5.194 | 8.110 | 0.774 | 2.597 |
-| 2024-W11 | frozen_weights_adaptive_features | 62 | 4.702 | 7.359 | 0.774 | 2.351 |
-| 2024-W11 | adaptive_expanding | 62 | 4.700 | 7.352 | 0.774 | 2.350 |
-| 2024-W12 | frozen_preseason | 51 | 4.269 | 5.797 | 0.824 | 2.134 |
-| 2024-W12 | frozen_weights_adaptive_features | 51 | 4.269 | 5.569 | 0.765 | 2.134 |
-| 2024-W12 | adaptive_expanding | 51 | 4.258 | 5.547 | 0.765 | 2.129 |
-| 2024-W13 | frozen_preseason | 72 | 4.143 | 5.693 | 0.833 | 2.071 |
-| 2024-W13 | frozen_weights_adaptive_features | 72 | 3.866 | 5.171 | 0.778 | 1.933 |
-| 2024-W13 | adaptive_expanding | 72 | 3.857 | 5.164 | 0.792 | 1.929 |
-| 2024-W14 | frozen_preseason | 56 | 3.271 | 4.038 | 0.929 | 1.636 |
-| 2024-W14 | frozen_weights_adaptive_features | 56 | 3.328 | 4.121 | 0.911 | 1.664 |
-| 2024-W14 | adaptive_expanding | 56 | 3.338 | 4.127 | 0.911 | 1.669 |
-| 2024-W15 | frozen_preseason | 59 | 3.626 | 4.712 | 0.898 | 1.813 |
-| 2024-W15 | frozen_weights_adaptive_features | 59 | 3.553 | 4.548 | 0.847 | 1.776 |
-| 2024-W15 | adaptive_expanding | 59 | 3.565 | 4.557 | 0.814 | 1.782 |
-| 2024-W16 | frozen_preseason | 63 | 3.673 | 4.622 | 0.873 | 1.836 |
-| 2024-W16 | frozen_weights_adaptive_features | 63 | 3.394 | 4.205 | 0.921 | 1.697 |
-| 2024-W16 | adaptive_expanding | 63 | 3.406 | 4.204 | 0.921 | 1.703 |
-| 2024-W17 | frozen_preseason | 63 | 4.560 | 5.997 | 0.794 | 2.280 |
-| 2024-W17 | frozen_weights_adaptive_features | 63 | 4.267 | 5.651 | 0.810 | 2.133 |
-| 2024-W17 | adaptive_expanding | 63 | 4.261 | 5.646 | 0.794 | 2.130 |
-| 2024-W18 | frozen_preseason | 66 | 4.394 | 5.546 | 0.773 | 2.197 |
-| 2024-W18 | frozen_weights_adaptive_features | 66 | 3.616 | 4.515 | 0.879 | 1.808 |
-| 2024-W18 | adaptive_expanding | 66 | 3.605 | 4.489 | 0.879 | 1.802 |
+| 2024-W1 | frozen_preseason | 62 | 3.852 | 4.998 | 0.855 | 1.926 |
+| 2024-W1 | frozen_weights_adaptive_features | 62 | 3.851 | 5.000 | 0.855 | 1.926 |
+| 2024-W1 | adaptive_expanding | 62 | 3.851 | 5.000 | 0.855 | 1.926 |
+| 2024-W2 | frozen_preseason | 60 | 3.921 | 4.833 | 0.850 | 1.960 |
+| 2024-W2 | frozen_weights_adaptive_features | 60 | 3.603 | 4.358 | 0.883 | 1.802 |
+| 2024-W2 | adaptive_expanding | 60 | 3.578 | 4.344 | 0.883 | 1.789 |
+| 2024-W3 | frozen_preseason | 61 | 3.801 | 4.988 | 0.902 | 1.901 |
+| 2024-W3 | frozen_weights_adaptive_features | 61 | 3.682 | 4.977 | 0.869 | 1.841 |
+| 2024-W3 | adaptive_expanding | 61 | 3.671 | 4.979 | 0.869 | 1.836 |
+| 2024-W4 | frozen_preseason | 57 | 3.548 | 4.401 | 0.860 | 1.774 |
+| 2024-W4 | frozen_weights_adaptive_features | 57 | 3.473 | 4.433 | 0.842 | 1.737 |
+| 2024-W4 | adaptive_expanding | 57 | 3.442 | 4.413 | 0.860 | 1.721 |
+| 2024-W5 | frozen_preseason | 56 | 4.003 | 5.632 | 0.804 | 2.001 |
+| 2024-W5 | frozen_weights_adaptive_features | 56 | 3.930 | 5.298 | 0.821 | 1.965 |
+| 2024-W5 | adaptive_expanding | 56 | 3.934 | 5.324 | 0.821 | 1.967 |
+| 2024-W6 | frozen_preseason | 51 | 4.070 | 5.113 | 0.843 | 2.035 |
+| 2024-W6 | frozen_weights_adaptive_features | 51 | 3.874 | 4.849 | 0.863 | 1.937 |
+| 2024-W6 | adaptive_expanding | 51 | 3.880 | 4.863 | 0.882 | 1.940 |
+| 2024-W7 | frozen_preseason | 61 | 4.270 | 5.477 | 0.852 | 2.135 |
+| 2024-W7 | frozen_weights_adaptive_features | 61 | 3.882 | 4.970 | 0.902 | 1.941 |
+| 2024-W7 | adaptive_expanding | 61 | 3.888 | 4.993 | 0.902 | 1.944 |
+| 2024-W8 | frozen_preseason | 70 | 4.118 | 5.921 | 0.829 | 2.059 |
+| 2024-W8 | frozen_weights_adaptive_features | 70 | 3.869 | 5.498 | 0.857 | 1.935 |
+| 2024-W8 | adaptive_expanding | 70 | 3.872 | 5.512 | 0.857 | 1.936 |
+| 2024-W9 | frozen_preseason | 61 | 4.790 | 6.278 | 0.754 | 2.395 |
+| 2024-W9 | frozen_weights_adaptive_features | 61 | 4.045 | 5.456 | 0.803 | 2.023 |
+| 2024-W9 | adaptive_expanding | 61 | 4.051 | 5.464 | 0.787 | 2.026 |
+| 2024-W10 | frozen_preseason | 57 | 3.184 | 4.019 | 0.930 | 1.592 |
+| 2024-W10 | frozen_weights_adaptive_features | 57 | 3.164 | 4.117 | 0.895 | 1.582 |
+| 2024-W10 | adaptive_expanding | 57 | 3.153 | 4.111 | 0.895 | 1.577 |
+| 2024-W11 | frozen_preseason | 62 | 5.147 | 8.094 | 0.790 | 2.574 |
+| 2024-W11 | frozen_weights_adaptive_features | 62 | 4.648 | 7.265 | 0.774 | 2.324 |
+| 2024-W11 | adaptive_expanding | 62 | 4.640 | 7.257 | 0.774 | 2.320 |
+| 2024-W12 | frozen_preseason | 51 | 4.366 | 5.848 | 0.824 | 2.183 |
+| 2024-W12 | frozen_weights_adaptive_features | 51 | 4.312 | 5.613 | 0.765 | 2.156 |
+| 2024-W12 | adaptive_expanding | 51 | 4.305 | 5.599 | 0.765 | 2.153 |
+| 2024-W13 | frozen_preseason | 72 | 4.106 | 5.677 | 0.833 | 2.053 |
+| 2024-W13 | frozen_weights_adaptive_features | 72 | 3.795 | 5.114 | 0.792 | 1.898 |
+| 2024-W13 | adaptive_expanding | 72 | 3.777 | 5.098 | 0.806 | 1.888 |
+| 2024-W14 | frozen_preseason | 56 | 3.227 | 3.970 | 0.929 | 1.613 |
+| 2024-W14 | frozen_weights_adaptive_features | 56 | 3.366 | 4.156 | 0.911 | 1.683 |
+| 2024-W14 | adaptive_expanding | 56 | 3.378 | 4.170 | 0.911 | 1.689 |
+| 2024-W15 | frozen_preseason | 59 | 3.591 | 4.710 | 0.898 | 1.795 |
+| 2024-W15 | frozen_weights_adaptive_features | 59 | 3.554 | 4.555 | 0.864 | 1.777 |
+| 2024-W15 | adaptive_expanding | 59 | 3.568 | 4.568 | 0.831 | 1.784 |
+| 2024-W16 | frozen_preseason | 63 | 3.687 | 4.647 | 0.873 | 1.844 |
+| 2024-W16 | frozen_weights_adaptive_features | 63 | 3.355 | 4.171 | 0.921 | 1.677 |
+| 2024-W16 | adaptive_expanding | 63 | 3.362 | 4.164 | 0.921 | 1.681 |
+| 2024-W17 | frozen_preseason | 63 | 4.568 | 6.018 | 0.794 | 2.284 |
+| 2024-W17 | frozen_weights_adaptive_features | 63 | 4.261 | 5.633 | 0.810 | 2.130 |
+| 2024-W17 | adaptive_expanding | 63 | 4.255 | 5.629 | 0.810 | 2.127 |
+| 2024-W18 | frozen_preseason | 66 | 4.360 | 5.512 | 0.773 | 2.180 |
+| 2024-W18 | frozen_weights_adaptive_features | 66 | 3.603 | 4.492 | 0.879 | 1.802 |
+| 2024-W18 | adaptive_expanding | 66 | 3.590 | 4.463 | 0.879 | 1.795 |
 
 ## Takeaways
 
-- Adaptive expanding weighted MAE was `3.807` versus frozen preseason `4.045`.
-- Adaptive P10-P90 coverage was `0.843` against the nominal 0.80 interval.
-- The paired weekly RMSE delta was `-0.323` with bootstrap upper bound `-0.194`.
+- Adaptive expanding weighted MAE was `3.789` versus frozen preseason `4.044`.
+- Adaptive P10-P90 coverage was `0.850` against the nominal 0.80 interval.
+- The paired weekly RMSE delta was `-0.344` with bootstrap upper bound `-0.195`.
 - The difference between frozen weights with updated features and adaptive retraining should guide the next modeling investment; a small difference favors better features over more frequent refits.
 - Source gaps and missing availability evidence are denominators, not evidence that the unavailable provider or player was uninformative.
 

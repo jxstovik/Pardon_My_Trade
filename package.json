@@ -21,6 +21,10 @@
     "model:rb:walkforward": "python3 python/chatpft_modeling/walkforward_wr_2024.py --position RB --data-dir data --output artifacts/rb-2024-replay",
     "model:te:replay": "python3 python/chatpft_modeling/replay_wr_2024.py --position TE --data-dir data --output artifacts/te-2024-replay",
     "model:te:walkforward": "python3 python/chatpft_modeling/walkforward_wr_2024.py --position TE --data-dir data --output artifacts/te-2024-replay",
+    "model:2026:qb": "python3 python/chatpft_modeling/preseason_2026.py --position QB --data-dir data --output artifacts/qb-2026-preseason",
+    "model:2026:rb": "python3 python/chatpft_modeling/preseason_2026.py --position RB --data-dir data --output artifacts/rb-2026-preseason",
+    "model:2026:wr": "python3 python/chatpft_modeling/preseason_2026.py --position WR --data-dir data --output artifacts/wr-2026-preseason",
+    "model:2026:te": "python3 python/chatpft_modeling/preseason_2026.py --position TE --data-dir data --output artifacts/te-2026-preseason",
     "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1",
     "pmt": "node dist/src/cli.js"
   },

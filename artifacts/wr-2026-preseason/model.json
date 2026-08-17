@@ -1,0 +1,62 @@
+{
+  "model_version": "wr-2026-preseason-hard-stats-ridge-v2",
+  "position": "WR",
+  "features": [
+    "prior_points_per_game",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
+    "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "means": {
+    "prior_points_per_game": 8.597671043458053,
+    "prior_usage_per_game": 4.784025679758308,
+    "prior_efficiency": 7.962919203542041,
+    "prior_share": 0.14829496082016252,
+    "prior_team_pass_attempts": 33.89645160353242,
+    "prior_team_rush_attempts": 26.59722757101911,
+    "prior_usage_trend": 0.12050849996644993,
+    "prior_role_stability": 0.4149384168716267,
+    "prior_team_pass_trend": 0.020778277770468305,
+    "prior_games": 29.544039042528468,
+    "prior_availability_rate": 0.7523175045833657,
+    "experience_seasons": 2.004299326051592
+  },
+  "scales": {
+    "prior_points_per_game": 5.399681996841019,
+    "prior_usage_per_game": 2.6876941714006657,
+    "prior_efficiency": 3.5138052338711367,
+    "prior_share": 0.07782968177656667,
+    "prior_team_pass_attempts": 4.384547751798721,
+    "prior_team_rush_attempts": 3.6680380103042234,
+    "prior_usage_trend": 0.6449963136184947,
+    "prior_role_stability": 0.20899546244110906,
+    "prior_team_pass_trend": 0.515213026186126,
+    "prior_games": 25.967522058515765,
+    "prior_availability_rate": 0.34318326361939644,
+    "experience_seasons": 1.8933277209220811
+  },
+  "coefficients": [
+    8.365248663722994,
+    1.8262036310557703,
+    1.043864436602595,
+    -0.020112122707144135,
+    1.153121792581759,
+    0.04089870181487135,
+    0.025341648229836807,
+    0.2571050117493982,
+    0.1043264481827062,
+    -0.06062287594902066,
+    1.0984461327451216,
+    0.37487628149665364,
+    -1.3965356660804953
+  ],
+  "residual_standard_deviation": 6.6368651912666525
+}

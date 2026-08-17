@@ -61,6 +61,9 @@ FEATURES = [
     "prior_share",
     "prior_team_pass_attempts",
     "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
     "prior_games",
     "prior_availability_rate",
     "experience_seasons",
@@ -298,21 +301,23 @@ def parse_float(raw: str | None) -> float:
         return 0.0
 
 
-def load_nflverse(path: Path, history_start: int, season: int, position: str = "WR") -> tuple[list[dict[str, Any]], dict[tuple[int, int, str], dict[str, float]]]:
+def load_nflverse(path: Path, history_start: int, season: int, position: str = "WR", additional_paths: tuple[Path, ...] = ()) -> tuple[list[dict[str, Any]], dict[tuple[int, int, str], dict[str, float]]]:
     rows: list[dict[str, Any]] = []
     team_context: dict[tuple[int, int, str], dict[str, float]] = defaultdict(lambda: {"pass_attempts": 0.0, "rush_attempts": 0.0, "qb_epa": 0.0, "qb_plays": 0.0})
-    with gzip.open(path, "rt", newline="", encoding="utf-8") as handle:
+    for input_path in (path, *additional_paths):
+      opener = gzip.open if input_path.suffix == ".gz" else open
+      with opener(input_path, "rt", newline="", encoding="utf-8") as handle:
         for raw in csv.DictReader(handle):
             raw_season = int(raw.get("season") or 0)
             week = int(raw.get("week") or 0)
             if raw_season < history_start or raw_season > season or raw.get("season_type") != "REG":
                 continue
-            team = raw.get("recent_team", "")
+            team = raw.get("recent_team") or raw.get("team", "")
             context = team_context[(raw_season, week, team)]
             context["rush_attempts"] += parse_float(raw.get("carries"))
             if raw.get("position") == "QB":
                 attempts = parse_float(raw.get("attempts"))
-                sacks = parse_float(raw.get("sacks"))
+                sacks = parse_float(raw.get("sacks") or raw.get("sacks_suffered"))
                 context["pass_attempts"] += attempts
                 context["qb_epa"] += parse_float(raw.get("passing_epa"))
                 context["qb_plays"] += attempts + sacks
@@ -338,7 +343,7 @@ def load_nflverse(path: Path, history_start: int, season: int, position: str = "
                 "passing_attempts": parse_float(raw.get("attempts")),
                 "passing_yards": parse_float(raw.get("passing_yards")),
                 "passing_tds": parse_float(raw.get("passing_tds")),
-                "interceptions": parse_float(raw.get("interceptions")),
+                "interceptions": parse_float(raw.get("interceptions") or raw.get("passing_interceptions")),
                 "passing_epa": parse_float(raw.get("passing_epa")),
                 "actual_points": parse_float(raw.get("fantasy_points_ppr") or raw.get("fantasy_points")),
             })
@@ -367,6 +372,14 @@ def history_summary(history: list[dict[str, Any]], team_history: list[dict[str, 
         shares = [row["target_share"] for row in recent if row["target_share"] > 0]
         defaults = (3.0, 7.5, 0.08)
     available_rate = min(1.0, len(history[-18:]) / 18.0)
+    prior_usage = usage[-6:]
+    recent_usage = mean(prior_usage[-3:]) if prior_usage else defaults[0]
+    earlier_usage = mean(prior_usage[-6:-3]) if len(prior_usage) > 3 else recent_usage
+    usage_trend = (recent_usage - earlier_usage) / max(1.0, abs(earlier_usage))
+    role_stability = 1.0 / (1.0 + (math.sqrt(mean((value - mean(prior_usage)) ** 2 for value in prior_usage)) if len(prior_usage) > 1 else 0.0))
+    recent_pass = mean(pass_volume[-4:]) if pass_volume else 34.0
+    earlier_pass = mean(pass_volume[-8:-4]) if len(pass_volume) > 4 else recent_pass
+    team_pass_trend = (recent_pass - earlier_pass) / max(1.0, abs(earlier_pass))
     return {
         "prior_points_per_game": mean(prior_points) if prior_points else ({"QB": 16.0, "RB": 9.5, "WR": 8.0, "TE": 7.0}[position]),
         "prior_usage_per_game": mean(usage) if usage else defaults[0],
@@ -374,6 +387,9 @@ def history_summary(history: list[dict[str, Any]], team_history: list[dict[str, 
         "prior_share": mean(shares) if shares else defaults[2],
         "prior_team_pass_attempts": mean(pass_volume) if pass_volume else 34.0,
         "prior_team_rush_attempts": mean(rush_volume) if rush_volume else 26.0,
+        "prior_usage_trend": usage_trend,
+        "prior_role_stability": role_stability,
+        "prior_team_pass_trend": team_pass_trend,
         "prior_games": float(len(history)),
         "prior_availability_rate": available_rate,
         "experience_seasons": float(max(0, current_season - (first_season or current_season))),
@@ -446,35 +462,36 @@ def solve(matrix_values: list[list[float]], target: list[float], ridge: float = 
 
 
 class RidgeModel:
-    def __init__(self, features: list[str], means: dict[str, float], scales: dict[str, float], coefficients: list[float], residual_std: float, position: str = "WR") -> None:
+    def __init__(self, features: list[str], means: dict[str, float], scales: dict[str, float], coefficients: list[float], residual_std: float, position: str = "WR", model_version: str | None = None) -> None:
         self.features = features
         self.means = means
         self.scales = scales
         self.coefficients = coefficients
         self.residual_std = residual_std
         self.position = position
+        self.model_version = model_version or f"{position.lower()}-2024-preseason-hard-stats-ridge-v1"
 
     @classmethod
-    def fit(cls, rows: list[dict[str, Any]], position: str = "WR") -> "RidgeModel":
+    def fit(cls, rows: list[dict[str, Any]], position: str = "WR", model_version: str | None = None) -> "RidgeModel":
         means = {feature: mean(float(row[feature]) for row in rows) for feature in FEATURES}
         scales = {feature: max(1e-6, math.sqrt(mean((float(row[feature]) - means[feature]) ** 2 for row in rows))) for feature in FEATURES}
         values = [[1.0] + [(float(row[feature]) - means[feature]) / scales[feature] for feature in FEATURES] for row in rows]
         coefficients = solve(values, [float(row["actual_points"]) for row in rows])
         residuals = [float(row["actual_points"]) - cls._predict_values(row, coefficients, means, scales) for row in rows]
-        return cls(FEATURES, means, scales, coefficients, max(2.0, pstdev(residuals)), position)
+        return cls(FEATURES, means, scales, coefficients, max(2.0, pstdev(residuals)), position, model_version)
 
     @staticmethod
     def _predict_values(row: dict[str, Any], coefficients: list[float], means: dict[str, float], scales: dict[str, float]) -> float:
         vector = [1.0] + [(float(row[feature]) - means[feature]) / scales[feature] for feature in FEATURES]
         return max(0.0, sum(value * coefficient for value, coefficient in zip(vector, coefficients)))
 
-    def predict(self, row: dict[str, Any]) -> dict[str, float]:
+    def predict(self, row: dict[str, Any], uncertainty_multiplier: float = 1.0) -> dict[str, float]:
         mean_value = self._predict_values(row, self.coefficients, self.means, self.scales)
-        spread = self.residual_std
+        spread = self.residual_std * max(1.0, uncertainty_multiplier)
         return {"mean": mean_value, "standard_deviation": spread, "p10": max(0.0, mean_value - 1.282 * spread), "p50": mean_value, "p90": mean_value + 1.282 * spread}
 
     def metadata(self) -> dict[str, Any]:
-        return {"model_version": f"{self.position.lower()}-2024-preseason-hard-stats-ridge-v1", "position": self.position, "features": self.features, "means": self.means, "scales": self.scales, "coefficients": self.coefficients, "residual_standard_deviation": self.residual_std}
+        return {"model_version": self.model_version, "position": self.position, "features": self.features, "means": self.means, "scales": self.scales, "coefficients": self.coefficients, "residual_standard_deviation": self.residual_std}
 
 
 def season_totals(rows: list[dict[str, Any]], season: int) -> dict[str, dict[str, Any]]:
@@ -560,7 +577,7 @@ def write_database(path: Path, manifest: dict[str, Any], features: list[dict[str
     db.executescript("""
       CREATE TABLE metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL);
       CREATE TABLE source_snapshots (name TEXT, status TEXT, requested_url TEXT, capture_url TEXT, capture_timestamp TEXT, sha256 TEXT, rows INTEGER, reason TEXT);
-      CREATE TABLE features (player_id TEXT, player_name TEXT, season INTEGER, week INTEGER, feature_cutoff TEXT, actual_points REAL, prior_points_per_game REAL, prior_usage_per_game REAL, prior_efficiency REAL, prior_share REAL, prior_team_pass_attempts REAL, prior_team_rush_attempts REAL, prior_games REAL, prior_availability_rate REAL, experience_seasons REAL, source_rank INTEGER);
+      CREATE TABLE features (player_id TEXT, player_name TEXT, season INTEGER, week INTEGER, feature_cutoff TEXT, actual_points REAL, prior_points_per_game REAL, prior_usage_per_game REAL, prior_efficiency REAL, prior_share REAL, prior_team_pass_attempts REAL, prior_team_rush_attempts REAL, prior_usage_trend REAL, prior_role_stability REAL, prior_team_pass_trend REAL, prior_games REAL, prior_availability_rate REAL, experience_seasons REAL, source_rank INTEGER);
       CREATE TABLE predictions (player_id TEXT, player_name TEXT, team TEXT, actual_season_points REAL, actual_rank INTEGER, hard_stats_points REAL, baseline_points REAL, source_points REAL, source_rank INTEGER, hard_stats_rank INTEGER, source_rank_blend_rank INTEGER);
       CREATE TABLE metrics (model TEXT, metric TEXT, value REAL, samples INTEGER);
       CREATE TABLE coefficients (feature TEXT PRIMARY KEY, value REAL);
@@ -578,7 +595,7 @@ def write_database(path: Path, manifest: dict[str, Any], features: list[dict[str
     db.executemany("INSERT INTO source_snapshots VALUES (?, ?, ?, ?, ?, ?, ?, ?)", [
         (row.get("name"), row.get("status"), row.get("requested_url"), row.get("capture_url"), row.get("timestamp"), row.get("sha256"), row.get("parsed_rows", 0), row.get("reason")) for row in manifest["sources"]
     ])
-    db.executemany("INSERT INTO features VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [
+    db.executemany("INSERT INTO features VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [
         (row["player_id"], row["player_name"], row["season"], row["week"], row["feature_cutoff"], row["actual_points"], *(row[feature] for feature in FEATURES), row.get("source_rank")) for row in features
     ])
     db.executemany("INSERT INTO predictions VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [
@@ -603,6 +620,7 @@ def build_report(path: Path, manifest: dict[str, Any], metrics: list[dict[str, A
         f"- 2024 outcome rows: `{counts['validation_rows']}` real player-weeks",
         f"- 2024 players with recorded outcomes: `{counts['players_2024']}`",
         f"- Feature rows with prior-only construction: `{counts['feature_rows']}`",
+        f"- Rookie training rows: `{counts.get('rookie_rows', 0)}`",
         "",
         "## Sources",
         "",
@@ -615,7 +633,7 @@ def build_report(path: Path, manifest: dict[str, Any], metrics: list[dict[str, A
     hard = next((row for row in metrics if row["model"] == "hard_stats"), {})
     baseline = next((row for row in metrics if row["model"] == "prior_baseline"), {})
     source = next((row for row in metrics if row["model"] == "razzball_rank"), {})
-    lines.extend(["", "## Takeaways", "", f"- The hard-stat model improved RMSE versus the historical baseline by `{format_metric((baseline.get('rmse') or 0) - (hard.get('rmse') or 0))}` points.", f"- The hard-stat model's season bias was `{format_metric(hard.get('bias'))}`; positive values indicate overprediction.", f"- Razzball rank Spearman correlation was `{format_metric(source.get('spearman'))}` on `{source.get('rank_samples', 0)}` matched players.", "- Ordinal Razzball ranks were not converted into fabricated point forecasts.", "- The position-specific model should receive better availability, role, and team-context features before adding model complexity.", "", "## Interpretation", "", f"The hard-stat {position} model is trained only on information available before 2024. A missing archived projection is a source-availability result, not a zero projection.", "", "## Limitations", "", "- Weekly Razzball, ESPN, FFToday, and timestamped news are reserved for the walk-forward replay in phases 5-6.", "- The first real feature table uses recorded player statistics and lagged team context; snap-count and route-level sources are future additions.", "- This is a preseason benchmark against final 2024 outcomes, not yet the week-by-week model evolution."])
+    lines.extend(["", "## Takeaways", "", f"- The hard-stat model improved RMSE versus the historical baseline by `{format_metric((baseline.get('rmse') or 0) - (hard.get('rmse') or 0))}` points.", f"- The hard-stat model's season bias was `{format_metric(hard.get('bias'))}`; positive values indicate overprediction.", f"- Razzball rank Spearman correlation was `{format_metric(source.get('spearman'))}` on `{source.get('rank_samples', 0)}` matched players.", f"- A separate rookie model was trained from `{counts.get('rookie_rows', 0)}` prior-only rows; rookie uncertainty is widened, especially for QB.", "- Ordinal Razzball ranks were not converted into fabricated point forecasts.", "- The position-specific model should receive better availability, role, and team-context features before adding model complexity.", "", "## Interpretation", "", f"The hard-stat {position} model is trained only on information available before 2024. A missing archived projection is a source-availability result, not a zero projection.", "", "## Limitations", "", "- Weekly Razzball, ESPN, FFToday, and timestamped news are reserved for the walk-forward replay in phases 5-6.", "- The first real feature table uses recorded player statistics and lagged team context; snap-count and route-level sources are future additions.", "- This is a preseason benchmark against final 2024 outcomes, not yet the week-by-week model evolution."])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -660,6 +678,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     train = [row for row in features if row["season"] < SEASON]
     validation = [row for row in features if row["season"] == SEASON]
     model = RidgeModel.fit(train, position)
+    rookie_train = [row for row in train if row.get("experience_seasons", 0) == 0]
+    rookie_model = RidgeModel.fit(rookie_train if len(rookie_train) >= 20 else train, position, f"{position.lower()}-2024-preseason-rookie-ridge-v1")
     totals = season_totals(rows, SEASON)
     rank_source, rank_counts = source_matches(source_rows.get("rank", []), totals)
     point_source, point_counts = source_matches(source_rows.get("points", []), totals)
@@ -669,7 +689,9 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     predictions: list[dict[str, Any]] = []
     for player_id, actual in totals.items():
         feature = preseason_features.get(player_id, history_summary([], [], None, SEASON, position))
-        hard_week = model.predict(feature)
+        is_rookie = feature.get("experience_seasons", 0) == 0
+        active_model = rookie_model if is_rookie else model
+        hard_week = active_model.predict(feature, 1.25 if is_rookie and position == "QB" else (1.15 if is_rookie else 1.0))
         expected_games = min(17.0, max(1.0, feature["prior_availability_rate"] * 17.0))
         hard_points = hard_week["mean"] * expected_games
         baseline_points = feature["prior_points_per_game"] * expected_games
@@ -721,6 +743,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "matching": {"rank": rank_counts, "points": point_counts},
         "row_counts": {"features": len(features), "training": len(train), "validation": len(validation), "players_2024": len(totals)},
         "model": model.metadata(),
+        "rookie_model": rookie_model.metadata(),
+        "rookie_training_rows": len(rookie_train),
     }
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     with (output / "features.jsonl").open("w", encoding="utf-8") as handle:
@@ -730,7 +754,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     (output / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
     (output / "model.json").write_text(json.dumps(model.metadata(), indent=2), encoding="utf-8")
     write_svg(output / "rank-benchmark.svg", [row for row in metrics if row.get("rmse") is not None], position)
-    build_report(output / "report.md", manifest, metrics, model, {"training_rows": len(train), "validation_rows": len(validation), "players_2024": len(totals), "feature_rows": len(features)}, position)
+    build_report(output / "report.md", manifest, metrics, model, {"training_rows": len(train), "validation_rows": len(validation), "players_2024": len(totals), "feature_rows": len(features), "rookie_rows": len(rookie_train)}, position)
     write_database(output / f"{position.lower()}-metamodel.sqlite", manifest, features, predictions, metrics, model)
     result = {"output": str(output), "manifest": manifest, "metrics": metrics}
     (output / "results.json").write_text(json.dumps(result, indent=2), encoding="utf-8")

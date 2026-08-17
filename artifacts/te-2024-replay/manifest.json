@@ -14,7 +14,7 @@
       "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
       "bytes": 7211865,
       "cached": true,
-      "retrieved_at": "2026-08-17T22:20:15.433205+00:00",
+      "retrieved_at": "2026-08-17T23:08:31.699878+00:00",
       "name": "nflverse_player_stats",
       "status": "downloaded",
       "parsed_rows": 7413
@@ -35,7 +35,7 @@
       "sha256": "75ff1dc5d75b3de6b66cdd41d7ce896b90ea40eed193ac5182402c2ba2983993",
       "bytes": 183292,
       "cached": true,
-      "retrieved_at": "2026-08-17T22:20:17.020164+00:00",
+      "retrieved_at": "2026-08-17T23:08:35.258070+00:00",
       "parsed_rows": 85
     },
     {
@@ -44,9 +44,18 @@
       "kind": "points",
       "cutoff": "2024-09-04T08:00:00-04:00",
       "parser_version": "position-replay-v2",
-      "status": "unavailable",
-      "reason": "archive index failed: HTTP Error 504: Gateway Time-out",
-      "parsed_rows": 0
+      "status": "downloaded",
+      "timestamp": "20240814033041",
+      "original": "https://football.razzball.com/projections-te-restofseason/",
+      "capture_url": "https://web.archive.org/web/20240814033041id_/https://football.razzball.com/projections-te-restofseason/",
+      "digest": "2KBYIII634QNFOKSYYXJIK72SF2YL74O",
+      "url": "https://web.archive.org/web/20240814033041id_/https://football.razzball.com/projections-te-restofseason/",
+      "path": "data/chatpft-te-replay/source-snapshots/razzball_te_preseason_projections-20240814033041.html",
+      "sha256": "4e9a8110a431bc34e61db97e34476daf0f36a71b569cf5978592e290980b376d",
+      "bytes": 265517,
+      "cached": true,
+      "retrieved_at": "2026-08-17T23:08:39.038486+00:00",
+      "parsed_rows": 161
     }
   ],
   "matching": {
@@ -57,9 +66,9 @@
       "ambiguous": 0
     },
     "points": {
-      "source_rows": 0,
-      "matched": 0,
-      "unmatched": 0,
+      "source_rows": 161,
+      "matched": 108,
+      "unmatched": 53,
       "ambiguous": 0
     }
   },
@@ -79,6 +88,9 @@
       "prior_share",
       "prior_team_pass_attempts",
       "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
       "prior_games",
       "prior_availability_rate",
       "experience_seasons"
@@ -90,6 +102,9 @@
       "prior_share": 0.10599959512043333,
       "prior_team_pass_attempts": 34.32438302277433,
       "prior_team_rush_attempts": 26.571281385281385,
+      "prior_usage_trend": 0.12484915346820859,
+      "prior_role_stability": 0.493794571458459,
+      "prior_team_pass_trend": 0.018227402913724024,
       "prior_games": 23.367588932806324,
       "prior_availability_rate": 0.7026789635485288,
       "experience_seasons": 1.6912252964426877
@@ -101,22 +116,91 @@
       "prior_share": 0.06010361665750328,
       "prior_team_pass_attempts": 4.607961213324755,
       "prior_team_rush_attempts": 3.781466742812115,
+      "prior_usage_trend": 0.568908899233065,
+      "prior_role_stability": 0.22141262456056998,
+      "prior_team_pass_trend": 0.40270026742354,
       "prior_games": 20.399148845807154,
       "prior_availability_rate": 0.36031095600113666,
       "experience_seasons": 1.53380680686422
     },
     "coefficients": [
       6.152430039525715,
-      0.5467907012130272,
-      1.1435247420296202,
-      0.12186824950643216,
-      1.1130550694953363,
-      0.1040839864384876,
-      0.14235291483611262,
-      0.7246613062328706,
-      0.23372702737404216,
-      -0.7823090773861913
+      0.5373249228608618,
+      1.1947240062247255,
+      0.1201875068525547,
+      1.0952792476962117,
+      0.09062414696075612,
+      0.1414510758083891,
+      0.26117438188021147,
+      0.04493499262824432,
+      -0.01443259621442852,
+      0.7305857510488888,
+      0.24757058793560524,
+      -0.7783512125259663
     ],
-    "residual_standard_deviation": 5.212243676867815
-  }
+    "residual_standard_deviation": 5.205898190061309
+  },
+  "rookie_model": {
+    "model_version": "te-2024-preseason-rookie-ridge-v1",
+    "position": "TE",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 5.90562332245194,
+      "prior_usage_per_game": 3.1452303228146534,
+      "prior_efficiency": 7.6974206978539135,
+      "prior_share": 0.09258336934380233,
+      "prior_team_pass_attempts": 34.84138880252863,
+      "prior_team_rush_attempts": 26.14430346131924,
+      "prior_usage_trend": 0.13058090722907834,
+      "prior_role_stability": 0.6323115972567884,
+      "prior_team_pass_trend": -0.00045183304794492414,
+      "prior_games": 4.691512513601741,
+      "prior_availability_rate": 0.26063958408898563,
+      "experience_seasons": 0.0
+    },
+    "scales": {
+      "prior_points_per_game": 3.875592350089804,
+      "prior_usage_per_game": 1.9071467012867989,
+      "prior_efficiency": 3.9239959091639363,
+      "prior_share": 0.05440744072124259,
+      "prior_team_pass_attempts": 4.912585538086283,
+      "prior_team_rush_attempts": 3.7823761584407656,
+      "prior_usage_trend": 0.501074410144304,
+      "prior_role_stability": 0.28093601654728656,
+      "prior_team_pass_trend": 0.16927353647696478,
+      "prior_games": 3.93901328729444,
+      "prior_availability_rate": 0.21883407151635775,
+      "experience_seasons": 1e-06
+    },
+    "coefficients": [
+      5.617355821545157,
+      -0.6418697876820603,
+      1.3354456790502927,
+      0.2882469965604443,
+      1.7365944452720132,
+      0.30991037334476546,
+      -0.004721130667773433,
+      -0.021430710607636003,
+      -0.4557380115778314,
+      -0.05028816238790069,
+      -0.07424527629503784,
+      -0.0742452762948817,
+      0.0
+    ],
+    "residual_standard_deviation": 5.007489320039629
+  },
+  "rookie_training_rows": 1838
 }

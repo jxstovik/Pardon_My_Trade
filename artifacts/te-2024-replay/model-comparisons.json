@@ -4,9 +4,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 4.960441929353684,
-    "candidate_value": 4.960595409143124,
-    "delta": 0.00015347978944024732,
+    "baseline_value": 4.998465319310249,
+    "candidate_value": 4.999887177925478,
+    "delta": 0.0014218586152292545,
     "status": "pass"
   },
   {
@@ -14,9 +14,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 4.029608714864454,
-    "candidate_value": 4.093515702855543,
-    "delta": 0.0639069879910883,
+    "baseline_value": 4.019270999659481,
+    "candidate_value": 4.111206270597979,
+    "delta": 0.09193527093849774,
     "status": "pass"
   },
   {
@@ -24,9 +24,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 8.110120730284232,
-    "candidate_value": 7.352019341274234,
-    "delta": -0.7581013890099975,
+    "baseline_value": 8.093706656649621,
+    "candidate_value": 7.25745071396104,
+    "delta": -0.8362559426885809,
     "status": "pass"
   },
   {
@@ -34,9 +34,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.796638883327903,
-    "candidate_value": 5.546939841605191,
-    "delta": -0.24969904172271207,
+    "baseline_value": 5.8484458983364345,
+    "candidate_value": 5.599035330850276,
+    "delta": -0.24941056748615864,
     "status": "pass"
   },
   {
@@ -44,9 +44,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.693016972273858,
-    "candidate_value": 5.163665489867898,
-    "delta": -0.5293514824059598,
+    "baseline_value": 5.677302805024295,
+    "candidate_value": 5.097996790506535,
+    "delta": -0.5793060145177602,
     "status": "pass"
   },
   {
@@ -54,9 +54,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 4.038401735440899,
-    "candidate_value": 4.127351706525736,
-    "delta": 0.08894997108483693,
+    "baseline_value": 3.9695098372028617,
+    "candidate_value": 4.170159053497597,
+    "delta": 0.20064921629473575,
     "status": "pass"
   },
   {
@@ -64,9 +64,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 4.712393482200847,
-    "candidate_value": 4.556767614793441,
-    "delta": -0.15562586740740603,
+    "baseline_value": 4.710026273110147,
+    "candidate_value": 4.567810350864267,
+    "delta": -0.14221592224587987,
     "status": "pass"
   },
   {
@@ -74,9 +74,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 4.621964369809303,
-    "candidate_value": 4.203870447961497,
-    "delta": -0.4180939218478068,
+    "baseline_value": 4.64739735940007,
+    "candidate_value": 4.1640246650170845,
+    "delta": -0.4833726943829859,
     "status": "pass"
   },
   {
@@ -84,9 +84,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.997156083311463,
-    "candidate_value": 5.646298344180208,
-    "delta": -0.3508577391312553,
+    "baseline_value": 6.017906886239448,
+    "candidate_value": 5.629223449965128,
+    "delta": -0.3886834362743201,
     "status": "pass"
   },
   {
@@ -94,9 +94,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.546130041019582,
-    "candidate_value": 4.488595252532886,
-    "delta": -1.057534788486696,
+    "baseline_value": 5.512320921190979,
+    "candidate_value": 4.463042576691565,
+    "delta": -1.049278344499414,
     "status": "pass"
   },
   {
@@ -104,9 +104,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 4.816926549391109,
-    "candidate_value": 4.4008429354541025,
-    "delta": -0.41608361393700655,
+    "baseline_value": 4.832863343077401,
+    "candidate_value": 4.343960890431226,
+    "delta": -0.48890245264617516,
     "status": "pass"
   },
   {
@@ -114,9 +114,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.029414801522127,
-    "candidate_value": 4.960021828129968,
-    "delta": -0.06939297339215855,
+    "baseline_value": 4.988454441779438,
+    "candidate_value": 4.979348435955235,
+    "delta": -0.009106005824202512,
     "status": "pass"
   },
   {
@@ -124,9 +124,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 4.383933934138236,
-    "candidate_value": 4.384967849407285,
-    "delta": 0.001033915269048613,
+    "baseline_value": 4.401439975895789,
+    "candidate_value": 4.413064395311687,
+    "delta": 0.011624419415897869,
     "status": "pass"
   },
   {
@@ -134,9 +134,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.600955110255118,
-    "candidate_value": 5.421340773450756,
-    "delta": -0.17961433680436212,
+    "baseline_value": 5.631508636393916,
+    "candidate_value": 5.323978653410633,
+    "delta": -0.3075299829832838,
     "status": "pass"
   },
   {
@@ -144,9 +144,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.088240520125015,
-    "candidate_value": 4.869928509879145,
-    "delta": -0.21831201024587,
+    "baseline_value": 5.113430633539582,
+    "candidate_value": 4.863439343276868,
+    "delta": -0.24999129026271394,
     "status": "pass"
   },
   {
@@ -154,9 +154,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.4630822718336995,
-    "candidate_value": 5.025094511840683,
-    "delta": -0.43798775999301665,
+    "baseline_value": 5.476693654922269,
+    "candidate_value": 4.99316560330484,
+    "delta": -0.4835280516174292,
     "status": "pass"
   },
   {
@@ -164,9 +164,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 5.876029250323059,
-    "candidate_value": 5.520030429339743,
-    "delta": -0.3559988209833165,
+    "baseline_value": 5.920999086332376,
+    "candidate_value": 5.511687003428885,
+    "delta": -0.4093120829034911,
     "status": "pass"
   },
   {
@@ -174,9 +174,9 @@
     "baseline": "frozen_preseason",
     "candidate": "adaptive_expanding",
     "metric": "rmse",
-    "baseline_value": 6.239491929638719,
-    "candidate_value": 5.465965601713186,
-    "delta": -0.7735263279255333,
+    "baseline_value": 6.27810063663091,
+    "candidate_value": 5.463692855468971,
+    "delta": -0.8144077811619388,
     "status": "pass"
   }
 ]

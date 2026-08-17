@@ -16,7 +16,7 @@
         "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
         "bytes": 7211865,
         "cached": true,
-        "retrieved_at": "2026-08-17T22:20:15.433027+00:00",
+        "retrieved_at": "2026-08-17T23:08:31.714917+00:00",
         "name": "nflverse_player_stats",
         "status": "downloaded",
         "parsed_rows": 14701
@@ -37,7 +37,7 @@
         "sha256": "194d97726250aafe53ea9bffade022ea34ac8a1e7cc089de797d47513156114f",
         "bytes": 182623,
         "cached": true,
-        "retrieved_at": "2026-08-17T22:20:50.620665+00:00",
+        "retrieved_at": "2026-08-17T23:08:44.547775+00:00",
         "parsed_rows": 60
       },
       {
@@ -56,7 +56,7 @@
         "sha256": "7a1e86512da550126d37c2724122136ffd54f17de7ce751ccfa9174065a1cbf8",
         "bytes": 189705,
         "cached": true,
-        "retrieved_at": "2026-08-17T22:21:14.688076+00:00",
+        "retrieved_at": "2026-08-17T23:08:54.644525+00:00",
         "reason": "capture reports 2023 projection horizon, expected 2024",
         "parsed_rows": 0
       }
@@ -91,6 +91,9 @@
         "prior_share",
         "prior_team_pass_attempts",
         "prior_team_rush_attempts",
+        "prior_usage_trend",
+        "prior_role_stability",
+        "prior_team_pass_trend",
         "prior_games",
         "prior_availability_rate",
         "experience_seasons"
@@ -102,6 +105,9 @@
         "prior_share": 0.14911712649516215,
         "prior_team_pass_attempts": 34.39621091574509,
         "prior_team_rush_attempts": 26.495185054688594,
+        "prior_usage_trend": 0.1268698143391732,
+        "prior_role_stability": 0.41341915110567873,
+        "prior_team_pass_trend": 0.02608449490659941,
         "prior_games": 24.68080197310844,
         "prior_availability_rate": 0.7241626223247672,
         "experience_seasons": 1.6282918291033495
@@ -113,40 +119,109 @@
         "prior_share": 0.07665281921479117,
         "prior_team_pass_attempts": 4.547219150409339,
         "prior_team_rush_attempts": 3.7299821890086213,
+        "prior_usage_trend": 0.6436448936379535,
+        "prior_role_stability": 0.2134450517225951,
+        "prior_team_pass_trend": 0.5938589021092455,
         "prior_games": 20.902128786051797,
         "prior_availability_rate": 0.3521898618726802,
         "experience_seasons": 1.534273865546835
       },
       "coefficients": [
-        8.67383244490407,
-        1.8126309118818464,
-        0.6861018050347397,
-        0.03440516760799762,
-        1.3648574084107934,
-        0.09451118142639417,
-        0.018577713544864656,
-        1.0763057561594431,
-        0.19779887017630352,
-        -1.2115764853135882
+        8.673832444904068,
+        1.7695695261786428,
+        0.8190668265065132,
+        0.03738524642162149,
+        1.3277622452789344,
+        0.07278088323423378,
+        0.0195688184046948,
+        0.2040336024687533,
+        0.12443334464270878,
+        -0.06419015866192884,
+        1.0727499052371021,
+        0.2697816437152143,
+        -1.2200385666933276
       ],
-      "residual_standard_deviation": 6.780187380192543
-    }
+      "residual_standard_deviation": 6.776773951107401
+    },
+    "rookie_model": {
+      "model_version": "wr-2024-preseason-rookie-ridge-v1",
+      "position": "WR",
+      "features": [
+        "prior_points_per_game",
+        "prior_usage_per_game",
+        "prior_efficiency",
+        "prior_share",
+        "prior_team_pass_attempts",
+        "prior_team_rush_attempts",
+        "prior_usage_trend",
+        "prior_role_stability",
+        "prior_team_pass_trend",
+        "prior_games",
+        "prior_availability_rate",
+        "experience_seasons"
+      ],
+      "means": {
+        "prior_points_per_game": 8.15831574453552,
+        "prior_usage_per_game": 4.349171789617486,
+        "prior_efficiency": 8.016772569990106,
+        "prior_share": 0.12952319737877788,
+        "prior_team_pass_attempts": 34.562365522540986,
+        "prior_team_rush_attempts": 26.137834516491022,
+        "prior_usage_trend": 0.14414539492076855,
+        "prior_role_stability": 0.5446225109751849,
+        "prior_team_pass_trend": 0.008206770400644239,
+        "prior_games": 5.37218237704918,
+        "prior_availability_rate": 0.2984545765027322,
+        "experience_seasons": 0.0
+      },
+      "scales": {
+        "prior_points_per_game": 5.2628566707102395,
+        "prior_usage_per_game": 2.592762026812956,
+        "prior_efficiency": 4.389675463866813,
+        "prior_share": 0.0734370815274496,
+        "prior_team_pass_attempts": 4.7367552339343595,
+        "prior_team_rush_attempts": 3.889610081775605,
+        "prior_usage_trend": 0.6339058625463646,
+        "prior_role_stability": 0.2915929533200016,
+        "prior_team_pass_trend": 0.1751242357426898,
+        "prior_games": 4.212291094145866,
+        "prior_availability_rate": 0.23401617189699256,
+        "experience_seasons": 1e-06
+      },
+      "coefficients": [
+        7.996034836065573,
+        1.7476056614147943,
+        1.2891346659923826,
+        -0.0729141541757448,
+        0.7420013976388882,
+        -0.15719083820751348,
+        -0.028357001116877903,
+        0.2674958004515251,
+        0.1486144265947932,
+        0.018700544904172493,
+        0.2624219134015563,
+        0.26242191340367915,
+        0.0
+      ],
+      "residual_standard_deviation": 6.561067079438036
+    },
+    "rookie_training_rows": 3904
   },
   "metrics": [
     {
       "model": "hard_stats",
       "samples": 227,
-      "mae": 51.37937107458975,
-      "rmse": 70.75284389215784,
-      "bias": 7.165642874327275,
+      "mae": 51.3693385586711,
+      "rmse": 70.80553452844053,
+      "bias": 7.339717950923985,
       "rank_samples": 58,
-      "spearman": 0.12098188194038573,
+      "spearman": 0.10430957580977573,
       "top12_hit_rate": 0.3333333333333333,
       "ndcg12": 0.7426616996659445,
-      "top24_hit_rate": 0.375,
-      "ndcg24": 0.7298235447054248,
+      "top24_hit_rate": 0.4166666666666667,
+      "ndcg24": 0.7381504677392697,
       "top36_hit_rate": 0.6666666666666666,
-      "ndcg36": 0.7837526870264274
+      "ndcg36": 0.7832715937940756
     },
     {
       "model": "prior_baseline",
@@ -182,13 +257,13 @@
       "model": "source_rank_blend",
       "samples": 0,
       "rank_samples": 58,
-      "spearman": 0.31557414869728384,
+      "spearman": 0.3116367775077671,
       "top12_hit_rate": 0.5,
       "ndcg12": 0.8338634393333187,
       "top24_hit_rate": 0.5,
-      "ndcg24": 0.8043116022505288,
+      "ndcg24": 0.8044021507995925,
       "top36_hit_rate": 0.6944444444444444,
-      "ndcg36": 0.8240852403540243
+      "ndcg36": 0.8241601587138194
     }
   ]
 }

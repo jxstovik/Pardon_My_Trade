@@ -38,6 +38,19 @@ routes, injury panels, depth charts, and time-stamped news remain future data
 extensions because they are not present in the base nflverse `player_stats`
 release used by this replay.
 
+## Updated Modeling Practices
+
+- Rookie rows use a separate ridge fit when enough historical rookie rows exist.
+- Rookie uncertainty is widened, with an additional QB-specific multiplier.
+- Lagged usage trend, role stability, and team pass-volume trend are included.
+- Real draft capital, college production, and expected-role records can be
+  supplied through `data/chatpft-position-context.json`; missing context is
+  explicitly reported and never synthesized.
+- Matched Razzball point projections can contribute a documented external prior
+  for rookie preseason rows, while rank comparisons remain separate from point
+  outcomes.
+- Reports retain player-week and unique-player subgroup denominators.
+
 ## Commands
 
 Preseason and walk-forward runs are available per position:

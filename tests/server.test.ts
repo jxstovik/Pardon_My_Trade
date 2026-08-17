@@ -49,6 +49,11 @@ test("api server serves health, league, refresh, and recommendations", async () 
     const predictions = await (await fetch(`${base}/api/modeling/predictions?period=2024-W1&regime=adaptive_expanding`)).json();
     assert.ok(Array.isArray(predictions));
 
+    const current = await (await fetch(`${base}/api/modeling/replay?season=2026&position=WR`)).json();
+    assert.equal(current.preseason.position, "WR");
+    const currentPredictions = await (await fetch(`${base}/api/modeling/predictions?season=2026&position=WR&period=2026-ROS&regime=current_preseason`)).json();
+    assert.ok(currentPredictions.length > 20);
+
     const html = await (await fetch(`${base}/`)).text();
     assert.ok(html.includes("Pardon My Trade"));
   } finally {
