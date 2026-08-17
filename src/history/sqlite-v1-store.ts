@@ -135,5 +135,34 @@ export class SqliteV1Store implements V1Store {
       CREATE INDEX IF NOT EXISTS idx_v1_history_league ON v1_history(league_id);
       CREATE INDEX IF NOT EXISTS idx_v1_notifications_league ON v1_notifications(league_id);
     `);
+    this.quarantineLegacyProfiles();
+  }
+
+  private quarantineLegacyProfiles(): void {
+    this.db.exec(`
+      CREATE TABLE IF NOT EXISTS v1_manager_profiles_legacy (
+        manager_id TEXT NOT NULL,
+        display_name TEXT NOT NULL,
+        data TEXT NOT NULL,
+        updated_at TEXT NOT NULL,
+        quarantined_at TEXT NOT NULL,
+        reason TEXT NOT NULL
+      );
+    `);
+    const rows = this.db.prepare("SELECT manager_id, display_name, data, updated_at FROM v1_manager_profiles").all() as Array<{ manager_id: string; display_name: string; data: string; updated_at: string }>;
+    const quarantine = this.db.prepare("INSERT INTO v1_manager_profiles_legacy (manager_id, display_name, data, updated_at, quarantined_at, reason) VALUES (?, ?, ?, ?, ?, ?)");
+    const remove = this.db.prepare("DELETE FROM v1_manager_profiles WHERE manager_id = ?");
+    const now = new Date().toISOString();
+    const tx = this.db.transaction(() => {
+      for (const row of rows) {
+        let leagueId: unknown;
+        try { leagueId = (JSON.parse(row.data) as { league_id?: unknown }).league_id; } catch { leagueId = undefined; }
+        if (typeof leagueId !== "string" || leagueId.length === 0) {
+          quarantine.run(row.manager_id, row.display_name, row.data, row.updated_at, now, "missing league_id");
+          remove.run(row.manager_id);
+        }
+      }
+    });
+    tx();
   }
 }

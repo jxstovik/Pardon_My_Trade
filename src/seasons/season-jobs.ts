@@ -22,6 +22,7 @@ import {
 import type { SeasonRefreshOptions, SeasonRefreshSummary } from "../season-refresh.js";
 import type { SeasonOrchestrationOptions, SeasonOrchestrationSummary } from "./season-orchestration.js";
 import type { NotificationRecord, RefreshSummary } from "../models/v1.js";
+import { withFileLock } from "../concurrency/file-lock.js";
 
 export type SeasonJobName = "season-daily" | "season-lineup-lock" | "season-waiver-sweep";
 
@@ -45,6 +46,8 @@ export const DAILY_JOB_DAYS = [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SAT
 export interface SeasonJobDeps {
   readonly clock?: () => Date;
   readonly dataDir?: string;
+  /** Enable the cross-process lock when running a real daemon/serve process. */
+  readonly durableLocks?: boolean;
   readonly userId?: string;
   readonly teamId?: string;
   readonly season?: string;
@@ -344,11 +347,13 @@ export async function runWaiverSweepJob(deps: SeasonJobDeps = {}): Promise<Seaso
 export function buildSeasonJobs(deps: SeasonJobDeps = {}): ScheduledJob[] {
   const schedule = times(deps);
   let running = false;
-  const guarded = (job: () => Promise<void>): (() => Promise<void>) => async () => {
+  const guarded = (jobId: SeasonJobName, job: () => Promise<void>): (() => Promise<void>) => async () => {
     if (running) return;
     running = true;
     try {
-      await job();
+      const lockPath = deps.durableLocks && deps.dataDir ? `${deps.dataDir}/locks/season-jobs.lock` : undefined;
+      const result = lockPath ? await withFileLock(lockPath, job) : { acquired: true, value: await job() };
+      if (!result.acquired) deps.log?.({ job: jobId, ranAt: new Date().toISOString(), scoringPeriod: "", skipped: true, skipReason: "overlap lock held", steps: {}, notifications: 0, queuedForApproval: 0, errors: [] });
     } finally {
       running = false;
     }
@@ -359,21 +364,21 @@ export function buildSeasonJobs(deps: SeasonJobDeps = {}): ScheduledJob[] {
       name: "Daily projections + advisory loop",
       time: schedule.daily,
       days: [...DAILY_JOB_DAYS],
-      handler: guarded(async () => { await runDailySeasonJob(deps); })
+      handler: guarded("season-daily", async () => { await runDailySeasonJob(deps); })
     },
     {
       jobId: "season-lineup-lock",
       name: "Sunday lineup-lock reminder",
       time: schedule.lineupLock,
       days: [SUNDAY],
-      handler: guarded(async () => { await runLineupLockJob(deps); })
+      handler: guarded("season-lineup-lock", async () => { await runLineupLockJob(deps); })
     },
     {
       jobId: "season-waiver-sweep",
       name: "Tuesday waiver + trade sweep",
       time: schedule.waiverSweep,
       days: [TUESDAY],
-      handler: guarded(async () => { await runWaiverSweepJob(deps); })
+      handler: guarded("season-waiver-sweep", async () => { await runWaiverSweepJob(deps); })
     }
   ];
 }

@@ -115,12 +115,13 @@ export class EspnPlatformClient {
     return this.parse<T>(response);
   }
 
-  async postJson<T>(path: string, body: unknown, filter?: unknown): Promise<T> {
+  async postJson<T>(path: string, body: unknown, filter?: unknown, idempotencyKey?: string): Promise<T> {
     const url = new URL(this.resolveBase() + path);
     const headers = this.buildHeaders({ "content-type": "application/json" });
     if (filter !== undefined) {
       headers["X-Fantasy-Filter"] = JSON.stringify(filter);
     }
+    if (idempotencyKey) headers["X-Idempotency-Key"] = idempotencyKey;
     this.recorded.push({ method: "POST", url: url.toString(), headers, body });
     const response = await this.fetchImpl(url.toString(), {
       method: "POST",

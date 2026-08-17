@@ -8,6 +8,7 @@ import type {
   QueuedAction,
   RiskLevel
 } from "./types.js";
+import { withFileLock } from "../concurrency/file-lock.js";
 
 export type ActionProvider<TAction extends AgentAction, TResponse> = (
   action: TAction,
@@ -80,7 +81,7 @@ export class JsonActionQueueStore implements ActionQueueStore {
 export class ActionQueue {
   private readonly executing = new Set<string>();
 
-  constructor(private readonly store: ActionQueueStore) {}
+  constructor(private readonly store: ActionQueueStore, private readonly lockPath?: string) {}
 
   async enqueue<TAction extends AgentAction>(
     action: TAction,
@@ -131,6 +132,18 @@ export class ActionQueue {
    * A successful execution is idempotent and returns the recorded response.
    */
   async execute<TAction extends AgentAction, TResponse>(
+    actionId: string,
+    provider: ActionProvider<TAction, TResponse>
+  ): Promise<QueuedAction<TAction, TResponse>> {
+    if (this.lockPath) {
+      const locked = await withFileLock(this.lockPath, () => this.executeUnlocked(actionId, provider));
+      if (!locked.acquired) throw new Error(`Action queue is already executing another action.`);
+      return locked.value;
+    }
+    return this.executeUnlocked(actionId, provider);
+  }
+
+  private async executeUnlocked<TAction extends AgentAction, TResponse>(
     actionId: string,
     provider: ActionProvider<TAction, TResponse>
   ): Promise<QueuedAction<TAction, TResponse>> {

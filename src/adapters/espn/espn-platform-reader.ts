@@ -354,7 +354,7 @@ export class EspnPlatformReader implements PlatformReader {
 
   // --- Write actions (plan §2: espn-api read/write) ---
 
-  async setRoster(teamId: string, assignments: EspnSlotAssignment[]): Promise<unknown> {
+  async setRoster(teamId: string, assignments: EspnSlotAssignment[], idempotencyKey?: string): Promise<unknown> {
     const roster = assignments.map((a) => ({
       id: Number(a.playerId),
       lineupSlotId: mapPositionToEspnSlot(a.slot)
@@ -371,14 +371,15 @@ export class EspnPlatformReader implements PlatformReader {
       type: "ROSTER"
     };
     const filter = { teams: { filterTeamIds: { value: [Number(teamId)] }, filterSlotIds: { value: [] } } };
-    return this.client.postJson("", body, filter);
+    return this.client.postJson("", body, filter, idempotencyKey);
   }
 
   async addDrop(
     teamId: string,
     adds: string[],
     drops: string[],
-    kind: "waivers" | "freeagent" = "freeagent"
+    kind: "waivers" | "freeagent" = "freeagent",
+    idempotencyKey?: string
   ): Promise<unknown> {
     const transactItems: Array<Record<string, unknown>> = [];
     for (const playerId of adds) {
@@ -402,14 +403,15 @@ export class EspnPlatformReader implements PlatformReader {
       memberId: Number(teamId),
       transactItems
     };
-    return this.client.postJson("/transactions/", body);
+    return this.client.postJson("/transactions/", body, undefined, idempotencyKey);
   }
 
   async proposeTrade(
     fromTeamId: string,
     toTeamId: string,
     givePlayerIds: string[],
-    receivePlayerIds: string[]
+    receivePlayerIds: string[],
+    idempotencyKey?: string
   ): Promise<unknown> {
     const assets: Array<Record<string, unknown>> = [
       ...givePlayerIds.map((playerId) => ({
@@ -429,7 +431,7 @@ export class EspnPlatformReader implements PlatformReader {
       receivingTeamId: Number(toTeamId),
       assets
     };
-    return this.client.postJson("/trades/", body);
+    return this.client.postJson("/trades/", body, undefined, idempotencyKey);
   }
 
   // --- Mapping helpers ---

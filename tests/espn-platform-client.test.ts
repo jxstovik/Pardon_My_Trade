@@ -67,3 +67,13 @@ test("postJson still sends X-Fantasy-Filter on POST", async () => {
   assert.equal(captured!.headers["content-type"], "application/json");
   assert.ok(captured!.headers["X-Fantasy-Filter"]?.includes("\"limit\":5"));
 });
+
+test("postJson propagates the queue idempotency key", async () => {
+  let headers: Record<string, string> | undefined;
+  const client = new EspnPlatformClient({
+    credentials: creds(),
+    fetchImpl: stubFetch((_url, init) => { headers = init.headers; return {}; })
+  });
+  await client.postJson("/transactions/", {}, undefined, "act-123");
+  assert.equal(headers!["X-Idempotency-Key"], "act-123");
+});

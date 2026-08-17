@@ -4,6 +4,10 @@ import { InMemoryV1Store } from "../src/history/v1-store.js";
 import { SqliteV1Store } from "../src/history/sqlite-v1-store.js";
 import type { NewsItem } from "../src/models/types.js";
 import type { HistoricalRecord, ManagerProfileRecord, NotificationRecord } from "../src/models/v1.js";
+import Database from "better-sqlite3";
+import { mkdtemp, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
 function news(id: string): NewsItem {
   return {
@@ -69,4 +73,21 @@ exerciseStore("in-memory", () => ({ store: new InMemoryV1Store() }));
 exerciseStore("sqlite", () => {
   const store = new SqliteV1Store({ memory: true });
   return { store, close: () => store.close() };
+});
+
+test("sqlite quarantines legacy manager profiles without a league", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "pmt-v1-"));
+  const filePath = join(directory, "legacy.db");
+  const db = new Database(filePath);
+  db.exec("CREATE TABLE v1_manager_profiles (manager_id TEXT PRIMARY KEY, display_name TEXT NOT NULL, data TEXT NOT NULL, updated_at TEXT NOT NULL)");
+  db.prepare("INSERT INTO v1_manager_profiles VALUES (?, ?, ?, ?)").run("m1", "Legacy", JSON.stringify({ manager_id: "m1" }), "");
+  db.close();
+  const store = new SqliteV1Store({ filePath });
+  assert.deepEqual(await store.getManagerProfiles("league-001"), []);
+  store.close();
+  const migrated = new Database(filePath);
+  const row = migrated.prepare("SELECT COUNT(*) AS count FROM v1_manager_profiles_legacy").get() as { count: number };
+  assert.equal(row.count, 1);
+  migrated.close();
+  await rm(directory, { recursive: true, force: true });
 });

@@ -15,7 +15,9 @@ import type { NotificationRecord, RefreshSummary } from "../models/v1.js";
 import type { LeagueSnapshot, Recommendation } from "../models/types.js";
 
 export interface RefreshOptions {
-  readonly fixturePath: string;
+  readonly fixturePath?: string;
+  /** A platform-native snapshot avoids serializing through the fixture adapter. */
+  readonly snapshot?: LeagueSnapshot;
   readonly newsPath?: string;
   readonly leagueExternalId: string;
   readonly teamExternalId: string;
@@ -37,7 +39,10 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshSummar
   const nowIso = now.toISOString();
   const projectionEngine = options.projectionEngine ?? new DefaultProjectionEngine();
 
-  const source = await loadFixtureSnapshotSource(options.fixturePath);
+  const source = options.snapshot ?? (options.fixturePath
+    ? await loadFixtureSnapshotSource(options.fixturePath)
+    : undefined);
+  if (!source) throw new Error("Refresh requires a snapshot or fixture path.");
   const leagueId = source.league.league_id;
   const team = source.league.teams.find((candidate) => candidate.external_id === options.teamExternalId);
   if (!team) {

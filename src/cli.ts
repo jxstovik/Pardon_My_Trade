@@ -195,7 +195,7 @@ async function main(): Promise<void> {
         new FileNotificationProvider(join(dataDir, "notifications.log"))
       ];
       const doRefresh = async () => {
-        const summary = await runSnapshotRefresh(activeSnapshot, dataDir, {
+        const summary = await runSnapshotRefresh(activeSnapshot, {
           newsPath,
           repository,
           v1Store,
@@ -277,7 +277,10 @@ async function main(): Promise<void> {
       const modelStore = new JsonModelStore(join(dataDir, "models.json"));
       await modelStore.saveAll([...models.values()]);
 
-      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const queue = new ActionQueue(
+        new JsonActionQueueStore(join(dataDir, "action-queue.json")),
+        join(dataDir, "locks/action-queue.lock")
+      );
       const input = buildOrchestratorInputFromSnapshot(snapshot, chosenTeam, models);
       const result = await runOrchestrator({ input, priors, queue, autoApproveLowRisk: false });
 
@@ -398,18 +401,19 @@ async function main(): Promise<void> {
           swid: process.env.SWID
         }
       });
-      const executed = await queue.execute(approved.actionId, async (action) => {
+      const executed = await queue.execute(approved.actionId, async (action, context) => {
         switch (action.type) {
           case "set_roster":
-            return reader.setRoster(action.teamId, action.starters);
+            return reader.setRoster(action.teamId, action.starters, context.idempotencyKey);
           case "add_drop":
-            return reader.addDrop(action.teamId, action.addPlayerIds, action.dropPlayerIds);
+            return reader.addDrop(action.teamId, action.addPlayerIds, action.dropPlayerIds, "freeagent", context.idempotencyKey);
           case "propose_trade":
             return reader.proposeTrade(
               action.fromTeamId,
               action.toTeamId,
               action.givePlayerIds,
-              action.receivePlayerIds
+              action.receivePlayerIds,
+              context.idempotencyKey
             );
         }
       });
@@ -636,7 +640,7 @@ function buildSeasonJobDeps(
 
   const refresh = async () => {
     const snapshot = shared?.snapshot ?? await loadActiveRefreshSnapshot(dataDir, repository, config.fixturePath);
-    return runSnapshotRefresh(snapshot, dataDir, {
+    return runSnapshotRefresh(snapshot, {
       newsPath,
       repository,
       v1Store,
@@ -649,6 +653,7 @@ function buildSeasonJobDeps(
 
   return {
     dataDir,
+    durableLocks: true,
     refresh,
     teamId: process.env.PMT_TEAM_EXTERNAL_ID ?? shared?.snapshot?.league.teams[0]?.external_id,
     seasonRefresh: (options) => runSeasonRefresh({ ...options, repository }),
@@ -702,18 +707,26 @@ async function loadActiveSnapshotForAction(dataDir: string): Promise<LeagueSnaps
 
 async function runSnapshotRefresh(
   snapshot: LeagueSnapshot,
-  dataDir: string,
   options: Omit<Parameters<typeof runRefresh>[0], "fixturePath" | "leagueExternalId" | "teamExternalId">
 ): ReturnType<typeof runRefresh> {
-  const fixturePath = join(dataDir, "active-refresh-snapshot.json");
-  await writeFile(fixturePath, JSON.stringify(snapshot), "utf8");
   const teamExternalId = process.env.PMT_TEAM_EXTERNAL_ID ?? snapshot.league.teams[0]?.external_id;
   if (!teamExternalId) throw new Error(`No team is available in league ${snapshot.league.external_id}.`);
+  const refreshedSnapshot = await refreshPlatformSnapshot(snapshot);
   return runRefresh({
     ...options,
-    fixturePath,
+    snapshot: refreshedSnapshot,
     leagueExternalId: snapshot.league.external_id,
     teamExternalId
+  });
+}
+
+async function refreshPlatformSnapshot(snapshot: LeagueSnapshot): Promise<LeagueSnapshot> {
+  if (snapshot.league.platform === "fixture") return snapshot;
+  const reader = snapshot.league.platform === "espn"
+    ? new EspnPlatformReader({ credentials: { ...loadEspnCredentials(), leagueId: snapshot.league.external_id, season: snapshot.league.season } })
+    : new SleeperPlatformReader();
+  return buildSnapshotFromPlatform(reader, snapshot.league.external_id, snapshot.league.season, {
+    projections: snapshot.projections
   });
 }
 
