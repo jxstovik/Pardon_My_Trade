@@ -217,11 +217,13 @@ async function main(): Promise<void> {
       return;
     }
     case "import-espn": {
-      const leagueId = process.argv[3];
+      const leagueId = process.argv[3] ?? process.env.ESPN_LEAGUE_ID;
       if (!leagueId) {
-        throw new Error("import-espn requires a league id: pmt import-espn <leagueId> [season]");
+        throw new Error(
+          "import-espn requires a league id: set ESPN_LEAGUE_ID in .env or run pmt import-espn <leagueId> [season]"
+        );
       }
-      const season = process.argv[4] ?? new Date().getFullYear().toString();
+      const season = process.argv[4] ?? process.env.ESPN_SEASON ?? new Date().getFullYear().toString();
       const teamId = process.argv[5];
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
       await mkdir(dataDir, { recursive: true });
