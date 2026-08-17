@@ -1,0 +1,182 @@
+[
+  {
+    "target_period": "2024-W1",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 6.030964982887321,
+    "candidate_value": 5.975414910779105,
+    "delta": -0.05555007210821561,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W10",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 5.787015812723539,
+    "candidate_value": 5.094433034618788,
+    "delta": -0.6925827781047511,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W11",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 6.689086426470169,
+    "candidate_value": 6.133189349748299,
+    "delta": -0.5558970767218696,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W12",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 8.079389973176847,
+    "candidate_value": 7.012450880261519,
+    "delta": -1.0669390929153275,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W13",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 6.718287553925926,
+    "candidate_value": 5.568387002594993,
+    "delta": -1.1499005513309326,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W14",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.653662924490831,
+    "candidate_value": 6.9440273343013565,
+    "delta": -0.7096355901894746,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W15",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 6.778655846638776,
+    "candidate_value": 6.433571436550582,
+    "delta": -0.34508441008819357,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W16",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.777966913611322,
+    "candidate_value": 6.98589461013251,
+    "delta": -0.792072303478812,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W17",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 6.598730816021695,
+    "candidate_value": 5.194499891530831,
+    "delta": -1.4042309244908644,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W18",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.524109073312488,
+    "candidate_value": 6.9989506049519665,
+    "delta": -0.5251584683605213,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W2",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 6.312167865447272,
+    "candidate_value": 6.12697733186448,
+    "delta": -0.1851905335827917,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W3",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.06740723168991,
+    "candidate_value": 6.971742446922572,
+    "delta": -0.09566478476733842,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W4",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.825489136905718,
+    "candidate_value": 7.2736084883726955,
+    "delta": -0.5518806485330225,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W5",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 6.57229043504557,
+    "candidate_value": 6.1589193961415525,
+    "delta": -0.4133710389040175,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W6",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.685742376330678,
+    "candidate_value": 7.309132615986327,
+    "delta": -0.37660976034435123,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W7",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.097591551357467,
+    "candidate_value": 6.894640651367888,
+    "delta": -0.20295089998957838,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W8",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 5.989179971188792,
+    "candidate_value": 5.629467667566273,
+    "delta": -0.35971230362251827,
+    "status": "pass"
+  },
+  {
+    "target_period": "2024-W9",
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "metric": "rmse",
+    "baseline_value": 7.107147796859645,
+    "candidate_value": 6.3968041280740255,
+    "delta": -0.7103436687856197,
+    "status": "pass"
+  }
+]

@@ -21,6 +21,11 @@ The walk-forward output includes `checkpoints.jsonl`, weekly predictions,
 attribution, calibration metrics, subgroup metrics, and a promotion decision.
 The dashboard reads these files through the modeling API routes.
 
+The position-wide replay commands and feature differences are documented in
+`docs/CHATPFT-POSITION-REPLAY.md`. QB, RB, WR, and TE outputs are kept in
+separate artifact directories and must not be compared using different source
+denominators.
+
 To opt an approved, season-matching WR artifact into an explicit season
 refresh:
 

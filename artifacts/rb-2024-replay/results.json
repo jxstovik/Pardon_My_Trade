@@ -1,0 +1,193 @@
+{
+  "output": "artifacts/rb-2024-replay",
+  "manifest": {
+    "schema_version": "1.0.0",
+    "position": "RB",
+    "replay_id": "chatpft-rb-2024",
+    "parser_version": "position-replay-v2",
+    "season": 2024,
+    "preseason_cutoff": "2024-09-04T08:00:00-04:00",
+    "training_window": "2018-2023",
+    "data_status": "real nflverse outcomes and archive-first Razzball source snapshots",
+    "sources": [
+      {
+        "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+        "path": "data/nflverse-player_stats.csv.gz",
+        "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+        "bytes": 7211865,
+        "cached": true,
+        "retrieved_at": "2026-08-17T22:20:15.428442+00:00",
+        "name": "nflverse_player_stats",
+        "status": "downloaded",
+        "parsed_rows": 9330
+      },
+      {
+        "name": "razzball_rb_preseason_rankings",
+        "requested_url": "https://football.razzball.com/2024-fantasy-football-running-back-rankings/",
+        "kind": "rank",
+        "cutoff": "2024-09-04T08:00:00-04:00",
+        "parser_version": "position-replay-v2",
+        "status": "downloaded",
+        "timestamp": "20240814031647",
+        "original": "https://football.razzball.com/2024-fantasy-football-running-back-rankings/",
+        "capture_url": "https://web.archive.org/web/20240814031647id_/https://football.razzball.com/2024-fantasy-football-running-back-rankings/",
+        "digest": "ZUEQOGL3OK2YNJ55SH4IHUUBEO7WKWKB",
+        "url": "https://web.archive.org/web/20240814031647id_/https://football.razzball.com/2024-fantasy-football-running-back-rankings/",
+        "path": "data/chatpft-rb-replay/source-snapshots/razzball_rb_preseason_rankings-20240814031647.html",
+        "sha256": "f7dfee95fa81078873627c02572aafdde5d1eb27c210a0ef367bdb9aef11651b",
+        "bytes": 181268,
+        "cached": true,
+        "retrieved_at": "2026-08-17T22:20:16.717596+00:00",
+        "parsed_rows": 36
+      },
+      {
+        "name": "razzball_rb_preseason_projections",
+        "requested_url": "https://football.razzball.com/projections-rb-restofseason/",
+        "kind": "points",
+        "cutoff": "2024-09-04T08:00:00-04:00",
+        "parser_version": "position-replay-v2",
+        "status": "downloaded",
+        "timestamp": "20240814032147",
+        "original": "https://football.razzball.com/projections-rb-restofseason/",
+        "capture_url": "https://web.archive.org/web/20240814032147id_/https://football.razzball.com/projections-rb-restofseason/",
+        "digest": "4HKALE7ECZVXARXCUWYFCF6PFKXAN6C3",
+        "url": "https://web.archive.org/web/20240814032147id_/https://football.razzball.com/projections-rb-restofseason/",
+        "path": "data/chatpft-rb-replay/source-snapshots/razzball_rb_preseason_projections-20240814032147.html",
+        "sha256": "6546a05fca01a1d9d9d63853daeb3ff441ca6f9a2fa72cf7466dfd3eae6ae80c",
+        "bytes": 282959,
+        "cached": true,
+        "retrieved_at": "2026-08-17T22:21:11.352236+00:00",
+        "parsed_rows": 178
+      }
+    ],
+    "matching": {
+      "rank": {
+        "source_rows": 36,
+        "matched": 36,
+        "unmatched": 0,
+        "ambiguous": 0
+      },
+      "points": {
+        "source_rows": 178,
+        "matched": 121,
+        "unmatched": 57,
+        "ambiguous": 0
+      }
+    },
+    "row_counts": {
+      "features": 9330,
+      "training": 7987,
+      "validation": 1343,
+      "players_2024": 135
+    },
+    "model": {
+      "model_version": "rb-2024-preseason-hard-stats-ridge-v1",
+      "position": "RB",
+      "features": [
+        "prior_points_per_game",
+        "prior_usage_per_game",
+        "prior_efficiency",
+        "prior_share",
+        "prior_team_pass_attempts",
+        "prior_team_rush_attempts",
+        "prior_games",
+        "prior_availability_rate",
+        "experience_seasons"
+      ],
+      "means": {
+        "prior_points_per_game": 9.228051291682316,
+        "prior_usage_per_game": 11.231094278202079,
+        "prior_efficiency": 4.150337044728467,
+        "prior_share": 0.18260995159560628,
+        "prior_team_pass_attempts": 34.343309216762954,
+        "prior_team_rush_attempts": 26.608319471522176,
+        "prior_games": 23.871916864905472,
+        "prior_availability_rate": 0.7208102054727822,
+        "experience_seasons": 1.5818204582446476
+      },
+      "scales": {
+        "prior_points_per_game": 5.7921018062145935,
+        "prior_usage_per_game": 6.256051447232462,
+        "prior_efficiency": 1.5713524983898157,
+        "prior_share": 0.10436331341143973,
+        "prior_team_pass_attempts": 4.563185742713421,
+        "prior_team_rush_attempts": 3.7465855319987678,
+        "prior_games": 19.879535703110072,
+        "prior_availability_rate": 0.3533174120181185,
+        "experience_seasons": 1.4884590170595973
+      },
+      "coefficients": [
+        9.034020282959839,
+        2.6367341094325805,
+        -2.1660049706633244,
+        0.08370585665892738,
+        3.9129495816375095,
+        0.21868990700949836,
+        -0.07146578517436407,
+        0.7042602558435737,
+        0.17391947793611678,
+        -0.9254417655798881
+      ],
+      "residual_standard_deviation": 6.851768921999098
+    }
+  },
+  "metrics": [
+    {
+      "model": "hard_stats",
+      "samples": 135,
+      "mae": 50.87577094463504,
+      "rmse": 73.32655573135746,
+      "bias": 8.750656654278444,
+      "rank_samples": 36,
+      "spearman": 0.2671814671814672,
+      "top12_hit_rate": 0.5,
+      "ndcg12": 0.6478362858054129,
+      "top24_hit_rate": 0.7916666666666666,
+      "ndcg24": 0.7379010391352945,
+      "top36_hit_rate": 1.0,
+      "ndcg36": 0.8302421405763327
+    },
+    {
+      "model": "prior_baseline",
+      "samples": 135,
+      "mae": 54.144030178326474,
+      "rmse": 80.14497947722722,
+      "bias": 13.8558573388203,
+      "rank_samples": 36,
+      "spearman": 0.2813384813384814,
+      "top12_hit_rate": 0.4166666666666667,
+      "ndcg12": 0.5971894781939847,
+      "top24_hit_rate": 0.7916666666666666,
+      "ndcg24": 0.7493260195563852,
+      "top36_hit_rate": 1.0,
+      "ndcg36": 0.8337127686018543
+    },
+    {
+      "model": "razzball_rank",
+      "samples": 121,
+      "mae": 48.43735537190083,
+      "rmse": 67.85831461810643,
+      "bias": -6.435702479338844,
+      "rank_samples": 36,
+      "spearman": 0.5974259974259974,
+      "top12_hit_rate": 0.75,
+      "ndcg12": 0.7868740415151322,
+      "top24_hit_rate": 0.7916666666666666,
+      "ndcg24": 0.8274547544878297,
+      "top36_hit_rate": 1.0,
+      "ndcg36": 0.8809040192636396
+    },
+    {
+      "model": "source_rank_blend",
+      "samples": 0,
+      "rank_samples": 36,
+      "spearman": 0.5953667953667954,
+      "top12_hit_rate": 0.6666666666666666,
+      "ndcg12": 0.7547612030744782,
+      "top24_hit_rate": 0.7916666666666666,
+      "ndcg24": 0.8142306204150163,
+      "top36_hit_rate": 1.0,
+      "ndcg36": 0.8701239401541914
+    }
+  ]
+}

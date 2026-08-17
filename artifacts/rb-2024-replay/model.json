@@ -1,0 +1,50 @@
+{
+  "model_version": "rb-2024-preseason-hard-stats-ridge-v1",
+  "position": "RB",
+  "features": [
+    "prior_points_per_game",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
+    "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "means": {
+    "prior_points_per_game": 9.228051291682316,
+    "prior_usage_per_game": 11.231094278202079,
+    "prior_efficiency": 4.150337044728467,
+    "prior_share": 0.18260995159560628,
+    "prior_team_pass_attempts": 34.343309216762954,
+    "prior_team_rush_attempts": 26.608319471522176,
+    "prior_games": 23.871916864905472,
+    "prior_availability_rate": 0.7208102054727822,
+    "experience_seasons": 1.5818204582446476
+  },
+  "scales": {
+    "prior_points_per_game": 5.7921018062145935,
+    "prior_usage_per_game": 6.256051447232462,
+    "prior_efficiency": 1.5713524983898157,
+    "prior_share": 0.10436331341143973,
+    "prior_team_pass_attempts": 4.563185742713421,
+    "prior_team_rush_attempts": 3.7465855319987678,
+    "prior_games": 19.879535703110072,
+    "prior_availability_rate": 0.3533174120181185,
+    "experience_seasons": 1.4884590170595973
+  },
+  "coefficients": [
+    9.034020282959839,
+    2.6367341094325805,
+    -2.1660049706633244,
+    0.08370585665892738,
+    3.9129495816375095,
+    0.21868990700949836,
+    -0.07146578517436407,
+    0.7042602558435737,
+    0.17391947793611678,
+    -0.9254417655798881
+  ],
+  "residual_standard_deviation": 6.851768921999098
+}

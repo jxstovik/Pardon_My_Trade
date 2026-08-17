@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "position": "TE",
+  "replay_id": "chatpft-te-2024",
+  "parser_version": "position-replay-v2",
+  "season": 2024,
+  "preseason_cutoff": "2024-09-04T08:00:00-04:00",
+  "training_window": "2018-2023",
+  "data_status": "real nflverse outcomes and archive-first Razzball source snapshots",
+  "sources": [
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "path": "data/nflverse-player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "bytes": 7211865,
+      "cached": true,
+      "retrieved_at": "2026-08-17T22:20:15.433205+00:00",
+      "name": "nflverse_player_stats",
+      "status": "downloaded",
+      "parsed_rows": 7413
+    },
+    {
+      "name": "razzball_te_preseason_rankings",
+      "requested_url": "https://football.razzball.com/2024-fantasy-football-tight-end-rankings/",
+      "kind": "rank",
+      "cutoff": "2024-09-04T08:00:00-04:00",
+      "parser_version": "position-replay-v2",
+      "status": "downloaded",
+      "timestamp": "20240812100655",
+      "original": "https://football.razzball.com/2024-fantasy-football-tight-end-rankings/",
+      "capture_url": "https://web.archive.org/web/20240812100655id_/https://football.razzball.com/2024-fantasy-football-tight-end-rankings/",
+      "digest": "5N5S2ENTCEG4WCKZLPT5ETN7VB4DTVUN",
+      "url": "https://web.archive.org/web/20240812100655id_/https://football.razzball.com/2024-fantasy-football-tight-end-rankings/",
+      "path": "data/chatpft-te-replay/source-snapshots/razzball_te_preseason_rankings-20240812100655.html",
+      "sha256": "75ff1dc5d75b3de6b66cdd41d7ce896b90ea40eed193ac5182402c2ba2983993",
+      "bytes": 183292,
+      "cached": true,
+      "retrieved_at": "2026-08-17T22:20:17.020164+00:00",
+      "parsed_rows": 85
+    },
+    {
+      "name": "razzball_te_preseason_projections",
+      "requested_url": "https://football.razzball.com/projections-te-restofseason/",
+      "kind": "points",
+      "cutoff": "2024-09-04T08:00:00-04:00",
+      "parser_version": "position-replay-v2",
+      "status": "unavailable",
+      "reason": "archive index failed: HTTP Error 504: Gateway Time-out",
+      "parsed_rows": 0
+    }
+  ],
+  "matching": {
+    "rank": {
+      "source_rows": 85,
+      "matched": 75,
+      "unmatched": 10,
+      "ambiguous": 0
+    },
+    "points": {
+      "source_rows": 0,
+      "matched": 0,
+      "unmatched": 0,
+      "ambiguous": 0
+    }
+  },
+  "row_counts": {
+    "features": 7413,
+    "training": 6325,
+    "validation": 1088,
+    "players_2024": 119
+  },
+  "model": {
+    "model_version": "te-2024-preseason-hard-stats-ridge-v1",
+    "position": "TE",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 6.282754519104084,
+      "prior_usage_per_game": 3.4952806324110672,
+      "prior_efficiency": 7.3574186933753305,
+      "prior_share": 0.10599959512043333,
+      "prior_team_pass_attempts": 34.32438302277433,
+      "prior_team_rush_attempts": 26.571281385281385,
+      "prior_games": 23.367588932806324,
+      "prior_availability_rate": 0.7026789635485288,
+      "experience_seasons": 1.6912252964426877
+    },
+    "scales": {
+      "prior_points_per_game": 4.0177296676103635,
+      "prior_usage_per_game": 2.04806919641958,
+      "prior_efficiency": 3.0712546874225097,
+      "prior_share": 0.06010361665750328,
+      "prior_team_pass_attempts": 4.607961213324755,
+      "prior_team_rush_attempts": 3.781466742812115,
+      "prior_games": 20.399148845807154,
+      "prior_availability_rate": 0.36031095600113666,
+      "experience_seasons": 1.53380680686422
+    },
+    "coefficients": [
+      6.152430039525715,
+      0.5467907012130272,
+      1.1435247420296202,
+      0.12186824950643216,
+      1.1130550694953363,
+      0.1040839864384876,
+      0.14235291483611262,
+      0.7246613062328706,
+      0.23372702737404216,
+      -0.7823090773861913
+    ],
+    "residual_standard_deviation": 5.212243676867815
+  }
+}

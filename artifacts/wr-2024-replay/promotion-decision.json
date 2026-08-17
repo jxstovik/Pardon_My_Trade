@@ -4,9 +4,9 @@
   "comparison_count": 18,
   "failures": [],
   "delta_ci": {
-    "estimate": -0.570634814364006,
-    "lower": -0.7343226659835715,
-    "upper": -0.41078788659360455,
+    "estimate": -0.5749516390645961,
+    "lower": -0.7409740024207323,
+    "upper": -0.4101382022351695,
     "clusters": 18,
     "status": "ok",
     "seed": 20260817,

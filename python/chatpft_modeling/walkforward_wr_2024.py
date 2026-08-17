@@ -40,6 +40,7 @@ from replay_wr_2024 import (  # noqa: E402
     save_cached,
     season_totals,
     source_matches,
+    position_config,
 )
 
 
@@ -51,6 +52,7 @@ WEEK_STARTS = [
     "2024-12-25", "2025-01-04",
 ]
 REPLAY_ID = "chatpft-wr-2024"
+ACTIVE_POSITION = "WR"
 BOOTSTRAP_SEED = 20260817
 BOOTSTRAP_RESAMPLES = 500
 
@@ -71,10 +73,12 @@ def source_plan(name: str, url: str, kind: str) -> dict[str, str]:
     return {"name": name, "url": url, "kind": kind}
 
 
-WEEKLY_SOURCE_PLANS = [
-    source_plan("razzball_weekly_rankings", "https://football.razzball.com/weekly-rankings-wr-ppr/", "rank"),
-    source_plan("razzball_weekly_points", "https://football.razzball.com/pigskinonator-wr/", "points"),
-]
+def weekly_source_plans(position: str) -> list[dict[str, str]]:
+    config = position_config(position)
+    return [
+        source_plan(f"razzball_{position.lower()}_weekly_rankings", config["weekly_rank"], "rank"),
+        source_plan(f"razzball_{position.lower()}_weekly_points", config["weekly_points"], "points"),
+    ]
 
 
 def unavailable_source(name: str, url: str, cutoff: str, reason: str) -> dict[str, Any]:
@@ -90,12 +94,12 @@ def unavailable_source(name: str, url: str, cutoff: str, reason: str) -> dict[st
     }
 
 
-def collect_week_sources(data_dir: Path, target_week: int, refresh: bool) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
+def collect_week_sources(data_dir: Path, target_week: int, refresh: bool, position: str) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
     cutoff = checkpoint_cutoff(target_week)
-    snapshot_dir = data_dir / "chatpft-wr-replay" / "weekly-source-snapshots"
+    snapshot_dir = data_dir / f"chatpft-{position.lower()}-replay" / "weekly-source-snapshots"
     metadata: list[dict[str, Any]] = []
     parsed: dict[str, list[dict[str, Any]]] = {"rank": [], "points": []}
-    for plan in WEEKLY_SOURCE_PLANS:
+    for plan in weekly_source_plans(position):
         source = local_capture(plan, snapshot_dir, cutoff)
         if source is None:
             source = fetch_archive_source(plan, snapshot_dir, refresh, cutoff)
@@ -113,7 +117,7 @@ def collect_week_sources(data_dir: Path, target_week: int, refresh: bool) -> tup
     # captures in the archive. Keeping them explicit makes denominators honest.
     metadata.extend([
         unavailable_source("espn_weekly_projections", "https://site.web.api.espn.com/apis/site/v3/sports/football/nfl/projections", cutoff, "no verified 2024 archive capture"),
-        unavailable_source("fftoday_weekly_projections", "https://www.fftoday.com/playerwkproj.php?Season=2024&PosID=30", cutoff, "no verified 2024 archive capture"),
+        unavailable_source("fftoday_weekly_projections", f"https://www.fftoday.com/playerwkproj.php?Season=2024&PosID={ {'QB': 10, 'RB': 20, 'WR': 30, 'TE': 40}[position] }", cutoff, "no verified 2024 archive capture"),
     ])
     return metadata, parsed
 
@@ -150,9 +154,9 @@ def local_capture(plan: dict[str, str], directory: Path, cutoff: str) -> dict[st
     }
 
 
-def load_news_events(data_dir: Path, cutoff: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+def load_news_events(data_dir: Path, cutoff: str, position: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Load optional structured, timestamped news events without inventing events."""
-    path = Path(__import__("os").environ.get("PMT_WR_NEWS_EVENTS_PATH", str(data_dir / "chatpft-wr-replay" / "news-events.jsonl")))
+    path = Path(__import__("os").environ.get("PMT_NEWS_EVENTS_PATH", str(data_dir / f"chatpft-{position.lower()}-replay" / "news-events.jsonl")))
     if not path.exists():
         return [], {"name": "structured_news_events", "status": "unavailable", "path": str(path), "reason": "no timestamped event file supplied", "rows": 0}
     cutoff_time = datetime.fromisoformat(cutoff)
@@ -185,7 +189,7 @@ def prediction(row: dict[str, Any], model: RidgeModel, expected_games: float, mo
         "player_id": row["player_id"],
         "player_name": row.get("player_name", ""),
         "team": row.get("team", ""),
-        "position": "WR",
+        "position": ACTIVE_POSITION,
         "model_id": model_id,
         "regime": regime,
         "training_cutoff": row.get("feature_cutoff", ""),
@@ -337,19 +341,24 @@ def write_sqlite(path: Path, checkpoints: list[dict[str, Any]], outcomes: list[d
 
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
+    global ACTIVE_POSITION, REPLAY_ID
+    position = args.position.upper()
+    position_config(position)
+    ACTIVE_POSITION = position
+    REPLAY_ID = f"chatpft-{position.lower()}-2024"
     data_dir = Path(args.data_dir)
     output = Path(args.output)
     data_dir.mkdir(parents=True, exist_ok=True)
     output.mkdir(parents=True, exist_ok=True)
     nfl_path = data_dir / "nflverse-player_stats.csv.gz"
     nfl_meta = save_cached(NFLVERSE_URL, nfl_path, args.refresh)
-    rows, team_pass = load_nflverse(nfl_path, args.history_start, SEASON)
-    features, preseason_features = build_features(rows, team_pass, SEASON)
+    rows, team_pass = load_nflverse(nfl_path, args.history_start, SEASON, position)
+    features, preseason_features = build_features(rows, team_pass, SEASON, position)
     historical = [row for row in features if row["season"] < SEASON]
     totals = season_totals(rows, SEASON)
     identity_rank_rows = [{"name": value["player_name"], "team": value["team"], "rank": value["actual_rank"]} for value in totals.values()]
     identity_source, _ = source_matches(identity_rank_rows, totals)
-    preseason_model = RidgeModel.fit(historical)
+    preseason_model = RidgeModel.fit(historical, position)
     checkpoints: list[dict[str, Any]] = []
     all_predictions: list[dict[str, Any]] = []
     all_outcomes: list[dict[str, Any]] = []
@@ -358,10 +367,10 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     all_attribution: list[dict[str, Any]] = []
     for target_week in range(1, 19):
         cutoff = checkpoint_cutoff(target_week)
-        source_meta, source_rows = collect_week_sources(data_dir, target_week, args.refresh)
+        source_meta, source_rows = collect_week_sources(data_dir, target_week, args.refresh, position)
         all_sources.extend([{**source, "target_period": period_key(target_week)} for source in source_meta])
         source_rank, source_counts = source_matches(source_rows["rank"], totals)
-        news_events, news_meta = load_news_events(data_dir, cutoff)
+        news_events, news_meta = load_news_events(data_dir, cutoff, position)
         all_sources.append({**news_meta, "target_period": period_key(target_week)})
         checkpoint_id = f"{REPLAY_ID}:w{target_week - 1:02d}"
         if target_week == 1:
@@ -369,14 +378,15 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         else:
             completed = period_key(target_week - 1)
         checkpoints.append({
-            "schema_version": "chatpft.wr.checkpoint.v1",
+            "schema_version": "chatpft.position.checkpoint.v1",
             "replay_id": REPLAY_ID,
+            "position": position,
             "checkpoint_id": checkpoint_id,
             "target_period": period_key(target_week),
             "prediction_cutoff": cutoff,
             "completed_through_period": completed,
             "regime": "all",
-            "model_version": "wr-2024-walkforward-v1",
+            "model_version": f"{position.lower()}-2024-walkforward-v1",
             "training_start_period": f"{args.history_start}-W1",
             "training_cutoff": completed or "2023-W18",
             "source_snapshot_ids": [source.get("source_snapshot_id") for source in source_meta if source.get("source_snapshot_id")],
@@ -394,7 +404,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         eligible = set(preseason_features) | set(source_rank)
         target_feature_by_player = {player_id: next((row for row in features if row["player_id"] == player_id and row["season"] == SEASON and row["week"] == target_week), None) for player_id in eligible}
         adaptive_training = historical + [row for row in features if row["season"] == SEASON and row["week"] < target_week]
-        adaptive_model = RidgeModel.fit(adaptive_training)
+        adaptive_model = RidgeModel.fit(adaptive_training, position)
         for regime, model, use_target_features in [
             ("frozen_preseason", preseason_model, False),
             ("frozen_weights_adaptive_features", preseason_model, True),
@@ -406,7 +416,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                 feature = target_feature if use_target_features and target_feature else preseason_features.get(player_id, history_summary([], [], None, SEASON))
                 feature = {**feature, "player_id": player_id, "player_name": (target_feature or {}).get("player_name", ""), "team": (target_feature or {}).get("team", "")}
                 expected_games = min(17.0, max(1.0, feature.get("prior_availability_rate", 0.5) * 17.0))
-                forecast_rows.append(prediction(feature, model, expected_games, f"wr-2024-{regime}", target_week, regime))
+                forecast_rows.append(prediction(feature, model, expected_games, f"{position.lower()}-2024-{regime}", target_week, regime))
             assign_ranks(forecast_rows, "mean", "predicted_rank")
             source_forecast_rows = [row for row in forecast_rows if row["player_id"] in source_rank]
             assign_ranks(source_forecast_rows, "mean", "source_common_predicted_rank")
@@ -431,14 +441,15 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                 all_metrics.append({"target_period": period_key(target_week), "regime": "razzball_rank", "rank_samples": len(source_rank), "spearman": None, "source_rows": source_counts})
                 break
     checkpoints.append({
-        "schema_version": "chatpft.wr.checkpoint.v1",
+        "schema_version": "chatpft.position.checkpoint.v1",
         "replay_id": REPLAY_ID,
+        "position": position,
         "checkpoint_id": f"{REPLAY_ID}:w18",
         "target_period": "terminal",
         "prediction_cutoff": "2025-01-05T08:00:00-05:00",
         "completed_through_period": period_key(18),
         "regime": "all",
-        "model_version": "wr-2024-walkforward-v1",
+        "model_version": f"{position.lower()}-2024-walkforward-v1",
         "training_start_period": f"{args.history_start}-W1",
         "training_cutoff": period_key(18),
         "source_snapshot_ids": [],
@@ -454,8 +465,9 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             for rank, row in enumerate(blend, 1):
                 row["source_rank_blend_rank"] = rank
     root_manifest = {
-        "schema_version": "chatpft.wr.walkforward.v1",
+        "schema_version": "chatpft.position.walkforward.v1",
         "replay_id": REPLAY_ID,
+        "position": position,
         "season": SEASON,
         "preseason_cutoff": PRESEASON_CUTOFF,
         "training_window": f"{args.history_start}-{SEASON - 1}",
@@ -535,12 +547,22 @@ def promotion_decision(comparisons: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def write_phase8_report(path: Path, manifest: dict[str, Any], metrics: list[dict[str, Any]], promotion: dict[str, Any]) -> None:
-    lines = ["# ChatPFT 2024 WR Walk-Forward Replay", "", "This report is generated from real nflverse outcomes and archive-first source attempts.", "", f"- Checkpoints: `{manifest['checkpoints']}`", f"- Bootstrap seed: `{manifest['bootstrap']['seed']}`", f"- Source records: `{len(manifest['sources'])}`", f"- Promotion decision: **{promotion['status']}**", "", "## Weekly Metrics", "", "| Period | Regime | Samples | MAE | RMSE | P10-P90 coverage | P50 pinball |", "| --- | --- | ---: | ---: | ---: | ---: | ---: |"]
+    lines = [f"# ChatPFT 2024 {manifest['position']} Walk-Forward Replay", "", "This report is generated from real nflverse outcomes and archive-first source attempts.", "", f"- Position: `{manifest['position']}`", f"- Checkpoints: `{manifest['checkpoints']}`", f"- Bootstrap seed: `{manifest['bootstrap']['seed']}`", f"- Source records: `{len(manifest['sources'])}`", f"- Promotion decision: **{promotion['status']}**", "", "## Weekly Metrics", "", "| Period | Regime | Samples | MAE | RMSE | P10-P90 coverage | P50 pinball |", "| --- | --- | ---: | ---: | ---: | ---: | ---: |"]
     for row in metrics:
         if "mae" not in row:
             continue
         lines.append(f"| {row['target_period']} | {row['regime']} | {row.get('samples', 0)} | {fmt(row.get('mae'))} | {fmt(row.get('rmse'))} | {fmt(row.get('p10_p90_coverage'))} | {fmt(row.get('pinball_p50'))} |")
-    lines.extend(["", "## Limitations", "", "- Historical weekly ESPN and FFToday captures were unavailable and remain explicit source gaps.", "- News attribution is ready for timestamped structured events but no such file is assumed or synthesized.", "- The player_stats release does not provide a complete historical availability panel; missing rows are not treated as injury evidence.", "- Promotion is a benchmark decision, not an automatic runtime model activation."])
+    aggregates = {}
+    for regime in ("frozen_preseason", "frozen_weights_adaptive_features", "adaptive_expanding"):
+        values = [row for row in metrics if row.get("regime") == regime and row.get("mae") is not None]
+        samples = sum(row.get("samples", 0) for row in values)
+        aggregates[regime] = {
+            "mae": sum(row["mae"] * row.get("samples", 0) for row in values) / samples if samples else None,
+            "coverage": sum(row["p10_p90_coverage"] * row.get("samples", 0) for row in values) / samples if samples else None,
+        }
+    frozen = aggregates.get("frozen_preseason", {})
+    adaptive = aggregates.get("adaptive_expanding", {})
+    lines.extend(["", "## Takeaways", "", f"- Adaptive expanding weighted MAE was `{fmt(adaptive.get('mae'))}` versus frozen preseason `{fmt(frozen.get('mae'))}`.", f"- Adaptive P10-P90 coverage was `{fmt(adaptive.get('coverage'))}` against the nominal 0.80 interval.", f"- The paired weekly RMSE delta was `{fmt(promotion.get('delta_ci', {}).get('estimate'))}` with bootstrap upper bound `{fmt(promotion.get('delta_ci', {}).get('upper'))}`.", "- The difference between frozen weights with updated features and adaptive retraining should guide the next modeling investment; a small difference favors better features over more frequent refits.", "- Source gaps and missing availability evidence are denominators, not evidence that the unavailable provider or player was uninformative.", "", "## Limitations", "", "- Historical weekly ESPN and FFToday captures were unavailable and remain explicit source gaps.", "- News attribution is ready for timestamped structured events but no such file is assumed or synthesized.", "- The player_stats release does not provide a complete historical availability panel; missing rows are not treated as injury evidence.", "- Promotion is a benchmark decision, not an automatic runtime model activation."])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -550,6 +572,7 @@ def fmt(value: Any) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--position", default="WR", choices=["QB", "RB", "WR", "TE"])
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--output", default="artifacts/wr-2024-replay")
     parser.add_argument("--history-start", type=int, default=2018)

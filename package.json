@@ -15,6 +15,12 @@
     "model:qb-wr:real": "python3 python/chatpft_modeling/train_real_qb_wr.py --data-dir data --output artifacts/qb-wr-models-real",
     "model:wr:replay": "python3 python/chatpft_modeling/replay_wr_2024.py --data-dir data --output artifacts/wr-2024-replay",
     "model:wr:walkforward": "python3 python/chatpft_modeling/walkforward_wr_2024.py --data-dir data --output artifacts/wr-2024-replay",
+    "model:qb:replay": "python3 python/chatpft_modeling/replay_wr_2024.py --position QB --data-dir data --output artifacts/qb-2024-replay",
+    "model:qb:walkforward": "python3 python/chatpft_modeling/walkforward_wr_2024.py --position QB --data-dir data --output artifacts/qb-2024-replay",
+    "model:rb:replay": "python3 python/chatpft_modeling/replay_wr_2024.py --position RB --data-dir data --output artifacts/rb-2024-replay",
+    "model:rb:walkforward": "python3 python/chatpft_modeling/walkforward_wr_2024.py --position RB --data-dir data --output artifacts/rb-2024-replay",
+    "model:te:replay": "python3 python/chatpft_modeling/replay_wr_2024.py --position TE --data-dir data --output artifacts/te-2024-replay",
+    "model:te:walkforward": "python3 python/chatpft_modeling/walkforward_wr_2024.py --position TE --data-dir data --output artifacts/te-2024-replay",
     "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1",
     "pmt": "node dist/src/cli.js"
   },

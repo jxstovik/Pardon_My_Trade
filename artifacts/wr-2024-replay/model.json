@@ -1,45 +1,50 @@
 {
   "model_version": "wr-2024-preseason-hard-stats-ridge-v1",
+  "position": "WR",
   "features": [
     "prior_points_per_game",
-    "prior_targets_per_game",
-    "prior_receiving_yards_per_game",
-    "prior_target_share",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
     "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
     "prior_games",
     "prior_availability_rate",
     "experience_seasons"
   ],
   "means": {
     "prior_points_per_game": 8.87616492958867,
-    "prior_targets_per_game": 4.931484870183255,
-    "prior_receiving_yards_per_game": 40.2504031081762,
-    "prior_target_share": 0.14911712649516215,
+    "prior_usage_per_game": 4.931484870183255,
+    "prior_efficiency": 8.01085214258243,
+    "prior_share": 0.14911712649516215,
     "prior_team_pass_attempts": 34.39621091574509,
+    "prior_team_rush_attempts": 26.495185054688594,
     "prior_games": 24.68080197310844,
     "prior_availability_rate": 0.7241626223247672,
     "experience_seasons": 1.6282918291033495
   },
   "scales": {
     "prior_points_per_game": 5.358168476338884,
-    "prior_targets_per_game": 2.6528176672576094,
-    "prior_receiving_yards_per_game": 25.171130242799382,
-    "prior_target_share": 0.07665281921479117,
+    "prior_usage_per_game": 2.6528176672576094,
+    "prior_efficiency": 3.4813515585390036,
+    "prior_share": 0.07665281921479117,
     "prior_team_pass_attempts": 4.547219150409339,
+    "prior_team_rush_attempts": 3.7299821890086213,
     "prior_games": 20.902128786051797,
     "prior_availability_rate": 0.3521898618726802,
     "experience_seasons": 1.534273865546835
   },
   "coefficients": [
     8.67383244490407,
-    1.4105314854494595,
-    0.5778883376250018,
-    0.5456111486116169,
-    1.3478089115580536,
-    0.08842465831147218,
-    1.0793853332564676,
-    0.1981117840893192,
-    -1.2100414777156479
+    1.8126309118818464,
+    0.6861018050347397,
+    0.03440516760799762,
+    1.3648574084107934,
+    0.09451118142639417,
+    0.018577713544864656,
+    1.0763057561594431,
+    0.19779887017630352,
+    -1.2115764853135882
   ],
-  "residual_standard_deviation": 6.778635709161346
+  "residual_standard_deviation": 6.780187380192543
 }

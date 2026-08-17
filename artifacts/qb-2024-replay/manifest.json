@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "position": "QB",
+  "replay_id": "chatpft-qb-2024",
+  "parser_version": "position-replay-v2",
+  "season": 2024,
+  "preseason_cutoff": "2024-09-04T08:00:00-04:00",
+  "training_window": "2018-2023",
+  "data_status": "real nflverse outcomes and archive-first Razzball source snapshots",
+  "sources": [
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "path": "data/nflverse-player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "bytes": 7211865,
+      "cached": true,
+      "retrieved_at": "2026-08-17T22:20:15.360637+00:00",
+      "name": "nflverse_player_stats",
+      "status": "downloaded",
+      "parsed_rows": 4463
+    },
+    {
+      "name": "razzball_qb_preseason_rankings",
+      "requested_url": "https://football.razzball.com/2024-fantasy-football-quarterback-rankings/",
+      "kind": "rank",
+      "cutoff": "2024-09-04T08:00:00-04:00",
+      "parser_version": "position-replay-v2",
+      "status": "downloaded",
+      "timestamp": "20240714130437",
+      "original": "https://football.razzball.com/2024-fantasy-football-quarterback-rankings",
+      "capture_url": "https://web.archive.org/web/20240714130437id_/https://football.razzball.com/2024-fantasy-football-quarterback-rankings",
+      "digest": "3RSHALSLEKB7W5VDD3X7DHF4XXRRJIZC",
+      "url": "https://web.archive.org/web/20240714130437id_/https://football.razzball.com/2024-fantasy-football-quarterback-rankings",
+      "path": "data/chatpft-qb-replay/source-snapshots/razzball_qb_preseason_rankings-20240714130437.html",
+      "sha256": "22a3854961aeda8f4bcd9931d63aa2d8a0c905627d9de678f383ce7d602f19ef",
+      "bytes": 179977,
+      "cached": true,
+      "retrieved_at": "2026-08-17T22:20:47.657315+00:00",
+      "parsed_rows": 50
+    },
+    {
+      "name": "razzball_qb_preseason_projections",
+      "requested_url": "https://football.razzball.com/projections-qb-restofseason/",
+      "kind": "points",
+      "cutoff": "2024-09-04T08:00:00-04:00",
+      "parser_version": "position-replay-v2",
+      "status": "downloaded",
+      "timestamp": "20240814033327",
+      "original": "https://football.razzball.com/projections-qb-restofseason/",
+      "capture_url": "https://web.archive.org/web/20240814033327id_/https://football.razzball.com/projections-qb-restofseason/",
+      "digest": "M6EVY6VUCILYIDXGGJCMEG5LVRCCB4Z7",
+      "url": "https://web.archive.org/web/20240814033327id_/https://football.razzball.com/projections-qb-restofseason/",
+      "path": "data/chatpft-qb-replay/source-snapshots/razzball_qb_preseason_projections-20240814033327.html",
+      "sha256": "a66fb137490b15585d747b11dee77bd1624bd110954082c636dcdde741847cd4",
+      "bytes": 234006,
+      "cached": true,
+      "retrieved_at": "2026-08-17T22:21:27.472402+00:00",
+      "parsed_rows": 0
+    }
+  ],
+  "matching": {
+    "rank": {
+      "source_rows": 50,
+      "matched": 45,
+      "unmatched": 5,
+      "ambiguous": 0
+    },
+    "points": {
+      "source_rows": 0,
+      "matched": 0,
+      "unmatched": 0,
+      "ambiguous": 0
+    }
+  },
+  "row_counts": {
+    "features": 4463,
+    "training": 3799,
+    "validation": 664,
+    "players_2024": 78
+  },
+  "model": {
+    "model_version": "qb-2024-preseason-hard-stats-ridge-v1",
+    "position": "QB",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 14.462087917873124,
+      "prior_usage_per_game": 29.020808107396682,
+      "prior_efficiency": 7.115541106439377,
+      "prior_share": 0.8237357505466131,
+      "prior_team_pass_attempts": 34.376366274332845,
+      "prior_team_rush_attempts": 26.602392233545167,
+      "prior_games": 26.047117662542774,
+      "prior_availability_rate": 0.724635137901787,
+      "experience_seasons": 1.8249539352461175
+    },
+    "scales": {
+      "prior_points_per_game": 6.461153628374897,
+      "prior_usage_per_game": 10.391602994060714,
+      "prior_efficiency": 1.6596552966362246,
+      "prior_share": 0.31554203595430375,
+      "prior_team_pass_attempts": 4.4697332008764326,
+      "prior_team_rush_attempts": 3.720448648181711,
+      "prior_games": 22.53498094369669,
+      "prior_availability_rate": 0.35466879275525026,
+      "experience_seasons": 1.5969662577728543
+    },
+    "coefficients": [
+      14.081763622005836,
+      3.6835704546627825,
+      -1.336986839743985,
+      -0.26777661361956306,
+      1.9509188357754799,
+      0.4122718278918864,
+      0.08828897566278458,
+      1.361369424185447,
+      0.6325977832999388,
+      -1.4926266006819793
+    ],
+    "residual_standard_deviation": 7.934395683983514
+  }
+}

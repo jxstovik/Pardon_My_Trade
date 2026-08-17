@@ -19,6 +19,7 @@ per-player fallback when a metamodel or stronger source is unavailable.
 - Added real-data QB/WR training from nflverse outcomes with Razzball projection/ranking provenance and SQLite model artifacts.
 - Added the real-data 2024 WR preseason replay, archive-first source snapshots,
   leakage-safe features, and source benchmark artifacts.
+- Generalized the real-data replay and report contract to QB, RB, WR, and TE.
 
 ## Grand Scheme
 
