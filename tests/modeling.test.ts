@@ -27,6 +27,16 @@ test("rolling backtest compares only future periods", () => {
   assert.equal(result.metrics[0].source, "historical-baseline");
 });
 
+test("rolling backtest orders double-digit weeks numerically", () => {
+  const history: HistoricalPlayerStat[] = [
+    { playerId: "wr", position: "WR", scoringPeriod: "2024-W1", points: 10 },
+    { playerId: "wr", position: "WR", scoringPeriod: "2024-W10", points: 12 },
+    { playerId: "wr", position: "WR", scoringPeriod: "2024-W2", points: 11 }
+  ];
+  const result = runHistoricalBacktest(history, (training) => createHistoricalBaseline(training));
+  assert.deepEqual(result.predictions.map((prediction) => prediction.scoringPeriod), ["2024-W2", "2024-W10"]);
+});
+
 test("calibration reports interval coverage and spread", () => {
   const prediction = createHistoricalBaseline(history).predict({ playerId: "qb", position: "QB", scoringPeriod: "W4", history: [20, 22] });
   const metrics = calibrationMetrics([{ prediction, actual: 21 }]);

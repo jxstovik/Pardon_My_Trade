@@ -1,10 +1,32 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ChatPFT Modeling Workbench</title><link rel="stylesheet" href="modeling.css"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatPFT WR Replay</title>
+  <link rel="stylesheet" href="modeling.css">
+</head>
 <body>
-<header><div><span class="eyebrow">ChatPFT / local lab</span><h1>Probabilistic Modeling Workbench</h1></div><a href="/">PMT home</a></header>
-<main><section class="hero"><div><span class="eyebrow">Historical evidence over commentary</span><h2>Shape a position model, then inspect its uncertainty.</h2><p>Choose the evidence available to the model. This deterministic preview shows source error, ensemble accuracy, and how mean and prediction intervals appear in PMT.</p></div><div class="run-state" id="run-state">Preview ready</div></section>
-<section class="controls panel"><label>Position<select id="position"><option>QB</option><option>RB</option><option selected>WR</option><option>TE</option><option>K</option><option>DST</option></select></label><fieldset><legend>Sources</legend><label><input type="checkbox" value="historical" checked> Historical stats</label><label><input type="checkbox" value="razzball" checked> Razzball benchmark</label><label><input type="checkbox" value="espn"> ESPN</label><label><input type="checkbox" value="fftoday"> FFToday</label></fieldset><fieldset><legend>Features</legend><label><input type="checkbox" value="recent_points" checked> Recent points</label><label><input type="checkbox" value="season_points" checked> Season points</label><label><input type="checkbox" value="availability" checked> Availability</label><label><input type="checkbox" value="team_pace"> Team pace</label><label><input type="checkbox" value="qb_dependency"> QB dependency</label><label><input type="checkbox" value="offensive_line"> Offensive line</label></fieldset><label>Ensemble size<input id="ensemble" type="range" min="10" max="500" value="100"><output id="ensemble-value">100 models</output></label><button id="run">Run preview</button></section>
-<section class="grid"><article class="panel"><div class="section-head"><div><span class="eyebrow">Backtest</span><h3>Predictive accuracy</h3></div><span id="metric-note"></span></div><div id="accuracy-chart" class="bars"></div><div class="metrics" id="metrics"></div></article><article class="panel"><div class="section-head"><div><span class="eyebrow">Distribution</span><h3>Player prediction</h3></div><span id="distribution-label"></span></div><div id="distribution-chart" class="distribution"></div><div class="legend"><span class="mean-dot"></span> Mean <span class="interval"></span> P10–P90 interval</div></article></section>
-<section class="panel table-panel"><div class="section-head"><div><span class="eyebrow">Audit trail</span><h3>Selected configuration</h3></div><span id="provenance"></span></div><div id="config-output"></div></section></main><script src="modeling.js"></script>
-</body></html>
+  <header><div><span class="eyebrow">ChatPFT / evidence replay</span><h1>2024 WR Model Timeline</h1></div><a href="/">PMT home</a></header>
+  <main>
+    <section class="hero">
+      <div><span class="eyebrow">Causal checkpoints</span><h2>Watch the model learn without looking ahead.</h2><p>Every row is labeled with its cutoff, regime, source status, uncertainty, and later outcome. Missing historical provider snapshots remain visible instead of becoming synthetic data.</p></div>
+      <div class="run-state" id="run-state">Loading replay</div>
+    </section>
+    <section class="controls panel">
+      <label>Checkpoint<select id="period"></select></label>
+      <label>Regime<select id="regime"><option value="adaptive_expanding">Adaptive expanding</option><option value="frozen_weights_adaptive_features">Frozen weights / adaptive features</option><option value="frozen_preseason">Frozen preseason</option></select></label>
+      <label>Player ID<input id="player-id" placeholder="optional player id"></label>
+      <button id="load">Load timeline</button>
+      <a class="button-link" href="/api/modeling/artifact/phase8-report.md">Open phase 8 report</a>
+    </section>
+    <section class="grid">
+      <article class="panel"><div class="section-head"><div><span class="eyebrow">Promotion</span><h3 id="promotion-title">Replay status</h3></div><span id="promotion-status"></span></div><div class="metrics" id="replay-summary"></div></article>
+      <article class="panel"><div class="section-head"><div><span class="eyebrow">Sources</span><h3>Checkpoint evidence</h3></div></div><div class="metrics" id="source-summary"></div></article>
+    </section>
+    <section class="panel table-panel"><div class="section-head"><div><span class="eyebrow">Weekly benchmark</span><h3>Forecast accuracy</h3></div><span id="metric-note"></span></div><div id="metrics-table"></div></section>
+    <section class="panel table-panel"><div class="section-head"><div><span class="eyebrow">Player progression</span><h3>Prediction trajectory</h3></div><span id="player-note"></span></div><div id="predictions-table"></div></section>
+  </main>
+  <script src="modeling.js"></script>
+</body>
+</html>

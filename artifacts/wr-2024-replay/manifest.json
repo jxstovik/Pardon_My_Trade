@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "parser_version": "wr-replay-v1",
+  "season": 2024,
+  "preseason_cutoff": "2024-09-04T08:00:00-04:00",
+  "training_window": "2018-2023",
+  "data_status": "real nflverse outcomes and archive-first Razzball source snapshots",
+  "sources": [
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "path": "data/nflverse-player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "bytes": 7211865,
+      "cached": true,
+      "retrieved_at": "2026-08-17T21:30:47.653877+00:00",
+      "name": "nflverse_player_stats",
+      "status": "downloaded",
+      "parsed_rows": 14701
+    },
+    {
+      "name": "razzball_preseason_rankings",
+      "requested_url": "https://football.razzball.com/2024-fantasy-football-wide-receiver-rankings/",
+      "kind": "rank",
+      "cutoff": "2024-09-04T08:00:00-04:00",
+      "parser_version": "wr-replay-v1",
+      "status": "downloaded",
+      "timestamp": "20240814030914",
+      "original": "https://football.razzball.com/2024-fantasy-football-wide-receiver-rankings/",
+      "capture_url": "https://web.archive.org/web/20240814030914id_/https://football.razzball.com/2024-fantasy-football-wide-receiver-rankings/",
+      "digest": "ELDW3OK4XUBBDQHTNVAAYVTPARGCVZNP",
+      "url": "https://web.archive.org/web/20240814030914id_/https://football.razzball.com/2024-fantasy-football-wide-receiver-rankings/",
+      "path": "data/chatpft-wr-replay/source-snapshots/razzball_preseason_rankings-20240814030914.html",
+      "sha256": "194d97726250aafe53ea9bffade022ea34ac8a1e7cc089de797d47513156114f",
+      "bytes": 182623,
+      "cached": true,
+      "retrieved_at": "2026-08-17T21:30:51.190155+00:00",
+      "parsed_rows": 60
+    },
+    {
+      "name": "razzball_preseason_projections",
+      "requested_url": "https://football.razzball.com/projections-wr-restofseason/",
+      "kind": "points",
+      "cutoff": "2024-09-04T08:00:00-04:00",
+      "parser_version": "wr-replay-v1",
+      "status": "unavailable",
+      "timestamp": "20240422190500",
+      "original": "https://football.razzball.com/projections-wr-restofseason",
+      "capture_url": "https://web.archive.org/web/20240422190500id_/https://football.razzball.com/projections-wr-restofseason",
+      "digest": "V3ZCT7RMDGW7ZP7VH7XT6D2RFVEVYZUZ",
+      "url": "https://web.archive.org/web/20240422190500id_/https://football.razzball.com/projections-wr-restofseason",
+      "path": "data/chatpft-wr-replay/source-snapshots/razzball_preseason_projections-20240422190500.html",
+      "sha256": "7a1e86512da550126d37c2724122136ffd54f17de7ce751ccfa9174065a1cbf8",
+      "bytes": 189705,
+      "cached": true,
+      "retrieved_at": "2026-08-17T21:31:00.268612+00:00",
+      "reason": "capture reports 2023 projection horizon, expected 2024",
+      "parsed_rows": 0
+    }
+  ],
+  "matching": {
+    "rank": {
+      "source_rows": 60,
+      "matched": 58,
+      "unmatched": 2,
+      "ambiguous": 0
+    },
+    "points": {
+      "source_rows": 0,
+      "matched": 0,
+      "unmatched": 0,
+      "ambiguous": 0
+    }
+  },
+  "row_counts": {
+    "features": 14701,
+    "training": 12569,
+    "validation": 2132,
+    "players_2024": 227
+  },
+  "model": {
+    "model_version": "wr-2024-preseason-hard-stats-ridge-v1",
+    "features": [
+      "prior_points_per_game",
+      "prior_targets_per_game",
+      "prior_receiving_yards_per_game",
+      "prior_target_share",
+      "prior_team_pass_attempts",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 8.87616492958867,
+      "prior_targets_per_game": 4.931484870183255,
+      "prior_receiving_yards_per_game": 40.2504031081762,
+      "prior_target_share": 0.14911712649516215,
+      "prior_team_pass_attempts": 34.39621091574509,
+      "prior_games": 24.68080197310844,
+      "prior_availability_rate": 0.7241626223247672,
+      "experience_seasons": 1.6282918291033495
+    },
+    "scales": {
+      "prior_points_per_game": 5.358168476338884,
+      "prior_targets_per_game": 2.6528176672576094,
+      "prior_receiving_yards_per_game": 25.171130242799382,
+      "prior_target_share": 0.07665281921479117,
+      "prior_team_pass_attempts": 4.547219150409339,
+      "prior_games": 20.902128786051797,
+      "prior_availability_rate": 0.3521898618726802,
+      "experience_seasons": 1.534273865546835
+    },
+    "coefficients": [
+      8.67383244490407,
+      1.4105314854494595,
+      0.5778883376250018,
+      0.5456111486116169,
+      1.3478089115580536,
+      0.08842465831147218,
+      1.0793853332564676,
+      0.1981117840893192,
+      -1.2100414777156479
+    ],
+    "residual_standard_deviation": 6.778635709161346
+  }
+}

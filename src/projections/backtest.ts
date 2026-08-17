@@ -12,7 +12,7 @@ export function runHistoricalBacktest(
   modelFactory: (training: readonly HistoricalPlayerStat[]) => ProbabilisticModel,
   sourceMeans: ReadonlyMap<string, number> = new Map()
 ): BacktestResult {
-  const periods = [...new Set(history.map((row) => row.scoringPeriod))].sort();
+  const periods = [...new Set(history.map((row) => row.scoringPeriod))].sort(compareScoringPeriods);
   const predictions: ProbabilisticProjection[] = [];
   const observations: PredictionObservation[] = [];
   for (let index = 1; index < periods.length; index += 1) {
@@ -32,4 +32,11 @@ export function runHistoricalBacktest(
     }
   }
   return { metrics: evaluatePredictions(observations), predictions };
+}
+
+function compareScoringPeriods(left: string, right: string): number {
+  const leftMatch = /^(\d{4})-W(\d+)$/.exec(left);
+  const rightMatch = /^(\d{4})-W(\d+)$/.exec(right);
+  if (!leftMatch || !rightMatch) return left.localeCompare(right);
+  return Number(leftMatch[1]) - Number(rightMatch[1]) || Number(leftMatch[2]) - Number(rightMatch[2]);
 }

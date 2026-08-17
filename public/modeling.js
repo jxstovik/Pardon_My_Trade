@@ -1,2 +1,76 @@
-const $=id=>document.getElementById(id);const base={historical:{mae:8.4,rmse:11.2},razzball:{mae:7.1,rmse:9.8},espn:{mae:8,rmse:10.7},fftoday:{mae:8.8,rmse:11.6}};const values=s=>[...document.querySelectorAll(s+":checked")].map(n=>n.value);
-function run(){const position=$("position").value,sources=values("fieldset:first-of-type input"),features=values("fieldset:nth-of-type(2) input"),ensemble=Number($("ensemble").value),lift=Math.min(1.8,features.length*.18),count=Math.max(1,sources.length),rows=sources.map(source=>({source,...base[source]})).sort((a,b)=>a.rmse-b.rmse),mae=Math.max(3.2,rows.reduce((sum,row)=>sum+row.mae,0)/count-lift-Math.log10(ensemble)*.35),rmse=mae*1.34,mean=12+lift+(position==="QB"?4:position==="TE"?-1:0),spread=Math.max(3.2,rmse*.62);$("ensemble-value").value=`${ensemble} models`;$("metric-note").textContent=`${sources.length} sources · ${features.length} features`;$("distribution-label").textContent=`${position} / next period`;$("run-state").textContent="Preview complete";$("accuracy-chart").innerHTML=[...rows,{source:"metamodel",mae,rmse}].map(row=>`<div class="bar-wrap"><div class="bar" style="height:${Math.max(10,180-row.mae*10)}px" title="RMSE ${row.rmse.toFixed(1)}"></div><span class="bar-label">${row.source}</span></div>`).join("");$("metrics").innerHTML=metric("MAE",mae.toFixed(1))+metric("RMSE",rmse.toFixed(1))+metric("P10–P90",`${Math.round(Math.min(96,72+features.length*2))}%`);const low=Math.max(0,mean-1.282*spread),high=mean+1.282*spread,scale=value=>Math.min(98,Math.max(2,value/(mean+spread*2)*100));$("distribution-chart").innerHTML=`<div class="dist-line" style="left:${scale(low)}%;width:${scale(high)-scale(low)}%"></div><div class="dist-mean" style="left:${scale(mean)}%"></div><span class="dist-text" style="left:${scale(low)}%">P10 ${low.toFixed(1)}</span><span class="dist-text" style="left:${scale(mean)}%">Mean ${mean.toFixed(1)}</span><span class="dist-text" style="left:${scale(high)}%">P90 ${high.toFixed(1)}</span>`;$("provenance").textContent="model version: ensemble-preview-v1";$("config-output").innerHTML=`<div class="config-grid">${item("Position",position,"position worker")}${item("Sources",sources.join(", ")||"none","Razzball is the external benchmark")}${item("Features",features.join(", ")||"none","historical statistics only")}${item("Ensemble",ensemble,"bootstrap/model count")}${item("Mean",mean.toFixed(2),"expected fantasy points")}${item("Std dev",spread.toFixed(2),"predictive uncertainty")}</div>`}function metric(n,v){return`<div class="metric"><strong>${v}</strong><small>${n}</small></div>`}function item(n,v,note){return`<div class="config-item"><small>${n}</small><b>${v}</b><small>${note}</small></div>`}$("ensemble").addEventListener("input",()=>$("ensemble-value").textContent=`${$("ensemble").value} models`);$("run").addEventListener("click",run);run();
+const $ = (id) => document.getElementById(id);
+const state = { replay: null, checkpoints: [], metrics: null };
+
+async function getJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`${response.status} ${path}`);
+  return response.json();
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>'"]/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+  }[character]));
+}
+
+function metric(value) {
+  return value === null || value === undefined ? "-" : Number(value).toFixed(2);
+}
+
+function renderReplay() {
+  const walkforward = state.replay?.walkforward;
+  const promotion = state.replay?.promotion;
+  $("run-state").textContent = walkforward ? `${walkforward.checkpoints} checkpoints` : "Preseason artifact only";
+  $("promotion-title").textContent = promotion?.approved ? "Candidate passed" : "Candidate not approved";
+  $("promotion-status").textContent = promotion?.status ?? "unknown";
+  $("replay-summary").innerHTML = [
+    ["Season", walkforward?.season ?? state.replay?.preseason?.season ?? "-"],
+    ["Cutoff", walkforward?.preseason_cutoff ?? state.replay?.preseason?.preseason_cutoff ?? "-"],
+    ["Training", walkforward?.training_window ?? state.replay?.preseason?.training_window ?? "-"],
+    ["Data", walkforward?.data_status ?? "-"],
+  ].map(([label, value]) => `<div><strong>${escapeHtml(label)}</strong><span>${escapeHtml(value)}</span></div>`).join("");
+  const sources = walkforward?.sources ?? [];
+  const counts = sources.reduce((result, source) => { result[source.status] = (result[source.status] ?? 0) + 1; return result; }, {});
+  $("source-summary").innerHTML = Object.entries(counts).map(([status, count]) => `<div><strong>${escapeHtml(status)}</strong><span>${count} records</span></div>`).join("") || "<p>No source manifest loaded.</p>";
+}
+
+function renderPeriods() {
+  $("period").innerHTML = state.checkpoints.filter((row) => row.target_period !== "terminal").map((row) => `<option value="${escapeHtml(row.target_period)}">${escapeHtml(row.target_period)} · cutoff ${escapeHtml(row.prediction_cutoff)}</option>`).join("");
+}
+
+function renderMetrics() {
+  const weekly = state.metrics?.weekly ?? [];
+  const regime = $("regime").value;
+  const rows = weekly.filter((row) => row.regime === regime && row.mae !== undefined);
+  $("metric-note").textContent = `${rows.length} weekly rows · ${regime}`;
+  $("metrics-table").innerHTML = `<table><thead><tr><th>Period</th><th>Samples</th><th>MAE</th><th>RMSE</th><th>P10-P90</th><th>P50 pinball</th><th>Rank rho</th></tr></thead><tbody>${rows.map((row) => `<tr><td>${escapeHtml(row.target_period)}</td><td>${row.samples ?? 0}</td><td>${metric(row.mae)}</td><td>${metric(row.rmse)}</td><td>${metric(row.p10_p90_coverage)}</td><td>${metric(row.pinball_p50)}</td><td>${metric(row.spearman)}</td></tr>`).join("")}</tbody></table>`;
+}
+
+async function renderPredictions() {
+  const period = $("period").value;
+  const regime = $("regime").value;
+  const playerId = $("player-id").value.trim();
+  const query = new URLSearchParams({ period, regime });
+  if (playerId) query.set("playerId", playerId);
+  const rows = await getJson(`/api/modeling/predictions?${query}`);
+  $("player-note").textContent = `${rows.length} rows · ${period}`;
+  $("predictions-table").innerHTML = `<table><thead><tr><th>Player</th><th>Team</th><th>Mean</th><th>P10-P90</th><th>Rank</th><th>Actual</th><th>Status</th></tr></thead><tbody>${rows.sort((a, b) => (a.predicted_rank ?? 999) - (b.predicted_rank ?? 999)).slice(0, 50).map((row) => `<tr><td>${escapeHtml(row.player_name || row.player_id)}</td><td>${escapeHtml(row.team)}</td><td>${metric(row.mean)}</td><td>${metric(row.p10)} - ${metric(row.p90)}</td><td>${row.predicted_rank ?? "-"}</td><td>${metric(row.actual_points)}</td><td>${escapeHtml(row.outcome_status)}</td></tr>`).join("")}</tbody></table>`;
+}
+
+async function load() {
+  try {
+    [state.replay, state.checkpoints, state.metrics] = await Promise.all([
+      getJson("/api/modeling/replay"), getJson("/api/modeling/checkpoints"), getJson("/api/modeling/metrics")
+    ]);
+    renderReplay();
+    renderPeriods();
+    renderMetrics();
+    await renderPredictions();
+  } catch (error) {
+    $("run-state").textContent = `Replay unavailable: ${error.message}`;
+  }
+}
+
+$("load").addEventListener("click", () => { void renderPredictions(); });
+$("regime").addEventListener("change", () => { renderMetrics(); void renderPredictions(); });
+void load();

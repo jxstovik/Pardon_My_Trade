@@ -1,0 +1,45 @@
+{
+  "model_version": "wr-2024-preseason-hard-stats-ridge-v1",
+  "features": [
+    "prior_points_per_game",
+    "prior_targets_per_game",
+    "prior_receiving_yards_per_game",
+    "prior_target_share",
+    "prior_team_pass_attempts",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "means": {
+    "prior_points_per_game": 8.87616492958867,
+    "prior_targets_per_game": 4.931484870183255,
+    "prior_receiving_yards_per_game": 40.2504031081762,
+    "prior_target_share": 0.14911712649516215,
+    "prior_team_pass_attempts": 34.39621091574509,
+    "prior_games": 24.68080197310844,
+    "prior_availability_rate": 0.7241626223247672,
+    "experience_seasons": 1.6282918291033495
+  },
+  "scales": {
+    "prior_points_per_game": 5.358168476338884,
+    "prior_targets_per_game": 2.6528176672576094,
+    "prior_receiving_yards_per_game": 25.171130242799382,
+    "prior_target_share": 0.07665281921479117,
+    "prior_team_pass_attempts": 4.547219150409339,
+    "prior_games": 20.902128786051797,
+    "prior_availability_rate": 0.3521898618726802,
+    "experience_seasons": 1.534273865546835
+  },
+  "coefficients": [
+    8.67383244490407,
+    1.4105314854494595,
+    0.5778883376250018,
+    0.5456111486116169,
+    1.3478089115580536,
+    0.08842465831147218,
+    1.0793853332564676,
+    0.1981117840893192,
+    -1.2100414777156479
+  ],
+  "residual_standard_deviation": 6.778635709161346
+}

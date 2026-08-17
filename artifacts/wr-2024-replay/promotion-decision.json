@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "approved": true,
+  "comparison_count": 18,
+  "failures": [],
+  "delta_ci": {
+    "estimate": -0.570634814364006,
+    "lower": -0.7343226659835715,
+    "upper": -0.41078788659360455,
+    "clusters": 18,
+    "status": "ok",
+    "seed": 20260817,
+    "resamples": 500
+  },
+  "gates": {
+    "max_rmse_regression": 0.25,
+    "baseline": "frozen_preseason",
+    "candidate": "adaptive_expanding",
+    "bootstrap_unit": "target_period"
+  }
+}

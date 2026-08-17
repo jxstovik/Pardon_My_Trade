@@ -1,6 +1,6 @@
 # ChatPFT Development Manifest
 
-Branch: `feature/ChatPFT`
+Branch: `feature/chatpft-wr-replay`
 
 ## Goal
 
@@ -17,17 +17,19 @@ per-player fallback when a metamodel or stronger source is unavailable.
 - Added fixture-friendly pure contracts so historical backtests can be added without changing the refresh pipeline.
 - Added historical position baselines, ensemble variance aggregation, rolling backtests, and interval calibration metrics.
 - Added real-data QB/WR training from nflverse outcomes with Razzball projection/ranking provenance and SQLite model artifacts.
+- Added the real-data 2024 WR preseason replay, archive-first source snapshots,
+  leakage-safe features, and source benchmark artifacts.
 
 ## Grand Scheme
 
 1. Contracts and provenance: complete initial slice.
 2. Historical source evaluation and Razzball fallback: complete initial slice; integrate into refresh next.
 3. Probabilistic baselines and backtesting: initial historical baseline, ensemble, rolling backtest, and calibration implementation complete.
-4. Real QB/WR training: complete initial model run; replace conditional player-week data with a full availability panel and add historical point-level Razzball snapshots next.
-5. Position models: QB, RB, WR, TE, K, DST using historical usage, team context, and explicit cross-position dependencies.
+4. Real QB/WR training: initial run complete; the 2024 WR replay now uses real nflverse rows and archive-first Razzball captures. Full weekly availability and source snapshots remain follow-up work.
+5. Position models: WR walk-forward replay is implemented; broader position models remain future work.
 6. Ensembles: hierarchical Bayesian, distributional boosting, bootstrap trees, regularized baselines, stacking, and Monte Carlo simulation.
-7. Calibration: rolling time splits, pinball loss, CRPS/log score, bias, interval coverage, and conformal adjustments.
-8. Runtime integration: persist distributions, expose metrics, update recommendations and draft valuation.
+7. Calibration: pinball loss, interval coverage, cluster bootstrap metadata, subgroup metrics, and promotion gates are implemented; CRPS and conformal adjustments remain future work.
+8. Runtime integration: approved WR artifact loading, API metrics, and explicit season-refresh opt-in are implemented; recommendation/draft valuation wiring remains future work.
 
 ## Data Rules
 
@@ -39,10 +41,10 @@ per-player fallback when a metamodel or stronger source is unavailable.
 
 ## Follow-On Agent Work
 
-- Integrate fallback resolution and probabilistic outputs into `season-refresh.ts`.
-- Replace fixture-only history with persisted historical observation fixtures and rolling backtest runner.
+- Integrate approved WR distributions into recommendation and draft valuation.
+- Replace the optional structured-news input with provider-specific historical news adapters.
 - Add source-specific uncertainty estimates from past Razzball errors.
 - Implement a Bayesian hierarchical baseline, then a distributional tree baseline.
 - Add position workers with shared feature contracts.
 - Add correlated Monte Carlo simulation for workload, team scoring, and QB/pass-catcher dependencies.
-- Add calibration reports and persistence migration tests.
+- Add calibration reports and persistence migration tests for weekly checkpoint tables.

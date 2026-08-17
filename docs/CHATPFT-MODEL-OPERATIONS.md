@@ -4,6 +4,33 @@ This guide covers the historical-statistics-first modeling workflow for
 preseason projections and weekly updates. The modeling workbench is available
 at `/modeling` when the PMT API server is running.
 
+The completed real-data WR preseason replay is specified in
+`docs/CHATPFT-WR-REPLAY-SPEC.md` and recorded in
+`docs/CHATPFT-WR-PHASES-0-4.md`. Run it with:
+
+```bash
+npm run model:wr:replay
+npm run model:wr:walkforward
+```
+
+Its outputs are written to `artifacts/wr-2024-replay/`. Historical source HTML
+and the nflverse download remain under the ignored `data/` directory; the
+artifact manifest records their hashes and archive capture URLs.
+
+The walk-forward output includes `checkpoints.jsonl`, weekly predictions,
+attribution, calibration metrics, subgroup metrics, and a promotion decision.
+The dashboard reads these files through the modeling API routes.
+
+To opt an approved, season-matching WR artifact into an explicit season
+refresh:
+
+```bash
+PMT_WR_ARTIFACT_DIR=artifacts/wr-2024-replay npm run pmt -- refresh
+```
+
+The runtime rejects artifacts without a passing promotion decision and does
+not retrain from an HTTP request.
+
 ## Principles
 
 - Train only on information available before the prediction cutoff.

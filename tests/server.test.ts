@@ -42,6 +42,13 @@ test("api server serves health, league, refresh, and recommendations", async () 
     const recommendations = await (await fetch(`${base}/api/recommendations`)).json();
     assert.ok(Array.isArray(recommendations));
 
+    const replay = await (await fetch(`${base}/api/modeling/replay`)).json();
+    assert.equal(replay.walkforward.replay_id, "chatpft-wr-2024");
+    const checkpoints = await (await fetch(`${base}/api/modeling/checkpoints`)).json();
+    assert.equal(checkpoints.length, 19);
+    const predictions = await (await fetch(`${base}/api/modeling/predictions?period=2024-W1&regime=adaptive_expanding`)).json();
+    assert.ok(Array.isArray(predictions));
+
     const html = await (await fetch(`${base}/`)).text();
     assert.ok(html.includes("Pardon My Trade"));
   } finally {
