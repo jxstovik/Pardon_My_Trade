@@ -227,7 +227,10 @@ async function main(): Promise<void> {
       await mkdir(dataDir, { recursive: true });
 
       const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
-      const reader = new EspnPlatformReader();
+      const configuredCredentials = loadEspnCredentials();
+      const reader = new EspnPlatformReader({
+        credentials: { ...configuredCredentials, leagueId, season }
+      });
       let snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
 
       // Best-effort: seed model priors with real projections from the
