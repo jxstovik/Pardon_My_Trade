@@ -36,8 +36,10 @@ interface EspnLeagueResponse {
   seasonId?: number;
   status?: { type?: number; shortName?: string };
   settings?: {
+    name?: string;
     rosterPositions?: string[];
     rosterSize?: number;
+    rosterSettings?: { lineupSlotCounts?: Record<string, number> };
     waiverSettings?: Record<string, unknown>;
     tradeReview?: { type?: number };
   };
@@ -50,6 +52,7 @@ interface EspnLeagueResponse {
 
 interface EspnTeam {
   id: number;
+  name?: string;
   location?: string;
   nickname?: string;
   abbrev?: string;
@@ -58,7 +61,13 @@ interface EspnTeam {
     overall?: { wins?: number; losses?: number; ties?: number; pointsFor?: number; pointsAgainst?: number };
   };
   roster?: {
-    entries?: Array<{ playerId: number; lineuSlotId: number; status?: string; injuryStatus?: string }>;
+    entries?: Array<{
+      playerId: number;
+      lineuSlotId: number;
+      status?: string;
+      injuryStatus?: string;
+      playerPoolEntry?: { player?: EspnPlayer };
+    }>;
     lineupSlotCounts?: Record<string, number>;
   };
   waiverRank?: number;
@@ -111,7 +120,23 @@ export class EspnPlatformReader implements PlatformReader {
 
   private async getLeagueRaw(): Promise<EspnLeagueResponse> {
     if (this.leagueCache) return this.leagueCache;
-    const data = await this.client.getJson<EspnLeagueResponse>("", DEFAULT_LEAGUE_VIEWS);
+    // League reads come from ESPN's JSON read API, not the web/write host.
+    const data = await this.client.getJson<EspnLeagueResponse>("", {
+      view: DEFAULT_LEAGUE_VIEWS,
+      scope: { segment: 0, readHost: true }
+    });
+    // The read API embeds roster players instead of returning the legacy
+    // top-level `players` array used by the original league response shape.
+    if (!data.players) {
+      const players = new Map<number, EspnPlayer>();
+      for (const team of data.teams ?? []) {
+        for (const entry of team.roster?.entries ?? []) {
+          const player = entry.playerPoolEntry?.player;
+          if (player) players.set(player.id, player);
+        }
+      }
+      data.players = [...players.values()];
+    }
     this.leagueCache = data;
     return data;
   }
@@ -131,7 +156,7 @@ export class EspnPlatformReader implements PlatformReader {
       platform: "espn",
       sport: "football",
       season: data.seasonId?.toString() ?? season,
-      name: data.name ?? "ESPN League",
+      name: data.name ?? data.settings?.name ?? "ESPN League",
       teams,
       roster_settings: await this.getRosterSettings(_leagueExternalId),
       scoring_settings: await this.getScoringSettings(_leagueExternalId),
@@ -164,7 +189,7 @@ export class EspnPlatformReader implements PlatformReader {
         external_id: String(team.id),
         league_id: String(data.id ?? this.client.credentials.leagueId),
         manager_id: String(team.id),
-        name: team.nickname ?? managerName,
+        name: team.name ?? team.nickname ?? managerName,
         roster: this.mapRoster(String(team.id), team, players),
         standings: this.mapStandings(team),
         transaction_history: []
@@ -228,7 +253,12 @@ export class EspnPlatformReader implements PlatformReader {
 
   async getRosterSettings(_leagueExternalId: string): Promise<RosterSettings> {
     const data = await this.getLeagueRaw();
-    const positions = data.settings?.rosterPositions ?? ["QB", "RB", "RB", "WR", "WR", "TE", "FLEX", "K", "DST", "BE", "BE"];
+    const lineupSlotCounts = data.settings?.rosterSettings?.lineupSlotCounts;
+    const positions = data.settings?.rosterPositions ?? (lineupSlotCounts
+      ? Object.entries(lineupSlotCounts).flatMap(([slotId, count]) =>
+          Array.from({ length: count }, () => mapEspnSlotToPosition(Number(slotId)))
+        )
+      : ["QB", "RB", "RB", "WR", "WR", "TE", "FLEX", "K", "DST", "BE", "BE"]);
     const counts = new Map<string, number>();
     for (const position of positions) {
       counts.set(position, (counts.get(position) ?? 0) + 1);
