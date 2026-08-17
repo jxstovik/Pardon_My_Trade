@@ -18,6 +18,7 @@ export function updateManagerProfiles(snapshot: LeagueSnapshot, clock: () => Dat
       trades >= 3 ? "high" : trades >= 1 ? "moderate" : "low";
 
     profiles.push({
+      league_id: snapshot.league.league_id,
       manager_id: manager.manager_id,
       display_name: manager.display_name,
       observed_behavior_profile: {

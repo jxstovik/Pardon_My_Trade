@@ -36,9 +36,9 @@ interface SleeperRosterResponse {
   roster_id: number;
   owner_id: string;
   players: string[] | null;
-  starters: string[] | null;
-  reserve: string[] | null;
-  taxi: string[] | null;
+  starters: (string | null)[] | null;
+  reserve: (string | null)[] | null;
+  taxi: (string | null)[] | null;
   settings: { wins: number; losses: number; ties: number; fpts: number; fpts_against: number };
 }
 
@@ -101,8 +101,8 @@ export class SleeperPlatformReader implements PlatformReader {
     }
 
     const now = new Date().toISOString();
-    const teams = await this.getTeams(leagueExternalId);
     const rosterSettings = this.mapRosterSettings(data);
+    const teams = await this.getTeams(leagueExternalId);
 
     return {
       schema_version: "1.0.0",
@@ -131,6 +131,8 @@ export class SleeperPlatformReader implements PlatformReader {
   }
 
   async getTeams(leagueExternalId: string): Promise<Team[]> {
+    const league = await this.getJson<SleeperLeagueResponse>(`${this.baseUrl}/league/${leagueExternalId}`);
+    this.lastRosterPositions = league.roster_positions ?? [];
     const rosters = await this.getJson<SleeperRosterResponse[]>(`${this.baseUrl}/league/${leagueExternalId}/rosters`);
     const users = await this.getJson<SleeperUserResponse[]>(`${this.baseUrl}/league/${leagueExternalId}/users`);
     const now = new Date().toISOString();
@@ -157,6 +159,8 @@ export class SleeperPlatformReader implements PlatformReader {
   }
 
   async getRoster(leagueExternalId: string, teamExternalId: string): Promise<Roster> {
+    const league = await this.getJson<SleeperLeagueResponse>(`${this.baseUrl}/league/${leagueExternalId}`);
+    this.lastRosterPositions = league.roster_positions ?? [];
     const rosters = await this.getJson<SleeperRosterResponse[]>(`${this.baseUrl}/league/${leagueExternalId}/rosters`);
     const roster = rosters.find((r) => String(r.roster_id) === teamExternalId);
     if (!roster) {
@@ -286,15 +290,19 @@ export class SleeperPlatformReader implements PlatformReader {
 
   private mapRoster(leagueExternalId: string, roster: SleeperRosterResponse, teamExternalId: string): Roster {
     const now = new Date().toISOString();
-    const starters = (roster.starters ?? []).map((playerId, index) => ({
+    const starterPositions = (this.lastRosterPositions ?? []).filter((position) => !["BN", "IR", "TAXI"].includes(position));
+    const starterIds = (roster.starters ?? []).filter((playerId): playerId is string => Boolean(playerId));
+    const starters = starterIds.map((playerId, index) => ({
       slot_id: `${teamExternalId}-ST-${index}`,
-      slot_type: "FLEX" as PlayerPosition,
-      allowed_positions: ["QB", "RB", "WR", "TE", "K", "DST", "FLEX"] as PlayerPosition[],
+      slot_type: this.mapPosition(starterPositions[index] ?? "FLEX"),
+      allowed_positions: this.allowedPositions(starterPositions[index] ?? "FLEX"),
       locked: false,
       player_id: playerId
     }));
-    const starterSet = new Set(roster.starters ?? []);
-    const benchPlayers = (roster.players ?? []).filter((playerId) => !starterSet.has(playerId));
+    const starterSet = new Set(starterIds);
+    const reserveSet = new Set((roster.reserve ?? []).filter((playerId): playerId is string => Boolean(playerId)));
+    const taxiSet = new Set((roster.taxi ?? []).filter((playerId): playerId is string => Boolean(playerId)));
+    const benchPlayers = (roster.players ?? []).filter((playerId) => !starterSet.has(playerId) && !reserveSet.has(playerId) && !taxiSet.has(playerId));
     const bench: RosterSlot[] = benchPlayers.map((playerId, index) => ({
       slot_id: `${teamExternalId}-BN-${index}`,
       slot_type: "BN",
@@ -302,7 +310,7 @@ export class SleeperPlatformReader implements PlatformReader {
       locked: false,
       player_id: playerId
     }));
-    const injuredReserve: RosterSlot[] = (roster.reserve ?? []).map((playerId, index) => ({
+    const injuredReserve: RosterSlot[] = (roster.reserve ?? []).filter((playerId): playerId is string => Boolean(playerId)).map((playerId, index) => ({
       slot_id: `${teamExternalId}-IR-${index}`,
       slot_type: "IR",
       allowed_positions: ["QB", "RB", "WR", "TE"],
@@ -315,9 +323,25 @@ export class SleeperPlatformReader implements PlatformReader {
       starters,
       bench,
       injured_reserve: injuredReserve,
-      taxi: [],
+      taxi: Array.from(taxiSet, (playerId, index) => ({
+        slot_id: `${teamExternalId}-TAXI-${index}`,
+        slot_type: "BN",
+        allowed_positions: ["QB", "RB", "WR", "TE", "K", "DST"],
+        locked: false,
+        player_id: playerId
+      })),
       last_updated_at: now
     };
+  }
+
+  private lastRosterPositions?: string[];
+
+  private allowedPositions(position: string): PlayerPosition[] {
+    switch (position) {
+      case "FLEX": return ["RB", "WR", "TE", "FLEX"];
+      case "SUPER_FLEX": return ["QB", "RB", "WR", "TE", "SUPER_FLEX"];
+      default: return [this.mapPosition(position)];
+    }
   }
 
   private mapStandings(roster: SleeperRosterResponse): Standings {
@@ -332,6 +356,7 @@ export class SleeperPlatformReader implements PlatformReader {
   }
 
   private mapRosterSettings(league: SleeperLeagueResponse): RosterSettings {
+    this.lastRosterPositions = league.roster_positions ?? [];
     const slots = (league.roster_positions ?? []).filter((position) => position !== "TAXI" && position !== "IR");
     const counts = new Map<string, number>();
     for (const position of league.roster_positions ?? []) {

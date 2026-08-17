@@ -16,6 +16,7 @@ function snapshotWithTransactions(transactionsByTeam: Record<string, Transaction
     } as never,
     managers: Object.keys(transactionsByTeam).map((teamId) => ({
       manager_id: `mgr-${teamId}`,
+      league_id: "league-001",
       display_name: `Manager ${teamId}`,
       observed_behavior_profile: {}
     }))

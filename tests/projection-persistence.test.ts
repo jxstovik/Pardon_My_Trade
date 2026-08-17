@@ -73,3 +73,29 @@ test("in-memory: immutable snapshot still rejects duplicate save", async () => {
   await repo.saveLeagueSnapshot(snap);
   await assert.rejects(() => repo.saveLeagueSnapshot(snap), /immutable/i);
 });
+
+for (const [name, makeRepository] of [
+  ["sqlite", () => new SqliteKnowledgeRepository({ memory: true })],
+  ["in-memory", () => new InMemoryKnowledgeRepository()]
+] as const) {
+  test(`${name}: projections are isolated for leagues sharing a season`, async () => {
+    const repo = makeRepository();
+    const first = makeSnapshot([makePlayer({ full_name: "A", player_id: "p1" })], { snapshotId: `${name}-league-a`, season: "2026" });
+    const second = {
+      ...makeSnapshot([makePlayer({ full_name: "B", player_id: "p1" })], { snapshotId: `${name}-league-b`, season: "2026" }),
+      league: { ...first.league, league_id: "lg-2", external_id: "lg-2", source_record_id: "lg-2" }
+    };
+    await repo.saveLeagueSnapshot(first);
+    await repo.saveLeagueSnapshot(second);
+
+    const projection = makeProjection({ projection_id: `${name}-same-id`, player_id: "p1", source: "espn", scoring_period: "2026-ROS", projected_points: 100 });
+    await repo.upsertProjections([projection], "lg-1");
+    await repo.upsertProjections([{ ...projection, projected_points: 200 }], "lg-2");
+
+    assert.equal((await repo.getProjections("2026-ROS", "lg-1"))[0].projected_points, 100);
+    assert.equal((await repo.getProjections("2026-ROS", "lg-2"))[0].projected_points, 200);
+    assert.equal((await repo.getLeagueSnapshot(first.snapshot_id))?.projections[0].projected_points, 100);
+    assert.equal((await repo.getLeagueSnapshot(second.snapshot_id))?.projections[0].projected_points, 200);
+    if (repo instanceof SqliteKnowledgeRepository) repo.close();
+  });
+}

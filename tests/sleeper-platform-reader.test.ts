@@ -19,10 +19,10 @@ const rostersResponse = [
   {
     roster_id: 1,
     owner_id: "user-1",
-    players: ["p-qb", "p-rb1", "p-bn"],
+    players: ["p-qb", "p-rb1", "p-bn", "p-ir", "p-taxi"],
     starters: ["p-qb", "p-rb1"],
-    reserve: [],
-    taxi: [],
+    reserve: ["p-ir"],
+    taxi: ["p-taxi"],
     settings: { wins: 2, losses: 1, ties: 0, fpts: 220.5, fpts_against: 200.1 }
   },
   {
@@ -97,6 +97,11 @@ test("sleeper getTeams maps rosters and users", async () => {
   assert.equal(teams[0].name, "A-Team");
   assert.equal(teams[0].standings.wins, 2);
   assert.equal(teams[0].roster.starters.length, 2);
+  assert.equal(teams[0].roster.starters[0].slot_type, "QB");
+  assert.equal(teams[0].roster.starters[1].slot_type, "RB");
+  assert.deepEqual(teams[0].roster.injured_reserve.map((slot) => slot.player_id), ["p-ir"]);
+  assert.deepEqual(teams[0].roster.taxi.map((slot) => slot.player_id), ["p-taxi"]);
+  assert.deepEqual(teams[0].roster.bench.map((slot) => slot.player_id), ["p-bn"]);
 });
 
 test("sleeper getScoringSettings maps known scoring keys", async () => {

@@ -9,7 +9,9 @@ export interface KnowledgeRepository {
   getDecisionAudit(auditId: string): Promise<DecisionAudit | undefined>;
   listRecommendations(leagueId: string): Promise<Recommendation[]>;
   /** Persist (insert or update) projection rows; the snapshot itself stays immutable. */
-  upsertProjections(projections: Projection[]): Promise<void>;
+  /** An omitted league ID preserves the legacy, unscoped projection store. */
+  upsertProjections(projections: Projection[], leagueId?: string): Promise<void>;
   /** Return all stored projections for a scoring period (e.g. `2026-ROS`, `2026-W01`). */
-  getProjections(scoringPeriod: string): Promise<Projection[]>;
+  /** An omitted league ID returns projections across leagues for compatibility. */
+  getProjections(scoringPeriod: string, leagueId?: string): Promise<Projection[]>;
 }

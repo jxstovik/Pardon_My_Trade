@@ -155,12 +155,23 @@ export class RazzballProjectionSource implements ProjectionSource {
   private parse(html: string): ProjectionCandidate[] {
     const result = parseHtmlTables(html);
     const table = selectPlayerTable(result);
-    if (!table) return [];
-    return mapTableToCandidates(table, {
+    if (!table) throw this.schemaError("no player projection table found");
+    const candidates = mapTableToCandidates(table, {
       source: "razzball",
       fallbackPosition: slugToPosition(this.position),
       maxRows: this.maxRows,
       pointsPreference: this.ppr ? "ppr" : "std"
+    });
+    if (candidates.length === 0) throw this.schemaError("player projection table has no recognizable rows");
+    return candidates;
+  }
+
+  private schemaError(reason: string): PmtError {
+    return new PmtError({
+      code: "RAZZBALL_SCHEMA_INVALID",
+      message: `Razzball projection page schema is invalid: ${reason}.`,
+      source: "projection_source",
+      retryable: true
     });
   }
 

@@ -38,7 +38,9 @@ export function matchProjectionsToRoster(
     const candidates2 = lookup.get(normalizeName(candidate.name));
     if (!candidates2 || candidates2.length === 0) continue;
 
-    const player = candidates2.find((p) => teamMatches(candidate, p)) ?? candidates2[0];
+    const teamMatchesFound = candidates2.filter((p) => teamMatches(candidate, p));
+    if (teamMatchesFound.length !== 1) continue;
+    const player = teamMatchesFound[0];
     matched.push({
       schema_version: "1.0.0",
       created_at: "",

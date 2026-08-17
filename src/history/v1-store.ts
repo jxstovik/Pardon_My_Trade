@@ -43,11 +43,11 @@ export class InMemoryV1Store implements V1Store {
   }
 
   async saveManagerProfile(profile: ManagerProfileRecord): Promise<void> {
-    this.profiles.set(profile.manager_id, profile);
+    this.profiles.set(`${profile.league_id}:${profile.manager_id}`, profile);
   }
 
-  async getManagerProfiles(_leagueId: string): Promise<ManagerProfileRecord[]> {
-    return Array.from(this.profiles.values());
+  async getManagerProfiles(leagueId: string): Promise<ManagerProfileRecord[]> {
+    return Array.from(this.profiles.values()).filter((profile) => profile.league_id === leagueId);
   }
 
   async saveNotification(record: NotificationRecord): Promise<void> {

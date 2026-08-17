@@ -343,33 +343,37 @@ export async function runWaiverSweepJob(deps: SeasonJobDeps = {}): Promise<Seaso
 /** The three in-season jobs, ready to hand to a `Scheduler`. */
 export function buildSeasonJobs(deps: SeasonJobDeps = {}): ScheduledJob[] {
   const schedule = times(deps);
+  let running = false;
+  const guarded = (job: () => Promise<void>): (() => Promise<void>) => async () => {
+    if (running) return;
+    running = true;
+    try {
+      await job();
+    } finally {
+      running = false;
+    }
+  };
   return [
     {
       jobId: "season-daily",
       name: "Daily projections + advisory loop",
       time: schedule.daily,
       days: [...DAILY_JOB_DAYS],
-      handler: async () => {
-        await runDailySeasonJob(deps);
-      }
+      handler: guarded(async () => { await runDailySeasonJob(deps); })
     },
     {
       jobId: "season-lineup-lock",
       name: "Sunday lineup-lock reminder",
       time: schedule.lineupLock,
       days: [SUNDAY],
-      handler: async () => {
-        await runLineupLockJob(deps);
-      }
+      handler: guarded(async () => { await runLineupLockJob(deps); })
     },
     {
       jobId: "season-waiver-sweep",
       name: "Tuesday waiver + trade sweep",
       time: schedule.waiverSweep,
       days: [TUESDAY],
-      handler: async () => {
-        await runWaiverSweepJob(deps);
-      }
+      handler: guarded(async () => { await runWaiverSweepJob(deps); })
     }
   ];
 }

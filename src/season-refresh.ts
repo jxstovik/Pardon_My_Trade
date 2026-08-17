@@ -86,7 +86,7 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
     }
   }
 
-  await repository.upsertProjections(stored);
+  await repository.upsertProjections(stored, snapshot.league.league_id);
 
   // Re-read so the snapshot carries the freshly stored projections, then
   // rebuild priors/models from them.
@@ -125,7 +125,7 @@ export async function persistCandidates(
 ): Promise<number> {
   const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];
   const matched = matchProjectionsToRoster(candidates, rosterPlayers, scoringPeriod, source.name);
-  await repository.upsertProjections(matched);
+  await repository.upsertProjections(matched, snapshot.league.league_id);
   const modelStore = new JsonModelStore(join(dataDir, "models.json"));
   const priors = buildPriorsFromSnapshot(snapshot);
   const models = buildModelsForOrchestrator(priors, []);

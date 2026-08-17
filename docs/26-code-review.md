@@ -100,3 +100,51 @@ Recommended fix: add a durable run lock with an expiry, expose skipped-overlap s
 6. Harden API path handling and refresh authorization.
 7. Correct Sleeper roster-slot and reserve mapping.
 8. Improve matching ambiguity, source failure reporting, transactionality, and scheduler locking.
+
+## Fix Status
+
+The priority findings were addressed on `code-review` after the review. Status below records what is implemented and what still requires provider or deployment validation.
+
+### 1. Imported GUI and scheduler refresh
+
+**Status: implemented with a caveat.** Serve and scheduled refresh now resolve the active imported snapshot, league, season, platform identity, and team instead of hard-coding the demo league. The existing refresh engine still consumes a temporary snapshot through its fixture-shaped interface; it no longer substitutes demo data, but a future adapter-native refresh would remove that compatibility bridge.
+
+### 2. Approval-to-platform execution
+
+**Status: implemented for ESPN CLI approval.** Queue records now retain execution attempts, stable idempotency keys, provider responses, and structured errors. `action-approve` resolves the active ESPN snapshot and calls `setRoster`, `addDrop`, or `proposeTrade` only after approval; failed approved actions can be retried, and successful actions are replay-safe inside the queue.
+
+**Caveat:** ESPN provider writes do not currently accept or persist the queue idempotency key server-side. A process crash after ESPN accepts a write but before the queue records success could still duplicate a provider operation. Sleeper and fixture actions are explicitly rejected because they have no write adapter.
+
+### 3. League-scoped persistence
+
+**Status: implemented.** SQLite and in-memory projections are scoped by league, snapshot hydration filters by league, and refresh callers pass the active league ID. Manager profiles now carry league IDs and are filtered in both stores. Existing callers that omit a projection league ID retain an explicitly documented legacy unscoped mode.
+
+### 4. Portable test workflow
+
+**Status: implemented.** Builds clean `dist` with a cross-platform Node clean command, and `npm test` uses an explicit compiled test glob. Verification completed with `181` passing tests and `0` failures.
+
+### 5. Provider response coverage
+
+**Status: substantially implemented.** ESPN current nested roster-player normalization is covered by the live 2025 import and endpoint regression coverage; Razzball schema failures now report degraded status; and `tests/live-provider-smoke.test.ts` provides opt-in ESPN, Razzball, and FFToday smoke tests. The smoke tests passed in this workspace with the existing provider access. Free-agent pagination, ESPN scoring-item conversion, write response variations, live NFL schedule data, and live Sleeper data still require targeted validation.
+
+### 6. API hardening
+
+**Status: implemented for the local-server threat model.** Static file paths are constrained to the public root, refresh is loopback-only, refresh calls are serialized, the CLI binds to `127.0.0.1`, and `PMT_API_TOKEN` can require a bearer token. The API remains intentionally local and has no general user authentication or multi-user authorization model.
+
+### 7. Sleeper roster mapping
+
+**Status: implemented.** Starter positions now follow the league roster slots, reserve players are excluded from bench duplication, and taxi/reserve slots are represented separately. Superflex and reserve regression tests were added.
+
+### 8. Matching, source errors, refresh validation, and scheduler overlap
+
+**Status: implemented with deployment caveats.** Ambiguous name matches are skipped instead of guessed, Razzball invalid schemas are reported, refresh validates the team before saving a snapshot, and season jobs share an in-process overlap guard.
+
+**Caveats:** refresh persistence across multiple stores is not a single cross-store transaction, and the scheduler lock is process-local rather than durable across multiple processes or machines. A durable lock and provider-specific source smoke tests remain appropriate before unattended deployment.
+
+## Remaining Recommended Work
+
+- Add opt-in live ESPN, Razzball, and FFToday smoke tests with sanitized assertions.
+- Add provider-side idempotency or reconciliation before enabling unattended retries for ESPN writes.
+- Replace the fixture-shaped refresh bridge with a platform-native refresh pipeline.
+- Add durable cross-process scheduler/action locks if more than one PMT process can run against a data directory.
+- Add a migration for existing manager-profile rows so legacy rows without `league_id` are explicitly quarantined or backfilled.

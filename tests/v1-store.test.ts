@@ -18,7 +18,7 @@ function history(id: string): HistoricalRecord {
 }
 
 function profile(id: string): ManagerProfileRecord {
-  return { manager_id: id, display_name: id, observed_behavior_profile: {}, updated_at: "" };
+  return { league_id: "league-001", manager_id: id, display_name: id, observed_behavior_profile: {}, updated_at: "" };
 }
 
 function notification(id: string): NotificationRecord {

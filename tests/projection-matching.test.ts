@@ -35,12 +35,19 @@ test("matchProjectionsToRoster re-keys ESPN projections to roster player_id", ()
   assert.equal(cmc?.projection_id, "espn-sl-1-2025-W01");
 });
 
-test("matchProjectionsToRoster falls back by name when team mismatches", () => {
+test("matchProjectionsToRoster rejects a team mismatch instead of guessing", () => {
   const players = [player("sl-1", "Christian McCaffrey", "SF")];
   const candidates: ProjectionCandidate[] = [
     { name: "Christian McCaffrey", team: "XX", positions: ["RB"], projected_stats: {}, projected_points: 20, floor: 14, ceiling: 26, confidence: 0.7 }
   ];
   const projections = matchProjectionsToRoster(candidates, players, "2025-W01", "espn");
-  assert.equal(projections.length, 1);
-  assert.equal(projections[0].player_id, "sl-1");
+  assert.equal(projections.length, 0);
+});
+
+test("matchProjectionsToRoster skips ambiguous same-name players", () => {
+  const players = [player("sl-1", "Jordan Smith", "SF"), player("sl-2", "Jordan Smith", "DAL")];
+  const projections = matchProjectionsToRoster([
+    { name: "Jordan Smith", team: "", positions: ["RB"], projected_stats: {}, projected_points: 20, floor: 14, ceiling: 26, confidence: 0.7 }
+  ], players, "2025-W01", "espn");
+  assert.equal(projections.length, 0);
 });

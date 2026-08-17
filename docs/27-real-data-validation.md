@@ -15,7 +15,7 @@ The following areas are currently tested without live provider requests:
 - Database tests use in-memory repositories or temporary SQLite databases, not upgrades of an existing production database.
 - Model artifact tests depend on generated files that are not reproducible from the normal build.
 
-No automated test currently makes a real ESPN, NFL, Sleeper, Razzball, or FFToday request. The following remain unverified until user testing is performed:
+The opt-in `tests/live-provider-smoke.test.ts` makes real ESPN, Razzball, and FFToday requests only when `PMT_LIVE_TESTS=1`; it is skipped by default and must never receive CI secrets. No automated test makes a real NFL schedule or Sleeper request. The following remain unverified until user testing is performed:
 
 - ESPN cookie authentication and authorization for private leagues.
 - ESPN current response shape beyond the imported 2025 league path.
@@ -27,6 +27,14 @@ No automated test currently makes a real ESPN, NFL, Sleeper, Razzball, or FFToda
 - Real projection matching against current player names, trades, rookies, and duplicate names.
 - Live draft feed timing, reconnect behavior, and conflict resolution.
 - Cross-process SQLite, model, notification, and action-queue behavior.
+
+Run the provider smoke tests manually with credentials and network access:
+
+```bash
+PMT_LIVE_TESTS=1 npm test
+```
+
+Use a disposable cache/data directory and do not run this command in CI unless provider credentials are explicitly provisioned for a protected environment.
 
 ## Recommended User Tests
 

@@ -255,3 +255,24 @@ test("registered season jobs fire through the scheduler on their day", async () 
   assert.deepEqual(ran, ["season-lineup-lock", "season-waiver-sweep"]);
   scheduler.stop();
 });
+
+test("registered season jobs do not overlap", async () => {
+  let release: (() => void) | undefined;
+  let started = 0;
+  const { deps: jobDeps } = deps({
+    orchestrate: async () => {
+      started++;
+      await new Promise<void>((resolve) => { release = resolve; });
+      return orchestrationSummary();
+    }
+  });
+  const scheduler = new InMemoryScheduler();
+  registerSeasonJobs(scheduler, jobDeps);
+  const first = scheduler.runDue(new Date(2026, 8, 13, 11, 0, 0));
+  await new Promise<void>((resolve) => setImmediate(resolve));
+  const second = scheduler.runDue(new Date(2026, 8, 13, 11, 0, 0));
+  release?.();
+  await Promise.all([first, second]);
+  assert.equal(started, 1);
+  scheduler.stop();
+});

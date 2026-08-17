@@ -39,6 +39,9 @@ test("api server serves health, league, refresh, and recommendations", async () 
     const refreshRes = await (await fetch(`${base}/api/refresh`, { method: "POST" })).json();
     assert.equal(refreshRes.weekly_report_id, "rec-1");
 
+    const traversal = await fetch(`${base}/%2e%2e/package.json`);
+    assert.equal(traversal.status, 404);
+
     const recommendations = await (await fetch(`${base}/api/recommendations`)).json();
     assert.ok(Array.isArray(recommendations));
 

@@ -20,7 +20,7 @@ test("runSeasonRefresh pulls espn, persists matched projections, rebuilds models
   try {
     const repository = new SqliteKnowledgeRepository({ memory: true });
     const snapshot = makeSnapshot(
-      [makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"] })],
+      [makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"], team: "SF" })],
       { snapshotId: "snap-sr", season: "2026" }
     );
     await repository.saveLeagueSnapshot(snapshot);

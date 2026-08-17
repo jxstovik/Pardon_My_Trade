@@ -1,6 +1,18 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
-import type { AgentAction, ActionStatus, QueuedAction, RiskLevel } from "./types.js";
+import type {
+  ActionExecution,
+  ActionExecutionError,
+  AgentAction,
+  ActionStatus,
+  QueuedAction,
+  RiskLevel
+} from "./types.js";
+
+export type ActionProvider<TAction extends AgentAction, TResponse> = (
+  action: TAction,
+  context: { readonly actionId: string; readonly idempotencyKey: string }
+) => Promise<TResponse>;
 
 export interface ActionQueueStore {
   list(): Promise<QueuedAction[]>;
@@ -66,16 +78,18 @@ export class JsonActionQueueStore implements ActionQueueStore {
 }
 
 export class ActionQueue {
+  private readonly executing = new Set<string>();
+
   constructor(private readonly store: ActionQueueStore) {}
 
-  async enqueue(
-    action: AgentAction,
+  async enqueue<TAction extends AgentAction>(
+    action: TAction,
     risk: RiskLevel,
     rationale: string,
     ttlMs = 24 * 60 * 60 * 1000
-  ): Promise<QueuedAction> {
+  ): Promise<QueuedAction<TAction>> {
     const now = new Date();
-    const queued: QueuedAction = {
+    const queued: QueuedAction<TAction> = {
       actionId: `act-${now.getTime()}-${Math.random().toString(36).slice(2, 8)}`,
       action,
       risk,
@@ -109,6 +123,67 @@ export class ActionQueue {
     };
     await this.store.save(updated);
     return updated;
+  }
+
+  /**
+   * Execute an approved action through a provider. Approval is deliberately a
+   * prerequisite: enqueueing or approving never calls the provider.
+   * A successful execution is idempotent and returns the recorded response.
+   */
+  async execute<TAction extends AgentAction, TResponse>(
+    actionId: string,
+    provider: ActionProvider<TAction, TResponse>
+  ): Promise<QueuedAction<TAction, TResponse>> {
+    const existing = await this.store.get(actionId) as QueuedAction<TAction, TResponse> | undefined;
+    if (!existing) throw new Error(`Action ${actionId} not found in queue.`);
+    if (existing.status === "executed" && existing.execution?.status === "succeeded") return existing;
+    if (existing.status !== "approved") {
+      throw new Error(`Action ${actionId} must be approved before it can be executed.`);
+    }
+    if (existing.execution?.status === "running" || this.executing.has(actionId)) {
+      throw new Error(`Action ${actionId} is already executing.`);
+    }
+
+    const prior = existing.execution;
+    const idempotencyKey = prior?.idempotencyKey ?? actionId;
+    const running: ActionExecution<TResponse> = {
+      status: "running",
+      idempotencyKey,
+      attempts: (prior?.attempts ?? 0) + 1,
+      startedAt: new Date().toISOString()
+    };
+    this.executing.add(actionId);
+    try {
+      await this.store.save({ ...existing, execution: running });
+    } catch (error) {
+      this.executing.delete(actionId);
+      throw error;
+    }
+
+    try {
+      const providerResponse = await provider(existing.action, { actionId, idempotencyKey });
+      const execution: ActionExecution<TResponse> = {
+        ...running,
+        status: "succeeded",
+        completedAt: new Date().toISOString(),
+        providerResponse
+      };
+      const executed: QueuedAction<TAction, TResponse> = { ...existing, status: "executed", execution };
+      await this.store.save(executed);
+      return executed;
+    } catch (error) {
+      const execution: ActionExecution<TResponse> = {
+        ...running,
+        status: "failed",
+        completedAt: new Date().toISOString(),
+        error: toActionExecutionError(error)
+      };
+      const failed: QueuedAction<TAction, TResponse> = { ...existing, execution };
+      await this.store.save(failed);
+      throw error;
+    } finally {
+      this.executing.delete(actionId);
+    }
   }
 
   async reject(actionId: string): Promise<QueuedAction> {
@@ -161,6 +236,14 @@ export class ActionQueue {
   }
 }
 
+function toActionExecutionError(error: unknown): ActionExecutionError {
+  if (error instanceof Error) {
+    const code = "code" in error && typeof error.code === "string" ? error.code : undefined;
+    return code ? { name: error.name, message: error.message, code } : { name: error.name, message: error.message };
+  }
+  return { name: "ProviderError", message: String(error) };
+}
+
 export function classifyRisk(action: AgentAction): RiskLevel {
   switch (action.type) {
     case "set_roster":
@@ -173,5 +256,5 @@ export function classifyRisk(action: AgentAction): RiskLevel {
 }
 
 export function isTerminal(status: ActionStatus): boolean {
-  return status !== "pending";
+  return status === "rejected" || status === "expired" || status === "executed";
 }

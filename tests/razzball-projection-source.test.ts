@@ -60,3 +60,13 @@ test("optional premium source falls back to no candidates when the session is mi
   assert.deepEqual(await source.fetchProjections("football", "2026", "2026-W01"), []);
   assert.match(source.lastSkipReason ?? "", /premium/i);
 });
+
+test("Razzball reports an invalid projection schema", async () => {
+  const { cache, cleanup } = await isolatedCache();
+  try {
+    const source = new RazzballProjectionSource({ position: "rb", fetchImpl: fakeFetch("<html>login page</html>"), cache });
+    await assert.rejects(() => source.fetchProjections("football", "2026", "2026-ROS"), /schema is invalid/i);
+  } finally {
+    await cleanup();
+  }
+});

@@ -5,8 +5,8 @@
   "description": "Recommendation-only fantasy sports general manager (MVP + V1).",
   "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "clean": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/clean.ps1",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "clean": "node --input-type=module -e \"import { rmSync } from 'node:fs'; rmSync('dist', {recursive:true, force:true})\"",
     "lint": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test dist/tests/*.test.js",
     "serve": "npm run build && npm run pmt -- serve",

@@ -52,7 +52,7 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
     // Attach the latest stored projections for this league's season so the
     // snapshot reflects fresh pulls without mutating the immutable snapshot row.
     const season = snapshot.league.season;
-    const stored = await this.getProjectionsBySeason(season);
+    const stored = await this.getProjectionsBySeason(season, snapshot.league.league_id);
     if (stored.length > 0) {
       const merged = [...snapshot.projections];
       for (const p of stored) {
@@ -116,11 +116,11 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
     return rows.map((row) => JSON.parse(row.data) as Recommendation);
   }
 
-  async upsertProjections(projections: Projection[]): Promise<void> {
+  async upsertProjections(projections: Projection[], leagueId?: string): Promise<void> {
     const stmt = this.db.prepare(
       `INSERT INTO projections (projection_id, player_id, source, scoring_period, league_id, data, created_at, updated_at)
        VALUES (@projection_id, @player_id, @source, @scoring_period, @league_id, @data, @ts, @ts)
-       ON CONFLICT(projection_id) DO UPDATE SET
+       ON CONFLICT(league_id, projection_id) DO UPDATE SET
          player_id = excluded.player_id,
          source = excluded.source,
          scoring_period = excluded.scoring_period,
@@ -136,7 +136,7 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
           player_id: p.player_id,
           source: p.source,
           scoring_period: p.scoring_period,
-          league_id: "",
+          league_id: leagueId ?? "",
           data: JSON.stringify(p),
           ts
         });
@@ -145,17 +145,17 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
     tx(projections);
   }
 
-  async getProjections(scoringPeriod: string): Promise<Projection[]> {
-    const rows = this.db
-      .prepare("SELECT data FROM projections WHERE scoring_period = ?")
-      .all(scoringPeriod) as Array<{ data: string }>;
+  async getProjections(scoringPeriod: string, leagueId?: string): Promise<Projection[]> {
+    const rows = (leagueId === undefined
+      ? this.db.prepare("SELECT data FROM projections WHERE scoring_period = ?").all(scoringPeriod)
+      : this.db.prepare("SELECT data FROM projections WHERE scoring_period = ? AND league_id = ?").all(scoringPeriod, leagueId)) as Array<{ data: string }>;
     return rows.map((row) => JSON.parse(row.data) as Projection);
   }
 
-  private async getProjectionsBySeason(season: string): Promise<Projection[]> {
+  private async getProjectionsBySeason(season: string, leagueId: string): Promise<Projection[]> {
     const rows = this.db
-      .prepare("SELECT data FROM projections WHERE scoring_period LIKE ?")
-      .all(`${season}-%`) as Array<{ data: string }>;
+      .prepare("SELECT data FROM projections WHERE scoring_period LIKE ? AND (league_id = ? OR league_id = '')")
+      .all(`${season}-%`, leagueId) as Array<{ data: string }>;
     return rows.map((row) => JSON.parse(row.data) as Projection);
   }
 
@@ -188,17 +188,33 @@ export class SqliteKnowledgeRepository implements KnowledgeRepository {
       );
       CREATE INDEX IF NOT EXISTS idx_recommendations_league ON recommendations(league_id);
       CREATE TABLE IF NOT EXISTS projections (
-        projection_id TEXT PRIMARY KEY,
+        projection_id TEXT NOT NULL,
         player_id TEXT NOT NULL,
         source TEXT NOT NULL,
         scoring_period TEXT NOT NULL,
         league_id TEXT NOT NULL,
         data TEXT NOT NULL,
         created_at TEXT NOT NULL,
-        updated_at TEXT
+        updated_at TEXT,
+        PRIMARY KEY (league_id, projection_id)
       );
       CREATE INDEX IF NOT EXISTS idx_projections_period ON projections(scoring_period);
       CREATE INDEX IF NOT EXISTS idx_projections_player ON projections(player_id);
     `);
+    const primaryKey = this.db.prepare("PRAGMA table_info(projections)").all() as Array<{ pk: number }>;
+    if (primaryKey.filter((column) => column.pk > 0).length === 1) {
+      this.db.exec(`
+        CREATE TABLE projections_scoped (
+          projection_id TEXT NOT NULL, player_id TEXT NOT NULL, source TEXT NOT NULL,
+          scoring_period TEXT NOT NULL, league_id TEXT NOT NULL, data TEXT NOT NULL,
+          created_at TEXT NOT NULL, updated_at TEXT, PRIMARY KEY (league_id, projection_id)
+        );
+        INSERT INTO projections_scoped SELECT projection_id, player_id, source, scoring_period, league_id, data, created_at, updated_at FROM projections;
+        DROP TABLE projections;
+        ALTER TABLE projections_scoped RENAME TO projections;
+        CREATE INDEX IF NOT EXISTS idx_projections_period ON projections(scoring_period);
+        CREATE INDEX IF NOT EXISTS idx_projections_player ON projections(player_id);
+      `);
+    }
   }
 }

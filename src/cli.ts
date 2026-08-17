@@ -44,6 +44,7 @@ import type { V1Store } from "./history/v1-store.js";
 import type { NotificationProvider } from "./notifications/notification-provider.js";
 import type { ModelPrior, Observation } from "./probabilistic/bayesian-model.js";
 import type { OrchestratorInput } from "./agents/types.js";
+import type { LeagueSnapshot } from "./models/types.js";
 
 const command = process.argv[2] ?? "help";
 
@@ -188,31 +189,40 @@ async function main(): Promise<void> {
         // No previously imported snapshot; fall back to the fixture.
       }
 
-      const doRefresh = () => runRefresh({
-        fixturePath: config.fixturePath,
-        newsPath,
-        leagueExternalId: "pmt-demo-football",
-        teamExternalId: "team-001",
-        repository,
-        v1Store,
-        ruleEngine,
-        decisionEngine,
-        recommendationEngine,
-        notificationProviders: [
-          new ConsoleNotificationProvider(),
-          new FileNotificationProvider(join(dataDir, "notifications.log"))
-        ]
-      });
+      let activeSnapshot = initialSnapshot;
+      const providers = [
+        new ConsoleNotificationProvider(),
+        new FileNotificationProvider(join(dataDir, "notifications.log"))
+      ];
+      const doRefresh = async () => {
+        const summary = await runSnapshotRefresh(activeSnapshot, dataDir, {
+          newsPath,
+          repository,
+          v1Store,
+          ruleEngine,
+          decisionEngine,
+          recommendationEngine,
+          notificationProviders: providers
+        });
+        activeSnapshot = await repository.getLeagueSnapshot(summary.snapshot_id) ?? activeSnapshot;
+        return summary;
+      };
 
       const port = Number(process.env.PMT_PORT ?? 3000);
-      const server = createApiServer({ repository, v1Store, refresh: doRefresh, initialSnapshot });
-      server.listen(port, () => {
+      const server = createApiServer({
+        repository,
+        v1Store,
+        refresh: doRefresh,
+        initialSnapshot,
+        refreshToken: process.env.PMT_API_TOKEN
+      });
+      server.listen(port, "127.0.0.1", () => {
         console.log(`Pardon My Trade GUI running at http://localhost:${port}`);
       });
 
       if (process.argv.includes("--scheduler")) {
         const scheduler = new InMemoryScheduler();
-        const jobs = registerSeasonJobs(scheduler, buildSeasonJobDeps(dataDir, { repository, v1Store }));
+        const jobs = registerSeasonJobs(scheduler, buildSeasonJobDeps(dataDir, { repository, v1Store, snapshot: activeSnapshot }));
         scheduler.start();
         console.log(`Season scheduler started: ${jobs.map((job) => `${job.jobId}@${job.time}`).join(", ")}`);
       }
@@ -373,8 +383,41 @@ async function main(): Promise<void> {
       if (!actionId) throw new Error("action-approve requires an action id: pmt action-approve <actionId>");
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
       const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
-      const approved = await queue.approve(actionId);
-      console.log(JSON.stringify({ actionId: approved.actionId, status: approved.status }, null, 2));
+      const existing = await queue.get(actionId);
+      if (!existing) throw new Error(`Action ${actionId} not found in queue.`);
+      const approved = existing.status === "approved" ? existing : await queue.approve(actionId);
+      const snapshot = await loadActiveSnapshotForAction(dataDir);
+      if (snapshot.league.platform !== "espn") {
+        throw new Error(`Approved action execution is not supported for platform ${snapshot.league.platform}.`);
+      }
+      const reader = new EspnPlatformReader({
+        credentials: {
+          leagueId: snapshot.league.external_id,
+          season: snapshot.league.season,
+          espnS2: process.env.ESPN_S2,
+          swid: process.env.SWID
+        }
+      });
+      const executed = await queue.execute(approved.actionId, async (action) => {
+        switch (action.type) {
+          case "set_roster":
+            return reader.setRoster(action.teamId, action.starters);
+          case "add_drop":
+            return reader.addDrop(action.teamId, action.addPlayerIds, action.dropPlayerIds);
+          case "propose_trade":
+            return reader.proposeTrade(
+              action.fromTeamId,
+              action.toTeamId,
+              action.givePlayerIds,
+              action.receivePlayerIds
+            );
+        }
+      });
+      console.log(JSON.stringify({
+        actionId: executed.actionId,
+        status: executed.status,
+        execution: executed.execution
+      }, null, 2));
       return;
     }
     case "action-reject": {
@@ -577,7 +620,7 @@ async function main(): Promise<void> {
  */
 function buildSeasonJobDeps(
   dataDir: string,
-  shared?: { repository: KnowledgeRepository; v1Store: V1Store }
+  shared?: { repository: KnowledgeRepository; v1Store: V1Store; snapshot?: LeagueSnapshot }
 ): SeasonJobDeps {
   const config = createDefaultConfig();
   const repository = shared?.repository ?? new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
@@ -591,20 +634,23 @@ function buildSeasonJobDeps(
     new FileNotificationProvider(join(dataDir, "notifications.log"))
   ];
 
-  return {
-    dataDir,
-    refresh: () => runRefresh({
-      fixturePath: config.fixturePath,
+  const refresh = async () => {
+    const snapshot = shared?.snapshot ?? await loadActiveRefreshSnapshot(dataDir, repository, config.fixturePath);
+    return runSnapshotRefresh(snapshot, dataDir, {
       newsPath,
-      leagueExternalId: process.env.PMT_LEAGUE_EXTERNAL_ID ?? "pmt-demo-football",
-      teamExternalId: process.env.PMT_TEAM_EXTERNAL_ID ?? "team-001",
       repository,
       v1Store,
       ruleEngine,
       decisionEngine,
       recommendationEngine,
       notificationProviders: providers
-    }),
+    });
+  };
+
+  return {
+    dataDir,
+    refresh,
+    teamId: process.env.PMT_TEAM_EXTERNAL_ID ?? shared?.snapshot?.league.teams[0]?.external_id,
     seasonRefresh: (options) => runSeasonRefresh({ ...options, repository }),
     orchestrate: (options) => runSeasonOrchestration({ ...options, repository }),
     notify: async (notifications) => {
@@ -619,6 +665,56 @@ function buildSeasonJobDeps(
       console.log(JSON.stringify(result));
     }
   };
+}
+
+async function loadActiveRefreshSnapshot(
+  dataDir: string,
+  repository: KnowledgeRepository,
+  fixturePath: string
+): Promise<LeagueSnapshot> {
+  try {
+    const pointer = JSON.parse(await readFile(join(dataDir, "last-snapshot.json"), "utf8")) as { snapshot_id?: string };
+    if (pointer.snapshot_id) {
+      const snapshot = await repository.getLeagueSnapshot(pointer.snapshot_id);
+      if (snapshot) return snapshot;
+    }
+  } catch {
+    // Fall back to the configured fixture for a fresh, fixture-only run.
+  }
+  return loadFixtureSnapshotSource(fixturePath);
+}
+
+async function loadActiveSnapshotForAction(dataDir: string): Promise<LeagueSnapshot> {
+  const pointer = JSON.parse(await readFile(join(dataDir, "last-snapshot.json"), "utf8")) as {
+    snapshot_id?: string;
+  };
+  if (!pointer.snapshot_id) {
+    throw new Error("No imported snapshot pointer found; run `pmt import-espn <leagueId>` first.");
+  }
+  const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+  const snapshot = await repository.getLeagueSnapshot(pointer.snapshot_id);
+  repository.close();
+  if (!snapshot) {
+    throw new Error("The active imported snapshot was not found in the repository.");
+  }
+  return snapshot;
+}
+
+async function runSnapshotRefresh(
+  snapshot: LeagueSnapshot,
+  dataDir: string,
+  options: Omit<Parameters<typeof runRefresh>[0], "fixturePath" | "leagueExternalId" | "teamExternalId">
+): ReturnType<typeof runRefresh> {
+  const fixturePath = join(dataDir, "active-refresh-snapshot.json");
+  await writeFile(fixturePath, JSON.stringify(snapshot), "utf8");
+  const teamExternalId = process.env.PMT_TEAM_EXTERNAL_ID ?? snapshot.league.teams[0]?.external_id;
+  if (!teamExternalId) throw new Error(`No team is available in league ${snapshot.league.external_id}.`);
+  return runRefresh({
+    ...options,
+    fixturePath,
+    leagueExternalId: snapshot.league.external_id,
+    teamExternalId
+  });
 }
 
 function resolveDraftStore(): string {

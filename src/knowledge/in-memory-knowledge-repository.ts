@@ -12,7 +12,7 @@ export class InMemoryKnowledgeRepository implements KnowledgeRepository {
   private readonly snapshots = new Map<string, LeagueSnapshot>();
   private readonly recommendations = new Map<string, Recommendation>();
   private readonly audits = new Map<string, DecisionAudit>();
-  private readonly projections = new Map<string, Projection>();
+  private readonly projections = new Map<string, { projection: Projection; leagueId?: string }>();
 
   constructor(options: InMemoryKnowledgeOptions = {}) {
     for (const snapshot of options.snapshots ?? []) {
@@ -42,7 +42,7 @@ export class InMemoryKnowledgeRepository implements KnowledgeRepository {
     const snapshot = this.snapshots.get(snapshotId);
     if (!snapshot) return undefined;
     const season = snapshot.league.season;
-    const stored = this.storedForSeason(season);
+    const stored = this.storedForSeason(season, snapshot.league.league_id);
     if (stored.length > 0) {
       const merged = [...snapshot.projections];
       for (const p of stored) {
@@ -77,15 +77,21 @@ export class InMemoryKnowledgeRepository implements KnowledgeRepository {
     );
   }
 
-  async upsertProjections(projections: Projection[]): Promise<void> {
-    for (const p of projections) this.projections.set(p.projection_id, p);
+  async upsertProjections(projections: Projection[], leagueId?: string): Promise<void> {
+    for (const p of projections) {
+      this.projections.set(`${leagueId ?? ""}|${p.projection_id}`, { projection: p, leagueId });
+    }
   }
 
-  async getProjections(scoringPeriod: string): Promise<Projection[]> {
-    return Array.from(this.projections.values()).filter((p) => p.scoring_period === scoringPeriod);
+  async getProjections(scoringPeriod: string, leagueId?: string): Promise<Projection[]> {
+    return Array.from(this.projections.values())
+      .filter((entry) => entry.projection.scoring_period === scoringPeriod && (leagueId === undefined || entry.leagueId === leagueId))
+      .map((entry) => entry.projection);
   }
 
-  private storedForSeason(season: string): Projection[] {
-    return Array.from(this.projections.values()).filter((p) => p.scoring_period.startsWith(`${season}-`));
+  private storedForSeason(season: string, leagueId: string): Projection[] {
+    return Array.from(this.projections.values())
+      .filter((entry) => entry.projection.scoring_period.startsWith(`${season}-`) && (entry.leagueId === leagueId || entry.leagueId === undefined))
+      .map((entry) => entry.projection);
   }
 }

@@ -45,6 +45,7 @@ export interface HistoricalRecord {
 }
 
 export interface ManagerProfileRecord {
+  readonly league_id: string;
   readonly manager_id: string;
   readonly display_name: string;
   readonly observed_behavior_profile: Record<string, unknown>;

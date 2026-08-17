@@ -1,6 +1,6 @@
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from "node:http";
 import { readFile } from "node:fs/promises";
-import { extname, join, normalize } from "node:path";
+import { extname, join, relative, resolve } from "node:path";
 import type { KnowledgeRepository } from "../knowledge/repository.js";
 import type { V1Store } from "../history/v1-store.js";
 import type { LeagueSnapshot, Recommendation } from "../models/types.js";
@@ -15,6 +15,8 @@ export interface ApiServerDeps {
   readonly initialSnapshot?: LeagueSnapshot;
   readonly publicDir?: string;
   readonly draft?: DraftController;
+  /** When set, refresh requires `Authorization: Bearer <token>`. */
+  readonly refreshToken?: string;
 }
 
 const CONTENT_TYPES: Record<string, string> = {
@@ -30,7 +32,9 @@ export interface ApiServer extends Server {
 
 export function createApiServer(deps: ApiServerDeps): ApiServer {
   const publicDir = deps.publicDir ?? join(process.cwd(), "public");
+  const publicRoot = resolve(publicDir);
   const state: { snapshot?: LeagueSnapshot } = { snapshot: deps.initialSnapshot };
+  let refreshInFlight = false;
 
   const server = createServer((req, res) => {
     void handle(req, res).catch((error: unknown) => {
@@ -81,12 +85,29 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
     }
 
     if (path === "/api/refresh" && req.method === "POST") {
-      const summary = await deps.refresh();
-      const refreshed = state.snapshot
-        ? await deps.repository.getLeagueSnapshot(summary.snapshot_id)
-        : undefined;
-      if (refreshed) state.snapshot = refreshed;
-      sendJson(res, 200, summary);
+      if (!isLoopbackRequest(req, url)) {
+        sendJson(res, 403, { error: "refresh is available only from localhost" });
+        return;
+      }
+      if (deps.refreshToken && req.headers.authorization !== `Bearer ${deps.refreshToken}`) {
+        sendJson(res, 401, { error: "refresh authorization required" });
+        return;
+      }
+      if (refreshInFlight) {
+        sendJson(res, 409, { error: "refresh already in progress" });
+        return;
+      }
+      refreshInFlight = true;
+      try {
+        const summary = await deps.refresh();
+        const refreshed = state.snapshot
+          ? await deps.repository.getLeagueSnapshot(summary.snapshot_id)
+          : undefined;
+        if (refreshed) state.snapshot = refreshed;
+        sendJson(res, 200, summary);
+      } finally {
+        refreshInFlight = false;
+      }
       return;
     }
 
@@ -144,7 +165,19 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
     }
 
     if (path.startsWith("/public/") || extname(path) !== "") {
-      const safePath = normalize(join(publicDir, path.replace(/^\/public\//, "")));
+      let requestedPath: string;
+      try {
+        requestedPath = decodeURIComponent(path.replace(/^\/public\//, ""));
+      } catch {
+        sendJson(res, 400, { error: "invalid path" });
+        return;
+      }
+      const safePath = resolve(publicRoot, requestedPath);
+      const outsideRoot = relative(publicRoot, safePath).startsWith("..") || resolve(safePath) === resolve("/");
+      if (outsideRoot) {
+        sendJson(res, 404, { error: "Not found" });
+        return;
+      }
       await serveFile(res, safePath);
       return;
     }
@@ -165,6 +198,19 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
   }
 
   return server;
+}
+
+function isLoopbackRequest(req: IncomingMessage, url: URL): boolean {
+  const host = (req.headers.host ?? url.host).split(":")[0].replace(/^\[/, "").replace(/\]$/, "");
+  if (!(["localhost", "127.0.0.1", "::1"].includes(host))) return false;
+  const origin = req.headers.origin;
+  if (!origin) return true;
+  try {
+    const originHost = new URL(origin).hostname;
+    return ["localhost", "127.0.0.1", "::1"].includes(originHost);
+  } catch {
+    return false;
+  }
 }
 
 interface ManualPickBody {

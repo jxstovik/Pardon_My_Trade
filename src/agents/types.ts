@@ -3,6 +3,7 @@ import type { PlayerPosition } from "../models/types.js";
 export type AgentActionType = "set_roster" | "add_drop" | "propose_trade";
 export type RiskLevel = "low" | "medium" | "high";
 export type ActionStatus = "pending" | "approved" | "rejected" | "expired" | "executed";
+export type ActionExecutionStatus = "running" | "succeeded" | "failed";
 
 export interface RosterSlotInput {
   readonly playerId: string;
@@ -52,15 +53,32 @@ export interface ProposeTradeAction {
 
 export type AgentAction = SetRosterAction | AddDropAction | ProposeTradeAction;
 
-export interface QueuedAction {
+export interface ActionExecutionError {
+  readonly name: string;
+  readonly message: string;
+  readonly code?: string;
+}
+
+export interface ActionExecution<TProviderResponse = unknown> {
+  readonly status: ActionExecutionStatus;
+  readonly idempotencyKey: string;
+  readonly attempts: number;
+  readonly startedAt: string;
+  readonly completedAt?: string;
+  readonly providerResponse?: TProviderResponse;
+  readonly error?: ActionExecutionError;
+}
+
+export interface QueuedAction<TAction extends AgentAction = AgentAction, TProviderResponse = unknown> {
   readonly actionId: string;
-  readonly action: AgentAction;
+  readonly action: TAction;
   readonly risk: RiskLevel;
   readonly rationale: string;
   readonly status: ActionStatus;
   readonly createdAt: string;
   readonly expiresAt: string;
   readonly resolvedAt?: string;
+  readonly execution?: ActionExecution<TProviderResponse>;
 }
 
 export interface OrchestratorResult {

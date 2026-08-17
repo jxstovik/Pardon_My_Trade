@@ -73,11 +73,13 @@ export class SqliteV1Store implements V1Store {
          VALUES (?, ?, ?, ?)
          ON CONFLICT(manager_id) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at`
       )
-      .run(profile.manager_id, profile.display_name, JSON.stringify(profile), profile.updated_at);
+      .run(`${profile.league_id}:${profile.manager_id}`, profile.display_name, JSON.stringify(profile), profile.updated_at);
   }
 
   async getManagerProfiles(leagueId: string): Promise<ManagerProfileRecord[]> {
-    const rows = this.db.prepare("SELECT data FROM v1_manager_profiles").all() as Array<{ data: string }>;
+    const rows = this.db
+      .prepare("SELECT data FROM v1_manager_profiles WHERE json_extract(data, '$.league_id') = ?")
+      .all(leagueId) as Array<{ data: string }>;
     return rows.map((row) => JSON.parse(row.data) as ManagerProfileRecord);
   }
 
