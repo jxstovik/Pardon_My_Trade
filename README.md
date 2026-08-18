@@ -85,7 +85,7 @@ npm run pmt -- daemon [--run-now]     # headless scheduler
 npm run pmt -- serve -- --scheduler   # GUI + scheduler
 ```
 
-Jobs: daily 06:00 Mon–Sat (premium login → projections → news/injuries → orchestrator → notifications), Sunday 11:00 lineup-lock reminder, Tuesday 13:00 waiver + trade sweep. They pause automatically outside the NFL regular season, tolerate a down projection source (alerting instead of aborting), and never execute a move — high-risk actions wait for `pmt action-approve`.
+Jobs: daily 06:00 Mon–Sat (premium login → projections → news/injuries → orchestrator → notifications), Sunday 11:00 lineup-lock reminder, Tuesday 13:00 waiver + trade sweep. They pause automatically outside the NFL regular season, tolerate a down projection source (alerting instead of aborting), and never execute a move. High-risk actions require `pmt action-approve` followed by `pmt action-execute`.
 
 Environment overrides: `PMT_DATA_DIR`, `PMT_PORT`, `PMT_NEWS_PATH`, `PMT_FIXTURE_PATH`, `PMT_PROJECTION_SOURCES`, `PMT_SEASON_DAILY_TIME`, `PMT_SEASON_LINEUP_LOCK_TIME`, `PMT_SEASON_WAIVER_TIME`, `ESPN_LEAGUE_ID`, `ESPN_SEASON`, `ESPN_S2`, `SWID`, `PMT_PRIORS_PATH`, `RAZZBALL_USERNAME`, `RAZZBALL_PASSWORD`.
 

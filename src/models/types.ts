@@ -170,6 +170,9 @@ export interface NewsItem extends VersionedRecord {
   readonly impact: "low" | "medium" | "high";
   readonly published_at: string;
   readonly ingested_at: string;
+  readonly source_url?: string;
+  readonly content_hash?: string;
+  readonly parser_version?: string;
 }
 
 export interface Evidence {

@@ -83,7 +83,7 @@ actually use:
 | `weekly-report [leagueId] [teamId]` | Runs the full weekly pipeline (projections + news/injuries + lineup evaluation) and emits one recommendation. | Defaults to the demo fixture (`pmt-demo-football` / `team-001`). |
 | `refresh [leagueId] [teamId]` | One-shot refresh pipeline: projections + news → snapshot → advisories. | Defaults to the demo fixture. |
 | `action-queue` | Lists pending high-risk actions awaiting your decision. | Reads `data/action-queue.json`. |
-| `action-approve <actionId>` / `action-reject <actionId>` | Approves or rejects a queued action. | This is the human gate — nothing high-risk happens without it. |
+| `action-approve <actionId>` / `action-reject <actionId>` | Approves or rejects a queued action. | Approval is the human gate; use `action-execute` separately to revalidate and submit. |
 
 ### D. Live draft (scaffold)
 

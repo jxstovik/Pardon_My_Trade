@@ -20,6 +20,7 @@ import { DraftController } from "./draft/draft-controller.js";
 import { attachDraftWebSocket } from "./api/draft-ws.js";
 import { loadEnv } from "./config/load-env.js";
 import { EspnPlatformReader } from "./adapters/espn/espn-platform-reader.js";
+import { EspnPlatformWriter } from "./adapters/espn/espn-platform-writer.js";
 import { EspnProjectionSource } from "./projections/espn-projection-source.js";
 import { buildProjectionSources } from "./projections/projection-source-registry.js";
 import { matchProjectionsToRoster } from "./projections/projection-matching.js";
@@ -31,6 +32,7 @@ import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProje
 import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
 import { runOrchestrator, buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
 import { ActionQueue, JsonActionQueueStore } from "./agents/action-queue.js";
+import { ActionExecutor, JsonActionExecutionStore } from "./agents/action-executor.js";
 import { InMemoryScheduler } from "./scheduler/scheduler.js";
 import { registerSeasonJobs, runDailySeasonJob } from "./seasons/season-jobs.js";
 import { runSeasonOrchestration } from "./seasons/season-orchestration.js";
@@ -379,7 +381,7 @@ async function main(): Promise<void> {
       if (!actionId) throw new Error("action-approve requires an action id: pmt action-approve <actionId>");
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
       const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
-      const approved = await queue.approve(actionId);
+      const approved = await queue.approve(actionId, process.env.PMT_ACTION_ACTOR ?? "cli-operator");
       console.log(JSON.stringify({ actionId: approved.actionId, status: approved.status }, null, 2));
       return;
     }
@@ -388,8 +390,26 @@ async function main(): Promise<void> {
       if (!actionId) throw new Error("action-reject requires an action id: pmt action-reject <actionId>");
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
       const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
-      const rejected = await queue.reject(actionId);
+      const rejected = await queue.reject(actionId, process.env.PMT_ACTION_ACTOR ?? "cli-operator");
       console.log(JSON.stringify({ actionId: rejected.actionId, status: rejected.status }, null, 2));
+      return;
+    }
+    case "action-execute": {
+      const actionId = process.argv[3];
+      if (!actionId) throw new Error("action-execute requires an action id: pmt action-execute <actionId>");
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      const leagueExternalId = process.argv[4] ?? process.env.ESPN_LEAGUE_ID;
+      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const reader = new EspnPlatformReader();
+      const writer = new EspnPlatformWriter();
+      const executor = new ActionExecutor({
+        queue,
+        reader,
+        writer,
+        store: new JsonActionExecutionStore(join(dataDir, "action-execution.json")),
+        leagueExternalId
+      });
+      console.log(JSON.stringify(await executor.execute(actionId, { leagueExternalId }), null, 2));
       return;
     }
     case "razzball-login": {
@@ -658,6 +678,7 @@ Usage:
   pmt action-queue
   pmt action-approve <actionId>
   pmt action-reject <actionId>
+  pmt action-execute <actionId> [leagueExternalId]
   pmt razzball-login
   pmt season-refresh [season] [week] [--force]
   pmt projections <razzball|razzball-premium|fftoday|espn> <position> [--week N] [--auto] [--ppr] [--force] [--no-save] [--persist] [--max N]
@@ -682,7 +703,8 @@ ESPN_LEAGUE_ID (+ ESPN_S2, SWID) in the environment.
 The in-season loop (pmt daemon, or pmt serve --scheduler) runs the daily
 projection pull + advisory pass Mon-Sat, a Sunday lineup-lock reminder, and
 a Tuesday waiver/trade sweep. Jobs pause automatically in the offseason and
-never execute a move: high-risk actions wait for pmt action-approve.
+  never execute a move. Explicitly approved actions can be executed through
+  pmt action-execute, which revalidates state and records an audit receipt.
 `);
 }
 

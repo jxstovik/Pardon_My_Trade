@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Razzball Fantasy Football</title>
+    <item>
+      <title><![CDATA[Nico West limited in practice]]></title>
+      <link>https://football.razzball.com/nico-west-limited/</link>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://football.razzball.com/?p=81001</guid>
+      <post-id xmlns="com-wordpress:feed-additions:1">81001</post-id>
+      <category><![CDATA[Nico West]]></category>
+      <category><![CDATA[Fantasy Football]]></category>
+      <description><![CDATA[<p>West was limited in practice.</p>]]></description>
+    </item>
+    <item>
+      <title>Miles Hart update</title>
+      <link>https://football.razzball.com/miles-hart-update/</link>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://football.razzball.com/?p=81002</guid>
+      <category>Miles Hart</category>
+      <description>Hart was placed on injured reserve.</description>
+    </item>
+    <item>
+      <title>General fantasy strategy</title>
+      <link>https://football.razzball.com/general-strategy/</link>
+      <pubDate>Thu, 10 Sep 2026 19:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://football.razzball.com/?p=81003</guid>
+      <category>Fantasy Football Strategy</category>
+      <description>General advice with no resolvable player.</description>
+    </item>
+  </channel>
+</rss>

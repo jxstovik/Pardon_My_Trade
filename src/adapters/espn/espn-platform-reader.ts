@@ -16,6 +16,7 @@ import type {
 } from "../../models/types.js";
 import type { PlatformReader } from "../platform-reader.js";
 import { EspnPlatformClient } from "./espn-platform-client.js";
+import { parseEspnTransactions } from "./espn-transaction-parser.js";
 import {
   loadEspnCredentials,
   mapEspnSlotToPosition,
@@ -71,6 +72,8 @@ interface EspnTeam {
     lineupSlotCounts?: Record<string, number>;
   };
   waiverRank?: number;
+  acquisitionBudget?: number;
+  waiverBudget?: number;
 }
 
 interface EspnPlayer {
@@ -104,6 +107,90 @@ const ESPN_POSITION_ID: Record<number, PlayerPosition> = {
 };
 
 const DEFAULT_LEAGUE_VIEWS = ["mTeam", "mRoster", "mMatchup", "mStandings", "mSettings", "mPlayer"];
+
+/** The request builders are shared by the read-adapter compatibility methods and the writer port. */
+export function buildEspnRosterPayload(
+  teamId: string,
+  assignments: EspnSlotAssignment[]
+): { body: Record<string, unknown>; filter: Record<string, unknown> } {
+  const roster = assignments.map((a) => ({
+    id: Number(a.playerId),
+    lineupSlotId: mapPositionToEspnSlot(a.slot)
+  }));
+  const lineupSlotCounts: Record<string, number> = {};
+  for (const a of assignments) {
+    const slot = String(mapPositionToEspnSlot(a.slot));
+    lineupSlotCounts[slot] = (lineupSlotCounts[slot] ?? 0) + 1;
+  }
+  return {
+    body: {
+      teamId: Number(teamId),
+      roster,
+      lineupSlotCounts,
+      type: "ROSTER"
+    },
+    filter: { teams: { filterTeamIds: { value: [Number(teamId)] }, filterSlotIds: { value: [] } } }
+  };
+}
+
+export function buildEspnAddDropPayload(
+  teamId: string,
+  adds: string[],
+  drops: string[],
+  kind: "waivers" | "freeagent" = "freeagent",
+  faabBid?: number
+): Record<string, unknown> {
+  const transactItems: Array<Record<string, unknown>> = [];
+  for (const playerId of adds) {
+    transactItems.push({
+      type: "ADD",
+      playerId: Number(playerId),
+      fromTeamId: 0,
+      toTeamId: Number(teamId)
+    });
+  }
+  for (const playerId of drops) {
+    transactItems.push({
+      type: "DROP",
+      playerId: Number(playerId),
+      fromTeamId: Number(teamId),
+      toTeamId: 0
+    });
+  }
+  const body: Record<string, unknown> = {
+    type: kind === "waivers" ? "WAIVER" : "ADD",
+    memberId: Number(teamId),
+    transactItems
+  };
+  if (kind === "waivers" && faabBid !== undefined) body.bidAmount = faabBid;
+  return body;
+}
+
+export function buildEspnTradePayload(
+  fromTeamId: string,
+  toTeamId: string,
+  givePlayerIds: string[],
+  receivePlayerIds: string[]
+): Record<string, unknown> {
+  const assets: Array<Record<string, unknown>> = [
+    ...givePlayerIds.map((playerId) => ({
+      type: "PLAYER",
+      teamId: Number(fromTeamId),
+      playerId: Number(playerId)
+    })),
+    ...receivePlayerIds.map((playerId) => ({
+      type: "PLAYER",
+      teamId: Number(toTeamId),
+      playerId: Number(playerId)
+    }))
+  ];
+  return {
+    teamId: Number(fromTeamId),
+    proposingTeamId: Number(fromTeamId),
+    receivingTeamId: Number(toTeamId),
+    assets
+  };
+}
 
 export class EspnPlatformReader implements PlatformReader {
   readonly client: EspnPlatformClient;
@@ -325,6 +412,11 @@ export class EspnPlatformReader implements PlatformReader {
       .slice()
       .sort((a, b) => (a.waiverRank ?? 0) - (b.waiverRank ?? 0))
       .map((team) => String(team.id));
+    const faabBudgets: Record<string, number> = {};
+    for (const team of data.teams ?? []) {
+      const budget = team.acquisitionBudget ?? team.waiverBudget;
+      if (budget !== undefined) faabBudgets[String(team.id)] = budget;
+    }
     return {
       schema_version: "1.0.0",
       created_at: now,
@@ -333,45 +425,25 @@ export class EspnPlatformReader implements PlatformReader {
       source_record_id: `${this.client.credentials.leagueId}-waiver`,
       league_id: String(data.id ?? this.client.credentials.leagueId),
       waiver_order: order,
-      faab_budgets: {}
+      faab_budgets: faabBudgets
     };
   }
 
-  async getTransactions(_leagueExternalId: string, since?: string): Promise<Transaction[]> {
-    const data = await this.getLeagueRaw();
-    const now = new Date().toISOString();
-    const transactions: Transaction[] = [];
-    for (const team of data.teams ?? []) {
-      const moved = new Set<number>();
-      for (const entry of team.roster?.entries ?? []) moved.add(entry.playerId);
-    }
-    // ESPN surfaces transaction history via a separate view; without it we
-    // return an empty list rather than fabricating data.
-    void now;
-    void since;
-    return transactions;
+  async getTransactions(leagueExternalId: string, since?: string): Promise<Transaction[]> {
+    // mTransactions is a separate, undocumented ESPN view. Do not infer
+    // history from the current roster when the view is absent or changes shape.
+    const data = await this.client.getJson<unknown>("", {
+      view: ["mTransactions"],
+      scope: { segment: 0, readHost: true }
+    });
+    return parseEspnTransactions(data, leagueExternalId, since);
   }
 
   // --- Write actions (plan §2: espn-api read/write) ---
 
   async setRoster(teamId: string, assignments: EspnSlotAssignment[]): Promise<unknown> {
-    const roster = assignments.map((a) => ({
-      id: Number(a.playerId),
-      lineupSlotId: mapPositionToEspnSlot(a.slot)
-    }));
-    const lineupSlotCounts: Record<string, number> = {};
-    for (const a of assignments) {
-      const slot = String(mapPositionToEspnSlot(a.slot));
-      lineupSlotCounts[slot] = (lineupSlotCounts[slot] ?? 0) + 1;
-    }
-    const body = {
-      teamId: Number(teamId),
-      roster,
-      lineupSlotCounts,
-      type: "ROSTER"
-    };
-    const filter = { teams: { filterTeamIds: { value: [Number(teamId)] }, filterSlotIds: { value: [] } } };
-    return this.client.postJson("", body, filter);
+    const payload = buildEspnRosterPayload(teamId, assignments);
+    return this.client.postJson("", payload.body, payload.filter);
   }
 
   async addDrop(
@@ -380,28 +452,7 @@ export class EspnPlatformReader implements PlatformReader {
     drops: string[],
     kind: "waivers" | "freeagent" = "freeagent"
   ): Promise<unknown> {
-    const transactItems: Array<Record<string, unknown>> = [];
-    for (const playerId of adds) {
-      transactItems.push({
-        type: "ADD",
-        playerId: Number(playerId),
-        fromTeamId: 0,
-        toTeamId: Number(teamId)
-      });
-    }
-    for (const playerId of drops) {
-      transactItems.push({
-        type: "DROP",
-        playerId: Number(playerId),
-        fromTeamId: Number(teamId),
-        toTeamId: 0
-      });
-    }
-    const body = {
-      type: kind === "waivers" ? "WAIVER" : "ADD",
-      memberId: Number(teamId),
-      transactItems
-    };
+    const body = buildEspnAddDropPayload(teamId, adds, drops, kind);
     return this.client.postJson("/transactions/", body);
   }
 
@@ -411,24 +462,7 @@ export class EspnPlatformReader implements PlatformReader {
     givePlayerIds: string[],
     receivePlayerIds: string[]
   ): Promise<unknown> {
-    const assets: Array<Record<string, unknown>> = [
-      ...givePlayerIds.map((playerId) => ({
-        type: "PLAYER",
-        teamId: Number(fromTeamId),
-        playerId: Number(playerId)
-      })),
-      ...receivePlayerIds.map((playerId) => ({
-        type: "PLAYER",
-        teamId: Number(toTeamId),
-        playerId: Number(playerId)
-      }))
-    ];
-    const body = {
-      teamId: Number(fromTeamId),
-      proposingTeamId: Number(fromTeamId),
-      receivingTeamId: Number(toTeamId),
-      assets
-    };
+    const body = buildEspnTradePayload(fromTeamId, toTeamId, givePlayerIds, receivePlayerIds);
     return this.client.postJson("/trades/", body);
   }
 

@@ -50,10 +50,11 @@ Main CLI is `src/cli.ts`. Subcommands: `import-fixture`, `weekly-report`,
 - **Snapshots are immutable (ADR-0004).** Re-saving an existing `snapshot_id`
   throws. `serve` swallows this and reuses the prior snapshot — don't "fix" that
   try/catch thinking it's a bug.
-- **High-risk moves never execute automatically.** Trades and drops are queued
-  (`action-queue`) and wait for `action-approve`. Low-risk `setRoster` only
-  applies automatically with `ff-run --auto`. The in-season daemon behaves the
-  same way — it will never push a move to ESPN on its own.
+- **High-risk moves never execute automatically.** Trades, drops, and waiver
+  claims are queued (`action-queue`) and require explicit approval followed by
+  `action-execute`; approval alone does not submit to ESPN. Low-risk `setRoster`
+  only applies automatically with `ff-run --auto`, while scheduled in-season
+  jobs never push a move to ESPN on their own.
 - **Everything is fixture-first and credential-free by design.** Live ESPN
   writes need `ESPN_S2` + `SWID` (and `ESPN_LEAGUE_ID`) in the environment.
   Sleeper reads are public and need no creds. Don't add live-logins to MVP

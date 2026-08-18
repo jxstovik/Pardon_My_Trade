@@ -1,0 +1,33 @@
+{
+  "articles": [
+    {
+      "id": 7001,
+      "headline": "Nico West limited in practice",
+      "description": "The receiver was limited during Wednesday's practice.",
+      "published": "2026-09-10T18:00:00Z",
+      "categories": [
+        { "type": "athlete", "athleteId": 10101, "description": "Nico West" },
+        { "type": "league", "description": "NFL" }
+      ],
+      "links": { "web": { "href": "https://www.espn.com/nfl/story/_/id/7001" } }
+    },
+    {
+      "id": 7002,
+      "headline": "Miles Hart placed on injured reserve",
+      "description": "Hart will miss at least four games.",
+      "published": "2026-09-09T18:00:00Z",
+      "categories": [
+        { "type": "athlete", "athlete": { "id": 20202 } }
+      ]
+    },
+    {
+      "id": 7003,
+      "headline": "League schedule update",
+      "description": "A league-wide update with no player association.",
+      "published": "2026-09-10T19:00:00Z",
+      "categories": [
+        { "type": "league", "description": "NFL" }
+      ]
+    }
+  ]
+}
