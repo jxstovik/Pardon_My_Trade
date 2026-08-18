@@ -16,7 +16,7 @@ approval via `pmt action-approve`.
 
 ## 0. Setup (do this once)
 
-Requires **Node >= 20**.
+Requires **Node 26** (see `.nvmrc`; CI runs on Node 26).
 
 ```bash
 npm install
@@ -141,13 +141,14 @@ actions are routed to the action queue, never executed on their own.
    npm run pmt -- weekly-report <leagueId> <teamId>
    ```
 
-> **Status note (be honest):** The draft-specific *intelligence* from doc 23 —
-> the identity crosswalk (`pmt draft-ids-sync`), the merged static board
-> (`pmt draft-board`), the valuation engine (VORP / tiers / survival), and the
-> pick advisor (`pmt draft-advise`) — is **planned, not yet built**. What exists
-> today is the **feed + poller + manual backup** scaffolding (section 1.D) and
-> the widened ESPN client. So pre-draft you can import, model, and pull
-> projections; the auto-recommendation loop lands in a later phase.
+> **Status note:** The draft-specific *intelligence* from doc 23 — the
+> valuation engine (VORP / tiers / survival), the `DraftState` reducer, and the
+> pick advisor — is now **built** and shipped as `pmt draft-harness` (see
+> `docs/25-draft-harness.md`): a live dashboard with a best-available queue,
+> roster/needs panel, and an advisory-only Ollama chat. The identity crosswalk
+> (`pmt draft-ids-sync`) and merged static board (`pmt draft-board`) remain
+> planned. The `draft-pick` / `draft-watch` scaffolding (section 1.D) is still
+> the durable operator path.
 
 ---
 
@@ -226,10 +227,12 @@ year-round is safe.
 **Planned (doc 23), not yet implemented**
 - Draft identity crosswalk + `pmt draft-ids-sync` (Phase 1)
 - Static merged draft board + `pmt draft-board` (Phase 2, ESPN kona + FantasyCalc)
-- Valuation engine: VORP, GMM tiers, ADP survival (Phase 3)
-- `DraftState` reducer + snake maths (Phase 4, feed already scaffolded)
-- Pick/auction advisor + `pmt draft-advise` / `pmt draft-live` (Phase 5)
 - Draft-day hardening: `pmt draft-warm`, degraded-mode ladder, latency budget (Phase 6)
+
+**Built since this guide was first written (see `docs/25-draft-harness.md`)**
+- Valuation engine: VORP-style scarcity ranking, GMM-ish tiers, ADP survival (Phase 3)
+- `DraftState` reducer + snake maths, wired into `pmt draft-harness` (Phase 4)
+- Pick advisor producing a `draft_pick` `Recommendation` + advisory Ollama chat (Phase 5)
 
 See `docs/23-live-draft-agent.md` for the full phase plan and
 `docs/21-inseason-workflow.md` for the in-season loop design.

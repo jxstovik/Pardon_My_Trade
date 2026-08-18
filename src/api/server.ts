@@ -5,6 +5,8 @@ import type { KnowledgeRepository } from "../knowledge/repository.js";
 import type { V1Store } from "../history/v1-store.js";
 import type { LeagueSnapshot, Recommendation } from "../models/types.js";
 import type { RefreshSummary } from "../models/v1.js";
+import type { DraftController } from "../draft/draft-controller.js";
+import type { OllamaMessage } from "../llm/ollama.js";
 
 export interface ApiServerDeps {
   readonly repository: KnowledgeRepository;
@@ -14,6 +16,7 @@ export interface ApiServerDeps {
   readonly publicDir?: string;
   /** Root of the approved ChatPFT replay artifact directory. */
   readonly modelingDir?: string;
+  readonly draft?: DraftController;
 }
 
 const CONTENT_TYPES: Record<string, string> = {
@@ -164,6 +167,54 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
       return;
     }
 
+    if (path === "/draft" || path === "/draft.html") {
+      await serveFile(res, join(publicDir, "draft.html"), "text/html; charset=utf-8");
+      return;
+    }
+
+    if (path === "/api/draft/state" && req.method === "GET") {
+      if (!deps.draft) {
+        sendJson(res, 404, { error: "draft harness not enabled" });
+        return;
+      }
+      sendJson(res, 200, deps.draft.currentSnapshot());
+      return;
+    }
+
+    if (path === "/api/draft/pick" && req.method === "POST") {
+      if (!deps.draft) {
+        sendJson(res, 404, { error: "draft harness not enabled" });
+        return;
+      }
+      const body = await readJson<ManualPickBody>(req);
+      const snapshot = deps.draft.recordManualPick({
+        round: Number(body.round),
+        roundPick: Number(body.roundPick),
+        teamId: String(body.teamId),
+        playerExternalId: String(body.playerExternalId),
+        pickNo: body.pickNo !== undefined ? Number(body.pickNo) : undefined
+      });
+      sendJson(res, 200, { ok: true, snapshot });
+      return;
+    }
+
+    if (path === "/api/draft/chat" && req.method === "POST") {
+      if (!deps.draft) {
+        sendJson(res, 404, { error: "draft harness not enabled" });
+        return;
+      }
+      const body = await readJson<{ messages?: OllamaMessage[] }>(req);
+      const messages = Array.isArray(body.messages) ? body.messages : [];
+      try {
+        const reply = await deps.draft.chat(messages);
+        sendJson(res, 200, { reply });
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        sendJson(res, 502, { error: `ollama chat failed: ${message}` });
+      }
+      return;
+    }
+
     if (path === "/" || path === "/index.html") {
       await serveFile(res, join(publicDir, "index.html"), "text/html; charset=utf-8");
       return;
@@ -214,6 +265,23 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
   }
 
   return server;
+}
+
+interface ManualPickBody {
+  readonly round?: number;
+  readonly roundPick?: number;
+  readonly teamId?: string;
+  readonly playerExternalId?: string;
+  readonly pickNo?: number;
+}
+
+async function readJson<T>(req: IncomingMessage): Promise<T> {
+  const chunks: Buffer[] = [];
+  for await (const chunk of req) {
+    chunks.push(Buffer.from(chunk));
+  }
+  const raw = Buffer.concat(chunks).toString("utf8");
+  return (raw ? JSON.parse(raw) : {}) as T;
 }
 
 function sendJson(res: ServerResponse, status: number, body: unknown): void {

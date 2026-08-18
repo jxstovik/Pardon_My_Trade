@@ -83,6 +83,10 @@ test("getLeague maps canonical league", async () => {
   assert.equal(league.roster_settings.bench_count, 2);
   assert.equal(league.roster_settings.injured_reserve_count, 1);
   assert.equal(league.trade_settings.review_type, "league_vote");
+  assert.equal(
+    reader.client.recordedRequests[0]?.url,
+    "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/999?view=mTeam&view=mRoster&view=mMatchup&view=mStandings&view=mSettings&view=mPlayer"
+  );
 });
 
 test("getTeams maps rosters and standings", async () => {

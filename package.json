@@ -10,6 +10,7 @@
     "lint": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test dist/tests/*.test.js",
     "serve": "npm run build && npm run pmt -- serve",
+    "test:draft-interactive": "npm run build && node scripts/interactive-draft-harness-test.mjs",
     "refresh": "npm run build && npm run pmt -- refresh",
     "model:qb-wr": "python3 python/chatpft_modeling/train_qb_wr.py --output artifacts/qb-wr-models",
     "model:qb-wr:real": "python3 python/chatpft_modeling/train_real_qb_wr.py --data-dir data --output artifacts/qb-wr-models-real",
@@ -34,9 +35,11 @@
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^22.0.0",
+    "@types/ws": "^8.5.10",
     "typescript": "^5.5.0"
   },
   "dependencies": {
-    "better-sqlite3": "^12.11.1"
+    "better-sqlite3": "^12.11.1",
+    "ws": "^8.18.0"
   }
 }

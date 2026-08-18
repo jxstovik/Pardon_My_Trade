@@ -44,6 +44,19 @@ test("getJson honours leaguedefaults scope, read host, view and GET filter", asy
   assert.ok(captured!.headers["X-Fantasy-Filter"]?.includes("\"limit\":50"), "GET must send X-Fantasy-Filter");
 });
 
+test("getJson supports league reads on ESPN's JSON read host", async () => {
+  let capturedUrl: string | undefined;
+  const client = new EspnPlatformClient({
+    credentials: creds({ leagueId: "98806880", season: "2025" }),
+    fetchImpl: stubFetch((url) => { capturedUrl = url; return {}; })
+  });
+  await client.getJson("", { view: ["mTeam"], scope: { segment: 0, readHost: true } });
+  assert.equal(
+    capturedUrl,
+    "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2025/segments/0/leagues/98806880?view=mTeam"
+  );
+});
+
 test("postJson still sends X-Fantasy-Filter on POST", async () => {
   let captured: { url: string; headers: Record<string, string>; body?: string } | undefined;
   const client = new EspnPlatformClient({
