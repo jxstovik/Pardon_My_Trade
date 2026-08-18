@@ -15,3 +15,8 @@ data/
 
 # Windows download markers (WSL/NTFS alternate data streams)
 *:Zone.Identifier
+
+# Tracked ChatPFT model artifacts
+__pycache__/
+*.py[cod]
+!artifacts/qb-wr-models/**/*.sqlite

@@ -1,0 +1,60 @@
+{
+  "schema_version": "chatpft.position.preseason-dashboard.v1",
+  "replay_id": "chatpft-wr-2026-preseason",
+  "position": "WR",
+  "season": 2026,
+  "checkpoints": 1,
+  "preseason_cutoff": "2026-08-17T22:58:48.824189+00:00",
+  "training_window": "2018-2025",
+  "features": [
+    "prior_points_per_game",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
+    "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "sources": [
+    {
+      "name": "nflverse_player_stats_2018_2024",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "parsed_rows": 17212
+    },
+    {
+      "name": "nflverse_player_stats_2025",
+      "path": "data/nflverse-stats_player_week-2025.csv.gz",
+      "sha256": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b",
+      "parsed_rows": 2511
+    },
+    {
+      "name": "razzball_current_rankings",
+      "url": "https://football.razzball.com/2025-fantasy-football-wide-receiver-rankings/",
+      "kind": "rank",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:48.724609+00:00",
+      "sha256": "72f0c50a71dbb9877501a37640eb4c7348c1df521e483afb82d639bb814a812b",
+      "bytes": 179186,
+      "parsed_rows": 75,
+      "as_of": "2026-08-17T22:58:48.828781+00:00"
+    },
+    {
+      "name": "razzball_current_projections",
+      "url": "https://football.razzball.com/projections-wr-restofseason/",
+      "kind": "points",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:48.725615+00:00",
+      "sha256": "444ec3b750d290113b4d698e42da4e9894912f53fffe32c1191ed7f84e8799c7",
+      "bytes": 348281,
+      "parsed_rows": 351,
+      "as_of": "2026-08-17T22:58:48.828802+00:00"
+    }
+  ],
+  "data_status": "real nflverse outcomes through 2025; current Razzball comparison"
+}

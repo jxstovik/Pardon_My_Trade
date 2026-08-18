@@ -1,0 +1,1 @@
+{"schema_version": "chatpft.position.checkpoint.v1", "replay_id": "chatpft-rb-2026-preseason", "position": "RB", "checkpoint_id": "chatpft-rb-2026-preseason:preseason", "target_period": "2026-ROS", "prediction_cutoff": "2026-08-17T22:58:45.557530+00:00", "regime": "current_preseason", "model_version": "rb-2026-preseason-hard-stats-ridge-v2"}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "chatpft.position.preseason-dashboard.v1",
+  "replay_id": "chatpft-qb-2026-preseason",
+  "position": "QB",
+  "season": 2026,
+  "checkpoints": 1,
+  "preseason_cutoff": "2026-08-17T22:58:40.406451+00:00",
+  "training_window": "2018-2025",
+  "features": [
+    "prior_points_per_game",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
+    "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "sources": [
+    {
+      "name": "nflverse_player_stats_2018_2024",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "parsed_rows": 5127
+    },
+    {
+      "name": "nflverse_player_stats_2025",
+      "path": "data/nflverse-stats_player_week-2025.csv.gz",
+      "sha256": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b",
+      "parsed_rows": 664
+    },
+    {
+      "name": "razzball_current_rankings",
+      "url": "https://football.razzball.com/2025-fantasy-football-quarterback-rankings/",
+      "kind": "rank",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:40.313125+00:00",
+      "sha256": "0993384519f44b2067ebb8152bbef9a4df81560e176864739549d784bd9b2cca",
+      "bytes": 177577,
+      "parsed_rows": 50,
+      "as_of": "2026-08-17T22:58:40.411753+00:00"
+    },
+    {
+      "name": "razzball_current_projections",
+      "url": "https://football.razzball.com/projections-qb-restofseason/",
+      "kind": "points",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:40.313990+00:00",
+      "sha256": "ef2dd98c6ee2b8258677daaf02d533fb3065bedb7dcc8b72fe7d9563f328cbb5",
+      "bytes": 226542,
+      "parsed_rows": 0,
+      "as_of": "2026-08-17T22:58:40.411799+00:00"
+    }
+  ],
+  "data_status": "real nflverse outcomes through 2025; current Razzball comparison"
+}

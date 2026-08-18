@@ -216,7 +216,16 @@ async function main(): Promise<void> {
         initialSnapshot,
         refreshToken: process.env.PMT_API_TOKEN
       });
-      server.listen(port, "127.0.0.1", () => {
+
+      const port = Number(process.env.PMT_PORT ?? 3000);
+      const server = createApiServer({
+        repository,
+        v1Store,
+        refresh: doRefresh,
+        initialSnapshot,
+        modelingDir: process.env.PMT_MODELING_DIR ?? join(process.cwd(), "artifacts", "wr-2024-replay")
+      });
+      server.listen(port, () => {
         console.log(`Pardon My Trade GUI running at http://localhost:${port}`);
       });
 
