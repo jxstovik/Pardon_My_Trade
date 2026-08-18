@@ -1,0 +1,30 @@
+{
+  "transactions": [
+    {
+      "id": "txn-001",
+      "type": "ADD",
+      "processDate": 1789063200000,
+      "team": { "id": 1 },
+      "items": [
+        { "type": "ADD", "playerId": 301, "fromTeamId": 0, "toTeamId": 1 }
+      ]
+    },
+    {
+      "id": "txn-002",
+      "type": "WAIVER",
+      "processDate": 1788976800000,
+      "teamId": 2,
+      "items": [
+        { "type": "ADD", "playerId": 302, "fromTeamId": 0, "toTeamId": 2 },
+        { "type": "DROP", "playerId": 201, "fromTeamId": 2, "toTeamId": 0 }
+      ]
+    },
+    {
+      "id": "txn-003",
+      "type": "NOT_A_TRANSACTION",
+      "processDate": 1789063200000,
+      "teamId": 1,
+      "items": [{ "playerId": 999 }]
+    }
+  ]
+}

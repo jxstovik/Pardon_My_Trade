@@ -1,0 +1,67 @@
+# Copy the relevant entries into ~/.hermes/config.yaml after building PMT.
+# Keep ESPN_S2 and SWID in ~/.hermes/.env or the gateway environment. Do not
+# replace the ${...} references with credential values in a tracked file.
+mcp_servers:
+  pmt-read:
+    command: node
+    args:
+      - /ABSOLUTE/PATH/TO/Pardon_My_Trade/dist/src/mcp/stdio.js
+    env:
+      PMT_DATA_DIR: /ABSOLUTE/PATH/TO/Pardon_My_Trade/data
+      PMT_PROJECTION_SOURCES: espn,razzball,fftoday
+      ESPN_LEAGUE_ID: ${ESPN_LEAGUE_ID}
+      ESPN_SEASON: ${ESPN_SEASON}
+      ESPN_S2: ${ESPN_S2}
+      SWID: ${SWID}
+    tools:
+      include:
+        - pmt_get_inseason_status
+        - pmt_get_current_scoring_period
+        - pmt_espn_read_league
+        - pmt_espn_read_rosters
+        - pmt_espn_read_schedule
+        - pmt_espn_read_transactions
+        - pmt_espn_read_players
+        - pmt_espn_read_free_agents
+        - pmt_refresh_projections
+        - pmt_run_projection_refresh
+        - pmt_get_projection_status
+        - pmt_get_projection_provenance
+        - pmt_run_news_injury_refresh
+        - pmt_list_news
+        - pmt_list_injury_alerts
+        - pmt_list_notifications
+        - pmt_run_advisory_orchestration
+        - pmt_list_pending_actions
+        - pmt_get_action
+        - pmt_preview_action
+        - pmt_get_model_status
+        - pmt_get_model_artifact
+        - pmt_evaluate_model
+        - pmt_rebuild_models
+      prompts: false
+      resources: false
+
+  # Keep this server disabled until the Phase 5 write executor exists. Queue
+  # approval changes PMT state but still cannot execute an ESPN write today.
+  pmt-operator:
+    enabled: false
+    command: node
+    args:
+      - /ABSOLUTE/PATH/TO/Pardon_My_Trade/dist/src/mcp/stdio.js
+    env:
+      PMT_DATA_DIR: /ABSOLUTE/PATH/TO/Pardon_My_Trade/data
+      ESPN_LEAGUE_ID: ${ESPN_LEAGUE_ID}
+      ESPN_SEASON: ${ESPN_SEASON}
+      ESPN_S2: ${ESPN_S2}
+      SWID: ${SWID}
+    tools:
+      include:
+        - pmt_list_pending_actions
+        - pmt_get_action
+        - pmt_preview_action
+        - pmt_action_approve
+        - pmt_action_reject
+        - pmt_get_action_audit
+      prompts: false
+      resources: false

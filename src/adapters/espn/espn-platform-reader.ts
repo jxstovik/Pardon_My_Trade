@@ -16,6 +16,7 @@ import type {
 } from "../../models/types.js";
 import type { PlatformReader } from "../platform-reader.js";
 import { EspnPlatformClient } from "./espn-platform-client.js";
+import { parseEspnTransactions } from "./espn-transaction-parser.js";
 import {
   loadEspnCredentials,
   mapEspnSlotToPosition,
@@ -337,19 +338,14 @@ export class EspnPlatformReader implements PlatformReader {
     };
   }
 
-  async getTransactions(_leagueExternalId: string, since?: string): Promise<Transaction[]> {
-    const data = await this.getLeagueRaw();
-    const now = new Date().toISOString();
-    const transactions: Transaction[] = [];
-    for (const team of data.teams ?? []) {
-      const moved = new Set<number>();
-      for (const entry of team.roster?.entries ?? []) moved.add(entry.playerId);
-    }
-    // ESPN surfaces transaction history via a separate view; without it we
-    // return an empty list rather than fabricating data.
-    void now;
-    void since;
-    return transactions;
+  async getTransactions(leagueExternalId: string, since?: string): Promise<Transaction[]> {
+    // mTransactions is a separate, undocumented ESPN view. Do not infer
+    // history from the current roster when the view is absent or changes shape.
+    const data = await this.client.getJson<unknown>("", {
+      view: ["mTransactions"],
+      scope: { segment: 0, readHost: true }
+    });
+    return parseEspnTransactions(data, leagueExternalId, since);
   }
 
   // --- Write actions (plan §2: espn-api read/write) ---

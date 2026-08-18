@@ -11,6 +11,7 @@
     "test": "npm run build && node --test dist/tests/*.test.js",
     "serve": "npm run build && npm run pmt -- serve",
     "test:draft-interactive": "npm run build && node scripts/interactive-draft-harness-test.mjs",
+    "mcp": "node dist/src/mcp/stdio.js",
     "refresh": "npm run build && npm run pmt -- refresh",
     "model:qb-wr": "python3 python/chatpft_modeling/train_qb_wr.py --output artifacts/qb-wr-models",
     "model:qb-wr:real": "python3 python/chatpft_modeling/train_real_qb_wr.py --data-dir data --output artifacts/qb-wr-models-real",
@@ -39,7 +40,9 @@
     "typescript": "^5.5.0"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
     "better-sqlite3": "^12.11.1",
-    "ws": "^8.18.0"
+    "ws": "^8.18.0",
+    "zod": "^4.4.3"
   }
 }
