@@ -1,7 +1,8 @@
 # PMT Hermes Skill Bundle
 
-Status: project-local skills and a versioned PMT MCP contract are checked in;
-the bundle remains a profile-level convenience.
+Status: project-local skills, a versioned PMT MCP contract, and a
+PMT/Hermes compatibility baseline are checked in; the bundle remains a
+profile-level convenience.
 
 The repository contains project-local Hermes/Agent Skills under `.agents/skills/`
 and a PMT stdio MCP server under `src/mcp/`. Hermes discovers the skills after
@@ -35,9 +36,13 @@ The skill files use the versioned `pmt_*` MCP contract implemented by
 `src/mcp/server.ts`. The read configuration in
 `integrations/hermes/mcp-config.example.yaml` exposes league reads, source
 refreshes, deterministic recommendations, model inspection, and queue previews.
-The operator configuration is disabled by default and is not a platform-write
-executor.
+The operator configuration is disabled by default and exposes the separately
+gated, audited executor only when explicitly enabled. The exact release boundary is recorded in
+`integrations/hermes/pmt-hermes-compatibility.yaml`.
 
 The bundle does not grant write permission. In particular, action approval must
 remain an explicit, auditable PMT operation, and an approval result must not be
 reported as execution unless the PMT tool confirms execution.
+
+For secret-free installation, upgrades, rollback, and release pinning, see
+`docs/hermes/install-upgrade.md` and `docs/hermes/release-versioning.md`.

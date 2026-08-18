@@ -1,9 +1,15 @@
-# Hermes Phase 4 Examples
+# Hermes Integration
 
 These examples let Hermes own the outer schedule while Pardon My Trade exposes
 its deterministic services through the local stdio MCP server. They are
-advisory only. High-risk actions remain in the PMT action queue and the Phase
-1-4 bridge has no ESPN write executor.
+advisory by default. High-risk actions remain in the PMT action queue; the
+operator MCP server can execute only explicitly approved, revalidated actions
+and remains disabled by default.
+
+The PMT/Hermes compatibility baseline is
+`integrations/hermes/pmt-hermes-compatibility.yaml`. Installation and upgrade
+steps are in `docs/hermes/install-upgrade.md`; release artifact and version
+pinning guidance is in `docs/hermes/release-versioning.md`.
 
 ## Scope
 
@@ -22,12 +28,20 @@ league's local timezone.
 
 ## Important Safety Rule
 
-This manifest is an alternative scheduler. Do **not** run `pmt daemon` or
-`pmt serve --scheduler` at the same time as these jobs. Those PMT modes already
-register the daily, Sunday, and Tuesday season jobs and would duplicate work.
+This installer and its Hermes jobs are an alternative scheduler. Do **not** run
+`pmt daemon` or `pmt serve --scheduler` at the same time as these jobs. Those
+PMT modes already register the daily, Sunday, and Tuesday season jobs and would
+duplicate work.
 
 Keep the Hermes gateway running; Hermes owns only the schedule, while PMT owns
 refresh and recommendation behavior.
+
+The `pmt-operator` MCP entry in
+`integrations/hermes/mcp-config.example.yaml` is disabled by default. Enabling
+it exposes queue approval and `pmt_action_execute`, which performs current-state
+revalidation, idempotency checks, durable receipts, and unknown-outcome
+handling. Do not enable it until the operator has completed a canary and
+reviewed the execution audit.
 
 ## Prerequisites
 
@@ -115,9 +129,10 @@ secret-free source template.
   the persisted PMT model files.
 - `pmt_run_news_injury_refresh` uses the live ESPN and Razzball source adapters
   and persists player-linked news.
-- The post-week job uses `PMT_HISTORICAL_DATA_PATH` only as a readiness and
-  cutoff signal. Phase 1-4 model rebuilding does not yet apply a full weekly
-  outcome update or promote a separate ChatPFT artifact.
+- The post-week job uses `PMT_HISTORICAL_DATA_PATH` as the completed-observation
+  input for `pmt_update_post_week_outcomes`; it writes a model-governance
+  manifest, promotion decision, and rollback snapshot. It does not silently
+  promote a held or failed candidate.
 - The pre-check process does not source the PMT `.env`, intentionally avoiding
   exposure of credentials. If `PMT_DATA_DIR` is not the default `data/`, export
   its absolute value in the Hermes gateway environment as shown above.

@@ -25,12 +25,17 @@ export interface PlayerModel {
   readonly lastObserved: number | null;
   readonly weeksObserved: number;
   readonly lastUpdatedWeek: number | null;
+  /** Weekly period of the last recurrence, when the model was updated with one. */
+  /** Optional when loading a model persisted before weekly-period tracking. */
+  readonly lastUpdatedScoringPeriod?: string | null;
 }
 
 export interface Observation {
   readonly playerId: string;
   readonly week: number;
   readonly points: number;
+  /** Optional for legacy callers; governance updates always supply it. */
+  readonly scoringPeriod?: string;
 }
 
 export const DEFAULT_ALPHA = 0.3;
@@ -56,7 +61,8 @@ export function createModel(prior: ModelPrior): PlayerModel {
     sigma: Math.sqrt(normalizeVar(prior.historyVar)),
     lastObserved: null,
     weeksObserved: 0,
-    lastUpdatedWeek: null
+    lastUpdatedWeek: null,
+    lastUpdatedScoringPeriod: null
   };
 }
 
@@ -78,7 +84,8 @@ export function updateModel(model: PlayerModel, observation: Observation): Playe
     sigma: Math.sqrt(normalizeVar(varNew)),
     lastObserved: observation.points,
     weeksObserved: model.weeksObserved + 1,
-    lastUpdatedWeek: observation.week
+    lastUpdatedWeek: observation.week,
+    lastUpdatedScoringPeriod: observation.scoringPeriod ?? model.lastUpdatedScoringPeriod ?? null
   };
 }
 

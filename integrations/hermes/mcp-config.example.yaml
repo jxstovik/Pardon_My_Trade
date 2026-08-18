@@ -1,6 +1,11 @@
-# Copy the relevant entries into ~/.hermes/config.yaml after building PMT.
-# Keep ESPN_S2 and SWID in ~/.hermes/.env or the gateway environment. Do not
-# replace the ${...} references with credential values in a tracked file.
+# Secret-free example. Merge the relevant entries into ~/.hermes/config.yaml
+# after building PMT. Keep ESPN_S2 and SWID in ~/.hermes/.env or the gateway
+# environment. Never replace the ${...} references with credential values in a
+# tracked file.
+#
+# The pmt-read server is the normal Phase 4 Hermes integration. The operator
+# server below is intentionally disabled and is not needed by the scheduled
+# refresh/review jobs.
 mcp_servers:
   pmt-read:
     command: node
@@ -9,6 +14,7 @@ mcp_servers:
     env:
       PMT_DATA_DIR: /ABSOLUTE/PATH/TO/Pardon_My_Trade/data
       PMT_PROJECTION_SOURCES: espn,razzball,fftoday
+      PMT_HISTORICAL_DATA_PATH: ${PMT_HISTORICAL_DATA_PATH}
       ESPN_LEAGUE_ID: ${ESPN_LEAGUE_ID}
       ESPN_SEASON: ${ESPN_SEASON}
       ESPN_S2: ${ESPN_S2}
@@ -39,11 +45,14 @@ mcp_servers:
         - pmt_get_model_artifact
         - pmt_evaluate_model
         - pmt_rebuild_models
+        - pmt_update_post_week_outcomes
       prompts: false
       resources: false
 
-  # Keep this server disabled until the Phase 5 write executor exists. Queue
-  # approval changes PMT state but still cannot execute an ESPN write today.
+  # Hermes Phase 5 write-executor boundary. Keep disabled until the operator
+  # has reviewed the current-state and idempotency behavior and completed a
+  # canary in the intended league. The executor never exposes raw ESPN writes;
+  # it accepts only exact approved PMT queue actions.
   pmt-operator:
     enabled: false
     command: node
@@ -51,6 +60,7 @@ mcp_servers:
       - /ABSOLUTE/PATH/TO/Pardon_My_Trade/dist/src/mcp/stdio.js
     env:
       PMT_DATA_DIR: /ABSOLUTE/PATH/TO/Pardon_My_Trade/data
+      PMT_HISTORICAL_DATA_PATH: ${PMT_HISTORICAL_DATA_PATH}
       ESPN_LEAGUE_ID: ${ESPN_LEAGUE_ID}
       ESPN_SEASON: ${ESPN_SEASON}
       ESPN_S2: ${ESPN_S2}
@@ -62,6 +72,7 @@ mcp_servers:
         - pmt_preview_action
         - pmt_action_approve
         - pmt_action_reject
+        - pmt_action_execute
         - pmt_get_action_audit
       prompts: false
       resources: false

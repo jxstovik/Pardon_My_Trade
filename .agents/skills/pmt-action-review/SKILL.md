@@ -40,8 +40,9 @@ tool directly.
    the move.
 6. If the user rejects it, call `mcp_pmt_operator_pmt_action_reject` for that exact pending ID.
    If the user approves it, re-check the preview and state, then call
-   `mcp_pmt_operator_pmt_action_approve` only if the tool contract explicitly states that this is
-   the approved execution path.
+   `mcp_pmt_operator_pmt_action_approve` followed by
+   `mcp_pmt_operator_pmt_action_execute` for that exact action ID. Execution
+   performs a final PMT revalidation and is not implied by approval alone.
 7. Call `mcp_pmt_operator_pmt_get_action_audit` and report the resulting status, timestamp,
    actor or approval source, and any execution or platform error. If the tool
    reports only approval and not execution, do not claim the move was made.
@@ -64,6 +65,8 @@ tool directly.
 - Never approve a batch by implication when the user named only one action.
 - Never expose cookies, credentials, tokens, or unredacted private payloads.
 - Never bypass TTL, validation, idempotency, audit, or platform-scope checks.
+- If execution returns `unknown`, do not retry; the receipt requires operator
+  reconciliation with ESPN before any further action.
 - Never change player IDs, teams, quantities, or action type while describing a
   confirmation.
 - On timeout, error, or ambiguity, leave the action pending and explain the

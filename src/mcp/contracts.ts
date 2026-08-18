@@ -1,5 +1,5 @@
 export const PMT_MCP_CONTRACT_VERSION = "1.0.0";
-export const PMT_MCP_SERVER_VERSION = "0.1.0";
+export const PMT_MCP_SERVER_VERSION = "0.2.0";
 
 export const PMT_MCP_TOOL_NAMES = [
   "pmt_get_inseason_status",
@@ -24,11 +24,13 @@ export const PMT_MCP_TOOL_NAMES = [
   "pmt_preview_action",
   "pmt_action_approve",
   "pmt_action_reject",
+  "pmt_action_execute",
   "pmt_get_action_audit",
   "pmt_get_model_status",
   "pmt_get_model_artifact",
   "pmt_evaluate_model",
-  "pmt_rebuild_models"
+  "pmt_rebuild_models",
+  "pmt_update_post_week_outcomes"
 ] as const;
 
 export type PmtMcpToolName = (typeof PMT_MCP_TOOL_NAMES)[number];

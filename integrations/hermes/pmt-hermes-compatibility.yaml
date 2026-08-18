@@ -1,0 +1,105 @@
+# PMT/Hermes compatibility manifest.
+# This file contains no credentials and is a checked-in baseline. A release
+# record must add the immutable PMT source ref, Hermes gateway version, provider
+# ID, model ID, and SHA-256 values for generated artifacts.
+manifest_kind: pmt-hermes-compatibility
+manifest_version: "1.0.0"
+status: checked-in-baseline
+
+pmt:
+  package: pardon-my-trade
+  release_version: "0.2.0"
+  runtime:
+    node_required: "26.x"
+    package_engine: ">=20.0.0"
+    source_ref_policy: immutable-tag-or-full-commit-sha
+  mcp:
+    transport: local-stdio
+    entrypoint: dist/src/mcp/stdio.js
+    contract_version: "1.0.0"
+    server_version: "0.2.0"
+    configuration_root: mcp_servers
+
+hermes:
+  integration: mcp-stdio-and-cron
+  gateway_version:
+    policy: exact-version-required
+    checked_in_value: not-pinned-by-pmt
+    release_record_field: hermes_gateway_version
+  provider_model:
+    policy: exact-immutable-ids-required
+    release_record_fields:
+      - hermes_provider
+      - hermes_model
+  required_features:
+    - mcp_servers configuration entries
+    - local stdio MCP process
+    - cron jobs with absolute workdir
+    - cron jobs with explicit provider and model
+    - pre-run scripts from the Hermes scripts directory
+
+capabilities:
+  read_server: pmt-read
+  read_tools:
+    - pmt_get_inseason_status
+    - pmt_get_current_scoring_period
+    - pmt_espn_read_league
+    - pmt_espn_read_rosters
+    - pmt_espn_read_schedule
+    - pmt_espn_read_transactions
+    - pmt_espn_read_players
+    - pmt_espn_read_free_agents
+    - pmt_refresh_projections
+    - pmt_run_projection_refresh
+    - pmt_get_projection_status
+    - pmt_get_projection_provenance
+    - pmt_run_news_injury_refresh
+    - pmt_list_news
+    - pmt_list_injury_alerts
+    - pmt_list_notifications
+    - pmt_run_advisory_orchestration
+    - pmt_list_pending_actions
+    - pmt_get_action
+    - pmt_preview_action
+    - pmt_get_model_status
+    - pmt_get_model_artifact
+    - pmt_evaluate_model
+    - pmt_rebuild_models
+    - pmt_update_post_week_outcomes
+  operator_server: pmt-operator
+  operator_tools:
+    - pmt_list_pending_actions
+    - pmt_get_action
+    - pmt_preview_action
+    - pmt_action_approve
+    - pmt_action_reject
+    - pmt_action_execute
+    - pmt_get_action_audit
+
+phase_5_write_boundary:
+  label: hermes-phase-5-write-executor
+  operator_enabled_by_default: false
+  write_executor_shipped: true
+  platform_write_tools:
+    - pmt_action_execute
+  approval_is_execution: false
+  current_contract: >-
+    Queue approval changes PMT state only. pmt_action_execute is a separate,
+    disabled-by-default operation that revalidates the exact approved action,
+    submits through the typed ESPN writer, and persists receipts/audit records.
+  future_enable_requirements:
+    - The operator reviews the exact queued action and current-state preview.
+    - The operator receives explicit human approval for that exact action ID.
+    - PMT enforces validation, expiry, scope, payload hash, and idempotency.
+    - The platform result and any error are recorded in durable receipts/audit.
+    - An unknown network outcome is reconciled before any retry.
+    - A canary succeeds before enabling the operator MCP server for a league.
+
+release_pinning:
+  pmt_source: immutable-tag-or-full-commit-sha
+  node_runtime: .nvmrc
+  npm_dependencies: package-lock.json
+  hermes_gateway: exact-hermes-gateway-version
+  hermes_provider: exact-provider-id
+  hermes_model: exact-immutable-model-id
+  generated_artifacts: sha256-per-file

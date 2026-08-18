@@ -3,12 +3,15 @@ import { join, relative, resolve } from "node:path";
 import { McpServer, type ToolCallback } from "@modelcontextprotocol/sdk/server/mcp.js";
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { z, type ZodRawShape } from "zod";
+import { ActionExecutor, JsonActionExecutionStore, type ActionExecutionStore } from "../agents/action-executor.js";
 import { ActionQueue, JsonActionQueueStore } from "../agents/action-queue.js";
 import type { QueuedAction } from "../agents/types.js";
 import { buildPriorsFromSnapshot } from "../agents/snapshot-integration.js";
 import { buildModelsForOrchestrator, runOrchestrator } from "../agents/ff-orchestrator.js";
 import type { PlatformReader } from "../adapters/platform-reader.js";
 import { EspnPlatformReader } from "../adapters/espn/espn-platform-reader.js";
+import { EspnPlatformWriter } from "../adapters/espn/espn-platform-writer.js";
+import type { PlatformWriter } from "../adapters/platform-writer.js";
 import { SqliteV1Store } from "../history/sqlite-v1-store.js";
 import type { V1Store } from "../history/v1-store.js";
 import type { KnowledgeRepository } from "../knowledge/repository.js";
@@ -20,6 +23,7 @@ import { evaluatePredictions, type PredictionObservation } from "../projections/
 import { runSeasonRefresh } from "../season-refresh.js";
 import { getCurrentScoringPeriod, isOffseason, weekFromScoringPeriod } from "../seasons/nfl-calendar.js";
 import { JsonModelStore } from "../probabilistic/model-store.js";
+import { updatePostWeekOutcomes } from "../probabilistic/model-governance.js";
 import {
   PMT_MCP_CONTRACT_VERSION,
   PMT_MCP_SERVER_VERSION,
@@ -28,12 +32,29 @@ import {
   type PmtMcpToolName
 } from "./contracts.js";
 
+const completedWeeklyObservationSchema = z.object({
+  playerId: z.string().min(1),
+  season: z.string().optional(),
+  week: z.number().int().min(1).max(18),
+  scoringPeriod: z.string().min(1),
+  points: z.number(),
+  observedAt: z.string().datetime(),
+  predictions: z.array(z.object({
+    source: z.string().min(1),
+    predicted: z.number(),
+    asOf: z.string().datetime().optional()
+  })).optional()
+});
+
 export interface PmtMcpDependencies {
   readonly dataDir: string;
   readonly reader: PlatformReader;
   readonly repository: KnowledgeRepository;
   readonly v1Store: V1Store;
   readonly actionQueue: ActionQueue;
+  readonly writer?: PlatformWriter;
+  readonly executionStore?: ActionExecutionStore;
+  readonly actionExecutor?: ActionExecutor;
   readonly clock?: () => Date;
   readonly loadSnapshot?: () => Promise<LeagueSnapshot>;
 }
@@ -48,14 +69,27 @@ export async function createDefaultPmtMcpDependencies(
   dataDir = process.env.PMT_DATA_DIR ?? "data"
 ): Promise<PmtMcpDependencies> {
   await mkdir(dataDir, { recursive: true });
+  const reader = new EspnPlatformReader();
+  const actionQueue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+  const writer = new EspnPlatformWriter();
+  const executionStore = new JsonActionExecutionStore(join(dataDir, "action-execution.json"));
   return {
     dataDir,
-    reader: new EspnPlatformReader(),
+    reader,
     repository: new (await import("../knowledge/sqlite-knowledge-repository.js")).SqliteKnowledgeRepository({
       filePath: join(dataDir, "pmt.db")
     }),
     v1Store: new SqliteV1Store({ filePath: join(dataDir, "pmt.db") }),
-    actionQueue: new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json"))),
+    actionQueue,
+    writer,
+    executionStore,
+    actionExecutor: new ActionExecutor({
+      queue: actionQueue,
+      reader,
+      writer,
+      store: executionStore,
+      leagueExternalId: process.env.ESPN_LEAGUE_ID
+    }),
     clock: () => new Date()
   };
 }
@@ -83,7 +117,16 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     }) as unknown as ToolCallback<Args>;
     // The SDK supports multiple Zod major versions; PMT pins the runtime
     // dependency and keeps this cast at the single registration boundary.
-    server.tool(name, description, inputSchema, callback);
+    server.registerTool(name, {
+      description,
+      inputSchema,
+      annotations: {
+        readOnlyHint: !["pmt_refresh_projections", "pmt_run_projection_refresh", "pmt_run_news_injury_refresh", "pmt_run_advisory_orchestration", "pmt_action_approve", "pmt_action_reject", "pmt_action_execute", "pmt_rebuild_models", "pmt_update_post_week_outcomes"].includes(name),
+        destructiveHint: name === "pmt_action_execute",
+        idempotentHint: true,
+        openWorldHint: name.includes("espn") || name.includes("news") || name.includes("projection")
+      }
+    }, callback as never);
   };
 
   register(
@@ -330,29 +373,45 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     { actionId: z.string().min(1) },
     async (input) => {
       const action = await requireAction(deps.actionQueue, input.actionId);
-      return { action, execution_allowed: false, note: "The Phase 1-4 bridge has no platform-write executor." };
+      return { action, execution_allowed: action.status === "approved", note: "Execution still revalidates current ESPN state and idempotency before POST." };
     }
   );
 
   register(
     "pmt_action_approve",
     "Mark a queued proposal approved for later operator handling. This does not execute a platform write.",
-    { actionId: z.string().min(1) },
-    async (input) => ({ action: await deps.actionQueue.approve(input.actionId), execution_allowed: false })
+    { actionId: z.string().min(1), actor: z.string().min(1).optional() },
+    async (input) => ({ action: await deps.actionQueue.approve(input.actionId, input.actor ?? "hermes-operator"), execution_allowed: false })
   );
 
   register(
     "pmt_action_reject",
     "Reject a queued proposal. This never calls ESPN.",
-    { actionId: z.string().min(1) },
-    async (input) => ({ action: await deps.actionQueue.reject(input.actionId), execution_allowed: false })
+    { actionId: z.string().min(1), actor: z.string().min(1).optional() },
+    async (input) => ({ action: await deps.actionQueue.reject(input.actionId, input.actor ?? "hermes-operator"), execution_allowed: false })
+  );
+
+  register(
+    "pmt_action_execute",
+    "Execute one approved, unexpired action after PMT revalidates current ESPN state. Unknown network outcomes are never retried automatically.",
+    { actionId: z.string().min(1), leagueId: z.string().optional() },
+    async (input) => {
+      if (!deps.actionExecutor) throw new Error("The PMT action executor is not configured for this server.");
+      return { execution: await deps.actionExecutor.execute(input.actionId, { leagueExternalId: input.leagueId }) };
+    }
   );
 
   register(
     "pmt_get_action_audit",
-    "Return the current queue record as a non-executing audit view.",
+    "Return the queue record plus durable execution receipts and audit events.",
     { actionId: z.string().min(1) },
-    async (input) => ({ audit_type: "queue_record_only", action: await requireAction(deps.actionQueue, input.actionId) })
+    async (input) => ({
+      action: await requireAction(deps.actionQueue, input.actionId),
+      receipt: deps.executionStore ? await deps.executionStore.getReceipt(input.actionId) : null,
+      audit: deps.executionStore
+        ? (await deps.executionStore.listAudit()).filter((record) => record.actionId === input.actionId)
+        : []
+    })
   );
 
   register(
@@ -391,7 +450,38 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     }
   );
 
-  if (PMT_MCP_TOOL_NAMES.length !== 27) {
+  register(
+    "pmt_update_post_week_outcomes",
+    "Apply a causal weekly outcome batch, score archived forecasts, persist model updates, and write a promotion/rollback manifest.",
+    {
+      season: z.string().min(1),
+      week: z.number().int().min(1).max(18),
+      causalCutoff: z.string().datetime(),
+      observations: z.array(completedWeeklyObservationSchema).optional(),
+      modelSource: z.string().optional(),
+      modelVersion: z.string().optional(),
+      generatedAt: z.string().datetime().optional(),
+      promotion: z.object({
+        candidateSource: z.string().optional(),
+        baselineSource: z.string().optional(),
+        minimumSamples: z.number().int().min(1).optional(),
+        maxMaeRegression: z.number().min(0).optional(),
+        maxRmseRegression: z.number().min(0).optional()
+      }).optional()
+    },
+    async (input) => {
+      const observations = input.observations ?? await loadConfiguredObservations();
+      return {
+        update: await updatePostWeekOutcomes(
+          new JsonModelStore(join(deps.dataDir, "models.json")),
+          { ...input, observations },
+          { artifactDir: join(deps.dataDir, "model-governance", `${input.season}-W${String(input.week).padStart(2, "0")}`) }
+        )
+      };
+    }
+  );
+
+  if (PMT_MCP_TOOL_NAMES.length !== 29) {
     throw new Error("PMT MCP contract/tool registration drift detected.");
   }
   return server;
@@ -452,6 +542,17 @@ async function readSafeArtifact(dataDir: string, requestedPath: string): Promise
 
 function normalizeName(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+async function loadConfiguredObservations(): Promise<z.infer<typeof completedWeeklyObservationSchema>[]> {
+  const path = process.env.PMT_HISTORICAL_DATA_PATH;
+  if (!path) throw new Error("Provide observations or configure PMT_HISTORICAL_DATA_PATH for post-week model updates.");
+  const parsed = JSON.parse(await readFile(path, "utf8")) as unknown;
+  if (Array.isArray(parsed)) return z.array(completedWeeklyObservationSchema).parse(parsed);
+  if (parsed && typeof parsed === "object" && Array.isArray((parsed as { observations?: unknown[] }).observations)) {
+    return z.array(completedWeeklyObservationSchema).parse((parsed as { observations: unknown[] }).observations);
+  }
+  throw new Error("PMT_HISTORICAL_DATA_PATH must contain an observation array or an object with an observations array.");
 }
 
 function toolSuccess(name: PmtMcpToolName, data: Record<string, unknown>, clock: () => Date): CallToolResult {

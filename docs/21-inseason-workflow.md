@@ -91,7 +91,8 @@ pmt daemon                            # headless scheduler
 pmt daemon --run-now                  # run the daily loop immediately, then schedule
 pmt serve --scheduler                 # GUI + scheduler in one process
 pmt action-queue                      # review what the loop proposed
-pmt action-approve <actionId>         # the only path to a real move
+  pmt action-approve <actionId>         # approve the exact queued action
+  pmt action-execute <actionId>         # revalidate and submit the approved action
 ```
 Notifications land on the console, in `data/notifications.log`, and in the V1
 store. Job runs are logged as one JSON line per run (`SeasonJobResult`).

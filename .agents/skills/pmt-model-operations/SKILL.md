@@ -36,18 +36,22 @@ model for promotion.
 2. Call `mcp_pmt_read_pmt_get_model_artifact` before changing or comparing an artifact. Check
    its approval state, data cutoff, provenance, feature list, source versions,
    and model version.
-3. For a runtime update, obtain the approved projection and historical inputs
-   through PMT, freeze the cutoff, then call `mcp_pmt_read_pmt_rebuild_models`. Preserve the
-   returned model IDs, distributions, uncertainty, and errors.
-4. When actual outcomes are available, call `mcp_pmt_read_pmt_evaluate_model` using PMT's
-   rolling time-split and calibration procedure. Report accuracy, bias,
-   interval coverage, uncertainty, sample coverage, and degraded cases exactly
-   as returned.
-5. Compare a candidate with the currently approved model on the same scope and
+3. For a projection-only runtime update, obtain the approved projection and
+   historical inputs through PMT, freeze the cutoff, then call
+   `mcp_pmt_read_pmt_rebuild_models`. Preserve the returned model IDs,
+   distributions, uncertainty, and errors.
+4. When completed weekly outcomes are available, call
+   `mcp_pmt_read_pmt_update_post_week_outcomes` with the explicit causal cutoff
+   and archived predictions. Preserve the returned manifest, rollback metadata,
+   performance, and promotion decision.
+5. For standalone supplied prediction rows, call
+   `mcp_pmt_read_pmt_evaluate_model` using PMT's deterministic metrics. Report
+   accuracy, bias, sample coverage, and degraded cases exactly as returned.
+6. Compare a candidate with the currently approved model on the same scope and
    holdout periods. Classify discrepancies as data, timing, matching, fallback,
    or model disagreement only when PMT supplies that classification or the
    evidence supports it.
-6. Stop at a reviewable promotion recommendation. Call a promotion tool only
+7. Stop at a reviewable promotion recommendation. Call a promotion tool only
    after the user explicitly requests promotion and PMT confirms all required
    gates; otherwise leave the current approved model unchanged.
 
