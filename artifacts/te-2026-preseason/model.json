@@ -1,0 +1,62 @@
+{
+  "model_version": "te-2026-preseason-hard-stats-ridge-v2",
+  "position": "TE",
+  "features": [
+    "prior_points_per_game",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
+    "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "means": {
+    "prior_points_per_game": 6.20424509578544,
+    "prior_usage_per_game": 3.4571590038314177,
+    "prior_efficiency": 7.299398159756644,
+    "prior_share": 0.10718067866301141,
+    "prior_team_pass_attempts": 33.8505284619595,
+    "prior_team_rush_attempts": 26.62426491516147,
+    "prior_usage_trend": 0.11835367180383309,
+    "prior_role_stability": 0.4875578197326455,
+    "prior_team_pass_trend": 0.015582231525964978,
+    "prior_games": 28.958045977011494,
+    "prior_availability_rate": 0.7394827586206897,
+    "experience_seasons": 2.1544827586206896
+  },
+  "scales": {
+    "prior_points_per_game": 4.048418894400446,
+    "prior_usage_per_game": 2.0733837494960645,
+    "prior_efficiency": 2.9923293015553605,
+    "prior_share": 0.06068226649998509,
+    "prior_team_pass_attempts": 4.4485057429728085,
+    "prior_team_rush_attempts": 3.7095971643415107,
+    "prior_usage_trend": 0.5794917400606044,
+    "prior_role_stability": 0.21533276266040655,
+    "prior_team_pass_trend": 0.3548816858167666,
+    "prior_games": 26.218611637189987,
+    "prior_availability_rate": 0.3487267307173102,
+    "experience_seasons": 1.9488981612198681
+  },
+  "coefficients": [
+    6.067924137931045,
+    0.6354926270692394,
+    0.9695406313503941,
+    0.09932767281385459,
+    1.2941164861881465,
+    0.09082984064682341,
+    0.1149793362679178,
+    0.26129806408044526,
+    0.012086347698842655,
+    -0.010724489460815455,
+    0.8849078123223505,
+    0.21414437289930266,
+    -0.9209866672570449
+  ],
+  "residual_standard_deviation": 5.170488705637378
+}

@@ -1,0 +1,223 @@
+{
+  "schema_version": "chatpft.position.preseason.v1",
+  "replay_id": "chatpft-te-2026-preseason",
+  "position": "TE",
+  "season": 2026,
+  "preseason_cutoff": "2026-08-17T22:58:43.653923+00:00",
+  "training_window": "2018-2025",
+  "prediction_horizon": "2026-ROS",
+  "data_status": "real nflverse outcomes through 2025; current Razzball comparison",
+  "sources": [
+    {
+      "name": "nflverse_player_stats_2018_2024",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "parsed_rows": 8700
+    },
+    {
+      "name": "nflverse_player_stats_2025",
+      "path": "data/nflverse-stats_player_week-2025.csv.gz",
+      "sha256": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b",
+      "parsed_rows": 1287
+    },
+    {
+      "name": "razzball_current_rankings",
+      "url": "https://football.razzball.com/2025-fantasy-football-tight-end-rankings/",
+      "kind": "rank",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:43.545471+00:00",
+      "sha256": "eb970c448e4ad7ee3e845931d95bcf5951c7749af09da384a58bb4b521a97a15",
+      "bytes": 176895,
+      "parsed_rows": 40,
+      "as_of": "2026-08-17T22:58:43.661748+00:00"
+    },
+    {
+      "name": "razzball_current_projections",
+      "url": "https://football.razzball.com/projections-te-restofseason/",
+      "kind": "points",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:43.546610+00:00",
+      "sha256": "d81721a20f0f1348715d2f55f66b95319056c4ea3d09316b5366b882e77afef4",
+      "bytes": 268701,
+      "parsed_rows": 192,
+      "as_of": "2026-08-17T22:58:43.661787+00:00"
+    }
+  ],
+  "matching": {
+    "rank": {
+      "source_rows": 40,
+      "matched": 40,
+      "unmatched": 0,
+      "ambiguous": 0
+    },
+    "points": {
+      "source_rows": 192,
+      "matched": 130,
+      "unmatched": 62,
+      "ambiguous": 0
+    }
+  },
+  "row_counts": {
+    "training": 8700,
+    "players": 311,
+    "predictions": 311
+  },
+  "model": {
+    "model_version": "te-2026-preseason-hard-stats-ridge-v2",
+    "position": "TE",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 6.20424509578544,
+      "prior_usage_per_game": 3.4571590038314177,
+      "prior_efficiency": 7.299398159756644,
+      "prior_share": 0.10718067866301141,
+      "prior_team_pass_attempts": 33.8505284619595,
+      "prior_team_rush_attempts": 26.62426491516147,
+      "prior_usage_trend": 0.11835367180383309,
+      "prior_role_stability": 0.4875578197326455,
+      "prior_team_pass_trend": 0.015582231525964978,
+      "prior_games": 28.958045977011494,
+      "prior_availability_rate": 0.7394827586206897,
+      "experience_seasons": 2.1544827586206896
+    },
+    "scales": {
+      "prior_points_per_game": 4.048418894400446,
+      "prior_usage_per_game": 2.0733837494960645,
+      "prior_efficiency": 2.9923293015553605,
+      "prior_share": 0.06068226649998509,
+      "prior_team_pass_attempts": 4.4485057429728085,
+      "prior_team_rush_attempts": 3.7095971643415107,
+      "prior_usage_trend": 0.5794917400606044,
+      "prior_role_stability": 0.21533276266040655,
+      "prior_team_pass_trend": 0.3548816858167666,
+      "prior_games": 26.218611637189987,
+      "prior_availability_rate": 0.3487267307173102,
+      "experience_seasons": 1.9488981612198681
+    },
+    "coefficients": [
+      6.067924137931045,
+      0.6354926270692394,
+      0.9695406313503941,
+      0.09932767281385459,
+      1.2941164861881465,
+      0.09082984064682341,
+      0.1149793362679178,
+      0.26129806408044526,
+      0.012086347698842655,
+      -0.010724489460815455,
+      0.8849078123223505,
+      0.21414437289930266,
+      -0.9209866672570449
+    ],
+    "residual_standard_deviation": 5.170488705637378
+  },
+  "rookie_model": {
+    "model_version": "te-2026-preseason-rookie-ridge-v1",
+    "position": "TE",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 5.87781449007845,
+      "prior_usage_per_game": 3.1441316720504537,
+      "prior_efficiency": 7.666568659105,
+      "prior_share": 0.09435071979408902,
+      "prior_team_pass_attempts": 34.540308084470524,
+      "prior_team_rush_attempts": 26.138777001340454,
+      "prior_usage_trend": 0.13134459287256448,
+      "prior_role_stability": 0.6330729918145204,
+      "prior_team_pass_trend": -0.0008964805528094551,
+      "prior_games": 4.758652514997693,
+      "prior_availability_rate": 0.2643695841665385,
+      "experience_seasons": 0.0
+    },
+    "scales": {
+      "prior_points_per_game": 3.9221027537160893,
+      "prior_usage_per_game": 1.9697922007536568,
+      "prior_efficiency": 3.8469416744736447,
+      "prior_share": 0.0560637494979162,
+      "prior_team_pass_attempts": 4.801206997312923,
+      "prior_team_rush_attempts": 3.746625302784487,
+      "prior_usage_trend": 0.5185243426629584,
+      "prior_role_stability": 0.28252249612130514,
+      "prior_team_pass_trend": 0.16739347053947476,
+      "prior_games": 4.0028125359712,
+      "prior_availability_rate": 0.22237847422062226,
+      "experience_seasons": 1e-06
+    },
+    "coefficients": [
+      5.569312413474845,
+      -0.7027535635589364,
+      2.009837343310106,
+      0.29782006457747784,
+      1.2059269479233798,
+      0.2885149627818843,
+      0.09607704302578896,
+      -0.00673354580735918,
+      -0.5653275171522536,
+      -0.007781320197817857,
+      -0.07241599266282461,
+      -0.07241599266247009,
+      0.0
+    ],
+    "residual_standard_deviation": 4.968848754342887
+  },
+  "context": {
+    "status": "unavailable",
+    "path": "data/chatpft-position-context.json",
+    "rows": 0,
+    "reason": "no real draft/college/role context file supplied"
+  },
+  "metrics": {
+    "position": "TE",
+    "rank_comparison": {
+      "samples": 40,
+      "spearman": 0.5500938086303939,
+      "top12_hit_rate": 0.5833333333333334,
+      "top24_hit_rate": 0.7083333333333334,
+      "top36_hit_rate": 0.9444444444444444
+    },
+    "point_comparison": {
+      "samples": 130,
+      "mae": 28.41227216566611,
+      "rmse": 38.12490584629792,
+      "bias": 25.743209678378797
+    },
+    "rank_matching": {
+      "source_rows": 40,
+      "matched": 40,
+      "unmatched": 0,
+      "ambiguous": 0
+    },
+    "point_matching": {
+      "source_rows": 192,
+      "matched": 130,
+      "unmatched": 62,
+      "ambiguous": 0
+    }
+  }
+}

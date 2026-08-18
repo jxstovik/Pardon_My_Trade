@@ -1,0 +1,62 @@
+{
+  "model_version": "te-2024-preseason-hard-stats-ridge-v1",
+  "position": "TE",
+  "features": [
+    "prior_points_per_game",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
+    "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "means": {
+    "prior_points_per_game": 6.282754519104084,
+    "prior_usage_per_game": 3.4952806324110672,
+    "prior_efficiency": 7.3574186933753305,
+    "prior_share": 0.10599959512043333,
+    "prior_team_pass_attempts": 34.32438302277433,
+    "prior_team_rush_attempts": 26.571281385281385,
+    "prior_usage_trend": 0.12484915346820859,
+    "prior_role_stability": 0.493794571458459,
+    "prior_team_pass_trend": 0.018227402913724024,
+    "prior_games": 23.367588932806324,
+    "prior_availability_rate": 0.7026789635485288,
+    "experience_seasons": 1.6912252964426877
+  },
+  "scales": {
+    "prior_points_per_game": 4.0177296676103635,
+    "prior_usage_per_game": 2.04806919641958,
+    "prior_efficiency": 3.0712546874225097,
+    "prior_share": 0.06010361665750328,
+    "prior_team_pass_attempts": 4.607961213324755,
+    "prior_team_rush_attempts": 3.781466742812115,
+    "prior_usage_trend": 0.568908899233065,
+    "prior_role_stability": 0.22141262456056998,
+    "prior_team_pass_trend": 0.40270026742354,
+    "prior_games": 20.399148845807154,
+    "prior_availability_rate": 0.36031095600113666,
+    "experience_seasons": 1.53380680686422
+  },
+  "coefficients": [
+    6.152430039525715,
+    0.5373249228608618,
+    1.1947240062247255,
+    0.1201875068525547,
+    1.0952792476962117,
+    0.09062414696075612,
+    0.1414510758083891,
+    0.26117438188021147,
+    0.04493499262824432,
+    -0.01443259621442852,
+    0.7305857510488888,
+    0.24757058793560524,
+    -0.7783512125259663
+  ],
+  "residual_standard_deviation": 5.205898190061309
+}

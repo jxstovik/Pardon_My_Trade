@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatPFT WR Replay</title>
+  <link rel="stylesheet" href="modeling.css">
+</head>
+<body>
+  <header><div><span class="eyebrow">ChatPFT / evidence replay</span><h1>2024 WR Model Timeline</h1></div><a href="/">PMT home</a></header>
+  <main>
+    <section class="hero">
+      <div><span class="eyebrow">Causal checkpoints</span><h2>Watch the model learn without looking ahead.</h2><p>Every row is labeled with its cutoff, regime, source status, uncertainty, and later outcome. Missing historical provider snapshots remain visible instead of becoming synthetic data.</p></div>
+      <div class="run-state" id="run-state">Loading replay</div>
+    </section>
+    <section class="controls panel">
+      <label>Season<select id="season"><option selected>2026</option><option>2024</option></select></label>
+      <label>Position<select id="position"><option>QB</option><option>RB</option><option selected>WR</option><option>TE</option></select></label>
+      <label>Checkpoint<select id="period"></select></label>
+      <label>Regime<select id="regime"><option value="adaptive_expanding">Adaptive expanding</option><option value="frozen_weights_adaptive_features">Frozen weights / adaptive features</option><option value="frozen_preseason">Frozen preseason</option></select></label>
+      <label>Player ID<input id="player-id" placeholder="optional player id"></label>
+      <button id="load">Load timeline</button>
+      <a class="button-link" href="/api/modeling/artifact/phase8-report.md">Open phase 8 report</a>
+    </section>
+    <section class="grid">
+      <article class="panel"><div class="section-head"><div><span class="eyebrow">Promotion</span><h3 id="promotion-title">Replay status</h3></div><span id="promotion-status"></span></div><div class="metrics" id="replay-summary"></div></article>
+      <article class="panel"><div class="section-head"><div><span class="eyebrow">Sources</span><h3>Checkpoint evidence</h3></div></div><div class="metrics" id="source-summary"></div></article>
+    </section>
+    <section class="panel table-panel"><div class="section-head"><div><span class="eyebrow">Weekly benchmark</span><h3>Forecast accuracy</h3></div><span id="metric-note"></span></div><div id="metrics-table"></div></section>
+    <section class="panel table-panel"><div class="section-head"><div><span class="eyebrow">Player progression</span><h3>Prediction trajectory</h3></div><span id="player-note"></span></div><div id="predictions-table"></div></section>
+  </main>
+  <script src="modeling.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "position": "QB",
+  "model_version": "nflverse-bootstrap-ridge-v1",
+  "features": [
+    "prior_points",
+    "team_pace",
+    "availability",
+    "qb_quality",
+    "red_zone_rate"
+  ],
+  "members": 30,
+  "residual_standard_deviation": 8.09609649000187,
+  "training_seasons": "2018-2023",
+  "validation_season": "2024"
+}

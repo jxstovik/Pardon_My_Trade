@@ -1,0 +1,223 @@
+{
+  "schema_version": "chatpft.position.preseason.v1",
+  "replay_id": "chatpft-wr-2026-preseason",
+  "position": "WR",
+  "season": 2026,
+  "preseason_cutoff": "2026-08-17T22:58:48.824189+00:00",
+  "training_window": "2018-2025",
+  "prediction_horizon": "2026-ROS",
+  "data_status": "real nflverse outcomes through 2025; current Razzball comparison",
+  "sources": [
+    {
+      "name": "nflverse_player_stats_2018_2024",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "parsed_rows": 17212
+    },
+    {
+      "name": "nflverse_player_stats_2025",
+      "path": "data/nflverse-stats_player_week-2025.csv.gz",
+      "sha256": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b",
+      "parsed_rows": 2511
+    },
+    {
+      "name": "razzball_current_rankings",
+      "url": "https://football.razzball.com/2025-fantasy-football-wide-receiver-rankings/",
+      "kind": "rank",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:48.724609+00:00",
+      "sha256": "72f0c50a71dbb9877501a37640eb4c7348c1df521e483afb82d639bb814a812b",
+      "bytes": 179186,
+      "parsed_rows": 75,
+      "as_of": "2026-08-17T22:58:48.828781+00:00"
+    },
+    {
+      "name": "razzball_current_projections",
+      "url": "https://football.razzball.com/projections-wr-restofseason/",
+      "kind": "points",
+      "status": "downloaded",
+      "retrieved_at": "2026-08-17T22:58:48.725615+00:00",
+      "sha256": "444ec3b750d290113b4d698e42da4e9894912f53fffe32c1191ed7f84e8799c7",
+      "bytes": 348281,
+      "parsed_rows": 351,
+      "as_of": "2026-08-17T22:58:48.828802+00:00"
+    }
+  ],
+  "matching": {
+    "rank": {
+      "source_rows": 75,
+      "matched": 73,
+      "unmatched": 2,
+      "ambiguous": 0
+    },
+    "points": {
+      "source_rows": 351,
+      "matched": 230,
+      "unmatched": 121,
+      "ambiguous": 0
+    }
+  },
+  "row_counts": {
+    "training": 17212,
+    "players": 583,
+    "predictions": 583
+  },
+  "model": {
+    "model_version": "wr-2026-preseason-hard-stats-ridge-v2",
+    "position": "WR",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 8.597671043458053,
+      "prior_usage_per_game": 4.784025679758308,
+      "prior_efficiency": 7.962919203542041,
+      "prior_share": 0.14829496082016252,
+      "prior_team_pass_attempts": 33.89645160353242,
+      "prior_team_rush_attempts": 26.59722757101911,
+      "prior_usage_trend": 0.12050849996644993,
+      "prior_role_stability": 0.4149384168716267,
+      "prior_team_pass_trend": 0.020778277770468305,
+      "prior_games": 29.544039042528468,
+      "prior_availability_rate": 0.7523175045833657,
+      "experience_seasons": 2.004299326051592
+    },
+    "scales": {
+      "prior_points_per_game": 5.399681996841019,
+      "prior_usage_per_game": 2.6876941714006657,
+      "prior_efficiency": 3.5138052338711367,
+      "prior_share": 0.07782968177656667,
+      "prior_team_pass_attempts": 4.384547751798721,
+      "prior_team_rush_attempts": 3.6680380103042234,
+      "prior_usage_trend": 0.6449963136184947,
+      "prior_role_stability": 0.20899546244110906,
+      "prior_team_pass_trend": 0.515213026186126,
+      "prior_games": 25.967522058515765,
+      "prior_availability_rate": 0.34318326361939644,
+      "experience_seasons": 1.8933277209220811
+    },
+    "coefficients": [
+      8.365248663722994,
+      1.8262036310557703,
+      1.043864436602595,
+      -0.020112122707144135,
+      1.153121792581759,
+      0.04089870181487135,
+      0.025341648229836807,
+      0.2571050117493982,
+      0.1043264481827062,
+      -0.06062287594902066,
+      1.0984461327451216,
+      0.37487628149665364,
+      -1.3965356660804953
+    ],
+    "residual_standard_deviation": 6.6368651912666525
+  },
+  "rookie_model": {
+    "model_version": "wr-2026-preseason-rookie-ridge-v1",
+    "position": "WR",
+    "features": [
+      "prior_points_per_game",
+      "prior_usage_per_game",
+      "prior_efficiency",
+      "prior_share",
+      "prior_team_pass_attempts",
+      "prior_team_rush_attempts",
+      "prior_usage_trend",
+      "prior_role_stability",
+      "prior_team_pass_trend",
+      "prior_games",
+      "prior_availability_rate",
+      "experience_seasons"
+    ],
+    "means": {
+      "prior_points_per_game": 7.742602048022599,
+      "prior_usage_per_game": 4.148156779661017,
+      "prior_efficiency": 7.894331113551191,
+      "prior_share": 0.12657424648716895,
+      "prior_team_pass_attempts": 34.16980402542373,
+      "prior_team_rush_attempts": 26.20394193906376,
+      "prior_usage_trend": 0.15022156463211625,
+      "prior_role_stability": 0.554456116849703,
+      "prior_team_pass_trend": 0.007428450363612916,
+      "prior_games": 5.419491525423729,
+      "prior_availability_rate": 0.3010828625235405,
+      "experience_seasons": 0.0
+    },
+    "scales": {
+      "prior_points_per_game": 5.215641185928948,
+      "prior_usage_per_game": 2.5900234162092852,
+      "prior_efficiency": 4.30251948972399,
+      "prior_share": 0.07305307794543038,
+      "prior_team_pass_attempts": 4.606333954116294,
+      "prior_team_rush_attempts": 3.7890658943406543,
+      "prior_usage_trend": 0.639681279125261,
+      "prior_role_stability": 0.29114941093625535,
+      "prior_team_pass_trend": 0.1749593553092661,
+      "prior_games": 4.246419398452689,
+      "prior_availability_rate": 0.2359121888029272,
+      "experience_seasons": 1e-06
+    },
+    "coefficients": [
+      7.583991525423739,
+      1.762687769071144,
+      1.3954973526638856,
+      -0.08054917757304562,
+      0.6519482110024367,
+      -0.07749036553284498,
+      0.045402600358434166,
+      0.2826062355777167,
+      -0.017666908646547064,
+      0.026925554873256815,
+      0.21000322147946193,
+      0.21000322147955208,
+      0.0
+    ],
+    "residual_standard_deviation": 6.379379093457047
+  },
+  "context": {
+    "status": "unavailable",
+    "path": "data/chatpft-position-context.json",
+    "rows": 0,
+    "reason": "no real draft/college/role context file supplied"
+  },
+  "metrics": {
+    "position": "WR",
+    "rank_comparison": {
+      "samples": 71,
+      "spearman": 0.6867873910127431,
+      "top12_hit_rate": 0.5,
+      "top24_hit_rate": 0.7083333333333334,
+      "top36_hit_rate": 0.7777777777777778
+    },
+    "point_comparison": {
+      "samples": 230,
+      "mae": 34.07125316507873,
+      "rmse": 46.08534007521072,
+      "bias": 30.419052578600514
+    },
+    "rank_matching": {
+      "source_rows": 75,
+      "matched": 73,
+      "unmatched": 2,
+      "ambiguous": 0
+    },
+    "point_matching": {
+      "source_rows": 351,
+      "matched": 230,
+      "unmatched": 121,
+      "ambiguous": 0
+    }
+  }
+}

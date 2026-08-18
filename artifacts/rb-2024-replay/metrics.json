@@ -1,0 +1,59 @@
+[
+  {
+    "model": "hard_stats",
+    "samples": 135,
+    "mae": 51.487167902945835,
+    "rmse": 74.02432964242483,
+    "bias": 8.81954943291216,
+    "rank_samples": 135,
+    "spearman": 0.6749195200468248,
+    "top12_hit_rate": 0.3333333333333333,
+    "ndcg12": 0.5753812414704541,
+    "top24_hit_rate": 0.625,
+    "ndcg24": 0.6955315618381712,
+    "top36_hit_rate": 0.7222222222222222,
+    "ndcg36": 0.7324574374360895
+  },
+  {
+    "model": "prior_baseline",
+    "samples": 135,
+    "mae": 54.144030178326474,
+    "rmse": 80.14497947722722,
+    "bias": 13.8558573388203,
+    "rank_samples": 135,
+    "spearman": 0.6608428446005268,
+    "top12_hit_rate": 0.4166666666666667,
+    "ndcg12": 0.5818300098666721,
+    "top24_hit_rate": 0.5833333333333334,
+    "ndcg24": 0.682854080672192,
+    "top36_hit_rate": 0.7222222222222222,
+    "ndcg36": 0.7394147711623732
+  },
+  {
+    "model": "razzball_rank",
+    "samples": 121,
+    "mae": 48.43735537190083,
+    "rmse": 67.85831461810643,
+    "bias": -6.435702479338844,
+    "rank_samples": 0,
+    "spearman": null,
+    "top12_hit_rate": null,
+    "top24_hit_rate": null,
+    "top36_hit_rate": null,
+    "ndcg12": null,
+    "ndcg24": null,
+    "ndcg36": null
+  },
+  {
+    "model": "source_rank_blend",
+    "samples": 0,
+    "rank_samples": 0,
+    "spearman": null,
+    "top12_hit_rate": null,
+    "top24_hit_rate": null,
+    "top36_hit_rate": null,
+    "ndcg12": null,
+    "ndcg24": null,
+    "ndcg36": null
+  }
+]

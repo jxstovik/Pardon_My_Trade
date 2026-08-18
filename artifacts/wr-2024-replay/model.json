@@ -1,0 +1,62 @@
+{
+  "model_version": "wr-2024-preseason-hard-stats-ridge-v1",
+  "position": "WR",
+  "features": [
+    "prior_points_per_game",
+    "prior_usage_per_game",
+    "prior_efficiency",
+    "prior_share",
+    "prior_team_pass_attempts",
+    "prior_team_rush_attempts",
+    "prior_usage_trend",
+    "prior_role_stability",
+    "prior_team_pass_trend",
+    "prior_games",
+    "prior_availability_rate",
+    "experience_seasons"
+  ],
+  "means": {
+    "prior_points_per_game": 8.87616492958867,
+    "prior_usage_per_game": 4.931484870183255,
+    "prior_efficiency": 8.01085214258243,
+    "prior_share": 0.14911712649516215,
+    "prior_team_pass_attempts": 34.39621091574509,
+    "prior_team_rush_attempts": 26.495185054688594,
+    "prior_usage_trend": 0.1268698143391732,
+    "prior_role_stability": 0.41341915110567873,
+    "prior_team_pass_trend": 0.02608449490659941,
+    "prior_games": 24.68080197310844,
+    "prior_availability_rate": 0.7241626223247672,
+    "experience_seasons": 1.6282918291033495
+  },
+  "scales": {
+    "prior_points_per_game": 5.358168476338884,
+    "prior_usage_per_game": 2.6528176672576094,
+    "prior_efficiency": 3.4813515585390036,
+    "prior_share": 0.07665281921479117,
+    "prior_team_pass_attempts": 4.547219150409339,
+    "prior_team_rush_attempts": 3.7299821890086213,
+    "prior_usage_trend": 0.6436448936379535,
+    "prior_role_stability": 0.2134450517225951,
+    "prior_team_pass_trend": 0.5938589021092455,
+    "prior_games": 20.902128786051797,
+    "prior_availability_rate": 0.3521898618726802,
+    "experience_seasons": 1.534273865546835
+  },
+  "coefficients": [
+    8.673832444904068,
+    1.7695695261786428,
+    0.8190668265065132,
+    0.03738524642162149,
+    1.3277622452789344,
+    0.07278088323423378,
+    0.0195688184046948,
+    0.2040336024687533,
+    0.12443334464270878,
+    -0.06419015866192884,
+    1.0727499052371021,
+    0.2697816437152143,
+    -1.2200385666933276
+  ],
+  "residual_standard_deviation": 6.776773951107401
+}

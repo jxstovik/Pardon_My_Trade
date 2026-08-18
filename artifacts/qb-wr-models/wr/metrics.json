@@ -1,0 +1,38 @@
+[
+  {
+    "split": "training",
+    "model": "metamodel",
+    "samples": 1080,
+    "mae": 2.940882,
+    "rmse": 3.72363,
+    "bias": 0.023405,
+    "p10_p90_coverage": 0.803704
+  },
+  {
+    "split": "training",
+    "model": "razzball",
+    "samples": 1080,
+    "mae": 4.349908,
+    "rmse": 5.774199,
+    "bias": 0.979791,
+    "p10_p90_coverage": null
+  },
+  {
+    "split": "validation",
+    "model": "metamodel",
+    "samples": 360,
+    "mae": 3.121845,
+    "rmse": 4.013016,
+    "bias": -0.029654,
+    "p10_p90_coverage": 0.758333
+  },
+  {
+    "split": "validation",
+    "model": "razzball",
+    "samples": 360,
+    "mae": 4.528058,
+    "rmse": 5.975934,
+    "bias": 1.192653,
+    "p10_p90_coverage": null
+  }
+]

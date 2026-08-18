@@ -1,0 +1,125 @@
+{
+  "data_status": "real nflverse outcomes and public Razzball source tables",
+  "sources": [
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats.csv.gz",
+      "path": "data/nflverse-player_stats.csv.gz",
+      "sha256": "01a8db3ce4f576c51fc46ee329d789b3141d83e81a02323ef49f9744c1e1012e",
+      "bytes": "7211865",
+      "cached": "true"
+    },
+    {
+      "url": "https://football.razzball.com/projections/",
+      "path": "data/razzball-projections.html",
+      "sha256": "86b50e46534b3546bae3d531798a63e2d7c11ae1f6df36ae699da96794c5f15f",
+      "bytes": "405939",
+      "cached": "true"
+    },
+    {
+      "url": "https://football.razzball.com/2025-fantasy-football-quarterback-rankings/",
+      "path": "data/razzball-2025-qb-rankings.html",
+      "sha256": "0fdcf150f602761d6951923e4c25323c233a081151df527da45903277d43b208",
+      "bytes": "177570",
+      "cached": "true"
+    },
+    {
+      "url": "https://football.razzball.com/2025-fantasy-football-wide-receiver-rankings/",
+      "path": "data/razzball-2025-wr-rankings.html",
+      "sha256": "29dff98d38398fd0c9b398d625e49e01108329f7e3f9398ab083819eb975b32d",
+      "bytes": "179193",
+      "cached": "true"
+    }
+  ],
+  "results": [
+    {
+      "position": "QB",
+      "training_samples": 3799,
+      "validation_samples": 664,
+      "current_predictions": 61,
+      "metrics": [
+        {
+          "split": "training",
+          "model": "nflverse-history-bootstrap-ridge",
+          "samples": 3799,
+          "mae": 6.490121,
+          "rmse": 8.096168,
+          "bias": -0.007093,
+          "p10_p90_coverage": 0.76836
+        },
+        {
+          "split": "training",
+          "model": "prior-player-history-baseline",
+          "samples": 3799,
+          "mae": 6.609462,
+          "rmse": 8.37685,
+          "bias": 0.380324,
+          "p10_p90_coverage": null
+        },
+        {
+          "split": "validation",
+          "model": "nflverse-history-bootstrap-ridge",
+          "samples": 664,
+          "mae": 6.487252,
+          "rmse": 8.061473,
+          "bias": -0.03069,
+          "p10_p90_coverage": 0.75753
+        },
+        {
+          "split": "validation",
+          "model": "prior-player-history-baseline",
+          "samples": 664,
+          "mae": 6.539233,
+          "rmse": 8.27712,
+          "bias": 0.086245,
+          "p10_p90_coverage": null
+        }
+      ],
+      "database": "artifacts/qb-wr-models-real/qb/qb-metamodel.sqlite"
+    },
+    {
+      "position": "WR",
+      "training_samples": 12569,
+      "validation_samples": 2132,
+      "current_predictions": 174,
+      "metrics": [
+        {
+          "split": "training",
+          "model": "nflverse-history-bootstrap-ridge",
+          "samples": 12569,
+          "mae": 5.275952,
+          "rmse": 6.902828,
+          "bias": 0.000607,
+          "p10_p90_coverage": 0.833718
+        },
+        {
+          "split": "training",
+          "model": "prior-player-history-baseline",
+          "samples": 12569,
+          "mae": 5.358218,
+          "rmse": 7.075975,
+          "bias": 0.259855,
+          "p10_p90_coverage": null
+        },
+        {
+          "split": "validation",
+          "model": "nflverse-history-bootstrap-ridge",
+          "samples": 2132,
+          "mae": 5.075041,
+          "rmse": 6.795833,
+          "bias": -0.083382,
+          "p10_p90_coverage": 0.843809
+        },
+        {
+          "split": "validation",
+          "model": "prior-player-history-baseline",
+          "samples": 2132,
+          "mae": 5.10369,
+          "rmse": 6.93347,
+          "bias": 0.07843,
+          "p10_p90_coverage": null
+        }
+      ],
+      "database": "artifacts/qb-wr-models-real/wr/wr-metamodel.sqlite"
+    }
+  ]
+}
