@@ -17,6 +17,7 @@ import { loadFixtureSnapshotSource, ingestFixtureSnapshot } from "./knowledge/in
 import { runRefresh } from "./pipeline/refresh.js";
 import { createApiServer } from "./api/server.js";
 import { DraftController } from "./draft/draft-controller.js";
+import { buildLLMProvider } from "./llm/factory.js";
 import { attachDraftWebSocket } from "./api/draft-ws.js";
 import { loadEnv } from "./config/load-env.js";
 import { EspnPlatformReader } from "./adapters/espn/espn-platform-reader.js";
@@ -492,6 +493,8 @@ async function main(): Promise<void> {
         }
       }
 
+      const llmProvider = buildLLMProvider(config.llm.providers, config.llm.fallbackOrder);
+
       const controller = new DraftController({
         snapshot,
         config: draftConfig,
@@ -499,7 +502,8 @@ async function main(): Promise<void> {
         espnDraftId: config.draft.feed === "espn" ? config.draft.espnDraftId : undefined,
         client,
         intervalMs: config.draft.pollMs,
-        onSnapshot: (snap) => hub?.broadcast(snap)
+        onSnapshot: (snap) => hub?.broadcast(snap),
+        llmProvider
       });
       await controller.init();
 
