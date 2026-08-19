@@ -8,10 +8,13 @@ export interface DraftHarnessConfig {
   readonly espnDraftId?: string;
 }
 
-export interface OllamaConfig {
+export interface LLMProviderConfig {
+  readonly name: string;
   readonly baseUrl: string;
-  readonly model: string;
   readonly apiKey?: string;
+  readonly model: string;
+  readonly temperature?: number;
+  readonly maxTokens?: number;
 }
 
 export interface AppConfig {
@@ -22,7 +25,16 @@ export interface AppConfig {
   readonly fixturePath: string;
   readonly readOnlyMode: true;
   readonly draft: DraftHarnessConfig;
-  readonly ollama: OllamaConfig;
+  readonly llm: {
+    readonly providers: LLMProviderConfig[];
+    readonly fallbackOrder: string[];
+  };
+  /** @deprecated Use llm.providers instead */
+  readonly ollama: {
+    readonly baseUrl: string;
+    readonly model: string;
+    readonly apiKey?: string;
+  };
 }
 
 export function createDefaultConfig(): AppConfig {
@@ -40,12 +52,41 @@ export function createDefaultConfig(): AppConfig {
       draftPosition: Number(process.env.PMT_DRAFT_POSITION ?? 1),
       feed: (process.env.PMT_DRAFT_FEED as "espn" | "manual") ?? "manual",
       pollMs: Number(process.env.PMT_DRAFT_POLL_MS ?? 15000),
-      espnDraftId: process.env.PMT_DRAFT_ESPN_ID
+      espnDraftId: process.env.PMT_DRAFT_ESPN_ID,
+    },
+    llm: {
+      providers: [
+        {
+          name: "opencode-zen",
+          baseUrl: process.env.OPENCODE_BASE_URL ?? "https://opencode.ai",
+          apiKey: process.env.OPENCODE_API_KEY,
+          model: process.env.OPENCODE_ZEN_MODEL ?? "zen",
+          temperature: 0.7,
+          maxTokens: 1024,
+        },
+        {
+          name: "opencode-go",
+          baseUrl: process.env.OPENCODE_BASE_URL ?? "https://opencode.ai",
+          apiKey: process.env.OPENCODE_API_KEY,
+          model: process.env.OPENCODE_GO_MODEL ?? "go",
+          temperature: 0.7,
+          maxTokens: 1024,
+        },
+        {
+          name: "openai",
+          baseUrl: process.env.OPENAI_BASE_URL ?? "https://api.openai.com",
+          apiKey: process.env.OPENAI_API_KEY,
+          model: process.env.OPENAI_MODEL ?? "gpt-4",
+          temperature: 0.7,
+          maxTokens: 1024,
+        },
+      ],
+      fallbackOrder: ["opencode-zen", "opencode-go", "openai"],
     },
     ollama: {
       baseUrl: process.env.OLLAMA_BASE_URL ?? "https://ollama.cloud",
       model: process.env.OLLAMA_MODEL ?? "llama3",
-      apiKey: process.env.OLLAMA_API_KEY
-    }
+      apiKey: process.env.OLLAMA_API_KEY,
+    },
   };
 }

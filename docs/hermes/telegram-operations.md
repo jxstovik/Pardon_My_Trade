@@ -28,7 +28,7 @@ operator is ready to approve and execute a specific queued action.
 Build PMT from the selected checkout:
 
 ```bash
-cd /ABSOLUTE/PATH/TO/Pardon_My_Trade
+cd /home/jxstovik/projects/Pardon_My_Trade/Pardon_My_Trade
 npm ci
 npm rebuild better-sqlite3
 npm run build
@@ -60,11 +60,11 @@ Put the values in the protected Hermes environment file instead:
 The important non-secret settings are:
 
 ```bash
-export PMT_WORKDIR="/ABSOLUTE/PATH/TO/Pardon_My_Trade"
-export PMT_DATA_DIR="/ABSOLUTE/PATH/TO/Pardon_My_Trade/data"
+export PMT_WORKDIR="/home/jxstovik/projects/Pardon_My_Trade/Pardon_My_Trade"
+export PMT_DATA_DIR="/home/jxstovik/projects/Pardon_My_Trade/Pardon_My_Trade/data"
 export ESPN_LEAGUE_ID="<league-id>"
 export ESPN_SEASON="2026"
-export PMT_HISTORICAL_DATA_PATH="/ABSOLUTE/PATH/TO/completed-observations.json"
+export PMT_HISTORICAL_DATA_PATH="/home/jxstovik/projects/Pardon_My_Trade/Pardon_My_Trade/data/models.json"
 ```
 
 The observations file must contain completed weekly observations in the schema

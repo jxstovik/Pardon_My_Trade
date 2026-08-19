@@ -15,7 +15,7 @@ import {
 } from "./state.js";
 import { applySurvival, buildValuationModels, rankBestAvailable, type ValuationModel } from "./valuation/valuation.js";
 import { buildDraftChatContext, buildPickAdvice } from "./skills/pick-advisor.js";
-import { ollamaChat, type OllamaMessage } from "../llm/ollama.js";
+import type { LLMMessage, LLMProvider } from "../llm/providers.js";
 import type { EspnPlatformClient } from "../adapters/espn/espn-platform-client.js";
 import type { DraftPickEvent, ManualPickInput } from "./feed/draft-feed.js";
 
@@ -44,6 +44,7 @@ export interface DraftControllerDeps {
   readonly client?: EspnPlatformClient;
   readonly intervalMs?: number;
   readonly onSnapshot?: (snapshot: DraftSnapshotDto) => void;
+  readonly llmProvider?: LLMProvider;
 }
 
 export class DraftController {
@@ -51,6 +52,7 @@ export class DraftController {
   private readonly valuation: Map<string, ValuationModel>;
   private readonly session: DraftSession;
   private readonly playersById: Map<string, { full_name: string }>;
+  private readonly llmProvider: LLMProvider | undefined;
 
   constructor(private readonly deps: DraftControllerDeps) {
     this.state = createDraftState(deps.config);
@@ -58,6 +60,7 @@ export class DraftController {
     this.playersById = new Map(
       [...deps.snapshot.players, ...deps.snapshot.free_agents].map((p) => [p.player_id, p])
     );
+    this.llmProvider = deps.llmProvider;
 
     const sessionOptions: DraftSessionOptions = {
       intervalMs: deps.intervalMs,
@@ -135,14 +138,18 @@ export class DraftController {
     };
   }
 
-  async chat(messages: readonly OllamaMessage[]): Promise<string> {
+  async chat(messages: readonly LLMMessage[]): Promise<string> {
+    if (!this.llmProvider) {
+      throw new Error("No LLM provider configured for chat");
+    }
+
     const snapshot = this.currentSnapshot();
     const context = buildDraftChatContext(this.deps.snapshot, this.state, snapshot.bestAvailable, snapshot.needs);
-    const system: OllamaMessage = {
+    const system: LLMMessage = {
       role: "system",
       content: `You are an advisory fantasy-football draft assistant. You ONLY discuss strategy using the provided draft context. You never invent player stats. Context:\n${context}`
     };
-    return ollamaChat([system, ...messages]);
+    return this.llmProvider.chat([system, ...messages]);
   }
 
   advice() {
