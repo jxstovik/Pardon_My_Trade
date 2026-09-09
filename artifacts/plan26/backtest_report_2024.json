@@ -1,0 +1,278 @@
+[
+  {
+    "position": "QB",
+    "target": "fp_ppr",
+    "val_season": 2024,
+    "n_test": 664,
+    "model_metrics": {
+      "model": "quantile_gbm",
+      "n": 664,
+      "mae": 6.435105799849003,
+      "rmse": 8.189253647541172,
+      "spearman": 0.4556283195314768,
+      "pinball_q50": 3.2175528999245016,
+      "pinball_q05": 0.6818196748858393,
+      "pinball_q95": 0.9861576524002259,
+      "coverage_80": 0.8283132530120482
+    },
+    "model_metrics_conformal": {
+      "model": "quantile_gbm_conformal",
+      "n": 664,
+      "mae": 6.435105799849003,
+      "rmse": 8.189253647541172,
+      "spearman": 0.4556283195314768,
+      "pinball_q50": 3.2175528999245016,
+      "pinball_q05": 0.744417365716091,
+      "pinball_q95": 1.0053420402026958,
+      "coverage_80": 0.8448795180722891
+    },
+    "coverage_80_raw": 0.8283132530120482,
+    "coverage_80_conformal": 0.8448795180722891,
+    "interval_width_raw": 21.179812787999104,
+    "interval_width_conformal": 22.586156220386467,
+    "baselines": {
+      "pos_mean": {
+        "mae": 7.533239850156931,
+        "rmse": 9.267028055326316
+      },
+      "prior_season": {
+        "mae": 7.518500406139159,
+        "rmse": 9.454503842122561
+      },
+      "rolling_mean": {
+        "mae": 6.502590213796362,
+        "rmse": 8.364328108445587
+      }
+    }
+  },
+  {
+    "position": "RB",
+    "target": "fp_ppr",
+    "val_season": 2024,
+    "n_test": 1343,
+    "model_metrics": {
+      "model": "quantile_gbm",
+      "n": 1343,
+      "mae": 4.770985962394534,
+      "rmse": 6.711984681607756,
+      "spearman": 0.600906867072897,
+      "pinball_q50": 2.385492981197267,
+      "pinball_q05": 0.41329473211429824,
+      "pinball_q95": 0.9031111611591588,
+      "coverage_80": 0.8689501116902457
+    },
+    "model_metrics_conformal": {
+      "model": "quantile_gbm_conformal",
+      "n": 1343,
+      "mae": 4.770985962394534,
+      "rmse": 6.711984681607756,
+      "spearman": 0.600906867072897,
+      "pinball_q50": 2.385492981197267,
+      "pinball_q05": 0.5821361733240856,
+      "pinball_q95": 1.015719057115736,
+      "coverage_80": 0.8622486969471332
+    },
+    "coverage_80_raw": 0.8689501116902457,
+    "coverage_80_conformal": 0.8622486969471332,
+    "interval_width_raw": 17.91309708476045,
+    "interval_width_conformal": 18.89851013810099,
+    "baselines": {
+      "pos_mean": {
+        "mae": 6.429000797836739,
+        "rmse": 7.9942162059062785
+      },
+      "prior_season": {
+        "mae": 5.499696793364997,
+        "rmse": 7.060526134887734
+      },
+      "rolling_mean": {
+        "mae": 4.980482180584421,
+        "rmse": 6.920872667436737
+      }
+    }
+  },
+  {
+    "position": "WR",
+    "target": "fp_ppr",
+    "val_season": 2024,
+    "n_test": 2132,
+    "model_metrics": {
+      "model": "quantile_gbm",
+      "n": 2132,
+      "mae": 4.9016287124367945,
+      "rmse": 6.909443014369878,
+      "spearman": 0.5456868402221217,
+      "pinball_q50": 2.4508143562183973,
+      "pinball_q05": 0.4129494795061509,
+      "pinball_q95": 0.9083972763722856,
+      "coverage_80": 0.9061913696060038
+    },
+    "model_metrics_conformal": {
+      "model": "quantile_gbm_conformal",
+      "n": 2132,
+      "mae": 4.9016287124367945,
+      "rmse": 6.909443014369878,
+      "spearman": 0.5456868402221217,
+      "pinball_q50": 2.4508143562183973,
+      "pinball_q05": 0.6300131387455731,
+      "pinball_q95": 1.0083676037208191,
+      "coverage_80": 0.8705440900562852
+    },
+    "coverage_80_raw": 0.9061913696060038,
+    "coverage_80_conformal": 0.8705440900562852,
+    "interval_width_raw": 19.26607515856723,
+    "interval_width_conformal": 20.453993508119297,
+    "baselines": {
+      "pos_mean": {
+        "mae": 6.239523819524729,
+        "rmse": 7.83808978215157
+      },
+      "prior_season": {
+        "mae": 5.725458081388745,
+        "rmse": 7.421977490395868
+      },
+      "rolling_mean": {
+        "mae": 5.419284630852705,
+        "rmse": 7.711497834057646
+      }
+    }
+  },
+  {
+    "position": "TE",
+    "target": "fp_ppr",
+    "val_season": 2024,
+    "n_test": 1088,
+    "model_metrics": {
+      "model": "quantile_gbm",
+      "n": 1088,
+      "mae": 3.7513437338213245,
+      "rmse": 5.369397420875419,
+      "spearman": 0.5005765287154869,
+      "pinball_q50": 1.8756718669106622,
+      "pinball_q05": 0.3012466624104563,
+      "pinball_q95": 0.7146740914269682,
+      "coverage_80": 0.8970588235294118
+    },
+    "model_metrics_conformal": {
+      "model": "quantile_gbm_conformal",
+      "n": 1088,
+      "mae": 3.7513437338213245,
+      "rmse": 5.369397420875419,
+      "spearman": 0.5005765287154869,
+      "pinball_q50": 1.8756718669106622,
+      "pinball_q05": 0.465520897899991,
+      "pinball_q95": 0.8136775886886065,
+      "coverage_80": 0.8566176470588235
+    },
+    "coverage_80_raw": 0.8970588235294118,
+    "coverage_80_conformal": 0.8566176470588235,
+    "interval_width_raw": 13.977692150913196,
+    "interval_width_conformal": 14.682758020305243,
+    "baselines": {
+      "pos_mean": {
+        "mae": 4.708798461043487,
+        "rmse": 5.997896191477117
+      },
+      "prior_season": {
+        "mae": 4.064914697598454,
+        "rmse": 5.459794152957429
+      },
+      "rolling_mean": {
+        "mae": 4.131543816022307,
+        "rmse": 5.99538422565073
+      }
+    }
+  },
+  {
+    "position": "K",
+    "target": "fp_ppr",
+    "val_season": 2024,
+    "n_test": 561,
+    "model_metrics": {
+      "model": "quantile_gbm",
+      "n": 561,
+      "mae": 3.0007471388116813,
+      "rmse": 3.795522569059882,
+      "spearman": 0.3821394321666218,
+      "pinball_q50": 1.5003735694058407,
+      "pinball_q05": 0.3257142723503267,
+      "pinball_q95": 0.49382996290446396,
+      "coverage_80": 0.8181818181818182
+    },
+    "model_metrics_conformal": {
+      "model": "quantile_gbm_conformal",
+      "n": 561,
+      "mae": 3.0007471388116813,
+      "rmse": 3.795522569059882,
+      "spearman": 0.3821394321666218,
+      "pinball_q50": 1.5003735694058407,
+      "pinball_q05": 0.3314438999109472,
+      "pinball_q95": 0.4645370164959122,
+      "coverage_80": 0.8413547237076648
+    },
+    "coverage_80_raw": 0.8181818181818182,
+    "coverage_80_conformal": 0.8413547237076648,
+    "interval_width_raw": 10.03503847051175,
+    "interval_width_conformal": 10.801143918051178,
+    "baselines": {
+      "pos_mean": {
+        "mae": 3.415303133038925,
+        "rmse": 4.279138715881946
+      },
+      "prior_season": {
+        "mae": 3.5639963650344275,
+        "rmse": 4.500351907176602
+      },
+      "rolling_mean": {
+        "mae": 3.845216874628639,
+        "rmse": 4.764887127362229
+      }
+    }
+  },
+  {
+    "position": "DST",
+    "target": "fp_ppr",
+    "val_season": 2024,
+    "n_test": 544,
+    "model_metrics": {
+      "model": "quantile_gbm",
+      "n": 544,
+      "mae": 9.204882085674225,
+      "rmse": 11.593704932583844,
+      "spearman": 0.03487934976535821,
+      "pinball_q50": 4.602441042837112,
+      "pinball_q05": 1.4086157323552826,
+      "pinball_q95": 1.1199000817248561,
+      "coverage_80": 0.84375
+    },
+    "model_metrics_conformal": {
+      "model": "quantile_gbm_conformal",
+      "n": 544,
+      "mae": 9.204882085674225,
+      "rmse": 11.593704932583844,
+      "spearman": 0.03487934976535821,
+      "pinball_q50": 4.602441042837112,
+      "pinball_q05": 1.3441095896642854,
+      "pinball_q95": 1.117820954091431,
+      "coverage_80": 0.8492647058823529
+    },
+    "coverage_80_raw": 0.84375,
+    "coverage_80_conformal": 0.8492647058823529,
+    "interval_width_raw": 32.38897189065486,
+    "interval_width_conformal": 33.743488693898655,
+    "baselines": {
+      "pos_mean": {
+        "mae": 8.906103469834322,
+        "rmse": 11.172826344095554
+      },
+      "prior_season": {
+        "mae": 22.52335640138408,
+        "rmse": 25.222890479725933
+      },
+      "rolling_mean": {
+        "mae": 23.492034313725494,
+        "rmse": 26.725926037258645
+      }
+    }
+  }
+]

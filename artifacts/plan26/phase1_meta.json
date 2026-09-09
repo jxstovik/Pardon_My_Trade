@@ -1,0 +1,29 @@
+{
+  "seasons": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "rows": 77552,
+  "players": 2696,
+  "weeks_with_games": [
+    2024,
+    18
+  ],
+  "target": "fp_ppr (primary, full PPR) + fp_half_ppr (optional); from fantasy_points_ppr / 0.5*(std+ppr)",
+  "source": "nflverse player_stats releases",
+  "leakage_note": "features are lag/rolling-shift only; prior-season mean shifted by one season",
+  "leakage_check_passed": true
+}
