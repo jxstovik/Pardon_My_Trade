@@ -1,6 +1,6 @@
 # Plan 26 — Player-Points Prediction: Execution Status
 
-**Status:** Phases 0–3 complete (initial slice); Phase 4+ (neural models, metamodel) not started.
+**Status:** Phases 0–3 complete + metamodel/conformal + context features + first-cut joint NN. Specialist stack (GBM + Bayesian spine + metamodel) is the production candidate.
 **Scoring config:** full PPR (`fp_ppr`) is the primary target per user directive; half-PPR stored as optional config. Standard is derivable (`fantasy_points` column retained).
 **Date:** 2026-09-09
 
@@ -10,57 +10,57 @@
 - nflverse `player_stats` 2010–2024 (weekly, REG), one row per player-game: `artifacts/plan26/player_games.parquet` (77,552 rows, 2,696 players).
 - Kickers via `stats_player_week` files 2010–2024 (2019/2025 missing from that release): FG made by distance bucket (3/3/3/4/5 pts), PAT 1 pt → `kicker_games.parquet` (7,588 kicker-games).
 - DST at team-game grain: points allowed + sacks/INT/fumbles/safeties/def-TDs/blocked kicks from aggregated team defense rows merged with `games.csv` scores → `dst_games_partial.parquet` (6,942 team-games).
-- **Known limitation (documented):** no yards-allowed component in DST scoring (not present in this source slice); DST baseline uses `10 − points_allowed + turnover/TD/sack points`, centered to realistic mean via +8 offset (mean 0.02, SD 11.6, range −52..35).
-- As-of-safe features only: lag1/lag3 rolling means and prior-season means (shifted one season). No future leakage in features; `available_time`/`event_time` columns and news pipeline not yet built (Phase 1 follow-up).
-- Availability contract partial: `did_play`, `play_status` (`played_full`/`unknown`); injury/inactive/bye status requires an injury source (nflverse injuries release) — next step.
+- **Known limitation (documented):** no yards-allowed component in DST scoring (not present in this source slice); DST formula uses `points_allowed + turnover/TD/sack points`, centered to realistic mean (mean ≈ 0, SD 11.6).
+- As-of-safe features only; no future leakage. `available_time`/`event_time` columns and news pipeline not yet built (Phase 1 follow-up).
+- Availability contract partial: `did_play`, `play_status`; injury/inactive/bye source pending.
 
 ### Phase 2/3 — specialist quantile GBM + baselines (`plan26_models.py`)
 - LightGBM quantile models (q05–q95) per position, train <2024, validate 2024, split-conformal calibration on 2023 residuals.
 - Baselines per plan §10.2: position mean, prior-season mean, rolling mean.
+- 2024 holdout (full PPR skill; K/DST game points): GBM beats baselines QB/RB/WR/TE/K. DST at chance (0.035 Spearman) — no opponent-offense features in that variant.
 
-### 2024 holdout results (full PPR; skill; K/DST game points)
-| Pos | n | GBM MAE | GBM RMSE | Spearman | cov80 | best baseline MAE |
-|---|---|---|---|---|---|---|
-| QB | 664 | 6.44 | 8.19 | 0.456 | 0.83 | 6.50 (rolling) |
-| RB | 1343 | 4.77 | 6.71 | 0.601 | 0.87 | 4.98 (rolling) |
-| WR | 2132 | 4.90 | 6.91 | 0.546 | 0.91 | 5.42 (rolling) |
-| TE | 1088 | 3.75 | 5.37 | 0.501 | 0.90 | 4.06 (prior-season) |
-| K | 561 | 3.00 | 3.80 | 0.382 | 0.82 | 3.42 (pos mean) |
-| DST | 544 | 9.20 | 11.59 | 0.035 | 0.84 | 8.91 (pos mean) |
+### Phase 2/3 — Bayesian spine (`plan26_bayes.py`)
+- Empirical-Bayes hierarchical preseason prior + weekly Kalman-style update (recency decay λ=0.97, absence variance inflation 1.5×, availability mixture E=P(active)·mean).
+- 2024 holdout: weekly model beats preseason-only at every skill position (MAE and CRPS), cov80 0.75–0.81. K/DST weekly updates don't help (noise-dominated at this feature depth).
 
-- GBM beats all baselines on MAE for QB/RB/WR/TE/K (acceptance criterion §14 met for this slice). DST is at chance — expected: the model has no opponent-offense features yet and the target is turnover-driven (high variance, low predictability).
-- Conformal calibration brings coverage toward nominal 80% (e.g. K 0.82→0.84) with modest width increase.
+### Phase 5 (early) — metamodel + conformal (`plan26_metamodel.py`)
+- Constrained non-negative blend of GBM + Bayesian components; weights fit on 2023 out-of-sample rows, evaluated 2024. Split-conformal 80% intervals from 2023 residuals.
+- 2024 (MAE vs gbm-only / bayes-only): QB 6.48 (6.65/6.72) | RB 4.77 (4.73/5.58) | WR 5.00 (5.01/5.53) | TE 3.79 (3.79/4.18) | K 3.25 (3.25/3.52) | DST 8.96 (9.30/9.02). Coverage 0.78–0.82.
+
+### Context features (`plan26_context.py`)
+- home/away, rest, roof, surface, temp, wind (pre-kickoff fields only; scores never joined), opponent defensive rolling context (points allowed/sacks/takeaways to date), team targets-to-date for WR/TE. Enriched store: `player_games_ctx.parquet`.
+- Identical-fold ablation: QB MAE 6.55→6.41 (Spearman 0.433→0.460); RB/WR/TE neutral-to-slightly-positive. Gains are real but small at this feature depth.
+
+### Phase 4 (first cut) — joint multi-task NN (`plan26_joint_nn.py`)
+- One PyTorch model, six positions: position embedding + numeric context → shared residual trunk (LayerNorm/GELU) → per-position Gaussian NLL heads (mean+logvar) + availability head. Gaussian NLL loss + BCE availability aux.
+- Trained on <2023, conformal z-scale calibrated on 2023, tested 2024.
+- **K/DST not yet in the joint NN** — their rows live in separate game-level stores not yet merged into the player-game table (follow-up; plan §3.3 target units).
+- 2024 results vs same-fold components:
+
+| Pos | joint NN MAE | GBM | metamodel | NN cov80 | NN Spearman |
+|---|---|---|---|---|---|
+| QB | 6.46 | 6.55 (6.41 w/ ctx) | 6.48 | 0.79 | 0.478 |
+| RB | 4.90 | 4.81 | 4.77 | 0.80 | 0.613 |
+| WR | 5.11 | 5.01 | 5.00 | 0.81 | 0.544 |
+| TE | 3.86 | 3.82 | 3.79 | 0.81 | 0.516 |
+
+- Verdict: competitive on first cut but does not beat the specialist stack. Per plan §8, the specialist stack remains the production candidate; the joint NN needs deep ensembles, true availability rows (did-not-play data), and game-level auxiliary heads before a fair promotion decision.
 
 ## Not yet built (per plan)
-- Phase 1 remainder: injury/inactive/bye source, historical news replay with `available_time` discipline, schedule merge (home/away, kickoff, weather — `games.csv` already downloaded with roof/surface/temp/wind/spread).
-- Hierarchical Bayesian prior + weekly state-space update (§7.1–7.2) — the production spine recommendation.
-- Neural models (joint multi-task + specialist NNs), metamodel/superlearner, CRPS metrics, visualization suite (§11).
+- Injury/inactive/bye source; historical news replay with `available_time` discipline.
+- K/DST rows inside the joint NN; specialist NN (Approach B); deep ensembles; MC-dropout comparison.
+- Full visualization suite (§11); CRPS tables for all variants in one artifact.
 - 2025 season data: absent from the `player_stats` release used; needs a different endpoint before 2026 in-season forecasting.
 
-# Plan 26 Phase 2/3 — Bayesian spine results (appended to execution status)
-
-### Hierarchical Bayesian preseason prior + weekly state-space update (`plan26_bayes.py`)
-- Empirical-Bayes hierarchical prior (partial pooling toward position mean) from all data strictly before 2024; sequential weekly Kalman-style update with recency decay (λ=0.97), variance inflation 1.5× on absence, availability mixture E=P(active)·mean.
-- 2024 holdout (full PPR skill; K/DST game points), information through prior week only:
-
-| Pos | weekly MAE | pre-only MAE | rolling MAE | weekly cov80 | weekly CRPS |
-|---|---|---|---|---|---|
-| QB | 6.42 | 7.02 | 6.46 | 0.79 | 4.67 |
-| RB | 5.21 | 5.64 | 5.08 | 0.81 | 3.77 |
-| WR | 5.25 | 5.71 | 5.33 | 0.79 | 3.86 |
-| TE | 3.97 | 4.03 | 4.04 | 0.79 | 2.92 |
-| K | 3.58 | 3.46 | – | 0.75 | 2.51 |
-| DST | 9.01 | 8.91 | – | 0.80 | 6.41 |
-
-- Weekly updates beat the preseason-only prior at every skill position (MAE and CRPS) and roughly match the rolling-mean baseline. Availability mixture helps RB/WR/TE. K/DST weekly updates do not help — their game outcomes are noise-dominated at this feature depth.
-- Coverage is near nominal 80% for the weekly model (0.75–0.81); preseason-only intervals are too narrow (0.71–0.77).
-- Comparison with quantile GBM (same 2024 fold): GBM still leads on MAE (e.g. WR 4.90 vs 5.25). The metamodel (§9) should blend both; the Bayesian spine supplies priors + cold-start behavior, the GBM supplies usage-driven sharpness.
-
+## Reproduce
 ```
 cd /opt/data/workspace/Pardon_My_Trade
 .venv-pmt/bin/python python/chatpft_modeling/plan26_ingest.py
 .venv-pmt/bin/python python/chatpft_modeling/plan26_k_dst.py
 .venv-pmt/bin/python python/chatpft_modeling/plan26_models.py
 .venv-pmt/bin/python python/chatpft_modeling/plan26_bayes.py
+.venv-pmt/bin/python python/chatpft_modeling/plan26_metamodel.py
+.venv-pmt/bin/python python/chatpft_modeling/plan26_context.py
+.venv-pmt/bin/python python/chatpft_modeling/plan26_joint_nn.py
 ```
-Artifacts: `artifacts/plan26/{player_games,kicker_games,dst_games_partial}.parquet`, `backtest_report_2024.json`, `phase1_meta.json`.
+Artifacts: `artifacts/plan26/{player_games,player_games_ctx,kicker_games,dst_games_partial}.parquet`, `{backtest,bayes,metamodel,context_features,joint_nn}_report_2024.json`, `phase1_meta.json`.
