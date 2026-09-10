@@ -7,6 +7,7 @@ import { join } from "node:path";
 import { SqliteKnowledgeRepository } from "../src/knowledge/sqlite-knowledge-repository.js";
 import { runSeasonRefresh } from "../src/season-refresh.js";
 import { makePlayer, makeSnapshot } from "./test-builders.js";
+import { getCurrentScoringPeriod } from "../src/seasons/nfl-calendar.js";
 
 function fakeFetch(body: unknown): typeof fetch {
   return (async () => new Response(JSON.stringify(body), { status: 200 })) as unknown as typeof fetch;
@@ -29,7 +30,8 @@ test("runSeasonRefresh pulls espn, persists matched projections, rebuilds models
     const summary = await runSeasonRefresh({ repository, dataDir: dir, sources: "espn" });
 
     assert.equal(summary.season, "2026");
-    assert.equal(summary.scoringPeriod, "2026-ROS");
+    const expectedPeriod = getCurrentScoringPeriod(new Date(), "2026");
+    assert.equal(summary.scoringPeriod, expectedPeriod);
     // Only Christian McCaffrey is in the imported roster, so 1 of 3 ESPN
     // candidates matches and is persisted.
     assert.equal(summary.sources.espn, 1);
@@ -38,7 +40,7 @@ test("runSeasonRefresh pulls espn, persists matched projections, rebuilds models
     assert.ok(summary.modelsRebuilt >= 1);
 
     // Persisted projections are queryable and attached to the snapshot.
-    const stored = await repository.getProjections("2026-ROS");
+    const stored = await repository.getProjections(expectedPeriod);
     assert.ok(stored.some((p) => p.player_id === "p1" && p.source === "espn"));
     const loaded = await repository.getLeagueSnapshot("snap-sr");
     assert.ok(loaded?.projections.some((p) => p.player_id === "p1"));
