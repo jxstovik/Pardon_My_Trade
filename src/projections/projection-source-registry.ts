@@ -1,5 +1,6 @@
 import { EspnProjectionSource } from "./espn-projection-source.js";
 import { FFTodayProjectionSource } from "./fftoday-projection-source.js";
+import { FantasyProsProjectionSource } from "./fantasypros-projection-source.js";
 import { RazzballProjectionSource } from "./razzball-projection-source.js";
 import { RecommendationCache } from "./recommendation-cache.js";
 import type { ProjectionSource } from "./projection-source.js";
@@ -13,6 +14,7 @@ import type { ProjectionSource } from "./projection-source.js";
 
 export const RAZZBALL_POSITIONS = ["qb", "rb", "wr", "te", "k", "dst", "idp"] as const;
 export const FFTODAY_POSITIONS = ["qb", "rb", "wr", "te", "k", "dst"] as const;
+export const FANTASYPROS_POSITIONS = ["qb", "rb", "wr", "te", "k", "dst"] as const;
 
 export interface BuildProjectionSourcesOptions {
   readonly sources?: string;
@@ -73,7 +75,17 @@ export function buildProjectionSources(options: BuildProjectionSourcesOptions = 
         }));
       }
     } else if (name === "fantasypros") {
-      options.onUnsupported?.(name);
+      for (const position of FANTASYPROS_POSITIONS) {
+        out.push(new FantasyProsProjectionSource({
+          position,
+          kind: "season",
+          season,
+          scoring: "PPR",
+          cache,
+          force,
+          optional
+        }));
+      }
     } else {
       options.onUnsupported?.(name);
     }
