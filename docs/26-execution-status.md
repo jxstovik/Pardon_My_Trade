@@ -46,9 +46,15 @@
 
 - Verdict: competitive on first cut but does not beat the specialist stack. Per plan §8, the specialist stack remains the production candidate; the joint NN needs deep ensembles, true availability rows (did-not-play data), and game-level auxiliary heads before a fair promotion decision.
 
-## Not yet built (per plan)
+### Phase 4 v2 — joint multi-task NN with K/DST, availability, ensembles (`plan26_joint_nn_v2.py`)
+- Unified table (146,906 rows): skill + kicker-game + DST team-game with synthetic did-not-play rows from the schedule (missing-rate K 19.5%, skill 40–49%, DST 0). Deep ensemble (5 seeds, mixture variance), game-level aux heads (team points scored/allowed), availability head on true DNP labels.
+- Perf lesson: train ONE ensemble per table, evaluate per-position heads (v1 retrained 6×). Bug lesson: per-slice median impute leaves all-NaN columns for position-specific features — follow with fillna(0) or predictions go NaN (hit K/DST in v1 eval).
+- 2024 fold: MAE QB 6.62 / RB 5.03 / WR 5.21 / TE 3.97 / K 3.44 / DST 9.00; conformal cov80 0.78–0.81; availability AUC QB .853, RB .851, WR .902, TE .911, K .584.
+- Verdict: with availability + ensembles + aux heads, the joint NN is now at parity with the specialist stack (within ~0.1–0.2 MAE everywhere) and uniquely adds DNP probabilities. Per plan §8: still promote via the metamodel, not head-to-head.
+
+
 - Injury/inactive/bye source; historical news replay with `available_time` discipline.
-- K/DST rows inside the joint NN; specialist NN (Approach B); deep ensembles; MC-dropout comparison.
+- Specialist NN (Approach B); MC-dropout comparison; FantasyPros pagination (10 rows/page server-side).
 - Full visualization suite (§11); CRPS tables for all variants in one artifact.
 - 2025 season data: absent from the `player_stats` release used; needs a different endpoint before 2026 in-season forecasting.
 
