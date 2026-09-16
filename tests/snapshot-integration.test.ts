@@ -35,7 +35,7 @@ test("buildPriorsFromSnapshot uses projections then baselines", async () => {
 test("rest-of-season projections are rescaled to weekly, weekly sources pass through", async () => {
   const snapshot = await loadFixture();
   const rosProjections = [
-    { player_id: "player-qb-001", source: "razzball-qb", scoring_period: "2026-W02", projected_points: 381.9 },
+    { player_id: "player-qb-001", source: "fantasypros-qb-ros", scoring_period: "2026-W02", projected_points: 381.9 },
     { player_id: "fa-rb-001", source: "fantasypros-rb-ros", scoring_period: "2026-W02", projected_points: 238 }
   ];
   const withRos = {
@@ -54,10 +54,11 @@ test("rest-of-season projections are rescaled to weekly, weekly sources pass thr
     "ros source divided by weeks remaining"
   );
 
-  // Weekly-scale sources (espn, fixture) must never be divided.
+  // Weekly-scale sources (espn, fixture, razzball-PPG) must never be divided.
   assert.equal(toWeeklyProjectionPoints(21.4, "espn", 17), 21.4);
   assert.equal(toWeeklyProjectionPoints(14.1, "fixture", 17), 14.1);
-  assert.equal(toWeeklyProjectionPoints(381.9, "razzball-qb", 17), 381.9 / 17);
+  assert.equal(toWeeklyProjectionPoints(17.5, "razzball-qb", 17), 17.5, "razzball emits PPG weekly");
+  assert.equal(toWeeklyProjectionPoints(381.9, "fantasypros-qb-ros", 17), 381.9 / 17);
   assert.equal(toWeeklyProjectionPoints(381.9, "razzball-qb"), 381.9, "unknown scale passes through");
 });
 

@@ -115,7 +115,7 @@ export function normalizeHeader(header: string): string {
     .trim();
 }
 
-const POINTS_HEADER_PATTERNS = [/\bfpts?\b/i, /\bpts?\b/i, /points/i, /projection/i, /projected/i, /\bscore\b/i];
+const POINTS_HEADER_PATTERNS = [/\bfpts?\b/i, /\bpts?\b/i, /\bppg\b/i, /points/i, /projection/i, /projected/i, /\bscore\b/i];
 const RANK_HEADER_PATTERNS = [/\brank\b/i, /\boverall\b/i, /^#$/, /\bpos\b/i, /\brk\b/i];
 const PLAYER_HEADER_PATTERNS = [/player/i, /\bname\b/i];
 const TEAM_HEADER_PATTERNS = [/\bteam\b/i];
@@ -128,6 +128,9 @@ export interface ColumnRoles {
   teamIdx: number;
   posIdx: number;
   pointsIdx: number;
+  /** True when the points column is already a per-game rate (PPG). */
+  pointsIsPerGame: boolean;
+  gamesIdx: number;
   rankIdx: number;
   floorIdx: number;
   ceilingIdx: number;
@@ -141,6 +144,7 @@ export function detectColumnRoles(headers: string[], pointsPreference: PointsPre
   let teamIdx = -1;
   let posIdx = -1;
   let pointsIdx = -1;
+  let gamesIdx = -1;
   let rankIdx = -1;
   let floorIdx = -1;
   let ceilingIdx = -1;
@@ -171,6 +175,10 @@ export function detectColumnRoles(headers: string[], pointsPreference: PointsPre
       ceilingIdx = idx;
       return;
     }
+    if (gamesIdx === -1 && /\bgames?\b/i.test(raw)) {
+      gamesIdx = idx;
+      return;
+    }
     if (POINTS_HEADER_PATTERNS.some((re) => re.test(raw))) {
       pointsCandidates.push(idx);
       return;
@@ -186,12 +194,27 @@ export function detectColumnRoles(headers: string[], pointsPreference: PointsPre
   });
 
   pointsIdx = selectPointsColumn(headers, pointsCandidates, pointsPreference);
+  const pointsIsPerGame = pointsIdx >= 0 && /\bppg\b|per.?game/i.test(headers[pointsIdx]);
 
-  return { playerIdx, teamIdx, posIdx, pointsIdx, rankIdx, floorIdx, ceilingIdx, statCols };
+  return { playerIdx, teamIdx, posIdx, pointsIdx, pointsIsPerGame, gamesIdx, rankIdx, floorIdx, ceilingIdx, statCols };
 }
 
 function selectPointsColumn(headers: string[], candidates: number[], preference: PointsPreference): number {
   if (candidates.length === 0) return -1;
+  // When a table exposes both season totals and a per-game rate ("PPG"),
+  // prefer the per-game column: it is already on the weekly scale the
+  // prediction pipeline needs. Rest-of-season totals spanning 17+ games
+  // (Razzball's ROS pages include postseason) must not be divided down.
+  const ppgCandidates = candidates.filter((idx) => /\bppg\b|per.?game/i.test(headers[idx]));
+  if (ppgCandidates.length > 0) {
+    const preferred = ppgCandidates.find((idx) => {
+      const raw = headers[idx].toLowerCase();
+      if (preference === "ppr") return /ppr/.test(raw);
+      if (preference === "std") return /std/.test(raw);
+      return true;
+    });
+    return preferred ?? ppgCandidates[0];
+  }
   if (preference === "first" || candidates.length === 1) return candidates[0];
   for (const idx of candidates) {
     const raw = headers[idx].toLowerCase();
@@ -235,9 +258,21 @@ export function mapTableToCandidates(table: ParsedTable, options: MapTableOption
       if (value !== undefined) projected_stats[key] = value;
     }
 
-    const projected_points = roles.pointsIdx >= 0 ? (parseNumber(row[roles.pointsIdx]) ?? 0) : rankToPoints(roles, row);
-    const floor = roles.floorIdx >= 0 ? (parseNumber(row[roles.floorIdx]) ?? projected_points) : round2(projected_points * 0.7);
-    const ceiling = roles.ceilingIdx >= 0 ? (parseNumber(row[roles.ceilingIdx]) ?? projected_points) : round2(projected_points * 1.3);
+    let projected_points = roles.pointsIdx >= 0 ? (parseNumber(row[roles.pointsIdx]) ?? 0) : rankToPoints(roles, row);
+    let floor = roles.floorIdx >= 0 ? (parseNumber(row[roles.floorIdx]) ?? projected_points) : round2(projected_points * 0.7);
+    let ceiling = roles.ceilingIdx >= 0 ? (parseNumber(row[roles.ceilingIdx]) ?? projected_points) : round2(projected_points * 1.3);
+
+    // Season-total point columns (no PPG variant) span every projected game —
+    // including postseason — so normalise to a single-week rate by dividing by
+    // the row's Games value. PPG-selected columns are already weekly.
+    if (!roles.pointsIsPerGame && roles.gamesIdx >= 0) {
+      const games = parseNumber(row[roles.gamesIdx]);
+      if (games !== undefined && games >= 1) {
+        projected_points = round2(projected_points / games);
+        floor = round2(floor / games);
+        ceiling = round2(ceiling / games);
+      }
+    }
 
     candidates.push({
       name,

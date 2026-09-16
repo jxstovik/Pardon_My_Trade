@@ -47,12 +47,12 @@ export function primaryModelPosition(positions: ReadonlyArray<PlayerPosition>): 
 
 /**
  * True when a projection source emits rest-of-season (season-total) points
- * rather than single-week points: Razzball's free projection pages are
- * rest-of-season totals, as is anything explicitly named `...-ros`.
- * Weekly sources (ESPN weekly projections, fixtures) pass through untouched.
+ * rather than single-week points. Razzball no longer counts: its parser emits
+ * per-game rates (PPG when the page has one, otherwise total / Games).
+ * `fantasypros-*-ros` pages expose season totals, so they still rescale.
  */
 export function projectionSourceIsRestOfSeason(source: string): boolean {
-  return /^razzball/i.test(source) || /ros|rest.?of.?season/i.test(source);
+  return /ros|rest.?of.?season/i.test(source);
 }
 
 /**
