@@ -46,6 +46,22 @@ stage. Use `--skip-download` when the parquet stores already exist and
 `--skip-joint-nn` when PyTorch is not installed. It writes a manifest and
 training environment under `artifacts/plan26/runs/<run-id>/`.
 
+### Live progress
+
+While a run is active, monitor these files from another terminal or file
+viewer:
+
+```bash
+python -m json.tool artifacts/plan26/runs/<run-id>/progress.json
+# append-only event stream
+Get-Content artifacts/plan26/runs/<run-id>/progress.jsonl -Wait  # PowerShell
+```
+
+`progress.json` contains the current status, stage number, total stages,
+return code, and log path. `progress.jsonl` preserves every state transition.
+Each stage also writes a live `<stage>.log` file in the run directory. The
+runner streams each child process line to both its stage log and the console.
+
 Inspect predictions and export a release:
 
 ```bash
