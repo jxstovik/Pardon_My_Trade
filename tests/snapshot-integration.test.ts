@@ -7,7 +7,8 @@ import {
   buildPriorsFromSnapshot,
   buildOrchestratorInputFromSnapshot,
   mergeProjectionCandidates,
-  primaryModelPosition
+  primaryModelPosition,
+  toWeeklyProjectionPoints
 } from "../src/agents/snapshot-integration.js";
 import { buildModelsForOrchestrator } from "../src/agents/ff-orchestrator.js";
 
@@ -29,6 +30,35 @@ test("buildPriorsFromSnapshot uses projections then baselines", async () => {
   assert.ok(Math.abs(byId.get("player-qb-001")!.historyMean - 20.1) < 1e-9, "projected qb");
   assert.ok(Math.abs(byId.get("fa-rb-001")!.historyMean - 14.1) < 1e-9, "projected fa");
   assert.equal(byId.get("player-wr-002")!.historyMean, 10, "baseline WR");
+});
+
+test("rest-of-season projections are rescaled to weekly, weekly sources pass through", async () => {
+  const snapshot = await loadFixture();
+  const rosProjections = [
+    { player_id: "player-qb-001", source: "razzball-qb", scoring_period: "2026-W02", projected_points: 381.9 },
+    { player_id: "fa-rb-001", source: "fantasypros-rb-ros", scoring_period: "2026-W02", projected_points: 238 }
+  ];
+  const withRos = {
+    ...snapshot,
+    projections: [...snapshot.projections, ...rosProjections]
+  } as LeagueSnapshot;
+
+  const priors = buildPriorsFromSnapshot(withRos, { weeksRemaining: 17 });
+  const byId = new Map(priors.map((p) => [p.playerId, p]));
+  assert.ok(
+    Math.abs(byId.get("player-qb-001")!.historyMean - 381.9 / 17) < 1e-9,
+    "season total divided by weeks remaining"
+  );
+  assert.ok(
+    Math.abs(byId.get("fa-rb-001")!.historyMean - 238 / 17) < 1e-9,
+    "ros source divided by weeks remaining"
+  );
+
+  // Weekly-scale sources (espn, fixture) must never be divided.
+  assert.equal(toWeeklyProjectionPoints(21.4, "espn", 17), 21.4);
+  assert.equal(toWeeklyProjectionPoints(14.1, "fixture", 17), 14.1);
+  assert.equal(toWeeklyProjectionPoints(381.9, "razzball-qb", 17), 381.9 / 17);
+  assert.equal(toWeeklyProjectionPoints(381.9, "razzball-qb"), 381.9, "unknown scale passes through");
 });
 
 test("buildOrchestratorInputFromSnapshot maps roster, counts, free agents, opponents", async () => {

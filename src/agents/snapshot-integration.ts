@@ -46,20 +46,53 @@ export function primaryModelPosition(positions: ReadonlyArray<PlayerPosition>): 
 }
 
 /**
+ * True when a projection source emits rest-of-season (season-total) points
+ * rather than single-week points: Razzball's free projection pages are
+ * rest-of-season totals, as is anything explicitly named `...-ros`.
+ * Weekly sources (ESPN weekly projections, fixtures) pass through untouched.
+ */
+export function projectionSourceIsRestOfSeason(source: string): boolean {
+  return /^razzball/i.test(source) || /ros|rest.?of.?season/i.test(source);
+}
+
+/**
+ * Convert a stored projection's points to a single-week scale so point
+ * predictions stay apples-to-apples with other weekly projections.
+ * Season-total sources are divided by the weeks remaining; weekly sources are
+ * returned unchanged. `weeksRemaining` undefined/<=0 means "unknown scale" and
+ * the points pass through.
+ */
+export function toWeeklyProjectionPoints(
+  points: number,
+  source: string,
+  weeksRemaining?: number
+): number {
+  if (weeksRemaining === undefined || weeksRemaining <= 0) return points;
+  return projectionSourceIsRestOfSeason(source) ? points / weeksRemaining : points;
+}
+
+/**
  * Build per-player priors from a snapshot. When the snapshot carries
  * projections, the projected points become the history mean (a reasonable
  * pre-season prior); otherwise a position baseline is used so the orchestrator
  * can still run offline.
+ *
+ * `weeksRemaining`: when supplied, rest-of-season projection sources are
+ * rescaled to a single-week mean (season total / weeks remaining) so the
+ * Bayesian prior stays on a weekly scale.
  */
 export function buildPriorsFromSnapshot(
   snapshot: LeagueSnapshot,
-  options: { useProjections?: boolean } = {}
+  options: { useProjections?: boolean; weeksRemaining?: number } = {}
 ): ModelPrior[] {
   const useProjections = options.useProjections ?? true;
-  const projectionByPlayer = new Map<string, number>();
+  const projectionByPlayer = new Map<string, { points: number; source: string }>();
   if (useProjections) {
     for (const projection of snapshot.projections) {
-      projectionByPlayer.set(projection.player_id, projection.projected_points);
+      projectionByPlayer.set(projection.player_id, {
+        points: projection.projected_points,
+        source: projection.source
+      });
     }
   }
 
@@ -70,7 +103,10 @@ export function buildPriorsFromSnapshot(
     const position = primaryModelPosition(player.positions);
     if (!position) continue;
     seen.add(player.player_id);
-    const historyMean = projectionByPlayer.get(player.player_id) ?? POSITION_BASELINE[position];
+    const stored = projectionByPlayer.get(player.player_id);
+    const historyMean = stored
+      ? toWeeklyProjectionPoints(stored.points, stored.source, options.weeksRemaining)
+      : POSITION_BASELINE[position];
     priors.push({
       playerId: player.player_id,
       playerName: player.full_name,

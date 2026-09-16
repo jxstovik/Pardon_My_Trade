@@ -9,7 +9,7 @@
  */
 
 const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
-const REGULAR_SEASON_WEEKS = 18;
+export const REGULAR_SEASON_WEEKS = 18;
 
 /** The calendar year a fantasy season is labelled by, given a date. */
 export function seasonYearForDate(date: Date): number {

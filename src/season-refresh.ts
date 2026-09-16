@@ -5,9 +5,10 @@ import { SqliteKnowledgeRepository } from "./knowledge/sqlite-knowledge-reposito
 import type { LeagueSnapshot, Projection } from "./models/types.js";
 import { buildProjectionSources } from "./projections/projection-source-registry.js";
 import { matchProjectionsToRoster } from "./projections/projection-matching.js";
-import { getCurrentScoringPeriod } from "./seasons/nfl-calendar.js";
-import { buildPriorsFromSnapshot } from "./agents/snapshot-integration.js";
+import { getCurrentScoringPeriod, weekFromScoringPeriod, REGULAR_SEASON_WEEKS } from "./seasons/nfl-calendar.js";
+import { buildPriorsFromSnapshot, toWeeklyProjectionPoints } from "./agents/snapshot-integration.js";
 import { buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
+import type { Observation } from "./probabilistic/bayesian-model.js";
 import { JsonModelStore } from "./probabilistic/model-store.js";
 import type { ProjectionCandidate, ProjectionSource } from "./projections/projection-source.js";
 import { buildRuntimeProbabilisticProjections, loadHistoricalData, saveProbabilisticProjections } from "./projections/runtime.js";
@@ -62,6 +63,13 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   const scoringPeriod = options.week
     ? `${season}-W${options.week}`
     : getCurrentScoringPeriod(new Date(), season);
+
+  // Season-total projection sources are rescaled to single-week points so the
+  // Bayesian priors and the runtime artifact stay apples-to-apples with weekly
+  // predictions from other sources.
+  const currentWeek = weekFromScoringPeriod(scoringPeriod);
+  const weeksRemaining =
+    currentWeek !== undefined ? REGULAR_SEASON_WEEKS - currentWeek + 1 : undefined;
 
   const sources = buildProjectionSources({
     sources: options.sources ?? process.env.PMT_PROJECTION_SOURCES,
@@ -132,27 +140,50 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   await repository.upsertProjections(stored);
 
   // Re-read so the snapshot carries the freshly stored projections, then
-  // rebuild priors/models from them.
+  // rebuild priors/models from them. Prior weekly observations are re-applied
+  // (chronologically) so the rebuild never wipes in-season model state.
   const refreshed = await repository.getLeagueSnapshot(pointer.snapshot_id);
-  const priors = buildPriorsFromSnapshot(refreshed ?? snapshot);
-  const models = buildModelsForOrchestrator(priors, []);
+  const priors = buildPriorsFromSnapshot(refreshed ?? snapshot, { weeksRemaining });
+  const historyPath = process.env.PMT_HISTORICAL_DATA_PATH;
+  const weeklyObservations = historyPath ? await loadWeeklyObservations(historyPath) : [];
+  const models = buildModelsForOrchestrator(priors, weeklyObservations);
   const modelStore = new JsonModelStore(join(dataDir, "models.json"));
   await modelStore.saveAll([...models.values()]);
 
   const playerIds = new Set(stored.map((p) => p.player_id));
 
-  const historyPath = process.env.PMT_HISTORICAL_DATA_PATH;
   if (historyPath) {
     const history = await loadHistoricalData(historyPath);
-    const rows = rosterPlayers.map((player) => ({
-      playerId: player.player_id,
-      position: (player.positions[0] ?? "WR") as import("./models/types.js").PlayerPosition,
-      scoringPeriod,
-      history: history.filter((observation) => observation.playerId === player.player_id).map((observation) => observation.points),
-      sourceMean: stored.find((projection) => projection.player_id === player.player_id)?.projected_points
-    }));
-    const external = stored.filter((projection) => projection.source !== "razzball").map((projection) => ({ playerId: projection.player_id, source: projection.source, projectedPoints: projection.projected_points, scoringPeriod: projection.scoring_period }));
-    const razzball = stored.filter((projection) => projection.source.includes("razzball")).map((projection) => ({ playerId: projection.player_id, source: projection.source, projectedPoints: projection.projected_points, scoringPeriod: projection.scoring_period }));
+    const storedByPlayer = new Map(stored.map((p) => [p.player_id, p]));
+    const rows = rosterPlayers.map((player) => {
+      const storedProjection = storedByPlayer.get(player.player_id);
+      const weeklySourceMean = storedProjection
+        ? toWeeklyProjectionPoints(storedProjection.projected_points, storedProjection.source, weeksRemaining)
+        : undefined;
+      return {
+        playerId: player.player_id,
+        position: (player.positions[0] ?? "WR") as import("./models/types.js").PlayerPosition,
+        scoringPeriod,
+        history: history.filter((observation) => observation.playerId === player.player_id).map((observation) => observation.points),
+        ...(weeklySourceMean !== undefined && Number.isFinite(weeklySourceMean) ? { sourceMean: weeklySourceMean } : {})
+      };
+    });
+    const external = stored
+      .filter((projection) => projection.source !== "razzball")
+      .map((projection) => ({
+        playerId: projection.player_id,
+        source: projection.source,
+        projectedPoints: toWeeklyProjectionPoints(projection.projected_points, projection.source, weeksRemaining),
+        scoringPeriod: projection.scoring_period
+      }));
+    const razzball = stored
+      .filter((projection) => projection.source.includes("razzball"))
+      .map((projection) => ({
+        playerId: projection.player_id,
+        source: projection.source,
+        projectedPoints: toWeeklyProjectionPoints(projection.projected_points, projection.source, weeksRemaining),
+        scoringPeriod: projection.scoring_period
+      }));
     await saveProbabilisticProjections(join(dataDir, "probabilistic-projections.json"), buildRuntimeProbabilisticProjections(rows, external, razzball, history));
   }
 
@@ -186,10 +217,33 @@ export async function persistCandidates(
   const matched = matchProjectionsToRoster(candidates, rosterPlayers, scoringPeriod, source.name);
   await repository.upsertProjections(matched);
   const modelStore = new JsonModelStore(join(dataDir, "models.json"));
-  const priors = buildPriorsFromSnapshot(snapshot);
-  const models = buildModelsForOrchestrator(priors, []);
+  const currentWeek = weekFromScoringPeriod(scoringPeriod);
+  const weeksRemaining =
+    currentWeek !== undefined ? REGULAR_SEASON_WEEKS - currentWeek + 1 : undefined;
+  const priors = buildPriorsFromSnapshot(snapshot, { weeksRemaining });
+  const historyPath = process.env.PMT_HISTORICAL_DATA_PATH;
+  const weeklyObservations = historyPath ? await loadWeeklyObservations(historyPath) : [];
+  const models = buildModelsForOrchestrator(priors, weeklyObservations);
   await modelStore.saveAll([...models.values()]);
   return matched.length;
+}
+
+/**
+ * Load completed weekly observations from the configured historical file and
+ * convert them to Bayesian Observation rows, ordered chronologically so the
+ * EWMA recurrence reproduces the same model state the governance update wrote.
+ */
+export async function loadWeeklyObservations(path: string): Promise<Observation[]> {
+  const history = await loadHistoricalData(path);
+  return history
+    .map((row) => ({
+      playerId: row.playerId,
+      week: weekFromScoringPeriod(row.scoringPeriod) ?? 0,
+      points: row.points,
+      scoringPeriod: row.scoringPeriod
+    }))
+    .filter((row) => row.week > 0)
+    .sort((left, right) => left.week - right.week || left.playerId.localeCompare(right.playerId));
 }
 
 export async function loadLastSnapshotPointer(dataDir: string): Promise<{ snapshot_id: string; league_id: string }> {
