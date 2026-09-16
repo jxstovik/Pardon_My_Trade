@@ -7,6 +7,7 @@ import { join } from "node:path";
 import { SqliteKnowledgeRepository } from "../src/knowledge/sqlite-knowledge-repository.js";
 import { runSeasonRefresh } from "../src/season-refresh.js";
 import { makePlayer, makeSnapshot } from "./test-builders.js";
+import { getCurrentScoringPeriod, weekFromScoringPeriod } from "../src/seasons/nfl-calendar.js";
 
 function fakeFetch(body: unknown): typeof fetch {
   return (async () => new Response(JSON.stringify(body), { status: 200 })) as unknown as typeof fetch;
@@ -29,7 +30,8 @@ test("runSeasonRefresh pulls espn, persists matched projections, rebuilds models
     const summary = await runSeasonRefresh({ repository, dataDir: dir, sources: "espn" });
 
     assert.equal(summary.season, "2026");
-    assert.equal(summary.scoringPeriod, "2026-ROS");
+    const expectedPeriod = getCurrentScoringPeriod(new Date(), "2026");
+    assert.equal(summary.scoringPeriod, expectedPeriod);
     // Only Christian McCaffrey is in the imported roster, so 1 of 3 ESPN
     // candidates matches and is persisted.
     assert.equal(summary.sources.espn, 1);
@@ -38,7 +40,7 @@ test("runSeasonRefresh pulls espn, persists matched projections, rebuilds models
     assert.ok(summary.modelsRebuilt >= 1);
 
     // Persisted projections are queryable and attached to the snapshot.
-    const stored = await repository.getProjections("2026-ROS");
+    const stored = await repository.getProjections(expectedPeriod);
     assert.ok(stored.some((p) => p.player_id === "p1" && p.source === "espn"));
     const loaded = await repository.getLeagueSnapshot("snap-sr");
     assert.ok(loaded?.projections.some((p) => p.player_id === "p1"));
@@ -79,6 +81,60 @@ test("runSeasonRefresh skips a broken source instead of aborting the run", async
     assert.match(Object.values(summary.skipped)[0], /404/);
   } finally {
     globalThis.fetch = originalFetch;
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test("runSeasonRefresh re-applies weekly observations and keeps weekly-scale priors", async () => {
+  const fixture = JSON.parse(await readFile("tests/fixtures/espn-projections.json", "utf8"));
+  const originalFetch = globalThis.fetch;
+  const originalHistoryPath = process.env.PMT_HISTORICAL_DATA_PATH;
+  globalThis.fetch = fakeFetch(fixture) as typeof fetch;
+  const dir = await mkdtemp(join(tmpdir(), "pmt-season-"));
+  try {
+    const repository = new SqliteKnowledgeRepository({ memory: true });
+    const snapshot = makeSnapshot(
+      [makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"] })],
+      { snapshotId: "snap-obs", season: "2026" }
+    );
+    await repository.saveLeagueSnapshot(snapshot);
+    await writeFile(join(dir, "last-snapshot.json"), JSON.stringify({ snapshot_id: "snap-obs", league_id: "lg-1" }), "utf8");
+
+    const expectedPeriod = getCurrentScoringPeriod(new Date(), "2026");
+    const currentWeek = weekFromScoringPeriod(expectedPeriod) ?? 1;
+    const observedWeek = Math.max(1, currentWeek - 1);
+    await writeFile(
+      join(dir, "historical-observations.json"),
+      JSON.stringify({
+        observations: [
+          {
+            playerId: "p1",
+            season: "2026",
+            week: observedWeek,
+            scoringPeriod: `2026-W${String(observedWeek).padStart(2, "0")}`,
+            points: 24.5,
+            observedAt: "2026-01-01T00:00:00.000Z"
+          }
+        ]
+      })
+    );
+    process.env.PMT_HISTORICAL_DATA_PATH = join(dir, "historical-observations.json");
+
+    await runSeasonRefresh({ repository, dataDir: dir, sources: "espn" });
+
+    const store = JSON.parse(await readFile(join(dir, "models.json"), "utf8")) as {
+      models: Array<{ playerId: string; historyMean: number; lastObserved: number | null; weeksObserved: number; mu: number }>;
+    };
+    const p1 = store.models.find((m) => m.playerId === "p1");
+    assert.ok(p1, "model for p1 exists");
+    assert.equal(p1.weeksObserved, 1, "weekly observation survived the rebuild");
+    assert.ok(Math.abs(p1.lastObserved! - 24.5) < 1e-9, "observed weekly points carried over");
+    assert.ok(Math.abs(p1.historyMean - 21.4) < 1e-9, "espn weekly projection used as-is (no ROS rescale)");
+    assert.ok(Math.abs(p1.mu - 21.4) < 1e-9, "mu starts on the weekly prior scale");
+  } finally {
+    globalThis.fetch = originalFetch;
+    if (originalHistoryPath === undefined) delete process.env.PMT_HISTORICAL_DATA_PATH;
+    else process.env.PMT_HISTORICAL_DATA_PATH = originalHistoryPath;
     await rm(dir, { recursive: true, force: true });
   }
 });

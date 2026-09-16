@@ -104,6 +104,121 @@ async function main(): Promise<void> {
       }, null, 2));
       return;
     }
+    case "add-drop-eval": {
+      const { readFileSync } = await import("node:fs");
+      const { resolve } = await import("node:path");
+      const leagueExternalId = process.argv[3] ?? "pmt-demo-football";
+      const teamExternalId = process.argv[4] ?? "team-001";
+      const config = createDefaultConfig();
+      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+
+      const snapshot = JSON.parse(readFileSync(resolve(config.fixturePath), "utf8")) as {
+        league: {
+          teams: Array<{
+            team_id: string;
+            external_id: string;
+            name: string;
+            roster: { starters: Array<{ player_id: string; slot_type: string }>; bench: Array<{ player_id: string; slot_type: string }> };
+          }>;
+          roster_settings?: { slots?: Array<{ slot: string; count: number }> };
+        };
+        players: Array<{ player_id: string; positions: string[]; full_name: string }>;
+        free_agents: Array<{ player_id: string; positions: string[]; full_name: string }>;
+      };
+      const team = snapshot.league.teams.find(
+        (t) => t.external_id === teamExternalId || t.team_id === teamExternalId
+      );
+      if (!team) throw new Error(`Team ${teamExternalId} not found in ${config.fixturePath}`);
+
+      // Weekly-scale projections artifact (p10/p90 for upside stashes); fall
+      // back to the snapshot's attached projections (point estimates only).
+      let projected = new Map<string, { mean: number; p90?: number }>();
+      try {
+        const artifact = JSON.parse(
+          readFileSync(resolve(dataDir, "probabilistic-projections.json"), "utf8")
+        ) as {
+          projections: Array<{
+            playerId: string;
+            mean: number;
+            quantiles?: { p90?: number };
+          }>;
+        };
+        projected = new Map(
+          artifact.projections.map((p) => [p.playerId, { mean: p.mean, p90: p.quantiles?.p90 }])
+        );
+      } catch {
+        const snapProjections = (
+          snapshot as unknown as { projections?: Array<{ player_id: string; projected_points: number }> }
+        ).projections ?? [];
+        projected = new Map(snapProjections.map((p) => [p.player_id, { mean: p.projected_points }]));
+      }
+
+      const positionByPlayer = new Map<string, string>();
+      for (const p of [...snapshot.players, ...snapshot.free_agents]) {
+        if (!positionByPlayer.has(p.player_id)) positionByPlayer.set(p.player_id, p.positions[0] ?? "BN");
+      }
+      const nameByPlayer = new Map<string, string>();
+      for (const p of [...snapshot.players, ...snapshot.free_agents]) {
+        nameByPlayer.set(p.player_id, p.full_name);
+      }
+
+      const { roster, slotCounts } = (() => {
+        const rosterPlayers = [...team.roster.starters, ...team.roster.bench].map((entry) => ({
+          playerId: entry.player_id,
+          slot: entry.slot_type,
+          projected: projected.get(entry.player_id)?.mean ?? 0
+        }));
+        const counts: Record<string, number> = {};
+        for (const slot of snapshot.league.roster_settings?.slots ?? []) {
+          if (slot.slot !== "BN") counts[slot.slot] = slot.count;
+        }
+        return { roster: rosterPlayers, slotCounts: counts };
+      })();
+
+      const { rankFreeAgents, lineupSwapCandidates } = await import(
+        "./recommendations/slot-aware.js"
+      );
+      const candidates = snapshot.free_agents
+        .map((fa) => {
+          const proj = projected.get(fa.player_id);
+          return proj
+            ? { playerId: fa.player_id, position: fa.positions[0] ?? "BN", projected: proj.mean, upside: proj.p90 }
+            : undefined;
+        })
+        .filter((c): c is NonNullable<typeof c> => c !== undefined && c.position !== "BN");
+
+      const ranked = rankFreeAgents(roster, slotCounts, candidates).slice(0, 15);
+      const swaps = lineupSwapCandidates(
+        roster,
+        Object.fromEntries([...team.roster.bench].map((b) => [b.player_id, positionByPlayer.get(b.player_id) ?? "FLEX"])),
+        slotCounts
+      );
+
+      console.log(JSON.stringify({
+        team: team.name,
+        projectedBy: projected.size ? "probabilistic-projections.json (weekly scale)" : "snapshot projections",
+        lineupSwaps: swaps.map((s) => ({
+          start: nameByPlayer.get(s.benchPlayerId) ?? s.benchPlayerId,
+          bench: nameByPlayer.get(s.outPlayerId) ?? s.outPlayerId,
+          slot: s.slot,
+          delta: s.delta
+        })),
+        addRecommendations: ranked.map((e) => ({
+          add: nameByPlayer.get(e.playerId) ?? e.playerId,
+          position: e.position,
+          projected: e.projected,
+          weeklyDelta: e.weeklyDelta,
+          startsThisWeek: e.startsThisWeek,
+          replaces: e.replaces ? nameByPlayer.get(e.replaces.playerId) ?? e.replaces.playerId : undefined,
+          drop: e.bestDropPlayerId ? nameByPlayer.get(e.bestDropPlayerId) ?? e.bestDropPlayerId : undefined,
+          upsideStash: e.upsideStash,
+          rationale: e.rationale
+        })),
+        evaluatedFreeAgents: candidates.length,
+        actionable: ranked.length
+      }, null, 2));
+      return;
+    }
     case "refresh": {
       const config = createDefaultConfig();
       const leagueExternalId = process.argv[3] ?? "pmt-demo-football";
@@ -670,6 +785,7 @@ Usage:
   pmt version
   pmt import-fixture
   pmt weekly-report [leagueExternalId] [teamExternalId]
+  pmt add-drop-eval [leagueExternalId] [teamExternalId]
   pmt refresh [leagueExternalId] [teamExternalId]
   pmt import-sleeper <sleeperLeagueId> [season]
   pmt import-espn <espnLeagueId> [season] [teamId]

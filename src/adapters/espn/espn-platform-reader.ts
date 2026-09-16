@@ -35,6 +35,7 @@ interface EspnLeagueResponse {
   id?: number;
   name?: string;
   seasonId?: number;
+  scoringPeriodId?: number;
   status?: { type?: number; shortName?: string };
   settings?: {
     name?: string;
@@ -64,6 +65,9 @@ interface EspnTeam {
   roster?: {
     entries?: Array<{
       playerId: number;
+      /** Live API spelling. */
+      lineupSlotId?: number;
+      /** Historical payload spelling (ESPN's own typo). */
       lineuSlotId: number;
       status?: string;
       injuryStatus?: string;
@@ -393,15 +397,37 @@ export class EspnPlatformReader implements PlatformReader {
   }
 
   async getFreeAgents(_leagueExternalId: string): Promise<Player[]> {
-    const data = await this.getLeagueRaw();
+    // The league views no longer embed a top-level `players` pool. ESPN's
+    // `kona_player_info` view with a status filter returns the whole free-agent
+    // pool in one request; NOTE: it only accepts the filter when sent with the
+    // lowercase `x-fantasy-filter` header (Node fetch normalizes this) and a
+    // `scoringPeriodId` query param — other shapes get HTTP 400.
+    const league = await this.getLeagueRaw();
     const owned = new Set<number>();
-    for (const team of data.teams ?? []) {
+    for (const team of league.teams ?? []) {
       for (const entry of team.roster?.entries ?? []) {
         owned.add(entry.playerId);
       }
     }
+    const scoringPeriodId = league.scoringPeriodId ?? 1;
+    const data = await this.client.getJson<{ players?: Array<{ player?: EspnPlayer }>; scoringPeriodId?: number }>("", {
+      view: ["kona_player_info"],
+      scope: { segment: 0, readHost: true },
+      query: { scoringPeriodId },
+      filter: {
+        players: {
+          filterStatus: { value: ["FREEAGENT", "WAIVERS"] },
+          filterSlotIds: { value: [] },
+          limit: 1500,
+          sortPercOwned: { sortPriority: 1, sortAsc: false },
+          sortDraftRanks: { sortPriority: 100, sortAsc: true, value: "STANDARD" }
+        }
+      }
+    });
     return (data.players ?? [])
-      .filter((player) => !owned.has(player.id) && this.mapPosition(player.defaultPositionId) !== undefined)
+      .map((entry) => entry.player)
+      .filter((player): player is EspnPlayer => !!player && this.mapPosition(player.defaultPositionId) !== undefined)
+      .filter((player) => !owned.has(player.id))
       .map((player) => this.mapPlayer(player));
   }
 
@@ -480,7 +506,10 @@ export class EspnPlatformReader implements PlatformReader {
     let irIndex = 0;
 
     for (const entry of entries) {
-      const position = mapEspnSlotToPosition(entry.lineuSlotId);
+      // ESPN payloads spell the field inconsistently across endpoints:
+      // `lineupSlotId` (live API) vs `lineuSlotId` (some historical payloads).
+      const slotId = entry.lineupSlotId ?? entry.lineuSlotId ?? 20;
+      const position = mapEspnSlotToPosition(slotId);
       const playerId = String(entry.playerId);
       const slotBase = {
         slot_id: `${teamId}-${position}-${playerId}`,

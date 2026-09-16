@@ -54,6 +54,38 @@ test("mapTableToCandidates derives score from rank on ranking pages", async () =
   assert.ok(candidates[0].ceiling >= candidates[0].projected_points);
 });
 
+test("PPG column is preferred over season totals", () => {
+  const roles = detectColumnRoles(["#", "Name", "Games", "STD PTS", "STD PPG"]);
+  assert.equal(roles.pointsIdx, 4);
+  assert.equal(roles.pointsIsPerGame, true);
+  assert.equal(roles.gamesIdx, 2);
+});
+
+test("season-total points are normalised to a weekly rate via the Games column", () => {
+  // Kicker-style page: totals only, no PPG column, but a Games column exists.
+  const table = {
+    headers: ["#", "Name", "Team", "Games", "FG", "STD PTS"],
+    rows: [
+      ["1", "Kicker One", "GB", "29", "28", "130.0"],
+      ["2", "Kicker Two", "DAL", "29", "25", "116.0"]
+    ]
+  };
+  const candidates = mapTableToCandidates(table, { source: "razzball", fallbackPosition: "K" });
+  assert.ok(Math.abs(candidates[0].projected_points - 130 / 29) < 0.01, "weekly rate = total / games");
+  assert.ok(Math.abs(candidates[1].projected_points - 116 / 29) < 0.01);
+  assert.ok(candidates[0].floor <= candidates[0].projected_points);
+  assert.ok(candidates[0].ceiling >= candidates[0].projected_points);
+});
+
+test("PPG rows are never divided again", () => {
+  const table = {
+    headers: ["#", "Name", "Team", "Games", "STD PTS", "STD PPG"],
+    rows: [["1", "Some QB", "GB", "29", "507.5", "17.5"]]
+  };
+  const candidates = mapTableToCandidates(table, { source: "razzball", fallbackPosition: "QB" });
+  assert.ok(Math.abs(candidates[0].projected_points - 17.5) < 1e-9, "PPG used as-is");
+});
+
 test("parseNumber handles commas, parens, and dashes", () => {
   assert.equal(parseNumber("1,100"), 1100);
   assert.equal(parseNumber("(5)"), -5);

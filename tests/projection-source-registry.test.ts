@@ -29,6 +29,6 @@ test("registry fans out fftoday and combines with espn", () => {
 
 test("registry reports unsupported sources via callback", () => {
   const unsupported: string[] = [];
-  buildProjectionSources({ sources: "espn,fantasypros,razzball", onUnsupported: (n) => unsupported.push(n) });
-  assert.deepEqual(unsupported, ["fantasypros"]);
+  buildProjectionSources({ sources: "espn,sleeper,razzball", onUnsupported: (n) => unsupported.push(n) });
+  assert.deepEqual(unsupported, ["sleeper"]);
 });

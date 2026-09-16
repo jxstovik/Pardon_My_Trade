@@ -1,0 +1,26 @@
+{
+  "backfilled_season": 2025,
+  "rows_added": 18540,
+  "kicker_rows_added": 543,
+  "store_seasons": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "store_rows": 96092,
+  "source": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.parquet",
+  "note": "DST 2025 team-game rows not backfilled (team-level release follow-up)"
+}

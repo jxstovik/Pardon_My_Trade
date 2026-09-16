@@ -1,0 +1,242 @@
+[
+  {
+    "position": "QB",
+    "weekly": {
+      "model": "bayes_weekly",
+      "n": 664,
+      "mae": 6.419107368048519,
+      "rmse": 8.14736375026204,
+      "spearman": 0.4533094289736355,
+      "crps": 4.666086911747807,
+      "coverage_80": 0.786144578313253,
+      "interval_width": 20.73802616033361
+    },
+    "weekly_ev_mixture": {
+      "model": "bayes_weekly_ev_mixture",
+      "n": 664,
+      "mae": 6.46983356590718,
+      "rmse": 8.263797901446948,
+      "spearman": 0.4533094289736355,
+      "crps": 4.710696689557795,
+      "coverage_80": 0.7756024096385542,
+      "interval_width": 20.73802616033361
+    },
+    "preseason_only": {
+      "model": "bayes_preseason_only",
+      "n": 664,
+      "mae": 7.021436354288086,
+      "rmse": 8.543764084342019,
+      "spearman": 0.3848405688116549,
+      "crps": 4.939913225672069,
+      "coverage_80": 0.713855421686747,
+      "interval_width": 19.748177244353144
+    },
+    "rolling": {
+      "model": "rolling_mean",
+      "n": 664,
+      "mae": 6.461510974987238,
+      "rmse": 8.329297840652096,
+      "spearman": 0.49373023265815835
+    }
+  },
+  {
+    "position": "RB",
+    "weekly": {
+      "model": "bayes_weekly",
+      "n": 1343,
+      "mae": 5.212260571274246,
+      "rmse": 6.65184794495428,
+      "spearman": 0.5632615947440681,
+      "crps": 3.7671817992725454,
+      "coverage_80": 0.8071481757259866,
+      "interval_width": 17.566275117229868
+    },
+    "weekly_ev_mixture": {
+      "model": "bayes_weekly_ev_mixture",
+      "n": 1343,
+      "mae": 5.044451300592298,
+      "rmse": 6.527108741036828,
+      "spearman": 0.5632615947440681,
+      "crps": 3.7083657063232542,
+      "coverage_80": 0.8049143708116158,
+      "interval_width": 17.566275117229868
+    },
+    "preseason_only": {
+      "model": "bayes_preseason_only",
+      "n": 1343,
+      "mae": 5.635498096498749,
+      "rmse": 7.082090969498051,
+      "spearman": 0.4650903316852284,
+      "crps": 3.996658695891267,
+      "coverage_80": 0.7684288905435592,
+      "interval_width": 17.069030526915178
+    },
+    "rolling": {
+      "model": "rolling_mean",
+      "n": 1343,
+      "mae": 5.084013709063214,
+      "rmse": 6.845541015374849,
+      "spearman": 0.6014548321081209
+    }
+  },
+  {
+    "position": "WR",
+    "weekly": {
+      "model": "bayes_weekly",
+      "n": 2132,
+      "mae": 5.254628192523367,
+      "rmse": 6.954158166460195,
+      "spearman": 0.4853111791650094,
+      "crps": 3.858472968280977,
+      "coverage_80": 0.7931519699812383,
+      "interval_width": 16.859754043869696
+    },
+    "weekly_ev_mixture": {
+      "model": "bayes_weekly_ev_mixture",
+      "n": 2132,
+      "mae": 5.155124896553472,
+      "rmse": 6.934482848594775,
+      "spearman": 0.4853111791650094,
+      "crps": 3.839724975899443,
+      "coverage_80": 0.7903377110694184,
+      "interval_width": 16.859754043869696
+    },
+    "preseason_only": {
+      "model": "bayes_preseason_only",
+      "n": 2132,
+      "mae": 5.707732180999549,
+      "rmse": 7.282911141356847,
+      "spearman": 0.3784071006483896,
+      "crps": 4.092728121898748,
+      "coverage_80": 0.7603189493433395,
+      "interval_width": 16.650718054689953
+    },
+    "rolling": {
+      "model": "rolling_mean",
+      "n": 2132,
+      "mae": 5.331953250080051,
+      "rmse": 7.25728130172802,
+      "spearman": 0.5216830627114373
+    }
+  },
+  {
+    "position": "TE",
+    "weekly": {
+      "model": "bayes_weekly",
+      "n": 1088,
+      "mae": 3.9696193958576487,
+      "rmse": 5.353434650321323,
+      "spearman": 0.460003445880546,
+      "crps": 2.923298183164754,
+      "coverage_80": 0.7895220588235294,
+      "interval_width": 12.556992405123722
+    },
+    "weekly_ev_mixture": {
+      "model": "bayes_weekly_ev_mixture",
+      "n": 1088,
+      "mae": 3.9223933423494173,
+      "rmse": 5.349551857746289,
+      "spearman": 0.460003445880546,
+      "crps": 2.91461076475882,
+      "coverage_80": 0.7886029411764706,
+      "interval_width": 12.556992405123722
+    },
+    "preseason_only": {
+      "model": "bayes_preseason_only",
+      "n": 1088,
+      "mae": 4.028135990256785,
+      "rmse": 5.363962623004867,
+      "spearman": 0.45244202921419213,
+      "crps": 2.912171994571141,
+      "coverage_80": 0.7950367647058824,
+      "interval_width": 12.435673701879027
+    },
+    "rolling": {
+      "model": "rolling_mean",
+      "n": 1088,
+      "mae": 4.037485928705441,
+      "rmse": 5.537334911643174,
+      "spearman": 0.47980305363582204
+    }
+  },
+  {
+    "position": "K",
+    "weekly": {
+      "model": "bayes_weekly",
+      "n": 561,
+      "mae": 3.579021218299361,
+      "rmse": 4.412719427163711,
+      "spearman": 0.11333699652544904,
+      "crps": 2.50724240985397,
+      "coverage_80": 0.7468805704099821,
+      "interval_width": 10.02453937725614
+    },
+    "weekly_ev_mixture": {
+      "model": "bayes_weekly",
+      "n": 561,
+      "mae": 3.579021218299361,
+      "rmse": 4.412719427163711,
+      "spearman": 0.11333699652544904,
+      "crps": 2.50724240985397,
+      "coverage_80": 0.7468805704099821,
+      "interval_width": 10.02453937725614
+    },
+    "preseason_only": {
+      "model": "bayes_preseason_only",
+      "n": 561,
+      "mae": 3.458412252649109,
+      "rmse": 4.31264030174578,
+      "spearman": 0.022458507524258483,
+      "crps": 2.4407237300058267,
+      "coverage_80": 0.7433155080213903,
+      "interval_width": 10.031824091354089
+    },
+    "rolling": {
+      "model": "rolling_mean",
+      "n": 0,
+      "mae": NaN,
+      "rmse": NaN,
+      "spearman": NaN
+    }
+  },
+  {
+    "position": "DST",
+    "weekly": {
+      "model": "bayes_weekly",
+      "n": 544,
+      "mae": 9.012457056312694,
+      "rmse": 11.343219780719252,
+      "spearman": 0.12661495084676325,
+      "crps": 6.414580801977959,
+      "coverage_80": 0.8033088235294118,
+      "interval_width": 29.71525390098384
+    },
+    "weekly_ev_mixture": {
+      "model": "bayes_weekly",
+      "n": 544,
+      "mae": 9.012457056312694,
+      "rmse": 11.343219780719252,
+      "spearman": 0.12661495084676325,
+      "crps": 6.414580801977959,
+      "coverage_80": 0.8033088235294118,
+      "interval_width": 29.71525390098384
+    },
+    "preseason_only": {
+      "model": "bayes_preseason_only",
+      "n": 544,
+      "mae": 8.90569226149639,
+      "rmse": 11.139078757536227,
+      "spearman": 0.07987569930020257,
+      "crps": 6.314419698271708,
+      "coverage_80": 0.8051470588235294,
+      "interval_width": 29.760419940190758
+    },
+    "rolling": {
+      "model": "rolling_mean",
+      "n": 0,
+      "mae": NaN,
+      "rmse": NaN,
+      "spearman": NaN
+    }
+  }
+]

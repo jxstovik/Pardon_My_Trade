@@ -24,18 +24,18 @@ export function loadEspnCredentials(env: NodeJS.ProcessEnv = process.env): EspnC
 }
 
 /**
- * ESPN lineup slot ids -> canonical position. ESPN uses integer slot ids that
- * vary slightly across league configurations; this map covers the common set.
+ * Canonical ESPN football slot-id scheme (verified against espn-api's
+ * POSITION_MAP and the Smaracko league payload): 0 QB, 2 RB, 4 WR, 6 TE,
+ * 16 D/ST, 17 K, 23 FLEX, 20 BE, 21 IR. NOTE: 14 is DB, NOT kicker —
+ * kickers are slot 17.
  */
 export const ESPN_SLOT_TO_POSITION: Record<number, PlayerPosition> = {
   0: "QB",
   2: "RB",
   4: "WR",
   6: "TE",
-  13: "DST",
-  14: "K",
   16: "DST",
-  17: "BN",
+  17: "K",
   20: "BN",
   21: "IR",
   23: "FLEX"
@@ -46,7 +46,7 @@ export const POSITION_TO_ESPN_SLOT: Record<PlayerPosition, number> = {
   RB: 2,
   WR: 4,
   TE: 6,
-  K: 14,
+  K: 17,
   DST: 16,
   FLEX: 23,
   SUPER_FLEX: 23,
