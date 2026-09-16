@@ -280,6 +280,21 @@ def main() -> int:
         }
         known = [o for o in batch if o["playerId"] in model_ids]
         excluded = sorted({o["playerId"] for o in batch if o["playerId"] not in model_ids})
+        # The weekly loop is intentionally rerunnable. If every known model is
+        # already at this scoring period, do not submit the batch again: the
+        # update tool correctly rejects same-or-earlier observations.
+        models = json.loads((REPO / "data" / "models.json").read_text())["models"]
+        model_by_id = {m["playerId"]: m for m in models}
+        period = f"{SEASON}-W{week}"
+        pending = [o for o in known if model_by_id.get(o["playerId"], {}).get("lastUpdatedScoringPeriod") != period]
+        if not pending:
+            return {
+                "ok": True,
+                "idempotent": True,
+                "scoringPeriod": period,
+                "observationsSkipped": len(known),
+                "_excludedNoModel": excluded,
+            }
         mcp = McpClient(env)
         try:
             res = mcp.tool("pmt_update_post_week_outcomes", {
