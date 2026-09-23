@@ -55,6 +55,9 @@ export function buildProjectionSources(options: BuildProjectionSourcesOptions = 
         out.push(new RazzballProjectionSource({
           position,
           kind: "ros",
+          // User directive: full PPR is the primary scoring format. Razzball's
+          // ROS pages expose PPR columns for RB/WR/TE (STD for QB/K/DST).
+          ppr: true,
           fetchImpl: options.fetchImpl,
           cache,
           dataDir,

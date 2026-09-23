@@ -56,7 +56,16 @@ function fakeFetch(handler: (url: string, init: RequestInit) => Response): typeo
 }
 
 function makeReader(): EspnPlatformReader {
+  const konaPayload = {
+    players: [
+      { player: { id: 301, firstName: "Free", lastName: "Agent", defaultPositionId: 3, proTeamId: 8, injured: false }, status: "FREEAGENT" },
+      { player: { id: 101, firstName: "Caleb", lastName: "Meridian", defaultPositionId: 1, proTeamId: 4, injured: false }, status: "FREEAGENT" }
+    ]
+  };
   const fetchImpl = fakeFetch((url) => {
+    if (url.includes("leagues/999") && url.includes("kona_player_info")) {
+      return new Response(JSON.stringify(konaPayload), { status: 200 });
+    }
     if (url.includes("leagues/999") && !url.includes("/transactions") && !url.includes("/trades")) {
       return new Response(JSON.stringify(sampleLeague), { status: 200 });
     }
