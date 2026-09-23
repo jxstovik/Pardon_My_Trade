@@ -1,0 +1,16 @@
+numpy
+pandas
+pyarrow
+scipy
+scikit-learn
+lightgbm
+matplotlib
+seaborn
+jupyterlab
+ipykernel
+tabulate
+tqdm
+joblib
+PyYAML
+# Install a CPU-only PyTorch build separately when joint NN training is needed:
+# python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
