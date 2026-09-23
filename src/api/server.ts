@@ -6,7 +6,7 @@ import type { V1Store } from "../history/v1-store.js";
 import type { LeagueSnapshot, Recommendation } from "../models/types.js";
 import type { RefreshSummary } from "../models/v1.js";
 import type { DraftController } from "../draft/draft-controller.js";
-import type { OllamaMessage } from "../llm/ollama.js";
+import type { LLMMessage } from "../llm/providers.js";
 
 export interface ApiServerDeps {
   readonly repository: KnowledgeRepository;
@@ -203,14 +203,14 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
         sendJson(res, 404, { error: "draft harness not enabled" });
         return;
       }
-      const body = await readJson<{ messages?: OllamaMessage[] }>(req);
+      const body = await readJson<{ messages?: LLMMessage[] }>(req);
       const messages = Array.isArray(body.messages) ? body.messages : [];
       try {
         const reply = await deps.draft.chat(messages);
         sendJson(res, 200, { reply });
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
-        sendJson(res, 502, { error: `ollama chat failed: ${message}` });
+        sendJson(res, 502, { error: `LLM chat failed: ${message}` });
       }
       return;
     }
