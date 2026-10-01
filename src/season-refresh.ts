@@ -64,7 +64,7 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   const season = options.season ?? snapshot.league.season;
   const scoringPeriod = options.week
     ? `${season}-W${options.week}`
-    : getCurrentScoringPeriod(new Date(), season);
+    : snapshot.scoring_period ?? getCurrentScoringPeriod(new Date(), season);
 
   // Season-total projection sources are rescaled to single-week points so the
   // Bayesian priors and the runtime artifact stay apples-to-apples with weekly

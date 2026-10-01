@@ -58,8 +58,8 @@ export async function runSeasonOrchestration(
     throw new Error("Team ID is required; set PMT_TEAM_ID or pass teamId explicitly.");
   }
 
-  const period = getCurrentScoringPeriod(new Date(), snapshot.league.season);
-  snapshot = mergeProjections(snapshot, await repository.getProjections(period));
+  const period = snapshot.scoring_period ?? getCurrentScoringPeriod(new Date(), snapshot.league.season);
+  snapshot = mergeProjections(snapshot, await repository.getProjections(period, snapshot.league.external_id));
   const priors = buildPriorsFromSnapshot(snapshot);
   const models = await resolveRuntimeModels(snapshot, dataDir, period);
   const team = snapshot.league.teams.find((candidate) => candidate.team_id === teamId);

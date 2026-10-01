@@ -37,7 +37,7 @@ export function loadRuntimeConfig(input: RuntimeConfigInput = process.env): Runt
   if (!leagueExternalId) throw new Error(`A league id is required for ${platform}; set PMT_LEAGUE_ID or the platform-specific league id.`);
   if (!teamExternalId) throw new Error(`A team id is required for ${platform}; set PMT_TEAM_ID.`);
   const dataDir = resolve(nonEmpty(overrides.dataDir) ?? nonEmpty(env.PMT_DATA_DIR) ?? "data");
-  const fixturePath = nonEmpty(overrides.fixturePath) ?? nonEmpty(env.PMT_FIXTURE_PATH) ?? "tests/fixtures/sample-football-league.json";
+  const fixturePath = nonEmpty(overrides.fixturePath) ?? nonEmpty(env.PMT_FIXTURE_PATH) ?? "tests/fixtures/demo-roster-distributions.json";
   return {
     dataDir,
     databasePath: overrides.databasePath ?? resolve(dataDir, "pmt.sqlite"),

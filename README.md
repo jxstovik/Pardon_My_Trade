@@ -1,5 +1,16 @@
 # Pardon My Trade
 
+The advisory rebuild adds a shared SQLite runtime, repaired ESPN read contracts,
+server-enforced Hermes roles, and an authenticated mobile roster app. See
+[rebuild status and rollout](docs/rebuild-status.md) and
+[single-host deployment](docs/deployment-rebuild.md). Writes remain paused.
+
+For the synthetic demo, use Node 26, run `npm ci && npm rebuild better-sqlite3`,
+then `npm run serve`. Open `http://127.0.0.1:3000`. All default demo projections
+are synthetic. Configure an explicit live platform, league and team before using
+`pmt doctor --platform espn --read-only`, `pmt import-espn`, or live refresh.
+
+
 Documentation-first foundation for an autonomous Fantasy Sports General Manager.
 
 Current milestone: Phase 0 - Documentation Sprint (complete). MVP complete; V1 (Daily Fantasy General Manager) implemented.

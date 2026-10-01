@@ -1,3 +1,4 @@
+import { sameScoringPeriod } from "../models/scoring-period.js";
 import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
@@ -485,6 +486,14 @@ export class ActionExecutor {
     for (const teamId of Object.keys(preconditions?.expectedRosterHashes ?? {})) teamIds.add(teamId);
     const rosters = new Map<string, Roster>();
     try {
+      const freshReader = this.reader as PlatformReader & { getLeagueFresh?: () => Promise<{ scoringPeriodId?: number; seasonId?: number }> };
+      if (freshReader.getLeagueFresh) {
+        const fresh = await freshReader.getLeagueFresh();
+        if (preconditions?.scoringPeriod && fresh.scoringPeriodId !== undefined) {
+          const season = fresh.seasonId ?? preconditions.scoringPeriod.slice(0, 4);
+          if (!sameScoringPeriod(`${season}-W${fresh.scoringPeriodId}`, preconditions.scoringPeriod)) return { reason: "scoring_period_precondition_mismatch" };
+        }
+      }
       for (const teamId of teamIds) {
         rosters.set(teamId, await this.reader.getRoster(leagueExternalId, teamId));
       }

@@ -239,6 +239,8 @@ export interface WaiverState extends VersionedRecord {
 }
 
 export interface LeagueSnapshot {
+  /** Platform-reported current target period, when the read contract supplies it. */
+  readonly scoring_period?: string;
   readonly snapshot_id: string;
   readonly league: League;
   readonly managers: Manager[];

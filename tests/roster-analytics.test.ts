@@ -110,3 +110,22 @@ test("optimizer assigns multi-eligible players legally and preserves locked slot
   ]));
   assert.deepEqual(locked.starters.map((starter) => starter.playerId), ["locked"]);
 });
+
+test("runtime resolver treats padded weekly targets as equivalent and ignores future model state", async () => {
+  const { resolveRuntimeModels } = await import("../src/application/roster-analytics.js");
+  const { writeFile } = await import("node:fs/promises");
+  const snapshot = await completeProjectionSnapshot();
+  const starterId = snapshot.league.teams[0]!.roster.starters[0]!.player_id!;
+  const starter = snapshot.players.find(player => player.player_id === starterId)!;
+  const dir = await mkdtemp(join(tmpdir(), "pmt-causal-state-"));
+  try {
+    const baseline = await resolveRuntimeModels(snapshot, dir, "2026-W1");
+    assert.ok(baseline.has(starterId), "W01 projections cover W1 targets");
+    const model = baseline.get(starterId)!;
+    await writeFile(join(dir, "models.json"), JSON.stringify({ models: [{ ...model, weeksObserved: 3, sigma: 50, lastUpdatedScoringPeriod: "2026-W2" }] }));
+    const resolved = await resolveRuntimeModels(snapshot, dir, "2026-W01");
+    assert.equal(resolved.get(starterId)?.weeksObserved, 0);
+    assert.ok(resolved.get(starterId)!.sigma < 50);
+    assert.equal(resolved.get(starterId)?.position, starter.positions[0]);
+  } finally { await rm(dir, { recursive: true, force: true }); }
+});

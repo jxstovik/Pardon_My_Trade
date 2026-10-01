@@ -31,8 +31,8 @@ import { JsonModelStore } from "./probabilistic/model-store.js";
 import { buildPriorsFromSnapshot, buildOrchestratorInputFromSnapshot, mergeProjectionCandidates } from "./agents/snapshot-integration.js";
 import { buildModels, applyObservations, rankByValue } from "./probabilistic/model-engine.js";
 import { runOrchestrator, buildModelsForOrchestrator } from "./agents/ff-orchestrator.js";
-import { ActionQueue, JsonActionQueueStore } from "./agents/action-queue.js";
-import { ActionExecutor, JsonActionExecutionStore } from "./agents/action-executor.js";
+import { ActionQueue, SqliteActionQueueStore } from "./agents/action-queue.js";
+import { ActionExecutor, SqliteActionExecutionStore } from "./agents/action-executor.js";
 import { InMemoryScheduler } from "./scheduler/scheduler.js";
 import { registerSeasonJobs, runDailySeasonJob } from "./seasons/season-jobs.js";
 import { runSeasonOrchestration } from "./seasons/season-orchestration.js";
@@ -46,6 +46,10 @@ import type { V1Store } from "./history/v1-store.js";
 import type { NotificationProvider } from "./notifications/notification-provider.js";
 import type { ModelPrior, Observation } from "./probabilistic/bayesian-model.js";
 import type { OrchestratorInput } from "./agents/types.js";
+
+import { loadRuntimeConfig, prepareRuntimeStorage } from "./config/runtime-config.js";
+import { readConfiguredSnapshot, refreshConfiguredLeague, getConfiguredSnapshot, writeSnapshotPointer } from "./application/live-refresh.js";
+import { runEspnDoctor } from "./adapters/espn/espn-doctor.js";
 
 const command = process.argv[2] ?? "help";
 
@@ -219,29 +223,20 @@ async function main(): Promise<void> {
       }, null, 2));
       return;
     }
+    case "doctor": {
+      const report = await runEspnDoctor({ credentials: process.env.ESPN_LEAGUE_ID || process.env.PMT_LEAGUE_ID ? { leagueId: process.env.ESPN_LEAGUE_ID ?? process.env.PMT_LEAGUE_ID!, season: process.env.ESPN_SEASON ?? process.env.PMT_SEASON ?? new Date().getFullYear().toString(), espnS2: process.env.ESPN_S2, swid: process.env.SWID } : undefined });
+      console.log(JSON.stringify(report, null, 2));
+      return;
+    }
     case "refresh": {
-      const config = createDefaultConfig();
-      const leagueExternalId = process.argv[3] ?? "pmt-demo-football";
-      const teamExternalId = process.argv[4] ?? "team-001";
-      const repository = new InMemoryKnowledgeRepository();
-      const v1Store = new InMemoryV1Store();
+      const runtime = loadRuntimeConfig();
+      await mkdir(runtime.dataDir, { recursive: true });
+      await prepareRuntimeStorage(runtime);
+      const repository = new SqliteKnowledgeRepository({ filePath: runtime.databasePath });
+      const v1Store = new SqliteV1Store({ filePath: runtime.databasePath });
       const ruleEngine = new ScoringRuleEngine();
-      const decisionEngine = new DefaultDecisionEngine(ruleEngine);
-      const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
-      const newsPath = process.env.PMT_NEWS_PATH ?? "tests/fixtures/sample-news.json";
-
-      const summary = await runRefresh({
-        fixturePath: config.fixturePath,
-        newsPath,
-        leagueExternalId,
-        teamExternalId,
-        repository,
-        v1Store,
-        ruleEngine,
-        decisionEngine,
-        recommendationEngine,
-        notificationProviders: [new ConsoleNotificationProvider()]
-      });
+      const summary = await refreshConfiguredLeague({ repository, v1Store, ruleEngine,
+        decisionEngine: new DefaultDecisionEngine(ruleEngine), recommendationEngine: new DefaultRecommendationEngine(ruleEngine) }, runtime);
       console.log(JSON.stringify(summary, null, 2));
       return;
     }
@@ -254,7 +249,7 @@ async function main(): Promise<void> {
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
       await mkdir(dataDir, { recursive: true });
 
-      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.sqlite") });
       const reader = new SleeperPlatformReader();
       const snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
 
@@ -274,141 +269,46 @@ async function main(): Promise<void> {
       return;
     }
     case "serve": {
-      const config = createDefaultConfig();
-      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
+      const runtime = loadRuntimeConfig();
+      const dataDir = runtime.dataDir;
       await mkdir(dataDir, { recursive: true });
-
-      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
-      const v1Store = new SqliteV1Store({ filePath: join(dataDir, "pmt-v1.db") });
+      await prepareRuntimeStorage(runtime);
+      const repository = new SqliteKnowledgeRepository({ filePath: runtime.databasePath });
+      const v1Store = new SqliteV1Store({ filePath: runtime.databasePath });
       const ruleEngine = new ScoringRuleEngine();
-      const decisionEngine = new DefaultDecisionEngine(ruleEngine);
-      const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
-      const newsPath = process.env.PMT_NEWS_PATH ?? "tests/fixtures/sample-news.json";
-
-      const initialSource = await loadFixtureSnapshotSource(config.fixturePath);
-      try {
-        await ingestFixtureSnapshot(config.fixturePath, repository);
-      } catch {
-        // Snapshot already ingested from a previous run; reuse existing.
-      }
-      const initialSnapshot0 = await repository.getLeagueSnapshot(initialSource.snapshot_id) ?? initialSource;
-      let initialSnapshot = initialSnapshot0;
-
-      try {
-        const pointerRaw = await readFile(join(dataDir, "last-snapshot.json"), "utf8");
-        const pointer = JSON.parse(pointerRaw) as { snapshot_id: string };
-        const imported = await repository.getLeagueSnapshot(pointer.snapshot_id);
-        if (imported) {
-          initialSnapshot = imported;
-        }
-      } catch {
-        // No previously imported snapshot; fall back to the fixture.
-      }
-
-      const doRefresh = () => runRefresh({
-        fixturePath: config.fixturePath,
-        newsPath,
-        leagueExternalId: "pmt-demo-football",
-        teamExternalId: "team-001",
-        repository,
-        v1Store,
-        ruleEngine,
-        decisionEngine,
-        recommendationEngine,
-        notificationProviders: [
-          new ConsoleNotificationProvider(),
-          new FileNotificationProvider(join(dataDir, "notifications.log"))
-        ]
-      });
-
+      const initialSnapshot = await getConfiguredSnapshot(repository, runtime) ?? await readConfiguredSnapshot(runtime);
+      if (!await repository.getLeagueSnapshot(initialSnapshot.snapshot_id)) await repository.saveLeagueSnapshot(initialSnapshot);
+      await writeSnapshotPointer(initialSnapshot, dataDir);
+      const doRefresh = () => refreshConfiguredLeague({ repository, v1Store, ruleEngine,
+        decisionEngine: new DefaultDecisionEngine(ruleEngine), recommendationEngine: new DefaultRecommendationEngine(ruleEngine) }, runtime);
+      const host = process.env.PMT_HOST ?? "127.0.0.1";
+      if (!["127.0.0.1", "localhost", "::1"].includes(host) && !process.env.PMT_WEB_PASSWORD) throw new Error("PMT_WEB_PASSWORD is required for non-loopback serving.");
+      const server = createApiServer({ repository, v1Store, refresh: doRefresh, initialSnapshot,
+        teamId: runtime.teamExternalId, dataDir, getSnapshot: () => getConfiguredSnapshot(repository, runtime),
+        modelingDir: process.env.PMT_MODELING_DIR ?? join(process.cwd(), "artifacts", "wr-2024-replay") });
       const port = Number(process.env.PMT_PORT ?? 3000);
-      const server = createApiServer({
-        repository,
-        v1Store,
-        refresh: doRefresh,
-        initialSnapshot,
-        modelingDir: process.env.PMT_MODELING_DIR ?? join(process.cwd(), "artifacts", "wr-2024-replay")
-      });
-      server.listen(port, () => {
-        console.log(`Pardon My Trade GUI running at http://localhost:${port}`);
-      });
-
-      if (process.argv.includes("--scheduler")) {
-        const scheduler = new InMemoryScheduler();
-        const jobs = registerSeasonJobs(scheduler, buildSeasonJobDeps(dataDir, { repository, v1Store }));
-        scheduler.start();
-        console.log(`Season scheduler started: ${jobs.map((job) => `${job.jobId}@${job.time}`).join(", ")}`);
-      }
+      server.listen(port, host, () => console.log(`Pardon My Trade running at http://${host}:${port}`));
+      if (process.argv.includes("--scheduler")) throw new Error("Use a single Hermes cron owner with durable jobs; serve does not start a second scheduler.");
       return;
     }
     case "import-espn": {
-      const leagueId = process.argv[3] ?? process.env.ESPN_LEAGUE_ID;
-      if (!leagueId) {
-        throw new Error(
-          "import-espn requires a league id: set ESPN_LEAGUE_ID in .env or run pmt import-espn <leagueId> [season]"
-        );
-      }
-      const season = process.argv[4] ?? process.env.ESPN_SEASON ?? new Date().getFullYear().toString();
-      const teamId = process.argv[5];
-      const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
-      await mkdir(dataDir, { recursive: true });
-
-      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
-      const configuredCredentials = loadEspnCredentials();
-      const reader = new EspnPlatformReader({
-        credentials: { ...configuredCredentials, leagueId, season }
-      });
-      let snapshot = await buildSnapshotFromPlatform(reader, leagueId, season);
-
-      // Best-effort: seed model priors with real projections from the
-      // configured sources (default: ESPN only; opt in via
-      // PMT_PROJECTION_SOURCES=razzball,fftoday,espn). Matched to roster
-      // players by name so imported leagues use real projected points.
-      const projectionSources = buildProjectionSources({
-        sources: process.env.PMT_PROJECTION_SOURCES,
-        season,
-        dataDir
-      });
-      const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];
-      for (const source of projectionSources) {
-        try {
-          const candidates = await source.fetchProjections("football", season, `${season}-W01`);
-          const projections = matchProjectionsToRoster(candidates, rosterPlayers, `${season}-W01`, source.name);
-          snapshot = mergeProjections(snapshot, projections);
-        } catch {
-          // Source unavailable; fall back to remaining sources / baselines.
-        }
-      }
-
+      const leagueId = process.argv[3] ?? process.env.PMT_LEAGUE_ID ?? process.env.ESPN_LEAGUE_ID;
+      const season = process.argv[4] ?? process.env.PMT_SEASON ?? process.env.ESPN_SEASON ?? String(new Date().getUTCFullYear());
+      const teamId = process.argv[5] ?? process.env.PMT_TEAM_ID ?? process.env.ESPN_TEAM_ID;
+      if (!leagueId || !teamId) throw new Error("import-espn requires explicit league and team ids: pmt import-espn <leagueId> [season] <teamId>.");
+      const runtime = loadRuntimeConfig({ ...process.env, platform: "espn", leagueExternalId: leagueId, season, teamExternalId: teamId });
+      await mkdir(runtime.dataDir, { recursive: true });
+      await prepareRuntimeStorage(runtime);
+      const repository = new SqliteKnowledgeRepository({ filePath: runtime.databasePath });
+      const snapshot = await readConfiguredSnapshot(runtime);
       await repository.saveLeagueSnapshot(snapshot);
-      const pointer = { snapshot_id: snapshot.snapshot_id, league_id: snapshot.league.league_id };
-      await writeFile(join(dataDir, "last-snapshot.json"), JSON.stringify(pointer), "utf8");
-
-      const chosenTeam = teamId ?? snapshot.league.teams[0].team_id;
-      const priors = buildPriorsFromSnapshot(snapshot);
-      const models = buildModelsForOrchestrator(priors, []);
-      const modelStore = new JsonModelStore(join(dataDir, "models.json"));
-      await modelStore.saveAll([...models.values()]);
-
-      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
-      const input = buildOrchestratorInputFromSnapshot(snapshot, chosenTeam, models);
-      const result = await runOrchestrator({ input, priors, queue, autoApproveLowRisk: false });
-
-      console.log(JSON.stringify({
-        message: "Imported ESPN league snapshot and ran the FF_Orchestrator.",
-        snapshotId: snapshot.snapshot_id,
-        league: snapshot.league.name,
-        team: chosenTeam,
-        teams: snapshot.league.teams.length,
-        players: snapshot.players.length,
-        freeAgents: snapshot.free_agents.length,
-        projections: snapshot.projections.length,
-        lineupExpectedPoints: Math.round(result.lineupExpectedPoints * 100) / 100,
-        starters: result.lineup.map((s) => s.playerId),
-        waiverCandidates: result.waiverCandidates.length,
-        tradeCandidates: result.tradeCandidates.length,
-        queuedForApproval: result.queued.length
-      }, null, 2));
+      await writeSnapshotPointer(snapshot, runtime.dataDir);
+      const team = snapshot.league.teams.find(t => t.team_id === teamId || t.external_id === teamId)!;
+      const covered = new Set(snapshot.projections.map(p => p.player_id));
+      console.log(JSON.stringify({ message: "Imported ESPN read-only snapshot. No team actions submitted.", snapshotId: snapshot.snapshot_id,
+        league: snapshot.league.name, team: team.name, players: snapshot.players.length, freeAgents: snapshot.free_agents.length,
+        projections: snapshot.projections.length, uncoveredStarters: team.roster.starters.filter(s => s.player_id && !covered.has(s.player_id)).map(s => s.player_id),
+        next: "Set PMT_PLATFORM=espn, PMT_LEAGUE_ID, PMT_TEAM_ID and PMT_SEASON for serve, refresh and Hermes." }, null, 2));
       return;
     }
     case "build-models": {
@@ -447,14 +347,15 @@ async function main(): Promise<void> {
       if (!configPath) {
         throw new Error("ff-run requires a config JSON: pmt ff-run <config.json> [--auto]");
       }
-      const autoApproveLowRisk = process.argv.includes("--auto");
+      if (process.argv.includes("--auto")) throw new Error("Automatic execution is paused; use action preview, human approval, and action-execute after live write validation.");
+      const autoApproveLowRisk = false;
       const config = JSON.parse(await readFile(configPath, "utf8")) as {
         input: OrchestratorInput;
         priors: ModelPrior[];
         observations?: Observation[];
       };
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
-      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const queue = new ActionQueue(new SqliteActionQueueStore(join(dataDir, "pmt.sqlite")));
 
       const result = await runOrchestrator({
         input: config.input,
@@ -477,7 +378,7 @@ async function main(): Promise<void> {
     }
     case "action-queue": {
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
-      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const queue = new ActionQueue(new SqliteActionQueueStore(join(dataDir, "pmt.sqlite")));
       const pending = await queue.pending();
       console.log(JSON.stringify({
         pending: pending.length,
@@ -495,7 +396,7 @@ async function main(): Promise<void> {
       const actionId = process.argv[3];
       if (!actionId) throw new Error("action-approve requires an action id: pmt action-approve <actionId>");
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
-      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const queue = new ActionQueue(new SqliteActionQueueStore(join(dataDir, "pmt.sqlite")));
       const approved = await queue.approve(actionId, process.env.PMT_ACTION_ACTOR ?? "cli-operator");
       console.log(JSON.stringify({ actionId: approved.actionId, status: approved.status }, null, 2));
       return;
@@ -504,24 +405,25 @@ async function main(): Promise<void> {
       const actionId = process.argv[3];
       if (!actionId) throw new Error("action-reject requires an action id: pmt action-reject <actionId>");
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
-      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const queue = new ActionQueue(new SqliteActionQueueStore(join(dataDir, "pmt.sqlite")));
       const rejected = await queue.reject(actionId, process.env.PMT_ACTION_ACTOR ?? "cli-operator");
       console.log(JSON.stringify({ actionId: rejected.actionId, status: rejected.status }, null, 2));
       return;
     }
     case "action-execute": {
+      if (process.env.PMT_EXECUTION_ENABLED !== "true") throw new Error("Execution is paused. Set PMT_EXECUTION_ENABLED=true only after a human-reviewed live write canary.");
       const actionId = process.argv[3];
       if (!actionId) throw new Error("action-execute requires an action id: pmt action-execute <actionId>");
       const dataDir = process.env.PMT_DATA_DIR ?? join(process.cwd(), "data");
       const leagueExternalId = process.argv[4] ?? process.env.ESPN_LEAGUE_ID;
-      const queue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+      const queue = new ActionQueue(new SqliteActionQueueStore(join(dataDir, "pmt.sqlite")));
       const reader = new EspnPlatformReader();
       const writer = new EspnPlatformWriter();
       const executor = new ActionExecutor({
         queue,
         reader,
         writer,
-        store: new JsonActionExecutionStore(join(dataDir, "action-execution.json")),
+        store: new SqliteActionExecutionStore(join(dataDir, "pmt.sqlite")),
         leagueExternalId
       });
       console.log(JSON.stringify(await executor.execute(actionId, { leagueExternalId }), null, 2));
@@ -618,8 +520,8 @@ async function main(): Promise<void> {
       });
       await controller.init();
 
-      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
-      const v1Store = new SqliteV1Store({ filePath: join(dataDir, "pmt-v1.db") });
+      const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.sqlite") });
+      const v1Store = new SqliteV1Store({ filePath: join(dataDir, "pmt.sqlite") });
       const ruleEngine = new ScoringRuleEngine();
       const decisionEngine = new DefaultDecisionEngine(ruleEngine);
       const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
@@ -721,8 +623,8 @@ function buildSeasonJobDeps(
   shared?: { repository: KnowledgeRepository; v1Store: V1Store }
 ): SeasonJobDeps {
   const config = createDefaultConfig();
-  const repository = shared?.repository ?? new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
-  const v1Store = shared?.v1Store ?? new SqliteV1Store({ filePath: join(dataDir, "pmt-v1.db") });
+  const repository = shared?.repository ?? new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.sqlite") });
+  const v1Store = shared?.v1Store ?? new SqliteV1Store({ filePath: join(dataDir, "pmt.sqlite") });
   const ruleEngine = new ScoringRuleEngine();
   const decisionEngine = new DefaultDecisionEngine(ruleEngine);
   const recommendationEngine = new DefaultRecommendationEngine(ruleEngine);
@@ -734,11 +636,7 @@ function buildSeasonJobDeps(
 
   return {
     dataDir,
-    refresh: () => runRefresh({
-      fixturePath: config.fixturePath,
-      newsPath,
-      leagueExternalId: process.env.PMT_LEAGUE_EXTERNAL_ID ?? "pmt-demo-football",
-      teamExternalId: process.env.PMT_TEAM_EXTERNAL_ID ?? "team-001",
+    refresh: () => refreshConfiguredLeague({
       repository,
       v1Store,
       ruleEngine,
@@ -783,6 +681,7 @@ function printHelp(): void {
 Usage:
   pmt help
   pmt version
+  pmt doctor --platform espn --read-only
   pmt import-fixture
   pmt weekly-report [leagueExternalId] [teamExternalId]
   pmt add-drop-eval [leagueExternalId] [teamExternalId]

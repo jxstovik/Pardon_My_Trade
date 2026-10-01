@@ -1,3 +1,4 @@
+import { sameScoringPeriod } from "../models/scoring-period.js";
 import { createHash } from "node:crypto";
 import { join } from "node:path";
 import type { LeagueSnapshot, Player, PlayerPosition } from "../models/types.js";
@@ -82,7 +83,8 @@ export interface FreeAgentScenarioResult {
 const DEFAULT_SAMPLES = 10_000;
 const MODEL_VERSION = "bayesian-ewma-v1";
 const ASSUMPTIONS = [
-  "Player outcomes are modeled as independent normal distributions.",
+  "Player outcomes are modeled as independent normal distributions with estimated uncertainty, not calibrated coverage.",
+  "Current-period source means drive forecasts; stored observations contribute uncertainty state only. Legacy model state has no league/period approval metadata.",
   "Learned PlayerModels are used when available; otherwise matching scoring-period projections supply cold-start means and uncertainty.",
   "Optimized lineups are chosen from expected points and held fixed across samples; locked starters remain in their assigned slots.",
   "Free-agent scenarios model a hypothetical acquisition; waiver priority, FAAB cost, and transaction acceptance are not modeled.",
@@ -241,11 +243,11 @@ interface AnalyticsContext {
 async function buildContext(snapshot: LeagueSnapshot, teamId: string, options: RosterAnalyticsOptions): Promise<AnalyticsContext> {
   const team = snapshot.league.teams.find((candidate) => candidate.team_id === teamId);
   if (!team) throw new Error(`Team ${teamId} is not present in snapshot ${snapshot.snapshot_id}.`);
-  const period = options.period ?? (snapshot.league.platform === "fixture"
+  const period = options.period ?? snapshot.scoring_period ?? (snapshot.league.platform === "fixture"
     ? snapshot.league.schedule.find((matchup) => matchup.team_id === teamId)?.scoring_period
     : getCurrentScoringPeriod(new Date(), snapshot.league.season)) ?? `${snapshot.league.season}-ROS`;
-  const samples = options.samples ?? DEFAULT_SAMPLES;
-  if (!Number.isInteger(samples) || samples < 1 || samples > 100_000) throw new Error("samples must be an integer from 1 through 100000.");
+  let samples = options.samples ?? DEFAULT_SAMPLES;
+  if (!Number.isInteger(samples) || samples < 1 || samples > 10_000) throw new Error("samples must be an integer from 1 through 10000.");
   const players = new Map([...snapshot.players, ...snapshot.free_agents].map((player) => [player.player_id, player]));
   const storeDir = options.dataDir ?? process.env.PMT_DATA_DIR ?? "data";
   const activeRoster = [...team.roster.starters, ...team.roster.bench].filter((slot) => !!slot.player_id);
@@ -272,6 +274,11 @@ async function buildContext(snapshot: LeagueSnapshot, teamId: string, options: R
   }
   const analyticsSnapshot = { ...snapshot, projections: [...projectionByPlayer.values()] };
   const playerModels = await resolveRuntimeModels(analyticsSnapshot, storeDir, period);
+  const maximumSamples = Math.max(1, Math.floor(3_000_000 / Math.max(1, playerModels.size)));
+  if (samples > maximumSamples) {
+    if (options.samples !== undefined) throw Object.assign(new Error(`Simulation budget exceeded: at most ${maximumSamples} samples for ${playerModels.size} modeled players.`), { statusCode: 422 });
+    samples = maximumSamples;
+  }
   const coverage = new Map<string, PlayerAnalytics["projectionCoverage"]>();
   const playerNames = new Map<string, string>();
   const playerPositions = new Map<string, PlayerPosition>();
@@ -280,7 +287,7 @@ async function buildContext(snapshot: LeagueSnapshot, teamId: string, options: R
   for (const player of [...snapshot.players, ...snapshot.free_agents]) {
     const position = primaryModelPosition(player.positions);
     const saved = savedByPlayer.get(player.player_id);
-    const learned = saved && saved.position === position && saved.weeksObserved > 0 && saved.mu >= 0 && saved.sigma > 0;
+    const learned = (playerModels.get(player.player_id)?.weeksObserved ?? 0) > 0;
     let model = playerModels.get(player.player_id);
     if (!position) continue;
     const projection = projectionByPlayer.get(player.player_id);
@@ -323,14 +330,14 @@ async function buildContext(snapshot: LeagueSnapshot, teamId: string, options: R
     .map((record) => record.updated_at)
     .sort()
     .at(-1) ?? snapshot.league.import_metadata.imported_at;
-  const hasLearned = [...playerModels.keys()].some((id) => savedByPlayer.get(id)?.weeksObserved);
+  const hasLearned = [...playerModels.values()].some(model => model.weeksObserved > 0);
   return {
     metadata: {
       snapshotId: snapshot.snapshot_id,
       teamId,
       period,
       asOf,
-      modelVersion: hasLearned ? `${MODEL_VERSION}+persisted-models` : MODEL_VERSION,
+      modelVersion: `${MODEL_VERSION}:${createHash("sha256").update(JSON.stringify({ period, scoring: snapshot.league.scoring_settings, models: [...playerModels] })).digest("hex").slice(0, 16)}${hasLearned ? "+learned-uncertainty" : "+cold-start"}`,
       assumptions: [...ASSUMPTIONS, ...(hasLearned ? ["Persisted learned PlayerModels from the configured data directory are consumed when their player and position match."] : ["No persisted learned PlayerModels were available; this is a cold start."])]
     },
     roster: modeledRoster,
@@ -365,7 +372,7 @@ function rosterEntryFor(player: Player, locked = false, assignedSlot?: PlayerPos
 function selectedProjections(snapshot: LeagueSnapshot, period: string) {
   const selected = new Map<string, LeagueSnapshot["projections"][number]>();
   for (const projection of snapshot.projections) {
-    if (projection.scoring_period !== period) continue;
+    if (!sameScoringPeriod(projection.scoring_period, period)) continue;
     const current = selected.get(projection.player_id);
     if (!current || projection.confidence > current.confidence ||
       (projection.confidence === current.confidence && projection.updated_at > current.updated_at)) selected.set(projection.player_id, projection);
@@ -393,7 +400,7 @@ export async function resolveRuntimeModels(
     const prior = priorByPlayer.get(player.player_id);
     const projection = projections.get(player.player_id);
     if (!projection) continue;
-    if (previous && previous.position === position && previous.weeksObserved > 0 && previous.mu >= 0 && previous.sigma > 0) {
+    if (previous && previous.position === position && previous.weeksObserved > 0 && Number.isFinite(previous.mu) && Number.isFinite(previous.sigma) && previous.sigma > 0 && usableLearnedPeriod(previous, selectedPeriod)) {
       // Keep learned uncertainty and recurrence state, while anchoring the mean
       // to a source projection for the requested scoring period.
       resolved.set(player.player_id, { ...previous, historyMean: prior?.historyMean ?? projection.projected_points, mu: prior?.historyMean ?? projection.projected_points });
@@ -507,4 +514,11 @@ function normalSample(random: () => number, mean: number, sigma: number): number
   const u1 = Math.max(Number.MIN_VALUE, random());
   const u2 = random();
   return mean + sigma * Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+}
+
+function usableLearnedPeriod(model: PlayerModel, target: string): boolean {
+  const targetParts = /^(\d{4})-W(\d+)$/.exec(target);
+  if (!model.lastUpdatedScoringPeriod) return true; // Legacy state is explicitly labeled as unscoped uncertainty.
+  const observed = /^(\d{4})-W(\d+)$/.exec(model.lastUpdatedScoringPeriod);
+  return !!observed && !!targetParts && observed[1] === targetParts[1] && Number(observed[2]) < Number(targetParts[2]);
 }

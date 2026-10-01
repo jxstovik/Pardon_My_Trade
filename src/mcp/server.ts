@@ -3,10 +3,10 @@ import { join, relative, resolve } from "node:path";
 import { McpServer, type ToolCallback } from "@modelcontextprotocol/sdk/server/mcp.js";
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { z, type ZodRawShape } from "zod";
-import { ActionExecutor, JsonActionExecutionStore, type ActionExecutionStore } from "../agents/action-executor.js";
-import { ActionQueue, JsonActionQueueStore } from "../agents/action-queue.js";
+import { ActionExecutor, SqliteActionExecutionStore, type ActionExecutionStore } from "../agents/action-executor.js";
+import { ActionQueue, SqliteActionQueueStore } from "../agents/action-queue.js";
 import type { QueuedAction } from "../agents/types.js";
-import { buildPriorsFromSnapshot } from "../agents/snapshot-integration.js";
+import { buildPriorsFromSnapshot, buildSnapshotEnqueueOptions } from "../agents/snapshot-integration.js";
 import { buildModelsForOrchestrator, runOrchestrator } from "../agents/ff-orchestrator.js";
 import type { PlatformReader } from "../adapters/platform-reader.js";
 import { EspnPlatformReader } from "../adapters/espn/espn-platform-reader.js";
@@ -32,6 +32,19 @@ import {
   type PmtMcpToolName
 } from "./contracts.js";
 
+import { resolveRuntimeModels, buildRosterAnalytics, simulateFreeAgentScenario } from "../application/roster-analytics.js";
+import { loadRuntimeConfig, prepareRuntimeStorage } from "../config/runtime-config.js";
+import { configuredReader, getConfiguredSnapshot, refreshConfiguredLeague } from "../application/live-refresh.js";
+import { ScoringRuleEngine } from "../rules/rule-engine.js";
+import { DefaultDecisionEngine } from "../decisions/decision-engine.js";
+import { DefaultRecommendationEngine } from "../recommendations/recommendation-engine.js";
+
+export type PmtMcpRole = "read" | "operator";
+export function resolveMcpRole(value = process.env.PMT_MCP_ROLE ?? "read"): PmtMcpRole {
+  if (value !== "read" && value !== "operator") throw new Error("PMT_MCP_ROLE must be read or operator.");
+  return value;
+}
+
 const completedWeeklyObservationSchema = z.object({
   playerId: z.string().min(1),
   season: z.string().optional(),
@@ -56,46 +69,46 @@ export interface PmtMcpDependencies {
   readonly executionStore?: ActionExecutionStore;
   readonly actionExecutor?: ActionExecutor;
   readonly clock?: () => Date;
+  readonly teamId?: string;
+  readonly leagueExternalId?: string;
+  readonly syncSnapshot?: () => Promise<Record<string, unknown>>;
   readonly loadSnapshot?: () => Promise<LeagueSnapshot>;
 }
 
 export interface PmtMcpServerOptions {
   readonly deps: PmtMcpDependencies;
+  readonly role?: PmtMcpRole;
   readonly name?: string;
   readonly version?: string;
 }
 
 export async function createDefaultPmtMcpDependencies(
-  dataDir = process.env.PMT_DATA_DIR ?? "data"
+  dataDir = process.env.PMT_DATA_DIR ?? "data",
+  role: PmtMcpRole = resolveMcpRole()
 ): Promise<PmtMcpDependencies> {
+  const config = loadRuntimeConfig({ ...process.env, dataDir });
   await mkdir(dataDir, { recursive: true });
-  const reader = new EspnPlatformReader();
-  const actionQueue = new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
-  const writer = new EspnPlatformWriter();
-  const executionStore = new JsonActionExecutionStore(join(dataDir, "action-execution.json"));
-  return {
-    dataDir,
-    reader,
-    repository: new (await import("../knowledge/sqlite-knowledge-repository.js")).SqliteKnowledgeRepository({
-      filePath: join(dataDir, "pmt.db")
-    }),
-    v1Store: new SqliteV1Store({ filePath: join(dataDir, "pmt.db") }),
-    actionQueue,
-    writer,
-    executionStore,
-    actionExecutor: new ActionExecutor({
-      queue: actionQueue,
-      reader,
-      writer,
-      store: executionStore,
-      leagueExternalId: process.env.ESPN_LEAGUE_ID
-    }),
-    clock: () => new Date()
-  };
+  await prepareRuntimeStorage(config);
+  const reader = configuredReader(config);
+  const actionQueue = new ActionQueue(new SqliteActionQueueStore(config.databasePath));
+  const executionStore = new SqliteActionExecutionStore(config.databasePath);
+  const repository = new (await import("../knowledge/sqlite-knowledge-repository.js")).SqliteKnowledgeRepository({ filePath: config.databasePath });
+  const v1Store = new SqliteV1Store({ filePath: config.databasePath });
+  const writer = role === "operator" && config.platform === "espn" && process.env.PMT_EXECUTION_ENABLED === "true"
+    ? new EspnPlatformWriter({ credentials: { leagueId: config.leagueExternalId, season: config.season, espnS2: process.env.ESPN_S2, swid: process.env.SWID } }) : undefined;
+  const ruleEngine = new ScoringRuleEngine();
+  return { dataDir, reader, repository, v1Store, actionQueue, executionStore, writer,
+    teamId: config.teamExternalId, leagueExternalId: config.leagueExternalId,
+    loadSnapshot: async () => { const snapshot = await getConfiguredSnapshot(repository, config); if (!snapshot) throw new Error("No snapshot for the configured league. Run pmt refresh first."); return snapshot; },
+    syncSnapshot: async () => ({ ...await refreshConfiguredLeague({ repository, v1Store, ruleEngine,
+      decisionEngine: new DefaultDecisionEngine(ruleEngine), recommendationEngine: new DefaultRecommendationEngine(ruleEngine) }, config) }),
+    actionExecutor: writer ? new ActionExecutor({ queue: actionQueue, reader, writer, store: executionStore, leagueExternalId: config.leagueExternalId }) : undefined,
+    clock: () => new Date() };
 }
 
 export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
   const deps = options.deps;
+  const role = options.role ?? "read";
   const clock = deps.clock ?? (() => new Date());
   const server = new McpServer({
     name: options.name ?? "pardon-my-trade",
@@ -108,8 +121,12 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     inputSchema: Args,
     handler: (input: z.infer<z.ZodObject<Args>>) => Promise<Record<string, unknown>>
   ): void => {
+    if (role !== "operator" && ["pmt_action_approve", "pmt_action_reject", "pmt_action_execute"].includes(name)) return;
     const callback = (async (input: z.infer<z.ZodObject<Args>>) => {
       try {
+        const request = input as Record<string, unknown>;
+        if (deps.leagueExternalId && typeof request.leagueId === "string" && request.leagueId !== deps.leagueExternalId) throw new Error("Requested league differs from the configured connection.");
+        if (deps.teamId && name === "pmt_run_advisory_orchestration" && typeof request.teamId === "string" && request.teamId !== deps.teamId) throw new Error("Advisory team differs from the configured team.");
         return toolSuccess(name, await handler(input as z.infer<z.ZodObject<Args>>), clock);
       } catch (error) {
         return toolFailure(name, error, clock);
@@ -121,13 +138,31 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
       description,
       inputSchema,
       annotations: {
-        readOnlyHint: !["pmt_refresh_projections", "pmt_run_projection_refresh", "pmt_run_news_injury_refresh", "pmt_run_advisory_orchestration", "pmt_action_approve", "pmt_action_reject", "pmt_action_execute", "pmt_rebuild_models", "pmt_update_post_week_outcomes"].includes(name),
+        readOnlyHint: !["pmt_refresh_projections", "pmt_run_projection_refresh", "pmt_run_news_injury_refresh", "pmt_run_advisory_orchestration", "pmt_sync_league", "pmt_action_approve", "pmt_action_reject", "pmt_action_execute", "pmt_rebuild_models", "pmt_update_post_week_outcomes"].includes(name),
         destructiveHint: name === "pmt_action_execute",
-        idempotentHint: true,
+        idempotentHint: !["pmt_run_advisory_orchestration", "pmt_rebuild_models", "pmt_update_post_week_outcomes", "pmt_run_news_injury_refresh", "pmt_action_execute"].includes(name),
         openWorldHint: name.includes("espn") || name.includes("news") || name.includes("projection")
       }
     }, callback as never);
   };
+
+  register("pmt_sync_league", "Refresh and persist the configured live league through a durable leased job. Never submits transactions.", {}, async () => {
+    if (!deps.syncSnapshot) throw new Error("League sync is not configured for this server.");
+    return { refresh: await deps.syncSnapshot() };
+  });
+  register("pmt_get_roster_analytics", "Return current roster and fixed-lineup forecast distributions with coverage and modeling assumptions.",
+    { period: z.string().optional(), samples: z.number().int().min(100).max(10000).optional() }, async input => {
+      const snapshot = await loadSnapshot(deps);
+      const team = deps.teamId;
+      if (!team) throw new Error("Configure an explicit PMT team.");
+      return { analytics: await buildRosterAnalytics(snapshot, team, { ...input, dataDir: deps.dataDir }) };
+    });
+  register("pmt_compare_free_agent", "Simulate a hypothetical add/drop with paired outcomes and legally optimized fixed lineups. Never submits a move.",
+    { addPlayerId: z.string().min(1), dropPlayerId: z.string().min(1).optional(), period: z.string().optional(), samples: z.number().int().min(100).max(10000).optional() }, async input => {
+      const snapshot = await loadSnapshot(deps);
+      if (!deps.teamId) throw new Error("Configure an explicit PMT team.");
+      return { scenario: await simulateFreeAgentScenario(snapshot, deps.teamId, { ...input, dataDir: deps.dataDir }) };
+    });
 
   register(
     "pmt_get_current_scoring_period",
@@ -152,8 +187,8 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     { leagueId: z.string().optional(), teamId: z.string().optional(), season: z.string().optional() },
     async (input) => {
       const snapshot = await loadSnapshot(deps);
-      const teamId = input.teamId ?? snapshot.league.teams[0]?.team_id;
-      const team = snapshot.league.teams.find((candidate) => candidate.team_id === teamId);
+      const teamId = input.teamId ?? deps.teamId;
+      const team = snapshot.league.teams.find((candidate) => candidate.team_id === teamId || candidate.external_id === teamId);
       return {
         league: {
           league_id: snapshot.league.league_id,
@@ -221,16 +256,17 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     week?: number;
     force?: boolean;
     sources?: string;
-  }): Promise<Record<string, unknown>> => ({
-    refresh: await runSeasonRefresh({
+  }): Promise<Record<string, unknown>> => {
+    const sync = deps.syncSnapshot ? await deps.syncSnapshot() : undefined;
+    return { sync, refresh: await runSeasonRefresh({
       repository: deps.repository,
       dataDir: deps.dataDir,
       season: input.season,
       week: input.week,
       force: input.force,
       sources: input.sources
-    })
-  });
+    }) };
+  };
 
   register(
     "pmt_refresh_projections",
@@ -251,7 +287,7 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     { scoringPeriod: z.string().optional() },
     async (input) => {
       const periods = input.scoringPeriod ? [input.scoringPeriod] : await storedProjectionPeriods(deps.repository, await loadSnapshot(deps));
-      const counts = await Promise.all(periods.map(async (period) => ({ scoring_period: period, count: (await deps.repository.getProjections(period)).length })));
+      const counts = await Promise.all(periods.map(async (period) => ({ scoring_period: period, count: (await deps.repository.getProjections(period, deps.leagueExternalId)).length })));
       return { periods: counts };
     }
   );
@@ -261,7 +297,7 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     "Return stored projections with source, scoring period, confidence, and player provenance.",
     { scoringPeriod: z.string().min(1), playerId: z.string().optional(), source: z.string().optional() },
     async (input) => ({
-      projections: (await deps.repository.getProjections(input.scoringPeriod)).filter((projection) =>
+      projections: (await deps.repository.getProjections(input.scoringPeriod, deps.leagueExternalId)).filter((projection) =>
         (!input.playerId || projection.player_id === input.playerId) &&
         (!input.source || projection.source === input.source)
       )
@@ -330,14 +366,20 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     "Run deterministic lineup, waiver, and trade analysis with automatic league execution disabled.",
     { teamId: z.string().optional() },
     async (input) => {
+      if (deps.syncSnapshot) await deps.syncSnapshot();
       const snapshot = await loadSnapshot(deps);
-      const teamId = input.teamId ?? snapshot.league.teams[0]?.team_id;
-      if (!teamId) throw new Error("No team is available for advisory orchestration.");
+      const teamId = input.teamId ?? deps.teamId;
+      if (!teamId) throw new Error("Configure an explicit team for advisory orchestration.");
       const priors = buildPriorsFromSnapshot(snapshot);
-      const models = buildModelsForOrchestrator(priors, []);
+      const period = advisoryPeriod(snapshot, deps.teamId, clock());
+      const models = await resolveRuntimeModels(snapshot, deps.dataDir, period);
+      const selectedTeam = snapshot.league.teams.find(team => team.team_id === teamId || team.external_id === teamId);
+      for (const slot of selectedTeam?.roster.starters ?? []) if (slot.player_id && !models.has(slot.player_id)) throw new Error(`Starter ${slot.player_id} is uncovered for ${period}; refresh projections before advice.`);
       const result = await runOrchestrator({
         input: (await import("../agents/snapshot-integration.js")).buildOrchestratorInputFromSnapshot(snapshot, teamId, models),
         priors,
+        models,
+        enqueueOptions: buildSnapshotEnqueueOptions(snapshot, period),
         queue: deps.actionQueue,
         autoApproveLowRisk: false
       });
@@ -440,11 +482,12 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
 
   register(
     "pmt_rebuild_models",
-    "Rebuild the deterministic JSON model store from the latest imported snapshot. No platform action is executed.",
+    "Resolve current projection models while preserving learned observations. No platform action is executed.",
     {},
     async () => {
       const snapshot = await loadSnapshot(deps);
-      const models = buildModelsForOrchestrator(buildPriorsFromSnapshot(snapshot), []);
+      const period = advisoryPeriod(snapshot, deps.teamId, clock());
+      const models = await resolveRuntimeModels(snapshot, deps.dataDir, period);
       await new JsonModelStore(join(deps.dataDir, "models.json")).saveAll([...models.values()]);
       return { models_rebuilt: models.size, path: join(deps.dataDir, "models.json") };
     }
@@ -481,7 +524,7 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
     }
   );
 
-  if (PMT_MCP_TOOL_NAMES.length !== 29) {
+  if (PMT_MCP_TOOL_NAMES.length !== 32) {
     throw new Error("PMT MCP contract/tool registration drift detected.");
   }
   return server;
@@ -489,6 +532,8 @@ export function createPmtMcpServer(options: PmtMcpServerOptions): McpServer {
 
 async function loadSnapshot(deps: PmtMcpDependencies): Promise<LeagueSnapshot> {
   if (deps.loadSnapshot) return deps.loadSnapshot();
+  const scoped = deps.repository as KnowledgeRepository & { getLatestLeagueSnapshot?: () => Promise<LeagueSnapshot | undefined> };
+  if (scoped.getLatestLeagueSnapshot) { const latest = await scoped.getLatestLeagueSnapshot(); if (latest) return latest; }
   const pointer = JSON.parse(await readFile(join(deps.dataDir, "last-snapshot.json"), "utf8")) as { snapshot_id: string };
   const snapshot = await deps.repository.getLeagueSnapshot(pointer.snapshot_id);
   if (!snapshot) throw new Error(`Imported snapshot ${pointer.snapshot_id} was not found.`);
@@ -501,7 +546,7 @@ async function storedProjectionPeriods(repository: KnowledgeRepository, snapshot
     `${snapshot.league.season}-ROS`,
     ...Array.from({ length: 18 }, (_, index) => `${snapshot.league.season}-W${index + 1}`)
   ]) {
-    if ((await repository.getProjections(period)).length > 0) periods.add(period);
+    if ((await repository.getProjections(period, snapshot.league.external_id)).length > 0) periods.add(period);
   }
   return [...periods].sort();
 }
@@ -583,4 +628,9 @@ function toolFailure(name: PmtMcpToolName, error: unknown, clock: () => Date): C
     structuredContent: envelope as unknown as Record<string, unknown>,
     isError: true
   };
+}
+
+function advisoryPeriod(snapshot: LeagueSnapshot, teamId: string | undefined, at: Date): string {
+  return snapshot.scoring_period ?? (snapshot.league.platform === "fixture" ? snapshot.league.schedule.find(match => match.team_id === teamId)?.scoring_period : undefined)
+    ?? getCurrentScoringPeriod(at, snapshot.league.season);
 }

@@ -1,3 +1,4 @@
+import { sameScoringPeriod } from "../models/scoring-period.js";
 import type { Player, Projection } from "../models/types.js";
 import type { ProjectionCandidate } from "./projection-source.js";
 
@@ -34,6 +35,7 @@ export function matchProjectionsToRoster(
   const matched: Projection[] = [];
 
   for (const candidate of candidates) {
+    if (candidate.scoring_period && !sameScoringPeriod(candidate.scoring_period, scoringPeriod)) continue;
     const candidates2 = lookup.get(normalizeName(candidate.name)) ?? [];
     const player = (candidate.player_id ? byId.get(candidate.player_id) : undefined)
       ?? resolveNameMatch(candidate, candidates2);
@@ -45,10 +47,10 @@ export function matchProjectionsToRoster(
       updated_at: observedAt,
       source_system: source,
       source_record_id: `${source}-${player.player_id}`,
-      projection_id: `${source}-${player.player_id}-${candidate.scoring_period ?? scoringPeriod}`,
+      projection_id: `${source}-${player.player_id}-${scoringPeriod}`,
       player_id: player.player_id,
       source,
-      scoring_period: candidate.scoring_period ?? scoringPeriod,
+      scoring_period: scoringPeriod,
       projected_stats: candidate.projected_stats,
       projected_points: candidate.projected_points,
       floor: candidate.floor,

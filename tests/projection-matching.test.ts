@@ -65,3 +65,11 @@ test("name fallback skips ambiguous matches", () => {
   }], players, "2026-W4", "espn");
   assert.deepEqual(projections, []);
 });
+
+test("weekly period matching accepts W4/W04 equivalence and rejects a different source week", () => {
+  const base: ProjectionCandidate = { name: "Weekly Player", team: "SF", positions: ["RB"], projected_stats: {}, projected_points: 10, floor: 5, ceiling: 15, confidence: 0.7 };
+  const roster = [player("weekly", "Weekly Player", "SF")];
+  const matched = matchProjectionsToRoster([{ ...base, scoring_period: "2026-W04" }], roster, "2026-W4", "espn");
+  assert.equal(matched[0]?.scoring_period, "2026-W4");
+  assert.equal(matchProjectionsToRoster([{ ...base, scoring_period: "2026-W5" }], roster, "2026-W4", "espn").length, 0);
+});

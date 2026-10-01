@@ -144,7 +144,7 @@ export async function runProjectionsCommand(args: string[]): Promise<void> {
 
   if (flags["persist"]) {
     const dataDir = process.env.PMT_DATA_DIR ?? "data";
-    const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+    const repository = new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.sqlite") });
     const pointerRaw = await readFile(join(dataDir, "last-snapshot.json"), "utf8").catch(() => undefined);
     if (pointerRaw) {
       const pointer = JSON.parse(pointerRaw) as { snapshot_id: string };

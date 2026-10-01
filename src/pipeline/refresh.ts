@@ -16,6 +16,7 @@ import type { LeagueSnapshot, Recommendation } from "../models/types.js";
 
 export interface RefreshOptions {
   readonly fixturePath: string;
+  readonly snapshotSource?: () => Promise<LeagueSnapshot>;
   readonly newsPath?: string;
   readonly leagueExternalId: string;
   readonly teamExternalId: string;
@@ -37,13 +38,13 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshSummar
   const nowIso = now.toISOString();
   const projectionEngine = options.projectionEngine ?? new DefaultProjectionEngine();
 
-  const source = await loadFixtureSnapshotSource(options.fixturePath);
+  const source = options.snapshotSource ? await options.snapshotSource() : await loadFixtureSnapshotSource(options.fixturePath);
+  if (source.league.external_id !== options.leagueExternalId) throw new Error("Refresh returned the wrong league.");
   const leagueId = source.league.league_id;
   const snapshotId = `${source.snapshot_id}-${now.getTime()}`;
   const datedSnapshot: LeagueSnapshot = { ...source, snapshot_id: snapshotId };
-  await options.repository.saveLeagueSnapshot(datedSnapshot);
 
-  const team = datedSnapshot.league.teams.find((candidate) => candidate.external_id === options.teamExternalId);
+  const team = datedSnapshot.league.teams.find((candidate) => candidate.external_id === options.teamExternalId || candidate.team_id === options.teamExternalId);
   if (!team) {
     throw new PmtError({
       code: "TEAM_NOT_FOUND",
@@ -53,12 +54,15 @@ export async function runRefresh(options: RefreshOptions): Promise<RefreshSummar
     });
   }
 
+  // Validate scope before advancing the authoritative snapshot.
+  await options.repository.saveLeagueSnapshot(datedSnapshot);
+
   const newsSource = options.newsSource ?? (options.newsPath ? new FixtureNewsSource(options.newsPath) : undefined);
   const news = newsSource ? await newsSource.fetchNews(leagueId) : [];
   if (news.length > 0) await options.v1Store.saveNews(leagueId, news);
 
   const consensus = projectionEngine.buildConsensus(
-    [{ source: "fixture", projections: datedSnapshot.projections }],
+    [{ source: datedSnapshot.league.platform, projections: datedSnapshot.projections }],
     datedSnapshot.league.season
   );
 

@@ -3,6 +3,9 @@ export const PMT_MCP_SERVER_VERSION = "0.2.0";
 
 export const PMT_MCP_TOOL_NAMES = [
   "pmt_get_inseason_status",
+  "pmt_sync_league",
+  "pmt_get_roster_analytics",
+  "pmt_compare_free_agent",
   "pmt_get_current_scoring_period",
   "pmt_espn_read_league",
   "pmt_espn_read_rosters",

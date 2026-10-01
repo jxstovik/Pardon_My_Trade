@@ -12,6 +12,10 @@ mcp_servers:
     args:
       - /ABSOLUTE/PATH/TO/Pardon_My_Trade/dist/src/mcp/stdio.js
     env:
+      PMT_MCP_ROLE: read
+      PMT_EXECUTION_ENABLED: "false"
+      PMT_PLATFORM: ${PMT_PLATFORM}
+      PMT_TEAM_ID: ${PMT_TEAM_ID}
       PMT_DATA_DIR: /ABSOLUTE/PATH/TO/Pardon_My_Trade/data
       PMT_PROJECTION_SOURCES: espn,razzball,fftoday
       PMT_HISTORICAL_DATA_PATH: ${PMT_HISTORICAL_DATA_PATH}
@@ -21,6 +25,9 @@ mcp_servers:
       SWID: ${SWID}
     tools:
       include:
+        - pmt_sync_league
+        - pmt_get_roster_analytics
+        - pmt_compare_free_agent
         - pmt_get_inseason_status
         - pmt_get_current_scoring_period
         - pmt_espn_read_league
@@ -59,6 +66,10 @@ mcp_servers:
     args:
       - /ABSOLUTE/PATH/TO/Pardon_My_Trade/dist/src/mcp/stdio.js
     env:
+      PMT_MCP_ROLE: operator
+      PMT_EXECUTION_ENABLED: "false"
+      PMT_PLATFORM: ${PMT_PLATFORM}
+      PMT_TEAM_ID: ${PMT_TEAM_ID}
       PMT_DATA_DIR: /ABSOLUTE/PATH/TO/Pardon_My_Trade/data
       PMT_HISTORICAL_DATA_PATH: ${PMT_HISTORICAL_DATA_PATH}
       ESPN_LEAGUE_ID: ${ESPN_LEAGUE_ID}
