@@ -10,13 +10,16 @@ export interface InMemoryKnowledgeOptions {
 
 export class InMemoryKnowledgeRepository implements KnowledgeRepository {
   private readonly snapshots = new Map<string, LeagueSnapshot>();
+  private readonly latestByLeague = new Map<string, string>();
   private readonly recommendations = new Map<string, Recommendation>();
   private readonly audits = new Map<string, DecisionAudit>();
   private readonly projections = new Map<string, Projection>();
+  private readonly scopedProjections = new Map<string, Projection>();
 
   constructor(options: InMemoryKnowledgeOptions = {}) {
     for (const snapshot of options.snapshots ?? []) {
       this.snapshots.set(snapshot.snapshot_id, snapshot);
+      this.latestByLeague.set(snapshot.league.league_id, snapshot.snapshot_id);
     }
     for (const recommendation of options.recommendations ?? []) {
       this.recommendations.set(recommendation.recommendation_id, recommendation);
@@ -35,14 +38,35 @@ export class InMemoryKnowledgeRepository implements KnowledgeRepository {
         retryable: false
       });
     }
+    if (snapshot.league.platform !== "fixture") {
+      const conflict = [...this.snapshots.values()].find((existing) => existing.league.platform !== "fixture"
+        && (existing.league.platform !== snapshot.league.platform || existing.league.external_id !== snapshot.league.external_id));
+      if (conflict) {
+        throw new PmtError({
+          code: "MULTIPLE_LIVE_LEAGUES_UNSUPPORTED",
+          message: `This store already contains live ${conflict.league.platform} league ${conflict.league.external_id}; refusing a second live league.`,
+          source: "knowledge",
+          retryable: false
+        });
+      }
+    }
     this.snapshots.set(snapshot.snapshot_id, snapshot);
+    this.latestByLeague.set(snapshot.league.league_id, snapshot.snapshot_id);
+  }
+
+  async getLatestLeagueSnapshot(leagueId?: string): Promise<LeagueSnapshot | undefined> {
+    const snapshotId = leagueId
+      ? this.latestByLeague.get(leagueId)
+      : [...this.latestByLeague.values()].reverse().find((id) => this.snapshots.get(id)?.league.platform !== "fixture")
+        ?? [...this.latestByLeague.values()].at(-1);
+    return snapshotId ? this.getLeagueSnapshot(snapshotId) : undefined;
   }
 
   async getLeagueSnapshot(snapshotId: string): Promise<LeagueSnapshot | undefined> {
     const snapshot = this.snapshots.get(snapshotId);
     if (!snapshot) return undefined;
     const season = snapshot.league.season;
-    const stored = this.storedForSeason(season);
+    const stored = this.storedForSeason(season, snapshot.league.external_id);
     if (stored.length > 0) {
       const merged = [...snapshot.projections];
       for (const p of stored) {
@@ -77,15 +101,33 @@ export class InMemoryKnowledgeRepository implements KnowledgeRepository {
     );
   }
 
-  async upsertProjections(projections: Projection[]): Promise<void> {
-    for (const p of projections) this.projections.set(p.projection_id, p);
+  async upsertProjections(projections: Projection[], leagueExternalId?: string): Promise<void> {
+    for (const p of projections) {
+      if (leagueExternalId) this.scopedProjections.set(`${leagueExternalId}|${p.projection_id}`, p);
+      else this.projections.set(p.projection_id, p);
+    }
   }
 
-  async getProjections(scoringPeriod: string): Promise<Projection[]> {
-    return Array.from(this.projections.values()).filter((p) => p.scoring_period === scoringPeriod);
+  async getProjections(scoringPeriod: string, leagueExternalId?: string): Promise<Projection[]> {
+    if (leagueExternalId) {
+      const scoped = [...this.scopedProjections.entries()].filter(([key, p]) => key.startsWith(`${leagueExternalId}|`) && p.scoring_period === scoringPeriod).map(([, p]) => p);
+      if (scoped.length || !this.canUseLegacyProjections(leagueExternalId)) return scoped;
+      return Array.from(this.projections.values()).filter((p) => p.scoring_period === scoringPeriod);
+    }
+    return [...Array.from(this.projections.values()).filter((p) => p.scoring_period === scoringPeriod),
+      ...Array.from(this.scopedProjections.values()).filter((p) => p.scoring_period === scoringPeriod)];
   }
 
-  private storedForSeason(season: string): Projection[] {
+  private storedForSeason(season: string, leagueExternalId: string): Projection[] {
+    const scoped = [...this.scopedProjections.entries()].filter(([key, p]) => key.startsWith(`${leagueExternalId}|`) && p.scoring_period.startsWith(`${season}-`)).map(([, p]) => p);
+    if (scoped.length || !this.canUseLegacyProjections(leagueExternalId)) return scoped;
     return Array.from(this.projections.values()).filter((p) => p.scoring_period.startsWith(`${season}-`));
+  }
+
+  private canUseLegacyProjections(leagueExternalId: string): boolean {
+    const live = [...this.snapshots.values()].filter((snapshot) => snapshot.league.platform !== "fixture");
+    const hasFixture = [...this.snapshots.values()].some((snapshot) => snapshot.league.platform === "fixture");
+    return live.length <= 1 && (!hasFixture || live.length === 0)
+      && (live.length === 0 || live[0]?.league.external_id === leagueExternalId);
   }
 }

@@ -49,6 +49,8 @@ export interface ActionQueueStore {
   list(): Promise<QueuedAction[]>;
   get(actionId: string): Promise<QueuedAction | undefined>;
   save(action: QueuedAction): Promise<void>;
+  compareAndSwap?(actionId: string, expectedStatus: ActionStatus, action: QueuedAction): Promise<boolean>;
+  enqueueIfAbsent?(action: QueuedAction): Promise<QueuedAction>;
 }
 
 export class InMemoryActionQueueStore implements ActionQueueStore {
@@ -61,6 +63,12 @@ export class InMemoryActionQueueStore implements ActionQueueStore {
   }
   async save(action: QueuedAction): Promise<void> {
     this.items.set(action.actionId, action);
+  }
+  async compareAndSwap(actionId: string, expectedStatus: ActionStatus, action: QueuedAction): Promise<boolean> {
+    const current = this.items.get(actionId);
+    if (!current || current.status !== expectedStatus) return false;
+    this.items.set(actionId, action);
+    return true;
   }
 }
 
@@ -139,6 +147,7 @@ export class ActionQueue {
       idempotencyKey: enqueueOptions.idempotencyKey ?? buildIdempotencyKey(actionId, payloadHash),
       preconditions: enqueueOptions.preconditions
     };
+    if (this.store.enqueueIfAbsent) return this.store.enqueueIfAbsent(queued);
     await this.store.save(queued);
     return queued;
   }
@@ -166,7 +175,7 @@ export class ActionQueue {
         resolvedAt,
         resolvedBy: "system"
       };
-      await this.store.save(expired);
+      await this.replaceStatus(existing, "pending", expired);
       throw new Error(`Action ${actionId} has expired and cannot be approved.`);
     }
     const approvedAt = new Date().toISOString();
@@ -178,7 +187,7 @@ export class ActionQueue {
       approvedBy: actor,
       resolvedBy: actor
     };
-    await this.store.save(updated);
+    await this.replaceStatus(existing, "pending", updated);
     return updated;
   }
 
@@ -191,7 +200,7 @@ export class ActionQueue {
       resolvedAt,
       resolvedBy: actor
     };
-    await this.store.save(updated);
+    await this.replaceStatus(existing, "pending", updated);
     return updated;
   }
 
@@ -202,7 +211,7 @@ export class ActionQueue {
       status: "expired",
       resolvedAt: new Date().toISOString()
     };
-    await this.store.save(updated);
+    await this.replaceStatus(existing, "pending", updated);
     return updated;
   }
 
@@ -245,6 +254,16 @@ export class ActionQueue {
     return existing;
   }
 
+  private async replaceStatus(existing: QueuedAction, expected: ActionStatus, updated: QueuedAction): Promise<void> {
+    if (this.store.compareAndSwap) {
+      if (!await this.store.compareAndSwap(existing.actionId, expected, updated)) {
+        throw new Error(`Action ${existing.actionId} changed before it could be updated.`);
+      }
+      return;
+    }
+    await this.store.save(updated);
+  }
+
   private async markExecutionStatus(
     actionId: string,
     status: Extract<ActionStatus, "executed" | "unknown" | "blocked">
@@ -253,7 +272,9 @@ export class ActionQueue {
     if (!existing) {
       throw new Error(`Action ${actionId} not found in queue.`);
     }
-    if (existing.status !== "approved") {
+    const expectedStatus = existing.status;
+    if (expectedStatus === status) return existing;
+    if (expectedStatus !== "approved" && !(expectedStatus === "unknown" && status === "executed")) {
       throw new Error(`Action ${actionId} is ${existing.status}; only approved actions can be executed.`);
     }
     const updated: QueuedAction = {
@@ -261,7 +282,7 @@ export class ActionQueue {
       status,
       resolvedAt: new Date().toISOString()
     };
-    await this.store.save(updated);
+    await this.replaceStatus(existing, expectedStatus, updated);
     return updated;
   }
 }
@@ -282,3 +303,5 @@ export function classifyRisk(action: AgentAction): RiskLevel {
 export function isTerminal(status: ActionStatus): boolean {
   return status !== "pending";
 }
+
+export { SqliteActionQueueStore } from "./sqlite-action-queue-store.js";

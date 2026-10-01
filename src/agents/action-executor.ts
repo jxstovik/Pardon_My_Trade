@@ -53,6 +53,8 @@ export interface ActionExecutionStore {
   getReceipt(actionId: string): Promise<ActionReceipt | undefined>;
   getReceiptByIdempotencyKey(idempotencyKey: string): Promise<ActionReceipt | undefined>;
   saveReceipt(receipt: ActionReceipt): Promise<void>;
+  /** Atomically reserve the action before platform I/O; false means another process got there first. */
+  reserveReceipt?(receipt: ActionReceipt): Promise<boolean>;
   appendAudit(record: ActionAuditRecord): Promise<void>;
   listReceipts(): Promise<ActionReceipt[]>;
   listAudit(): Promise<ActionAuditRecord[]>;
@@ -76,6 +78,14 @@ export class InMemoryActionExecutionStore implements ActionExecutionStore {
       throw new Error(`Idempotency key ${receipt.idempotencyKey} is already bound to another payload.`);
     }
     this.receipts.set(receipt.actionId, receipt);
+  }
+
+  async reserveReceipt(receipt: ActionReceipt): Promise<boolean> {
+    if (this.receipts.has(receipt.actionId)) return false;
+    const collision = await this.getReceiptByIdempotencyKey(receipt.idempotencyKey);
+    if (collision) return false;
+    this.receipts.set(receipt.actionId, receipt);
+    return true;
   }
 
   async appendAudit(record: ActionAuditRecord): Promise<void> {
@@ -280,6 +290,16 @@ export class ActionExecutor {
       await this.audit(queued, payloadHash, idempotencyKey, "blocked", {
         reason: `action_status_${queued.status}`
       });
+      const existingReceipt = await this.store.getReceipt(actionId);
+      if (existingReceipt && existingReceipt.payloadHash === payloadHash && existingReceipt.idempotencyKey === idempotencyKey) {
+        await this.syncQueueToReceipt(actionId, existingReceipt);
+        return {
+          actionId,
+          status: existingReceipt.status === "executed" ? "already_executed" : existingReceipt.status,
+          receipt: existingReceipt,
+          reason: existingReceipt.status === "unknown" ? "Submission outcome is unknown; no retry was attempted." : undefined
+        };
+      }
       if (queued.status === "unknown") {
         return { actionId, status: "unknown", reason: "Submission outcome is unknown; no retry was attempted." };
       }
@@ -381,7 +401,33 @@ export class ActionExecutor {
     }
 
     // Write this before the network call. Unknown is intentionally not retryable.
-    const started = await this.saveReceipt(queued, payloadHash, idempotencyKey, "unknown");
+    const startedReceipt: ActionReceipt = {
+      receiptId: `rcpt-${queued.actionId}`,
+      actionId: queued.actionId,
+      idempotencyKey,
+      payloadHash,
+      approvedBy: queued.approvedBy,
+      status: "unknown",
+      recordedAt: this.now().toISOString()
+    };
+    if (this.store.reserveReceipt) {
+      if (!await this.store.reserveReceipt(startedReceipt)) {
+        const winner = await this.store.getReceipt(actionId);
+        if (winner) {
+          await this.syncQueueToReceipt(actionId, winner);
+          return {
+            actionId,
+            status: winner.status === "executed" ? "already_executed" : winner.status,
+            receipt: winner,
+            reason: "Another executor reserved this action; no retry was attempted."
+          };
+        }
+        return { actionId, status: "unknown", reason: "Another executor reserved this action; no retry was attempted." };
+      }
+    } else {
+      await this.store.saveReceipt(startedReceipt);
+    }
+    const started = startedReceipt;
     await this.audit(queued, payloadHash, idempotencyKey, "submission_started");
 
     let response: unknown;
@@ -677,3 +723,5 @@ function errorMessage(error: unknown): string {
 function isOptions(value: ActionExecutorOptions | ActionQueue): value is ActionExecutorOptions {
   return "queue" in value && "reader" in value && "writer" in value;
 }
+
+export { SqliteActionExecutionStore } from "./sqlite-action-execution-store.js";
