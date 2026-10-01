@@ -60,13 +60,24 @@ fully modeled. Counterfactual analysis never submits a transaction.
 
 ## Verification and remaining gates
 
-The integrated Node 26 compiled test suite, including adapter contracts,
-concurrent SQLite stores, lease recovery, auth/CSRF, eligibility and paired
-simulation checks, passed. Browser checks passed for password sign-in, current
-and recommended lineup totals, player histograms, add/drop comparisons, and a
-390px mobile viewport. A SQLite online backup and temporary restore passed
-integrity checks. Final counts and the review branch are recorded in the release
-report accompanying this document.
+The final integrated Node 26 compiled suite passed **271 of 271 tests**, and
+TypeScript lint passed. Coverage includes adapter contracts, concurrent SQLite
+stores, lease recovery, auth/CSRF, eligibility, scoring-period equivalence,
+causal model state and paired simulations. Browser checks against the shipped
+synthetic demo passed for password sign-in, current/recommended lineup totals,
+player histograms, add/drop comparisons and a 390px mobile viewport with no
+horizontal overflow. Actual MCP stdio exposed 29 read-role tools from the
+32-tool contract, excluded operator actions, and successfully ran league sync,
+roster analytics and a scenario. The running GUI observed the new MCP snapshot
+without a restart. A SQLite online backup and temporary restore passed integrity
+checks.
+
+The verified changes are committed locally on
+`rebuild/reliable-agent-platform`. Publishing a GitHub branch/PR was attempted
+through the connected integration, but GitHub returned **HTTP 403: Resource not
+accessible by integration** for branch creation. No remote branch or PR was
+created. Portable source/commit artifacts accompany the delivery so the changes
+can be reviewed and imported through an authorized GitHub session.
 
 Docker build verification reached image retrieval but was blocked by the
 external registry's HTTP 429 rate limit pulling `node:26-bookworm-slim`.
