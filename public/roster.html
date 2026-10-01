@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101b1c">
+  <meta name="description" content="Probabilistic fantasy football roster and free-agent analysis.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/roster.css">
+  <title>Roster outlook · Pardon My Trade</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">PMT <span>ROSTER DESK</span></a>
+    <div class="top-actions"><span id="freshness" class="freshness">Loading roster…</span><button id="refresh" class="icon-button" aria-label="Refresh roster">↻</button></div>
+  </header>
+  <main id="app" class="page" hidden>
+    <section class="intro">
+      <div><p class="eyebrow">YOUR WEEKLY EDGE</p><h1>Roster outlook</h1><p id="summary" class="muted">A range of outcomes for this lineup.</p></div>
+      <label class="period-control">Scoring period <select id="period"><option value="">Current</option></select></label>
+    </section>
+    <div id="provenance" class="provenance"></div>
+    <section class="activity-strip" aria-label="Agent activity">
+      <div><span class="eyebrow">AGENT ACTIVITY</span><strong id="activityJobs">—</strong><small>jobs queued / running</small></div>
+      <div><span class="eyebrow">HUMAN REVIEW</span><strong id="pendingActions">—</strong><small>pending actions</small></div>
+      <div><span class="eyebrow">EXECUTION</span><strong id="executionState">—</strong><small>roster writes</small></div>
+      <div id="jobActivity" class="job-activity">Loading activity…</div>
+    </section>
+    <section class="hero-grid">
+      <article class="card total-card">
+        <div class="card-heading"><div><p class="eyebrow" id="lineupLabel">RECOMMENDED LINEUP</p><h2>Weekly points</h2></div><span class="tag" id="sampleCount">— simulations</span></div>
+        <div class="lineup-tabs" role="group" aria-label="Lineup distribution"><button id="showCurrent" type="button">Current</button><button id="showRecommended" type="button" class="selected">Recommended</button></div>
+        <div class="score-line"><strong id="mean">—</strong><span>mean</span><span class="score-range">Middle 80%: <b id="range">—</b></span></div>
+        <div id="histogram" class="histogram" role="img" aria-label="Simulated lineup points distribution"></div>
+        <div class="axis"><span id="axisLow">—</span><span>Simulated points</span><span id="axisHigh">—</span></div>
+      </article>
+      <article class="card lineup-card">
+        <div class="card-heading"><div><p class="eyebrow">LINEUP</p><h2 id="starterTitle">Recommended starters</h2></div><span class="tag">Expected value</span></div>
+        <div id="starters" class="player-list"></div>
+      </article>
+    </section>
+    <section class="card roster-card">
+      <div class="card-heading"><div><p class="eyebrow">DEPTH CHART</p><h2>Starters & bench</h2></div><span class="muted" id="coverage">Projection coverage —</span></div>
+      <div class="table-wrap"><table><thead><tr><th>Player</th><th>Role</th><th>Lineup</th><th>Coverage</th><th>Median</th><th>Range (P10–P90)</th></tr></thead><tbody id="players"></tbody></table></div>
+      <div class="player-forecast">
+        <label>Individual distribution<select id="forecastPlayer"><option value="">Choose a roster player</option></select></label>
+        <div id="playerForecastStats" class="muted">Select a player to inspect their simulated outcomes.</div>
+        <div id="playerHistogram" class="histogram compact" role="img" aria-label="Selected player points distribution"></div>
+      </div>
+    </section>
+    <section class="card free-agent-card">
+      <div class="card-heading"><div><p class="eyebrow">WAIVER WATCH</p><h2>Free-agent comparisons</h2><p class="muted">Compare a free agent with a player on your roster using the same simulation draws.</p></div><span class="tag" id="freeAgentCoverage">—</span></div>
+      <div class="scenario-form">
+        <label>Add<select id="addPlayer"><option value="">Choose a free agent</option></select></label>
+        <label>Drop<select id="dropPlayer"><option value="">Choose a roster player</option></select></label>
+        <button id="compare" class="primary">Compare move</button>
+      </div>
+      <div id="scenario" class="scenario-result" hidden></div>
+      <div id="blockers" class="muted small"></div>
+    </section>
+    <footer>Advice uses the snapshot and projection coverage shown above. Lineup and waiver actions remain under your control. <a href="/legacy">Open the classic league dashboard</a></footer>
+  </main>
+  <section id="login" class="login-wrap" hidden>
+    <form id="loginForm" class="login-card"><div class="brand">PMT <span>ROSTER DESK</span></div><p class="eyebrow">PRIVATE LEAGUE ACCESS</p><h1>Sign in</h1><label>Password<input id="password" type="password" autocomplete="current-password" required></label><button class="primary" type="submit">Continue</button><p id="loginError" class="error" aria-live="polite"></p></form>
+  </section>
+  <script src="/roster.js" defer></script>
+</body>
+</html>

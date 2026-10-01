@@ -1,0 +1,11 @@
+{
+  "name": "Pardon My Trade Roster Desk",
+  "short_name": "PMT Roster",
+  "description": "Private fantasy football roster outlook and free-agent comparisons.",
+  "start_url": "/roster.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#101b1c",
+  "theme_color": "#101b1c",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
