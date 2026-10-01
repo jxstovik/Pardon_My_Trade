@@ -11,7 +11,7 @@ pmt:
   release_version: "0.2.0"
   runtime:
     node_required: "26.x"
-    package_engine: ">=20.0.0"
+    package_engine: ">=26.0.0"
     source_ref_policy: immutable-tag-or-full-commit-sha
   mcp:
     transport: local-stdio

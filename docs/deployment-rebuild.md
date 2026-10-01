@@ -140,9 +140,11 @@ job stops if league state is unavailable, reports source errors, and preserves
 pending action IDs for human review. Keep the schedule advisory: these jobs
 must not approve, reject, or execute actions. Leave `pmt-operator` disabled and
 `PMT_EXECUTION_ENABLED=false`. Do not schedule a second PMT or Hermes owner
-against the same data volume. A durable scheduler service with one-minute
-idempotency keys and leases is future work; this Compose setup does not yet
-provide cross-process job claiming.
+against the same data volume. League refresh uses durable SQLite jobs with
+one-minute deduplication keys, atomic cross-process claims, stored results and
+10-minute leases. Other scheduled operations and missed-wake catch-up still
+require a single Hermes schedule owner; a general durable scheduler is future
+work.
 
 This package contains deployment artifacts only. It has not created a VPS,
 installed Hermes, or deployed a hosted service.
