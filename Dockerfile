@@ -1,9 +1,17 @@
+# syntax=docker/dockerfile:1.7
 FROM node:26-bookworm-slim AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN --mount=type=secret,id=proxy_ca,required=false \
+    if [ -s /run/secrets/proxy_ca ]; then \
+      NODE_EXTRA_CA_CERTS=/run/secrets/proxy_ca npm ci; \
+    else \
+      npm ci; \
+    fi
 COPY . .
-RUN npm rebuild better-sqlite3 && npm run build && npm prune --omit=dev && npm rebuild better-sqlite3
+RUN --mount=type=secret,id=proxy_ca,required=false \
+    if [ -s /run/secrets/proxy_ca ]; then export NODE_EXTRA_CA_CERTS=/run/secrets/proxy_ca; fi; \
+    npm rebuild better-sqlite3 && npm run build && npm prune --omit=dev && npm rebuild better-sqlite3
 
 FROM node:26-bookworm-slim AS runtime
 ENV NODE_ENV=production \

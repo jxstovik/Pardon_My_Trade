@@ -11,6 +11,7 @@ mcp_servers:
       - --rm
       - -T
       - --no-deps
+      - --quiet-pull
       - --entrypoint
       - node
       - -e
@@ -24,6 +25,27 @@ mcp_servers:
       PMT_EXECUTION_ENABLED: "false"
       PMT_DATA_DIR: /data
     tools:
+      include:
+        - pmt_get_inseason_status
+        - pmt_get_current_scoring_period
+        - pmt_espn_read_league
+        - pmt_espn_read_rosters
+        - pmt_espn_read_schedule
+        - pmt_espn_read_transactions
+        - pmt_espn_read_players
+        - pmt_espn_read_free_agents
+        - pmt_refresh_projections
+        - pmt_run_projection_refresh
+        - pmt_get_projection_status
+        - pmt_get_projection_provenance
+        - pmt_run_news_injury_refresh
+        - pmt_list_news
+        - pmt_list_injury_alerts
+        - pmt_list_notifications
+        - pmt_run_advisory_orchestration
+        - pmt_list_pending_actions
+        - pmt_get_action
+        - pmt_preview_action
       prompts: false
       resources: false
 
@@ -39,6 +61,7 @@ mcp_servers:
       - --rm
       - -T
       - --no-deps
+      - --quiet-pull
       - --entrypoint
       - node
       - -e

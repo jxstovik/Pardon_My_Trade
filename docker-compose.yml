@@ -1,5 +1,6 @@
 services:
   pmt:
+    image: pardon-my-trade:local
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,6 +12,7 @@ services:
       PMT_HOST: 0.0.0.0
       PMT_PORT: 3000
       PMT_WEB_PASSWORD: ${PMT_WEB_PASSWORD:?Set PMT_WEB_PASSWORD in .env}
+      PMT_WEB_SESSION_SECRET: ${PMT_WEB_SESSION_SECRET:-${PMT_WEB_PASSWORD}}
       PMT_COOKIE_SECURE: "true"
       PMT_PLATFORM: ${PMT_PLATFORM:-fixture}
       PMT_LEAGUE_ID: ${PMT_LEAGUE_ID:-}

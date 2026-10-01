@@ -5,9 +5,9 @@ if [ "$#" -ne 1 ]; then
   echo "Usage: deploy/scripts/restore.sh /path/to/pmt-backup.sqlite" >&2
   exit 2
 fi
-backup=$(cd "$(dirname "$1")" && pwd)/$(basename "$1")
-if [ ! -f "$backup" ]; then
-  echo "Backup file does not exist: $backup" >&2
+backup=$(cd "$(dirname -- "$1")" && pwd)/$(basename -- "$1")
+if [ ! -f "$backup" ] || [ -L "$backup" ]; then
+  echo "Backup must be a regular file, not a symlink: $backup" >&2
   exit 2
 fi
 compose_file=${PMT_COMPOSE_FILE:-docker-compose.yml}
