@@ -5,6 +5,8 @@
   let league;
   let activeTeamId;
   let period = "";
+  let lineupMode = "optimized";
+  let selectedForecastId = "";
   const api = async (path, options = {}) => {
     const headers = { ...(options.headers || {}) };
     if (options.body) headers["content-type"] = "application/json";
@@ -77,6 +79,8 @@
     const snapshotPlayers = new Map((league?.players || []).map((player) => [player.player_id, player]));
     const names = new Map([...snapshotPlayers].map(([id, player]) => [id, normalizePlayer(player)]).concat(Object.entries(players).map(([id, player]) => [id, normalizePlayer(player)])));
     const playerRows = [...rosterIds].map((id) => [id, normalizePlayer(players[id] || snapshotPlayers.get(id) || {})]);
+    const demo = league?.league?.platform === "fixture" && /synthetic demo/i.test(league?.league?.name || "");
+    $("demoBanner").hidden = !demo;
     const starterIds = selectedLineup.starters || [...starterSet];
     const starters = starterIds.map((id) => ({ id, ...(names.get(id) || {}) }));
     $("lineupLabel").textContent = lineupMode === "current" ? "CURRENT STARTING LINEUP" : "RECOMMENDED LINEUP";
@@ -112,6 +116,7 @@
     $("addPlayer").innerHTML = `<option value="">Choose a free agent</option>${freeAgents.map((p) => `<option value="${attr(p.playerId)}">${esc(p.name)} · ${esc(p.position || "—")}</option>`).join("")}`;
     $("dropPlayer").innerHTML = `<option value="">Choose a roster player</option>${playerRows.filter(([id]) => !injuredSet.has(id)).map(([id, p]) => `<option value="${attr(id)}">${esc(p.name || id)} · ${esc(p.position || "—")}</option>`).join("")}`;
     $("forecastPlayer").innerHTML = `<option value="">Choose a roster player</option>${playerRows.map(([id, p]) => `<option value="${attr(id)}">${esc(p.name || id)} · ${esc(p.position || "—")}</option>`).join("")}`;
+    if (playerRows.some(([id]) => id === selectedForecastId)) $("forecastPlayer").value = selectedForecastId;
     renderPlayerForecast($("forecastPlayer").value);
     $("blockers").textContent = analytics ? (analytics.freeAgents?.blockers || []).join(" · ") : "Analytics are unavailable because one or more required starters lack a supported projection or learned model. Refresh projections or models, then reload this page.";
     const periodSelect = $("period");
@@ -213,7 +218,7 @@
   $("period").addEventListener("change", (event) => { period = event.target.value; load(); });
   $("showCurrent").addEventListener("click", () => { lineupMode = "current"; render(); });
   $("showRecommended").addEventListener("click", () => { lineupMode = "optimized"; render(); });
-  $("forecastPlayer").addEventListener("change", (event) => renderPlayerForecast(event.target.value));
+  $("forecastPlayer").addEventListener("change", (event) => { selectedForecastId = event.target.value; renderPlayerForecast(selectedForecastId); });
   $("compare").addEventListener("click", compare);
   init();
 })();
