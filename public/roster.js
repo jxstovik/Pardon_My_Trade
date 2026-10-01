@@ -44,7 +44,7 @@
     if (period) query.set("period", period);
     query.set("samples", "2000");
     const [leagueResult, analyticsResult, activityResult] = await Promise.allSettled([
-      api("/api/league"), api(`/api/roster-analytics?${query}`), api("/api/agent-status")
+      api("/api/league"), api(`/api/roster-analytics?${query}`), api(`/api/agent-status?${query}`)
     ]);
     if (leagueResult.status === "rejected") {
       const error = leagueResult.reason;

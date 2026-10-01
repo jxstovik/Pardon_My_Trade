@@ -12,6 +12,7 @@ import { buildRosterAnalytics, simulateFreeAgentScenario } from "../application/
 import { SqliteJobStore } from "../storage/sqlite-job-store.js";
 import { SqliteActionQueueStore } from "../agents/sqlite-action-queue-store.js";
 import { SqliteActionExecutionStore } from "../agents/sqlite-action-execution-store.js";
+import { getCurrentScoringPeriod } from "../seasons/nfl-calendar.js";
 
 export interface ApiServerDeps {
   readonly repository: KnowledgeRepository;
@@ -193,12 +194,14 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
       const teamId = snapshot ? activeTeamId(snapshot) : undefined;
       const team = snapshot?.league.teams.find((candidate) => candidate.team_id === teamId);
       const period = snapshot && teamId
-        ? snapshot.league.schedule.find((matchup) => matchup.team_id === teamId)?.scoring_period
+        ? url.searchParams.get("period") ?? (snapshot.league.platform === "fixture"
+          ? snapshot.league.schedule.find((matchup) => matchup.team_id === teamId)?.scoring_period
+          : getCurrentScoringPeriod(new Date(), snapshot.league.season))
         : undefined;
       const importedAt = snapshot?.league.import_metadata.imported_at;
       const ageSeconds = importedAt ? Math.max(0, Math.floor((Date.now() - Date.parse(importedAt)) / 1000)) : undefined;
       const coveredStarters = snapshot && team && period
-        ? new Set(snapshot.projections.filter((projection) => projection.scoring_period === period).map((projection) => projection.player_id))
+        ? new Set(snapshot.projections.filter((projection) => normalizeScoringPeriod(projection.scoring_period) === normalizeScoringPeriod(period)).map((projection) => projection.player_id))
         : new Set<string>();
       let jobs: unknown[] = [];
       let jobCounts: Record<string, number> = {};
@@ -585,4 +588,8 @@ function isLoopbackRequest(req: IncomingMessage): boolean {
 
 function boundedInteger(value: number | undefined, fallback: number, min: number, max: number): number {
   return value !== undefined && Number.isFinite(value) ? Math.max(min, Math.min(max, Math.floor(value))) : fallback;
+}
+
+function normalizeScoringPeriod(value: string): string {
+  return value.replace(/^(\d{4})-W(\d{1,2})$/, (_match, season: string, week: string) => `${season}-W${week.padStart(2, "0")}`);
 }
