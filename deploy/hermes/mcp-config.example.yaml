@@ -1,0 +1,56 @@
+# Merge into the external Hermes gateway MCP configuration.
+# Use an absolute path to this checkout on the gateway host.
+mcp_servers:
+  pmt-read:
+    command: docker
+    args:
+      - compose
+      - -f
+      - /ABSOLUTE/PATH/TO/Pardon_My_Trade/docker-compose.yml
+      - run
+      - --rm
+      - -T
+      - --no-deps
+      - --entrypoint
+      - node
+      - -e
+      - PMT_MCP_ROLE=read
+      - -e
+      - PMT_EXECUTION_ENABLED=false
+      - pmt
+      - dist/src/mcp/stdio.js
+    env:
+      PMT_MCP_ROLE: read
+      PMT_EXECUTION_ENABLED: "false"
+      PMT_DATA_DIR: /data
+    tools:
+      prompts: false
+      resources: false
+
+  # Keep disabled until an operator canary and safety review have succeeded.
+  pmt-operator:
+    enabled: false
+    command: docker
+    args:
+      - compose
+      - -f
+      - /ABSOLUTE/PATH/TO/Pardon_My_Trade/docker-compose.yml
+      - run
+      - --rm
+      - -T
+      - --no-deps
+      - --entrypoint
+      - node
+      - -e
+      - PMT_MCP_ROLE=operator
+      - -e
+      - PMT_EXECUTION_ENABLED=false
+      - pmt
+      - dist/src/mcp/stdio.js
+    env:
+      PMT_MCP_ROLE: operator
+      PMT_EXECUTION_ENABLED: "false"
+      PMT_DATA_DIR: /data
+    tools:
+      prompts: false
+      resources: false

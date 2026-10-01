@@ -28,10 +28,12 @@
     "model:2026:wr": "python3 python/chatpft_modeling/preseason_2026.py --position WR --data-dir data --output artifacts/wr-2026-preseason",
     "model:2026:te": "python3 python/chatpft_modeling/preseason_2026.py --position TE --data-dir data --output artifacts/te-2026-preseason",
     "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1",
-    "pmt": "node dist/src/cli.js"
+    "pmt": "node dist/src/cli.js",
+    "backup": "sh deploy/scripts/backup.sh",
+    "restore": "sh deploy/scripts/restore.sh"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=26.0.0"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",

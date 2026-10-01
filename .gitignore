@@ -20,3 +20,4 @@ data/
 __pycache__/
 *.py[cod]
 !artifacts/qb-wr-models/**/*.sqlite
+backups/

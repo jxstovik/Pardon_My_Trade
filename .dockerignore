@@ -1,0 +1,13 @@
+.git
+.github
+node_modules
+dist
+.env
+.env.*
+!.env.example
+data
+artifacts/*
+!artifacts/wr-2024-replay
+!artifacts/wr-2024-replay/**
+coverage
+*.log
