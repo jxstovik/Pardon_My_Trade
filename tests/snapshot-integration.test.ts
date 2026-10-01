@@ -69,7 +69,7 @@ test("buildOrchestratorInputFromSnapshot maps roster, counts, free agents, oppon
   const input = buildOrchestratorInputFromSnapshot(snapshot, "team-001", models);
 
   assert.equal(input.teamId, "team-001");
-  assert.equal(input.rosterSlots.length, 16, "9 starters + 6 bench + 1 IR");
+  assert.equal(input.rosterSlots.length, 15, "9 starters + 6 bench; IR players are unavailable to start");
   assert.equal(input.starterCounts.length, 7);
   assert.ok(input.starterCounts.some((c) => c.slot === "RB" && c.count === 2));
 
@@ -79,19 +79,40 @@ test("buildOrchestratorInputFromSnapshot maps roster, counts, free agents, oppon
 
   assert.ok(input.opponents, "opponents derived");
   assert.equal(input.opponents!.length, 3, "other three teams");
+  assert.throws(() => buildOrchestratorInputFromSnapshot(snapshot, "missing-team", models), /not present in snapshot/i);
 });
 
-test("mergeProjectionCandidates adds unprojected players by name and skips duplicates", async () => {
-  const snapshot = await loadFixture();
+test("mergeProjectionCandidates prefers the native ID and skips already projected players", async () => {
+  const loaded = await loadFixture();
+  const snapshot = {
+    ...loaded,
+    free_agents: loaded.free_agents.map((player) => player.player_id === "fa-wr-001"
+      ? { ...player, external_ids: { ...player.external_ids, espn: "999" } }
+      : player)
+  };
   const before = snapshot.projections.length;
   const merged = mergeProjectionCandidates(snapshot, [
-    { name: "Silas King", team: "GB", positions: ["WR"], projected_stats: {}, projected_points: 12.5, floor: 6, ceiling: 18, confidence: 0.5 },
+    { player_id: "999", scoring_period: "2026-W02", observed_at: "2026-09-10T12:00:00.000Z", name: "Renamed Source Name", team: "GB", positions: ["WR"], projected_stats: {}, projected_points: 12.5, floor: 6, ceiling: 18, confidence: 0.5 },
     { name: "Caleb Meridian", team: "CHI", positions: ["QB"], projected_stats: {}, projected_points: 99, floor: 1, ceiling: 1, confidence: 0.5 }
   ]);
-  assert.equal(merged.projections.length, before + 1, "only the unprojected Silas King added");
-  const silas = merged.projections.find((p) => p.player_id === "fa-wr-001");
-  assert.ok(silas);
-  assert.equal(silas!.projected_points, 12.5);
+  assert.equal(merged.projections.length, before + 1, "only the unprojected player added");
+  const matched = merged.projections.find((p) => p.player_id === "fa-wr-001");
+  assert.ok(matched);
+  assert.equal(matched!.projected_points, 12.5);
+  assert.equal(matched!.scoring_period, "2026-W02");
+  assert.equal(matched!.created_at, "2026-09-10T12:00:00.000Z");
   // original snapshot untouched (immutability)
   assert.equal(snapshot.projections.length, before);
+});
+
+test("projection name fallback ignores ambiguous names", async () => {
+  const loaded = await loadFixture();
+  const duplicate = { ...loaded.free_agents[0]!, player_id: "ambiguous-copy" };
+  const snapshot = { ...loaded, free_agents: [...loaded.free_agents, duplicate] };
+  const before = snapshot.projections.length;
+  const merged = mergeProjectionCandidates(snapshot, [{
+    name: loaded.free_agents[0]!.full_name, team: "", positions: ["RB"], projected_stats: {},
+    projected_points: 11, floor: 5, ceiling: 17, confidence: 0.5
+  }]);
+  assert.equal(merged.projections.length, before);
 });

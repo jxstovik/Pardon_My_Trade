@@ -2,11 +2,14 @@ import { mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import type { KnowledgeRepository } from "../knowledge/repository.js";
 import { SqliteKnowledgeRepository } from "../knowledge/sqlite-knowledge-repository.js";
-import { ActionQueue, JsonActionQueueStore } from "../agents/action-queue.js";
-import { buildOrchestratorInputFromSnapshot, buildPriorsFromSnapshot } from "../agents/snapshot-integration.js";
+import { ActionQueue } from "../agents/action-queue.js";
+import { SqliteActionQueueStore } from "../agents/sqlite-action-queue-store.js";
+import { buildOrchestratorInputFromSnapshot, buildPriorsFromSnapshot, buildSnapshotEnqueueOptions, mergeProjections } from "../agents/snapshot-integration.js";
 import { buildModelsForOrchestrator, runOrchestrator } from "../agents/ff-orchestrator.js";
 import { loadLastSnapshotPointer } from "../season-refresh.js";
 import type { AddDropAction, ProposeTradeAction, QueuedAction, RosterSlotInput } from "../agents/types.js";
+import { resolveRuntimeModels } from "../application/roster-analytics.js";
+import { getCurrentScoringPeriod } from "./nfl-calendar.js";
 
 export interface SeasonOrchestrationOptions {
   readonly repository?: KnowledgeRepository;
@@ -41,28 +44,38 @@ export async function runSeasonOrchestration(
   const dataDir = options.dataDir ?? process.env.PMT_DATA_DIR ?? "data";
   const repository = options.repository ?? (await (async () => {
     await mkdir(dataDir, { recursive: true });
-    return new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+    return new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.sqlite") });
   })());
 
   const pointer = await loadLastSnapshotPointer(dataDir);
-  const snapshot = await repository.getLeagueSnapshot(pointer.snapshot_id);
+  let snapshot = await repository.getLeagueSnapshot(pointer.snapshot_id);
   if (!snapshot) {
     throw new Error("Imported snapshot not found in the store. Run `pmt import-espn <leagueId>` first.");
   }
 
-  const teamId = options.teamId ?? process.env.ESPN_TEAM_ID ?? snapshot.league.teams[0]?.team_id;
+  const teamId = options.teamId ?? process.env.PMT_TEAM_ID ?? process.env.ESPN_TEAM_ID;
   if (!teamId) {
-    throw new Error("Snapshot has no teams; cannot run the orchestrator.");
+    throw new Error("Team ID is required; set PMT_TEAM_ID or pass teamId explicitly.");
   }
 
+  const period = getCurrentScoringPeriod(new Date(), snapshot.league.season);
+  snapshot = mergeProjections(snapshot, await repository.getProjections(period));
   const priors = buildPriorsFromSnapshot(snapshot);
-  const models = buildModelsForOrchestrator(priors, []);
-  const queue = options.queue ?? new ActionQueue(new JsonActionQueueStore(join(dataDir, "action-queue.json")));
+  const models = await resolveRuntimeModels(snapshot, dataDir, period);
+  const team = snapshot.league.teams.find((candidate) => candidate.team_id === teamId);
+  for (const slot of team?.roster.starters ?? []) {
+    if (slot.player_id && !models.has(slot.player_id)) {
+      throw new Error(`Required starter ${slot.player_id} is uncovered for scoring period ${period}; supply a matching projection or learned model.`);
+    }
+  }
+  const queue = options.queue ?? new ActionQueue(new SqliteActionQueueStore(join(dataDir, "pmt.sqlite")));
   const input = buildOrchestratorInputFromSnapshot(snapshot, teamId, models);
 
   const result = await runOrchestrator({
     input,
     priors,
+    models,
+    enqueueOptions: buildSnapshotEnqueueOptions(snapshot, period),
     queue,
     autoApproveLowRisk: options.autoApproveLowRisk ?? false
   });

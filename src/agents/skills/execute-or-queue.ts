@@ -1,6 +1,6 @@
 import type { ActionQueue } from "../action-queue.js";
 import { classifyRisk } from "../action-queue.js";
-import type { AgentAction, QueuedAction } from "../types.js";
+import type { ActionEnqueueOptions, AgentAction, QueuedAction } from "../types.js";
 
 export interface RoutedAction {
   readonly action: AgentAction;
@@ -20,7 +20,8 @@ export interface RoutedResult {
 export async function routeActions(
   actions: ReadonlyArray<RoutedAction>,
   queue: ActionQueue,
-  autoApproveLowRisk: boolean
+  autoApproveLowRisk: boolean,
+  enqueueOptions?: ActionEnqueueOptions
 ): Promise<RoutedResult> {
   const queued: QueuedAction[] = [];
   const executed: AgentAction[] = [];
@@ -31,7 +32,7 @@ export async function routeActions(
       executed.push(action);
       continue;
     }
-    queued.push(await queue.enqueue(action, risk, rationale));
+    queued.push(await queue.enqueue(action, risk, rationale, enqueueOptions ?? {}));
   }
   return { queued, executed };
 }

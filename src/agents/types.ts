@@ -6,7 +6,14 @@ export type ActionStatus = "pending" | "approved" | "rejected" | "expired" | "ex
 
 export interface RosterSlotInput {
   readonly playerId: string;
+  /** A representative position, retained for older orchestrator callers. */
   readonly slot: PlayerPosition;
+  /** Player positions used for legal starter-slot matching. */
+  readonly eligiblePositions?: ReadonlyArray<PlayerPosition>;
+  /** Original platform slot, including BN for a locked bench player. */
+  readonly currentSlot?: PlayerPosition;
+  /** Locked players already assigned to a starter slot must stay there. */
+  readonly locked?: boolean;
 }
 
 export interface FreeAgentInput {
@@ -69,6 +76,10 @@ export type AgentAction = SetRosterAction | AddDropAction | WaiverClaimAction | 
 export interface ActionPreconditions {
   /** The league the approval was created for. */
   readonly leagueExternalId?: string;
+  /** Scoring period that bounds proposal idempotency. */
+  readonly scoringPeriod?: string;
+  /** Imported state snapshot that supplied this advisory proposal. */
+  readonly snapshotId?: string;
   /** Hashes produced from the current canonical roster at proposal time. */
   readonly expectedRosterHashes?: Readonly<Record<string, string>>;
   /** Optional exact free-agent universe captured at proposal time. */

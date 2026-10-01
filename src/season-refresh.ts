@@ -13,6 +13,7 @@ import { JsonModelStore } from "./probabilistic/model-store.js";
 import type { ProjectionCandidate, ProjectionSource } from "./projections/projection-source.js";
 import { buildRuntimeProbabilisticProjections, loadHistoricalData, saveProbabilisticProjections } from "./projections/runtime.js";
 import { loadApprovedWrArtifact, projectionFromApprovedWrArtifact } from "./projections/wr-artifact-loader.js";
+import type { EspnCredentials } from "./adapters/espn/espn-auth.js";
 
 export interface SeasonRefreshOptions {
   readonly repository?: KnowledgeRepository;
@@ -24,6 +25,7 @@ export interface SeasonRefreshOptions {
   readonly force?: boolean;
   /** Explicitly opt into an approved ChatPFT WR artifact. */
   readonly wrArtifactPath?: string;
+  readonly espnCredentials?: EspnCredentials;
 }
 
 export interface SeasonRefreshSummary {
@@ -50,7 +52,7 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   const dataDir = options.dataDir ?? process.env.PMT_DATA_DIR ?? "data";
   const repository = options.repository ?? (await (async () => {
     await mkdir(dataDir, { recursive: true });
-    return new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.db") });
+    return new SqliteKnowledgeRepository({ filePath: join(dataDir, "pmt.sqlite") });
   })());
 
   const pointer = await loadLastSnapshotPointer(dataDir);
@@ -75,6 +77,7 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
     sources: options.sources ?? process.env.PMT_PROJECTION_SOURCES,
     season,
     dataDir,
+    espnCredentials: options.espnCredentials,
     force: options.force
   });
   const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];
@@ -137,7 +140,7 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
     }
   }
 
-  await repository.upsertProjections(stored);
+  await repository.upsertProjections(stored, snapshot.league.external_id);
 
   // Re-read so the snapshot carries the freshly stored projections, then
   // rebuild priors/models from them. Prior weekly observations are re-applied
@@ -146,8 +149,8 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   const priors = buildPriorsFromSnapshot(refreshed ?? snapshot, { weeksRemaining });
   const historyPath = process.env.PMT_HISTORICAL_DATA_PATH;
   const weeklyObservations = historyPath ? await loadWeeklyObservations(historyPath) : [];
-  const models = buildModelsForOrchestrator(priors, weeklyObservations);
   const modelStore = new JsonModelStore(join(dataDir, "models.json"));
+  const models = await rebuildPreservingLearned(priors, weeklyObservations, await modelStore.list(), season);
   await modelStore.saveAll([...models.values()]);
 
   const playerIds = new Set(stored.map((p) => p.player_id));
@@ -215,7 +218,7 @@ export async function persistCandidates(
 ): Promise<number> {
   const rosterPlayers = [...snapshot.players, ...snapshot.free_agents];
   const matched = matchProjectionsToRoster(candidates, rosterPlayers, scoringPeriod, source.name);
-  await repository.upsertProjections(matched);
+  await repository.upsertProjections(matched, snapshot.league.external_id);
   const modelStore = new JsonModelStore(join(dataDir, "models.json"));
   const currentWeek = weekFromScoringPeriod(scoringPeriod);
   const weeksRemaining =
@@ -223,9 +226,34 @@ export async function persistCandidates(
   const priors = buildPriorsFromSnapshot(snapshot, { weeksRemaining });
   const historyPath = process.env.PMT_HISTORICAL_DATA_PATH;
   const weeklyObservations = historyPath ? await loadWeeklyObservations(historyPath) : [];
-  const models = buildModelsForOrchestrator(priors, weeklyObservations);
+  const models = await rebuildPreservingLearned(priors, weeklyObservations, await modelStore.list(), snapshot.league.season);
   await modelStore.saveAll([...models.values()]);
   return matched.length;
+}
+
+async function rebuildPreservingLearned(
+  priors: Parameters<typeof buildModelsForOrchestrator>[0],
+  observations: Observation[],
+  existing: import("./probabilistic/bayesian-model.js").PlayerModel[],
+  season: string
+) {
+  const models = buildModelsForOrchestrator(priors, observations);
+  const existingById = new Map(existing.map((model) => [model.playerId, model]));
+  const { updateModel } = await import("./probabilistic/bayesian-model.js");
+  for (const [playerId, rebuilt] of models) {
+    const stored = existingById.get(playerId);
+    if (!stored || stored.weeksObserved === 0 || stored.position !== rebuilt.position) continue;
+    let next = stored;
+    const storedPeriod = stored.lastUpdatedScoringPeriod;
+    const storedWeek = stored.lastUpdatedWeek ?? (storedPeriod?.match(/-W(\d+)$/)?.[1] ? Number(storedPeriod.match(/-W(\d+)$/)![1]) : 0);
+    if (storedPeriod?.startsWith(`${season}-W`)) {
+      for (const observation of observations.filter((row) => row.scoringPeriod?.startsWith(`${season}-W`) && row.week > storedWeek)) {
+        next = updateModel(next, observation);
+      }
+    }
+    models.set(playerId, next);
+  }
+  return models;
 }
 
 /**

@@ -1,11 +1,13 @@
 import type { LeagueSnapshot, PlayerPosition, Projection, Roster } from "../models/types.js";
 import type { ProjectionCandidate } from "../projections/projection-source.js";
+import { rosterFingerprint } from "./action-executor.js";
 import type { ModelPosition, ModelPrior, PlayerModel } from "../probabilistic/bayesian-model.js";
 import type {
   FreeAgentInput,
   OpponentInput,
   OrchestratorInput,
-  RosterSlotInput
+  RosterSlotInput,
+  ActionEnqueueOptions
 } from "./types.js";
 
 export const MODEL_POSITIONS = new Set<ModelPosition>([
@@ -128,16 +130,36 @@ export function buildOrchestratorInputFromSnapshot(
   models: Map<string, PlayerModel>
 ): OrchestratorInput {
   const league = snapshot.league;
-  const team = league.teams.find((t) => t.team_id === teamId) ?? league.teams[0];
-
-  const rosterSlots: RosterSlotInput[] = [];
-  for (const slot of [...team.roster.starters, ...team.roster.bench, ...team.roster.injured_reserve]) {
-    if (!slot.player_id) continue;
-    const position = primaryModelPosition([slot.slot_type]) ?? "BN";
-    rosterSlots.push({ playerId: slot.player_id, slot: position });
+  const team = league.teams.find((t) => t.team_id === teamId);
+  if (!team) throw new Error(`Team ${teamId} is not present in snapshot ${snapshot.snapshot_id}.`);
+  for (const slot of team.roster.starters) {
+    if (slot.player_id && !models.has(slot.player_id)) {
+      throw new Error(`Required starter ${slot.player_id} has no supported projection or learned model.`);
+    }
   }
 
-  const starterCounts = (league.roster_settings?.slots ?? []).map((slot) => ({
+  const rosterSlots: RosterSlotInput[] = [];
+  const players = new Map([...snapshot.players, ...snapshot.free_agents].map((player) => [player.player_id, player]));
+  for (const slot of [...team.roster.starters, ...team.roster.bench]) {
+    if (!slot.player_id) continue;
+    if (!models.has(slot.player_id)) continue;
+    const player = players.get(slot.player_id);
+    const eligiblePositions = player?.eligibility.eligible_slots?.length
+      ? player.eligibility.eligible_slots.filter((position) => MODEL_POSITIONS.has(position as ModelPosition))
+      : (player?.positions ?? []).filter((position) => MODEL_POSITIONS.has(position as ModelPosition));
+    const position = slot.slot_type !== "BN" && slot.slot_type !== "IR"
+      ? slot.slot_type
+      : primaryModelPosition(eligiblePositions) ?? primaryModelPosition(player?.positions ?? []) ?? "BN";
+    rosterSlots.push({
+      playerId: slot.player_id,
+      slot: position,
+      currentSlot: slot.slot_type,
+      eligiblePositions,
+    ...(slot.locked ? { locked: true } : {})
+    });
+  }
+
+  const starterCounts = (league.roster_settings?.slots ?? []).filter((slot) => !["BN", "IR"].includes(slot.slot)).map((slot) => ({
     slot: slot.slot,
     count: slot.count
   }));
@@ -146,7 +168,9 @@ export function buildOrchestratorInputFromSnapshot(
   for (const player of snapshot.free_agents) {
     const position = primaryModelPosition(player.positions);
     if (!position) continue;
-    const projectedPoints = models.get(player.player_id)?.mu ?? POSITION_BASELINE[position];
+    const model = models.get(player.player_id);
+    if (!model) continue;
+    const projectedPoints = model.mu;
     freeAgents.push({ playerId: player.player_id, position, projectedPoints });
   }
 
@@ -163,6 +187,19 @@ export function buildOrchestratorInputFromSnapshot(
     starterCounts,
     freeAgents,
     opponents
+  };
+}
+
+export function buildSnapshotEnqueueOptions(snapshot: LeagueSnapshot, period: string): ActionEnqueueOptions {
+  return {
+    preconditions: {
+      leagueExternalId: snapshot.league.external_id,
+      scoringPeriod: period,
+      snapshotId: snapshot.snapshot_id,
+      expectedRosterHashes: Object.fromEntries(snapshot.league.teams.map((team) => [team.team_id, rosterFingerprint(team.roster)])),
+      expectedFreeAgentIds: snapshot.free_agents.map((player) => player.player_id).sort(),
+      expectedFaabBudgets: snapshot.waiver_state.faab_budgets
+    }
   };
 }
 
@@ -188,27 +225,38 @@ export function mergeProjectionCandidates(
 ): LeagueSnapshot {
   if (candidates.length === 0) return snapshot;
 
-  const nameToId = new Map<string, string>();
+  const playersById = new Map<string, string>();
+  const idsByName = new Map<string, Set<string>>();
   for (const player of [...snapshot.players, ...snapshot.free_agents]) {
-    nameToId.set(normalizeName(player.full_name), player.player_id);
+    const names = [player.full_name].map(normalizeName).filter(Boolean);
+    for (const name of names) {
+      const ids = idsByName.get(name) ?? new Set<string>();
+      ids.add(player.player_id);
+      idsByName.set(name, ids);
+    }
+    for (const id of [player.player_id, player.external_id, player.external_ids.espn]) {
+      if (id) playersById.set(id, player.player_id);
+    }
   }
 
   const existing = new Set(snapshot.projections.map((p) => p.player_id));
   const additions: Projection[] = [];
   for (const candidate of candidates) {
-    const playerId = nameToId.get(normalizeName(candidate.name));
+    const playerId = (candidate.player_id ? playersById.get(candidate.player_id) : undefined)
+      ?? uniqueNameMatch(idsByName, candidate.name);
     if (!playerId || existing.has(playerId)) continue;
     existing.add(playerId);
+    const observedAt = candidate.observed_at ?? new Date().toISOString();
     additions.push({
       schema_version: "1.0.0",
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
+      created_at: observedAt,
+      updated_at: observedAt,
       source_system: "espn",
       source_record_id: `proj-${playerId}`,
       projection_id: `proj-${playerId}`,
       player_id: playerId,
       source: "espn",
-      scoring_period: snapshot.league.season,
+      scoring_period: candidate.scoring_period ?? snapshot.league.season,
       projected_stats: candidate.projected_stats,
       projected_points: candidate.projected_points,
       floor: candidate.floor,
@@ -222,6 +270,11 @@ export function mergeProjectionCandidates(
     ...snapshot,
     projections: [...snapshot.projections, ...additions]
   };
+}
+
+function uniqueNameMatch(idsByName: Map<string, Set<string>>, name: string): string | undefined {
+  const ids = idsByName.get(normalizeName(name));
+  return ids?.size === 1 ? [...ids][0] : undefined;
 }
 
 /**

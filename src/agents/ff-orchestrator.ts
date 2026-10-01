@@ -5,12 +5,15 @@ import { scanWaivers } from "./skills/waiver-scanner.js";
 import { proposeTrades } from "./skills/trade-proposer.js";
 import { routeActions } from "./skills/execute-or-queue.js";
 import type { ActionQueue } from "./action-queue.js";
-import type { OrchestratorInput, OrchestratorResult, QueuedAction, AgentAction } from "./types.js";
+import type { ActionEnqueueOptions, OrchestratorInput, OrchestratorResult, QueuedAction, AgentAction } from "./types.js";
 
 export interface OrchestratorContext {
   readonly input: OrchestratorInput;
   readonly priors: ReadonlyArray<ModelPrior>;
   readonly observations?: ReadonlyArray<Observation>;
+  /** Optional persisted learned state keyed by player ID. */
+  readonly models?: ReadonlyMap<string, PlayerModel>;
+  readonly enqueueOptions?: ActionEnqueueOptions;
   readonly queue: ActionQueue;
   readonly autoApproveLowRisk?: boolean;
 }
@@ -30,7 +33,7 @@ export function buildModelsForOrchestrator(
  */
 export async function runOrchestrator(context: OrchestratorContext): Promise<OrchestratorResult> {
   const { input, queue, autoApproveLowRisk = false } = context;
-  const models = buildModelsForOrchestrator(context.priors, context.observations);
+  const models = context.models ? new Map(context.models) : buildModelsForOrchestrator(context.priors, context.observations);
 
   const lineup = optimizeLineup(input.rosterSlots, input.starterCounts, models);
   const setRoster: AgentAction = {
@@ -64,7 +67,8 @@ export async function runOrchestrator(context: OrchestratorContext): Promise<Orc
       }))
     ],
     queue,
-    autoApproveLowRisk
+    autoApproveLowRisk,
+    context.enqueueOptions
   );
 
   const queued: QueuedAction[] = routed.queued;

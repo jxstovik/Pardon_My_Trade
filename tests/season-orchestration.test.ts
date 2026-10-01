@@ -6,7 +6,8 @@ import { join } from "node:path";
 import { SqliteKnowledgeRepository } from "../src/knowledge/sqlite-knowledge-repository.js";
 import { ActionQueue, InMemoryActionQueueStore } from "../src/agents/action-queue.js";
 import { runSeasonOrchestration } from "../src/seasons/season-orchestration.js";
-import { makePlayer, makeSnapshot } from "./test-builders.js";
+import { makePlayer, makeProjection, makeSnapshot } from "./test-builders.js";
+import { getCurrentScoringPeriod } from "../src/seasons/nfl-calendar.js";
 
 test("runSeasonOrchestration reads the last snapshot and queues without executing", async () => {
   const dir = await mkdtemp(join(tmpdir(), "pmt-orch-"));
@@ -17,12 +18,21 @@ test("runSeasonOrchestration reads the last snapshot and queues without executin
       { snapshotId: "snap-orch", season: "2026" }
     );
     await repository.saveLeagueSnapshot(snapshot);
+    await repository.upsertProjections([makeProjection({
+      player_id: "p1",
+      source: "test-weekly",
+      scoring_period: getCurrentScoringPeriod(new Date(), "2026"),
+      projected_points: 14,
+      floor: 7,
+      ceiling: 21
+    })]);
     await writeFile(join(dir, "last-snapshot.json"), JSON.stringify({ snapshot_id: "snap-orch", league_id: "lg-1" }), "utf8");
 
     const store = new InMemoryActionQueueStore();
     const summary = await runSeasonOrchestration({
       repository,
       dataDir: dir,
+      teamId: "team-001",
       queue: new ActionQueue(store)
     });
 
@@ -43,7 +53,7 @@ test("runSeasonOrchestration explains how to import when no snapshot exists", as
   const dir = await mkdtemp(join(tmpdir(), "pmt-orch-"));
   try {
     const repository = new SqliteKnowledgeRepository({ memory: true });
-    await assert.rejects(() => runSeasonOrchestration({ repository, dataDir: dir }), /import-espn/i);
+    await assert.rejects(() => runSeasonOrchestration({ repository, dataDir: dir, teamId: "team-001" }), /import-espn/i);
   } finally {
     await rm(dir, { recursive: true, force: true });
   }
