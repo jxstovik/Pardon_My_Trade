@@ -11,6 +11,7 @@ const sampleLeague = {
   status: { type: 2 },
   settings: {
     rosterPositions: ["QB", "RB", "RB", "WR", "WR", "TE", "FLEX", "K", "DST", "BE", "BE", "IR"],
+    scoringSettings: { scoringItems: [{ statId: 3, points: 0.04 }, { statId: 53, points: 1 }, { statId: 16, points: 3 }] },
     waiverSettings: { type: "ROLLING" },
     tradeReview: { type: 2 }
   },
@@ -123,6 +124,25 @@ test("getScoringSettings maps known keys with defaults", async () => {
   const scoring = await reader.getScoringSettings("999");
   assert.ok(scoring.rules.some((r) => r.stat === "passing_yards" && r.points === 0.04));
   assert.ok(scoring.rules.some((r) => r.stat === "receptions" && r.points === 1));
+  assert.equal(scoring.rules.length, 2, "unknown bonus stat IDs are not misrepresented as defaults");
+});
+
+test("player position IDs preserve kicker and D/ST, and actual ESPN eligibility is retained", async () => {
+  const data: any = structuredClone(sampleLeague);
+  data.players.push(
+    { id: 401, firstName: "K", lastName: "Player", defaultPositionId: 5, proTeamId: 9, injured: false },
+    { id: 402, firstName: "Defense", lastName: "Player", defaultPositionId: 16, proTeamId: 10, injured: false },
+    { id: 403, firstName: "Eligible", lastName: "Flex", defaultPositionId: 2, proTeamId: 11, eligibleSlots: [2, 23], locked: true }
+  );
+  data.teams[0].roster.entries.push({ playerId: 403, lineupSlotId: 23 });
+  const reader = new EspnPlatformReader({ credentials: { leagueId: "999", season: "2026" }, fetchImpl: fakeFetch((url) =>
+    new Response(JSON.stringify(url.includes("kona_player_info") ? { players: [] } : data), { status: 200 })) });
+  const players = await reader.getPlayers("football", "2026");
+  assert.deepEqual(players.find((player) => player.player_id === "401")?.positions, ["K"]);
+  assert.deepEqual(players.find((player) => player.player_id === "402")?.positions, ["DST"]);
+  assert.deepEqual(players.find((player) => player.player_id === "403")?.eligibility.eligible_slots, ["RB", "FLEX", "BN"]);
+  const roster = await reader.getRoster("999", "1");
+  assert.equal(roster.starters.find((slot) => slot.player_id === "403")?.locked, true);
 });
 
 test("setRoster posts correct body and filter header", async () => {

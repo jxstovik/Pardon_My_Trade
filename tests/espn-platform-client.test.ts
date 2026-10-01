@@ -67,3 +67,79 @@ test("postJson still sends X-Fantasy-Filter on POST", async () => {
   assert.equal(captured!.headers["content-type"], "application/json");
   assert.ok(captured!.headers["X-Fantasy-Filter"]?.includes("\"limit\":5"));
 });
+
+test("GET retries transient rate limits and redacts cookies from request records", async () => {
+  let calls = 0;
+  const secret = "private-cookie-value";
+  const client = new EspnPlatformClient({
+    credentials: creds({ espnS2: secret, swid: "{private-swid}" }),
+    readRetries: 1,
+    fetchImpl: (async (_url: string | URL | Request, init?: RequestInit) => {
+      calls += 1;
+      assert.match(String((init?.headers as Record<string, string>).cookie), /private-cookie-value/);
+      return new Response(JSON.stringify({ ok: true }), { status: calls === 1 ? 429 : 200 });
+    }) as typeof fetch
+  });
+  assert.deepEqual(await client.getJson(""), { ok: true });
+  assert.equal(calls, 2);
+  assert.equal(client.recordedRequests[0]?.headers.cookie, "[REDACTED]");
+  assert.doesNotMatch(JSON.stringify(client.recordedRequests), /private-cookie-value|private-swid/);
+});
+
+test("GET failures classify status without exposing response bodies", async () => {
+  const client = new EspnPlatformClient({
+    credentials: creds(),
+    readRetries: 0,
+    fetchImpl: (async () => new Response("secret html", { status: 403 })) as typeof fetch
+  });
+  await assert.rejects(client.getJson(""), (error: unknown) => {
+    assert.match((error as Error).message, /authentication or private-league access denied/);
+    assert.doesNotMatch((error as Error).message, /secret html/);
+    return true;
+  });
+});
+
+test("POST timeout is surfaced as unknown and is never retried", async () => {
+  let calls = 0;
+  const client = new EspnPlatformClient({
+    credentials: creds(),
+    timeoutMs: 5,
+    readRetries: 3,
+    fetchImpl: (async (_url: string | URL | Request, init?: RequestInit) => {
+      calls += 1;
+      return new Promise((_resolve, reject) => {
+        init?.signal?.addEventListener("abort", () => {
+          const error = new Error("aborted");
+          error.name = "AbortError";
+          reject(error);
+        }, { once: true });
+      });
+    }) as typeof fetch
+  });
+  await assert.rejects(client.postJson("/transactions/", { type: "ADD" }), (error: unknown) => {
+    assert.equal((error as { code?: string }).code, "ESPN_WRITE_OUTCOME_UNKNOWN");
+    return true;
+  });
+  assert.equal(calls, 1);
+});
+
+test("GET timeouts use bounded safe retries", async () => {
+  let calls = 0;
+  const client = new EspnPlatformClient({
+    credentials: creds(),
+    timeoutMs: 5,
+    readRetries: 1,
+    fetchImpl: (async (_url: string | URL | Request, init?: RequestInit) => {
+      calls += 1;
+      return new Promise((_resolve, reject) => {
+        init?.signal?.addEventListener("abort", () => {
+          const error = new Error("aborted");
+          error.name = "AbortError";
+          reject(error);
+        }, { once: true });
+      });
+    }) as typeof fetch
+  });
+  await assert.rejects(client.getJson(""), /timed out after bounded retries/);
+  assert.equal(calls, 2);
+});

@@ -7,7 +7,7 @@ import { join } from "node:path";
 import { SqliteKnowledgeRepository } from "../src/knowledge/sqlite-knowledge-repository.js";
 import { runSeasonRefresh } from "../src/season-refresh.js";
 import { makePlayer, makeSnapshot } from "./test-builders.js";
-import { getCurrentScoringPeriod, weekFromScoringPeriod } from "../src/seasons/nfl-calendar.js";
+import { weekFromScoringPeriod } from "../src/seasons/nfl-calendar.js";
 
 function fakeFetch(body: unknown): typeof fetch {
   return (async () => new Response(JSON.stringify(body), { status: 200 })) as unknown as typeof fetch;
@@ -21,19 +21,18 @@ test("runSeasonRefresh pulls espn, persists matched projections, rebuilds models
   try {
     const repository = new SqliteKnowledgeRepository({ memory: true });
     const snapshot = makeSnapshot(
-      [makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"] })],
-      { snapshotId: "snap-sr", season: "2026" }
+      [makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"], external_ids: { espn: "4037" } })],
+      { snapshotId: "snap-sr", season: "2025" }
     );
     await repository.saveLeagueSnapshot(snapshot);
     await writeFile(join(dir, "last-snapshot.json"), JSON.stringify({ snapshot_id: "snap-sr", league_id: "lg-1" }), "utf8");
 
-    const summary = await runSeasonRefresh({ repository, dataDir: dir, sources: "espn" });
+    const summary = await runSeasonRefresh({ repository, dataDir: dir, sources: "espn", week: 1, espnCredentials: { leagueId: "lg-1", season: "2025" } });
 
-    assert.equal(summary.season, "2026");
-    const expectedPeriod = getCurrentScoringPeriod(new Date(), "2026");
+    assert.equal(summary.season, "2025");
+    const expectedPeriod = "2025-W1";
     assert.equal(summary.scoringPeriod, expectedPeriod);
-    // Only Christian McCaffrey is in the imported roster, so 1 of 3 ESPN
-    // candidates matches and is persisted.
+    // The native ESPN player ID joins the source projection to the imported roster.
     assert.equal(summary.sources.espn, 1);
     assert.ok(summary.projectionsStored >= 1, "at least the matched player is stored");
     assert.ok(summary.playersUpdated >= 1);
@@ -94,13 +93,13 @@ test("runSeasonRefresh re-applies weekly observations and keeps weekly-scale pri
   try {
     const repository = new SqliteKnowledgeRepository({ memory: true });
     const snapshot = makeSnapshot(
-      [makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"] })],
-      { snapshotId: "snap-obs", season: "2026" }
+      [makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"], external_ids: { espn: "4037" } })],
+      { snapshotId: "snap-obs", season: "2025" }
     );
     await repository.saveLeagueSnapshot(snapshot);
     await writeFile(join(dir, "last-snapshot.json"), JSON.stringify({ snapshot_id: "snap-obs", league_id: "lg-1" }), "utf8");
 
-    const expectedPeriod = getCurrentScoringPeriod(new Date(), "2026");
+    const expectedPeriod = "2025-W1";
     const currentWeek = weekFromScoringPeriod(expectedPeriod) ?? 1;
     const observedWeek = Math.max(1, currentWeek - 1);
     await writeFile(
@@ -109,7 +108,7 @@ test("runSeasonRefresh re-applies weekly observations and keeps weekly-scale pri
         observations: [
           {
             playerId: "p1",
-            season: "2026",
+            season: "2025",
             week: observedWeek,
             scoringPeriod: `2026-W${String(observedWeek).padStart(2, "0")}`,
             points: 24.5,
@@ -120,7 +119,7 @@ test("runSeasonRefresh re-applies weekly observations and keeps weekly-scale pri
     );
     process.env.PMT_HISTORICAL_DATA_PATH = join(dir, "historical-observations.json");
 
-    await runSeasonRefresh({ repository, dataDir: dir, sources: "espn" });
+    await runSeasonRefresh({ repository, dataDir: dir, sources: "espn", week: 1, espnCredentials: { leagueId: "lg-1", season: "2025" } });
 
     const store = JSON.parse(await readFile(join(dir, "models.json"), "utf8")) as {
       models: Array<{ playerId: string; historyMean: number; lastObserved: number | null; weeksObserved: number; mu: number }>;

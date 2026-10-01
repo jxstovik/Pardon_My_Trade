@@ -42,6 +42,7 @@ interface EspnLeagueResponse {
     rosterPositions?: string[];
     rosterSize?: number;
     rosterSettings?: { lineupSlotCounts?: Record<string, number> };
+    scoringSettings?: { scoringItems?: Array<{ statId?: number; points?: number }> };
     waiverSettings?: Record<string, unknown>;
     tradeReview?: { type?: number };
   };
@@ -49,7 +50,7 @@ interface EspnLeagueResponse {
   teams?: EspnTeam[];
   players?: EspnPlayer[];
   schedule?: EspnMatchup[];
-  scoringSettings?: Record<string, number>;
+  scoringSettings?: { scoringItems?: Array<{ statId?: number; points?: number }> } & Record<string, unknown>;
 }
 
 interface EspnTeam {
@@ -68,7 +69,10 @@ interface EspnTeam {
       /** Live API spelling. */
       lineupSlotId?: number;
       /** Historical payload spelling (ESPN's own typo). */
-      lineuSlotId: number;
+      lineuSlotId?: number;
+      locked?: boolean;
+      isLocked?: boolean;
+      lockedForScoringPeriod?: boolean;
       status?: string;
       injuryStatus?: string;
       playerPoolEntry?: { player?: EspnPlayer };
@@ -90,6 +94,20 @@ interface EspnPlayer {
   injuryStatus?: string;
   onTeamId?: number;
   percentOwned?: number;
+  eligibleSlots?: number[];
+  locked?: boolean;
+  lockedInLineup?: boolean;
+  lockedForScoringPeriod?: boolean;
+  gameStatus?: string;
+  stats?: Array<{
+    seasonId?: number;
+    scoringPeriodId?: number;
+    statSourceId?: number;
+    statSplitTypeId?: number;
+    appliedTotal?: number;
+    appliedStats?: Record<string, number>;
+    stats?: Record<string, number>;
+  }>;
 }
 
 interface EspnMatchup {
@@ -107,7 +125,7 @@ const ESPN_POSITION_ID: Record<number, PlayerPosition> = {
   3: "WR",
   4: "TE",
   5: "K",
-  6: "DST"
+  16: "DST"
 };
 
 const DEFAULT_LEAGUE_VIEWS = ["mTeam", "mRoster", "mMatchup", "mStandings", "mSettings", "mPlayer"];
@@ -209,8 +227,8 @@ export class EspnPlatformReader implements PlatformReader {
     });
   }
 
-  private async getLeagueRaw(): Promise<EspnLeagueResponse> {
-    if (this.leagueCache) return this.leagueCache;
+  private async getLeagueRaw(forceRefresh = false): Promise<EspnLeagueResponse> {
+    if (this.leagueCache && !forceRefresh) return this.leagueCache;
     // League reads come from ESPN's JSON read API, not the web/write host.
     const data = await this.client.getJson<EspnLeagueResponse>("", {
       view: DEFAULT_LEAGUE_VIEWS,
@@ -230,6 +248,11 @@ export class EspnPlatformReader implements PlatformReader {
     }
     this.leagueCache = data;
     return data;
+  }
+
+  /** Fetch a fresh league state for diagnostics and pre-action revalidation. */
+  async getLeagueFresh(): Promise<EspnLeagueResponse> {
+    return this.getLeagueRaw(true);
   }
 
   async getLeague(_leagueExternalId: string, season: string): Promise<League> {
@@ -304,40 +327,19 @@ export class EspnPlatformReader implements PlatformReader {
 
   async getScoringSettings(_leagueExternalId: string): Promise<ScoringSettings> {
     const data = await this.getLeagueRaw();
-    const raw = data.scoringSettings ?? {};
+    const raw = data.settings?.scoringSettings ?? data.scoringSettings ?? {};
     const rules: ScoringSettings["rules"] = [];
-    const mapping: Array<[string, string, PlayerPosition[], number]> = [
-      ["passYd", "passing_yards", ["QB"], 0.04],
-      ["passTd", "passing_touchdowns", ["QB"], 4],
-      ["passInt", "interceptions", ["QB"], -2],
-      ["rushYd", "rushing_yards", ["QB", "RB", "WR", "TE"], 0.1],
-      ["rushTd", "rushing_touchdowns", ["QB", "RB", "WR", "TE"], 6],
-      ["rec", "receptions", ["RB", "WR", "TE"], 1],
-      ["recYd", "receiving_yards", ["RB", "WR", "TE"], 0.1],
-      ["recTd", "receiving_touchdowns", ["RB", "WR", "TE"], 6],
-      ["fum", "fumbles", ["QB", "RB", "WR", "TE"], -2]
-    ];
-    for (const [key, stat, positions, fallback] of mapping) {
-      const points = raw[key];
-      if (typeof points === "number") {
-        rules.push({
-          rule_id: `espn-${key}`,
-          category: stat.split("_")[0],
-          stat,
-          points,
-          conditions: {},
-          applies_to_positions: positions
-        });
-      } else {
-        rules.push({
-          rule_id: `espn-${key}-default`,
-          category: stat.split("_")[0],
-          stat,
-          points: fallback,
-          conditions: {},
-          applies_to_positions: positions
-        });
-      }
+    for (const item of raw.scoringItems ?? []) {
+      const definition = ESPN_SCORING_STATS[item.statId ?? -1];
+      if (!definition || typeof item.points !== "number") continue;
+      rules.push({
+        rule_id: `espn-stat-${item.statId}`,
+        category: definition.stat.split("_")[0],
+        stat: definition.stat,
+        points: item.points,
+        conditions: {},
+        applies_to_positions: definition.positions
+      });
     }
     return { scoring_type: "custom", rules };
   }
@@ -383,7 +385,7 @@ export class EspnPlatformReader implements PlatformReader {
       source_record_id: String(matchup.id),
       matchup_id: String(matchup.id),
       league_id: String(data.id ?? this.client.credentials.leagueId),
-      scoring_period: `${data.id ?? this.client.credentials.leagueId}-W${matchup.matchupPeriodId ?? 0}`,
+      scoring_period: `${data.seasonId ?? this.client.credentials.season}-W${matchup.matchupPeriodId ?? 0}`,
       team_id: matchup.homeTeamId !== undefined ? String(matchup.homeTeamId) : "unknown",
       opponent_team_id: matchup.awayTeamId !== undefined ? String(matchup.awayTeamId) : "unknown",
       actual_points_for: matchup.homePoints,
@@ -398,10 +400,8 @@ export class EspnPlatformReader implements PlatformReader {
 
   async getFreeAgents(_leagueExternalId: string): Promise<Player[]> {
     // The league views no longer embed a top-level `players` pool. ESPN's
-    // `kona_player_info` view with a status filter returns the whole free-agent
-    // pool in one request; NOTE: it only accepts the filter when sent with the
-    // lowercase `x-fantasy-filter` header (Node fetch normalizes this) and a
-    // `scoringPeriodId` query param — other shapes get HTTP 400.
+    // `kona_player_info` uses ESPN's filter header and scoringPeriodId; paginate
+    // defensively because the read endpoint may cap individual pages.
     const league = await this.getLeagueRaw();
     const owned = new Set<number>();
     for (const team of league.teams ?? []) {
@@ -410,7 +410,10 @@ export class EspnPlatformReader implements PlatformReader {
       }
     }
     const scoringPeriodId = league.scoringPeriodId ?? 1;
-    const data = await this.client.getJson<{ players?: Array<{ player?: EspnPlayer }>; scoringPeriodId?: number }>("", {
+    const pageSize = 1500;
+    const allEntries: Array<{ player?: EspnPlayer }> = [];
+    for (let offset = 0; offset < 30 * pageSize; offset += pageSize) {
+      const data = await this.client.getJson<{ players?: Array<{ player?: EspnPlayer }>; scoringPeriodId?: number }>("", {
       view: ["kona_player_info"],
       scope: { segment: 0, readHost: true },
       query: { scoringPeriodId },
@@ -418,13 +421,18 @@ export class EspnPlatformReader implements PlatformReader {
         players: {
           filterStatus: { value: ["FREEAGENT", "WAIVERS"] },
           filterSlotIds: { value: [] },
-          limit: 1500,
+          limit: pageSize,
+          offset,
           sortPercOwned: { sortPriority: 1, sortAsc: false },
           sortDraftRanks: { sortPriority: 100, sortAsc: true, value: "STANDARD" }
         }
       }
-    });
-    return (data.players ?? [])
+      });
+      const entries = data.players ?? [];
+      allEntries.push(...entries);
+      if (entries.length < pageSize) break;
+    }
+    return allEntries
       .map((entry) => entry.player)
       .filter((player): player is EspnPlayer => !!player && this.mapPosition(player.defaultPositionId) !== undefined)
       .filter((player) => !owned.has(player.id))
@@ -511,10 +519,16 @@ export class EspnPlatformReader implements PlatformReader {
       const slotId = entry.lineupSlotId ?? entry.lineuSlotId ?? 20;
       const position = mapEspnSlotToPosition(slotId);
       const playerId = String(entry.playerId);
+      const embeddedPlayer = entry.playerPoolEntry?.player ?? players.find((candidate) => candidate.id === entry.playerId);
+      const locked = entry.locked === true || entry.isLocked === true || entry.lockedForScoringPeriod === true
+        || embeddedPlayer?.locked === true || embeddedPlayer?.lockedInLineup === true
+        || embeddedPlayer?.lockedForScoringPeriod === true
+        || ["IN_PROGRESS", "FINAL", "COMPLETED"].includes(embeddedPlayer?.gameStatus?.toUpperCase() ?? "");
+      const eligible = this.mapEligibleSlots(embeddedPlayer, position);
       const slotBase = {
         slot_id: `${teamId}-${position}-${playerId}`,
-        allowed_positions: [position] as PlayerPosition[],
-        locked: false,
+        allowed_positions: eligible,
+        locked,
         player_id: playerId
       };
       if (position === "IR") {
@@ -567,7 +581,7 @@ export class EspnPlatformReader implements PlatformReader {
       status: this.mapStatus(player.injuryStatus, player.injured),
       injury_status: this.mapStatus(player.injuryStatus, player.injured),
       eligibility: {
-        eligible_slots: position ? [position, "FLEX", "BN"].filter((p): p is PlayerPosition => p in POSITION_SET) : ["BN"],
+        eligible_slots: this.mapEligibleSlots(player, position),
         injured_reserve_eligible: player.injuryStatus === "IR",
         taxi_eligible: false
       },
@@ -578,6 +592,16 @@ export class EspnPlatformReader implements PlatformReader {
   private mapPosition(defaultPositionId?: number): PlayerPosition | undefined {
     if (defaultPositionId === undefined) return undefined;
     return ESPN_POSITION_ID[defaultPositionId];
+  }
+
+  private mapEligibleSlots(player: EspnPlayer | undefined, position?: PlayerPosition): PlayerPosition[] {
+    const mapped = (player?.eligibleSlots ?? [])
+      .map(mapEspnSlotToPosition)
+      .filter((slot) => slot !== "BN" && slot !== "IR");
+    const natural = position ? [position] : [];
+    const flex = position && ["RB", "WR", "TE"].includes(position) ? ["FLEX"] : [];
+    const base = mapped.length ? mapped : [...natural, ...flex];
+    return [...new Set([...base, "BN"].filter((p): p is PlayerPosition => POSITION_SET.has(p as PlayerPosition)))];
   }
 
   private mapStatus(status?: string, injured?: boolean): PlayerStatus {
@@ -624,3 +648,15 @@ const ESPN_SLOT_ALIAS: Record<string, PlayerPosition> = {
 const POSITION_SET = new Set<PlayerPosition>([
   "QB", "RB", "WR", "TE", "K", "DST", "FLEX", "SUPER_FLEX", "BN", "IR"
 ]);
+
+const ESPN_SCORING_STATS: Record<number, { stat: string; positions: PlayerPosition[] }> = {
+  3: { stat: "passing_yards", positions: ["QB"] },
+  4: { stat: "passing_touchdowns", positions: ["QB"] },
+  20: { stat: "interceptions", positions: ["QB"] },
+  24: { stat: "rushing_yards", positions: ["QB", "RB", "WR", "TE"] },
+  25: { stat: "rushing_touchdowns", positions: ["QB", "RB", "WR", "TE"] },
+  53: { stat: "receptions", positions: ["RB", "WR", "TE"] },
+  42: { stat: "receiving_yards", positions: ["RB", "WR", "TE"] },
+  43: { stat: "receiving_touchdowns", positions: ["RB", "WR", "TE"] },
+  72: { stat: "fumbles_lost", positions: ["QB", "RB", "WR", "TE"] }
+};

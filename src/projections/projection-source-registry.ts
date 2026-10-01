@@ -4,6 +4,7 @@ import { FantasyProsProjectionSource } from "./fantasypros-projection-source.js"
 import { RazzballProjectionSource } from "./razzball-projection-source.js";
 import { RecommendationCache } from "./recommendation-cache.js";
 import type { ProjectionSource } from "./projection-source.js";
+import type { EspnCredentials } from "../adapters/espn/espn-auth.js";
 
 /**
  * Builds the list of projection sources from the `PMT_PROJECTION_SOURCES` env
@@ -22,6 +23,7 @@ export interface BuildProjectionSourcesOptions {
   readonly dataDir?: string;
   readonly cache?: RecommendationCache;
   readonly fetchImpl?: typeof fetch;
+  readonly espnCredentials?: EspnCredentials;
   readonly onUnsupported?: (name: string) => void;
   /** Bypass the 1h fetch cache for every built source. */
   readonly force?: boolean;
@@ -35,7 +37,7 @@ export interface BuildProjectionSourcesOptions {
 export function buildProjectionSources(options: BuildProjectionSourcesOptions = {}): ProjectionSource[] {
   const raw = options.sources?.trim();
   if (!raw) {
-    return [new EspnProjectionSource({ fetchImpl: options.fetchImpl, baseUrl: undefined })];
+    return [new EspnProjectionSource({ fetchImpl: options.fetchImpl, baseUrl: undefined, credentials: options.espnCredentials })];
   }
 
   const dataDir = options.dataDir ?? "data";
@@ -49,7 +51,7 @@ export function buildProjectionSources(options: BuildProjectionSourcesOptions = 
     const name = token.trim().toLowerCase();
     if (!name) continue;
     if (name === "espn") {
-      out.push(new EspnProjectionSource({ fetchImpl: options.fetchImpl }));
+      out.push(new EspnProjectionSource({ fetchImpl: options.fetchImpl, credentials: options.espnCredentials }));
     } else if (name === "razzball") {
       for (const position of RAZZBALL_POSITIONS) {
         out.push(new RazzballProjectionSource({

@@ -7,6 +7,10 @@ export interface EspnClientOptions {
   readonly baseUrl?: string;
   /** Host used for read-only views (ESPN's `lm-api-reads` mirror). */
   readonly readBaseUrl?: string;
+  /** Per-attempt timeout for safe GET requests. */
+  readonly timeoutMs?: number;
+  /** Number of retries after the first safe GET attempt. */
+  readonly readRetries?: number;
 }
 
 export interface EspnRequestRecord {
@@ -54,6 +58,8 @@ export class EspnPlatformClient {
   private readonly fetchImpl: typeof fetch;
   private readonly baseUrl: string;
   private readonly readBaseUrl: string;
+  private readonly timeoutMs: number;
+  private readonly readRetries: number;
   private readonly recorded: EspnRequestRecord[] = [];
 
   constructor(options: EspnClientOptions) {
@@ -62,6 +68,8 @@ export class EspnPlatformClient {
     this.baseUrl = options.baseUrl ?? DEFAULT_BASE_URL;
     // When a caller pins `baseUrl` (tests, fixtures) honour it for reads too.
     this.readBaseUrl = options.readBaseUrl ?? options.baseUrl ?? DEFAULT_READ_BASE_URL;
+    this.timeoutMs = options.timeoutMs ?? 10_000;
+    this.readRetries = options.readRetries ?? 2;
   }
 
   get recordedRequests(): readonly EspnRequestRecord[] {
@@ -110,9 +118,31 @@ export class EspnPlatformClient {
       headers["X-Fantasy-Filter"] = JSON.stringify(opts.filter);
     }
     const fullHeaders = this.buildHeaders(headers);
-    this.recorded.push({ method: "GET", url: url.toString(), headers: fullHeaders });
-    const response = await this.fetchImpl(url.toString(), { method: "GET", headers: fullHeaders });
-    return this.parse<T>(response);
+    this.recorded.push({ method: "GET", url: url.toString(), headers: redactHeaders(fullHeaders) });
+    let lastError: unknown;
+    for (let attempt = 0; attempt <= this.readRetries; attempt += 1) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), this.timeoutMs);
+      try {
+        const response = await this.fetchImpl(url.toString(), {
+          method: "GET", headers: fullHeaders, signal: controller.signal
+        });
+        if (isRetryableStatus(response.status) && attempt < this.readRetries) {
+          await response.body?.cancel().catch(() => undefined);
+          await delay(retryDelay(response, attempt));
+          continue;
+        }
+        return await this.parse<T>(response);
+      } catch (error) {
+        lastError = error;
+        if (error instanceof PmtError) throw error;
+        if (attempt >= this.readRetries || !isRetryableReadError(error)) throw safeReadError(error);
+        await delay(100 * 2 ** attempt);
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+    throw safeReadError(lastError);
   }
 
   async postJson<T>(path: string, body: unknown, filter?: unknown): Promise<T> {
@@ -121,13 +151,30 @@ export class EspnPlatformClient {
     if (filter !== undefined) {
       headers["X-Fantasy-Filter"] = JSON.stringify(filter);
     }
-    this.recorded.push({ method: "POST", url: url.toString(), headers, body });
-    const response = await this.fetchImpl(url.toString(), {
-      method: "POST",
-      headers,
-      body: JSON.stringify(body)
-    });
-    return this.parse<T>(response);
+    this.recorded.push({ method: "POST", url: url.toString(), headers: redactHeaders(headers), body });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), this.timeoutMs);
+    try {
+      const response = await this.fetchImpl(url.toString(), {
+        method: "POST",
+        headers,
+        body: JSON.stringify(body),
+        signal: controller.signal
+      });
+      return await this.parse<T>(response);
+    } catch (error) {
+      if (error instanceof Error && error.name === "AbortError") {
+        throw new PmtError({
+          code: "ESPN_WRITE_OUTCOME_UNKNOWN",
+          message: "ESPN write timed out; acceptance is unknown and must be reconciled before retrying.",
+          source: "platform_adapter",
+          retryable: false
+        });
+      }
+      throw error;
+    } finally {
+      clearTimeout(timer);
+    }
   }
 
   private async parse<T>(response: Response): Promise<T> {
@@ -135,12 +182,20 @@ export class EspnPlatformClient {
     if (!response.ok) {
       throw new PmtError({
         code: "ESPN_REQUEST_FAILED",
-        message: `ESPN request failed with status ${response.status}: ${text.slice(0, 200)}`,
+        message: `ESPN request failed (${classifyStatus(response.status)}; HTTP ${response.status}).`,
         source: "platform_adapter",
-        retryable: response.status >= 500
+        retryable: response.status === 429 || response.status >= 500
       });
     }
     if (!text) return undefined as T;
+    if (/^\s*</.test(text) || /text\/html/i.test(response.headers?.get("content-type") ?? "")) {
+      throw new PmtError({
+        code: "ESPN_NON_JSON_RESPONSE",
+        message: "ESPN returned HTML instead of JSON (check credentials, endpoint, or rate limiting).",
+        source: "platform_adapter",
+        retryable: false
+      });
+    }
     try {
       return JSON.parse(text) as T;
     } catch {
@@ -152,4 +207,47 @@ export class EspnPlatformClient {
       });
     }
   }
+}
+
+function redactHeaders(headers: Record<string, string>): Record<string, string> {
+  return Object.fromEntries(Object.entries(headers).map(([key, value]) =>
+    key.toLowerCase() === "cookie" ? [key, "[REDACTED]"] : [key, value]
+  ));
+}
+
+function classifyStatus(status: number): string {
+  if (status === 401 || status === 403) return "authentication or private-league access denied";
+  if (status === 404) return "resource not found";
+  if (status === 429) return "rate limited";
+  if (status >= 500) return "ESPN server error";
+  return "request rejected";
+}
+
+function isRetryableStatus(status: number): boolean {
+  return status === 429 || status >= 500;
+}
+
+function retryDelay(response: Response, attempt: number): number {
+  const retryAfter = response.headers.get("retry-after");
+  const seconds = retryAfter === null ? Number.NaN : Number(retryAfter);
+  return Number.isFinite(seconds) && seconds >= 0 ? Math.min(seconds * 1000, 2_000) : 100 * 2 ** attempt;
+}
+
+function isRetryableReadError(error: unknown): boolean {
+  return error instanceof TypeError || (error instanceof Error && (error.name === "AbortError" || error.name === "TimeoutError"));
+}
+
+function safeReadError(error: unknown): PmtError {
+  return new PmtError({
+    code: "ESPN_READ_UNAVAILABLE",
+    message: error instanceof Error && error.name === "AbortError"
+      ? "ESPN read timed out after bounded retries."
+      : "ESPN read failed after bounded retries.",
+    source: "platform_adapter",
+    retryable: true
+  });
+}
+
+function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

@@ -1,6 +1,10 @@
 import type { PlayerPosition } from "../models/types.js";
 
 export interface ProjectionCandidate {
+  /** Source-native identifier when supplied by the projection provider. */
+  readonly player_id?: string;
+  readonly scoring_period?: string;
+  readonly observed_at?: string;
   readonly name: string;
   readonly team: string;
   readonly positions: PlayerPosition[];
