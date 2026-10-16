@@ -1,0 +1,320 @@
+{
+  "model": "raw-stat-shrunk-recency-v1",
+  "cohort": "REG player-game rows with observed NFLverse PPR; inactive absent",
+  "not_for_wagering": "No archived odds, unavailable/inactive capture, or team-game covariance; ROI untestable",
+  "data_sha256": {
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2019.csv.gz": "bd5d2e99c0b9f34a9d6fea7ebccd1c207112374b801412be03b776e158c34826",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2020.csv.gz": "c1206df91ca88c0c7ef37809bcef132267b75823c83f3620639d6510a4435411",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2021.csv.gz": "1b6eff730fb10a61ad7681c293000d6653fb583259d771d40d8d025fe8fca36a",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2022.csv.gz": "0f064dede2896107868d784ede7a92cbe239852f7274c12c4589bcfd5e129b4a",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2023.csv.gz": "6c2258cf5d90cb918dfca093b20dba2e062b1eca54f5d2d348f15a0045d86113",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2024.csv.gz": "61fc9a44706522218a4448001706e3fec65ebbb97c1d9c5746ceef364989125d",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2025.csv.gz": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b"
+  },
+  "baseline_replay_regimes": [
+    "adaptive_expanding",
+    "frozen_weights_adaptive_features",
+    "frozen_preseason"
+  ],
+  "legacy_source_drift_2024": {
+    "QB": {
+      "legacy_observed": 664,
+      "matched": 664,
+      "changed_outcomes": 2
+    },
+    "RB": {
+      "legacy_observed": 1343,
+      "matched": 1340,
+      "changed_outcomes": 3
+    },
+    "WR": {
+      "legacy_observed": 2132,
+      "matched": 2130,
+      "changed_outcomes": 3
+    },
+    "TE": {
+      "legacy_observed": 1088,
+      "matched": 1083,
+      "changed_outcomes": 1
+    }
+  },
+  "calibration": {
+    "season": 2023,
+    "settings": {
+      "QB": {
+        "lag": 4,
+        "recency": 1.0,
+        "shrink": 2.0,
+        "calibration_mae_2023": 6.261274448956824,
+        "calibration_rows": 663
+      },
+      "RB": {
+        "lag": 4,
+        "recency": 1.0,
+        "shrink": 2.0,
+        "calibration_mae_2023": 4.619816896693096,
+        "calibration_rows": 1474
+      },
+      "WR": {
+        "lag": 8,
+        "recency": 1.0,
+        "shrink": 2.0,
+        "calibration_mae_2023": 4.671785076374163,
+        "calibration_rows": 2476
+      },
+      "TE": {
+        "lag": 8,
+        "recency": 1.0,
+        "shrink": 2.0,
+        "calibration_mae_2023": 3.6426105454916438,
+        "calibration_rows": 1188
+      }
+    }
+  },
+  "ppr_parity_2024": {
+    "n": 5864,
+    "mismatches": 0
+  },
+  "comparisons": {
+    "2024_QB_replay_matched": {
+      "n": 664,
+      "raw_mae": 6.580063552302711,
+      "raw_rmse": 8.287148801192982,
+      "baseline_mae": 6.28348891799768,
+      "baseline_rmse": 7.865823789420636,
+      "baseline_mae_minus_raw_mae": -0.2965746343050315,
+      "ci95_low": -0.492769086189593,
+      "ci95_high": -0.12063113542448124,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_QB_frozen_weights_adaptive_features": {
+      "n": 664,
+      "raw_mae": 6.580063552302711,
+      "raw_rmse": 8.287148801192982,
+      "baseline_mae": 6.290305532123805,
+      "baseline_rmse": 7.871221122267067,
+      "baseline_mae_minus_raw_mae": -0.28975802017890595,
+      "ci95_low": -0.48513509550191103,
+      "ci95_high": -0.11446895639740076,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_QB_frozen_preseason": {
+      "n": 664,
+      "raw_mae": 6.580063552302711,
+      "raw_rmse": 8.287148801192982,
+      "baseline_mae": 6.921223205978282,
+      "baseline_rmse": 8.75645121281583,
+      "baseline_mae_minus_raw_mae": 0.3411596536755709,
+      "ci95_low": -0.0017916929090872416,
+      "ci95_high": 0.6586012214968024,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_QB_rolling_points": {
+      "n": 664,
+      "raw_mae": 6.589400901700301,
+      "raw_rmse": 8.292033165567776,
+      "baseline_mae": 6.555803641511016,
+      "baseline_rmse": 8.378846553660447,
+      "baseline_mae_minus_raw_mae": -0.0335972601892856,
+      "ci95_low": -0.11403577889069315,
+      "ci95_high": 0.03677211663576638,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_RB_replay_matched": {
+      "n": 1340,
+      "raw_mae": 5.023710019511736,
+      "raw_rmse": 6.671664766877652,
+      "baseline_mae": 4.844819744227231,
+      "baseline_rmse": 6.420390059517853,
+      "baseline_mae_minus_raw_mae": -0.17889027528450452,
+      "ci95_low": -0.3027905456609174,
+      "ci95_high": -0.06246554420926628,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_RB_frozen_weights_adaptive_features": {
+      "n": 1340,
+      "raw_mae": 5.023710019511736,
+      "raw_rmse": 6.671664766877652,
+      "baseline_mae": 4.838988282902105,
+      "baseline_rmse": 6.418866893853403,
+      "baseline_mae_minus_raw_mae": -0.18472173660963107,
+      "ci95_low": -0.30785668572042213,
+      "ci95_high": -0.0691995644795284,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_RB_frozen_preseason": {
+      "n": 1340,
+      "raw_mae": 5.023710019511736,
+      "raw_rmse": 6.671664766877652,
+      "baseline_mae": 5.300645133562279,
+      "baseline_rmse": 7.006805109514359,
+      "baseline_mae_minus_raw_mae": 0.2769351140505433,
+      "ci95_low": 0.06368564448007502,
+      "ci95_high": 0.4807198966164767,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_RB_rolling_points": {
+      "n": 1536,
+      "raw_mae": 4.710574119524966,
+      "raw_rmse": 6.346825745041836,
+      "baseline_mae": 4.6107977526710116,
+      "baseline_rmse": 6.392428531510338,
+      "baseline_mae_minus_raw_mae": -0.09977636685395443,
+      "ci95_low": -0.14724789383513928,
+      "ci95_high": -0.05389782194499674,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_WR_replay_matched": {
+      "n": 2130,
+      "raw_mae": 4.993798258064732,
+      "raw_rmse": 6.785589271604112,
+      "baseline_mae": 4.979349229253098,
+      "baseline_rmse": 6.648208052653868,
+      "baseline_mae_minus_raw_mae": -0.014449028811633503,
+      "ci95_low": -0.11453619189636521,
+      "ci95_high": 0.08474591385094424,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_WR_frozen_weights_adaptive_features": {
+      "n": 2130,
+      "raw_mae": 4.993798258064732,
+      "raw_rmse": 6.785589271604112,
+      "baseline_mae": 4.97816234696924,
+      "baseline_rmse": 6.646885177764904,
+      "baseline_mae_minus_raw_mae": -0.015635911095491367,
+      "ci95_low": -0.11454354240430092,
+      "ci95_high": 0.08275460634890287,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_WR_frozen_preseason": {
+      "n": 2130,
+      "raw_mae": 4.993798258064732,
+      "raw_rmse": 6.785589271604112,
+      "baseline_mae": 5.465989488446565,
+      "baseline_rmse": 7.2536650181686095,
+      "baseline_mae_minus_raw_mae": 0.4721912303818333,
+      "ci95_low": 0.2947984183589959,
+      "ci95_high": 0.6347818457780061,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_WR_rolling_points": {
+      "n": 2441,
+      "raw_mae": 4.738975891658664,
+      "raw_rmse": 6.474992166312423,
+      "baseline_mae": 4.7885552420856055,
+      "baseline_rmse": 6.7132856631614235,
+      "baseline_mae_minus_raw_mae": 0.049579350426942254,
+      "ci95_low": -0.05386554080847487,
+      "ci95_high": 0.1489713048813475,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_TE_replay_matched": {
+      "n": 1083,
+      "raw_mae": 3.816038810326749,
+      "raw_rmse": 5.182909268283562,
+      "baseline_mae": 3.789909662119511,
+      "baseline_rmse": 5.066585501183216,
+      "baseline_mae_minus_raw_mae": -0.026129148207237166,
+      "ci95_low": -0.11277350381335019,
+      "ci95_high": 0.06250328335219077,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_TE_frozen_weights_adaptive_features": {
+      "n": 1083,
+      "raw_mae": 3.816038810326749,
+      "raw_rmse": 5.182909268283562,
+      "baseline_mae": 3.79422481608193,
+      "baseline_rmse": 5.066861115372001,
+      "baseline_mae_minus_raw_mae": -0.021813994244818658,
+      "ci95_low": -0.10908417421181607,
+      "ci95_high": 0.06815345644547112,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_TE_frozen_preseason": {
+      "n": 1083,
+      "raw_mae": 3.816038810326749,
+      "raw_rmse": 5.182909268283562,
+      "baseline_mae": 4.04571736674011,
+      "baseline_rmse": 5.451267873888828,
+      "baseline_mae_minus_raw_mae": 0.22967855641336152,
+      "ci95_low": 0.09836859382626713,
+      "ci95_high": 0.3786580653715515,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2024_TE_rolling_points": {
+      "n": 1223,
+      "raw_mae": 3.709417683078261,
+      "raw_rmse": 4.998634796545664,
+      "baseline_mae": 3.7357291258585015,
+      "baseline_rmse": 5.13058039149696,
+      "baseline_mae_minus_raw_mae": 0.02631144278024047,
+      "ci95_low": -0.04866034908512897,
+      "ci95_high": 0.11341376110824627,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2025_QB_rolling_points": {
+      "n": 664,
+      "raw_mae": 7.095448493867232,
+      "raw_rmse": 8.826242825002037,
+      "baseline_mae": 7.113009668050141,
+      "baseline_rmse": 8.94641970364637,
+      "baseline_mae_minus_raw_mae": 0.017561174182909003,
+      "ci95_low": -0.06591137644333034,
+      "ci95_high": 0.1075508923602797,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2025_RB_rolling_points": {
+      "n": 1575,
+      "raw_mae": 4.69085043814755,
+      "raw_rmse": 6.486361160326588,
+      "baseline_mae": 4.604720189911285,
+      "baseline_rmse": 6.546669120509114,
+      "baseline_mae_minus_raw_mae": -0.08613024823626503,
+      "ci95_low": -0.11499400778671004,
+      "ci95_high": -0.053400737208565245,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2025_WR_rolling_points": {
+      "n": 2511,
+      "raw_mae": 4.506188106400488,
+      "raw_rmse": 6.014892068910672,
+      "baseline_mae": 4.456737905672989,
+      "baseline_rmse": 6.202199685706931,
+      "baseline_mae_minus_raw_mae": -0.049450200727499574,
+      "ci95_low": -0.1533464725705209,
+      "ci95_high": 0.045996576793504766,
+      "resamples": 2000,
+      "blocks": 18
+    },
+    "2025_TE_rolling_points": {
+      "n": 1287,
+      "raw_mae": 3.7278131364443796,
+      "raw_rmse": 5.188217009294494,
+      "baseline_mae": 3.805701075344235,
+      "baseline_rmse": 5.462137999519253,
+      "baseline_mae_minus_raw_mae": 0.07788793889985511,
+      "ci95_low": -0.04275673828149171,
+      "ci95_high": 0.19756136120307421,
+      "resamples": 2000,
+      "blocks": 18
+    }
+  }
+}

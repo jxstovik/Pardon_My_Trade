@@ -1,0 +1,5 @@
+# Regenerable individual rows and intermediate residuals are intentionally local.
+predictions.jsonl
+opportunity-predictions.jsonl
+residuals-2023.json
+*-preview.png

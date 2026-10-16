@@ -1,0 +1,385 @@
+{
+  "model": "opportunity-rate-v1 with 2022 joint residuals",
+  "data_sha256": {
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2019.csv.gz": "bd5d2e99c0b9f34a9d6fea7ebccd1c207112374b801412be03b776e158c34826",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2020.csv.gz": "c1206df91ca88c0c7ef37809bcef132267b75823c83f3620639d6510a4435411",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2021.csv.gz": "1b6eff730fb10a61ad7681c293000d6653fb583259d771d40d8d025fe8fca36a",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2022.csv.gz": "0f064dede2896107868d784ede7a92cbe239852f7274c12c4589bcfd5e129b4a",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2023.csv.gz": "6c2258cf5d90cb918dfca093b20dba2e062b1eca54f5d2d348f15a0045d86113",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2024.csv.gz": "61fc9a44706522218a4448001706e3fec65ebbb97c1d9c5746ceef364989125d",
+    "/home/jordan-stovik/Pardon_My_Trade/data/nflverse/stats_player_week_2025.csv.gz": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b"
+  },
+  "restrictions": "Selected fixed example thresholds; observed player-games only; no odds, ROI, or availability model",
+  "thresholds": {
+    "QB": [
+      "passing_yards",
+      249.5
+    ],
+    "RB": [
+      "rushing_yards",
+      59.5
+    ],
+    "WR": [
+      "receptions",
+      4.5
+    ],
+    "TE": [
+      "receptions",
+      3.5
+    ]
+  },
+  "scores": {
+    "2024_QB_passing_yards": {
+      "n": 664,
+      "stat": "passing_yards",
+      "threshold": 249.5,
+      "event_rate": 0.2936746987951807,
+      "model_brier": 0.19286180978798004,
+      "baseline_brier": 0.21094238545879015,
+      "rolling_event_brier": 0.19882968135839663,
+      "mean_probability": 0.28561511671686746,
+      "baseline_probability": 0.35294117647058826,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 235,
+          "predicted": 0.08902925531914893,
+          "observed": 0.14042553191489363
+        },
+        {
+          "bucket": 1,
+          "n": 266,
+          "predicted": 0.30219102443609025,
+          "observed": 0.34962406015037595
+        },
+        {
+          "bucket": 2,
+          "n": 121,
+          "predicted": 0.4850852272727273,
+          "observed": 0.38016528925619836
+        },
+        {
+          "bucket": 3,
+          "n": 34,
+          "predicted": 0.6675091911764706,
+          "observed": 0.5294117647058824
+        },
+        {
+          "bucket": 4,
+          "n": 8,
+          "predicted": 0.869140625,
+          "observed": 0.625
+        }
+      ]
+    },
+    "2025_QB_passing_yards": {
+      "n": 664,
+      "stat": "passing_yards",
+      "threshold": 249.5,
+      "event_rate": 0.2921686746987952,
+      "model_brier": 0.19954736548733998,
+      "baseline_brier": 0.20935506125685144,
+      "rolling_event_brier": 0.19488351344320332,
+      "mean_probability": 0.28403849774096385,
+      "baseline_probability": 0.34265551489806584,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 220,
+          "predicted": 0.08849431818181819,
+          "observed": 0.17272727272727273
+        },
+        {
+          "bucket": 1,
+          "n": 276,
+          "predicted": 0.29650701992753625,
+          "observed": 0.30434782608695654
+        },
+        {
+          "bucket": 2,
+          "n": 134,
+          "predicted": 0.48309235074626866,
+          "observed": 0.43283582089552236
+        },
+        {
+          "bucket": 3,
+          "n": 33,
+          "predicted": 0.657907196969697,
+          "observed": 0.42424242424242425
+        },
+        {
+          "bucket": 4,
+          "n": 1,
+          "predicted": 0.8515625,
+          "observed": 0.0
+        }
+      ]
+    },
+    "2024_RB_rushing_yards": {
+      "n": 1536,
+      "stat": "rushing_yards",
+      "threshold": 59.5,
+      "event_rate": 0.2109375,
+      "model_brier": 0.12753049532572427,
+      "baseline_brier": 0.1664814735879472,
+      "rolling_event_brier": 0.12253444383140809,
+      "mean_probability": 0.23511759440104166,
+      "baseline_probability": 0.2047244094488189,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 1039,
+          "predicted": 0.08917829643888354,
+          "observed": 0.0741097208854668
+        },
+        {
+          "bucket": 1,
+          "n": 196,
+          "predicted": 0.28762755102040816,
+          "observed": 0.37244897959183676
+        },
+        {
+          "bucket": 2,
+          "n": 94,
+          "predicted": 0.5108045212765957,
+          "observed": 0.5
+        },
+        {
+          "bucket": 3,
+          "n": 105,
+          "predicted": 0.7033482142857143,
+          "observed": 0.5904761904761905
+        },
+        {
+          "bucket": 4,
+          "n": 102,
+          "predicted": 0.8847273284313726,
+          "observed": 0.6372549019607843
+        }
+      ]
+    },
+    "2025_RB_rushing_yards": {
+      "n": 1575,
+      "stat": "rushing_yards",
+      "threshold": 59.5,
+      "event_rate": 0.2088888888888889,
+      "model_brier": 0.13639663938492064,
+      "baseline_brier": 0.16526397765422987,
+      "rolling_event_brier": 0.12885795924416435,
+      "mean_probability": 0.22614087301587302,
+      "baseline_probability": 0.20578137113744602,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 1065,
+          "predicted": 0.09205545774647887,
+          "observed": 0.09014084507042254
+        },
+        {
+          "bucket": 1,
+          "n": 237,
+          "predicted": 0.2791073312236287,
+          "observed": 0.3459915611814346
+        },
+        {
+          "bucket": 2,
+          "n": 96,
+          "predicted": 0.4978841145833333,
+          "observed": 0.4895833333333333
+        },
+        {
+          "bucket": 3,
+          "n": 74,
+          "predicted": 0.6954180743243243,
+          "observed": 0.5405405405405406
+        },
+        {
+          "bucket": 4,
+          "n": 103,
+          "predicted": 0.9002578883495146,
+          "observed": 0.6213592233009708
+        }
+      ]
+    },
+    "2024_WR_receptions": {
+      "n": 2441,
+      "stat": "receptions",
+      "threshold": 4.5,
+      "event_rate": 0.2183531339614912,
+      "model_brier": 0.12663982286652498,
+      "baseline_brier": 0.1706920258287333,
+      "rolling_event_brier": 0.12676046152839365,
+      "mean_probability": 0.21103031544448997,
+      "baseline_probability": 0.22247417485512724,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 1634,
+          "predicted": 0.09156976744186046,
+          "observed": 0.08078335373317014
+        },
+        {
+          "bucket": 1,
+          "n": 435,
+          "predicted": 0.2839978448275862,
+          "observed": 0.38620689655172413
+        },
+        {
+          "bucket": 2,
+          "n": 155,
+          "predicted": 0.49027217741935486,
+          "observed": 0.5225806451612903
+        },
+        {
+          "bucket": 3,
+          "n": 136,
+          "predicted": 0.6934742647058824,
+          "observed": 0.6985294117647058
+        },
+        {
+          "bucket": 4,
+          "n": 81,
+          "predicted": 0.8846450617283951,
+          "observed": 0.7037037037037037
+        }
+      ]
+    },
+    "2025_WR_receptions": {
+      "n": 2511,
+      "stat": "receptions",
+      "threshold": 4.5,
+      "event_rate": 0.17244125846276384,
+      "model_brier": 0.10936352704350856,
+      "baseline_brier": 0.14513889841460018,
+      "rolling_event_brier": 0.11073171846012508,
+      "mean_probability": 0.2101192254082039,
+      "baseline_probability": 0.2217730694173404,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 1685,
+          "predicted": 0.08436572700296736,
+          "observed": 0.05163204747774481
+        },
+        {
+          "bucket": 1,
+          "n": 424,
+          "predicted": 0.28515625,
+          "observed": 0.3089622641509434
+        },
+        {
+          "bucket": 2,
+          "n": 174,
+          "predicted": 0.4916487068965517,
+          "observed": 0.4482758620689655
+        },
+        {
+          "bucket": 3,
+          "n": 121,
+          "predicted": 0.6924070247933884,
+          "observed": 0.4793388429752066
+        },
+        {
+          "bucket": 4,
+          "n": 107,
+          "predicted": 0.8898948598130841,
+          "observed": 0.7383177570093458
+        }
+      ]
+    },
+    "2024_TE_receptions": {
+      "n": 1223,
+      "stat": "receptions",
+      "threshold": 3.5,
+      "event_rate": 0.2346688470973017,
+      "model_brier": 0.139911642253935,
+      "baseline_brier": 0.17991240523322044,
+      "rolling_event_brier": 0.14485486687110768,
+      "mean_probability": 0.23335292313982012,
+      "baseline_probability": 0.21697630816430885,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 791,
+          "predicted": 0.09601177307206069,
+          "observed": 0.10240202275600506
+        },
+        {
+          "bucket": 1,
+          "n": 229,
+          "predicted": 0.2796806768558952,
+          "observed": 0.34934497816593885
+        },
+        {
+          "bucket": 2,
+          "n": 68,
+          "predicted": 0.49620863970588236,
+          "observed": 0.5588235294117647
+        },
+        {
+          "bucket": 3,
+          "n": 59,
+          "predicted": 0.6969014830508474,
+          "observed": 0.5423728813559322
+        },
+        {
+          "bucket": 4,
+          "n": 76,
+          "predicted": 0.9281455592105263,
+          "observed": 0.7368421052631579
+        }
+      ]
+    },
+    "2025_TE_receptions": {
+      "n": 1287,
+      "stat": "receptions",
+      "threshold": 3.5,
+      "event_rate": 0.22843822843822845,
+      "model_brier": 0.12961225650434635,
+      "baseline_brier": 0.17632493265747753,
+      "rolling_event_brier": 0.13061207237895245,
+      "mean_probability": 0.24654598873348874,
+      "baseline_probability": 0.22002820874471085,
+      "draws_per_player": 128,
+      "reliability": [
+        {
+          "bucket": 0,
+          "n": 794,
+          "predicted": 0.08901723866498741,
+          "observed": 0.06801007556675064
+        },
+        {
+          "bucket": 1,
+          "n": 210,
+          "predicted": 0.2833333333333333,
+          "observed": 0.3619047619047619
+        },
+        {
+          "bucket": 2,
+          "n": 122,
+          "predicted": 0.4843109631147541,
+          "observed": 0.5081967213114754
+        },
+        {
+          "bucket": 3,
+          "n": 83,
+          "predicted": 0.6853350903614458,
+          "observed": 0.5662650602409639
+        },
+        {
+          "bucket": 4,
+          "n": 78,
+          "predicted": 0.9122596153846154,
+          "observed": 0.7051282051282052
+        }
+      ]
+    }
+  }
+}
