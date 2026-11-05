@@ -7,6 +7,7 @@ export interface EspnClientOptions {
   readonly baseUrl?: string;
   /** Host used for read-only views (ESPN's `lm-api-reads` mirror). */
   readonly readBaseUrl?: string;
+  readonly writeBaseUrl?: string;
   /** Per-attempt timeout for safe GET requests. */
   readonly timeoutMs?: number;
   /** Number of retries after the first safe GET attempt. */
@@ -37,6 +38,7 @@ export interface EspnRequestScope {
   readonly leagueDefaults?: number;
   /** Use the read host (`lm-api-reads`) instead of the default host. */
   readonly readHost?: boolean;
+  readonly writeHost?: boolean;
 }
 
 export interface EspnGetOptions {
@@ -51,6 +53,7 @@ export interface EspnGetOptions {
 }
 
 const DEFAULT_BASE_URL = "https://fantasy.espn.com/apis/v3/games/ffl/seasons";
+const DEFAULT_WRITE_BASE_URL = "https://lm-api-writes.fantasy.espn.com/apis/v3/games/ffl/seasons";
 const DEFAULT_READ_BASE_URL = "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons";
 
 export class EspnPlatformClient {
@@ -58,6 +61,7 @@ export class EspnPlatformClient {
   private readonly fetchImpl: typeof fetch;
   private readonly baseUrl: string;
   private readonly readBaseUrl: string;
+  private readonly writeBaseUrl: string;
   private readonly timeoutMs: number;
   private readonly readRetries: number;
   private readonly recorded: EspnRequestRecord[] = [];
@@ -67,6 +71,7 @@ export class EspnPlatformClient {
     this.fetchImpl = options.fetchImpl ?? globalThis.fetch;
     this.baseUrl = options.baseUrl ?? DEFAULT_BASE_URL;
     // When a caller pins `baseUrl` (tests, fixtures) honour it for reads too.
+    this.writeBaseUrl = options.writeBaseUrl ?? options.baseUrl ?? DEFAULT_WRITE_BASE_URL;
     this.readBaseUrl = options.readBaseUrl ?? options.baseUrl ?? DEFAULT_READ_BASE_URL;
     this.timeoutMs = options.timeoutMs ?? 10_000;
     this.readRetries = options.readRetries ?? 2;
@@ -92,7 +97,7 @@ export class EspnPlatformClient {
    */
   private resolveBase(scope?: EspnRequestScope): string {
     const season = scope?.season ?? this.credentials.season;
-    const host = scope?.readHost ? this.readBaseUrl : this.baseUrl;
+    const host = scope?.writeHost ? this.writeBaseUrl : scope?.readHost ? this.readBaseUrl : this.baseUrl;
     if (scope?.leagueDefaults !== undefined) {
       return `${host}/${season}/segments/${scope.segment ?? 0}/leaguedefaults/${scope.leagueDefaults}`;
     }
@@ -145,8 +150,8 @@ export class EspnPlatformClient {
     throw safeReadError(lastError);
   }
 
-  async postJson<T>(path: string, body: unknown, filter?: unknown): Promise<T> {
-    const url = new URL(this.resolveBase() + path);
+  async postJson<T>(path: string, body: unknown, filter?: unknown, scope?: EspnRequestScope): Promise<T> {
+    const url = new URL(this.resolveBase(scope) + path);
     const headers = this.buildHeaders({ "content-type": "application/json" });
     if (filter !== undefined) {
       headers["X-Fantasy-Filter"] = JSON.stringify(filter);
