@@ -2,6 +2,7 @@ import { PmtError } from "../errors.js";
 import type { PlayerPosition } from "../models/types.js";
 import type { EspnCredentials } from "../adapters/espn/espn-auth.js";
 import { EspnPlatformClient } from "../adapters/espn/espn-platform-client.js";
+import { ESPN_SCORING_STATS } from "../adapters/espn/espn-scoring.js";
 import type { ProjectionCandidate, ProjectionSource } from "./projection-source.js";
 
 export interface EspnProjectionSourceOptions {
@@ -38,11 +39,6 @@ interface EspnFantasyResponse {
 }
 
 const PLAYER_POSITIONS: Record<number, PlayerPosition> = { 1: "QB", 2: "RB", 3: "WR", 4: "TE", 5: "K", 16: "DST" };
-const ESPN_STAT_MAP: Record<string, string> = {
-  "3": "passing_yards", "4": "passing_touchdowns", "20": "interceptions",
-  "24": "rushing_yards", "25": "rushing_touchdowns", "53": "receptions",
-  "42": "receiving_yards", "43": "receiving_touchdowns", "72": "fumbles_lost"
-};
 
 /**
  * ESPN's fantasy API reports league-scored projected points in player stats.
@@ -104,8 +100,11 @@ export class EspnProjectionSource implements ProjectionSource {
       const name = player.fullName ?? [player.firstName, player.lastName].filter(Boolean).join(" ").trim();
       if (!stats || !name || typeof stats.appliedTotal !== "number" || !Number.isFinite(stats.appliedTotal)) return [];
       const projectedStats: Record<string, number> = {};
-      for (const [statId, value] of Object.entries(stats.appliedStats ?? stats.stats ?? {})) {
-        const mapped = ESPN_STAT_MAP[statId];
+      // appliedStats already contains weighted points contributions. Only raw
+      // stats can be multiplied by league weights; without them retain the
+      // authoritative appliedTotal via the scorer's empty-stat fallback.
+      for (const [statId, value] of Object.entries(stats.stats ?? {})) {
+        const mapped = ESPN_SCORING_STATS[Number(statId)]?.stat;
         if (mapped && Number.isFinite(value)) projectedStats[mapped] = value;
       }
       const points = round(stats.appliedTotal);

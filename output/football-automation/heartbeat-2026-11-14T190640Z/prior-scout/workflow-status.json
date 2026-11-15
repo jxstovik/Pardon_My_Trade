@@ -1,0 +1,186 @@
+{
+  "week": 10,
+  "season": 2026,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "startedAt": "2026-11-10T13:22:47.062Z",
+  "status": "complete",
+  "stage": "Complete",
+  "platformWrites": 0,
+  "calendar": {
+    "scoring_period": "2026-W9",
+    "week": 9,
+    "season": "2026",
+    "offseason": false,
+    "evaluated_at": "2026-11-10T13:22:48.136Z"
+  },
+  "modelBefore": {
+    "model_store": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/data/models.json",
+      "exists": true,
+      "bytes": 370819,
+      "modified_at": "2026-11-10T13:22:46.867Z"
+    },
+    "probabilistic_projections": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/data/probabilistic-projections.json",
+      "exists": false
+    }
+  },
+  "projectionStatus": {
+    "periods": [
+      {
+        "scoring_period": "2026-ROS",
+        "count": 614
+      },
+      {
+        "scoring_period": "2026-W10",
+        "count": 685
+      },
+      {
+        "scoring_period": "2026-W5",
+        "count": 650
+      },
+      {
+        "scoring_period": "2026-W6",
+        "count": 659
+      },
+      {
+        "scoring_period": "2026-W7",
+        "count": 668
+      },
+      {
+        "scoring_period": "2026-W8",
+        "count": 670
+      }
+    ]
+  },
+  "news": {
+    "counts": {
+      "espn": 135,
+      "razzball": 117
+    },
+    "degraded": {}
+  },
+  "archiveStatus": "pregame_archived",
+  "completedAt": "2026-11-10T13:25:26.899Z",
+  "summary": {
+    "week": 10,
+    "owner": "Bored Man Gets Paid",
+    "opponent": "Savior of  the Franchise",
+    "currentMean": 87.93896700743498,
+    "recommendedMean": 111.29676462164896,
+    "opponentCurrentMean": 87.4670014909463,
+    "opponentRecommendedMean": 110.63025959334603,
+    "currentWin": 0.5135714285714286,
+    "recommendedWin": 0.8048571428571428,
+    "winAgainstOpponentRecommended": 0.5168571428571429,
+    "recommendedLineup": {
+      "QB": "Josh Allen",
+      "RB1": "Ashton Jeanty",
+      "RB2": "Tony Pollard",
+      "WR1": "Malik Nabers",
+      "WR2": "Jameson Williams",
+      "TE": "George Kittle",
+      "FLEX": "Wan'Dale Robinson",
+      "D/ST": "Saints D/ST",
+      "K": "Drew Stevens"
+    },
+    "opponentRecommendedLineup": {
+      "QB": "C.J. Stroud",
+      "RB1": "Jaylen Warren",
+      "RB2": "Javonte Williams",
+      "WR1": "Jaxon Smith-Njigba",
+      "WR2": "Marvin Harrison Jr.",
+      "TE": "Tyler Warren",
+      "FLEX": "T.J. Hockenson",
+      "D/ST": "Vikings D/ST",
+      "K": "Evan McPherson"
+    },
+    "currentRange10_90": [
+      65.21140747070312,
+      111.68288955688476
+    ],
+    "recommendedRange10_90": [
+      85.72454223632812,
+      136.85867767333986
+    ],
+    "freeAgentFlex": [
+      {
+        "name": "Caleb Douglas",
+        "mean": 10.758058859253111,
+        "status": "—",
+        "position": "WR"
+      },
+      {
+        "name": "Dylan Sampson",
+        "mean": 10.561312231130586,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Emanuel Wilson",
+        "mean": 10.427406383467225,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Darren Waller",
+        "mean": 10.379622738737858,
+        "status": "—",
+        "position": "TE"
+      },
+      {
+        "name": "Jakobi Meyers",
+        "mean": 9.966891524663534,
+        "status": "—",
+        "position": "WR"
+      },
+      {
+        "name": "Michael Mayer",
+        "mean": 9.696179907232633,
+        "status": "—",
+        "position": "TE"
+      },
+      {
+        "name": "Xavier Worthy",
+        "mean": 9.433621783257635,
+        "status": "Q",
+        "position": "WR"
+      },
+      {
+        "name": "Greg Dulcich",
+        "mean": 9.426323262109676,
+        "status": "—",
+        "position": "TE"
+      }
+    ],
+    "freeAgentDefenses": [
+      {
+        "name": "Ravens D/ST",
+        "mean": 8.75526569401213
+      },
+      {
+        "name": "Colts D/ST",
+        "mean": 8.287755882155283
+      },
+      {
+        "name": "Packers D/ST",
+        "mean": 8.265407726967023
+      },
+      {
+        "name": "Chiefs D/ST",
+        "mean": 7.393519540706327
+      },
+      {
+        "name": "Bills D/ST",
+        "mean": 7.362371905641628
+      }
+    ]
+  },
+  "artifacts": {
+    "html": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week10-scout/week10-scout-interactive.html",
+    "markdown": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week10-scout/week10-scout-report.md",
+    "pdf": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week10-scout/week10-scout-report.pdf",
+    "modelManifest": "/home/jordan-stovik/Pardon_My_Trade/artifacts/week10-2026-scout/manifest.json"
+  }
+}

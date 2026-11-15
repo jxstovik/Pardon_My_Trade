@@ -1,0 +1,10 @@
+{
+  "automationId": "banging-3s-basketball-workflow",
+  "status": "ACTIVE",
+  "recurrenceUnchanged": true,
+  "destinationUnchanged": true,
+  "promptSha256": "b77b2317c15651d5e3acbe312f569fe532b335f93d931310005ffb8b0636c35f",
+  "configurationVerified": true,
+  "newScheduledRunObserved": false,
+  "officialReference": "https://learn.chatgpt.com/docs/automations?surface=app"
+}

@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-28T20:03:00Z",
+  "articleUrl": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+  "articleBrowserState": "FantasyPass boundary after introduction; no newly harvested global ranks or article projection table",
+  "articleDisplayedUpdate": "October27,2026 1:38PM EST",
+  "indexedWebText": "Web extractor exposes fuller text; not used to bypass the observed current browser paywall or renew saved row timestamps",
+  "publicProjections": "Ten rendered rows acquired; no FGFT components displayed",
+  "secondIndependentFantasyProvider": "Focused search found no verified current second college-fantasy projection source; FantraxHQ surfaced NBA rankings, SI individual talent ranks are not fantasy ranks",
+  "scoringSource": {
+    "url": "https://www.rotowire.com/cbasketball/article/dfs-college-basketball-overview-and-strategy-67291",
+    "publishedLabel": "April16,2026 2:13PM EST",
+    "description": "Provider-described DraftKings scoring: PTS1 REB1.25 AST1.5 3PTM0.5 ST2 BLK2 TO-0.5 DD1.5 TD3; no inference of exact bonus-event definitions from marginal means",
+    "officialDKCheck": "ClassicCBB guessed route404; overview is shell; Pick6 rules are a distinct format and not silently substituted"
+  }
+}

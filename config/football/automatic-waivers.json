@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "enabled": true,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "season": 2026,
+  "timezone": "America/New_York",
+  "schedule": "Tuesday 02:00",
+  "model": "gpt-6.1-sol",
+  "reasoningEffort": "medium",
+  "nearTermWeeks": 3,
+  "maxClaims": 2,
+  "protectTopRank": 100,
+  "maxArtifactAgeHours": 20,
+  "authority": "User standing authorization on 2026-11-05: automatically submit prioritized substantial near-term and season-value ESPN waiver claims for team 7. No trades, free-agent pickups, standalone drops or lineup writes. User clarification: six/twenty points are soft suggestions; prioritize probability of starting-lineup improvement, evidenced RB handcuffs and QB-WR combinations, and D/ST/K streaming.",
+  "suggestedNearTermLineupGain": 6,
+  "suggestedSeasonLineupGain": 20,
+  "simulations": 256,
+  "decisionBasis": "Probability and expected value of improving pregame-selected legal starting lineups; RB insurance and evidenced QB-WR covariance; D/ST and K use next-week streaming value. Point benchmarks are soft suggestions."
+}

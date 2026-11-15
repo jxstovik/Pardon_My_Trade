@@ -1,0 +1,30 @@
+{
+  "run": "2026-11-15 Sunday P3 lineup review",
+  "triggerUtc": "2026-11-15T07:29:45.925Z",
+  "targetLocal": "02:30 America/New_York",
+  "triggerDeltaSeconds": -14.075,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "period": 3,
+  "periodDates": "2026-11-16/2026-11-22",
+  "opponent": "NorseUppers",
+  "steps": {
+    "freshFantraxRosterAndSchedule": "completed",
+    "currentStatusRoleCards": "completed for Reid, Campbell, Karasinski, Fisher",
+    "weeklyForecast": "completed; advisory-only; conditional lineup withheld",
+    "historicalDoctorReport": "completed; stale Oct25 capture, zero players",
+    "proposal": "completed; reviewable lineup advisory"
+  },
+  "materialStatus": {
+    "Reid": "ankle GTD for Nov15; 1 P3 game Nov22",
+    "Campbell": "0 GP; GTD for possible Nov18 return; 2 P3 games",
+    "Karasinski": "played Nov13, 23 minutes, 8 points; 2 GP/2 GS; 3 P3 games",
+    "Fisher": "played Nov14, 28 minutes, 5 points; 4 GP/4 GS; 2 P3 games",
+    "Quion": "disabled active Flex, N/A and no listed games; unresolved"
+  },
+  "forecastBaselineDependency": "2026-10-27T11:24:32.000Z",
+  "openGates": ["whole-roster vs player lock scope", "exact lock timezone and UTC instant", "activation", "N/A game counting", "caps", "shooting minimum and rounding", "stale rates", "Quion identity and schedule", "opponent and candidate coverage"],
+  "actions": {"lineup": 0, "claims": 0, "drops": 0, "trades": 0, "settings": 0, "modelTraining": 0, "modelPromotion": 0, "codeChanges": 0, "tests": 0},
+  "nextIntendedCheck": "2026-11-16T07:30:00Z",
+  "notificationRecommendation": "NOTIFY"
+}

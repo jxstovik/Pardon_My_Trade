@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-02T07:29:35.058Z",
+  "triggerLocal": "2026-11-02T02:29:35.058-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": -24.942,
+  "actualObservationLowerBound": "2026-11-02T07:30:00Z",
+  "forecastGeneratedAt": "2026-11-02T07:34:03.192Z",
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationExpiryChanged": false,
+  "automationChangedByWorker": false,
+  "notificationDeliveryVerified": false,
+  "freshReads": [
+    "14 owned roster identities and active/reserve slots",
+    "own period-one game IDs, dates, opponents and displayed times",
+    "JeffWischer 14-player roster and period-one schedule",
+    "current matchup remains JeffWischer",
+    "first 20 current Score-ordered available rows; all Claim and FA",
+    "Fantrax roster displays 2026-27 YTD zeros before listed first games"
+  ],
+  "notFreshOrUnresolved": [
+    "per-game rates and approved board; oldest dependency 2026-10-27T11:24:32Z",
+    "current role/health/availability for all 14",
+    "current candidate schedules: Schedule view reset to different Rank-ordered cohort, so weekly input leaves current 20 candidate schedules unknown",
+    "full available pool",
+    "exact lineup lock scope, timezone and activation",
+    "game UTC instants and N/A opponent counted eligibility",
+    "game caps and shot minimum/rounding",
+    "current opponent category forecast"
+  ],
+  "period1": {
+    "reportRevision": "82dc384f5eb97c56665cda2928ffdf9acd910b068fc536ac3acc3942ae47aca1",
+    "inputHash": "39215e28d0c8731a6f6b3dfd7ae65fc208d38ed897b7e2f66b6b9d72f900e150",
+    "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+    "approvedCorrectedBoardRevision": "344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1",
+    "owned": 14,
+    "currentAvailablePage1": 20,
+    "scheduleMatchedCandidates": 0,
+    "listedAppearancesConditional": 21,
+    "conditionalResult": "The model selects Feroah (3 listed games) over Karasinski (2), but this is research only; no firm lineup advice.",
+    "forecastGeneratedAt": "2026-11-02T07:34:03.192Z",
+    "forecastAgeHours": 140.15866444444444,
+    "blockers": [
+      "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+      "Exact lineup deadline, timezone and first-period activation unresolved",
+      "Team/player game caps and shot minimum/rounding semantics unresolved",
+      "Waiver Friday label observed; exact clearance instant and lineup activation unresolved",
+      "Nov 2 candidate schedule rows for the current first-20 Score cohort were not confirmed; unknown schedules are not treated as zero.",
+      "oldest baseline dependency older than 24 hours; revalidate rates/roles",
+      "schedule lacks verified game instants",
+      "health/role evidence incomplete"
+    ]
+  },
+  "historicalDoctor": {
+    "snapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+    "observedPlayers": 0,
+    "status": "partial; stale pre-draft capture, separate from fresh weekly evidence",
+    "asOf": "2026-11-02T07:34:10Z"
+  },
+  "liveActionsExecuted": 0,
+  "modelPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "syntheticDataUsed": false,
+  "notificationRecommendation": "NOTIFY: first period\u2019s displayed Monday games are today, but exact lock scope/activation/timezone and current health/role evidence are still unresolved; no qualified lineup recommendation is available. Do not imply a verified 6:30 PM deadline."
+}

@@ -1,0 +1,114 @@
+{
+  "week": 6,
+  "owner": "Bored Man Gets Paid",
+  "opponent": "The Ghost of  Cam Akers",
+  "currentMean": 116.11158509168538,
+  "recommendedMean": 116.11158509168538,
+  "opponentCurrentMean": 94.81856726771866,
+  "opponentRecommendedMean": 108.70816283383556,
+  "currentWin": 0.7867142857142857,
+  "recommendedWin": 0.7867142857142857,
+  "winAgainstOpponentRecommended": 0.6101428571428571,
+  "recommendedLineup": {
+    "QB": "Josh Allen",
+    "RB1": "Ashton Jeanty",
+    "RB2": "Tony Pollard",
+    "WR1": "Malik Nabers",
+    "WR2": "Michael Wilson",
+    "TE": "George Kittle",
+    "FLEX": "Wan'Dale Robinson",
+    "D/ST": "Colts D/ST",
+    "K": "Eddy Pineiro"
+  },
+  "opponentRecommendedLineup": {
+    "QB": "Drake Maye",
+    "RB1": "Christian McCaffrey",
+    "RB2": "Braelon Allen",
+    "WR1": "DeVonta Smith",
+    "WR2": "Christian Watson",
+    "TE": "Harold Fannin Jr.",
+    "FLEX": "Jaylen Waddle",
+    "D/ST": "Rams D/ST",
+    "K": "Cam Little"
+  },
+  "currentRange10_90": [
+    90.03985595703125,
+    142.5872009277344
+  ],
+  "recommendedRange10_90": [
+    90.03985595703125,
+    142.5872009277344
+  ],
+  "freeAgentFlex": [
+    {
+      "name": "Darren Waller",
+      "mean": 11.032298276110968,
+      "status": "Q",
+      "position": "TE"
+    },
+    {
+      "name": "Tyler Higbee",
+      "mean": 9.727172288961178,
+      "status": "\u2014",
+      "position": "TE"
+    },
+    {
+      "name": "Jake Ferguson",
+      "mean": 9.578048246581755,
+      "status": "\u2014",
+      "position": "TE"
+    },
+    {
+      "name": "Rashod Bateman",
+      "mean": 9.031338611008366,
+      "status": "Q",
+      "position": "WR"
+    },
+    {
+      "name": "Hunter Henry",
+      "mean": 9.029519820032423,
+      "status": "\u2014",
+      "position": "TE"
+    },
+    {
+      "name": "Cade Otton",
+      "mean": 8.912375603978823,
+      "status": "\u2014",
+      "position": "TE"
+    },
+    {
+      "name": "Blake Corum",
+      "mean": 8.789718967434696,
+      "status": "\u2014",
+      "position": "RB"
+    },
+    {
+      "name": "Chris Godwin Jr.",
+      "mean": 8.688909280294462,
+      "status": "\u2014",
+      "position": "WR"
+    }
+  ],
+  "freeAgentDefenses": [
+    {
+      "name": "49ers D/ST",
+      "mean": 7.390682059854092
+    },
+    {
+      "name": "Buccaneers D/ST",
+      "mean": 7.0041764580285655
+    },
+    {
+      "name": "Bears D/ST",
+      "mean": 6.87686894625988
+    },
+    {
+      "name": "Panthers D/ST",
+      "mean": 6.529090680423047
+    },
+    {
+      "name": "Giants D/ST",
+      "mean": 6.110284580604813
+    }
+  ]
+}

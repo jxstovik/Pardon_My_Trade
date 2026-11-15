@@ -2,10 +2,10 @@
   "players": [
     { "player": { "id": 4037, "firstName": "Christian", "lastName": "McCaffrey", "defaultPositionId": 2, "proTeam": { "abbreviation": "SF" }, "stats": [
       { "seasonId": 2025, "scoringPeriodId": 1, "statSourceId": 0, "statSplitTypeId": 1, "appliedTotal": 0, "appliedStats": {} },
-      { "seasonId": 2025, "scoringPeriodId": 1, "statSourceId": 1, "statSplitTypeId": 1, "appliedTotal": 21.4, "appliedStats": { "24": 95, "25": 0.7, "53": 3.2, "42": 28 } }
+      { "seasonId": 2025, "scoringPeriodId": 1, "statSourceId": 1, "statSplitTypeId": 1, "appliedTotal": 21.4, "stats": { "24": 95, "25": 0.7, "53": 3.2, "42": 28 } }
     ] } },
     { "player": { "id": 3139477, "firstName": "CeeDee", "lastName": "Lamb", "defaultPositionId": 3, "proTeam": { "abbreviation": "DAL" }, "stats": [
-      { "seasonId": 2025, "scoringPeriodId": 1, "statSourceId": 1, "statSplitTypeId": 1, "appliedTotal": 18.1, "appliedStats": { "53": 6.1, "42": 84, "43": 0.5 } }
+      { "seasonId": 2025, "scoringPeriodId": 1, "statSourceId": 1, "statSplitTypeId": 1, "appliedTotal": 18.1, "stats": { "53": 6.1, "42": 84, "43": 0.5 } }
     ] } },
     { "player": { "id": 10000, "fullName": "Unmatched Player", "defaultPositionId": 1, "proTeam": { "abbreviation": "GB" }, "stats": [
       { "seasonId": 2025, "scoringPeriodId": 2, "statSourceId": 1, "statSplitTypeId": 1, "appliedTotal": 12, "appliedStats": {} }

@@ -1,0 +1,15 @@
+{
+  "id": "pmt-football-lineup-and-free-agent-checks",
+  "status": "ACTIVE",
+  "rrule": "FREQ=WEEKLY;BYDAY=TH,SA,SU;BYHOUR=1;BYMINUTE=0;BYSECOND=0",
+  "targetThreadId": "01a1aba9-f206-7c11-8339-8ff0f4782974",
+  "fileSha256": "4e448080262bd14e61a905a59859dd5341cc640578a2eb4719ccac80b03715d6",
+  "workerModelRequired": "gpt-6.1-sol",
+  "workerReasoningRequired": "medium",
+  "workerInheritedOriginalConfiguration": true,
+  "triggerAt": "2026-11-15T06:00:45.698Z",
+  "localTrigger": "2026-11-15T01:00:45.698-05:00",
+  "lateTriggerSeconds": 45.698,
+  "changed": false,
+  "observation": "Timely01:00local dispatch; recurrence remains TH/SA/SU. No schedule change indicated."
+}

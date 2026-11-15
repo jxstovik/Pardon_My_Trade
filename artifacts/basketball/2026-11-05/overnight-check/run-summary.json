@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-05T07:33:40.555Z",
+  "triggerLocal": "2026-11-05T02:33:40.555-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": 220.555,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "freshReads": [],
+  "refreshAttempts": [
+    {
+      "method": "documented read-only Fantrax CLI probe",
+      "endpoint": "getMatchupScores",
+      "period": 2,
+      "result": "TRANSPORT_UNAVAILABLE",
+      "detail": "Request did not complete; no HTTP status or response body was received; prior captures unchanged."
+    },
+    {
+      "method": "authenticated browser",
+      "result": "unavailable in this subagent browser surface",
+      "detail": "No existing browser tabs were present. Attempted createBrowserTab('iab', same league URL, {visible:true}); CUA returned: 'IAB visibility is not supported in a subagent thread.' Then attempted the hidden fallback once with {visible:false}; CUA returned: 'Browser is not available: iab'. No Fantrax page was opened."
+    }
+  ],
+  "notFreshOrUnresolved": [
+    "No roster, ownership, slot, current matchup, available-player, schedule, status/role, or period-two opponent observation was refreshed today.",
+    "Nov4 period-two capture and forecast remain immutable; do not treat them as today's refresh.",
+    "Approved board and oldest underlying statistical dependency remain Oct27; no source age or hash was renewed.",
+    "Exact lock scope/timezone/activation, game instants, counted eligibility, caps, minimum and rounding remain unresolved.",
+    "Candidate schedules, complete available pool, and period-two opponent remain unknown."
+  ],
+  "period1": {
+    "number": 1,
+    "forecastRerun": false,
+    "reason": "Period-one games have started; preserve the immutable Nov2 pre-lock forecast."
+  },
+  "period2": {
+    "number": 2,
+    "forecastRerun": false,
+    "reason": "No newly refreshed scoped future-period input was obtained today."
+  },
+  "historicalDoctor": {
+    "generatedAt": "2026-11-05T07:34:44Z",
+    "command": "doctor + report",
+    "status": "partial; stale Oct25 pre-draft 0-player capture; separate from live weekly evidence",
+    "reportDirectory": "data/basketball/mmioj1mvmvgsc3io/reports/bbe21e4223015e8f2ba491d4068898d0c73fcf07ebaca28e4c9a050cc781f883"
+  },
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "sourceFailure": "The authenticated browser was unavailable in this subagent thread, and the documented read-only getMatchupScores period-2 request failed at transport before receiving an HTTP response. Current roster, matchup, schedules, candidate pool, player status/roles and next-period opponent are unknown for this run; no unchanged-state claim is made.",
+  "notificationRecommendation": "NOTIFY: today's authorized refresh could not obtain any live league evidence because the authenticated browser surface is unsupported in this subagent thread and the documented read-only request failed at transport. This is a workflow/source failure, not evidence that league state stayed unchanged."
+}

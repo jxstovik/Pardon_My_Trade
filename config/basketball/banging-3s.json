@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "leagueName": "Banging 3s",
+  "seasonYear": 2026,
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "teamConfirmed": true,
+  "initialProfile": "balanced",
+  "operatorTimezone": "America/New_York",
+  "competition": "NCAAB",
+  "authenticatedState": {
+    "source": {
+      "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+      "observedAt": "2026-10-27T12:02:13Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset"
+    },
+    "competitionCode": "NCAAB",
+    "draftState": "not-held-scheduled",
+    "ownRosterCount": 0,
+    "draftStart": "2026-10-28T21:00:00-04:00"
+  },
+  "rules": {
+    "source": {
+      "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+      "observedAt": "2026-10-27T12:02:36Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset"
+    },
+    "seasonLabel": "2026-27",
+    "lineupCadence": "weekly-monday",
+    "lockOffsetMinutes": 0,
+    "lockScope": null,
+    "leagueTimezone": null,
+    "activationRule": null,
+    "minimumTotal": 0,
+    "minimumActive": 0,
+    "injuryReserve": false,
+    "minorLeague": false,
+    "preventIllegalTransactions": "always",
+    "weeklyClaims": "unlimited",
+    "seasonClaims": "unlimited",
+    "freeAgents": "first-come-first-served",
+    "waiverMethod": "rotating-priority",
+    "waiverDays": 2,
+    "minimumWaiverHours": 23,
+    "antiChurning": true,
+    "undraftedToWaivers": true,
+    "claimsBeforeDraft": false,
+    "dropsDuringDraft": false,
+    "currentWaiverPriority": null,
+    "waiverProcessing": null,
+    "tradeReviewDays": 2,
+    "tradeObjections": 4,
+    "tradeDeadline": "none",
+    "playoffReseed": false,
+    "playoffTie": "higher-seed",
+    "standingsTies": [
+      "head-to-head-among-tied",
+      "season-wins",
+      "random"
+    ],
+    "statFreezeHours": 168,
+    "gameCaps": null,
+    "shotMinimums": null,
+    "categoryComparison": null
+  }
+}

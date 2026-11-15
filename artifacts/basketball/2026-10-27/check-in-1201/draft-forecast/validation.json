@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "counts": {
+    "availablePool": 5687,
+    "forecasted": 2209,
+    "providerSupplemented": 29,
+    "coldStarts": 3,
+    "excluded": 3478
+  },
+  "build": "passed",
+  "typecheck": "passed",
+  "compiledBasketballTests": {
+    "passed": 26,
+    "failed": 0,
+    "buildBeforeTests": true,
+    "newCase": "provider-backed six-game history receives explicit short-history shooting/stocks review flag"
+  },
+  "realDataCheck": {
+    "RodneyRice": {
+      "id": "064zc",
+      "categoryRank": 95,
+      "draftPriority": 132,
+      "providerRank": 25,
+      "historicalGP": 6,
+      "flags": [
+        "current-availability-unverified",
+        "short-history-shooting-steals-blocks-review",
+        "large-provider-category-rank-disagreement"
+      ]
+    },
+    "cachedADPCoverageAudit": "../coverage-audit.json"
+  },
+  "rehearsal": {
+    "synthetic": true,
+    "realForecastInputs": true,
+    "selected": 112,
+    "own": 14,
+    "active": 10,
+    "reserve": 4,
+    "platformCalls": 0
+  },
+  "sourceRefresh": {
+    "browserHomeRulesOwnRoster": true,
+    "newProviderRow": true,
+    "historicalPoolCsv": false,
+    "draftApi": false,
+    "doctorCreatesSourceObservations": false
+  },
+  "modelTrained": false,
+  "modelPromoted": false,
+  "liveActionsExecuted": 0,
+  "newIndependentReview": "not run for this bounded one-row/flag change; prior review applies to earlier board, retained coverage/status limits remain",
+  "fileSha256": {
+    "src/basketball/forecast.ts": "245417eb40477079e11d46bef6c0403cf347a7ea28b96ebed107d0d77aef8e45",
+    "src/basketball/draft.ts": "4541bc60833f5228fc3afc1faf0d46590a22ed10b06f46492356edc95070af3c",
+    "src/basketball/cli.ts": "f19f5c650f6583ef4307feec0c691ad3b86863a4c7476416c0bcc2513c09fda9",
+    "src/basketball/report.ts": "443ccf23292dca9df4bd9cf1b9c80edc620a4760f4b6b2b03a7e0a0a0f62f65d",
+    "tests/basketball-draft-forecast.test.ts": "10acb74274c080bdd6aa85ac6b8cb3383c19acdf3f6b074005ac018c7c5fa13c",
+    "scripts/basketball/draft-rehearsal.mjs": "1546ae6f06323930aa357610e90ce70f469f6214cf45e794b4d706872098f18f",
+    "config/basketball/provider-supplement.json": "cd508b8425f6d4051315cc24a4840523c1822a3b6eee92cde9cc093ae10f027b",
+    "config/basketball/draft-status.json": "516ba4b7dc675fb45a958707e72ed44dd9c565ea2cc46967c83b1339a0120100",
+    "config/basketball/banging-3s.json": "562251417df3c247bc9731424a31cb75f8b9418be7dedc118bb8551990f3f376"
+  }
+}

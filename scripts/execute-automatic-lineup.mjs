@@ -20,7 +20,7 @@ const reader = new EspnPlatformReader();
 const writer = new EspnPlatformWriter();
 if (writer.client.credentials.leagueId !== authorization.leagueId || writer.client.credentials.season !== authorization.season) throw new Error('Writer credentials differ from authorized scope.');
 const store = new SqliteActionExecutionStore(config.databasePath);
-const lockPath = resolve(config.dataDir, `automatic-lineup-${authorization.leagueId}-${authorization.teamId}.lock`);
+const lockPath = resolve(config.dataDir, `acquisitions-${authorization.leagueId}-${authorization.teamId}.lock`);
 const lock = await open(lockPath, 'wx').catch(() => { throw new Error('Lineup runner already active or stale lock present; reconcile receipts before removing its lock.'); });
 try {
 const result = await executeAutomaticLineup({

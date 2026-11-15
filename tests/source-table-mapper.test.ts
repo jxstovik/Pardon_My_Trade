@@ -86,6 +86,32 @@ test("PPG rows are never divided again", () => {
   assert.ok(Math.abs(candidates[0].projected_points - 17.5) < 1e-9, "PPG used as-is");
 });
 
+test("full PPR selection excludes half PPR for both totals and per-game columns", () => {
+  for (const suffix of ["PTS", "PPG"]) {
+    const headers = ["Name", `STD ${suffix}`, `1/2 PPR ${suffix}`, `PPR ${suffix}`];
+    assert.equal(detectColumnRoles(headers, "ppr").pointsIdx, 3);
+    assert.equal(detectColumnRoles(headers, "half").pointsIdx, 2);
+    assert.equal(detectColumnRoles(headers, "std").pointsIdx, 1);
+  }
+});
+
+test("Team-only defense tables map team identity without enabling non-defense team rows", () => {
+  const table = {
+    headers: ["#", "Team", "Games", "Sacks", "STD PTS"],
+    rows: [["1", "BUF", "11", "26.4", "88.0"]]
+  };
+  const candidates = mapTableToCandidates(table, { source: "razzball", fallbackPosition: "DST" });
+  assert.equal(candidates.length, 1);
+  assert.equal(candidates[0].name, "BUF");
+  assert.equal(candidates[0].team, "BUF");
+  assert.deepEqual(candidates[0].positions, ["DST"]);
+  assert.equal(candidates[0].projected_stats.sacks, 26.4);
+  assert.equal(candidates[0].projected_points, 8);
+  assert.deepEqual(mapTableToCandidates(table, { source: "razzball", fallbackPosition: "QB" }), []);
+  assert.deepEqual(mapTableToCandidates({ headers: ["STD PTS"], rows: [["88"]] },
+    { source: "razzball", fallbackPosition: "DST" }), []);
+});
+
 test("parseNumber handles commas, parens, and dashes", () => {
   assert.equal(parseNumber("1,100"), 1100);
   assert.equal(parseNumber("(5)"), -5);

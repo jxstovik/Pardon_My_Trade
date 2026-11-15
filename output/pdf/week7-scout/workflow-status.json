@@ -1,0 +1,133 @@
+{
+  "week": 7,
+  "season": 2026,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "startedAt": "2026-10-25T13:12:46.281Z",
+  "status": "complete",
+  "stage": "Complete",
+  "platformWrites": 0,
+  "archiveStatus": "not_archived",
+  "archiveWarning": "Archive failed (possibly past kickoff). Do not label this refresh as a verified pregame archive.",
+  "completedAt": "2026-10-25T13:12:47.443Z",
+  "summary": {
+    "week": 7,
+    "owner": "Bored Man Gets Paid",
+    "opponent": "23andMe",
+    "currentMean": 112.13682659044844,
+    "recommendedMean": 112.62882734610298,
+    "opponentCurrentMean": 122.57425748196123,
+    "opponentRecommendedMean": 122.74516970572303,
+    "currentWin": 0.36042857142857143,
+    "recommendedWin": 0.37142857142857144,
+    "winAgainstOpponentRecommended": 0.37142857142857144,
+    "recommendedLineup": {
+      "QB": "Aaron Rodgers",
+      "RB1": "Ashton Jeanty",
+      "RB2": "Tony Pollard",
+      "WR1": "Malik Nabers",
+      "WR2": "Michael Wilson",
+      "TE": "George Kittle",
+      "FLEX": "Wan'Dale Robinson",
+      "D/ST": "Titans D/ST",
+      "K": "Harrison Butker"
+    },
+    "opponentRecommendedLineup": {
+      "QB": "Patrick Mahomes",
+      "RB1": "Kenneth Walker III",
+      "RB2": "Bucky Irving",
+      "WR1": "Ja'Marr Chase",
+      "WR2": "Tetairoa McMillan",
+      "TE": "Trey McBride",
+      "FLEX": "Travis Kelce",
+      "D/ST": "Texans D/ST",
+      "K": "Spencer Shrader"
+    },
+    "currentRange10_90": [
+      86.33759689331055,
+      137.74033813476564
+    ],
+    "recommendedRange10_90": [
+      86.68065185546875,
+      138.57970733642577
+    ],
+    "freeAgentFlex": [
+      {
+        "name": "Travis Etienne Jr.",
+        "mean": 11.403070162868662,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Tyler Higbee",
+        "mean": 10.764740751226181,
+        "status": "—",
+        "position": "TE"
+      },
+      {
+        "name": "Pierre Strong Jr.",
+        "mean": 10.187150146808447,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Michael Mayer",
+        "mean": 9.981304991900112,
+        "status": "—",
+        "position": "TE"
+      },
+      {
+        "name": "De'Von Achane",
+        "mean": 9.969620533652694,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Samaje Perine",
+        "mean": 9.66535072920983,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Adonai Mitchell",
+        "mean": 9.618003470174543,
+        "status": "—",
+        "position": "WR"
+      },
+      {
+        "name": "Roschon Johnson",
+        "mean": 9.373982554851155,
+        "status": "—",
+        "position": "RB"
+      }
+    ],
+    "freeAgentDefenses": [
+      {
+        "name": "Bears D/ST",
+        "mean": 7.6630085031386495
+      },
+      {
+        "name": "Panthers D/ST",
+        "mean": 7.41302877488947
+      },
+      {
+        "name": "Cardinals D/ST",
+        "mean": 6.920707121704171
+      },
+      {
+        "name": "Dolphins D/ST",
+        "mean": 6.843538996193736
+      },
+      {
+        "name": "Cowboys D/ST",
+        "mean": 6.2167729637263935
+      }
+    ]
+  },
+  "artifacts": {
+    "html": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week7-scout/week7-scout-interactive.html",
+    "markdown": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week7-scout/week7-scout-report.md",
+    "pdf": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week7-scout/week7-scout-report.pdf",
+    "modelManifest": "/home/jordan-stovik/Pardon_My_Trade/artifacts/week7-2026-scout/manifest.json"
+  }
+}

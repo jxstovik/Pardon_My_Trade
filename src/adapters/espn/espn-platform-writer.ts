@@ -5,12 +5,11 @@ import type {
   WaiverClaimAction
 } from "../../agents/types.js";
 import type { PlatformWriter } from "../platform-writer.js";
-import { mapPositionToEspnSlot, loadEspnCredentials, type EspnCredentials } from "./espn-auth.js";
+import { loadEspnCredentials, type EspnCredentials } from "./espn-auth.js";
 import {
-  buildEspnAddDropPayload,
-  buildEspnRosterPayload,
   buildEspnTradePayload
 } from "./espn-platform-reader.js";
+import { mapPositionToEspnSlot } from "./espn-auth.js";
 import { EspnPlatformClient } from "./espn-platform-client.js";
 
 export interface EspnPlatformWriterOptions {
@@ -49,24 +48,28 @@ export class EspnPlatformWriter implements PlatformWriter {
 
   async addDrop(_leagueExternalId: string, action: AddDropAction): Promise<unknown> {
     this.assertLeague(_leagueExternalId);
-    return this.client.postJson(
-      "/transactions/",
-      buildEspnAddDropPayload(action.teamId, action.addPlayerIds, action.dropPlayerIds, "freeagent")
-    );
+    return this.acquire(action.teamId, action.addPlayerIds, action.dropPlayerIds, "FREEAGENT");
   }
 
   async submitWaiverClaim(_leagueExternalId: string, action: WaiverClaimAction): Promise<unknown> {
     this.assertLeague(_leagueExternalId);
-    return this.client.postJson(
-      "/transactions/",
-      buildEspnAddDropPayload(
-        action.teamId,
-        [action.addPlayerId],
-        action.dropPlayerId ? [action.dropPlayerId] : [],
-        "waivers",
-        action.faabBid
-      )
-    );
+    return this.acquire(action.teamId, [action.addPlayerId], action.dropPlayerId ? [action.dropPlayerId] : [], "WAIVER", action.faabBid, action.priority);
+  }
+
+  private async acquire(teamId: string, adds: string[], drops: string[], type: "FREEAGENT" | "WAIVER", bid?: number, priority?: number): Promise<unknown> {
+    const memberId = this.client.credentials.swid;
+    if (!memberId || !this.client.credentials.espnS2) throw new Error("ESPN acquisition requires authenticated session credentials.");
+    const fresh = await this.client.getJson<{
+      id?: number; seasonId?: number; scoringPeriodId?: number;
+      teams?: Array<{ id: number; owners?: string[] }>;
+    }>("", { view: ["mSettings", "mTeam"], scope: { segment: 0, readHost: true } });
+    if (String(fresh.id) !== this.client.credentials.leagueId || String(fresh.seasonId) !== this.client.credentials.season) throw new Error("ESPN acquisition league or season mismatch.");
+    const team = fresh.teams?.find((team) => String(team.id) === teamId);
+    const identity = (value: string) => value.replace(/[{}]/g, "").toLowerCase();
+    if (!team?.owners?.some((owner) => identity(owner) === identity(memberId))) throw new Error("Authenticated ESPN member does not own the requested team.");
+    if (!Number.isInteger(fresh.scoringPeriodId) || fresh.scoringPeriodId! < 1) throw new Error("ESPN acquisition requires a fresh scoring period.");
+    const body = buildEspnAcquisitionPayload(teamId, memberId, fresh.scoringPeriodId!, adds, drops, type, bid, priority);
+    return this.client.postJson("/transactions/", body, undefined, { segment: 0, writeHost: true });
   }
 
   async proposeTrade(_leagueExternalId: string, action: ProposeTradeAction): Promise<unknown> {
@@ -82,6 +85,19 @@ export class EspnPlatformWriter implements PlatformWriter {
       throw new Error(`ESPN writer is configured for league ${this.client.credentials.leagueId}, not ${leagueExternalId}.`);
     }
   }
+}
+
+/** Wire contract for a manager-owned acquisition; queue authorization is enforced by ActionExecutor. */
+export function buildEspnAcquisitionPayload(teamId: string, memberId: string, scoringPeriodId: number, adds: string[], drops: string[], type: "FREEAGENT" | "WAIVER", bid?: number, priority?: number): Record<string, unknown> {
+  if (!/^\d+$/.test(teamId) || Number(teamId) < 1 || !memberId || !Number.isInteger(scoringPeriodId) || scoringPeriodId < 1) throw new Error("Invalid ESPN acquisition context.");
+  if (adds.length !== 1 || drops.length > 1 || [...adds, ...drops].some((id) => !Number.isSafeInteger(Number(id)) || !/^(?:[1-9]\d*|-160(?:0[1-9]|[12]\d|3[0-4]))$/.test(id)) || new Set([...adds, ...drops]).size !== adds.length + drops.length) throw new Error("ESPN acquisition requires one add and at most one distinct drop.");
+  if (bid !== undefined && (!Number.isSafeInteger(bid) || bid < 0)) throw new Error("Invalid waiver bid.");
+  if (priority !== undefined && (!Number.isSafeInteger(priority) || priority < 1 || type !== "WAIVER")) throw new Error("Invalid waiver claim priority.");
+  return {
+    isLeagueManager: false, teamId: Number(teamId), type, memberId, scoringPeriodId, executionType: "EXECUTE",
+    items: [...adds.map((id) => ({ playerId: Number(id), type: "ADD", toTeamId: Number(teamId) })), ...drops.map((id) => ({ playerId: Number(id), type: "DROP", fromTeamId: Number(teamId) }))],
+    ...(type === "WAIVER" ? { bidAmount: bid ?? null, ...(priority === undefined ? {} : { priority }) } : {})
+  };
 }
 
 interface EspnLineupEntry { lineupSlotId:number; playerPoolEntry:{rosterLocked?:boolean;player:{id:number;eligibleSlots?:number[];locked?:boolean;lockedInLineup?:boolean;lockedForScoringPeriod?:boolean;gameStatus?:string}} }

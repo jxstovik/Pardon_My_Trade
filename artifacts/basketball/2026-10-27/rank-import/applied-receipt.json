@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T18:49:04.454Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "status": "applied-with-12-unmatched-rows",
+  "requested": 2208,
+  "savedAndVerified": 2196,
+  "entireSavedRelativeOrderMatchesModel": true,
+  "readbackObservedAt": "2026-10-27T18:44:17.829Z",
+  "initialRankingEmpty": true,
+  "initialExclusionEmpty": true,
+  "initialPositionOverridesEmpty": true,
+  "importSubmittedOnce": true,
+  "connectionFailure": "Fantrax displayed Trouble connecting after submit. Its reconnect UI reloaded the page; saved ranking then appeared. No second upload was submitted.",
+  "postReconnectPersistenceVerified": true,
+  "knownStatusOmitted": [
+    "06g3w"
+  ],
+  "unmatched": [
+    {
+      "rank": 73,
+      "id": "05pb0",
+      "name": "Skylar Wicks",
+      "school": "Gonz",
+      "adp": 208.5
+    },
+    {
+      "rank": 100,
+      "id": "05xhb",
+      "name": "Anquan Hill",
+      "school": "SacHr",
+      "adp": 197.5
+    },
+    {
+      "rank": 103,
+      "id": "0658m",
+      "name": "Dashon Gittens",
+      "school": "SacHr",
+      "adp": 187.4
+    },
+    {
+      "rank": 336,
+      "id": "0652k",
+      "name": "Yann Farell",
+      "school": "SacHr",
+      "adp": null
+    },
+    {
+      "rank": 482,
+      "id": "064yr",
+      "name": "Jalen Washington",
+      "school": "Tenn",
+      "adp": null
+    },
+    {
+      "rank": 818,
+      "id": "06pz6",
+      "name": "Mekhi Conner",
+      "school": "SacHr",
+      "adp": null
+    },
+    {
+      "rank": 956,
+      "id": "05web",
+      "name": "Jalen Warley",
+      "school": "Gonz",
+      "adp": null
+    },
+    {
+      "rank": 962,
+      "id": "05p4w",
+      "name": "Tyon Grant-Foster",
+      "school": "Gonz",
+      "adp": null
+    },
+    {
+      "rank": 1395,
+      "id": "071w4",
+      "name": "Israel Hart",
+      "school": "USM",
+      "adp": null
+    },
+    {
+      "rank": 1619,
+      "id": "01atq",
+      "name": "Adam Miller",
+      "school": "Gonz",
+      "adp": null
+    },
+    {
+      "rank": 1718,
+      "id": "070vc",
+      "name": "Nehikhare Igiehon",
+      "school": "HCU",
+      "adp": null
+    },
+    {
+      "rank": 2035,
+      "id": "06pz7",
+      "name": "Fallou Gueye",
+      "school": "SacHr",
+      "adp": null
+    }
+  ],
+  "unmatchedReason": "No matching diagnostic survived the connection error. Skylar Wicks search returned no visible results. Jalen Washington has two same-name/school IDs in the saved source; no identity guessed. Other import omissions remain unresolved.",
+  "sourceRefresh": false,
+  "autopickSettingChanged": false,
+  "draftQueueChanged": false,
+  "positionOverridesChanged": false,
+  "exclusionListChanged": false,
+  "picksSubmitted": 0,
+  "liveRankListChanged": true,
+  "csvSha256": "db85ea91ebe67133f0e2f49c9c34b2f6724979b295e6dd84e83fca2e800ecb63",
+  "rankingIdsIndependentVerification": false,
+  "identityVerification": "Full ordered name+school readback against expected rows; Unicode diacritics normalized for Amon Dorries/Dörries. Platform stable IDs were not exposed in the rendered ranking list."
+}

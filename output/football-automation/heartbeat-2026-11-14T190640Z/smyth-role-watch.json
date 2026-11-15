@@ -1,0 +1,14 @@
+{
+  "reason": "Explicit prior-role follow-up; owned kicker already locked, so no current-week kicker rotation considered.",
+  "rows": [
+    {
+      "playerId": "5208518",
+      "status": "unverified",
+      "publishedAt": "2026-11-10T04:46:21.000Z",
+      "retrievedAt": "2026-11-14T19:15:37.029Z",
+      "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/5208518",
+      "text": "The Saints reverted Smyth to their practice squad Monday, per the NFL's transaction log. Smyth was elevated ahead of Sunday's Week 9 overtime win over Cleveland. He served as New Orleans' kicker in the contest and went 3-for-4 on FGAs while making both of his PAT attempts. That performance was likely good enough for Smyth to be elevated again for this Sunday's matchup against the Panthers.",
+      "kind": "news"
+    }
+  ]
+}

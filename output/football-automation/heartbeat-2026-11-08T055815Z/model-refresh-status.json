@@ -1,0 +1,28 @@
+{
+  "startedAt": "2026-11-08T06:00:30.941Z",
+  "week": 9,
+  "status": "complete",
+  "platformWrites": 0,
+  "calendar": {
+    "scoring_period": "2026-W9",
+    "week": 9,
+    "season": "2026",
+    "offseason": false,
+    "evaluated_at": "2026-11-08T06:00:31.164Z"
+  },
+  "stage": "Candidate fit complete; no production promotion",
+  "news": {
+    "counts": {
+      "espn": 89,
+      "razzball": 17
+    },
+    "degraded": {},
+    "filters": {
+      "since": "2026-11-06T06:00:31.902Z",
+      "until": "2026-11-08T06:00:31.902Z"
+    }
+  },
+  "completedAt": "2026-11-08T06:03:06.989Z",
+  "pregameArchive": "skipped_after_first_kickoff",
+  "optionalPdf": "skipped_known_obsolete_helper_path"
+}

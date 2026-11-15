@@ -1,0 +1,67 @@
+{
+  "week": 9,
+  "season": 2026,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "startedAt": "2026-11-07T05:58:58.968Z",
+  "status": "failed",
+  "stage": "Failed",
+  "platformWrites": 0,
+  "calendar": {
+    "scoring_period": "2026-W9",
+    "week": 9,
+    "season": "2026",
+    "offseason": false,
+    "evaluated_at": "2026-11-07T05:58:59.187Z"
+  },
+  "modelBefore": {
+    "model_store": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-07T055614Z/runtime/models.json",
+      "exists": true,
+      "bytes": 369276,
+      "modified_at": "2026-11-07T05:58:58.771Z"
+    },
+    "probabilistic_projections": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-07T055614Z/runtime/probabilistic-projections.json",
+      "exists": false
+    }
+  },
+  "projectionStatus": {
+    "periods": [
+      {
+        "scoring_period": "2026-ROS",
+        "count": 614
+      },
+      {
+        "scoring_period": "2026-W5",
+        "count": 650
+      },
+      {
+        "scoring_period": "2026-W6",
+        "count": 659
+      },
+      {
+        "scoring_period": "2026-W7",
+        "count": 668
+      },
+      {
+        "scoring_period": "2026-W8",
+        "count": 670
+      },
+      {
+        "scoring_period": "2026-W9",
+        "count": 680
+      }
+    ]
+  },
+  "news": {
+    "counts": {
+      "espn": 77,
+      "razzball": 139
+    },
+    "degraded": {}
+  },
+  "archiveStatus": "not_archived",
+  "archiveWarning": "Archive failed (possibly past kickoff). Do not label this refresh as a verified pregame archive.",
+  "error": "/home/jordan-stovik/Pardon_My_Trade/data/runtime/node-v26.11.1-linux-x64/bin/node failed (1)"
+}

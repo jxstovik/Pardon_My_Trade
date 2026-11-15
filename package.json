@@ -10,6 +10,7 @@
     "lint": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test dist/tests/*.test.js",
     "serve": "npm run build && npm run pmt -- serve",
+    "scout:data": "node scripts/build-scout-data.mjs",
     "test:draft-interactive": "npm run build && node scripts/interactive-draft-harness-test.mjs",
     "mcp": "node dist/src/mcp/stdio.js",
     "refresh": "npm run build && npm run pmt -- refresh",
@@ -30,7 +31,11 @@
     "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1",
     "pmt": "node dist/src/cli.js",
     "backup": "sh deploy/scripts/backup.sh",
-    "restore": "sh deploy/scripts/restore.sh"
+    "restore": "sh deploy/scripts/restore.sh",
+    "scout:preview": "node scripts/build-scout-preview.mjs",
+    "scout:weekly": "node scripts/weekly-scout.mjs",
+    "scout:evaluate": "node scripts/evaluate-season.mjs",
+    "scout:archive": "npm run build && node scripts/archive-pregame.mjs"
   },
   "engines": {
     "node": ">=26.0.0"

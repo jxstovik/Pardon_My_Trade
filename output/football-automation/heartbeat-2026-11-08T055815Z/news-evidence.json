@@ -1,0 +1,32 @@
+{
+  "newsRefreshedAt": "2026-11-08T06:00:32.846Z",
+  "recoveries": [],
+  "additionReviews": [
+    {
+      "playerId": "4887558",
+      "status": "unverified",
+      "publishedAt": "2026-11-03T15:18:42.000Z",
+      "retrievedAt": "2026-11-08T06:04:19.791Z",
+      "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4887558",
+      "text": "Wilson played just seven snaps -- all on special teams -- in Monday's 34-17 loss to the Bears. After logging double-digit carries in six of the Seahawks' previous seven games while scoring four touchdowns and averaging 66.4 scrimmage yards during that span, Wilson fell out of the game plan entirely in Week 8. With Zach Charbonnet (knee) getting cleared to make his 2026 debut, Jadarian Price (chest) returning from injured reserve and George Holani still on hand as an option on passing downs, the Seahawks had no reps available out of the backfield for Wilson. Unless Charbonnet or Price succumbs to another injury, Wilson's playing time on offense will likely remain scarce moving forward.",
+      "kind": "news",
+      "quote": "Wilson played just seven snaps -- all on special teams -- in Monday's 34-17 loss to the Bears. After logging double-digit carries in six of the Seahawks' previous seven games while scoring four touchdowns and averaging 66.4 scrimmage yards during that span, Wilson fell out of the game plan entirely in Week 8. With Zach Charbonnet (knee) getting cleared to make his 2026 debut, Jadarian Price (chest) returning from injured reserve and George Holani still on hand as an option on passing downs, the Seahawks had no reps available out of the backfield for Wilson. Unless Charbonnet or Price succumbs to another injury, Wilson's playing time on offense will likely remain scarce moving forward.",
+      "availableThisWeek": false,
+      "hasOffensiveRole": false,
+      "reviewOutcome": "excluded",
+      "reason": "The newest individual source report confirms all seven snaps on special teams and no offensive reps. No supported positive offensive-role clearance for this week."
+    }
+  ],
+  "excludedRecoveryEvidence": [
+    {
+      "playerId": "4568490",
+      "reason": "Latest sourced return report published2026-10-31 exceeds the runner seven-day evidence age. Preserve source in owned-player-news.json; use immediate healthy-return baseline rather than inventing a new publication time."
+    },
+    {
+      "playerId": "4428557",
+      "reason": "Latest next-chance report published2026-10-30 exceeds seven-day evidence age; no recovery prediction."
+    }
+  ],
+  "modelVersion": "weekly-2026-W9-bbb261be576e-368dedd8bda2-d1284c4271e7",
+  "newsRefreshedAtBasis": "Latest actual ingested_at returned by the current normalized refresh"
+}

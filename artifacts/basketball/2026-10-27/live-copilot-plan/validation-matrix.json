@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T12:34:39Z",
+  "purpose": "Execution plan acceptance matrix; pending tests are not fabricated results",
+  "priorEvidenceBoardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "priorSourceHashesMatch": true,
+  "gates": [
+    {
+      "id": "existing-static-engine",
+      "status": "previously-passed-hashes-rechecked",
+      "scope": "26 compiled basketball cases plus synthetic CLI112-pick replay; zero platform calls",
+      "newRunThisPlanningTurn": false,
+      "evidence": "../check-in-1201/draft-forecast/validation.json"
+    },
+    {
+      "id": "read-only-ui-preflight",
+      "status": "observed-bounded",
+      "scope": "Pre-draft room/team order/empty queue/player detail and college mock lobby only",
+      "evidence": "browser-preflight.json"
+    },
+    {
+      "id": "browser-loop-feasibility",
+      "status": "not-run",
+      "scope": "Exact supported browser\u2192engine\u2192paint integration;100 changing observations plus10minute sustained run; includes tool/orchestrator delays",
+      "hardGate": true
+    },
+    {
+      "id": "player-id-and-selected-history",
+      "status": "not-proven",
+      "scope": "Stable canonical IDs, unique full-name/school crosswalk and complete selected pick history, including virtualized cells"
+    },
+    {
+      "id": "adaptive-engine",
+      "status": "not-implemented",
+      "scope": "Shared eight-category evaluation of Balanced/Guards/Bigs legal-completion paths plus opponent-demand scenarios"
+    },
+    {
+      "id": "local-browser-mock",
+      "status": "not-implemented",
+      "scope": "Three seeded full112-pick browser-driven drafts,42 own selections, independent final reconciliation and failure injection",
+      "synthetic": true
+    },
+    {
+      "id": "fantrax-college-mock",
+      "status": "currently-unavailable",
+      "scope": "No games listed at inspection; recheck later. No mock joined."
+    },
+    {
+      "id": "fantrax-alternate-mock",
+      "status": "not-run",
+      "scope": "A suitable free NBA room may test transport only; not CBB rules/strategy/ID coverage"
+    },
+    {
+      "id": "live-coach",
+      "status": "not-ready",
+      "scope": "Needs actual selected-pick ingestion, identity/clock reconciliation and measured data/loop gates"
+    },
+    {
+      "id": "live-queue-rank-writers",
+      "status": "disabled-unvalidated",
+      "scope": "Separate mutation scopes, authorization and venue-specific readback tests required"
+    },
+    {
+      "id": "live-confirmed-pick",
+      "status": "disabled-unvalidated",
+      "scope": "Exact per-pick approval, venue-specific confirmation and authoritative receipt required"
+    },
+    {
+      "id": "live-auto-picks",
+      "status": "disabled-unvalidated",
+      "scope": "No automatic real submission authorized; policy and every dependency must pass separately"
+    }
+  ],
+  "targetsNotMeasurements": {
+    "detectMsP95": 3000,
+    "adaptiveEngineMsP95": 500,
+    "visibleBoardUpdateMsP95": 5000,
+    "mockDispatchToReceiptMsP95": 10000,
+    "wrongOrDuplicateCommittedPicks": 0,
+    "requiredSummary": [
+      "sampleCount",
+      "median",
+      "p95",
+      "maximum"
+    ],
+    "realServerCommitTime": "not established; use detection brackets if unavailable"
+  },
+  "proposedRuntimeLimitsNotValidated": {
+    "maximumPreClickStateAgeSeconds": 5,
+    "pauseWritesAtObservationAgeSeconds": 10,
+    "stopNewBrowserPickBelowClockSeconds": 15
+  },
+  "liveActionsExecuted": 0,
+  "newBasketballCodeThisTurn": false,
+  "newBrowserMockExecutionThisTurn": false,
+  "review": "docs/basketball/committee/11-live-copilot-plan-review.md"
+}

@@ -1,0 +1,4922 @@
+{
+  "description": "Cross-check of independently summed remaining weekly forecasts against ESPN current-season period0/split0 appliedTotal, excluding already-played NE/CHI Week7. This comparison is diagnostic, not an assumption that seasonal and matchup-specific forecasts must agree.",
+  "matched": 580,
+  "different": 34,
+  "differences": [
+    {
+      "playerId": "-16023",
+      "name": "Steelers D/ST",
+      "canonicalSum": 67.69,
+      "adjustedPeriod0Split0": 81.03326871,
+      "delta": 13.343268710000004,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16016",
+      "name": "Vikings D/ST",
+      "canonicalSum": 75.43,
+      "adjustedPeriod0Split0": 71.45747272,
+      "delta": 3.9725272800000084,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16027",
+      "name": "Buccaneers D/ST",
+      "canonicalSum": 55.97,
+      "adjustedPeriod0Split0": 63.90931192,
+      "delta": 7.9393119200000015,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16020",
+      "name": "Jets D/ST",
+      "canonicalSum": 65.35,
+      "adjustedPeriod0Split0": 70.57275275,
+      "delta": 5.222752750000012,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16007",
+      "name": "Broncos D/ST",
+      "canonicalSum": 61.81,
+      "adjustedPeriod0Split0": 67.56577342,
+      "delta": 5.755773419999997,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16026",
+      "name": "Seahawks D/ST",
+      "canonicalSum": 68.29,
+      "adjustedPeriod0Split0": 80.02612162,
+      "delta": 11.736121619999992,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16034",
+      "name": "Texans D/ST",
+      "canonicalSum": 70.54,
+      "adjustedPeriod0Split0": 81.31885862,
+      "delta": 10.778858619999994,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16033",
+      "name": "Ravens D/ST",
+      "canonicalSum": 62.13,
+      "adjustedPeriod0Split0": 72.52075386,
+      "delta": 10.390753859999997,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16011",
+      "name": "Colts D/ST",
+      "canonicalSum": 49.08,
+      "adjustedPeriod0Split0": 48.7148492,
+      "delta": 0.365150799999995,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16012",
+      "name": "Chiefs D/ST",
+      "canonicalSum": 69.99,
+      "adjustedPeriod0Split0": 70.26336414,
+      "delta": 0.2733641399999982,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16005",
+      "name": "Browns D/ST",
+      "canonicalSum": 62.3,
+      "adjustedPeriod0Split0": 69.3788155,
+      "delta": 7.078815500000005,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16014",
+      "name": "Rams D/ST",
+      "canonicalSum": 63.01,
+      "adjustedPeriod0Split0": 68.09268786,
+      "delta": 5.08268786,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16017",
+      "name": "Patriots D/ST",
+      "canonicalSum": 57.2,
+      "adjustedPeriod0Split0": 65.40964668,
+      "delta": 8.209646679999992,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "-16025",
+      "name": "49ers D/ST",
+      "canonicalSum": 70.07,
+      "adjustedPeriod0Split0": 80.46664272,
+      "delta": 10.396642720000003,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16021",
+      "name": "Eagles D/ST",
+      "canonicalSum": 54.9,
+      "adjustedPeriod0Split0": 55.60291148,
+      "delta": 0.7029114800000045,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16010",
+      "name": "Titans D/ST",
+      "canonicalSum": 50.57,
+      "adjustedPeriod0Split0": 52.98112149,
+      "delta": 2.4111214899999993,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16030",
+      "name": "Jaguars D/ST",
+      "canonicalSum": 68.65,
+      "adjustedPeriod0Split0": 79.85631109,
+      "delta": 11.20631109,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16029",
+      "name": "Panthers D/ST",
+      "canonicalSum": 62.75,
+      "adjustedPeriod0Split0": 52.48028728,
+      "delta": 10.269712720000001,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16008",
+      "name": "Lions D/ST",
+      "canonicalSum": 58.37,
+      "adjustedPeriod0Split0": 47.6111262,
+      "delta": 10.758873799999996,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16003",
+      "name": "Bears D/ST",
+      "canonicalSum": 49.55,
+      "adjustedPeriod0Split0": 49.6630505,
+      "delta": 0.11305049999999994,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "-16006",
+      "name": "Cowboys D/ST",
+      "canonicalSum": 51.1,
+      "adjustedPeriod0Split0": 45.27757999,
+      "delta": 5.822420010000002,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16004",
+      "name": "Bengals D/ST",
+      "canonicalSum": 61.7,
+      "adjustedPeriod0Split0": 57.94596132,
+      "delta": 3.7540386800000007,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16009",
+      "name": "Packers D/ST",
+      "canonicalSum": 53.23,
+      "adjustedPeriod0Split0": 56.70781279,
+      "delta": 3.4778127900000015,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16024",
+      "name": "Chargers D/ST",
+      "canonicalSum": 48.18,
+      "adjustedPeriod0Split0": 47.22774794,
+      "delta": 0.9522520599999993,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16002",
+      "name": "Bills D/ST",
+      "canonicalSum": 52.97,
+      "adjustedPeriod0Split0": 49.62223388,
+      "delta": 3.3477661199999957,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16019",
+      "name": "Giants D/ST",
+      "canonicalSum": 57.27,
+      "adjustedPeriod0Split0": 56.77330098,
+      "delta": 0.4966990200000012,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16013",
+      "name": "Raiders D/ST",
+      "canonicalSum": 56.13,
+      "adjustedPeriod0Split0": 51.96320395,
+      "delta": 4.166796050000002,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16018",
+      "name": "Saints D/ST",
+      "canonicalSum": 41.53,
+      "adjustedPeriod0Split0": 34.8017519,
+      "delta": 6.728248100000002,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16028",
+      "name": "Commanders D/ST",
+      "canonicalSum": 59.7,
+      "adjustedPeriod0Split0": 62.53777765,
+      "delta": 2.8377776499999996,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16001",
+      "name": "Falcons D/ST",
+      "canonicalSum": 54.04,
+      "adjustedPeriod0Split0": 53.28596134,
+      "delta": 0.7540386599999991,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16015",
+      "name": "Dolphins D/ST",
+      "canonicalSum": 45.21,
+      "adjustedPeriod0Split0": 32.79692452,
+      "delta": 12.413075480000003,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "-16022",
+      "name": "Cardinals D/ST",
+      "canonicalSum": 42.58,
+      "adjustedPeriod0Split0": 35.56101911,
+      "delta": 7.018980890000002,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429805",
+      "name": "Frank Gore Jr.",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": null,
+      "delta": null,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5085189",
+      "name": "Jack Endries",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": null,
+      "delta": null,
+      "removedAlreadyPlayedWeek7": false
+    }
+  ],
+  "matches": [
+    {
+      "playerId": "4429795",
+      "name": "Jahmyr Gibbs",
+      "canonicalSum": 312.56,
+      "adjustedPeriod0Split0": 312.55531211,
+      "delta": 0.004687890000013795,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426502",
+      "name": "Drake London",
+      "canonicalSum": 188.51,
+      "adjustedPeriod0Split0": 188.51383176,
+      "delta": 0.0038317599999970753,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428331",
+      "name": "Rashee Rice",
+      "canonicalSum": 155.63,
+      "adjustedPeriod0Split0": 155.62595916,
+      "delta": 0.004040839999987611,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4696981",
+      "name": "Cam Skattebo",
+      "canonicalSum": 78.62,
+      "adjustedPeriod0Split0": 78.62416788,
+      "delta": 0.004167879999997126,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4567750",
+      "name": "Emeka Egbuka",
+      "canonicalSum": 143.76,
+      "adjustedPeriod0Split0": 143.75603085,
+      "delta": 0.003969149999988986,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4882093",
+      "name": "Bhayshul Tuten",
+      "canonicalSum": 156.79,
+      "adjustedPeriod0Split0": 156.78973461,
+      "delta": 0.00026538999998138024,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "16737",
+      "name": "Mike Evans",
+      "canonicalSum": 155.59,
+      "adjustedPeriod0Split0": 155.58668295,
+      "delta": 0.003317049999992605,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429205",
+      "name": "Jordan Addison",
+      "canonicalSum": 130.17,
+      "adjustedPeriod0Split0": 130.17154894,
+      "delta": 0.0015489400000205933,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2971573",
+      "name": "Ka'imi Fairbairn",
+      "canonicalSum": 117.64,
+      "adjustedPeriod0Split0": 117.64248596,
+      "delta": 0.0024859600000013415,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4695883",
+      "name": "Jalen Coker",
+      "canonicalSum": 189.37,
+      "adjustedPeriod0Split0": 189.37267688,
+      "delta": 0.0026768799999956627,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685720",
+      "name": "Bryce Young",
+      "canonicalSum": 222.18,
+      "adjustedPeriod0Split0": 222.18290938,
+      "delta": 0.0029093800000055126,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4711533",
+      "name": "Ollie Gordon II",
+      "canonicalSum": 149.36,
+      "adjustedPeriod0Split0": 149.35682792,
+      "delta": 0.003172080000013011,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426385",
+      "name": "Zach Charbonnet",
+      "canonicalSum": 139.01,
+      "adjustedPeriod0Split0": 139.00785879,
+      "delta": 0.0021412099999906786,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4723820",
+      "name": "Omar Cooper Jr.",
+      "canonicalSum": 78.85,
+      "adjustedPeriod0Split0": 78.85201965,
+      "delta": 0.002019650000008255,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3929645",
+      "name": "Juwan Johnson",
+      "canonicalSum": 97.41,
+      "adjustedPeriod0Split0": 97.41394105,
+      "delta": 0.003941050000008772,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430878",
+      "name": "Jaxon Smith-Njigba",
+      "canonicalSum": 226.95,
+      "adjustedPeriod0Split0": 226.94742086,
+      "delta": 0.002579139999994595,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4870808",
+      "name": "Jeremiyah Love",
+      "canonicalSum": 118.98,
+      "adjustedPeriod0Split0": 118.97501718,
+      "delta": 0.004982820000009269,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569618",
+      "name": "Garrett Wilson",
+      "canonicalSum": 160.69,
+      "adjustedPeriod0Split0": 160.68794757,
+      "delta": 0.0020524299999920004,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361579",
+      "name": "Javonte Williams",
+      "canonicalSum": 182.25,
+      "adjustedPeriod0Split0": 182.24866221,
+      "delta": 0.001337790000007999,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431459",
+      "name": "Tyler Warren",
+      "canonicalSum": 120.26,
+      "adjustedPeriod0Split0": 120.26062636,
+      "delta": 0.0006263599999982716,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431299",
+      "name": "Rome Odunze",
+      "canonicalSum": 102.34,
+      "adjustedPeriod0Split0": 102.33861975,
+      "delta": 0.0013802499999968632,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4432708",
+      "name": "Marvin Harrison Jr.",
+      "canonicalSum": 78.25,
+      "adjustedPeriod0Split0": 78.25268723,
+      "delta": 0.0026872300000064797,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569987",
+      "name": "Jaylen Warren",
+      "canonicalSum": 174.74,
+      "adjustedPeriod0Split0": 174.73987498,
+      "delta": 0.0001250200000129098,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4608686",
+      "name": "Kyle Monangai",
+      "canonicalSum": 110.85,
+      "adjustedPeriod0Split0": 110.84983384,
+      "delta": 0.00016615999999203268,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4385690",
+      "name": "Dalton Kincaid",
+      "canonicalSum": 93.74,
+      "adjustedPeriod0Split0": 93.74453294,
+      "delta": 0.00453294000000426,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360234",
+      "name": "Evan McPherson",
+      "canonicalSum": 92.55,
+      "adjustedPeriod0Split0": 92.55025052,
+      "delta": 0.00025052000000869157,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4432577",
+      "name": "C.J. Stroud",
+      "canonicalSum": 196.76,
+      "adjustedPeriod0Split0": 196.76413737,
+      "delta": 0.004137369999995144,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "14880",
+      "name": "Kirk Cousins",
+      "canonicalSum": 61.36,
+      "adjustedPeriod0Split0": 61.36158961,
+      "delta": 0.0015896100000034608,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4036133",
+      "name": "T.J. Hockenson",
+      "canonicalSum": 127.35,
+      "adjustedPeriod0Split0": 127.35256436,
+      "delta": 0.002564360000008037,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241389",
+      "name": "CeeDee Lamb",
+      "canonicalSum": 208.02,
+      "adjustedPeriod0Split0": 208.02066756,
+      "delta": 0.0006675599999823589,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4379399",
+      "name": "James Cook III",
+      "canonicalSum": 210.46,
+      "adjustedPeriod0Split0": 210.45706207,
+      "delta": 0.002937930000001643,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4258173",
+      "name": "Nico Collins",
+      "canonicalSum": 178.03,
+      "adjustedPeriod0Split0": 178.03425056,
+      "delta": 0.004250560000002679,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429615",
+      "name": "Zay Flowers",
+      "canonicalSum": 187.39,
+      "adjustedPeriod0Split0": 187.38828951,
+      "delta": 0.0017104899999935697,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4259545",
+      "name": "D'Andre Swift",
+      "canonicalSum": 153.23,
+      "adjustedPeriod0Split0": 153.22938287,
+      "delta": 0.0006171299999948587,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4612826",
+      "name": "Ladd McConkey",
+      "canonicalSum": 117.65,
+      "adjustedPeriod0Split0": 117.64607457,
+      "delta": 0.0039254300000095554,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430027",
+      "name": "Sam LaPorta",
+      "canonicalSum": 153.35,
+      "adjustedPeriod0Split0": 153.35234913,
+      "delta": 0.0023491299999989224,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431611",
+      "name": "Caleb Williams",
+      "canonicalSum": 181.66,
+      "adjustedPeriod0Split0": 181.66302048,
+      "delta": 0.0030204800000035448,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4241985",
+      "name": "J.K. Dobbins",
+      "canonicalSum": 134.06,
+      "adjustedPeriod0Split0": 134.06067743,
+      "delta": 0.0006774299999960931,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2976212",
+      "name": "Stefon Diggs",
+      "canonicalSum": 138.91,
+      "adjustedPeriod0Split0": 138.91285664,
+      "delta": 0.002856640000004518,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361050",
+      "name": "Isaiah Likely",
+      "canonicalSum": 157.86,
+      "adjustedPeriod0Split0": 157.85839407,
+      "delta": 0.0016059300000108578,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4696044",
+      "name": "Kaelon Black",
+      "canonicalSum": 59.95,
+      "adjustedPeriod0Split0": 59.94770613,
+      "delta": 0.0022938700000025847,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4036378",
+      "name": "Jordan Love",
+      "canonicalSum": 198.42,
+      "adjustedPeriod0Split0": 198.41933512,
+      "delta": 0.0006648799999879884,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4366031",
+      "name": "Tank Dell",
+      "canonicalSum": 18.36,
+      "adjustedPeriod0Split0": 18.35893058,
+      "delta": 0.0010694200000003207,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4568263",
+      "name": "Ryan Fitzgerald",
+      "canonicalSum": 114.22,
+      "adjustedPeriod0Split0": 114.2199429,
+      "delta": 5.7099999992260564e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4242335",
+      "name": "Jonathan Taylor",
+      "canonicalSum": 196.23,
+      "adjustedPeriod0Split0": 196.2298652,
+      "delta": 0.0001347999999836702,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4262921",
+      "name": "Justin Jefferson",
+      "canonicalSum": 221.36,
+      "adjustedPeriod0Split0": 221.36122776,
+      "delta": 0.0012277599999777067,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4427366",
+      "name": "Breece Hall",
+      "canonicalSum": 155.84,
+      "adjustedPeriod0Split0": 155.83989479,
+      "delta": 0.00010521000001517677,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4047365",
+      "name": "Josh Jacobs",
+      "canonicalSum": 144.14,
+      "adjustedPeriod0Split0": 144.14065872,
+      "delta": 0.0006587200000183202,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "16800",
+      "name": "Davante Adams",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426348",
+      "name": "Jayden Daniels",
+      "canonicalSum": 236.3,
+      "adjustedPeriod0Split0": 236.30256669,
+      "delta": 0.0025666899999805537,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569173",
+      "name": "Rhamondre Stevenson",
+      "canonicalSum": 115.76,
+      "adjustedPeriod0Split0": 115.75878459,
+      "delta": 0.001215410000000361,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4572680",
+      "name": "Tucker Kraft",
+      "canonicalSum": 125.67,
+      "adjustedPeriod0Split0": 125.67412545,
+      "delta": 0.004125450000003639,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241416",
+      "name": "Chuba Hubbard",
+      "canonicalSum": 179.17,
+      "adjustedPeriod0Split0": 179.16534615,
+      "delta": 0.00465384999998264,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3953687",
+      "name": "Brandon Aubrey",
+      "canonicalSum": 90.33,
+      "adjustedPeriod0Split0": 90.33333799,
+      "delta": 0.003337990000005675,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4688813",
+      "name": "Josh Downs",
+      "canonicalSum": 99.27,
+      "adjustedPeriod0Split0": 99.27140247,
+      "delta": 0.001402470000002154,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3046779",
+      "name": "Jared Goff",
+      "canonicalSum": 222.35,
+      "adjustedPeriod0Split0": 222.35315075,
+      "delta": 0.0031507500000031996,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428718",
+      "name": "Tre Tucker",
+      "canonicalSum": 108.36,
+      "adjustedPeriod0Split0": 108.35558554,
+      "delta": 0.004414459999992459,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4683062",
+      "name": "Xavier Worthy",
+      "canonicalSum": 121.73,
+      "adjustedPeriod0Split0": 121.73375755,
+      "delta": 0.003757550000003107,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360238",
+      "name": "Dameon Pierce",
+      "canonicalSum": 63.46,
+      "adjustedPeriod0Split0": 63.46049902,
+      "delta": 0.0004990199999994616,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426515",
+      "name": "Puka Nacua",
+      "canonicalSum": 234.27,
+      "adjustedPeriod0Split0": 234.27093511,
+      "delta": 0.0009351100000003498,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685382",
+      "name": "Omarion Hampton",
+      "canonicalSum": 91.77,
+      "adjustedPeriod0Split0": 91.76597316,
+      "delta": 0.004026839999994536,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4432665",
+      "name": "Brock Bowers",
+      "canonicalSum": 193.09,
+      "adjustedPeriod0Split0": 193.08852663,
+      "delta": 0.001473370000013574,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685702",
+      "name": "Quinshon Judkins",
+      "canonicalSum": 150.76,
+      "adjustedPeriod0Split0": 150.76107452,
+      "delta": 0.0010745200000030763,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3915416",
+      "name": "DJ Moore",
+      "canonicalSum": 144.1,
+      "adjustedPeriod0Split0": 144.09982266,
+      "delta": 0.00017733999999336447,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "12483",
+      "name": "Matthew Stafford",
+      "canonicalSum": 186.36,
+      "adjustedPeriod0Split0": 186.35699551,
+      "delta": 0.003004490000023452,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3126486",
+      "name": "Deebo Samuel Sr.",
+      "canonicalSum": 112.63,
+      "adjustedPeriod0Split0": 112.63172084,
+      "delta": 0.0017208400000043866,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569559",
+      "name": "Devaughn Vele",
+      "canonicalSum": 94.31,
+      "adjustedPeriod0Split0": 94.31338605,
+      "delta": 0.003386050000003138,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360689",
+      "name": "Tyler Shough",
+      "canonicalSum": 186.15,
+      "adjustedPeriod0Split0": 186.14780932,
+      "delta": 0.002190680000012435,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4887558",
+      "name": "Emanuel Wilson",
+      "canonicalSum": 10.68,
+      "adjustedPeriod0Split0": 10.679595,
+      "delta": 0.0004049999999988785,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429059",
+      "name": "Woody Marks",
+      "canonicalSum": 97.4,
+      "adjustedPeriod0Split0": 97.39776305,
+      "delta": 0.0022369500000110065,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4249087",
+      "name": "Matt Gay",
+      "canonicalSum": 103.28,
+      "adjustedPeriod0Split0": 103.28059258,
+      "delta": 0.0005925800000028403,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "15818",
+      "name": "Keenan Allen",
+      "canonicalSum": 95.45,
+      "adjustedPeriod0Split0": 95.44736562,
+      "delta": 0.002634380000003489,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429096",
+      "name": "Blake Corum",
+      "canonicalSum": 102.35,
+      "adjustedPeriod0Split0": 102.35185464,
+      "delta": 0.0018546400000047925,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4871023",
+      "name": "Carnell Tate",
+      "canonicalSum": 131.67,
+      "adjustedPeriod0Split0": 131.66835672,
+      "delta": 0.001643279999996139,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362628",
+      "name": "Ja'Marr Chase",
+      "canonicalSum": 264.57,
+      "adjustedPeriod0Split0": 264.56716122,
+      "delta": 0.002838779999990493,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4567048",
+      "name": "Kenneth Walker III",
+      "canonicalSum": 261.14,
+      "adjustedPeriod0Split0": 261.14292519,
+      "delta": 0.0029251900000417663,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361307",
+      "name": "Trey McBride",
+      "canonicalSum": 184.24,
+      "adjustedPeriod0Split0": 184.23523206,
+      "delta": 0.0047679400000220085,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685472",
+      "name": "Tetairoa McMillan",
+      "canonicalSum": 194.17,
+      "adjustedPeriod0Split0": 194.1656974,
+      "delta": 0.004302599999988388,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4596448",
+      "name": "Bucky Irving",
+      "canonicalSum": 164.34,
+      "adjustedPeriod0Split0": 164.33911405,
+      "delta": 0.0008859499999971376,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685512",
+      "name": "Jadarian Price",
+      "canonicalSum": 110.81,
+      "adjustedPeriod0Split0": 110.80770226,
+      "delta": 0.0022977400000030457,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4701936",
+      "name": "Matthew Golden",
+      "canonicalSum": 174.68,
+      "adjustedPeriod0Split0": 174.68053919,
+      "delta": 0.0005391899999835914,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4373678",
+      "name": "Khalil Shakir",
+      "canonicalSum": 98.62,
+      "adjustedPeriod0Split0": 98.62289841,
+      "delta": 0.00289841000000024,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "15847",
+      "name": "Travis Kelce",
+      "canonicalSum": 123.81,
+      "adjustedPeriod0Split0": 123.80952883,
+      "delta": 0.0004711699999973007,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4373626",
+      "name": "Tyler Allgeier",
+      "canonicalSum": 84.51,
+      "adjustedPeriod0Split0": 84.50829261,
+      "delta": 0.0017073900000070807,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3139477",
+      "name": "Patrick Mahomes",
+      "canonicalSum": 212.67,
+      "adjustedPeriod0Split0": 212.67001271,
+      "delta": 1.2710000021343149e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4635008",
+      "name": "Keon Coleman",
+      "canonicalSum": 70.22,
+      "adjustedPeriod0Split0": 70.2227542,
+      "delta": 0.0027541999999982636,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4571557",
+      "name": "Spencer Shrader",
+      "canonicalSum": 115.78,
+      "adjustedPeriod0Split0": 115.77975403,
+      "delta": 0.0002459699999945997,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360310",
+      "name": "Trevor Lawrence",
+      "canonicalSum": 224.2,
+      "adjustedPeriod0Split0": 224.1983583,
+      "delta": 0.0016416999999933068,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4890973",
+      "name": "Ashton Jeanty",
+      "canonicalSum": 178.67,
+      "adjustedPeriod0Split0": 178.67069775,
+      "delta": 0.0006977500000004966,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4595348",
+      "name": "Malik Nabers",
+      "canonicalSum": 196.33,
+      "adjustedPeriod0Split0": 196.33223067,
+      "delta": 0.002230669999988777,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3918298",
+      "name": "Josh Allen",
+      "canonicalSum": 250.8,
+      "adjustedPeriod0Split0": 250.79855099,
+      "delta": 0.00144901000001596,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426388",
+      "name": "Jameson Williams",
+      "canonicalSum": 129.98,
+      "adjustedPeriod0Split0": 129.97835038,
+      "delta": 0.0016496199999949113,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3040151",
+      "name": "George Kittle",
+      "canonicalSum": 166.68,
+      "adjustedPeriod0Split0": 166.6813571,
+      "delta": 0.0013571000000069944,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569587",
+      "name": "Wan'Dale Robinson",
+      "canonicalSum": 101.07,
+      "adjustedPeriod0Split0": 101.07231135,
+      "delta": 0.00231135000001359,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3916148",
+      "name": "Tony Pollard",
+      "canonicalSum": 143.44,
+      "adjustedPeriod0Split0": 143.43523068,
+      "delta": 0.0047693200000082925,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360761",
+      "name": "Michael Wilson",
+      "canonicalSum": 143.88,
+      "adjustedPeriod0Split0": 143.87766997,
+      "delta": 0.002330029999995986,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4371733",
+      "name": "Kenny Gainwell",
+      "canonicalSum": 76.98,
+      "adjustedPeriod0Split0": 76.97508032,
+      "delta": 0.004919680000000426,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4568490",
+      "name": "RJ Harvey",
+      "canonicalSum": 119.15,
+      "adjustedPeriod0Split0": 119.1534102,
+      "delta": 0.003410199999990482,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4034949",
+      "name": "Eddy Pineiro",
+      "canonicalSum": 89.57,
+      "adjustedPeriod0Split0": 89.57313337,
+      "delta": 0.0031333700000004683,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428557",
+      "name": "Tyjae Spears",
+      "canonicalSum": 74.18,
+      "adjustedPeriod0Split0": 74.1840813,
+      "delta": 0.0040812999999957356,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4032473",
+      "name": "Rashid Shaheed",
+      "canonicalSum": 90.72,
+      "adjustedPeriod0Split0": 90.71561264,
+      "delta": 0.00438735999999551,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361411",
+      "name": "Pat Freiermuth",
+      "canonicalSum": 101.81,
+      "adjustedPeriod0Split0": 101.81300776,
+      "delta": 0.0030077600000026905,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "8439",
+      "name": "Aaron Rodgers",
+      "canonicalSum": 177.54,
+      "adjustedPeriod0Split0": 177.54306978,
+      "delta": 0.0030697800000041298,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4374302",
+      "name": "Amon-Ra St. Brown",
+      "canonicalSum": 235.83,
+      "adjustedPeriod0Split0": 235.83201944,
+      "delta": 0.002019439999997985,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3929630",
+      "name": "Saquon Barkley",
+      "canonicalSum": 143.85,
+      "adjustedPeriod0Split0": 143.84879529,
+      "delta": 0.001204709999996112,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426354",
+      "name": "George Pickens",
+      "canonicalSum": 148.32,
+      "adjustedPeriod0Split0": 148.32453102,
+      "delta": 0.0045310200000017176,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430737",
+      "name": "Kyren Williams",
+      "canonicalSum": 201.44,
+      "adjustedPeriod0Split0": 201.44476893,
+      "delta": 0.004768930000011551,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4723086",
+      "name": "Colston Loveland",
+      "canonicalSum": 126.89,
+      "adjustedPeriod0Split0": 126.89465443,
+      "delta": 0.004654430000002208,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "3916387",
+      "name": "Lamar Jackson",
+      "canonicalSum": 211.33,
+      "adjustedPeriod0Split0": 211.33298514,
+      "delta": 0.0029851399999927253,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4432710",
+      "name": "TreVeyon Henderson",
+      "canonicalSum": 72.63,
+      "adjustedPeriod0Split0": 72.63313455000001,
+      "delta": 0.003134550000012837,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4685278",
+      "name": "Luther Burden III",
+      "canonicalSum": 127.36,
+      "adjustedPeriod0Split0": 127.36167884000001,
+      "delta": 0.0016788400000109505,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4047650",
+      "name": "DK Metcalf",
+      "canonicalSum": 147.89,
+      "adjustedPeriod0Split0": 147.88981494,
+      "delta": 0.00018505999997842082,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4432620",
+      "name": "Parker Washington",
+      "canonicalSum": 178.96,
+      "adjustedPeriod0Split0": 178.96479509,
+      "delta": 0.004795089999987567,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4038815",
+      "name": "Rico Dowdle",
+      "canonicalSum": 75.66,
+      "adjustedPeriod0Split0": 75.66081068,
+      "delta": 0.0008106800000007297,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361741",
+      "name": "Brock Purdy",
+      "canonicalSum": 222.82,
+      "adjustedPeriod0Split0": 222.82281076,
+      "delta": 0.0028107600000168986,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3116365",
+      "name": "Mark Andrews",
+      "canonicalSum": 95.26,
+      "adjustedPeriod0Split0": 95.26057143,
+      "delta": 0.0005714299999937111,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5082424",
+      "name": "Dominic Zvada",
+      "canonicalSum": 121.81,
+      "adjustedPeriod0Split0": 121.81394081,
+      "delta": 0.003940810000003125,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4599739",
+      "name": "Kendre Miller",
+      "canonicalSum": 9.36,
+      "adjustedPeriod0Split0": 9.35496896,
+      "delta": 0.005031039999998654,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430807",
+      "name": "Bijan Robinson",
+      "canonicalSum": 225.06,
+      "adjustedPeriod0Split0": 225.0606435,
+      "delta": 0.0006434999999953561,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3043078",
+      "name": "Derrick Henry",
+      "canonicalSum": 204.4,
+      "adjustedPeriod0Split0": 204.40489377,
+      "delta": 0.0048937699999953566,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361370",
+      "name": "Chris Olave",
+      "canonicalSum": 165.28,
+      "adjustedPeriod0Split0": 165.27632718,
+      "delta": 0.0036728199999913613,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4239993",
+      "name": "Tee Higgins",
+      "canonicalSum": 172.79,
+      "adjustedPeriod0Split0": 172.78820943,
+      "delta": 0.0017905699999971603,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3915511",
+      "name": "Joe Burrow",
+      "canonicalSum": 242.42,
+      "adjustedPeriod0Split0": 242.41711545,
+      "delta": 0.002884549999976116,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4035538",
+      "name": "David Montgomery",
+      "canonicalSum": 117.5,
+      "adjustedPeriod0Split0": 117.49602919,
+      "delta": 0.003970809999998437,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2577417",
+      "name": "Dak Prescott",
+      "canonicalSum": 185.16,
+      "adjustedPeriod0Split0": 185.16384024,
+      "delta": 0.0038402400000165926,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3121023",
+      "name": "Dallas Goedert",
+      "canonicalSum": 113.26,
+      "adjustedPeriod0Split0": 113.25698822,
+      "delta": 0.003011780000008457,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3042519",
+      "name": "Aaron Jones Sr.",
+      "canonicalSum": 138.82,
+      "adjustedPeriod0Split0": 138.8159756,
+      "delta": 0.004024399999991601,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4567104",
+      "name": "Will Reichard",
+      "canonicalSum": 133.54,
+      "adjustedPeriod0Split0": 133.54027101,
+      "delta": 0.00027101000000584463,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685261",
+      "name": "Germie Bernard",
+      "canonicalSum": 132.97,
+      "adjustedPeriod0Split0": 132.96926865,
+      "delta": 0.0007313499999952455,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4427095",
+      "name": "DeMario Douglas",
+      "canonicalSum": 103.68,
+      "adjustedPeriod0Split0": 103.68278279,
+      "delta": 0.0027827899999977035,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "3054850",
+      "name": "Alvin Kamara",
+      "canonicalSum": 84.93,
+      "adjustedPeriod0Split0": 84.93392587,
+      "delta": 0.003925869999989118,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360248",
+      "name": "Kyle Pitts Sr.",
+      "canonicalSum": 107.79,
+      "adjustedPeriod0Split0": 107.79163765,
+      "delta": 0.0016376499999921634,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428850",
+      "name": "Dontayvion Wicks",
+      "canonicalSum": 82.75,
+      "adjustedPeriod0Split0": 82.74647947,
+      "delta": 0.003520530000002964,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3117251",
+      "name": "Christian McCaffrey",
+      "canonicalSum": 223.02,
+      "adjustedPeriod0Split0": 223.01705204,
+      "delta": 0.0029479600000001938,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362238",
+      "name": "Chase Brown",
+      "canonicalSum": 183.85,
+      "adjustedPeriod0Split0": 183.84957795,
+      "delta": 0.0004220499999973981,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4047646",
+      "name": "A.J. Brown",
+      "canonicalSum": 157.07,
+      "adjustedPeriod0Split0": 157.06642856,
+      "delta": 0.0035714400000017577,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4241478",
+      "name": "DeVonta Smith",
+      "canonicalSum": 152.75,
+      "adjustedPeriod0Split0": 152.75301782,
+      "delta": 0.003017819999996618,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4372016",
+      "name": "Jaylen Waddle",
+      "canonicalSum": 117.03,
+      "adjustedPeriod0Split0": 117.03477486,
+      "delta": 0.004774859999997716,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431452",
+      "name": "Drake Maye",
+      "canonicalSum": 207.87,
+      "adjustedPeriod0Split0": 207.87344184,
+      "delta": 0.00344183999999359,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "5083076",
+      "name": "Harold Fannin Jr.",
+      "canonicalSum": 93.65,
+      "adjustedPeriod0Split0": 93.6517144,
+      "delta": 0.0017143999999973403,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4248528",
+      "name": "Christian Watson",
+      "canonicalSum": 172.56,
+      "adjustedPeriod0Split0": 172.55770649,
+      "delta": 0.0022935100000154307,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4575131",
+      "name": "Jacory Croskey-Merritt",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360569",
+      "name": "Jordan Mason",
+      "canonicalSum": 111.53,
+      "adjustedPeriod0Split0": 111.53016036,
+      "delta": 0.0001603599999953076,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686361",
+      "name": "Cam Little",
+      "canonicalSum": 97.37,
+      "adjustedPeriod0Split0": 97.36758956,
+      "delta": 0.002410440000005565,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4832800",
+      "name": "Denzel Boston",
+      "canonicalSum": 137.28,
+      "adjustedPeriod0Split0": 137.28242848,
+      "delta": 0.0024284799999918505,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685247",
+      "name": "Braelon Allen",
+      "canonicalSum": 80.47,
+      "adjustedPeriod0Split0": 80.47285909,
+      "delta": 0.0028590900000011743,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569603",
+      "name": "Malik Washington",
+      "canonicalSum": 129.38,
+      "adjustedPeriod0Split0": 129.38159844,
+      "delta": 0.0015984400000093046,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "17372",
+      "name": "Chris Boswell",
+      "canonicalSum": 117.38,
+      "adjustedPeriod0Split0": 117.37798262,
+      "delta": 0.00201737999999807,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2473037",
+      "name": "Jason Myers",
+      "canonicalSum": 108.11,
+      "adjustedPeriod0Split0": 108.10637157,
+      "delta": 0.003628430000006233,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4239996",
+      "name": "Travis Etienne Jr.",
+      "canonicalSum": 134.75,
+      "adjustedPeriod0Split0": 134.75042241,
+      "delta": 0.00042240999999876294,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3055899",
+      "name": "Harrison Butker",
+      "canonicalSum": 129.41,
+      "adjustedPeriod0Split0": 129.41176161,
+      "delta": 0.0017616100000168444,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3916433",
+      "name": "Jakobi Meyers",
+      "canonicalSum": 119.45,
+      "adjustedPeriod0Split0": 119.45321267,
+      "delta": 0.003212669999996365,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3128429",
+      "name": "Courtland Sutton",
+      "canonicalSum": 93.42,
+      "adjustedPeriod0Split0": 93.42119145,
+      "delta": 0.0011914499999932104,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4697745",
+      "name": "Tyler Loop",
+      "canonicalSum": 96.61,
+      "adjustedPeriod0Split0": 96.60668744,
+      "delta": 0.0033125599999976885,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3917315",
+      "name": "Kyler Murray",
+      "canonicalSum": 202.26,
+      "adjustedPeriod0Split0": 202.26416146,
+      "delta": 0.004161460000005945,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426338",
+      "name": "Bo Nix",
+      "canonicalSum": 159.86,
+      "adjustedPeriod0Split0": 159.86001703,
+      "delta": 1.702999998087762e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4697815",
+      "name": "Rachaad White",
+      "canonicalSum": 128.88,
+      "adjustedPeriod0Split0": 128.88215173,
+      "delta": 0.002151730000008456,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361432",
+      "name": "Romeo Doubs",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "3121422",
+      "name": "Terry McLaurin",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4242355",
+      "name": "Jake Ferguson",
+      "canonicalSum": 66.06,
+      "adjustedPeriod0Split0": 66.05905745,
+      "delta": 0.0009425500000048714,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360078",
+      "name": "Alec Pierce",
+      "canonicalSum": 84.61,
+      "adjustedPeriod0Split0": 84.60793999,
+      "delta": 0.0020600099999938948,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3116165",
+      "name": "Chris Godwin Jr.",
+      "canonicalSum": 102.56,
+      "adjustedPeriod0Split0": 102.5631968,
+      "delta": 0.003196799999997779,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362081",
+      "name": "Cameron Dicker",
+      "canonicalSum": 84.51,
+      "adjustedPeriod0Split0": 84.50842597,
+      "delta": 0.0015740300000004481,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429023",
+      "name": "MarShawn Lloyd",
+      "canonicalSum": 28.06,
+      "adjustedPeriod0Split0": 28.06226296,
+      "delta": 0.0022629600000030337,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3046439",
+      "name": "Hunter Henry",
+      "canonicalSum": 79.94,
+      "adjustedPeriod0Split0": 79.93800967,
+      "delta": 0.0019903299999981527,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4035687",
+      "name": "Michael Pittman Jr.",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4040715",
+      "name": "Jalen Hurts",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4432773",
+      "name": "Brian Thomas Jr.",
+      "canonicalSum": 59.84,
+      "adjustedPeriod0Split0": 59.83764669,
+      "delta": 0.0023533100000037166,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4870653",
+      "name": "KC Concepcion",
+      "canonicalSum": 101.8,
+      "adjustedPeriod0Split0": 101.79657232,
+      "delta": 0.0034276800000014873,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4689936",
+      "name": "Jake Bates",
+      "canonicalSum": 105.66,
+      "adjustedPeriod0Split0": 105.66354024,
+      "delta": 0.0035402400000066336,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4038941",
+      "name": "Justin Herbert",
+      "canonicalSum": 130.26,
+      "adjustedPeriod0Split0": 130.2649539,
+      "delta": 0.004953900000003841,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430539",
+      "name": "Brenton Strange",
+      "canonicalSum": 109.47,
+      "adjustedPeriod0Split0": 109.47198227,
+      "delta": 0.0019822699999991755,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241474",
+      "name": "Brian Robinson Jr.",
+      "canonicalSum": 66.23,
+      "adjustedPeriod0Split0": 66.22828335,
+      "delta": 0.0017166500000058704,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4870795",
+      "name": "Makai Lemon",
+      "canonicalSum": 67.71,
+      "adjustedPeriod0Split0": 67.70748345,
+      "delta": 0.002516549999995732,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4678008",
+      "name": "Jonathon Brooks",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4880281",
+      "name": "Jordyn Tyson",
+      "canonicalSum": 89.83,
+      "adjustedPeriod0Split0": 89.82720668,
+      "delta": 0.002793319999994992,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429160",
+      "name": "De'Von Achane",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3912547",
+      "name": "Sam Darnold",
+      "canonicalSum": 161.18,
+      "adjustedPeriod0Split0": 161.18490812,
+      "delta": 0.004908119999981864,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3117256",
+      "name": "Dalton Schultz",
+      "canonicalSum": 91.45,
+      "adjustedPeriod0Split0": 91.44996354,
+      "delta": 3.646000000401273e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429025",
+      "name": "Quentin Johnston",
+      "canonicalSum": 69.44,
+      "adjustedPeriod0Split0": 69.44338483,
+      "delta": 0.0033848300000016707,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5083315",
+      "name": "Kenyon Sadiq",
+      "canonicalSum": 55.61,
+      "adjustedPeriod0Split0": 55.61330072,
+      "delta": 0.0033007199999985914,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429086",
+      "name": "Michael Mayer",
+      "canonicalSum": 87.5,
+      "adjustedPeriod0Split0": 87.50127391,
+      "delta": 0.0012739099999947712,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3052587",
+      "name": "Baker Mayfield",
+      "canonicalSum": 179.94,
+      "adjustedPeriod0Split0": 179.93783148,
+      "delta": 0.0021685199999978977,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3150744",
+      "name": "Chase McLaughlin",
+      "canonicalSum": 97.83,
+      "adjustedPeriod0Split0": 97.83296462,
+      "delta": 0.0029646200000001954,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "17427",
+      "name": "Cairo Santos",
+      "canonicalSum": 87.52,
+      "adjustedPeriod0Split0": 87.51592642,
+      "delta": 0.004073579999996468,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4689114",
+      "name": "Jaxson Dart",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426386",
+      "name": "Roschon Johnson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": -2.1809999999788943e-05,
+      "delta": 2.1809999999788943e-05,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4702555",
+      "name": "Jonah Coleman",
+      "canonicalSum": 27.8,
+      "adjustedPeriod0Split0": 27.79855402,
+      "delta": 0.0014459799999997358,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4586312",
+      "name": "Jaylin Noel",
+      "canonicalSum": 79.11,
+      "adjustedPeriod0Split0": 79.11191218,
+      "delta": 0.001912180000005037,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362249",
+      "name": "Jayden Reed",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2573401",
+      "name": "Tyler Higbee",
+      "canonicalSum": 77.53,
+      "adjustedPeriod0Split0": 77.52850242,
+      "delta": 0.0014975800000058825,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4710714",
+      "name": "De'Zhaun Stribling",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2578570",
+      "name": "Jacoby Brissett",
+      "canonicalSum": 166.58,
+      "adjustedPeriod0Split0": 166.58455124,
+      "delta": 0.004551239999983636,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4433970",
+      "name": "J.J. McCarthy",
+      "canonicalSum": 192.7,
+      "adjustedPeriod0Split0": 192.69941666,
+      "delta": 0.0005833399999914946,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686658",
+      "name": "Mike Washington Jr.",
+      "canonicalSum": 62.1,
+      "adjustedPeriod0Split0": 62.10436232,
+      "delta": 0.004362319999998476,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361529",
+      "name": "Isiah Pacheco",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2973405",
+      "name": "Kalif Raymond",
+      "canonicalSum": 53.39,
+      "adjustedPeriod0Split0": 53.3913117,
+      "delta": 0.0013117000000022472,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "3895856",
+      "name": "Christian Kirk",
+      "canonicalSum": 42.3,
+      "adjustedPeriod0Split0": 42.29943358,
+      "delta": 0.0005664199999984021,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3122840",
+      "name": "Deshaun Watson",
+      "canonicalSum": 166.55,
+      "adjustedPeriod0Split0": 166.54772883,
+      "delta": 0.002271170000000211,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4596334",
+      "name": "Keaton Mitchell",
+      "canonicalSum": 66.67,
+      "adjustedPeriod0Split0": 66.6723562,
+      "delta": 0.0023561999999941463,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4597500",
+      "name": "Adonai Mitchell",
+      "canonicalSum": 77.43,
+      "adjustedPeriod0Split0": 77.4277042,
+      "delta": 0.0022958000000130596,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5083754",
+      "name": "Ryan Flournoy",
+      "canonicalSum": 99.75,
+      "adjustedPeriod0Split0": 99.75090407,
+      "delta": 0.0009040700000042534,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360516",
+      "name": "Tyrone Tracy Jr.",
+      "canonicalSum": 65.73,
+      "adjustedPeriod0Split0": 65.73390368,
+      "delta": 0.0039036799999934146,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3116164",
+      "name": "Mike Gesicki",
+      "canonicalSum": 83.96,
+      "adjustedPeriod0Split0": 83.96342501,
+      "delta": 0.0034250100000008388,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3917792",
+      "name": "Daniel Jones",
+      "canonicalSum": 136.86,
+      "adjustedPeriod0Split0": 136.85833837,
+      "delta": 0.0016616300000009687,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4869461",
+      "name": "Trey Smack",
+      "canonicalSum": 98.19,
+      "adjustedPeriod0Split0": 98.18891949,
+      "delta": 0.0010805099999942058,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4832955",
+      "name": "Emmett Johnson",
+      "canonicalSum": 69.58,
+      "adjustedPeriod0Split0": 69.58113449,
+      "delta": 0.0011344899999983227,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360423",
+      "name": "Michael Penix Jr.",
+      "canonicalSum": 165.93,
+      "adjustedPeriod0Split0": 165.9337991,
+      "delta": 0.0037990999999806263,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4570037",
+      "name": "Terrance Ferguson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4870847",
+      "name": "Ja'Kobi Lane",
+      "canonicalSum": 61.26,
+      "adjustedPeriod0Split0": 61.26491695,
+      "delta": 0.004916950000001918,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360939",
+      "name": "Rashod Bateman",
+      "canonicalSum": 76.42,
+      "adjustedPeriod0Split0": 76.42151957,
+      "delta": 0.0015195699999992485,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362619",
+      "name": "Chris Rodriguez Jr.",
+      "canonicalSum": 64.73,
+      "adjustedPeriod0Split0": 64.73214996,
+      "delta": 0.0021499599999970087,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "15864",
+      "name": "Geno Smith",
+      "canonicalSum": 158.74,
+      "adjustedPeriod0Split0": 158.73610856,
+      "delta": 0.003891440000018065,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2576925",
+      "name": "Darren Waller",
+      "canonicalSum": 71.39,
+      "adjustedPeriod0Split0": 71.38620151,
+      "delta": 0.0037984899999941035,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3116389",
+      "name": "Samaje Perine",
+      "canonicalSum": 77.45,
+      "adjustedPeriod0Split0": 77.45143145,
+      "delta": 0.0014314499999983354,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430834",
+      "name": "Jalen McMillan",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241463",
+      "name": "Jerry Jeudy",
+      "canonicalSum": 67.22,
+      "adjustedPeriod0Split0": 67.22292757,
+      "delta": 0.002927569999997104,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3917232",
+      "name": "Tyler Bass",
+      "canonicalSum": 120.17,
+      "adjustedPeriod0Split0": 120.16955587,
+      "delta": 0.0004441300000053161,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2969939",
+      "name": "Jameis Winston",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4869645",
+      "name": "Caleb Douglas",
+      "canonicalSum": 89.98,
+      "adjustedPeriod0Split0": 89.97623811,
+      "delta": 0.003761890000006929,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2977187",
+      "name": "Cooper Kupp",
+      "canonicalSum": 73.52,
+      "adjustedPeriod0Split0": 73.51715513,
+      "delta": 0.0028448699999898963,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431492",
+      "name": "Roman Wilson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5081397",
+      "name": "Dylan Sampson",
+      "canonicalSum": 68.61,
+      "adjustedPeriod0Split0": 68.6146148,
+      "delta": 0.004614799999998809,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4363538",
+      "name": "Chad Ryland",
+      "canonicalSum": 103.92,
+      "adjustedPeriod0Split0": 103.91970614,
+      "delta": 0.000293859999999313,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4427728",
+      "name": "Bam Knight",
+      "canonicalSum": 8.06,
+      "adjustedPeriod0Split0": 8.06256782,
+      "delta": 0.0025678199999994433,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4038441",
+      "name": "Justice Hill",
+      "canonicalSum": 65.31,
+      "adjustedPeriod0Split0": 65.30693306,
+      "delta": 0.0030669399999965208,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4715355",
+      "name": "Darius Cooper",
+      "canonicalSum": 46.66,
+      "adjustedPeriod0Split0": 46.65614572,
+      "delta": 0.0038542799999987665,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3045523",
+      "name": "Kendrick Bourne",
+      "canonicalSum": 90.76,
+      "adjustedPeriod0Split0": 90.76241134,
+      "delta": 0.002411339999994766,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5081432",
+      "name": "Antonio Williams",
+      "canonicalSum": 89.66,
+      "adjustedPeriod0Split0": 89.66491595,
+      "delta": 0.004915949999997338,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4249836",
+      "name": "Pierre Strong Jr.",
+      "canonicalSum": 35.62,
+      "adjustedPeriod0Split0": 35.61771866,
+      "delta": 0.002281339999996135,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3925357",
+      "name": "Calvin Ridley",
+      "canonicalSum": 37.05,
+      "adjustedPeriod0Split0": 37.05176496,
+      "delta": 0.0017649600000027021,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4710855",
+      "name": "Konata Mumpfield",
+      "canonicalSum": 67.14,
+      "adjustedPeriod0Split0": 67.14031559,
+      "delta": 0.00031558999999958814,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4242512",
+      "name": "Malik Willis",
+      "canonicalSum": 167.07,
+      "adjustedPeriod0Split0": 167.07447883,
+      "delta": 0.004478830000010703,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429013",
+      "name": "Tank Bigsby",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4576297",
+      "name": "AJ Barner",
+      "canonicalSum": 84.01,
+      "adjustedPeriod0Split0": 84.00870362,
+      "delta": 0.0012963799999994308,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430968",
+      "name": "Kimani Vidal",
+      "canonicalSum": 93.67,
+      "adjustedPeriod0Split0": 93.67133253,
+      "delta": 0.0013325299999991103,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429835",
+      "name": "George Holani",
+      "canonicalSum": 7.01,
+      "adjustedPeriod0Split0": 7.00918935,
+      "delta": 0.0008106500000000239,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "10621",
+      "name": "Nick Folk",
+      "canonicalSum": 79.68,
+      "adjustedPeriod0Split0": 79.68047131,
+      "delta": 0.0004713099999946735,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431545",
+      "name": "Will Shipley",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3050478",
+      "name": "Jake Elliott",
+      "canonicalSum": 67.14,
+      "adjustedPeriod0Split0": 67.13645021,
+      "delta": 0.003549789999993891,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685201",
+      "name": "Tanner McKee",
+      "canonicalSum": 140.36,
+      "adjustedPeriod0Split0": 140.36361433,
+      "delta": 0.003614329999976462,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4242557",
+      "name": "Colby Parkinson",
+      "canonicalSum": 85.95,
+      "adjustedPeriod0Split0": 85.95442718,
+      "delta": 0.004427179999993314,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430802",
+      "name": "Darnell Washington",
+      "canonicalSum": 81.22,
+      "adjustedPeriod0Split0": 81.2162457,
+      "delta": 0.0037542999999971016,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4682648",
+      "name": "Malachi Fields",
+      "canonicalSum": 82.85,
+      "adjustedPeriod0Split0": 82.84901219,
+      "delta": 0.000987809999998035,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360635",
+      "name": "Chig Okonkwo",
+      "canonicalSum": 92.18,
+      "adjustedPeriod0Split0": 92.17762632,
+      "delta": 0.0023736800000051517,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2985659",
+      "name": "Wil Lutz",
+      "canonicalSum": 91.38,
+      "adjustedPeriod0Split0": 91.37743981,
+      "delta": 0.0025601899999969646,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4682745",
+      "name": "Jaylen Wright",
+      "canonicalSum": 57.34,
+      "adjustedPeriod0Split0": 57.33541976,
+      "delta": 0.004580240000002789,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4688380",
+      "name": "Cam Ward",
+      "canonicalSum": 132.47,
+      "adjustedPeriod0Split0": 132.47483613,
+      "delta": 0.004836130000001049,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429022",
+      "name": "Kayshon Boutte",
+      "canonicalSum": 31.12,
+      "adjustedPeriod0Split0": 31.1249884,
+      "delta": 0.00498839999999845,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4722893",
+      "name": "Jaleel McLaughlin",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4382466",
+      "name": "Jalen Nailor",
+      "canonicalSum": 59.39,
+      "adjustedPeriod0Split0": 59.39237993,
+      "delta": 0.0023799299999964774,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5220680",
+      "name": "Ted Hurst III",
+      "canonicalSum": 89.33,
+      "adjustedPeriod0Split0": 89.3341026,
+      "delta": 0.0041025999999959595,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2991662",
+      "name": "Mack Hollins",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4243331",
+      "name": "Cade Otton",
+      "canonicalSum": 87.23,
+      "adjustedPeriod0Split0": 87.2319129,
+      "delta": 0.0019128999999935559,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361409",
+      "name": "Jahan Dotson",
+      "canonicalSum": 85.2,
+      "adjustedPeriod0Split0": 85.20002704,
+      "delta": 2.7039999991984587e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4035671",
+      "name": "Tyler Huntley",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3045147",
+      "name": "James Conner",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4837248",
+      "name": "Fernando Mendoza",
+      "canonicalSum": 120.55,
+      "adjustedPeriod0Split0": 120.54608758,
+      "delta": 0.003912419999991812,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429501",
+      "name": "Ray Davis",
+      "canonicalSum": 23.36,
+      "adjustedPeriod0Split0": 23.3628666,
+      "delta": 0.0028666000000008296,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686468",
+      "name": "Seth McGowan",
+      "canonicalSum": 33.79,
+      "adjustedPeriod0Split0": 33.79260284,
+      "delta": 0.0026028400000015495,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686612",
+      "name": "Tre' Harris",
+      "canonicalSum": 67.18,
+      "adjustedPeriod0Split0": 67.18168133,
+      "delta": 0.0016813299999967057,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4695193",
+      "name": "Efton Chism III",
+      "canonicalSum": 81.74,
+      "adjustedPeriod0Split0": 81.73840697,
+      "delta": 0.0015930299999951103,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "3886598",
+      "name": "Jauan Jennings",
+      "canonicalSum": 23.64,
+      "adjustedPeriod0Split0": 23.64360634,
+      "delta": 0.0036063400000010404,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3149687",
+      "name": "Chris Brooks",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3068267",
+      "name": "Austin Ekeler",
+      "canonicalSum": 34.8,
+      "adjustedPeriod0Split0": 34.80173276,
+      "delta": 0.0017327600000029975,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4259619",
+      "name": "Blake Grupe",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4384852",
+      "name": "Dohnte Meyers",
+      "canonicalSum": 69,
+      "adjustedPeriod0Split0": 68.99696791,
+      "delta": 0.003032090000004928,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3915411",
+      "name": "Ty Johnson",
+      "canonicalSum": 65.24,
+      "adjustedPeriod0Split0": 65.2403917,
+      "delta": 0.00039170000000865457,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3051876",
+      "name": "Evan Engram",
+      "canonicalSum": 60.47,
+      "adjustedPeriod0Split0": 60.46925092,
+      "delta": 0.0007490799999985143,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686422",
+      "name": "Xavier Hutchinson",
+      "canonicalSum": 38.15,
+      "adjustedPeriod0Split0": 38.15388333,
+      "delta": 0.00388333000000074,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4595342",
+      "name": "Oronde Gadsden",
+      "canonicalSum": 42.64,
+      "adjustedPeriod0Split0": 42.64017006,
+      "delta": 0.00017006000000208132,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5123663",
+      "name": "Isaac TeSlaa",
+      "canonicalSum": 88.28,
+      "adjustedPeriod0Split0": 88.27624151,
+      "delta": 0.003758489999995618,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686728",
+      "name": "Gunnar Helm",
+      "canonicalSum": 44.04,
+      "adjustedPeriod0Split0": 44.0361136,
+      "delta": 0.0038863999999989574,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428209",
+      "name": "Ricky Pearsall",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4877706",
+      "name": "Jayden Higgins",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2576980",
+      "name": "Marcus Mariota",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "16731",
+      "name": "Brandin Cooks",
+      "canonicalSum": 12.13,
+      "adjustedPeriod0Split0": 12.12864918,
+      "delta": 0.001350820000000752,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4695404",
+      "name": "Isaiah Davis",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4040761",
+      "name": "Devin Singletary",
+      "canonicalSum": 55.71,
+      "adjustedPeriod0Split0": 55.71324036,
+      "delta": 0.003240359999999498,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3051909",
+      "name": "Daniel Carlson",
+      "canonicalSum": 80.81,
+      "adjustedPeriod0Split0": 80.80978089,
+      "delta": 0.0002191100000032975,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4869961",
+      "name": "Chris Bell",
+      "canonicalSum": 68.79,
+      "adjustedPeriod0Split0": 68.7910022,
+      "delta": 0.0010021999999878517,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569923",
+      "name": "Andy Borregales",
+      "canonicalSum": 77.57,
+      "adjustedPeriod0Split0": 77.57265867999999,
+      "delta": 0.0026586799999961386,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4819231",
+      "name": "Kaleb Johnson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3123076",
+      "name": "David Njoku",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4870612",
+      "name": "Zachariah Branch",
+      "canonicalSum": 38.43,
+      "adjustedPeriod0Split0": 38.43036169,
+      "delta": 0.00036168999999830476,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4258620",
+      "name": "Andre Szmyt",
+      "canonicalSum": 97.25,
+      "adjustedPeriod0Split0": 97.25256229,
+      "delta": 0.002562290000000189,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3676833",
+      "name": "KaVontae Turpin",
+      "canonicalSum": 26.52,
+      "adjustedPeriod0Split0": 26.52247053,
+      "delta": 0.002470530000000082,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431487",
+      "name": "Savion Williams",
+      "canonicalSum": 80.89,
+      "adjustedPeriod0Split0": 80.88567665,
+      "delta": 0.0043233500000070535,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "16733",
+      "name": "Odell Beckham Jr.",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4600981",
+      "name": "Pat Bryant",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4596472",
+      "name": "Jalon Daniels",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4912218",
+      "name": "Cyrus Allen",
+      "canonicalSum": 27.17,
+      "adjustedPeriod0Split0": 27.16933086,
+      "delta": 0.0006691400000029546,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3124679",
+      "name": "Jason Sanders",
+      "canonicalSum": 93.32,
+      "adjustedPeriod0Split0": 93.31842067,
+      "delta": 0.0015793299999984356,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4367209",
+      "name": "Greg Dulcich",
+      "canonicalSum": 72.37,
+      "adjustedPeriod0Split0": 72.36522942,
+      "delta": 0.0047705799999988585,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431268",
+      "name": "Chimere Dike",
+      "canonicalSum": 27.58,
+      "adjustedPeriod0Split0": 27.5786189,
+      "delta": 0.001381099999999691,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4613202",
+      "name": "Kyle Williams",
+      "canonicalSum": 42.79,
+      "adjustedPeriod0Split0": 42.78595139,
+      "delta": 0.004048609999998121,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "5082630",
+      "name": "Jalen Royals",
+      "canonicalSum": 66.15,
+      "adjustedPeriod0Split0": 66.14989862,
+      "delta": 0.00010138000000381453,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4040655",
+      "name": "Darnell Mooney",
+      "canonicalSum": 52.82,
+      "adjustedPeriod0Split0": 52.8189672,
+      "delta": 0.0010327999999972803,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3043116",
+      "name": "Demarcus Robinson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4432762",
+      "name": "Shedeur Sanders",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4372780",
+      "name": "Tommy Tremble",
+      "canonicalSum": 61.04,
+      "adjustedPeriod0Split0": 61.04214529,
+      "delta": 0.0021452900000014097,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5081335",
+      "name": "Drew Stevens",
+      "canonicalSum": 90.09,
+      "adjustedPeriod0Split0": 90.0859521,
+      "delta": 0.004047900000003324,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430034",
+      "name": "Xavier Legette",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569371",
+      "name": "Isaiah Williams",
+      "canonicalSum": 9.58,
+      "adjustedPeriod0Split0": 9.57879793,
+      "delta": 0.001202069999999722,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431466",
+      "name": "Jordan Watkins",
+      "canonicalSum": 18.78,
+      "adjustedPeriod0Split0": 18.78337594,
+      "delta": 0.003375939999997968,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4434153",
+      "name": "Tyson Bagent",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4431431",
+      "name": "Corey Kiner",
+      "canonicalSum": 22.46,
+      "adjustedPeriod0Split0": 22.46428362,
+      "delta": 0.004283619999998933,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4258595",
+      "name": "Cole Kmet",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 1.199999997147927e-07,
+      "delta": 1.199999997147927e-07,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4430656",
+      "name": "Myles Price",
+      "canonicalSum": 7.55,
+      "adjustedPeriod0Split0": 7.54827646,
+      "delta": 0.0017235399999995238,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685397",
+      "name": "Jordan James",
+      "canonicalSum": 0.09,
+      "adjustedPeriod0Split0": 0.09374883,
+      "delta": 0.0037488300000000085,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3930086",
+      "name": "Dawson Knox",
+      "canonicalSum": 37.24,
+      "adjustedPeriod0Split0": 37.2419357,
+      "delta": 0.001935699999997098,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686472",
+      "name": "Marvin Mims Jr.",
+      "canonicalSum": 58.29,
+      "adjustedPeriod0Split0": 58.29462549,
+      "delta": 0.00462549000000223,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4912274",
+      "name": "Sione Vaki",
+      "canonicalSum": 53.01,
+      "adjustedPeriod0Split0": 53.00577471,
+      "delta": 0.004225290000000825,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4383429",
+      "name": "Jacob Saylors",
+      "canonicalSum": 0.78,
+      "adjustedPeriod0Split0": 0.77947966,
+      "delta": 0.000520340000000008,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4240603",
+      "name": "Malik Davis",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "15835",
+      "name": "Zach Ertz",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4242433",
+      "name": "Joshua Palmer",
+      "canonicalSum": 28.2,
+      "adjustedPeriod0Split0": 28.20340078,
+      "delta": 0.00340077999999977,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4575665",
+      "name": "Jacob Cowing",
+      "canonicalSum": 5.79,
+      "adjustedPeriod0Split0": 5.79189232,
+      "delta": 0.0018923199999996143,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3924327",
+      "name": "Drew Lock",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4567156",
+      "name": "Treylon Burks",
+      "canonicalSum": 98.64,
+      "adjustedPeriod0Split0": 98.63794082,
+      "delta": 0.00205918000000338,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362921",
+      "name": "Tyquan Thornton",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241479",
+      "name": "Tua Tagovailoa",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "15168",
+      "name": "Case Keenum",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4685555",
+      "name": "Nicholas Singleton",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4869748",
+      "name": "Zavion Thomas",
+      "canonicalSum": 15.92,
+      "adjustedPeriod0Split0": 15.918632939999998,
+      "delta": 0.0013670600000015298,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "2573079",
+      "name": "Carson Wentz",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5081508",
+      "name": "Eli Heidenreich",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3124084",
+      "name": "Joey Slye",
+      "canonicalSum": 77.98,
+      "adjustedPeriod0Split0": 77.98479541,
+      "delta": 0.004795409999999833,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431280",
+      "name": "Troy Franklin",
+      "canonicalSum": 42.91,
+      "adjustedPeriod0Split0": 42.90824384,
+      "delta": 0.0017561599999993405,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "16002",
+      "name": "Kyle Juszczyk",
+      "canonicalSum": 33.47,
+      "adjustedPeriod0Split0": 33.47001837,
+      "delta": 1.836999999937916e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4601080",
+      "name": "Raheim Sanders",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685246",
+      "name": "Kaytron Allen",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360698",
+      "name": "Joe Milton",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360797",
+      "name": "Tutu Atwell",
+      "canonicalSum": 43.03,
+      "adjustedPeriod0Split0": 43.02671035,
+      "delta": 0.0032896499999992557,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3051889",
+      "name": "Laquon Treadwell",
+      "canonicalSum": 23.08,
+      "adjustedPeriod0Split0": 23.08050287,
+      "delta": 0.0005028700000018205,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4596602",
+      "name": "Brashard Smith",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4036131",
+      "name": "Noah Fant",
+      "canonicalSum": 30.34,
+      "adjustedPeriod0Split0": 30.34429486,
+      "delta": 0.004294860000001677,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430871",
+      "name": "Sean Tucker",
+      "canonicalSum": 26.72,
+      "adjustedPeriod0Split0": 26.71566351,
+      "delta": 0.004336490000000026,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4603186",
+      "name": "Jack Bech",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4832846",
+      "name": "Demond Claiborne",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4249417",
+      "name": "Jalen Tolbert",
+      "canonicalSum": 9.52,
+      "adjustedPeriod0Split0": 9.51564542,
+      "delta": 0.004354579999999331,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362478",
+      "name": "Emari Demercado",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4683153",
+      "name": "Skyler Bell",
+      "canonicalSum": 5.64,
+      "adjustedPeriod0Split0": 5.64080105,
+      "delta": 0.000801050000000636,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430841",
+      "name": "Carson Beck",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4831959",
+      "name": "Eli Raridon",
+      "canonicalSum": 49.38,
+      "adjustedPeriod0Split0": 49.375548540000004,
+      "delta": 0.004451459999998519,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4597703",
+      "name": "Tory Horton",
+      "canonicalSum": 22.82,
+      "adjustedPeriod0Split0": 22.8245745,
+      "delta": 0.00457450000000037,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685350",
+      "name": "Trevor Etienne",
+      "canonicalSum": 1.25,
+      "adjustedPeriod0Split0": 1.25295202,
+      "delta": 0.002952019999999944,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "16339",
+      "name": "Brandon McManus",
+      "canonicalSum": 84.98,
+      "adjustedPeriod0Split0": 84.97583116,
+      "delta": 0.004168840000005503,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4911851",
+      "name": "LeQuint Allen Jr.",
+      "canonicalSum": 10.52,
+      "adjustedPeriod0Split0": 10.51543783,
+      "delta": 0.00456216999999981,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360763",
+      "name": "Brycen Tremayne",
+      "canonicalSum": 54.61,
+      "adjustedPeriod0Split0": 54.61346507,
+      "delta": 0.0034650699999971835,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4239934",
+      "name": "AJ Dillon",
+      "canonicalSum": 41.11,
+      "adjustedPeriod0Split0": 41.10713993,
+      "delta": 0.0028600699999969947,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685526",
+      "name": "Adam Randall",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4366963",
+      "name": "Dylan Laube",
+      "canonicalSum": 22.47,
+      "adjustedPeriod0Split0": 22.4702353,
+      "delta": 0.00023529999999993834,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431574",
+      "name": "Eli Stowers",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362523",
+      "name": "Will Mallory",
+      "canonicalSum": 17.93,
+      "adjustedPeriod0Split0": 17.92986059,
+      "delta": 0.0001394099999991738,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569382",
+      "name": "Jordan Whittington",
+      "canonicalSum": 38.01,
+      "adjustedPeriod0Split0": 38.01322989,
+      "delta": 0.0032298900000000685,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429676",
+      "name": "Tyler Goodson",
+      "canonicalSum": 35.31,
+      "adjustedPeriod0Split0": 35.31080398,
+      "delta": 0.0008039800000005926,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4368003",
+      "name": "Andrei Iosivas",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4808766",
+      "name": "Mason Taylor",
+      "canonicalSum": 59.24,
+      "adjustedPeriod0Split0": 59.24167427,
+      "delta": 0.0016742699999952038,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430191",
+      "name": "Skyy Moore",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4259147",
+      "name": "Jake Tonges",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362887",
+      "name": "Justin Fields",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4240472",
+      "name": "Noah Gray",
+      "canonicalSum": 49.01,
+      "adjustedPeriod0Split0": 49.0076843,
+      "delta": 0.002315699999996923,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685522",
+      "name": "Ty Simpson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5081338",
+      "name": "Kaden Wetjen",
+      "canonicalSum": 3.99,
+      "adjustedPeriod0Split0": 3.9857449,
+      "delta": 0.0042551000000004,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2983509",
+      "name": "Dare Ogunbowale",
+      "canonicalSum": 5.19,
+      "adjustedPeriod0Split0": 5.18920275,
+      "delta": 0.0007972500000006377,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429939",
+      "name": "Jawhar Jordan",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429148",
+      "name": "Theo Johnson",
+      "canonicalSum": 33.19,
+      "adjustedPeriod0Split0": 33.19259583,
+      "delta": 0.0025958300000041845,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241372",
+      "name": "Hollywood Brown",
+      "canonicalSum": 3.93,
+      "adjustedPeriod0Split0": 3.92647293,
+      "delta": 0.0035270700000000765,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4608810",
+      "name": "Tez Johnson",
+      "canonicalSum": 55.83,
+      "adjustedPeriod0Split0": 55.83431001,
+      "delta": 0.004310010000004638,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4879194",
+      "name": "Josh Cameron",
+      "canonicalSum": 61.47,
+      "adjustedPeriod0Split0": 61.4665179,
+      "delta": 0.0034820999999993774,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685307",
+      "name": "Kevin Coleman Jr.",
+      "canonicalSum": 73.25,
+      "adjustedPeriod0Split0": 73.24887667,
+      "delta": 0.0011233299999986457,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "11252",
+      "name": "Joe Flacco",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241464",
+      "name": "Mac Jones",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4678006",
+      "name": "Elijah Arroyo",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4874509",
+      "name": "DJ Giddens",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4569682",
+      "name": "Audric Estime",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241983",
+      "name": "Cody White",
+      "canonicalSum": 38.09,
+      "adjustedPeriod0Split0": 38.09215218,
+      "delta": 0.0021521799999959512,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429299",
+      "name": "Tahj Brooks",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362748",
+      "name": "Tyler Badie",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4879276",
+      "name": "Bryce Lance",
+      "canonicalSum": 11.51,
+      "adjustedPeriod0Split0": 11.51163612,
+      "delta": 0.0016361200000005738,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4714771",
+      "name": "Drew Allar",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4690013",
+      "name": "Rasheen Ali",
+      "canonicalSum": 0.24,
+      "adjustedPeriod0Split0": 0.24081565,
+      "delta": 0.0008156500000000011,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429084",
+      "name": "Anthony Richardson Sr.",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4432775",
+      "name": "Dont'e Thornton Jr.",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4257188",
+      "name": "Charlie Jones",
+      "canonicalSum": 17.29,
+      "adjustedPeriod0Split0": 17.29232375,
+      "delta": 0.0023237500000021782,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4035537",
+      "name": "Kene Nwangwu",
+      "canonicalSum": 2.47,
+      "adjustedPeriod0Split0": 2.46624587,
+      "delta": 0.0037541300000003552,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4427834",
+      "name": "Erick All Jr.",
+      "canonicalSum": 53.56,
+      "adjustedPeriod0Split0": 53.55533677,
+      "delta": 0.004663230000005569,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3054212",
+      "name": "Jonnu Smith",
+      "canonicalSum": 20.62,
+      "adjustedPeriod0Split0": 20.62266322,
+      "delta": 0.002663219999998745,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5088338",
+      "name": "Elijah Sarratt",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4883647",
+      "name": "Elic Ayomanor",
+      "canonicalSum": 45.93,
+      "adjustedPeriod0Split0": 45.9308255,
+      "delta": 0.0008254999999977031,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426948",
+      "name": "Luke McCaffrey",
+      "canonicalSum": 17.87,
+      "adjustedPeriod0Split0": 17.8672854,
+      "delta": 0.0027146000000008996,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4566158",
+      "name": "Ben Sauls",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5081999",
+      "name": "CJ Donaldson",
+      "canonicalSum": 33.41,
+      "adjustedPeriod0Split0": 33.4071567,
+      "delta": 0.002843299999994997,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4698597",
+      "name": "Barion Brown",
+      "canonicalSum": 4.27,
+      "adjustedPeriod0Split0": 4.26912036,
+      "delta": 0.0008796399999999593,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4037235",
+      "name": "Greg Dortch",
+      "canonicalSum": 1.12,
+      "adjustedPeriod0Split0": 1.11632459,
+      "delta": 0.0036754100000000456,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431588",
+      "name": "Ja'Tavion Sanders",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4240391",
+      "name": "Tommy DeVito",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4372096",
+      "name": "Luke Schoonmaker",
+      "canonicalSum": 6.31,
+      "adjustedPeriod0Split0": 6.30500953,
+      "delta": 0.004990469999999192,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3843945",
+      "name": "Foster Moreau",
+      "canonicalSum": 41.51,
+      "adjustedPeriod0Split0": 41.51443206,
+      "delta": 0.004432059999999183,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360967",
+      "name": "Brevyn Spann-Ford",
+      "canonicalSum": 36.32,
+      "adjustedPeriod0Split0": 36.32415875,
+      "delta": 0.004158750000001987,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4692835",
+      "name": "Jalen Brooks",
+      "canonicalSum": 54,
+      "adjustedPeriod0Split0": 54.00396336,
+      "delta": 0.003963360000000193,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2576336",
+      "name": "Ameer Abdullah",
+      "canonicalSum": 0.33,
+      "adjustedPeriod0Split0": 0.33278391,
+      "delta": 0.0027839100000000006,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429275",
+      "name": "Trey Benson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4696882",
+      "name": "Devontez Walker",
+      "canonicalSum": 24.18,
+      "adjustedPeriod0Split0": 24.1753678,
+      "delta": 0.004632199999999642,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426844",
+      "name": "Elijah Higgins",
+      "canonicalSum": 46.54,
+      "adjustedPeriod0Split0": 46.53631633,
+      "delta": 0.003683670000000916,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4808839",
+      "name": "Isaiah Bond",
+      "canonicalSum": 4.93,
+      "adjustedPeriod0Split0": 4.92684334,
+      "delta": 0.0031566600000001444,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4383396",
+      "name": "Hunter Luepke",
+      "canonicalSum": 16.49,
+      "adjustedPeriod0Split0": 16.48835539,
+      "delta": 0.0016446099999996022,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4242392",
+      "name": "Brock Wright",
+      "canonicalSum": 21.29,
+      "adjustedPeriod0Split0": 21.28779469,
+      "delta": 0.002205310000000793,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5160110",
+      "name": "Jahdae Walker",
+      "canonicalSum": 5.21,
+      "adjustedPeriod0Split0": 5.20567885,
+      "delta": 0.004321149999999996,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4426875",
+      "name": "Sam Howell",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3043275",
+      "name": "Austin Hooper",
+      "canonicalSum": 22.37,
+      "adjustedPeriod0Split0": 22.36543081,
+      "delta": 0.004569190000001555,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4259305",
+      "name": "Bo Melton",
+      "canonicalSum": 24.39,
+      "adjustedPeriod0Split0": 24.39302877,
+      "delta": 0.003028770000000236,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4039057",
+      "name": "Lil'Jordan Humphrey",
+      "canonicalSum": 15.96,
+      "adjustedPeriod0Split0": 15.96388191,
+      "delta": 0.0038819099999987117,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4567096",
+      "name": "John Metchie III",
+      "canonicalSum": 59.13,
+      "adjustedPeriod0Split0": 59.12776064,
+      "delta": 0.0022393600000043534,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361577",
+      "name": "Dyami Brown",
+      "canonicalSum": 57.75,
+      "adjustedPeriod0Split0": 57.74933036,
+      "delta": 0.0006696399999981395,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4061956",
+      "name": "Ashton Dulin",
+      "canonicalSum": 11.25,
+      "adjustedPeriod0Split0": 11.24811533,
+      "delta": 0.0018846700000008099,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2998565",
+      "name": "Mo Alie-Cox",
+      "canonicalSum": 13.35,
+      "adjustedPeriod0Split0": 13.34598703,
+      "delta": 0.0040129699999997825,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426485",
+      "name": "Jonathan Mingo",
+      "canonicalSum": 11.34,
+      "adjustedPeriod0Split0": 11.34302467,
+      "delta": 0.0030246700000002846,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3052096",
+      "name": "Johnny Mundt",
+      "canonicalSum": 17.61,
+      "adjustedPeriod0Split0": 17.60518879,
+      "delta": 0.004811209999999733,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3115293",
+      "name": "Kyle Allen",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4690143",
+      "name": "LaJohntay Wester",
+      "canonicalSum": 1.34,
+      "adjustedPeriod0Split0": 1.34396989,
+      "delta": 0.003969889999999809,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3134353",
+      "name": "Tim Patrick",
+      "canonicalSum": 16.39,
+      "adjustedPeriod0Split0": 16.39001968,
+      "delta": 1.9680000001187636e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5091739",
+      "name": "Chris Brazzell II",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4833029",
+      "name": "Max Klare",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3127310",
+      "name": "Drew Sample",
+      "canonicalSum": 29.6,
+      "adjustedPeriod0Split0": 29.60016061,
+      "delta": 0.00016060999999822911,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3892775",
+      "name": "Jarrett Stidham",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5150247",
+      "name": "Malik Benson",
+      "canonicalSum": 13.2,
+      "adjustedPeriod0Split0": 13.20046176,
+      "delta": 0.0004617600000003108,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3921690",
+      "name": "Josh Oliver",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3911853",
+      "name": "Adam Trautman",
+      "canonicalSum": 10.81,
+      "adjustedPeriod0Split0": 10.81165393,
+      "delta": 0.0016539299999998036,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3917914",
+      "name": "Olamide Zaccheaus",
+      "canonicalSum": 34.61,
+      "adjustedPeriod0Split0": 34.61135468,
+      "delta": 0.0013546799999986092,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5092508",
+      "name": "Colbie Young",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4702559",
+      "name": "Oscar Delp",
+      "canonicalSum": 5.9,
+      "adjustedPeriod0Split0": 5.90191194,
+      "delta": 0.0019119399999993902,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "14163",
+      "name": "Tyrod Taylor",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4565185",
+      "name": "Tai Felton",
+      "canonicalSum": 11.46,
+      "adjustedPeriod0Split0": 11.45803498,
+      "delta": 0.001965020000000095,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685504",
+      "name": "Sam Roush",
+      "canonicalSum": 26.29,
+      "adjustedPeriod0Split0": 26.28540891,
+      "delta": 0.0045910899999981325,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4432260",
+      "name": "Matt Hibner",
+      "canonicalSum": 35.49,
+      "adjustedPeriod0Split0": 35.49009197,
+      "delta": 9.196999999971922e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3044720",
+      "name": "Joshua Dobbs",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685413",
+      "name": "Cade Klubnik",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2975417",
+      "name": "Patrick Ricard",
+      "canonicalSum": 4.97,
+      "adjustedPeriod0Split0": 4.96816294,
+      "delta": 0.001837059999999724,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4039050",
+      "name": "Devin Duvernay",
+      "canonicalSum": 1.32,
+      "adjustedPeriod0Split0": 1.31501461,
+      "delta": 0.0049853900000000895,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4372561",
+      "name": "Isaac Guerendo",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241263",
+      "name": "Charlie Kolar",
+      "canonicalSum": 53.13,
+      "adjustedPeriod0Split0": 53.13063848,
+      "delta": 0.0006384799999992197,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685553",
+      "name": "Brenen Thompson",
+      "canonicalSum": 4.54,
+      "adjustedPeriod0Split0": 4.54192735,
+      "delta": 0.0019273499999998833,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4573699",
+      "name": "Jackson Hawes",
+      "canonicalSum": 5.55,
+      "adjustedPeriod0Split0": 5.55149242,
+      "delta": 0.0014924199999999388,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4613104",
+      "name": "Malachi Corley",
+      "canonicalSum": 0.6,
+      "adjustedPeriod0Split0": 0.59735671,
+      "delta": 0.002643289999999965,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4240703",
+      "name": "Kenny Pickett",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4876132",
+      "name": "Josh Cuevas",
+      "canonicalSum": 17.37,
+      "adjustedPeriod0Split0": 17.37041687,
+      "delta": 0.00041686999999868135,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3123075",
+      "name": "Braxton Berrios",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4372716",
+      "name": "Nikko Remigio",
+      "canonicalSum": 1.27,
+      "adjustedPeriod0Split0": 1.26789221,
+      "delta": 0.0021077899999999428,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4259553",
+      "name": "Stetson Bennett IV",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4693370",
+      "name": "Riley Nowakowski",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4880236",
+      "name": "Will Kacmarek",
+      "canonicalSum": 24.46,
+      "adjustedPeriod0Split0": 24.45578627,
+      "delta": 0.004213730000000027,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4602667",
+      "name": "Jaylin Lane",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361372",
+      "name": "Jeremy Ruckert",
+      "canonicalSum": 10.85,
+      "adjustedPeriod0Split0": 10.84720394,
+      "delta": 0.002796059999999656,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4686248",
+      "name": "Nate Boerkircher",
+      "canonicalSum": 32.03,
+      "adjustedPeriod0Split0": 32.03457547,
+      "delta": 0.004575469999998916,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430870",
+      "name": "KeAndre Lambert-Smith",
+      "canonicalSum": 8.24,
+      "adjustedPeriod0Split0": 8.24494557,
+      "delta": 0.004945570000000288,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426339",
+      "name": "Spencer Rattler",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4040612",
+      "name": "Luke Farrell",
+      "canonicalSum": 12.48,
+      "adjustedPeriod0Split0": 12.47962149,
+      "delta": 0.00037851000000088675,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4039505",
+      "name": "Reggie Gilliam",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4035656",
+      "name": "Ben Skowronek",
+      "canonicalSum": 29.75,
+      "adjustedPeriod0Split0": 29.75358523,
+      "delta": 0.0035852299999987736,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3116407",
+      "name": "Mason Rudolph",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3127586",
+      "name": "Jeremy McNichols",
+      "canonicalSum": 56.54,
+      "adjustedPeriod0Split0": 56.54431327,
+      "delta": 0.0043132700000043656,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4243389",
+      "name": "Calvin Austin III",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428085",
+      "name": "Luke Musgrave",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429955",
+      "name": "Will Howard",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4605951",
+      "name": "CJ Daniels",
+      "canonicalSum": 4.02,
+      "adjustedPeriod0Split0": 4.0172099,
+      "delta": 0.0027900999999994625,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4635009",
+      "name": "J. Michael Sturdivant",
+      "canonicalSum": 7.05,
+      "adjustedPeriod0Split0": 7.0543657,
+      "delta": 0.004365700000000139,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3919510",
+      "name": "Alex Bachman",
+      "canonicalSum": 4.15,
+      "adjustedPeriod0Split0": 4.15407907,
+      "delta": 0.004079069999999518,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4374045",
+      "name": "Teagan Quitoriano",
+      "canonicalSum": 6.75,
+      "adjustedPeriod0Split0": 6.75132523,
+      "delta": 0.001325229999999955,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426496",
+      "name": "Cade Stover",
+      "canonicalSum": 5.54,
+      "adjustedPeriod0Split0": 5.54282905,
+      "delta": 0.0028290499999998886,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361516",
+      "name": "Daniel Bellinger",
+      "canonicalSum": 28.8,
+      "adjustedPeriod0Split0": 28.80416523,
+      "delta": 0.004165229999998132,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4690923",
+      "name": "Ben Sinnott",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3052897",
+      "name": "Durham Smythe",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4383440",
+      "name": "Nate Adkins",
+      "canonicalSum": 17.95,
+      "adjustedPeriod0Split0": 17.950414,
+      "delta": 0.0004139999999992483,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362018",
+      "name": "Blake Whiteheart",
+      "canonicalSum": 15.12,
+      "adjustedPeriod0Split0": 15.11600251,
+      "delta": 0.003997489999999715,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241961",
+      "name": "Connor Heyward",
+      "canonicalSum": 3.33,
+      "adjustedPeriod0Split0": 3.32856773,
+      "delta": 0.0014322700000000133,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2515270",
+      "name": "Michael Burton",
+      "canonicalSum": 4.75,
+      "adjustedPeriod0Split0": 4.74902178,
+      "delta": 0.0009782200000003627,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4878695",
+      "name": "Max Bredeson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4383351",
+      "name": "Trey Lance",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4889929",
+      "name": "Quinn Ewers",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3915486",
+      "name": "Tyler Conklin",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2975863",
+      "name": "Eric Saubert",
+      "canonicalSum": 16.03,
+      "adjustedPeriod0Split0": 16.03037122,
+      "delta": 0.00037121999999811806,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4242546",
+      "name": "Davis Mills",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3039707",
+      "name": "Mitchell Trubisky",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4038524",
+      "name": "Gardner Minshew II",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5097554",
+      "name": "Kameron Johnson",
+      "canonicalSum": 1.18,
+      "adjustedPeriod0Split0": 1.17563561,
+      "delta": 0.004364389999999885,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "14012",
+      "name": "Andy Dalton",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4372414",
+      "name": "Elijah Moore",
+      "canonicalSum": 4.99,
+      "adjustedPeriod0Split0": 4.9860107,
+      "delta": 0.0039893000000006396,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4367567",
+      "name": "Julius Chestnut",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241476",
+      "name": "Tyrell Shavers",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4708049",
+      "name": "Gavin Bartholomew",
+      "canonicalSum": 17.93,
+      "adjustedPeriod0Split0": 17.9319585,
+      "delta": 0.0019585000000006403,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4600597",
+      "name": "Montorie Foster Jr.",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3118892",
+      "name": "Justin Watson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4037457",
+      "name": "Travis Homer",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3926231",
+      "name": "Britain Covey",
+      "canonicalSum": 5.31,
+      "adjustedPeriod0Split0": 5.30992542,
+      "delta": 7.457999999971321e-05,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4690070",
+      "name": "Mitchell Tinsley",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4568024",
+      "name": "Josh Williams",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4048228",
+      "name": "John Bates",
+      "canonicalSum": 17.53,
+      "adjustedPeriod0Split0": 17.52604685,
+      "delta": 0.00395315000000096,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426553",
+      "name": "Davis Allen",
+      "canonicalSum": 20.57,
+      "adjustedPeriod0Split0": 20.57278072,
+      "delta": 0.002780720000000514,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3917668",
+      "name": "Alec Ingold",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4245144",
+      "name": "Tay Martin",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362477",
+      "name": "Derius Davis",
+      "canonicalSum": 1.29,
+      "adjustedPeriod0Split0": 1.29032,
+      "delta": 0.00031999999999987594,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3929914",
+      "name": "Adam Prentice",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360086",
+      "name": "Josh Whyle",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4683423",
+      "name": "Riley Leonard",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4695705",
+      "name": "Marlin Klein",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3125107",
+      "name": "Andrew Beck",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4045305",
+      "name": "Ian Thomas",
+      "canonicalSum": 12.25,
+      "adjustedPeriod0Split0": 12.24534064,
+      "delta": 0.004659359999999779,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4401805",
+      "name": "Dareke Young",
+      "canonicalSum": 0.25,
+      "adjustedPeriod0Split0": 0.24839723,
+      "delta": 0.0016027700000000034,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4869132",
+      "name": "Reggie Virgil",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4433971",
+      "name": "Kyle McCord",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2531358",
+      "name": "Chris Manhertz",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4373273",
+      "name": "British Brooks",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241424",
+      "name": "Tylan Wallace",
+      "canonicalSum": 10.15,
+      "adjustedPeriod0Split0": 10.15480763,
+      "delta": 0.004807630000000174,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4243176",
+      "name": "Brady Russell",
+      "canonicalSum": 5.01,
+      "adjustedPeriod0Split0": 5.00951491,
+      "delta": 0.0004850899999997438,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361088",
+      "name": "Colson Yankoff",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4683243",
+      "name": "Mitchell Evans",
+      "canonicalSum": 21.07,
+      "adjustedPeriod0Split0": 21.07049503,
+      "delta": 0.0004950299999997299,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4912052",
+      "name": "Justin Joly",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4683151",
+      "name": "Deion Burks",
+      "canonicalSum": 0.31,
+      "adjustedPeriod0Split0": 0.31036508,
+      "delta": 0.0003650800000000176,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4212909",
+      "name": "David Moore",
+      "canonicalSum": 0.49,
+      "adjustedPeriod0Split0": 0.49301915,
+      "delta": 0.003019150000000026,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "16728",
+      "name": "Teddy Bridgewater",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3126997",
+      "name": "Tom Kennedy",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4372505",
+      "name": "Payne Durham",
+      "canonicalSum": 6.36,
+      "adjustedPeriod0Split0": 6.35590311,
+      "delta": 0.004096890000000464,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4714379",
+      "name": "Seydou Traore",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4917427",
+      "name": "Tanner Koziol",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4034779",
+      "name": "Ko Kieft",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4722908",
+      "name": "Drew Ogletree",
+      "canonicalSum": 5.66,
+      "adjustedPeriod0Split0": 5.65849303,
+      "delta": 0.0015069700000003294,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4239944",
+      "name": "Hunter Long",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4035020",
+      "name": "Charlie Woerner",
+      "canonicalSum": 9.9,
+      "adjustedPeriod0Split0": 9.89845576,
+      "delta": 0.0015442400000011958,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4685540",
+      "name": "Carsen Ryan",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429105",
+      "name": "Arian Smith",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4424106",
+      "name": "Gunner Olszewski",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360739",
+      "name": "Simi Fehoko",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241374",
+      "name": "Grant Calcaterra",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4372026",
+      "name": "Cameron Latu",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4373684",
+      "name": "Scott Matlock",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4260394",
+      "name": "Aidan O'Connell",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4369886",
+      "name": "Chris Blair",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4573697",
+      "name": "Mason Tipton",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430681",
+      "name": "Jared Wayne",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4360637",
+      "name": "Jeshaun Jones",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4602788",
+      "name": "Jackson Meeks",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4565859",
+      "name": "Joe Royer",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3059989",
+      "name": "Nick Mullens",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2976592",
+      "name": "Sterling Shepard",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "11394",
+      "name": "Josh Johnson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3930066",
+      "name": "Van Jefferson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3929785",
+      "name": "Nick Westbrook-Ikhine",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4035693",
+      "name": "Velus Jones Jr.",
+      "canonicalSum": 3.17,
+      "adjustedPeriod0Split0": 3.17419453,
+      "delta": 0.004194529999999919,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4369863",
+      "name": "Cedric Tillman",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4257364",
+      "name": "Zavier Scott",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4683159",
+      "name": "Lewis Bond",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "5093923",
+      "name": "Andrew Armstrong",
+      "canonicalSum": 5.7,
+      "adjustedPeriod0Split0": 5.69910938,
+      "delta": 0.0008906199999998421,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431196",
+      "name": "Jake Briningstool",
+      "canonicalSum": 6.16,
+      "adjustedPeriod0Split0": 6.15627973,
+      "delta": 0.003720270000000525,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4362504",
+      "name": "Brevin Jordan",
+      "canonicalSum": 5.93,
+      "adjustedPeriod0Split0": 5.93076965,
+      "delta": 0.0007696500000005102,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3871102",
+      "name": "David Sills V",
+      "canonicalSum": 1.51,
+      "adjustedPeriod0Split0": 1.51358194,
+      "delta": 0.0035819399999998947,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4241410",
+      "name": "Jelani Woods",
+      "canonicalSum": 16.56,
+      "adjustedPeriod0Split0": 16.56220212,
+      "delta": 0.002202119999999752,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4361438",
+      "name": "Cole Turner",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4244049",
+      "name": "Quintin Morris",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4365395",
+      "name": "Julian Hill",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": true
+    },
+    {
+      "playerId": "4696700",
+      "name": "Tip Reiman",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4698191",
+      "name": "Chris Collier",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4590292",
+      "name": "Thomas Fidone II",
+      "canonicalSum": 1.66,
+      "adjustedPeriod0Split0": 1.65519651,
+      "delta": 0.004803490000000021,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4433959",
+      "name": "Ben Yurosek",
+      "canonicalSum": 5.97,
+      "adjustedPeriod0Split0": 5.96642786,
+      "delta": 0.003572140000000168,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4890373",
+      "name": "Bauer Sharp",
+      "canonicalSum": 6.58,
+      "adjustedPeriod0Split0": 6.58384158,
+      "delta": 0.003841579999999567,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2580216",
+      "name": "DeAndre Carter",
+      "canonicalSum": 0.91,
+      "adjustedPeriod0Split0": 0.9090298,
+      "delta": 0.0009702000000000321,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "3050481",
+      "name": "Tanner Hudson",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "2971281",
+      "name": "Pharaoh Brown",
+      "canonicalSum": 1.32,
+      "adjustedPeriod0Split0": 1.32177642,
+      "delta": 0.0017764199999998898,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4034862",
+      "name": "Jack Stoll",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4240577",
+      "name": "Brandon Smith",
+      "canonicalSum": 21.75,
+      "adjustedPeriod0Split0": 21.74515661,
+      "delta": 0.004843390000001335,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4430637",
+      "name": "Ja'Lynn Polk",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4429684",
+      "name": "Anthony Gould",
+      "canonicalSum": 0.72,
+      "adjustedPeriod0Split0": 0.72310832,
+      "delta": 0.0031083200000000533,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428811",
+      "name": "Xavier Weaver",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4426535",
+      "name": "Theo Wease Jr.",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4428396",
+      "name": "Hayden Rucci",
+      "canonicalSum": 5.04,
+      "adjustedPeriod0Split0": 5.04242076,
+      "delta": 0.0024207599999996887,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4431346",
+      "name": "Mark Redman",
+      "canonicalSum": 6.46,
+      "adjustedPeriod0Split0": 6.45557757,
+      "delta": 0.004422429999999977,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4682509",
+      "name": "Malik McClain",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4709392",
+      "name": "Anthony Tyus III",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    },
+    {
+      "playerId": "4374187",
+      "name": "Deven Thompkins",
+      "canonicalSum": 0,
+      "adjustedPeriod0Split0": 0,
+      "delta": 0,
+      "removedAlreadyPlayedWeek7": false
+    }
+  ],
+  "interpretation": "580 rows agree to rounding. All32 DST seasonal appliedTotal values differ from the independently league-rescored weekly sum; preserve the weekly sum, not an unsupported seasonal relabel. Two explicit-zero weekly players have no period0/split0 total. Preseason split2 and prior-season records were not used."
+}

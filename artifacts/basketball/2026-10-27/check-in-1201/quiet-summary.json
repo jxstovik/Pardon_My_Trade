@@ -1,0 +1,10 @@
+{
+  "automationId": "banging-3s-basketball-workflow",
+  "trigger": "2026-10-27T12:01:13.359Z",
+  "decision": "DONT_NOTIFY",
+  "reason": "League draft timing/order and own empty roster unchanged; no newly required user action. Bounded coverage/short-history refinement and corrected schedule observation recorded locally.",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "newForecasts": 1,
+  "testsPassed": 26,
+  "liveActionsExecuted": 0
+}

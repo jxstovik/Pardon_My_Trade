@@ -1,0 +1,4739 @@
+{
+  "top20Outliers": [
+    {
+      "fantraxId": "05wt9",
+      "name": "Trey Kaufman-Renn",
+      "school": "Kan",
+      "providerRank": 19,
+      "modelCategoryRank": 849,
+      "rankGap": 830,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank. Largest category terms: ST -1.75 SD, 3PTM -1.42 SD, FG% +1.31 SD. 4 sourced fields and 7 model-estimated fields (FGM, FGA, FTM, FTA, 3PTM); current disagreement remains unresolved.",
+      "baselineCategoryRank": 854,
+      "baselineDraftPriority": 687,
+      "newCategoryRank": 849,
+      "newDraftPriority": 849,
+      "categoryContributions": {
+        "PTS": -1.1416658608358956,
+        "REB": 0.2142198654205798,
+        "AST": -0.868871912681896,
+        "ST": -1.7456948853835852,
+        "BLK": -0.5399566808718524,
+        "3PTM": -1.4205544708879618,
+        "FG%": 1.3073627407844282,
+        "FT%": -0.9630607457826156
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 849,
+          "ablatedRank": 1210,
+          "rankShift": 361
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 849,
+          "ablatedRank": 525,
+          "rankShift": -324
+        },
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 849,
+          "ablatedRank": 1154,
+          "rankShift": 305
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 854,
+          "replayCategoryRank": 694,
+          "categoryRankDelta": -160
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 854,
+          "replayCategoryRank": 854,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 854,
+          "replayCategoryRank": 1029,
+          "categoryRankDelta": 175
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-model",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-27T11:24:32Z",
+          "PTS": "2026-10-27T11:24:32Z",
+          "REB": "2026-10-27T11:24:32Z",
+          "AST": "2026-10-27T11:24:32Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": 19,
+        "rankEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "scope": "previously-captured-selected29-global-ranks-and-partial-projections; not refreshed",
+            "rank": 19,
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "observedAt": "2026-10-27T11:24:32Z",
+            "fields": {
+              "MIN": {
+                "value": 25.1,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "PTS": {
+                "value": 13.1,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "REB": {
+                "value": 6.2,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "AST": {
+                "value": 1.7,
+                "observedAt": "2026-10-27T11:24:32Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [
+          {
+            "sourceId": "role-status-05wt9",
+            "provider": "Official school athletics",
+            "url": "https://kuathletics.com/news/2026/10/19/mens-basketball-kansas-mens-basketball-adds-standout-trey-kaufman-renn",
+            "observedAt": "2026-10-28T20:03:00Z",
+            "fantraxId": "05wt9",
+            "providerName": "Trey Kaufman-Renn",
+            "school": "Kan",
+            "roleEvidence": "Kansas announces addition and practicing status; prior Purdue14.2PTS,8.3REB,2.5AST and57.8%FG cited.",
+            "interpretation": "Current-school identity confirmed; historical season/basis differs from provider25.1MIN13.1PTS6.2REB1.7AST. No overwrite of forward projection; no independent guarantee of future eligibility.",
+            "healthOrEligibilityClearance": false,
+            "projectionApplied": false
+          }
+        ],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "07a8s",
+      "name": "Jordan Smith",
+      "school": "Ark",
+      "providerRank": 4,
+      "modelCategoryRank": 273,
+      "rankGap": 269,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank. Largest category terms: PTS -0.85 SD, BLK -0.60 SD, REB -0.55 SD. 4 sourced fields and 7 model-estimated fields (FGM, FGA, FTM, FTA, 3PTM); current disagreement remains unresolved.",
+      "baselineCategoryRank": 274,
+      "baselineDraftPriority": 364,
+      "newCategoryRank": 273,
+      "newDraftPriority": 273,
+      "categoryContributions": {
+        "PTS": -0.8452288077714627,
+        "REB": -0.5532052388211162,
+        "AST": -0.061228165387478196,
+        "ST": 0.23637463724733812,
+        "BLK": -0.6044230671573634,
+        "3PTM": 0.05405206993156421,
+        "FG%": -0.42198910020991026,
+        "FT%": 0.325354600174159
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 273,
+          "ablatedRank": 341,
+          "rankShift": 68
+        },
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 273,
+          "ablatedRank": 321,
+          "rankShift": 48
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 273,
+          "ablatedRank": 319,
+          "rankShift": 46
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 274,
+          "replayCategoryRank": 229,
+          "categoryRankDelta": -45
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 274,
+          "replayCategoryRank": 274,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 274,
+          "replayCategoryRank": 324,
+          "categoryRankDelta": 50
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-cold-start-prior",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-27T11:24:32Z",
+          "PTS": "2026-10-27T11:24:32Z",
+          "REB": "2026-10-27T11:24:32Z",
+          "AST": "2026-10-27T11:24:32Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": 4,
+        "rankEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "scope": "previously-captured-selected29-global-ranks-and-partial-projections; not refreshed",
+            "rank": 4,
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "observedAt": "2026-10-27T11:24:32Z",
+            "fields": {
+              "MIN": {
+                "value": 29.8,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "PTS": {
+                "value": 13.9,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "REB": {
+                "value": 4.6,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "AST": {
+                "value": 2.9,
+                "observedAt": "2026-10-27T11:24:32Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [
+          {
+            "sourceId": "role-status-07a8s",
+            "provider": "Official school athletics",
+            "url": "https://arkansasrazorbacks.com/roster/jordan-smith-jr/",
+            "observedAt": "2026-10-28T20:03:00Z",
+            "fantraxId": "07a8s",
+            "providerName": "Jordan Smith Jr.",
+            "school": "Ark",
+            "roleEvidence": "Official Arkansas freshman profile; prior high-school26.6PTS6.3REB5.6AST3.2ST and56%FG36.9%3P72.4%FT.",
+            "interpretation": "Suffix alias/current-school identity corroborated. High-school stats are not directly substituted into DivisionI forecast; cold-start translation remains unresolved.",
+            "healthOrEligibilityClearance": false,
+            "projectionApplied": false
+          }
+        ],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "070ld",
+      "name": "Ivan Kharchenkov",
+      "school": "Ariz",
+      "providerRank": 17,
+      "modelCategoryRank": 279,
+      "rankGap": 262,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank. Largest category terms: PTS -1.07 SD, ST +0.43 SD, REB -0.41 SD. 4 sourced fields and 7 model-estimated fields (FGM, FGA, FTM, FTA, 3PTM); current disagreement remains unresolved.",
+      "baselineCategoryRank": 280,
+      "baselineDraftPriority": 184,
+      "newCategoryRank": 279,
+      "newDraftPriority": 279,
+      "categoryContributions": {
+        "PTS": -1.0675565975697872,
+        "REB": -0.40931303177579786,
+        "AST": -0.26313910221108255,
+        "ST": 0.4345770902348337,
+        "BLK": -0.26991363481506536,
+        "3PTM": -0.2776234678571224,
+        "FG%": 0.20123036146243115,
+        "FT%": -0.26929516123478575
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 279,
+          "ablatedRank": 385,
+          "rankShift": 106
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 279,
+          "ablatedRank": 372,
+          "rankShift": 93
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 279,
+          "ablatedRank": 366,
+          "rankShift": 87
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 280,
+          "replayCategoryRank": 219,
+          "categoryRankDelta": -61
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 280,
+          "replayCategoryRank": 280,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 280,
+          "replayCategoryRank": 367,
+          "categoryRankDelta": 87
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-model",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-27T11:24:32Z",
+          "PTS": "2026-10-27T11:24:32Z",
+          "REB": "2026-10-27T11:24:32Z",
+          "AST": "2026-10-27T11:24:32Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": 17,
+        "rankEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "scope": "previously-captured-selected29-global-ranks-and-partial-projections; not refreshed",
+            "rank": 17,
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "observedAt": "2026-10-27T11:24:32Z",
+            "fields": {
+              "MIN": {
+                "value": 29.6,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "PTS": {
+                "value": 13.3,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "REB": {
+                "value": 4.9,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "AST": {
+                "value": 2.6,
+                "observedAt": "2026-10-27T11:24:32Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "07ank",
+      "name": "Quinn Ellis",
+      "school": "StJon",
+      "providerRank": 20,
+      "modelCategoryRank": 265,
+      "rankGap": 245,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank. Largest category terms: PTS -1.44 SD, AST +1.15 SD, REB -0.94 SD. 4 sourced fields and 7 model-estimated fields (FGM, FGA, FTM, FTA, 3PTM); current disagreement remains unresolved.",
+      "baselineCategoryRank": 263,
+      "baselineDraftPriority": 349,
+      "newCategoryRank": 265,
+      "newDraftPriority": 265,
+      "categoryContributions": {
+        "PTS": -1.4381029139003287,
+        "REB": -0.9369177909419639,
+        "AST": 1.1502374555541488,
+        "ST": 0.27645553357224384,
+        "BLK": -0.5974086577716018,
+        "3PTM": -0.15016660116836902,
+        "FG%": -0.373414815293661,
+        "FT%": 0.2879037109454792
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 265,
+          "ablatedRank": 518,
+          "rankShift": 253
+        },
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 265,
+          "ablatedRank": 166,
+          "rankShift": -99
+        },
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 265,
+          "ablatedRank": 334,
+          "rankShift": 69
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 263,
+          "replayCategoryRank": 217,
+          "categoryRankDelta": -46
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 263,
+          "replayCategoryRank": 263,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 263,
+          "replayCategoryRank": 315,
+          "categoryRankDelta": 52
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-cold-start-prior",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-27T11:24:32Z",
+          "PTS": "2026-10-27T11:24:32Z",
+          "REB": "2026-10-27T11:24:32Z",
+          "AST": "2026-10-27T11:24:32Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": 20,
+        "rankEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "scope": "previously-captured-selected29-global-ranks-and-partial-projections; not refreshed",
+            "rank": 20,
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "observedAt": "2026-10-27T11:24:32Z",
+            "fields": {
+              "MIN": {
+                "value": 30.2,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "PTS": {
+                "value": 12.3,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "REB": {
+                "value": 3.8,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "AST": {
+                "value": 4.7,
+                "observedAt": "2026-10-27T11:24:32Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "071n6",
+      "name": "Thijs De Ridder",
+      "school": "UVA",
+      "providerRank": 8,
+      "modelCategoryRank": 203,
+      "rankGap": 195,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank. Largest category terms: FT% -0.69 SD, AST -0.67 SD, ST -0.60 SD. 4 sourced fields and 7 model-estimated fields (FGM, FGA, FTM, FTA, 3PTM); current disagreement remains unresolved.",
+      "baselineCategoryRank": 205,
+      "baselineDraftPriority": 125,
+      "newCategoryRank": 203,
+      "newDraftPriority": 203,
+      "categoryContributions": {
+        "PTS": 0.15524624632099757,
+        "REB": 0.40607614148100346,
+        "AST": -0.6669609758582915,
+        "ST": -0.6020053878792759,
+        "BLK": 0.04785982410857815,
+        "3PTM": -0.322955528990966,
+        "FG%": 0.46751850422650365,
+        "FT%": -0.6930225050946979
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 203,
+          "ablatedRank": 341,
+          "rankShift": 138
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 203,
+          "ablatedRank": 300,
+          "rankShift": 97
+        },
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 203,
+          "ablatedRank": 300,
+          "rankShift": 97
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 205,
+          "replayCategoryRank": 181,
+          "categoryRankDelta": -24
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 205,
+          "replayCategoryRank": 205,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 205,
+          "replayCategoryRank": 232,
+          "categoryRankDelta": 27
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-model",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-27T11:24:32Z",
+          "PTS": "2026-10-27T11:24:32Z",
+          "REB": "2026-10-27T11:24:32Z",
+          "AST": "2026-10-27T11:24:32Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": 8,
+        "rankEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "scope": "previously-captured-selected29-global-ranks-and-partial-projections; not refreshed",
+            "rank": 8,
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "observedAt": "2026-10-27T11:24:32Z",
+            "fields": {
+              "MIN": {
+                "value": 29.1,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "PTS": {
+                "value": 16.6,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "REB": {
+                "value": 6.6,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "AST": {
+                "value": 2,
+                "observedAt": "2026-10-27T11:24:32Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06g9s",
+      "name": "John Blackwell",
+      "school": "Duke",
+      "providerRank": 13,
+      "modelCategoryRank": 187,
+      "rankGap": 174,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank. Largest category terms: FT% +1.16 SD, 3PTM +1.14 SD, FG% -0.94 SD. 4 sourced fields and 7 model-estimated fields (FGM, FGA, FTM, FTA, 3PTM); current disagreement remains unresolved.",
+      "baselineCategoryRank": 189,
+      "baselineDraftPriority": 253,
+      "newCategoryRank": 187,
+      "newDraftPriority": 187,
+      "categoryContributions": {
+        "PTS": -0.21530007000954338,
+        "REB": -0.601169307836222,
+        "AST": -0.46505003903468717,
+        "ST": -0.22000801399886957,
+        "BLK": -0.8885153366126146,
+        "3PTM": 1.1396058756087337,
+        "FG%": -0.9435214258281767,
+        "FT%": 1.1642909339666776
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-3PTM",
+          "category": "3PTM",
+          "baselineCategoryValueRank": 187,
+          "ablatedRank": 322,
+          "rankShift": 135
+        },
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 187,
+          "ablatedRank": 319,
+          "rankShift": 132
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 187,
+          "ablatedRank": 122,
+          "rankShift": -65
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 189,
+          "replayCategoryRank": 163,
+          "categoryRankDelta": -26
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 189,
+          "replayCategoryRank": 189,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 189,
+          "replayCategoryRank": 216,
+          "categoryRankDelta": 27
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-model",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-27T11:24:32Z",
+          "PTS": "2026-10-27T11:24:32Z",
+          "REB": "2026-10-27T11:24:32Z",
+          "AST": "2026-10-27T11:24:32Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": 13,
+        "rankEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "scope": "previously-captured-selected29-global-ranks-and-partial-projections; not refreshed",
+            "rank": 13,
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "observedAt": "2026-10-27T11:24:32Z",
+            "fields": {
+              "MIN": {
+                "value": 29.5,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "PTS": {
+                "value": 15.6,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "REB": {
+                "value": 4.5,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "AST": {
+                "value": 2.3,
+                "observedAt": "2026-10-27T11:24:32Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06ga8",
+      "name": "Alex Condon",
+      "school": "Fla",
+      "providerRank": 14,
+      "modelCategoryRank": 120,
+      "rankGap": 106,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank. Largest category terms: FT% -1.66 SD, BLK +1.41 SD, 3PTM -1.15 SD. 4 sourced fields and 7 model-estimated fields (FGM, FGA, FTM, FTA, 3PTM); current disagreement remains unresolved.",
+      "baselineCategoryRank": 122,
+      "baselineDraftPriority": 75,
+      "newCategoryRank": 120,
+      "newDraftPriority": 120,
+      "categoryContributions": {
+        "PTS": -0.21530007000954401,
+        "REB": 0.9816449696622753,
+        "AST": 0.3425937082597308,
+        "ST": -1.057311153530694,
+        "BLK": 1.4092103951689203,
+        "3PTM": -1.1452438743088815,
+        "FG%": 0.990227383528839,
+        "FT%": -1.6608932960101022
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-BLK",
+          "category": "BLK",
+          "baselineCategoryValueRank": 120,
+          "ablatedRank": 293,
+          "rankShift": 173
+        },
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 120,
+          "ablatedRank": 265,
+          "rankShift": 145
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 120,
+          "ablatedRank": 263,
+          "rankShift": 143
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 122,
+          "replayCategoryRank": 115,
+          "categoryRankDelta": -7
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 122,
+          "replayCategoryRank": 122,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 122,
+          "replayCategoryRank": 132,
+          "categoryRankDelta": 10
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-model",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-27T11:24:32Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-27T11:24:32Z",
+          "PTS": "2026-10-27T11:24:32Z",
+          "REB": "2026-10-27T11:24:32Z",
+          "AST": "2026-10-27T11:24:32Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": 14,
+        "rankEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "scope": "previously-captured-selected29-global-ranks-and-partial-projections; not refreshed",
+            "rank": 14,
+            "observedAt": "2026-10-27T11:24:32Z"
+          }
+        ],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "saved-rotowire-29",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+            "observedAt": "2026-10-27T11:24:32Z",
+            "fields": {
+              "MIN": {
+                "value": 30.4,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "PTS": {
+                "value": 15.6,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "REB": {
+                "value": 7.8,
+                "observedAt": "2026-10-27T11:24:32Z"
+              },
+              "AST": {
+                "value": 3.5,
+                "observedAt": "2026-10-27T11:24:32Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA",
+          "3PTM",
+          "ST",
+          "BLK"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    }
+  ],
+  "historicalOnly": [
+    {
+      "fantraxId": "06n8t",
+      "name": "Javontae Campbell",
+      "school": "Cin",
+      "providerRank": null,
+      "modelCategoryRank": 2,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +3.42 SD, AST +1.24 SD, PTS +0.86 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 2,
+      "baselineDraftPriority": 3,
+      "newCategoryRank": 2,
+      "newDraftPriority": 2,
+      "categoryContributions": {
+        "PTS": 0.8633695055611821,
+        "REB": -0.5980191929443364,
+        "AST": 1.2381194473585115,
+        "ST": 3.418779977683531,
+        "BLK": -0.5443992207698235,
+        "3PTM": -0.5269855996653093,
+        "FG%": 0.22467249339236903,
+        "FT%": -0.005036353707078803
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 2,
+          "ablatedRank": 68,
+          "rankShift": 66
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 2,
+          "ablatedRank": 53,
+          "rankShift": 51
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 2,
+          "ablatedRank": 8,
+          "rankShift": 6
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 2,
+          "replayCategoryRank": 3,
+          "categoryRankDelta": 1
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 2,
+          "replayCategoryRank": 2,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 2,
+          "replayCategoryRank": 2,
+          "categoryRankDelta": 0
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [
+          {
+            "sourceId": "role-status-06n8t",
+            "provider": "Official school athletics",
+            "url": "https://gobearcats.com/news/2026/09/22/bearcats-add-javontae-campbell-for-2026-27",
+            "observedAt": "2026-10-28T20:03:00Z",
+            "fantraxId": "06n8t",
+            "providerName": "Javontae Campbell",
+            "school": "Cin",
+            "roleEvidence": "Official Cincinnati addition; one season eligibility stated. Prior Bowling Green34MIN,18.7PTS,5.1AST,4.5REB,3.0ST confirms historical baseline rather than new-conference role.",
+            "interpretation": "Identity/transfer confirmed; current minutes, usage, injury clearance and high-major defensive rate remain unverified; no numeric adjustment from narrative.",
+            "healthOrEligibilityClearance": false,
+            "projectionApplied": false
+          }
+        ],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "0655r",
+      "name": "Tavari Johnson",
+      "school": "Charl",
+      "providerRank": null,
+      "modelCategoryRank": 3,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: PTS +1.31 SD, AST +1.20 SD, REB -1.18 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 3,
+      "baselineDraftPriority": 6,
+      "newCategoryRank": 3,
+      "newDraftPriority": 3,
+      "categoryContributions": {
+        "PTS": 1.3071788842186045,
+        "REB": -1.1836422022253923,
+        "AST": 1.199610820441794,
+        "ST": 0.3010838719395241,
+        "BLK": -0.5443159151070239,
+        "3PTM": 1.066127794900365,
+        "FG%": 0.4995777040512736,
+        "FT%": 1.002437981753992
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 3,
+          "ablatedRank": 20,
+          "rankShift": 17
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 3,
+          "ablatedRank": 16,
+          "rankShift": 13
+        },
+        {
+          "variant": "without-3PTM",
+          "category": "3PTM",
+          "baselineCategoryValueRank": 3,
+          "ablatedRank": 12,
+          "rankShift": 9
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 3,
+          "replayCategoryRank": 4,
+          "categoryRankDelta": 1
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 3,
+          "replayCategoryRank": 3,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 3,
+          "replayCategoryRank": 3,
+          "categoryRankDelta": 0
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06g3w",
+      "name": "JT Toppin",
+      "school": "TxTch",
+      "providerRank": null,
+      "modelCategoryRank": 5,
+      "historicalGP": 25,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: REB +2.03 SD, FT% -1.88 SD, BLK +1.81 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 4,
+      "baselineDraftPriority": null,
+      "newCategoryRank": 5,
+      "newDraftPriority": null,
+      "categoryContributions": {
+        "PTS": 1.453202733988601,
+        "REB": 2.0275865470560523,
+        "AST": -0.6369002761994015,
+        "ST": 0.17101069151030637,
+        "BLK": 1.8051239826899084,
+        "3PTM": -0.8223512602660115,
+        "FG%": 1.4673199100833714,
+        "FT%": -1.8800972120579733
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 5,
+          "ablatedRank": 47,
+          "rankShift": 42
+        },
+        {
+          "variant": "without-BLK",
+          "category": "BLK",
+          "baselineCategoryValueRank": 5,
+          "ablatedRank": 41,
+          "rankShift": 36
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 5,
+          "ablatedRank": 38,
+          "rankShift": 33
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 4,
+          "replayCategoryRank": 2,
+          "categoryRankDelta": -2
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 4,
+          "replayCategoryRank": 4,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 4,
+          "replayCategoryRank": 9,
+          "categoryRankDelta": 5
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [
+          {
+            "sourceId": "role-status-06g3w",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/player/jt-toppin-22578",
+            "observedAt": "2026-10-28T20:03:00Z",
+            "fantraxId": "06g3w",
+            "providerName": "JT Toppin",
+            "school": "TxTch",
+            "roleEvidence": "Current retrieved page displays Out/Knee and no return timetable; update remains datedOctober20.",
+            "interpretation": "Retain manual-review-only exclusion, conditional stats retained; current publication age remains explicit.",
+            "healthOrEligibilityClearance": false,
+            "projectionApplied": false
+          }
+        ],
+        "roleEvidenceIsClearance": false,
+        "status": {
+          "status": "out",
+          "observedAt": "2026-10-28T20:03:00Z",
+          "sourceUrl": "https://www.rotowire.com/cbasketball/player/jt-toppin-22578",
+          "reason": "Observed via RotoWire; manual review only."
+        }
+      }
+    },
+    {
+      "fantraxId": "06h14",
+      "name": "Jalen Cox",
+      "school": "USC",
+      "providerRank": null,
+      "modelCategoryRank": 8,
+      "historicalGP": 31,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: AST +1.34 SD, ST +1.04 SD, FT% +1.00 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 8,
+      "baselineDraftPriority": 15,
+      "newCategoryRank": 8,
+      "newDraftPriority": 8,
+      "categoryContributions": {
+        "PTS": 0.6531880253552315,
+        "REB": -0.3329039828973588,
+        "AST": 1.339397329966967,
+        "ST": 1.0357594085326063,
+        "BLK": -0.5444175273731525,
+        "3PTM": -0.6241629925469161,
+        "FG%": 0.5965764533294289,
+        "FT%": 1.0021405951848208
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 8,
+          "ablatedRank": 39,
+          "rankShift": 31
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 8,
+          "ablatedRank": 32,
+          "rankShift": 24
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 8,
+          "ablatedRank": 24,
+          "rankShift": 16
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 8,
+          "replayCategoryRank": 7,
+          "categoryRankDelta": -1
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 8,
+          "replayCategoryRank": 8,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 8,
+          "replayCategoryRank": 6,
+          "categoryRankDelta": -2
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "064kr",
+      "name": "Quion Williams",
+      "school": "ArkPB",
+      "providerRank": null,
+      "modelCategoryRank": 9,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: AST +1.39 SD, ST +1.22 SD, REB +0.80 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 7,
+      "baselineDraftPriority": 14,
+      "newCategoryRank": 9,
+      "newDraftPriority": 9,
+      "categoryContributions": {
+        "PTS": 0.5243397687683867,
+        "REB": 0.799328441068543,
+        "AST": 1.3918717614631468,
+        "ST": 1.2185306881277245,
+        "BLK": 0.22099976768989682,
+        "3PTM": -0.30435892513810975,
+        "FG%": -0.434929992393669,
+        "FT%": -0.29055404297879805
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 9,
+          "ablatedRank": 35,
+          "rankShift": 26
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 9,
+          "ablatedRank": 33,
+          "rankShift": 24
+        },
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 9,
+          "ablatedRank": 26,
+          "rankShift": 17
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 7,
+          "replayCategoryRank": 5,
+          "categoryRankDelta": -2
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 7,
+          "replayCategoryRank": 7,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 7,
+          "replayCategoryRank": 8,
+          "categoryRankDelta": 1
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06n56",
+      "name": "Kamrin Oriol",
+      "school": "Akr",
+      "providerRank": null,
+      "modelCategoryRank": 10,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: 3PTM +1.99 SD, PTS +1.55 SD, FT% +1.32 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 9,
+      "baselineDraftPriority": 17,
+      "newCategoryRank": 10,
+      "newDraftPriority": 10,
+      "categoryContributions": {
+        "PTS": 1.5504413856550543,
+        "REB": -1.1625409504138384,
+        "AST": 0.8098569639335906,
+        "ST": -0.5946077823785696,
+        "BLK": -0.8504778719675737,
+        "3PTM": 1.9896285456767127,
+        "FG%": -0.14261192618145913,
+        "FT%": 1.321354842463305
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-3PTM",
+          "category": "3PTM",
+          "baselineCategoryValueRank": 10,
+          "ablatedRank": 51,
+          "rankShift": 41
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 10,
+          "ablatedRank": 34,
+          "rankShift": 24
+        },
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 10,
+          "ablatedRank": 32,
+          "rankShift": 22
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 9,
+          "replayCategoryRank": 11,
+          "categoryRankDelta": 2
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 9,
+          "replayCategoryRank": 9,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 9,
+          "replayCategoryRank": 7,
+          "categoryRankDelta": -2
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "05wk5",
+      "name": "Daeshun Ruffin",
+      "school": "JackSt",
+      "providerRank": null,
+      "modelCategoryRank": 11,
+      "historicalGP": 28,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: PTS +2.10 SD, FT% +1.64 SD, FG% -1.38 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 10,
+      "baselineDraftPriority": 20,
+      "newCategoryRank": 11,
+      "newDraftPriority": 11,
+      "categoryContributions": {
+        "PTS": 2.0997399434287733,
+        "REB": -1.2296902624509567,
+        "AST": 1.3242628219982078,
+        "ST": 0.8479225551718732,
+        "BLK": -0.8461782090017741,
+        "3PTM": 0.3202622020407053,
+        "FG%": -1.3811763004332083,
+        "FT%": 1.6403903008064808
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 11,
+          "ablatedRank": 67,
+          "rankShift": 56
+        },
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 11,
+          "ablatedRank": 42,
+          "rankShift": 31
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 11,
+          "ablatedRank": 40,
+          "rankShift": 29
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 10,
+          "replayCategoryRank": 9,
+          "categoryRankDelta": -1
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 10,
+          "replayCategoryRank": 10,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 10,
+          "replayCategoryRank": 14,
+          "categoryRankDelta": 4
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "0729c",
+      "name": "Michael James",
+      "school": "ASU",
+      "providerRank": null,
+      "modelCategoryRank": 12,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: PTS +1.65 SD, FT% +1.53 SD, 3PTM +1.47 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 11,
+      "baselineDraftPriority": 21,
+      "newCategoryRank": 12,
+      "newDraftPriority": 12,
+      "categoryContributions": {
+        "PTS": 1.6507100288975856,
+        "REB": -1.0098990636056513,
+        "AST": 0.01672876302817478,
+        "ST": 1.2185306881277245,
+        "BLK": -1.002626961863879,
+        "3PTM": 1.4664142363113186,
+        "FG%": -1.1539945182407556,
+        "FT%": 1.5254419247026436
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 12,
+          "ablatedRank": 48,
+          "rankShift": 36
+        },
+        {
+          "variant": "without-3PTM",
+          "category": "3PTM",
+          "baselineCategoryValueRank": 12,
+          "ablatedRank": 41,
+          "rankShift": 29
+        },
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 12,
+          "ablatedRank": 39,
+          "rankShift": 27
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 11,
+          "replayCategoryRank": 16,
+          "categoryRankDelta": 5
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 11,
+          "replayCategoryRank": 11,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 11,
+          "replayCategoryRank": 11,
+          "categoryRankDelta": 0
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06ntt",
+      "name": "Nolan Minessale",
+      "school": "Marq",
+      "providerRank": null,
+      "modelCategoryRank": 13,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: PTS +1.25 SD, AST +0.87 SD, ST +0.87 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 12,
+      "baselineDraftPriority": 23,
+      "newCategoryRank": 13,
+      "newDraftPriority": 13,
+      "categoryContributions": {
+        "PTS": 1.2523436168415025,
+        "REB": -0.5583746197045909,
+        "AST": 0.872799179978604,
+        "ST": 0.8650119502576743,
+        "BLK": -0.06842763940670746,
+        "3PTM": 0.09625798811835225,
+        "FG%": 0.40187998708470674,
+        "FT%": -0.16839017445207155
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 13,
+          "ablatedRank": 31,
+          "rankShift": 18
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 13,
+          "ablatedRank": 30,
+          "rankShift": 17
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 13,
+          "ablatedRank": 29,
+          "rankShift": 16
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 12,
+          "replayCategoryRank": 14,
+          "categoryRankDelta": 2
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 12,
+          "replayCategoryRank": 12,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 12,
+          "replayCategoryRank": 13,
+          "categoryRankDelta": 1
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06hkh",
+      "name": "Money Williams",
+      "school": "BC",
+      "providerRank": null,
+      "modelCategoryRank": 14,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: FT% +1.57 SD, PTS +1.43 SD, AST +1.04 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 13,
+      "baselineDraftPriority": 24,
+      "newCategoryRank": 14,
+      "newDraftPriority": 14,
+      "categoryContributions": {
+        "PTS": 1.4263383986874372,
+        "REB": -0.6763203532522216,
+        "AST": 1.0381713497918559,
+        "ST": -0.4517023357514319,
+        "BLK": -0.5441511369178452,
+        "3PTM": 0.20286732574966115,
+        "FG%": 0.10928515757080931,
+        "FT%": 1.5735229406869475
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 14,
+          "ablatedRank": 53,
+          "rankShift": 39
+        },
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 14,
+          "ablatedRank": 44,
+          "rankShift": 30
+        },
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 14,
+          "ablatedRank": 37,
+          "rankShift": 23
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 13,
+          "replayCategoryRank": 15,
+          "categoryRankDelta": 2
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 13,
+          "replayCategoryRank": 13,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 13,
+          "replayCategoryRank": 12,
+          "categoryRankDelta": -1
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06gdn",
+      "name": "Jason Rivera-Torres",
+      "school": "HiPt",
+      "providerRank": null,
+      "modelCategoryRank": 15,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +1.78 SD, FG% -1.53 SD, REB +0.78 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 14,
+      "baselineDraftPriority": 27,
+      "newCategoryRank": 15,
+      "newDraftPriority": 15,
+      "categoryContributions": {
+        "PTS": -0.0794310584950171,
+        "REB": 0.7829568916241372,
+        "AST": 0.06019427305561968,
+        "ST": 1.7797777282082785,
+        "BLK": 0.7001857004457922,
+        "3PTM": 0.316207205128062,
+        "FG%": -1.5263990789219062,
+        "FT%": 0.6205669215252261
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 15,
+          "ablatedRank": 114,
+          "rankShift": 99
+        },
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 15,
+          "ablatedRank": 57,
+          "rankShift": 42
+        },
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 15,
+          "ablatedRank": 40,
+          "rankShift": 25
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 14,
+          "replayCategoryRank": 10,
+          "categoryRankDelta": -4
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 14,
+          "replayCategoryRank": 14,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 14,
+          "replayCategoryRank": 16,
+          "categoryRankDelta": 2
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "064yz",
+      "name": "Dior Johnson",
+      "school": "UCF",
+      "providerRank": null,
+      "modelCategoryRank": 16,
+      "historicalGP": 20,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: PTS +2.44 SD, FT% +1.84 SD, REB -1.02 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 15,
+      "baselineDraftPriority": 28,
+      "newCategoryRank": 16,
+      "newDraftPriority": 16,
+      "categoryContributions": {
+        "PTS": 2.4386214932547023,
+        "REB": -1.0162682246889492,
+        "AST": -0.5654185402954734,
+        "ST": -0.003377431197208954,
+        "BLK": -0.8367667538599886,
+        "3PTM": 0.2436172607483056,
+        "FG%": 0.5395370236973275,
+        "FT%": 1.8437781324723939
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 16,
+          "ablatedRank": 98,
+          "rankShift": 82
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 16,
+          "ablatedRank": 92,
+          "rankShift": 76
+        },
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 16,
+          "ablatedRank": 63,
+          "rankShift": 47
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 15,
+          "replayCategoryRank": 20,
+          "categoryRankDelta": 5
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 15,
+          "replayCategoryRank": 15,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 15,
+          "replayCategoryRank": 10,
+          "categoryRankDelta": -5
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06pqo",
+      "name": "Hamad Mousa",
+      "school": "CAPoly",
+      "providerRank": null,
+      "modelCategoryRank": 17,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: FT% +1.71 SD, 3PTM +1.37 SD, PTS +1.22 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 17,
+      "baselineDraftPriority": 4,
+      "newCategoryRank": 17,
+      "newDraftPriority": 17,
+      "categoryContributions": {
+        "PTS": 1.2220428665349463,
+        "REB": 0.24849040317599477,
+        "AST": -0.5617184513392328,
+        "ST": -0.3766980095625696,
+        "BLK": -0.25389678510166125,
+        "3PTM": 1.374020093344686,
+        "FG%": -0.7511792499633185,
+        "FT%": 1.7082865697239857
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 17,
+          "ablatedRank": 56,
+          "rankShift": 39
+        },
+        {
+          "variant": "without-3PTM",
+          "category": "3PTM",
+          "baselineCategoryValueRank": 17,
+          "ablatedRank": 42,
+          "rankShift": 25
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 17,
+          "ablatedRank": 36,
+          "rankShift": 19
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 17,
+          "replayCategoryRank": 13,
+          "categoryRankDelta": -4
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 17,
+          "replayCategoryRank": 17,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 17,
+          "replayCategoryRank": 17,
+          "categoryRankDelta": 0
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "065p8",
+      "name": "Trevan Leonhardt",
+      "school": "Nebras",
+      "providerRank": null,
+      "modelCategoryRank": 19,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +1.78 SD, AST +1.73 SD, PTS -1.09 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 18,
+      "baselineDraftPriority": 31,
+      "newCategoryRank": 19,
+      "newDraftPriority": 19,
+      "categoryContributions": {
+        "PTS": -1.0918438175513285,
+        "REB": -0.21486239446862884,
+        "AST": 1.7252750038355755,
+        "ST": 1.7772816424735403,
+        "BLK": -0.07806955796774667,
+        "3PTM": -0.0022695197758072403,
+        "FG%": 0.20673328149063505,
+        "FT%": 0.023288780441754288
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 19,
+          "ablatedRank": 77,
+          "rankShift": 58
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 19,
+          "ablatedRank": 75,
+          "rankShift": 56
+        },
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 19,
+          "ablatedRank": 71,
+          "rankShift": 52
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 18,
+          "replayCategoryRank": 19,
+          "categoryRankDelta": 1
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 18,
+          "replayCategoryRank": 18,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 18,
+          "replayCategoryRank": 20,
+          "categoryRankDelta": 2
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "0651t",
+      "name": "Donovan Oday",
+      "school": "Troy",
+      "providerRank": null,
+      "modelCategoryRank": 21,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +1.64 SD, REB -0.87 SD, PTS +0.82 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 20,
+      "baselineDraftPriority": 34,
+      "newCategoryRank": 21,
+      "newDraftPriority": 21,
+      "categoryContributions": {
+        "PTS": 0.8203837856410182,
+        "REB": -0.8724347985769483,
+        "AST": -0.5119967184983588,
+        "ST": 1.6398108855601243,
+        "BLK": -0.22024832636120306,
+        "3PTM": 0.5322711229491199,
+        "FG%": 0.18118453530852063,
+        "FT%": 0.709361586980042
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 21,
+          "ablatedRank": 69,
+          "rankShift": 48
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 21,
+          "ablatedRank": 64,
+          "rankShift": 43
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 21,
+          "ablatedRank": 42,
+          "rankShift": 21
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 20,
+          "replayCategoryRank": 26,
+          "categoryRankDelta": 6
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 20,
+          "replayCategoryRank": 20,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 20,
+          "replayCategoryRank": 19,
+          "categoryRankDelta": -1
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06grf",
+      "name": "Thomas Dowd",
+      "school": "Aub",
+      "providerRank": null,
+      "modelCategoryRank": 22,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: REB +1.84 SD, BLK +1.27 SD, 3PTM +0.61 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 21,
+      "baselineDraftPriority": 5,
+      "newCategoryRank": 22,
+      "newDraftPriority": 22,
+      "categoryContributions": {
+        "PTS": -0.5127554714265382,
+        "REB": 1.8409582135078582,
+        "AST": -0.5755754875496797,
+        "ST": -0.13143846832282746,
+        "BLK": 1.267248474877812,
+        "3PTM": 0.6077694108186061,
+        "FG%": -0.437522187234103,
+        "FT%": 0.18317022724925255
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 22,
+          "ablatedRank": 101,
+          "rankShift": 79
+        },
+        {
+          "variant": "without-BLK",
+          "category": "BLK",
+          "baselineCategoryValueRank": 22,
+          "ablatedRank": 70,
+          "rankShift": 48
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 22,
+          "ablatedRank": 56,
+          "rankShift": 34
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 21,
+          "replayCategoryRank": 12,
+          "categoryRankDelta": -9
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 21,
+          "replayCategoryRank": 21,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 21,
+          "replayCategoryRank": 26,
+          "categoryRankDelta": 5
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06gv0",
+      "name": "Jackson Holcombe",
+      "school": "Utah",
+      "providerRank": null,
+      "modelCategoryRank": 23,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +2.00 SD, FT% -1.26 SD, 3PTM -1.10 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 22,
+      "baselineDraftPriority": 35,
+      "newCategoryRank": 23,
+      "newDraftPriority": 23,
+      "categoryContributions": {
+        "PTS": -0.025272352497798068,
+        "REB": 0.4268914246260477,
+        "AST": 0.380345936820216,
+        "ST": 2.0029129698222405,
+        "BLK": 1.0526410056603952,
+        "3PTM": -1.100485654456186,
+        "FG%": 0.7625724038708608,
+        "FT%": -1.2632351770380028
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 23,
+          "ablatedRank": 203,
+          "rankShift": 180
+        },
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 23,
+          "ablatedRank": 86,
+          "rankShift": 63
+        },
+        {
+          "variant": "without-BLK",
+          "category": "BLK",
+          "baselineCategoryValueRank": 23,
+          "ablatedRank": 65,
+          "rankShift": 42
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 22,
+          "replayCategoryRank": 21,
+          "categoryRankDelta": -1
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 22,
+          "replayCategoryRank": 22,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 22,
+          "replayCategoryRank": 22,
+          "categoryRankDelta": 0
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "07115",
+      "name": "Cedric Taylor",
+      "school": "How",
+      "providerRank": null,
+      "modelCategoryRank": 24,
+      "historicalGP": 22,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: BLK +0.89 SD, ST +0.66 SD, FG% -0.59 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 23,
+      "baselineDraftPriority": 36,
+      "newCategoryRank": 24,
+      "newDraftPriority": 24,
+      "categoryContributions": {
+        "PTS": 0.34947120264134457,
+        "REB": 0.1788718371945163,
+        "AST": 0.2940504562387751,
+        "ST": 0.6633105443120049,
+        "BLK": 0.8871972648107791,
+        "3PTM": -0.15844083389143815,
+        "FG%": -0.5915748664435596,
+        "FT%": 0.578870952154333
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 24,
+          "ablatedRank": 76,
+          "rankShift": 52
+        },
+        {
+          "variant": "without-BLK",
+          "category": "BLK",
+          "baselineCategoryValueRank": 24,
+          "ablatedRank": 57,
+          "rankShift": 33
+        },
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 24,
+          "ablatedRank": 35,
+          "rankShift": 11
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 23,
+          "replayCategoryRank": 18,
+          "categoryRankDelta": -5
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 23,
+          "replayCategoryRank": 23,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 23,
+          "replayCategoryRank": 24,
+          "categoryRankDelta": 1
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "065cy",
+      "name": "Mason Falslev",
+      "school": "UtSt",
+      "providerRank": null,
+      "modelCategoryRank": 26,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +1.61 SD, BLK -0.54 SD, FG% +0.51 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 25,
+      "baselineDraftPriority": 41,
+      "newCategoryRank": 26,
+      "newDraftPriority": 26,
+      "categoryContributions": {
+        "PTS": 0.09658955229906317,
+        "REB": -0.09053633950039737,
+        "AST": 0.15914753049168803,
+        "ST": 1.6137880146679404,
+        "BLK": -0.5442780499339626,
+        "3PTM": 0.20336643830079495,
+        "FG%": 0.5064755005940975,
+        "FT%": 0.06733767774246689
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 26,
+          "ablatedRank": 79,
+          "rankShift": 53
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 26,
+          "ablatedRank": 59,
+          "rankShift": 33
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 26,
+          "ablatedRank": 53,
+          "rankShift": 27
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 25,
+          "replayCategoryRank": 29,
+          "categoryRankDelta": 4
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 25,
+          "replayCategoryRank": 25,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 25,
+          "replayCategoryRank": 23,
+          "categoryRankDelta": -2
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "065cb",
+      "name": "Kyle Evans",
+      "school": "NCSU",
+      "providerRank": null,
+      "modelCategoryRank": 28,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: BLK +4.47 SD, ST -1.62 SD, FG% +1.60 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 28,
+      "baselineDraftPriority": 10,
+      "newCategoryRank": 28,
+      "newDraftPriority": 28,
+      "categoryContributions": {
+        "PTS": -1.280851235056744,
+        "REB": 1.2427548244323363,
+        "AST": -1.2885930426607355,
+        "ST": -1.6209309332394497,
+        "BLK": 4.470209912917493,
+        "3PTM": -1.39994792592327,
+        "FG%": 1.5997603517255865,
+        "FT%": 0.08959877793582337
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-BLK",
+          "category": "BLK",
+          "baselineCategoryValueRank": 28,
+          "ablatedRank": 438,
+          "rankShift": 410
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 28,
+          "ablatedRank": 228,
+          "rankShift": 200
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 28,
+          "ablatedRank": 111,
+          "rankShift": 83
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 28,
+          "replayCategoryRank": 25,
+          "categoryRankDelta": -3
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 28,
+          "replayCategoryRank": 28,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 28,
+          "replayCategoryRank": 31,
+          "categoryRankDelta": 3
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [
+          {
+            "sourceId": "role-status-065cb",
+            "provider": "Official school athletics",
+            "url": "https://gopack.com/sports/mens-basketball/roster/kyle-evans/16887",
+            "observedAt": "2026-10-28T20:03:00Z",
+            "fantraxId": "065cb",
+            "providerName": "Kyle Evans",
+            "school": "NCSU",
+            "roleEvidence": "Official2026-27NCState roster; graduate transfer from UC Irvine. Prior12PTS,8.7REB,3.29BLK season cited.",
+            "interpretation": "Identity/transfer confirmed. Preserve historical discrepancy within bio(also8.5REB elsewhere); no automatic current-role projection or eligibility-law inference.",
+            "healthOrEligibilityClearance": false,
+            "projectionApplied": false
+          }
+        ],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "064jf",
+      "name": "B.J. Edwards",
+      "school": "Okla",
+      "providerRank": null,
+      "modelCategoryRank": 29,
+      "historicalGP": 28,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +2.10 SD, AST +1.12 SD, PTS -0.88 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 29,
+      "baselineDraftPriority": 47,
+      "newCategoryRank": 29,
+      "newDraftPriority": 29,
+      "categoryContributions": {
+        "PTS": -0.8827876100071302,
+        "REB": -0.07686210041374777,
+        "AST": 1.1167456063426355,
+        "ST": 2.0997245882526387,
+        "BLK": -0.695703403732584,
+        "3PTM": 0.31981570243842916,
+        "FG%": -0.2078769149251284,
+        "FT%": 0.12623679083641362
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 29,
+          "ablatedRank": 123,
+          "rankShift": 94
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 29,
+          "ablatedRank": 93,
+          "rankShift": 64
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 29,
+          "ablatedRank": 70,
+          "rankShift": 41
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 29,
+          "replayCategoryRank": 32,
+          "categoryRankDelta": 3
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 29,
+          "replayCategoryRank": 29,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 29,
+          "replayCategoryRank": 27,
+          "categoryRankDelta": -2
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "065ct",
+      "name": "Keyshawn Hall",
+      "school": "StJon",
+      "providerRank": null,
+      "modelCategoryRank": 30,
+      "historicalGP": 31,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: FT% +1.65 SD, ST -1.03 SD, PTS +0.94 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 30,
+      "baselineDraftPriority": 12,
+      "newCategoryRank": 30,
+      "newDraftPriority": 30,
+      "categoryContributions": {
+        "PTS": 0.9387469603743458,
+        "REB": 0.5214556737551009,
+        "AST": -0.3702448277965658,
+        "ST": -1.0349603310522935,
+        "BLK": 0.2001100043692582,
+        "3PTM": 0.3969004425299857,
+        "FG%": -0.5117646548335519,
+        "FT%": 1.6458914892482697
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 30,
+          "ablatedRank": 93,
+          "rankShift": 63
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 30,
+          "ablatedRank": 69,
+          "rankShift": 39
+        },
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 30,
+          "ablatedRank": 58,
+          "rankShift": 28
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 30,
+          "replayCategoryRank": 24,
+          "categoryRankDelta": -6
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 30,
+          "replayCategoryRank": 30,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 30,
+          "replayCategoryRank": 36,
+          "categoryRankDelta": 6
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06dvi",
+      "name": "Milan Momcilovic",
+      "school": "KY",
+      "providerRank": null,
+      "modelCategoryRank": 31,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: 3PTM +3.32 SD, AST -1.21 SD, REB -1.03 SD. 7 sourced fields and 4 model-estimated fields (FGM, FGA, FTM, FTA); current disagreement remains unresolved.",
+      "baselineCategoryRank": 90,
+      "baselineDraftPriority": 51,
+      "newCategoryRank": 31,
+      "newDraftPriority": 31,
+      "categoryContributions": {
+        "PTS": 0.7851749840829169,
+        "REB": -1.0328459289721759,
+        "AST": -1.2053901407212368,
+        "ST": -0.6770218941207301,
+        "BLK": -0.5430887374687703,
+        "3PTM": 3.316783259508052,
+        "FG%": 0.5378640253125908,
+        "FT%": 0.576989313294347
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-3PTM",
+          "category": "3PTM",
+          "baselineCategoryValueRank": 31,
+          "ablatedRank": 246,
+          "rankShift": 215
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 31,
+          "ablatedRank": 70,
+          "rankShift": 39
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 31,
+          "ablatedRank": 63,
+          "rankShift": 32
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 90,
+          "replayCategoryRank": 88,
+          "categoryRankDelta": -2
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 90,
+          "replayCategoryRank": 90,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 90,
+          "replayCategoryRank": 98,
+          "categoryRankDelta": 8
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "provider-plus-model",
+        "sourcedFields": [
+          {
+            "field": "MIN",
+            "observedAt": "2026-10-28T19:56:03Z"
+          },
+          {
+            "field": "PTS",
+            "observedAt": "2026-10-28T19:56:03Z"
+          },
+          {
+            "field": "REB",
+            "observedAt": "2026-10-28T19:56:03Z"
+          },
+          {
+            "field": "AST",
+            "observedAt": "2026-10-28T19:56:03Z"
+          },
+          {
+            "field": "ST",
+            "observedAt": "2026-10-28T19:56:03Z"
+          },
+          {
+            "field": "BLK",
+            "observedAt": "2026-10-28T19:56:03Z"
+          },
+          {
+            "field": "3PTM",
+            "observedAt": "2026-10-28T19:56:03Z"
+          }
+        ],
+        "modeledFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {
+          "MIN": "2026-10-28T19:56:03Z",
+          "PTS": "2026-10-28T19:56:03Z",
+          "REB": "2026-10-28T19:56:03Z",
+          "AST": "2026-10-28T19:56:03Z",
+          "ST": "2026-10-28T19:56:03Z",
+          "BLK": "2026-10-28T19:56:03Z",
+          "3PTM": "2026-10-28T19:56:03Z"
+        }
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [
+          {
+            "sourceId": "fresh-rotowire-public10",
+            "provider": "RotoWire",
+            "url": "https://www.rotowire.com/cbasketball/projections.php",
+            "observedAt": "2026-10-28T19:56:03Z",
+            "fields": {
+              "MIN": {
+                "value": 30.6,
+                "observedAt": "2026-10-28T19:56:03Z"
+              },
+              "PTS": {
+                "value": 18.3,
+                "observedAt": "2026-10-28T19:56:03Z"
+              },
+              "REB": {
+                "value": 3.6,
+                "observedAt": "2026-10-28T19:56:03Z"
+              },
+              "AST": {
+                "value": 1.2,
+                "observedAt": "2026-10-28T19:56:03Z"
+              },
+              "ST": {
+                "value": 0.9,
+                "observedAt": "2026-10-28T19:56:03Z"
+              },
+              "BLK": {
+                "value": 0.3,
+                "observedAt": "2026-10-28T19:56:03Z"
+              },
+              "3PTM": {
+                "value": 3.8,
+                "observedAt": "2026-10-28T19:56:03Z"
+              }
+            }
+          }
+        ],
+        "providerProjectionFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM"
+        ],
+        "modelOnlyFields": [
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06mz2",
+      "name": "Daniel Freitag",
+      "school": "OrSt",
+      "providerRank": null,
+      "modelCategoryRank": 32,
+      "historicalGP": 23,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: FG% -1.34 SD, FT% +1.25 SD, 3PTM +1.11 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 31,
+      "baselineDraftPriority": 48,
+      "newCategoryRank": 32,
+      "newDraftPriority": 32,
+      "categoryContributions": {
+        "PTS": 1.0765517124118833,
+        "REB": -0.6686282691469814,
+        "AST": 0.5416637244770386,
+        "ST": 0.3230198993036427,
+        "BLK": -0.5448644163032896,
+        "3PTM": 1.1130759360891818,
+        "FG%": -1.3418086148575792,
+        "FT%": 1.2517265114558482
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 32,
+          "ablatedRank": 75,
+          "rankShift": 43
+        },
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 32,
+          "ablatedRank": 68,
+          "rankShift": 36
+        },
+        {
+          "variant": "without-3PTM",
+          "category": "3PTM",
+          "baselineCategoryValueRank": 32,
+          "ablatedRank": 61,
+          "rankShift": 29
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 31,
+          "replayCategoryRank": 31,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 31,
+          "replayCategoryRank": 31,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 31,
+          "replayCategoryRank": 28,
+          "categoryRankDelta": -3
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "065mj",
+      "name": "Jack Karasinski",
+      "school": "NW",
+      "providerRank": null,
+      "modelCategoryRank": 33,
+      "historicalGP": 30,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: PTS +1.56 SD, FG% +1.37 SD, ST -1.23 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 32,
+      "baselineDraftPriority": 13,
+      "newCategoryRank": 33,
+      "newDraftPriority": 33,
+      "categoryContributions": {
+        "PTS": 1.559363815389326,
+        "REB": -0.21262412140732198,
+        "AST": -1.1118140555139873,
+        "ST": -1.2266574114581692,
+        "BLK": -0.274386369545313,
+        "3PTM": 1.0398738226485074,
+        "FG%": 1.3724950271809837,
+        "FT%": 0.5567092495405287
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 33,
+          "ablatedRank": 129,
+          "rankShift": 96
+        },
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 33,
+          "ablatedRank": 105,
+          "rankShift": 72
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 33,
+          "ablatedRank": 103,
+          "rankShift": 70
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 32,
+          "replayCategoryRank": 30,
+          "categoryRankDelta": -2
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 32,
+          "replayCategoryRank": 32,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 32,
+          "replayCategoryRank": 35,
+          "categoryRankDelta": 3
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06nde",
+      "name": "JaQuan Johnson",
+      "school": "IaSt",
+      "providerRank": null,
+      "modelCategoryRank": 35,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +2.75 SD, BLK -1.02 SD, FG% -0.98 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 33,
+      "baselineDraftPriority": 52,
+      "newCategoryRank": 35,
+      "newDraftPriority": 35,
+      "categoryContributions": {
+        "PTS": 0.35605239610236566,
+        "REB": -0.8319238557600692,
+        "AST": 0.43477544787358424,
+        "ST": 2.749314319522925,
+        "BLK": -1.021029574285298,
+        "3PTM": 0.4206564519887519,
+        "FG%": -0.975324178376176,
+        "FT%": 0.4714219302779881
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 35,
+          "ablatedRank": 219,
+          "rankShift": 184
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 35,
+          "ablatedRank": 136,
+          "rankShift": 101
+        },
+        {
+          "variant": "without-AST",
+          "category": "AST",
+          "baselineCategoryValueRank": 35,
+          "ablatedRank": 56,
+          "rankShift": 21
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 33,
+          "replayCategoryRank": 36,
+          "categoryRankDelta": 3
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 33,
+          "replayCategoryRank": 33,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 33,
+          "replayCategoryRank": 30,
+          "categoryRankDelta": -3
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "05wgg",
+      "name": "Justin Neely",
+      "school": "Col",
+      "providerRank": null,
+      "modelCategoryRank": 37,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: REB +2.39 SD, 3PTM -0.96 SD, FG% +0.91 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 35,
+      "baselineDraftPriority": 16,
+      "newCategoryRank": 37,
+      "newDraftPriority": 37,
+      "categoryContributions": {
+        "PTS": 0.4757339580846349,
+        "REB": 2.385039465498633,
+        "AST": -0.4690392017760114,
+        "ST": -0.6782068591495781,
+        "BLK": -0.4379051002670739,
+        "3PTM": -0.9558604368310814,
+        "FG%": 0.9095151629902701,
+        "FT%": 0.30547936198037323
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-REB",
+          "category": "REB",
+          "baselineCategoryValueRank": 37,
+          "ablatedRank": 213,
+          "rankShift": 176
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 37,
+          "ablatedRank": 89,
+          "rankShift": 52
+        },
+        {
+          "variant": "without-FG%",
+          "category": "FG%",
+          "baselineCategoryValueRank": 37,
+          "ablatedRank": 88,
+          "rankShift": 51
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 35,
+          "replayCategoryRank": 28,
+          "categoryRankDelta": -7
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 35,
+          "replayCategoryRank": 35,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 35,
+          "replayCategoryRank": 48,
+          "categoryRankDelta": 13
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06gra",
+      "name": "Dontae Horne",
+      "school": "PVAM",
+      "providerRank": null,
+      "modelCategoryRank": 39,
+      "historicalGP": 35,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: ST +1.43 SD, PTS +1.28 SD, FG% -0.80 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 36,
+      "baselineDraftPriority": 57,
+      "newCategoryRank": 39,
+      "newDraftPriority": 39,
+      "categoryContributions": {
+        "PTS": 1.2803801084679196,
+        "REB": -0.5984514522578367,
+        "AST": 0.15729638056884154,
+        "ST": 1.4302965909335885,
+        "BLK": -0.703528224829704,
+        "3PTM": 0.09344067904295361,
+        "FG%": -0.8005208437150989,
+        "FT%": 0.6430356423150769
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 39,
+          "ablatedRank": 97,
+          "rankShift": 58
+        },
+        {
+          "variant": "without-ST",
+          "category": "ST",
+          "baselineCategoryValueRank": 39,
+          "ablatedRank": 95,
+          "rankShift": 56
+        },
+        {
+          "variant": "without-stocks",
+          "category": "stocks",
+          "baselineCategoryValueRank": 39,
+          "ablatedRank": 68,
+          "rankShift": 29
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 36,
+          "replayCategoryRank": 41,
+          "categoryRankDelta": 5
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 36,
+          "replayCategoryRank": 36,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 36,
+          "replayCategoryRank": 33,
+          "categoryRankDelta": -3
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    },
+    {
+      "fantraxId": "06gcd",
+      "name": "Colby Garland",
+      "school": "GaTec",
+      "providerRank": null,
+      "modelCategoryRank": 40,
+      "historicalGP": 29,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent. Largest category terms: PTS +1.32 SD, FT% +1.14 SD, REB -1.04 SD. 0 sourced fields and 11 model-estimated fields (MIN, PTS, REB, AST, ST); current disagreement remains unresolved.",
+      "baselineCategoryRank": 37,
+      "baselineDraftPriority": 59,
+      "newCategoryRank": 40,
+      "newDraftPriority": 40,
+      "categoryContributions": {
+        "PTS": 1.3213792263453101,
+        "REB": -1.0411836165824127,
+        "AST": 0.9600114064710482,
+        "ST": -0.04026459982088422,
+        "BLK": -0.9954139259119933,
+        "3PTM": 0.015025058396287866,
+        "FG%": 0.053590896299861364,
+        "FT%": 1.1446761933352447
+      },
+      "largestCategoryAblationRankShifts": [
+        {
+          "variant": "without-PTS",
+          "category": "PTS",
+          "baselineCategoryValueRank": 40,
+          "ablatedRank": 108,
+          "rankShift": 68
+        },
+        {
+          "variant": "without-percentages",
+          "category": "percentages",
+          "baselineCategoryValueRank": 40,
+          "ablatedRank": 94,
+          "rankShift": 54
+        },
+        {
+          "variant": "without-FT%",
+          "category": "FT%",
+          "baselineCategoryValueRank": 40,
+          "ablatedRank": 84,
+          "rankShift": 44
+        }
+      ],
+      "frozenPriorStrengthRankResults": [
+        {
+          "multiplier": 0,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 37,
+          "replayCategoryRank": 44,
+          "categoryRankDelta": 7
+        },
+        {
+          "multiplier": 1,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 37,
+          "replayCategoryRank": 37,
+          "categoryRankDelta": 0
+        },
+        {
+          "multiplier": 2,
+          "status": "computed-frozen-source-replay",
+          "context": "frozen-history-source replay; baseline board comparison",
+          "baselineCategoryRank": 37,
+          "replayCategoryRank": 32,
+          "categoryRankDelta": -5
+        }
+      ],
+      "fieldProvenance": {
+        "basis": "historical-shrinkage",
+        "sourcedFields": [],
+        "modeledFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "fieldObservedAt": {}
+      },
+      "evidenceQuality": {
+        "providerRank": null,
+        "rankEvidence": [],
+        "publicProjectionEvidence": [],
+        "providerProjectionFields": [],
+        "modelOnlyFields": [
+          "MIN",
+          "PTS",
+          "REB",
+          "AST",
+          "ST",
+          "BLK",
+          "3PTM",
+          "FGM",
+          "FGA",
+          "FTM",
+          "FTA"
+        ],
+        "projectionErrors": [],
+        "note": "Public projection evidence is partial and shown only for fields actually present in source records; missing fields remain modeled or unavailable."
+      },
+      "roleStatusNotes": {
+        "role": [],
+        "roleEvidenceIsClearance": false,
+        "status": null
+      }
+    }
+  ],
+  "unmatchedPoolRows": [],
+  "dispositionGuide": {
+    "data-error": "verified identity or impossible arithmetic contradiction",
+    "format": "source presentation/schema interpretation issue",
+    "projection": "same-identity projection difference with explicit same-field provenance",
+    "unresolved": "evidence does not resolve current projection/rank disagreement"
+  }
+}

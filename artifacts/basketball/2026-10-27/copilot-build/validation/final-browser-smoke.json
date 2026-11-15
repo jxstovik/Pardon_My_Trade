@@ -1,0 +1,2840 @@
+{
+  "kind": "actual-supported-browser-final-client-smoke",
+  "at": "2026-10-27T18:00:48.517Z",
+  "trace": [
+    {
+      "action": "Reset session",
+      "toolRoundTripMs": 580,
+      "before": {
+        "at": "2026-10-27T18:00:26.962Z",
+        "candidates": [],
+        "feedback": "Mock picks are isolated from league data.",
+        "filled": 112,
+        "next": "Complete",
+        "own": "14 / 14",
+        "ownCells": 14,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTLeJuan Watts · 2rc1dg43mvgsurtp · pick 112 · slot recorded · verified local receipt",
+        "revision": "g114-ec3ef6ce7ff27cf981796435d35b8de5b233dd1f8f02688e188f46317a709795:18",
+        "rosterCounts": [
+          "14/14",
+          "14/14",
+          "14/14",
+          "14/14",
+          "14/14",
+          "14/14",
+          "14/14",
+          "14/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Complete"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:27.542Z",
+        "candidates": [
+          {
+            "text": "Tyler Tanner · Vand",
+            "value": "06n46"
+          },
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Thomas Dowd · Aub",
+            "value": "06grf"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Cade Tyson · Minn",
+            "value": "064gk"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          }
+        ],
+        "feedback": "Started a fresh synthetic session with a new identity.",
+        "filled": 0,
+        "next": "#1",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTNo local selection recorded.",
+        "revision": "g1-f2fb181da0b46339bf4a19de801978c8327fc2f52da2267672c8df771204cfd7:19",
+        "rosterCounts": [
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Not started"
+      }
+    },
+    {
+      "action": "Start mock",
+      "toolRoundTripMs": 507,
+      "before": {
+        "at": "2026-10-27T18:00:27.559Z",
+        "candidates": [
+          {
+            "text": "Tyler Tanner · Vand",
+            "value": "06n46"
+          },
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Thomas Dowd · Aub",
+            "value": "06grf"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Cade Tyson · Minn",
+            "value": "064gk"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          }
+        ],
+        "feedback": "Started a fresh synthetic session with a new identity.",
+        "filled": 0,
+        "next": "#1",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTNo local selection recorded.",
+        "revision": "g1-f2fb181da0b46339bf4a19de801978c8327fc2f52da2267672c8df771204cfd7:19",
+        "rosterCounts": [
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Not started"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:28.067Z",
+        "candidates": [
+          {
+            "text": "Tyler Tanner · Vand",
+            "value": "06n46"
+          },
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Thomas Dowd · Aub",
+            "value": "06grf"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Cade Tyson · Minn",
+            "value": "064gk"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          }
+        ],
+        "feedback": "Synthetic eight-team draft started with 60-second own-turn clocks.",
+        "filled": 0,
+        "next": "#1",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTNo local selection recorded.",
+        "revision": "g2-390a724ee96e0231151c09486c6c5b364a6700c50dfb420288a1573adcc2f6f9:20",
+        "rosterCounts": [
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Waiting"
+      }
+    },
+    {
+      "action": "Burst to my turn",
+      "toolRoundTripMs": 688,
+      "before": {
+        "at": "2026-10-27T18:00:28.100Z",
+        "candidates": [
+          {
+            "text": "Tyler Tanner · Vand",
+            "value": "06n46"
+          },
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Thomas Dowd · Aub",
+            "value": "06grf"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Cade Tyson · Minn",
+            "value": "064gk"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          }
+        ],
+        "feedback": "Synthetic eight-team draft started with 60-second own-turn clocks.",
+        "filled": 0,
+        "next": "#1",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTNo local selection recorded.",
+        "revision": "g2-390a724ee96e0231151c09486c6c5b364a6700c50dfb420288a1573adcc2f6f9:20",
+        "rosterCounts": [
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Waiting"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:28.787Z",
+        "candidates": [
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          }
+        ],
+        "feedback": "Advanced 5 scripted opponent picks; current pick is 6.",
+        "filled": 5,
+        "next": "#6",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTCade Tyson · kq1erunqmvhbzx4y · pick 5 · slot auto · verified local receipt",
+        "revision": "g7-fc543e46742ddd5f379da54fc9954bcc0bebf057a7d2caf51b224f2a33bbb54f:21",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Your turn"
+      }
+    },
+    {
+      "action": "Queue candidate",
+      "toolRoundTripMs": 416,
+      "before": {
+        "at": "2026-10-27T18:00:28.908Z",
+        "candidates": [
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          }
+        ],
+        "feedback": "Advanced 5 scripted opponent picks; current pick is 6.",
+        "filled": 5,
+        "next": "#6",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTCade Tyson · kq1erunqmvhbzx4y · pick 5 · slot auto · verified local receipt",
+        "revision": "g7-fc543e46742ddd5f379da54fc9954bcc0bebf057a7d2caf51b224f2a33bbb54f:21",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "06n8t",
+        "slot": "G",
+        "turn": "Your turn"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:29.323Z",
+        "candidates": [
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          }
+        ],
+        "feedback": "Queued Javontae Campbell for local review.",
+        "filled": 5,
+        "next": "#6",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTCade Tyson · kq1erunqmvhbzx4y · pick 5 · slot auto · verified local receipt",
+        "revision": "g7-fc543e46742ddd5f379da54fc9954bcc0bebf057a7d2caf51b224f2a33bbb54f:22",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "06n8t",
+        "slot": "G",
+        "turn": "Your turn"
+      }
+    },
+    {
+      "action": "Confirm own pick",
+      "toolRoundTripMs": 613,
+      "before": {
+        "at": "2026-10-27T18:00:29.340Z",
+        "candidates": [
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          }
+        ],
+        "feedback": "Queued Javontae Campbell for local review.",
+        "filled": 5,
+        "next": "#6",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTCade Tyson · kq1erunqmvhbzx4y · pick 5 · slot auto · verified local receipt",
+        "revision": "g7-fc543e46742ddd5f379da54fc9954bcc0bebf057a7d2caf51b224f2a33bbb54f:22",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "06n8t",
+        "slot": "G",
+        "turn": "Your turn"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:29.954Z",
+        "candidates": [
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          }
+        ],
+        "feedback": "Confirmed synthetic pick 6: Javontae Campbell in G.",
+        "filled": 6,
+        "next": "#7",
+        "own": "1 / 14",
+        "ownCells": 1,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTJavontae Campbell · wwc1n3o4mvn1c6hk · pick 6 · slot G · verified local receiptLegal roster assignment: G1: Javontae Campbell",
+        "revision": "g8-fbb3846f645218ca5a404a5394ba6c24ea8b44401f3d590a23acfef9198b4f08:23",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Waiting"
+      }
+    },
+    {
+      "action": "Burst to my turn",
+      "toolRoundTripMs": 644,
+      "before": {
+        "at": "2026-10-27T18:00:29.987Z",
+        "candidates": [
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          }
+        ],
+        "feedback": "Confirmed synthetic pick 6: Javontae Campbell in G.",
+        "filled": 6,
+        "next": "#7",
+        "own": "1 / 14",
+        "ownCells": 1,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTJavontae Campbell · wwc1n3o4mvn1c6hk · pick 6 · slot G · verified local receiptLegal roster assignment: G1: Javontae Campbell",
+        "revision": "g8-fbb3846f645218ca5a404a5394ba6c24ea8b44401f3d590a23acfef9198b4f08:23",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Waiting"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:30.631Z",
+        "candidates": [
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          }
+        ],
+        "feedback": "Advanced 4 scripted opponent picks; current pick is 11.",
+        "filled": 10,
+        "next": "#11",
+        "own": "1 / 14",
+        "ownCells": 1,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTavari Johnson · evucydykmvjmlrze · pick 10 · slot auto · verified local receipt",
+        "revision": "g12-412c4303b09ff1fde1d0de5320eebc8963228e04afcc174c4157128a2e62eb1d:24",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Your turn"
+      }
+    },
+    {
+      "action": "Queue candidate",
+      "toolRoundTripMs": 376,
+      "before": {
+        "at": "2026-10-27T18:00:30.723Z",
+        "candidates": [
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          }
+        ],
+        "feedback": "Advanced 4 scripted opponent picks; current pick is 11.",
+        "filled": 10,
+        "next": "#11",
+        "own": "1 / 14",
+        "ownCells": 1,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTavari Johnson · evucydykmvjmlrze · pick 10 · slot auto · verified local receipt",
+        "revision": "g12-412c4303b09ff1fde1d0de5320eebc8963228e04afcc174c4157128a2e62eb1d:24",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "065cb",
+        "slot": "G",
+        "turn": "Your turn"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:31.100Z",
+        "candidates": [
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          }
+        ],
+        "feedback": "Queued Kyle Evans for local review.",
+        "filled": 10,
+        "next": "#11",
+        "own": "1 / 14",
+        "ownCells": 1,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTavari Johnson · evucydykmvjmlrze · pick 10 · slot auto · verified local receipt",
+        "revision": "g12-412c4303b09ff1fde1d0de5320eebc8963228e04afcc174c4157128a2e62eb1d:25",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "065cb",
+        "slot": "F/C",
+        "turn": "Your turn"
+      }
+    },
+    {
+      "action": "Confirm own pick",
+      "toolRoundTripMs": 573,
+      "before": {
+        "at": "2026-10-27T18:00:31.116Z",
+        "candidates": [
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          }
+        ],
+        "feedback": "Queued Kyle Evans for local review.",
+        "filled": 10,
+        "next": "#11",
+        "own": "1 / 14",
+        "ownCells": 1,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTavari Johnson · evucydykmvjmlrze · pick 10 · slot auto · verified local receipt",
+        "revision": "g12-412c4303b09ff1fde1d0de5320eebc8963228e04afcc174c4157128a2e62eb1d:25",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "065cb",
+        "slot": "F/C",
+        "turn": "Your turn"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:31.689Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          }
+        ],
+        "feedback": "Confirmed synthetic pick 11: Kyle Evans in F/C.",
+        "filled": 11,
+        "next": "#12",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTKyle Evans · wwc1n3o4mvn1c6hk · pick 11 · slot F/C · verified local receiptLegal roster assignment: F/C1: Kyle Evans · G1: Javontae Campbell",
+        "revision": "g13-8702cd7d0ba2b52d506dca1c5dfc69b7d5cd8affc944c60daa417c42831f82fd:26",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "F/C",
+        "turn": "Waiting"
+      }
+    },
+    {
+      "action": "Burst to my turn",
+      "toolRoundTripMs": 762,
+      "before": {
+        "at": "2026-10-27T18:00:31.710Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          }
+        ],
+        "feedback": "Confirmed synthetic pick 11: Kyle Evans in F/C.",
+        "filled": 11,
+        "next": "#12",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTKyle Evans · wwc1n3o4mvn1c6hk · pick 11 · slot F/C · verified local receiptLegal roster assignment: F/C1: Kyle Evans · G1: Javontae Campbell",
+        "revision": "g13-8702cd7d0ba2b52d506dca1c5dfc69b7d5cd8affc944c60daa417c42831f82fd:26",
+        "rosterCounts": [
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "1/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "F/C",
+        "turn": "Waiting"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:32.471Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          },
+          {
+            "text": "Nick Townsend · Stan",
+            "value": "065xr"
+          }
+        ],
+        "feedback": "Advanced 8 scripted opponent picks; current pick is 20.",
+        "filled": 19,
+        "next": "#20",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTRobert Wright · rlfm3uhjmvk7q70x · pick 19 · slot auto · verified local receipt",
+        "revision": "g21-047c4aa9f8ff2445f0d3cc2cc360b927dd9a1dbdb397beb314f540b88a4a7f3a:27",
+        "rosterCounts": [
+          "3/14",
+          "3/14",
+          "3/14",
+          "2/14",
+          "2/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "F/C",
+        "turn": "Waiting"
+      }
+    },
+    {
+      "action": "Burst to my turn",
+      "toolRoundTripMs": 692,
+      "before": {
+        "at": "2026-10-27T18:00:32.492Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          },
+          {
+            "text": "Nick Townsend · Stan",
+            "value": "065xr"
+          }
+        ],
+        "feedback": "Advanced 8 scripted opponent picks; current pick is 20.",
+        "filled": 19,
+        "next": "#20",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTRobert Wright · rlfm3uhjmvk7q70x · pick 19 · slot auto · verified local receipt",
+        "revision": "g21-047c4aa9f8ff2445f0d3cc2cc360b927dd9a1dbdb397beb314f540b88a4a7f3a:27",
+        "rosterCounts": [
+          "3/14",
+          "3/14",
+          "3/14",
+          "2/14",
+          "2/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "F/C",
+        "turn": "Waiting"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:33.185Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          },
+          {
+            "text": "Nick Townsend · Stan",
+            "value": "065xr"
+          }
+        ],
+        "feedback": "Advanced 2 scripted opponent picks; current pick is 22.",
+        "filled": 21,
+        "next": "#22",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTJ Power · kq1erunqmvhbzx4y · pick 21 · slot auto · verified local receipt",
+        "revision": "g23-d5fb17081681d149b9ed9fa1e7cc5c3664221ac42680e2c74f9c90e0d318e6e6:28",
+        "rosterCounts": [
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "F/C",
+        "turn": "Your turn"
+      }
+    },
+    {
+      "action": "Queue candidate",
+      "toolRoundTripMs": 401,
+      "before": {
+        "at": "2026-10-27T18:00:33.323Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          },
+          {
+            "text": "Nick Townsend · Stan",
+            "value": "065xr"
+          }
+        ],
+        "feedback": "Advanced 2 scripted opponent picks; current pick is 22.",
+        "filled": 21,
+        "next": "#22",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTJ Power · kq1erunqmvhbzx4y · pick 21 · slot auto · verified local receipt",
+        "revision": "g23-d5fb17081681d149b9ed9fa1e7cc5c3664221ac42680e2c74f9c90e0d318e6e6:28",
+        "rosterCounts": [
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "06n56",
+        "slot": "F/C",
+        "turn": "Your turn"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:33.724Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          },
+          {
+            "text": "Nick Townsend · Stan",
+            "value": "065xr"
+          }
+        ],
+        "feedback": "Queued Kamrin Oriol for local review.",
+        "filled": 21,
+        "next": "#22",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTJ Power · kq1erunqmvhbzx4y · pick 21 · slot auto · verified local receipt",
+        "revision": "g23-d5fb17081681d149b9ed9fa1e7cc5c3664221ac42680e2c74f9c90e0d318e6e6:29",
+        "rosterCounts": [
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "06n56",
+        "slot": "G",
+        "turn": "Your turn"
+      }
+    },
+    {
+      "action": "Reset session",
+      "toolRoundTripMs": 612,
+      "before": {
+        "at": "2026-10-27T18:00:47.303Z",
+        "candidates": [
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Michael James · ASU",
+            "value": "0729c"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Money Williams · BC",
+            "value": "06hkh"
+          },
+          {
+            "text": "Dior Johnson · UCF",
+            "value": "064yz"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Jaiden Feroah · S UT",
+            "value": "06nnk"
+          },
+          {
+            "text": "Nolan Minessale · Marq",
+            "value": "06ntt"
+          },
+          {
+            "text": "Malik Reneau · Mia-FL",
+            "value": "064ds"
+          },
+          {
+            "text": "Amarri Tice · Syr",
+            "value": "0650z"
+          },
+          {
+            "text": "Nick Townsend · Stan",
+            "value": "065xr"
+          }
+        ],
+        "feedback": "Copilot resumed.",
+        "filled": 21,
+        "next": "#22",
+        "own": "2 / 14",
+        "ownCells": 2,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTTJ Power · kq1erunqmvhbzx4y · pick 21 · slot auto · verified local receipt",
+        "revision": "g23-d5fb17081681d149b9ed9fa1e7cc5c3664221ac42680e2c74f9c90e0d318e6e6:41",
+        "rosterCounts": [
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "3/14",
+          "2/14",
+          "2/14",
+          "2/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Clock expired"
+      },
+      "after": {
+        "at": "2026-10-27T18:00:47.916Z",
+        "candidates": [
+          {
+            "text": "Tyler Tanner · Vand",
+            "value": "06n46"
+          },
+          {
+            "text": "Javontae Campbell · Cin",
+            "value": "06n8t"
+          },
+          {
+            "text": "Tavari Johnson · Charl",
+            "value": "0655r"
+          },
+          {
+            "text": "Jeremy Fears · MSU",
+            "value": "06hcd"
+          },
+          {
+            "text": "Markus Burton · Ind",
+            "value": "06dun"
+          },
+          {
+            "text": "Quion Williams · ArkPB",
+            "value": "064kr"
+          },
+          {
+            "text": "Jalen Cox · USC",
+            "value": "06h14"
+          },
+          {
+            "text": "Kamrin Oriol · Akr",
+            "value": "06n56"
+          },
+          {
+            "text": "Pryce Sandfort · Nebras",
+            "value": "06g7r"
+          },
+          {
+            "text": "Hamad Mousa · CAPoly",
+            "value": "06pqo"
+          },
+          {
+            "text": "Thomas Dowd · Aub",
+            "value": "06grf"
+          },
+          {
+            "text": "Amari Allen · Bama",
+            "value": "06vye"
+          },
+          {
+            "text": "Motiejus Krivas · Ariz",
+            "value": "06g0r"
+          },
+          {
+            "text": "Kyle Evans · NCSU",
+            "value": "065cb"
+          },
+          {
+            "text": "Keyshawn Hall · StJon",
+            "value": "065ct"
+          },
+          {
+            "text": "Jack Karasinski · NW",
+            "value": "065mj"
+          },
+          {
+            "text": "Justin Neely · Col",
+            "value": "05wgg"
+          },
+          {
+            "text": "Cade Tyson · Minn",
+            "value": "064gk"
+          },
+          {
+            "text": "TJ Johnson · VMI",
+            "value": "0660s"
+          },
+          {
+            "text": "Daeshun Ruffin · JackSt",
+            "value": "05wk5"
+          }
+        ],
+        "feedback": "Started a fresh synthetic session with a new identity.",
+        "filled": 0,
+        "next": "#1",
+        "own": "0 / 14",
+        "ownCells": 0,
+        "profile": "Balanced",
+        "receipt": "LATEST RECEIPTNo local selection recorded.",
+        "revision": "g1-7917c058ae533ab4fbf06e44d10b0354f01606fc2e3fb3d4d802536017a43eb4:42",
+        "rosterCounts": [
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14",
+          "0/14"
+        ],
+        "selectedCandidate": "",
+        "slot": "G",
+        "turn": "Not started"
+      }
+    }
+  ],
+  "expiredClock": {
+    "at": "2026-10-27T18:00:34.907Z",
+    "candidates": [
+      {
+        "text": "Kamrin Oriol · Akr",
+        "value": "06n56"
+      },
+      {
+        "text": "Jeremy Fears · MSU",
+        "value": "06hcd"
+      },
+      {
+        "text": "Pryce Sandfort · Nebras",
+        "value": "06g7r"
+      },
+      {
+        "text": "Michael James · ASU",
+        "value": "0729c"
+      },
+      {
+        "text": "Daeshun Ruffin · JackSt",
+        "value": "05wk5"
+      },
+      {
+        "text": "Markus Burton · Ind",
+        "value": "06dun"
+      },
+      {
+        "text": "Money Williams · BC",
+        "value": "06hkh"
+      },
+      {
+        "text": "Dior Johnson · UCF",
+        "value": "064yz"
+      },
+      {
+        "text": "Amari Allen · Bama",
+        "value": "06vye"
+      },
+      {
+        "text": "Motiejus Krivas · Ariz",
+        "value": "06g0r"
+      },
+      {
+        "text": "Keyshawn Hall · StJon",
+        "value": "065ct"
+      },
+      {
+        "text": "Jack Karasinski · NW",
+        "value": "065mj"
+      },
+      {
+        "text": "Quion Williams · ArkPB",
+        "value": "064kr"
+      },
+      {
+        "text": "Jalen Cox · USC",
+        "value": "06h14"
+      },
+      {
+        "text": "Justin Neely · Col",
+        "value": "05wgg"
+      },
+      {
+        "text": "Jaiden Feroah · S UT",
+        "value": "06nnk"
+      },
+      {
+        "text": "Nolan Minessale · Marq",
+        "value": "06ntt"
+      },
+      {
+        "text": "Malik Reneau · Mia-FL",
+        "value": "064ds"
+      },
+      {
+        "text": "Amarri Tice · Syr",
+        "value": "0650z"
+      },
+      {
+        "text": "Nick Townsend · Stan",
+        "value": "065xr"
+      }
+    ],
+    "feedback": "Local pick blocked: Mock clock is missing or inside the safety buffer",
+    "filled": 21,
+    "next": "#22",
+    "own": "2 / 14",
+    "ownCells": 2,
+    "profile": "Balanced",
+    "receipt": "LATEST RECEIPTTJ Power · kq1erunqmvhbzx4y · pick 21 · slot auto · verified local receipt",
+    "revision": "g23-d5fb17081681d149b9ed9fa1e7cc5c3664221ac42680e2c74f9c90e0d318e6e6:31",
+    "rosterCounts": [
+      "3/14",
+      "3/14",
+      "3/14",
+      "3/14",
+      "3/14",
+      "2/14",
+      "2/14",
+      "2/14"
+    ],
+    "selectedCandidate": "06n56",
+    "slot": "G",
+    "turn": "Clock expired"
+  },
+  "pauseReload": {
+    "at": "2026-10-27T18:00:46.640Z",
+    "state": {
+      "at": "2026-10-27T18:00:46.662Z",
+      "candidates": [
+        {
+          "text": "Pryce Sandfort · Nebras",
+          "value": "06g7r"
+        },
+        {
+          "text": "Amari Allen · Bama",
+          "value": "06vye"
+        },
+        {
+          "text": "Jeremy Fears · MSU",
+          "value": "06hcd"
+        },
+        {
+          "text": "Motiejus Krivas · Ariz",
+          "value": "06g0r"
+        },
+        {
+          "text": "Markus Burton · Ind",
+          "value": "06dun"
+        },
+        {
+          "text": "Keyshawn Hall · StJon",
+          "value": "065ct"
+        },
+        {
+          "text": "Jack Karasinski · NW",
+          "value": "065mj"
+        },
+        {
+          "text": "Quion Williams · ArkPB",
+          "value": "064kr"
+        },
+        {
+          "text": "Jalen Cox · USC",
+          "value": "06h14"
+        },
+        {
+          "text": "Justin Neely · Col",
+          "value": "05wgg"
+        },
+        {
+          "text": "Kamrin Oriol · Akr",
+          "value": "06n56"
+        },
+        {
+          "text": "Daeshun Ruffin · JackSt",
+          "value": "05wk5"
+        },
+        {
+          "text": "Michael James · ASU",
+          "value": "0729c"
+        },
+        {
+          "text": "Jaiden Feroah · S UT",
+          "value": "06nnk"
+        },
+        {
+          "text": "Nolan Minessale · Marq",
+          "value": "06ntt"
+        },
+        {
+          "text": "Money Williams · BC",
+          "value": "06hkh"
+        },
+        {
+          "text": "Malik Reneau · Mia-FL",
+          "value": "064ds"
+        },
+        {
+          "text": "Amarri Tice · Syr",
+          "value": "0650z"
+        },
+        {
+          "text": "Dior Johnson · UCF",
+          "value": "064yz"
+        },
+        {
+          "text": "Nick Townsend · Stan",
+          "value": "065xr"
+        }
+      ],
+      "feedback": "Copilot paused; local actions are disabled.",
+      "filled": 21,
+      "next": "#22",
+      "own": "2 / 14",
+      "ownCells": 2,
+      "profile": "Balanced",
+      "receipt": "LATEST RECEIPTTJ Power · kq1erunqmvhbzx4y · pick 21 · slot auto · verified local receipt",
+      "revision": "g23-d5fb17081681d149b9ed9fa1e7cc5c3664221ac42680e2c74f9c90e0d318e6e6:40",
+      "rosterCounts": [
+        "3/14",
+        "3/14",
+        "3/14",
+        "3/14",
+        "3/14",
+        "2/14",
+        "2/14",
+        "2/14"
+      ],
+      "selectedCandidate": "",
+      "slot": "G",
+      "turn": "Paused"
+    },
+    "confirmEnabled": false
+  },
+  "finalState": {
+    "at": "2026-10-27T18:00:48.542Z",
+    "candidates": [
+      {
+        "text": "Tyler Tanner · Vand",
+        "value": "06n46"
+      },
+      {
+        "text": "Javontae Campbell · Cin",
+        "value": "06n8t"
+      },
+      {
+        "text": "Tavari Johnson · Charl",
+        "value": "0655r"
+      },
+      {
+        "text": "Jeremy Fears · MSU",
+        "value": "06hcd"
+      },
+      {
+        "text": "Markus Burton · Ind",
+        "value": "06dun"
+      },
+      {
+        "text": "Quion Williams · ArkPB",
+        "value": "064kr"
+      },
+      {
+        "text": "Jalen Cox · USC",
+        "value": "06h14"
+      },
+      {
+        "text": "Kamrin Oriol · Akr",
+        "value": "06n56"
+      },
+      {
+        "text": "Pryce Sandfort · Nebras",
+        "value": "06g7r"
+      },
+      {
+        "text": "Hamad Mousa · CAPoly",
+        "value": "06pqo"
+      },
+      {
+        "text": "Thomas Dowd · Aub",
+        "value": "06grf"
+      },
+      {
+        "text": "Amari Allen · Bama",
+        "value": "06vye"
+      },
+      {
+        "text": "Motiejus Krivas · Ariz",
+        "value": "06g0r"
+      },
+      {
+        "text": "Kyle Evans · NCSU",
+        "value": "065cb"
+      },
+      {
+        "text": "Keyshawn Hall · StJon",
+        "value": "065ct"
+      },
+      {
+        "text": "Jack Karasinski · NW",
+        "value": "065mj"
+      },
+      {
+        "text": "Justin Neely · Col",
+        "value": "05wgg"
+      },
+      {
+        "text": "Cade Tyson · Minn",
+        "value": "064gk"
+      },
+      {
+        "text": "TJ Johnson · VMI",
+        "value": "0660s"
+      },
+      {
+        "text": "Daeshun Ruffin · JackSt",
+        "value": "05wk5"
+      }
+    ],
+    "feedback": "Selected balanced profile.",
+    "filled": 0,
+    "next": "#1",
+    "own": "0 / 14",
+    "ownCells": 0,
+    "profile": "Balanced",
+    "receipt": "LATEST RECEIPTNo local selection recorded.",
+    "revision": "g1-7917c058ae533ab4fbf06e44d10b0354f01606fc2e3fb3d4d802536017a43eb4:43",
+    "rosterCounts": [
+      "0/14",
+      "0/14",
+      "0/14",
+      "0/14",
+      "0/14",
+      "0/14",
+      "0/14",
+      "0/14"
+    ],
+    "selectedCandidate": "",
+    "slot": "G",
+    "turn": "Not started"
+  },
+  "liveActionsExecuted": 0
+}

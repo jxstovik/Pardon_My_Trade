@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-27T08:10:52Z",
+  "kind": "primary-page-transcription",
+  "fantraxId": "06n46",
+  "name": "Tyler Tanner",
+  "fantraxSchoolLabel": "Vand",
+  "officialSchool": "Vanderbilt",
+  "sourceUrl": "https://vucommodores.com/sports/mbball/roster/player/tyler-tanner",
+  "sourceSeason": "2026-27",
+  "sourceCompetition": "mens-basketball",
+  "sourceClass": "Junior",
+  "joinMethod": "manual name/school/class match",
+  "poolCoverage": "single player only; no bulk coverage claim",
+  "statusCoverage": "roster membership only; not injury clearance or projected minutes",
+  "historicalScopeWarning": "Official bio lists 2025-26 702 points/19.5 PPG; Fantrax Reg Season display lists 649 points/19.1 PPG over 34 GP. Do not merge scopes until game-level reconciliation.",
+  "unavailableSource": "October 26 watch-list article could not be opened; no claim derived from it."
+}

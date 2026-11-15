@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "season": "2026-27",
+  "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "observedAt": "2026-10-30T06:30:58.000Z",
+  "sourceKind": "browser-transcription",
+  "sourceUrls": [
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;view=SCHEDULE_PERIOD;period=2"
+  ],
+  "period": {
+    "number": 2,
+    "firstDate": "2026-11-09",
+    "lastDate": "2026-11-15",
+    "opponentTeamId": null
+  },
+  "unresolvedRules": [
+    "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+    "Exact lineup deadline, timezone and first-period activation unresolved",
+    "Team/player game caps and shot minimum/rounding semantics unresolved",
+    "Waiver Friday label observed; exact clearance instant and lineup activation unresolved"
+  ],
+  "candidateScope": "Own 14-player roster only; period-two available-player cohort and opponent IDs/roster not captured. Period two is a look-ahead watchlist.",
+  "protectedIds": [
+    "06dun",
+    "06n8t",
+    "06h14",
+    "0655r",
+    "065cb",
+    "065ct",
+    "065mj",
+    "06g7r",
+    "05wk5",
+    "064kr"
+  ],
+  "currentActiveIds": [
+    "06dun",
+    "06n8t",
+    "06h14",
+    "0655r",
+    "065cb",
+    "065ct",
+    "065mj",
+    "06g7r",
+    "05wk5",
+    "064kr"
+  ],
+  "players": [
+    {
+      "id": "06dun",
+      "name": "Markus Burton",
+      "school": "Ind",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06od8",
+          "date": "2026-11-09",
+          "label": "Syr Mon 6:30PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qk5",
+          "date": "2026-11-12",
+          "label": "TNTec Thu 6:30PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06n8t",
+      "name": "Javontae Campbell",
+      "school": "Cin",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qgh",
+          "date": "2026-11-09",
+          "label": "Minn Mon 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06on9",
+          "date": "2026-11-14",
+          "label": "@Dayt Sat 7:30PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06h14",
+      "name": "Jalen Cox",
+      "school": "USC",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06r8x",
+          "date": "2026-11-11",
+          "label": "@Cal Wed 11:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qv3",
+          "date": "2026-11-15",
+          "label": "ArkPB Sun 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "0655r",
+      "name": "Tavari Johnson",
+      "school": "Charl",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06sik",
+          "date": "2026-11-11",
+          "label": "@Tem Wed 6:30PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06s7p",
+          "date": "2026-11-15",
+          "label": "SCSt Sun 2:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065cb",
+      "name": "Kyle Evans",
+      "school": "NCSU",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06ra0",
+          "date": "2026-11-10",
+          "label": "Presb Tue 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ra6",
+          "date": "2026-11-13",
+          "label": "Troy Fri 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065ct",
+      "name": "Keyshawn Hall",
+      "school": "StJon",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06ruf",
+          "date": "2026-11-11",
+          "label": "Colg Wed 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ruk",
+          "date": "2026-11-15",
+          "label": "Syr Sun 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065mj",
+      "name": "Jack Karasinski",
+      "school": "NW",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qns",
+          "date": "2026-11-09",
+          "label": "Boston Mon 8:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qnx",
+          "date": "2026-11-13",
+          "label": "DeP Fri 1:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06g7r",
+      "name": "Pryce Sandfort",
+      "school": "Nebras",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o0r",
+          "date": "2026-11-11",
+          "label": "LINW Wed 9:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o0u",
+          "date": "2026-11-15",
+          "label": "Bois Sun 1:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "05wk5",
+      "name": "Daeshun Ruffin",
+      "school": "JackSt",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o5v",
+          "date": "2026-11-09",
+          "label": "@MissSt Mon 7:30PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06stb",
+          "date": "2026-11-11",
+          "label": "@USM Wed 8:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06snd",
+          "date": "2026-11-14",
+          "label": "@Winth Sat 2:30PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064kr",
+      "name": "Quion Williams",
+      "school": "ArkPB",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06suj",
+          "date": "2026-11-11",
+          "label": "@UCLA Wed 9:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nip",
+          "date": "2026-11-13",
+          "label": "@CBU Fri 10:30PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qv3",
+          "date": "2026-11-15",
+          "label": "@USC Sun 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "0729c",
+      "name": "Michael James",
+      "school": "ASU",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06nvh",
+          "date": "2026-11-09",
+          "label": "(N/A) Mon 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nin",
+          "date": "2026-11-11",
+          "label": "(N/A) Wed 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06q0t",
+          "date": "2026-11-15",
+          "label": "@SJSU Sun 9:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065p8",
+      "name": "Trevan Leonhardt",
+      "school": "Nebras",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o0r",
+          "date": "2026-11-11",
+          "label": "LINW Wed 9:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o0u",
+          "date": "2026-11-15",
+          "label": "Bois Sun 1:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064gk",
+      "name": "Cade Tyson",
+      "school": "Minn",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qgh",
+          "date": "2026-11-09",
+          "label": "@Cin Mon 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qr6",
+          "date": "2026-11-12",
+          "label": "South Thu 8:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06nnk",
+      "name": "Jaiden Feroah",
+      "school": "S UT",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qp3",
+          "date": "2026-11-12",
+          "label": "@HiPt Thu 7:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nir",
+          "date": "2026-11-14",
+          "label": "@Wake Sat 1:00PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    }
+  ]
+}

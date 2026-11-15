@@ -1,0 +1,15 @@
+# Basketball overnight check — November 7, 2026
+
+The scheduled trigger was **02:28:43.983 EST (07:28:43.983Z)**, 76.017 seconds before the 02:30 target. The existing `banging-3s-basketball-workflow` identity, active state, destination, 07:30 UTC recurrence, and March 15 expiry were left unchanged. Notification receipt remains unverified.
+
+The authenticated in-app browser loaded the canonical Fantrax league home and stayed signed in. I refreshed the team roster and period-two schedule, viewed the Players page, and reviewed the latest home news. The same 14 players and 10 active/four reserve slots remain. The Nov 9–15 owned schedule rows match the Nov 6 capture. Current displayed YTD game counts were visible for all owned players; these are observed outcomes, not refreshed projection rates.
+
+Fantrax home news carries two material Nov 6 updates: **Jack Karasinski (concussion) is out for Friday's game vs Stony Brook**, and Fantrax states **Cade Tyson will remain ineligible this season after a federal Court of Appeals decision**. The relevant Campbell item remains the Nov 2 foot-related DNP. Karasinski's Nov 6 absence does not establish his Nov 9–15 status. Tyson's eligibility statement is attributed to the Fantrax news panel; no external primary-source corroboration was performed.
+
+The current first 20 Score-ordered available rows are recorded in [available-page1.json](available-page1.json); all displayed Claim/FA. This is only the first page. The Players Schedule view reset to a different Rank-ordered cohort and period one, so it did not provide usable Nov 9–15 schedules for these candidates. No candidate was reranked or recommended.
+
+I ran `weekly-forecast` with the refreshed owned period-two schedule and approved corrected category board, preserving the original Oct 27 baseline dependency. The deterministic report is [period 2 report](period-2-report/caed61b878c6668a54b8d34ec374249fd9812d9a826517fbede4732065b4e80d/weekly-report.md). Its conditional optimizer still displays an old baseline comparison that selects Karasinski over Feroah; **withhold that swap from advice** because Karasinski's Nov 9–15 recovery is unknown and fresh rates/roles and legal rules are missing. Tyson is listed despite Fantrax's season-ineligibility news, reinforcing that this projection is not actionable. The report is advisory-only with no platform writer, no probabilities, and no live action.
+
+The saved-evidence doctor/report ran separately and still describes the stale Oct 25 pre-draft snapshot with zero players and partial readiness; it does not describe today's browser reads. Copies are in [saved-evidence-report.md](saved-evidence-report.md) and [saved-evidence-doctor.json](saved-evidence-doctor.json). No code changed, no tests ran, and no model was trained or promoted.
+
+**Notification recommendation: NOTIFY.** Fantrax reports a concussion absence for Karasinski and season ineligibility for Tyson. The old conditional swap should not be relayed as a lineup recommendation until next-period status and the stale baseline are refreshed. No roster or waiver action was taken.

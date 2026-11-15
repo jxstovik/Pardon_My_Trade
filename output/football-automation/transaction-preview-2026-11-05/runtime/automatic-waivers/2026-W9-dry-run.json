@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "at": "2026-11-05T13:39:01.306Z",
+  "week": 9,
+  "seasonEndWeek": 17,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "modelVersion": "weekly-2026-W9-72a0f5e5d8e9-2961c0f6fd48-d1284c4271e7",
+  "policyHash": "8b9688fde8844460eeb67d25e96026c1aee83b1fef3e301b75f4b07accdb21ea",
+  "initialTrainingCheck": "ENOENT: no such file or directory, open '/home/jordan-stovik/Pardon_My_Trade/artifacts/week9-2026-scout/manifest.json'",
+  "trainingGameCount": 121,
+  "waiverRank": 3,
+  "opponentId": 9,
+  "relationshipCoverage": {
+    "handcuffsInArtifact": 1,
+    "handcuffsWithVerifiedClub": 1,
+    "correlationsInArtifact": 60,
+    "correlationsWithVerifiedClub": 60
+  },
+  "opponentCoverage": "covered",
+  "mode": "dry-run",
+  "plan": [],
+  "events": [],
+  "outcomes": [],
+  "platformWrites": 0
+}

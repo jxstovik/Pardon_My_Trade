@@ -1,0 +1,161 @@
+{
+  "scenarios": {
+    "jameson_pollard_for_rice_tuten": {
+      "week10": {
+        "week": 10,
+        "mean": 112.98234825403341,
+        "lineup": {
+          "QB": "Josh Allen",
+          "RB1": "Ashton Jeanty",
+          "RB2": "Bhayshul Tuten",
+          "WR1": "Malik Nabers",
+          "WR2": "Rashee Rice",
+          "TE": "George Kittle",
+          "FLEX": "Wan'Dale Robinson",
+          "D/ST": "Saints D/ST",
+          "K": "Drew Stevens"
+        }
+      },
+      "week10Change": 1.68558363238445,
+      "weeks10_17Change": 11.791102071104362,
+      "weeks15_17Change": 4.881534148658773,
+      "elliottWeek10RBWRChange": -0.9117063616697862,
+      "elliottRBWRBefore": {
+        "week": 10,
+        "mean": 74.9065118553809,
+        "lineup": {
+          "RB1": "Jahmyr Gibbs",
+          "RB2": "Cam Skattebo",
+          "WR1": "Mike Evans",
+          "WR2": "Rashee Rice",
+          "FLEX": "Drake London",
+          "QB": "",
+          "TE": "",
+          "D/ST": "",
+          "K": ""
+        }
+      },
+      "elliottRBWRAfter": {
+        "week": 10,
+        "mean": 73.99480549371111,
+        "lineup": {
+          "RB1": "Jahmyr Gibbs",
+          "RB2": "Tony Pollard",
+          "WR1": "Mike Evans",
+          "WR2": "Drake London",
+          "FLEX": "Omar Cooper Jr.",
+          "QB": "",
+          "TE": "",
+          "D/ST": "",
+          "K": ""
+        }
+      }
+    },
+    "jameson_for_rice": {
+      "week10": {
+        "week": 10,
+        "mean": 113.68186823324577,
+        "lineup": {
+          "QB": "Josh Allen",
+          "RB1": "Ashton Jeanty",
+          "RB2": "Tony Pollard",
+          "WR1": "Malik Nabers",
+          "WR2": "Rashee Rice",
+          "TE": "George Kittle",
+          "FLEX": "Wan'Dale Robinson",
+          "D/ST": "Saints D/ST",
+          "K": "Drew Stevens"
+        }
+      },
+      "week10Change": 2.3851036115968043,
+      "weeks10_17Change": 18.738750578555653,
+      "weeks15_17Change": 7.450316437271468,
+      "elliottWeek10RBWRChange": -1.3379581009733812,
+      "elliottRBWRBefore": {
+        "week": 10,
+        "mean": 74.9065118553809,
+        "lineup": {
+          "RB1": "Jahmyr Gibbs",
+          "RB2": "Cam Skattebo",
+          "WR1": "Mike Evans",
+          "WR2": "Rashee Rice",
+          "FLEX": "Drake London",
+          "QB": "",
+          "TE": "",
+          "D/ST": "",
+          "K": ""
+        }
+      },
+      "elliottRBWRAfter": {
+        "week": 10,
+        "mean": 73.56855375440752,
+        "lineup": {
+          "RB1": "Jahmyr Gibbs",
+          "RB2": "Cam Skattebo",
+          "WR1": "Mike Evans",
+          "WR2": "Drake London",
+          "FLEX": "Omar Cooper Jr.",
+          "QB": "",
+          "TE": "",
+          "D/ST": "",
+          "K": ""
+        }
+      }
+    },
+    "nabers_jeanty_for_gibbs_rice": {
+      "week10": {
+        "week": 10,
+        "mean": 113.77110055441413,
+        "lineup": {
+          "QB": "Josh Allen",
+          "RB1": "Jahmyr Gibbs",
+          "RB2": "Tony Pollard",
+          "WR1": "Rashee Rice",
+          "WR2": "Jameson Williams",
+          "TE": "George Kittle",
+          "FLEX": "Wan'Dale Robinson",
+          "D/ST": "Saints D/ST",
+          "K": "Drew Stevens"
+        }
+      },
+      "week10Change": 2.4743359327651717,
+      "weeks10_17Change": 20.177460526973775,
+      "weeks15_17Change": 5.518870346524778,
+      "elliottWeek10RBWRChange": -2.4743359327651575,
+      "elliottRBWRBefore": {
+        "week": 10,
+        "mean": 74.9065118553809,
+        "lineup": {
+          "RB1": "Jahmyr Gibbs",
+          "RB2": "Cam Skattebo",
+          "WR1": "Mike Evans",
+          "WR2": "Rashee Rice",
+          "FLEX": "Drake London",
+          "QB": "",
+          "TE": "",
+          "D/ST": "",
+          "K": ""
+        }
+      },
+      "elliottRBWRAfter": {
+        "week": 10,
+        "mean": 72.43217592261574,
+        "lineup": {
+          "RB1": "Ashton Jeanty",
+          "RB2": "Cam Skattebo",
+          "WR1": "Malik Nabers",
+          "WR2": "Mike Evans",
+          "FLEX": "Drake London",
+          "QB": "",
+          "TE": "",
+          "D/ST": "",
+          "K": ""
+        }
+      }
+    }
+  },
+  "modelVersion": "weekly-2026-W10-a5f6795d8f00-368dedd8bda2-d1284c4271e7",
+  "modelBuiltAt": "2026-11-10T13:23:43.197336+00:00",
+  "rosterReadAt": "2026-11-10T17:23:07.240Z",
+  "limitations": "Same previously verified candidate and roster read; no new refresh. Candidate not promoted. Multiperiod frozen-role scenarios unvalidated. Elliott comparison RB/WR slots only; Evans and Skattebo Q conditional on playing. No writes or live trade validation."
+}

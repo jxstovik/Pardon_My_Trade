@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-27T18:07:54.553Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "buildPassed": true,
+  "compiledBasketballTests": {
+    "passed": 55,
+    "failed": 0,
+    "buildBeforeTests": true
+  },
+  "localBrowserMock": {
+    "usable": true,
+    "fullRuns": 3,
+    "picks": 336,
+    "ownConfirmations": 42,
+    "actionReadObservations": 153,
+    "changingPickObservations": 105,
+    "allRostersLegal": true,
+    "finalClientSmokeOwnPicks": 2,
+    "expiredClockRejected": true,
+    "pauseReloadRetained": true,
+    "all42BrowserPlayerAndOverallIdentitiesMatchJournal": true
+  },
+  "latency": {
+    "engine100States": {
+      "count": 100,
+      "p50Ms": 127.50559500000054,
+      "p95Ms": 159.11800800000037,
+      "maxMs": 228.66083699999996,
+      "targetP95Ms": 500
+    },
+    "supportedCUAActionRead": {
+      "count": 153,
+      "p50Ms": 615,
+      "p95Ms": 900,
+      "maxMs": 1321
+    },
+    "realPreflightSingleManualHandoffMs": 13618,
+    "externalIngestionP95": null,
+    "orchestrationInclusiveP95": null,
+    "sustainedTenMinuteGatePassed": false
+  },
+  "modes": {
+    "isolatedLocalMock": "usable",
+    "explicitPredraftCoach": "usable",
+    "automaticFantraxLiveFollowing": "not-validated",
+    "FantraxQueue": "absent",
+    "FantraxRankUpload": "absent",
+    "FantraxIndividualPick": "absent",
+    "FantraxAutomaticPick": "absent"
+  },
+  "sourcesActuallyRefreshed": {
+    "draftRoom": "2026-10-27T17:57:14.122Z",
+    "allMockLobby": "2026-10-27T17:54:58.606Z",
+    "history": false,
+    "provider": false,
+    "rules": false,
+    "schedule": false,
+    "allTeamRosters": false
+  },
+  "savedEvidenceDoctorStatus": "partial",
+  "forecastStatus": "experimental-partial-unvalidated",
+  "trainedModel": false,
+  "modelPromotion": false,
+  "liveActionsExecuted": 0,
+  "journalBenchmarkPrefixSaved": true
+}

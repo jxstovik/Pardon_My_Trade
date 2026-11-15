@@ -136,7 +136,7 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
     }
 
     if (webPassword) {
-      const authPage = !path.startsWith("/api/") && (path === "/" || path === "/index.html" || path === "/roster" || path === "/roster.html" || path === "/login" || extname(path) !== "");
+      const authPage = !path.startsWith("/api/") && (path === "/" || path === "/index.html" || path === "/roster" || path === "/roster.html" || path === "/scout" || path === "/scout/players" || path === "/login" || extname(path) !== "");
       const authEndpoint = path === "/api/auth/session" || path === "/api/auth/login";
       const publicHealth = path === "/api/health" && req.method === "GET";
       if (!authPage && !authEndpoint && !publicHealth && !verifySession(req)) {
@@ -295,6 +295,16 @@ export function createApiServer(deps: ApiServerDeps): ApiServer {
 
     if (path === "/modeling" || path === "/modeling.html") {
       await serveFile(res, join(publicDir, "modeling.html"), "text/html; charset=utf-8");
+      return;
+    }
+
+    if (path === "/scout") {
+      await serveFile(res, join(publicDir, "scout.html"), "text/html; charset=utf-8");
+      return;
+    }
+
+    if (path === "/scout/players") {
+      await serveFile(res, join(publicDir, "player-comparison.html"), "text/html; charset=utf-8");
       return;
     }
 

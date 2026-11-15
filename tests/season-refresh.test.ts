@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { SqliteKnowledgeRepository } from "../src/knowledge/sqlite-knowledge-repository.js";
 import { runSeasonRefresh } from "../src/season-refresh.js";
-import { makePlayer, makeSnapshot } from "./test-builders.js";
+import { makePlayer, makeSnapshot, makeProjection } from "./test-builders.js";
 import { weekFromScoringPeriod } from "../src/seasons/nfl-calendar.js";
 
 function fakeFetch(body: unknown): typeof fetch {
@@ -45,6 +45,47 @@ test("runSeasonRefresh pulls espn, persists matched projections, rebuilds models
     assert.ok(loaded?.projections.some((p) => p.player_id === "p1"));
   } finally {
     globalThis.fetch = originalFetch;
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test("explicit Week 7 refresh persists and rebuilds only target-week priors regardless of other-period row order", async () => {
+  const originalFetch = globalThis.fetch;
+  const originalHistoryPath = process.env.PMT_HISTORICAL_DATA_PATH;
+  delete process.env.PMT_HISTORICAL_DATA_PATH;
+  const requestedPeriods: string[] = [];
+  globalThis.fetch = (async (url: string | URL | Request) => {
+    requestedPeriods.push(new URL(String(url)).searchParams.get("scoringPeriodId") ?? "");
+    return new Response(JSON.stringify({ players: [{ player: {
+      id: 4037, fullName: "Christian McCaffrey", defaultPositionId: 2,
+      stats: [{ seasonId: 2026, scoringPeriodId: 7, statSourceId: 1, statSplitTypeId: 1, appliedTotal: 21.4, appliedStats: {} }]
+    } }] }), { status: 200 });
+  }) as typeof fetch;
+  const dir = await mkdtemp(join(tmpdir(), "pmt-target-week-"));
+  const repository = new SqliteKnowledgeRepository({ filePath: join(dir, "pmt.sqlite") });
+  try {
+    const base = makeSnapshot([makePlayer({ full_name: "Christian McCaffrey", player_id: "p1", positions: ["RB"], external_ids: { espn: "4037" } })], { snapshotId: "snap-target", season: "2026" });
+    const snapshot = { ...base, scoring_period: "2026-W6", projections: [
+      makeProjection({ player_id: "p1", source: "espn", scoring_period: "2026-W7", projected_points: 1 }),
+      makeProjection({ player_id: "p1", source: "espn", scoring_period: "2026-W8", projected_points: 99 })
+    ] };
+    await repository.saveLeagueSnapshot(snapshot);
+    await writeFile(join(dir, "last-snapshot.json"), JSON.stringify({ snapshot_id: snapshot.snapshot_id, league_id: "lg-1" }));
+    const summary = await runSeasonRefresh({ repository, dataDir: dir, sources: "espn", season: "2026", week: 7, force: true, espnCredentials: { leagueId: "lg-1", season: "2026" } });
+    assert.equal(summary.scoringPeriod, "2026-W7");
+    assert.ok(requestedPeriods.every(p => p === "7"));
+    const disk = new SqliteKnowledgeRepository({ filePath: join(dir, "pmt.sqlite") });
+    try {
+      const stored = await disk.getProjections("2026-W7", "lg-1");
+      assert.equal(stored.length, 1);
+      assert.equal(stored[0].projected_points, 21.4);
+    } finally { disk.close(); }
+    const models = JSON.parse(await readFile(join(dir, "models.json"), "utf8")).models;
+    assert.equal(models.find((m: { playerId: string }) => m.playerId === "p1").historyMean, 21.4, "other-period rows must not overwrite the selected week's prior");
+  } finally {
+    repository.close(); globalThis.fetch = originalFetch;
+    if (originalHistoryPath === undefined) delete process.env.PMT_HISTORICAL_DATA_PATH;
+    else process.env.PMT_HISTORICAL_DATA_PATH = originalHistoryPath;
     await rm(dir, { recursive: true, force: true });
   }
 });

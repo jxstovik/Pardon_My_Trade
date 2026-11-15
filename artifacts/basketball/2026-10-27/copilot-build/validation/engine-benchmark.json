@@ -1,0 +1,993 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-synthetic-state-replay-engine-benchmark",
+  "measuredAt": "2026-10-27T17:54:35.017Z",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "forecastRows": 2209,
+  "journalSha256": "e63efc4fa90aa5c562c4e01eee2b800398ea4ab3186cfa5bdca9e92cea2c76d1",
+  "runs": [
+    {
+      "scenario": "balanced",
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "ownPicks": 14,
+      "picks": 112,
+      "rosters": [
+        {
+          "teamId": "2rc1dg43mvgsurtp",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "ir66qwd2mvgsj4wg",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "rlfm3uhjmvk7q70x",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "vyfs1k8xmvgtitmc",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "kq1erunqmvhbzx4y",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "evucydykmvjmlrze",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "hhkzj65hmvjokk2e",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        }
+      ]
+    },
+    {
+      "scenario": "guards",
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "ownPicks": 14,
+      "picks": 112,
+      "rosters": [
+        {
+          "teamId": "2rc1dg43mvgsurtp",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "ir66qwd2mvgsj4wg",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "rlfm3uhjmvk7q70x",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "vyfs1k8xmvgtitmc",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "kq1erunqmvhbzx4y",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "evucydykmvjmlrze",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "hhkzj65hmvjokk2e",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        }
+      ]
+    },
+    {
+      "scenario": "bigs",
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "ownPicks": 14,
+      "picks": 112,
+      "rosters": [
+        {
+          "teamId": "2rc1dg43mvgsurtp",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "ir66qwd2mvgsj4wg",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "rlfm3uhjmvk7q70x",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "vyfs1k8xmvgtitmc",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "kq1erunqmvhbzx4y",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "evucydykmvjmlrze",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        },
+        {
+          "teamId": "hhkzj65hmvjokk2e",
+          "players": 14,
+          "activeSlots": 10,
+          "reserve": 4
+        }
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "index": 0,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 0,
+      "observedAt": "2026-10-27T17:47:41.942Z",
+      "elapsedMs": 228.66083699999996,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 1,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 3,
+      "observedAt": "2026-10-27T17:47:42.330Z",
+      "elapsedMs": 162.67206799999997,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 2,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 6,
+      "observedAt": "2026-10-27T17:47:43.533Z",
+      "elapsedMs": 173.860096,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 3,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 10,
+      "observedAt": "2026-10-27T17:47:45.483Z",
+      "elapsedMs": 161.7488750000001,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 4,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 13,
+      "observedAt": "2026-10-27T17:47:46.184Z",
+      "elapsedMs": 145.72321499999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 5,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 17,
+      "observedAt": "2026-10-27T17:47:46.239Z",
+      "elapsedMs": 133.25005099999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 6,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 20,
+      "observedAt": "2026-10-27T17:47:46.873Z",
+      "elapsedMs": 132.35363900000016,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 7,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 23,
+      "observedAt": "2026-10-27T17:47:48.726Z",
+      "elapsedMs": 149.58678400000008,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 8,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 27,
+      "observedAt": "2026-10-27T17:47:55.158Z",
+      "elapsedMs": 123.33750899999995,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 9,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 30,
+      "observedAt": "2026-10-27T17:47:55.486Z",
+      "elapsedMs": 127.60767299999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 10,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 34,
+      "observedAt": "2026-10-27T17:47:55.550Z",
+      "elapsedMs": 126.42114400000014,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 11,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 37,
+      "observedAt": "2026-10-27T17:47:57.053Z",
+      "elapsedMs": 119.89566999999988,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 12,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 40,
+      "observedAt": "2026-10-27T17:47:57.763Z",
+      "elapsedMs": 141.88849700000037,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 13,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 44,
+      "observedAt": "2026-10-27T17:47:59.645Z",
+      "elapsedMs": 116.0318940000002,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 14,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 47,
+      "observedAt": "2026-10-27T17:47:59.712Z",
+      "elapsedMs": 116.75510500000019,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 15,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 51,
+      "observedAt": "2026-10-27T17:47:59.808Z",
+      "elapsedMs": 120.22058800000013,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 16,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 54,
+      "observedAt": "2026-10-27T17:48:01.470Z",
+      "elapsedMs": 128.61853399999973,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 17,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 58,
+      "observedAt": "2026-10-27T17:48:03.667Z",
+      "elapsedMs": 131.34424799999988,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 18,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 61,
+      "observedAt": "2026-10-27T17:48:04.713Z",
+      "elapsedMs": 112.2639720000002,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 19,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 64,
+      "observedAt": "2026-10-27T17:48:04.890Z",
+      "elapsedMs": 113.44062699999995,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 20,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 68,
+      "observedAt": "2026-10-27T17:48:05.616Z",
+      "elapsedMs": 111.76716299999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 21,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 71,
+      "observedAt": "2026-10-27T17:48:07.564Z",
+      "elapsedMs": 132.42307600000004,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 22,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 75,
+      "observedAt": "2026-10-27T17:48:28.159Z",
+      "elapsedMs": 132.778683,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 23,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 78,
+      "observedAt": "2026-10-27T17:48:28.710Z",
+      "elapsedMs": 121.5892630000003,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 24,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 81,
+      "observedAt": "2026-10-27T17:48:28.811Z",
+      "elapsedMs": 114.10960599999999,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 25,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 85,
+      "observedAt": "2026-10-27T17:48:30.422Z",
+      "elapsedMs": 124.02300500000001,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 26,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 88,
+      "observedAt": "2026-10-27T17:48:31.152Z",
+      "elapsedMs": 160.42074800000046,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 27,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 92,
+      "observedAt": "2026-10-27T17:48:33.283Z",
+      "elapsedMs": 128.84385999999995,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 28,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 95,
+      "observedAt": "2026-10-27T17:48:33.424Z",
+      "elapsedMs": 126.71795399999974,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 29,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 99,
+      "observedAt": "2026-10-27T17:48:33.604Z",
+      "elapsedMs": 135.26180700000077,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 30,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 102,
+      "observedAt": "2026-10-27T17:48:35.664Z",
+      "elapsedMs": 103.59060500000032,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 31,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 105,
+      "observedAt": "2026-10-27T17:48:36.165Z",
+      "elapsedMs": 113.1082379999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 32,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 109,
+      "observedAt": "2026-10-27T17:48:37.985Z",
+      "elapsedMs": 30.950380999999652,
+      "status": "complete"
+    },
+    {
+      "index": 33,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzajk1-d8375d51eccf9f50",
+      "picks": 112,
+      "observedAt": "2026-10-27T17:49:32.656Z",
+      "elapsedMs": 27.283461999999417,
+      "status": "complete"
+    },
+    {
+      "index": 34,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 3,
+      "observedAt": "2026-10-27T17:49:53.269Z",
+      "elapsedMs": 141.85577299999932,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 35,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 6,
+      "observedAt": "2026-10-27T17:49:54.433Z",
+      "elapsedMs": 159.11800800000037,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 36,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 9,
+      "observedAt": "2026-10-27T17:49:55.115Z",
+      "elapsedMs": 137.55501100000038,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 37,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 13,
+      "observedAt": "2026-10-27T17:49:57.043Z",
+      "elapsedMs": 125.24200199999996,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 38,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 16,
+      "observedAt": "2026-10-27T17:49:57.092Z",
+      "elapsedMs": 124.25252700000055,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 39,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 20,
+      "observedAt": "2026-10-27T17:49:57.817Z",
+      "elapsedMs": 136.43218700000034,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 40,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 23,
+      "observedAt": "2026-10-27T17:49:59.527Z",
+      "elapsedMs": 131.7823130000006,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 41,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 26,
+      "observedAt": "2026-10-27T17:50:00.634Z",
+      "elapsedMs": 131.39194699999916,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 42,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 30,
+      "observedAt": "2026-10-27T17:50:06.801Z",
+      "elapsedMs": 119.81080400000064,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 43,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 33,
+      "observedAt": "2026-10-27T17:50:06.849Z",
+      "elapsedMs": 119.63297899999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 44,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 37,
+      "observedAt": "2026-10-27T17:50:08.419Z",
+      "elapsedMs": 118.3946249999999,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 45,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 40,
+      "observedAt": "2026-10-27T17:50:09.169Z",
+      "elapsedMs": 131.7533199999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 46,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 44,
+      "observedAt": "2026-10-27T17:50:11.149Z",
+      "elapsedMs": 123.89128699999947,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 47,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 47,
+      "observedAt": "2026-10-27T17:50:11.212Z",
+      "elapsedMs": 127.50559500000054,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 48,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 50,
+      "observedAt": "2026-10-27T17:50:11.284Z",
+      "elapsedMs": 117.90379800000028,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 49,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 54,
+      "observedAt": "2026-10-27T17:50:13.055Z",
+      "elapsedMs": 130.52983200000017,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 50,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 57,
+      "observedAt": "2026-10-27T17:50:13.801Z",
+      "elapsedMs": 131.29345900000044,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 51,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 61,
+      "observedAt": "2026-10-27T17:50:15.705Z",
+      "elapsedMs": 114.92621899999995,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 52,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 64,
+      "observedAt": "2026-10-27T17:50:15.800Z",
+      "elapsedMs": 113.53567999999996,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 53,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 67,
+      "observedAt": "2026-10-27T17:50:15.906Z",
+      "elapsedMs": 115.86929099999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 54,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 71,
+      "observedAt": "2026-10-27T17:50:18.130Z",
+      "elapsedMs": 130.10027099999934,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 55,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 74,
+      "observedAt": "2026-10-27T17:50:19.599Z",
+      "elapsedMs": 131.87001599999985,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 56,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 78,
+      "observedAt": "2026-10-27T17:51:12.271Z",
+      "elapsedMs": 120.0888159999995,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 57,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 81,
+      "observedAt": "2026-10-27T17:51:12.385Z",
+      "elapsedMs": 113.72630400000071,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 58,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 85,
+      "observedAt": "2026-10-27T17:51:13.956Z",
+      "elapsedMs": 122.96216999999979,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 59,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 88,
+      "observedAt": "2026-10-27T17:51:15.212Z",
+      "elapsedMs": 144.388242,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 60,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 91,
+      "observedAt": "2026-10-27T17:51:16.576Z",
+      "elapsedMs": 125.22149300000001,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 61,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 95,
+      "observedAt": "2026-10-27T17:51:17.450Z",
+      "elapsedMs": 128.70294999999896,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 62,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 98,
+      "observedAt": "2026-10-27T17:51:17.625Z",
+      "elapsedMs": 129.55871999999908,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 63,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 102,
+      "observedAt": "2026-10-27T17:51:19.514Z",
+      "elapsedMs": 97.0334270000003,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 64,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 105,
+      "observedAt": "2026-10-27T17:51:20.243Z",
+      "elapsedMs": 112.71883800000069,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 65,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 108,
+      "observedAt": "2026-10-27T17:51:21.840Z",
+      "elapsedMs": 34.98908599999959,
+      "status": "complete"
+    },
+    {
+      "index": 66,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzcxth-4417eb2da5b43182",
+      "picks": 112,
+      "observedAt": "2026-10-27T17:51:22.510Z",
+      "elapsedMs": 29.76168300000063,
+      "status": "complete"
+    },
+    {
+      "index": 67,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 2,
+      "observedAt": "2026-10-27T17:51:25.029Z",
+      "elapsedMs": 139.4434139999994,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 68,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 6,
+      "observedAt": "2026-10-27T17:51:26.260Z",
+      "elapsedMs": 150.13326899999993,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 69,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 9,
+      "observedAt": "2026-10-27T17:51:26.955Z",
+      "elapsedMs": 140.44137299999966,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 70,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 12,
+      "observedAt": "2026-10-27T17:51:28.881Z",
+      "elapsedMs": 119.68099799999982,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 71,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 16,
+      "observedAt": "2026-10-27T17:51:28.936Z",
+      "elapsedMs": 116.11759600000005,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 72,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 19,
+      "observedAt": "2026-10-27T17:51:28.981Z",
+      "elapsedMs": 147.3484380000009,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 73,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 23,
+      "observedAt": "2026-10-27T17:51:31.314Z",
+      "elapsedMs": 131.68772499999977,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 74,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 26,
+      "observedAt": "2026-10-27T17:51:32.391Z",
+      "elapsedMs": 133.72036399999888,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 75,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 30,
+      "observedAt": "2026-10-27T17:51:43.862Z",
+      "elapsedMs": 129.58268700000008,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 76,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 33,
+      "observedAt": "2026-10-27T17:51:43.917Z",
+      "elapsedMs": 116.14184999999998,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 77,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 36,
+      "observedAt": "2026-10-27T17:51:44.486Z",
+      "elapsedMs": 118.56643999999869,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 78,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 40,
+      "observedAt": "2026-10-27T17:51:46.294Z",
+      "elapsedMs": 130.60933300000033,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 79,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 43,
+      "observedAt": "2026-10-27T17:51:47.362Z",
+      "elapsedMs": 115.07232199999999,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 80,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 47,
+      "observedAt": "2026-10-27T17:51:48.007Z",
+      "elapsedMs": 123.90542999999889,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 81,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 50,
+      "observedAt": "2026-10-27T17:51:48.081Z",
+      "elapsedMs": 127.35500800000045,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 82,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 53,
+      "observedAt": "2026-10-27T17:51:49.968Z",
+      "elapsedMs": 132.78681400000096,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 83,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 57,
+      "observedAt": "2026-10-27T17:51:50.643Z",
+      "elapsedMs": 137.06705500000135,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 84,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 60,
+      "observedAt": "2026-10-27T17:51:52.356Z",
+      "elapsedMs": 137.7784589999992,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 85,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 64,
+      "observedAt": "2026-10-27T17:51:52.487Z",
+      "elapsedMs": 125.90463699999964,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 86,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 67,
+      "observedAt": "2026-10-27T17:51:52.597Z",
+      "elapsedMs": 123.889102000001,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 87,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 71,
+      "observedAt": "2026-10-27T17:51:54.929Z",
+      "elapsedMs": 137.6656980000007,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 88,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 74,
+      "observedAt": "2026-10-27T17:51:56.238Z",
+      "elapsedMs": 139.10348800000065,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 89,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 77,
+      "observedAt": "2026-10-27T17:52:27.425Z",
+      "elapsedMs": 132.77428599999985,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 90,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 81,
+      "observedAt": "2026-10-27T17:52:27.557Z",
+      "elapsedMs": 124.06494700000076,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 91,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 84,
+      "observedAt": "2026-10-27T17:52:28.201Z",
+      "elapsedMs": 123.922512000001,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 92,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 88,
+      "observedAt": "2026-10-27T17:52:30.055Z",
+      "elapsedMs": 153.96518900000046,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 93,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 91,
+      "observedAt": "2026-10-27T17:52:31.210Z",
+      "elapsedMs": 136.97786199999973,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 94,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 94,
+      "observedAt": "2026-10-27T17:52:32.075Z",
+      "elapsedMs": 136.74864900000102,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 95,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 98,
+      "observedAt": "2026-10-27T17:52:32.315Z",
+      "elapsedMs": 155.73529000000053,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 96,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 101,
+      "observedAt": "2026-10-27T17:52:34.357Z",
+      "elapsedMs": 157.57207899999958,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 97,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 105,
+      "observedAt": "2026-10-27T17:52:35.077Z",
+      "elapsedMs": 119.54857300000003,
+      "status": "local-live-advice"
+    },
+    {
+      "index": 98,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 108,
+      "observedAt": "2026-10-27T17:52:36.821Z",
+      "elapsedMs": 34.457312999998976,
+      "status": "complete"
+    },
+    {
+      "index": 99,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "picks": 112,
+      "observedAt": "2026-10-27T17:54:21.009Z",
+      "elapsedMs": 34.6013180000009,
+      "status": "complete"
+    }
+  ],
+  "engine": {
+    "count": 100,
+    "p50Ms": 127.50559500000054,
+    "p95Ms": 159.11800800000037,
+    "maxMs": 228.66083699999996,
+    "targetP95Ms": 500
+  },
+  "sourceRefresh": false,
+  "liveActionsExecuted": 0,
+  "limitations": [
+    "Deterministic engine timing on saved simulated draft states; not browser acquisition or orchestration latency.",
+    "Real saved player forecast inputs; simulated selections and opponents. No accuracy or win-probability validation."
+  ]
+}

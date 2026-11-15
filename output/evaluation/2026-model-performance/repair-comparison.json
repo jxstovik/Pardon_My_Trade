@@ -1,0 +1,52 @@
+{
+  "before": {
+    "dstRows": 158,
+    "dstMismatches": 84,
+    "dstMAE": 2.6392405063291138,
+    "offenseRows": 1880,
+    "offenseMismatches": 12
+  },
+  "after": {
+    "dstRows": 158,
+    "dstMismatches": 0,
+    "dstMAE": 0.0,
+    "offenseRows": 1876,
+    "offenseMismatches": 12,
+    "historicalLimit": "2015-2025 corrected reconstruction; complete ESPN component parity is verified only for captured 2026 records."
+  },
+  "rosterBefore": {
+    "n": 80,
+    "selected": 80,
+    "missing": 0,
+    "mae": 6.399236232247504,
+    "rmse": 7.859262108290148,
+    "bias": 0.13047076911885816,
+    "residualSD": 7.907757976691941,
+    "coverage80": 0.7,
+    "meanIntervalWidth": 16.92359228523917,
+    "maeCI95": [
+      5.43478872483895,
+      7.423809748775691
+    ],
+    "meanPredictiveSD": 6.265084193602291
+  },
+  "rosterAfter": {
+    "n": 80,
+    "selected": 80,
+    "missing": 0,
+    "mae": 6.4224143713155595,
+    "rmse": 7.894377519029016,
+    "bias": 0.23786135949156365,
+    "residualSD": 7.940577945781047,
+    "coverage80": 0.7,
+    "meanIntervalWidth": 17.03184616715212,
+    "maeCI95": [
+      5.441540902185001,
+      7.462232189386958
+    ],
+    "meanPredictiveSD": 6.307191879987442
+  },
+  "nflverseResidualDifferences": 4,
+  "historicalComponentParity": "Incomplete for 2015-2025",
+  "status": "candidate_not_promoted"
+}

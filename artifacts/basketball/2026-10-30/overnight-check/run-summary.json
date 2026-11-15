@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-10-30T06:28:57.791Z",
+  "triggerLocal": "2026-10-30T02:28:57.791-04:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": -62.209,
+  "actualObservationAt": "2026-10-30T06:30:58.000Z",
+  "newPromptScheduledRunObserved": true,
+  "notificationDeliveryVerified": false,
+  "recurrenceChangeNeededForNextDay": false,
+  "nextDesiredRun": "2026-10-31T06:30:00-04:00",
+  "dstReminder": "Oct31 is still EDT: next run Oct31 02:30 EDT = 06:30Z. The Oct31 run must adapt Nov1 to 02:30 EST = 07:30Z. Preserve existing identity, active status, destination and Mar15 expiry.",
+  "actuallyRefreshed": [
+    "our 14-player roster and period-one game IDs, display times/opponents, active/reserve slots",
+    "our 14-player roster period-two schedule; opponent label CatsByAtLeast1 observed but opponent roster not captured",
+    "JeffWischer opponent period-one 14-player roster/schedules; exact identities and schools matched saved forecast rows 14/14",
+    "Fantrax Players page 1 current membership and schedule, 20 rows, all Claim and W (Fri) labels",
+    "current page-one members: JaQuan Johnson, Corey Hadnot, Michael McNair, Joshua Ward, Nasir Whitlock, Ty Robinson, Trey Campbell, Chaze Harris, Dennis Parker, Nils Machowski, Jed Miller, Tarence Guinyard, Krystian Lewis, Javon Bennett, Josiah Davis, Jaden Winston, Koree Cotton, Preston Edmead, Justin Pippen, LJ Wells"
+  ],
+  "notRefreshed": [
+    "approved category board and historical per-game baseline; generated 2026-10-27T11:24:32Z (age 67.1 hours)",
+    "current 2026-27 minutes, player availability/health, or role confirmation",
+    "complete available-player pool or model-ranked exhaustive shortlist",
+    "actual waiver processing results/clearance time; page-one W (Fri) labels remain but do not reveal processing instant",
+    "opponent matchup forecast/category margins",
+    "verified Fantrax lock scope, timezone, activation, caps/minimums, rounding, and counted-game rules"
+  ],
+  "pageOneMembershipChanges": {
+    "noLongerOnPageOne": [
+      "Cory Wells",
+      "Josh O'Garro"
+    ],
+    "newOnPageOne": [
+      "Koree Cotton",
+      "Justin Pippen"
+    ],
+    "interpretation": "First-page scope change only; does not establish acquisition or full-pool absence. Cory Wells is omitted from today’s available cohort and must not be carried forward as currently available without full-pool reconciliation."
+  },
+  "period1": {
+    "revision": "afe13249b13d0fefa25d31dc93df1cffa5d1b444cf616f8cca2a30797411eaca",
+    "inputHash": "195259b58de20361673ec130d90434d440a9cf1f567fc65dc5c04d7515ee5e5e",
+    "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+    "baselineGeneratedAt": "2026-10-27T11:24:32.000Z",
+    "baselineAgeHours": 67.10722222222222,
+    "owned": 14,
+    "available": 20,
+    "topFiveAvailableByModel": [
+      {
+        "name": "JaQuan Johnson",
+        "games": 2,
+        "score": 4.4922745460613855
+      },
+      {
+        "name": "Jed Miller",
+        "games": 2,
+        "score": 4.4086520072045605
+      },
+      {
+        "name": "Jaden Winston",
+        "games": 2,
+        "score": 4.389812543646423
+      },
+      {
+        "name": "Nasir Whitlock",
+        "games": 2,
+        "score": 4.359017007028816
+      },
+      {
+        "name": "Michael McNair",
+        "games": 2,
+        "score": 4.296078705208462
+      }
+    ],
+    "lineup": [
+      {
+        "id": "06nnk",
+        "slot": "F/C1"
+      },
+      {
+        "id": "06n8t",
+        "slot": "G1"
+      },
+      {
+        "id": "0655r",
+        "slot": "G2"
+      },
+      {
+        "id": "06g7r",
+        "slot": "F/C2"
+      },
+      {
+        "id": "06dun",
+        "slot": "G3"
+      },
+      {
+        "id": "06h14",
+        "slot": "G4"
+      },
+      {
+        "id": "064kr",
+        "slot": "Flx1"
+      },
+      {
+        "id": "05wk5",
+        "slot": "Flx2"
+      },
+      {
+        "id": "065cb",
+        "slot": "F/C3"
+      },
+      {
+        "id": "065ct",
+        "slot": "F/C4"
+      }
+    ],
+    "listedActiveAppearances": 21,
+    "reserves": [
+      "065p8",
+      "065mj",
+      "064gk",
+      "0729c"
+    ],
+    "blockers": [
+      "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+      "Exact lineup deadline, timezone and first-period activation unresolved",
+      "Team/player game caps and shot minimum/rounding semantics unresolved",
+      "Waiver Friday label observed; exact clearance instant and lineup activation unresolved",
+      "oldest baseline dependency older than 24 hours; revalidate rates/roles",
+      "schedule lacks verified game instants",
+      "health/role evidence incomplete"
+    ]
+  },
+  "period2": {
+    "revision": "5cab4c3c35438ace9589b1f6c1e11dad165e2f84f072d7f8f4c3e9350fd2346b",
+    "inputHash": "189b1e89c24e8acc28cfcdb57ffd2756cd2b584d9cec7419775bbfe670c3b738",
+    "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+    "owned": 14,
+    "availableCohortCaptured": 0,
+    "opponentTeamId": null,
+    "opponentLabelObserved": "CatsByAtLeast1",
+    "lineup": [
+      {
+        "id": "064kr",
+        "slot": "G1"
+      },
+      {
+        "id": "05wk5",
+        "slot": "G2"
+      },
+      {
+        "id": "0729c",
+        "slot": "G3"
+      },
+      {
+        "id": "06n8t",
+        "slot": "G4"
+      },
+      {
+        "id": "0655r",
+        "slot": "Flx1"
+      },
+      {
+        "id": "06g7r",
+        "slot": "F/C1"
+      },
+      {
+        "id": "06dun",
+        "slot": "Flx2"
+      },
+      {
+        "id": "065cb",
+        "slot": "F/C2"
+      },
+      {
+        "id": "065ct",
+        "slot": "F/C3"
+      },
+      {
+        "id": "065mj",
+        "slot": "F/C4"
+      }
+    ],
+    "listedActiveAppearances": 23,
+    "blockers": [
+      "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+      "Exact lineup deadline, timezone and first-period activation unresolved",
+      "Team/player game caps and shot minimum/rounding semantics unresolved",
+      "Waiver Friday label observed; exact clearance instant and lineup activation unresolved",
+      "oldest baseline dependency older than 24 hours; revalidate rates/roles",
+      "schedule lacks verified game instants",
+      "health/role evidence incomplete"
+    ]
+  },
+  "doctorReport": {
+    "status": "partial",
+    "observedPlayers": 0,
+    "historicalSnapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+    "warning": "Saved-evidence doctor/report was run successfully as requested, but source snapshot is pre-draft and stale. Its empty roster is superseded by today's fresh browser roster; do not treat it as current roster evidence or as refreshed weekly evidence."
+  },
+  "codeChanged": false,
+  "testsRun": false,
+  "liveActionsExecuted": 0,
+  "syntheticDataUsed": false,
+  "modelPromoted": false,
+  "transportNote": "Authenticated supported-browser reads used; no ordinary HTTP requests or exports of session secrets. Existing tabs were preserved; temporary research tab closed after capture.",
+  "notificationRecommendation": "DONT_NOTIFY: routine run completed without an actionable material lineup/transaction recommendation or blocking failure; current membership change is limited to page scope."
+}

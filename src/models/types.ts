@@ -120,6 +120,13 @@ export interface WaiverSettings {
   readonly type: "rolling" | "faab" | "none";
   readonly budget?: number;
   readonly claim_deadline?: string;
+  readonly priority_reset?: "weekly_inverse_standings" | "never";
+  readonly waiver_hours?: number;
+  readonly process_days?: string[];
+  /** Raw ESPN hour; no timezone is inferred. */
+  readonly process_hour?: number;
+  readonly acquisition_type?: string;
+  readonly minimum_bid?: number;
 }
 
 export interface TradeSettings {

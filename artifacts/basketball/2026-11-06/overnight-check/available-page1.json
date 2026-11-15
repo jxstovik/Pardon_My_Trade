@@ -1,0 +1,130 @@
+{
+  "observedDuring": {
+    "triggerAt": "2026-11-06T07:30:12.272Z",
+    "observedAtLowerBound": "2026-11-06T07:30:12.272Z"
+  },
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players",
+  "scope": "Current Players page 1 in displayed Score order; 20 displayed rows, not full pool. No candidate schedules captured.",
+  "rows": [
+    {
+      "rank": 1,
+      "name": "Chase Foster",
+      "positionSchool": "F/C - Pitt",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 2,
+      "name": "Keyshuan Tillery",
+      "positionSchool": "G - UNCC",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 3,
+      "name": "Ben Hammond",
+      "positionSchool": "G - VaTec",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 4,
+      "name": "Krystian Lewis",
+      "positionSchool": "G - Tul",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 5,
+      "name": "Willie Foster",
+      "positionSchool": "G - NoKY",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 6,
+      "name": "Jaylen Lawal",
+      "positionSchool": "G - Tuls",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 7,
+      "name": "Bahsil Laster",
+      "positionSchool": "G - Norf",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 8,
+      "name": "Nojus Indrusaitis",
+      "positionSchool": "G - Cal",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 9,
+      "name": "Caleb Sanders",
+      "positionSchool": "F/C - TNTec",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 10,
+      "name": "Jordan Watford",
+      "positionSchool": "G - QUC",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 11,
+      "name": "Grant Best",
+      "positionSchool": "G - AF",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 13,
+      "name": "Chris Lockett",
+      "positionSchool": "G - JSU",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 15,
+      "name": "Dominick Stewart",
+      "positionSchool": "G - Rich",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 16,
+      "name": "Alfred Worrell",
+      "positionSchool": "G - Morg",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 17,
+      "name": "Noah Pagotto",
+      "positionSchool": "F/C - NoKY",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 18,
+      "name": "Antoine Lorick",
+      "positionSchool": "F/C - Buff",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 19,
+      "name": "Nasir Mann",
+      "positionSchool": "G - QUC",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 21,
+      "name": "Clayton Parker",
+      "positionSchool": "F/C - MorSt",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 22,
+      "name": "Larry Johnson",
+      "positionSchool": "G - McNee",
+      "status": "Claim / FA"
+    },
+    {
+      "rank": 23,
+      "name": "Amani Hansberry",
+      "positionSchool": "F/C - VaTec",
+      "status": "Claim / FA"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# Basketball overnight check — November 6, 2026
+
+The scheduled trigger was **02:30:12.272 EST (07:30:12.272Z)**, 12.272 seconds after the 02:30 local target. The existing `banging-3s-basketball-workflow` identity, active state, destination, 07:30 UTC recurrence and March 15 seasonal expiry were preserved. Notification receipt remains unverified.
+
+Authenticated Fantrax access worked through the current in-app browser. Its inventory had the authenticated IAB with no open tabs. A hidden direct navigation to the guessed roster route opened the league but returned Fantrax 404; clicking the visible league badge navigated to the authenticated league home. From there I read the roster, schedule, matchup, Players and transaction-history views.
+
+The live roster still has all 14 drafted players, 10 active and four reserves, with Balanced selected. Javontae Campbell and Cade Tyson each display GP 0 in the current roster stats. GP 0 does not establish health or eligibility. Fantrax home/injury news still shows the Nov 2 Campbell undisclosed DNP and Tyson eligibility-pending note; no clearance was observed. The immutable Nov 2 pre-lock period-one forecast remains untouched because period-one games have started.
+
+The current period-two schedule for Nov 9–15 was refreshed for all 14 owned players. Quion Williams is displayed with team `(N/A)` and no games in the period-two schedule. The other schedule labels and game IDs are in [the owned capture](period-2-browser-capture.json); displayed times are not verified UTC instants, and N/A-game counting remains unresolved.
+
+The period-two matchup view identifies **CatsByAtLeast1** (`2rc1dg43mvgsurtp`) as the next opponent. I captured its 14 names, 10 active/four reserve slots, and all displayed Nov 9–15 schedules in [the opponent capture](period-2-opponent-capture.json). Stable opponent player IDs were not exposed in this roster view, so this evidence is not joined to validated projection identities and no opponent-adjusted model is claimed.
+
+The current first 20 Score-ordered available-player rows all show Claim / FA. This cohort has changed since the Nov 4 first page, but remains page-one scope. I did not capture candidate schedules or the full pool, so no candidates were reranked and no acquisition recommendation was made. The executed-only Claim/Drop history view displays the Nov 3 transaction by Sjdedden (Mohammad Habhab added, Dontae Horne removed); it supplied no new Nov 6 processing or clearance receipt. No inference about unlisted waiver results was made.
+
+I ran the approved corrected board against a newly transcribed, owned-only period-two schedule input. The immutable [conditional report](period-2-report/a840fd1e9d1a6075baf853b3c1ce1eaf428eebc251bb6d22e62b805ae10b4cb5/weekly-report.md) covers 14 owned players and no available candidates. Its deterministic optimizer lists 22 active appearances and conditionally selects Karasinski instead of current active Feroah. This remains research only: the oldest rate dependency is Oct 27, 2026 11:24:32Z (236.09 hours old at trigger); current roles/health, exact locks, schedule instants, counted-game rules, caps and shot thresholds are unresolved. It reports no expected category-win probabilities. The old dependency timestamp/hash and approved board revision were preserved.
+
+I separately ran `doctor` and `report` against the historical saved evidence. They still describe the stale Oct 25 pre-draft snapshot with zero observed players and partial readiness; they do not represent today's authenticated roster capture. See `data/basketball/mmioj1mvmvgsc3io/reports/9af4d2ba500571ab57c543f871c091e0071bd0f98a81030f25aa367f080ea1f0`.
+
+No claim, drop, trade, lineup write, model training/promotion or code change occurred. No tests were run. The run summary and supporting evidence are in this directory.
+
+**Notification recommendation: NOTIFY.** This run newly identifies and captures the next opponent, and a materially different available-player page, while confirming that Campbell and Tyson still lack clearance evidence. The current candidate schedules and full pool are unknown; the conditional lineup is blocked from firm use by stale rates and unresolved operational rules.

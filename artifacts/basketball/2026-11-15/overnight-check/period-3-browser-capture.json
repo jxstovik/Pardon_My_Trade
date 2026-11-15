@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "season": "2026-27",
+  "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "observedAt": "2026-11-15T07:29:45.925Z",
+  "sourceKind": "browser-transcription",
+  "sourceUrls": [
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=wwc1n3o4mvn1c6hk",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+    "https://www.fantrax.com/player/06dsp/mmioj1mvmvgsc3io/jayden-reid/wwc1n3o4mvn1c6hk",
+    "https://www.fantrax.com/player/06n8t/mmioj1mvmvgsc3io/javontae-campbell/wwc1n3o4mvn1c6hk",
+    "https://www.fantrax.com/player/065mj/mmioj1mvmvgsc3io/jack-karasinski/wwc1n3o4mvn1c6hk",
+    "https://www.fantrax.com/player/071jm/mmioj1mvmvgsc3io/keshawn-fisher/wwc1n3o4mvn1c6hk"
+  ],
+  "period": {
+    "number": 3,
+    "firstDate": "2026-11-16",
+    "lastDate": "2026-11-22",
+    "opponentTeamId": "ir66qwd2mvgsj4wg"
+  },
+  "unresolvedRules": [
+    "Weekly Monday execution and zero-minute pregame offset are recorded, but whole-roster versus player lock scope is unresolved",
+    "Exact lock timezone/UTC instant and lineup activation behavior remain unresolved",
+    "Game counting for N/A rows, game caps, shooting minimums, and rounding semantics remain unresolved",
+    "Approved corrected category board dependency remains at 2026-10-27T11:24:32Z; no rates were refreshed by this schedule capture",
+    "Quion Williams remains in disabled active Flex with N/A affiliation and no listed games; identity, eligibility, and counted schedule are unknown",
+    "Campbell has 0 GP and Fantrax says expected return Nov 18, game-time decision; no game participation/clearance yet",
+    "Reid is GTD Nov 15 (ankle); his only P3 listed game is Nov 22, with no P3 clearance assessment yet",
+    "Candidate pool, opponent roster and opponent schedule were not refreshed for this run"
+  ],
+  "candidateScope": "Owned roster only. Fresh Fantrax selected Period 3 Schedule - Period; no free-agent ranking or candidate model run.",
+  "protectedIds": ["06dun", "06n8t", "0655r", "06dsp", "065cb", "065ct", "06nnk", "06g7r", "05wk5", "064kr"],
+  "currentActiveIds": ["06dun", "06n8t", "0655r", "06dsp", "065cb", "065ct", "06nnk", "06g7r", "05wk5", "064kr"],
+  "players": [
+    {"id":"06dun","name":"Markus Burton","school":"Ind","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06qgo","date":"2026-11-17","label":"@Ark Tue 7:30PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06q72","date":"2026-11-20","label":"KY Fri 8:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"06n8t","name":"Javontae Campbell","school":"Cin","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06qgp","date":"2026-11-18","label":"YSU Wed 7:30PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06qgu","date":"2026-11-22","label":"UMassL Sun 2:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"0655r","name":"Tavari Johnson","school":"Charl","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06rz7","date":"2026-11-19","label":"@Drake Thu 7:30PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"06dsp","name":"Jayden Reid","school":"Mem","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06ond","date":"2026-11-22","label":"Evans Sun 2:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"065cb","name":"Kyle Evans","school":"NCSU","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06qke","date":"2026-11-19","label":"Mur Thu 6:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"06nnk","name":"Jaiden Feroah","school":"S UT","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06ob7","date":"2026-11-19","label":"@Tex Thu 8:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"065ct","name":"Keyshawn Hall","school":"StJon","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06run","date":"2026-11-18","label":"Sien Wed 7:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"06g7r","name":"Pryce Sandfort","school":"Nebras","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06o0v","date":"2026-11-18","label":"SDak Wed 8:30PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06o00","date":"2026-11-22","label":"Butl Sun 12:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"05wk5","name":"Daeshun Ruffin","school":"JackSt","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06o63","date":"2026-11-18","label":"@Baylor Wed 12:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"064kr","name":"Quion Williams","school":"ArkPB","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":false,"games":[]},
+    {"id":"071jm","name":"Keshawn Fisher","school":"Winth","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06sne","date":"2026-11-18","label":"Chat Wed 6:30PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06ode","date":"2026-11-21","label":"@Woff Sat 5:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"0729c","name":"Michael James","school":"ASU","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06odb","date":"2026-11-17","label":"@UCDav Tue 9:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06sho","date":"2026-11-20","label":"@Fres Fri 10:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"065p8","name":"Trevan Leonhardt","school":"Nebras","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06o0v","date":"2026-11-18","label":"SDak Wed 8:30PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06o00","date":"2026-11-22","label":"Butl Sun 12:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]},
+    {"id":"065mj","name":"Jack Karasinski","school":"NW","ownership":"own","availability":"unknown","waiverLabel":null,"scheduleComplete":true,"games":[{"id":"06qo0","date":"2026-11-16","label":"Colum Mon 8:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06rnq","date":"2026-11-20","label":"VaTec Fri 3:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null},{"id":"06rnt","date":"2026-11-22","label":"@Dayt Sun 1:00PM EST (Fantrax Schedule - Period)","state":"scheduled","startAt":null}]}
+  ]
+}

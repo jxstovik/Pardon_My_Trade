@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-10-27T17:58:40.145Z",
+  "matchedClickApiRender": {
+    "count": 129,
+    "p50Ms": 356.19999998807907,
+    "p95Ms": 558.8000000119209,
+    "maxMs": 930.1999999880791
+  },
+  "groups": 165,
+  "unmatchedOrInconsistentGroups": 36,
+  "cuaActionAndDOMRoundtrip": {
+    "count": 153,
+    "p50Ms": 615,
+    "p95Ms": 900,
+    "maxMs": 1321
+  },
+  "ownPickCUARoundtrip": {
+    "count": 42,
+    "p50Ms": 636,
+    "p95Ms": 835,
+    "maxMs": 864
+  },
+  "changingPickObservations": 105,
+  "notes": [
+    "Browser performance times come from actual event handlers and requestAnimationFrame after render. Only ordered click/API/render triples with matching API/render revision are included.",
+    "CUA roundtrip includes supported tool action, visible-result wait and DOM read inside the CUA call. It excludes idle time and orchestration/model time between tool calls.",
+    "Neither metric proves external Fantrax ingestion latency. No continuously running Fantrax watcher exists."
+  ]
+}

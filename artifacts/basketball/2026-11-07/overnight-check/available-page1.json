@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-11-07T07:30:22Z",
+  "sourceKind": "authenticated-browser-transcription",
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players",
+  "filter": "All Available Players; visible Score-order first page; 20 rows",
+  "rows": [
+    {"name":"Chase Foster","school":"Pitt","position":"F/C","claim":"FA"},
+    {"name":"Keyshuan Tillery","school":"UNCC","position":"G","claim":"FA"},
+    {"name":"Ben Hammond","school":"VaTec","position":"G","claim":"FA"},
+    {"name":"Krystian Lewis","school":"Tul","position":"G","claim":"FA"},
+    {"name":"Willie Foster","school":"NoKY","position":"G","claim":"FA"},
+    {"name":"Jaylen Lawal","school":"Tuls","position":"G","claim":"FA"},
+    {"name":"Bahsil Laster","school":"Norf","position":"G","claim":"FA"},
+    {"name":"Nojus Indrusaitis","school":"Cal","position":"G","claim":"FA"},
+    {"name":"Caleb Sanders","school":"TNTec","position":"F/C","claim":"FA"},
+    {"name":"Jordan Watford","school":"QUC","position":"G","claim":"FA"},
+    {"name":"Grant Best","school":"AF","position":"G","claim":"FA"},
+    {"name":"Chris Lockett","school":"JSU","position":"G","claim":"FA"},
+    {"name":"Dominick Stewart","school":"Rich","position":"G","claim":"FA"},
+    {"name":"Alfred Worrell","school":"Morg","position":"G","claim":"FA"},
+    {"name":"Noah Pagotto","school":"NoKY","position":"F/C","claim":"FA"},
+    {"name":"Antoine Lorick","school":"Buff","position":"F/C","claim":"FA"},
+    {"name":"Nasir Mann","school":"QUC","position":"G","claim":"FA"},
+    {"name":"Clayton Parker","school":"MorSt","position":"F/C","claim":"FA"},
+    {"name":"Larry Johnson","school":"McNee","position":"G","claim":"FA"},
+    {"name":"Amani Hansberry","school":"VaTec","position":"F/C","claim":"FA"}
+  ],
+  "limitations": [
+    "This is the displayed Score-order first page only, not the complete available pool.",
+    "Opening the Players Schedule view changed to a different Rank-order cohort and showed period 1 dates Nov 1-8; it did not provide validated Nov 9-15 schedules for the Score-order candidates.",
+    "No candidate was ranked or recommended from this capture."
+  ]
+}

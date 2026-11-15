@@ -1,0 +1,17 @@
+# Scheduled basketball check — October 31, 2026
+
+The scheduled worker fired at **02:30:00.041 EDT (06:30:00.041Z)**, 0.041 seconds after the intended 02:30 local time. Authenticated Fantrax reads were observed around 02:32 EDT. The same automation’s Nov 1 recurrence has been updated by the coordinator to 07:30 UTC (02:30 EST); identity, destination and expiry are unchanged. Today’s firing does not verify tomorrow’s firing or notification delivery.
+
+The fresh own-roster read confirms the same 14 identities and placements: 10 active (four G, four F/C and two Flex) and four reserve. Period 1 remains **JeffWischer**; period 2 shows **CatsByAtLeast1**. We re-read our period-one and period-two schedule grids and current candidate page-one schedules. No opponent roster was captured today.
+
+After Friday’s displayed waiver labels, all 20 players on page one now show **Claim / FA**, with no W(Fri) labels. A settled page-two status check found 19 Claim / FA rows and one Claim / **W (Sat)** row (Elijah Mahi). This confirms changed displayed status only; it does not identify claim winners, processing time, or the complete available pool. No page absence was treated as acquisition. No player was claimed, dropped, or otherwise changed.
+
+Using the approved corrected board with the current 14 owned players plus the first 20 available rows, the period-one conditional optimizer still lists **21 active appearances** and the same active set. The top five limited watchlist players are JaQuan Johnson, Jed Miller, Jaden Winston, Nasir Whitlock and Michael McNair; each has zero marginal gain in the protected-active-core replacement comparison. Period two remains a 23-appearance own-roster look-ahead. These are historical-baseline research figures, not category wins or actionable lineup advice.
+
+The oldest forecast dependency is still October 27 at 11:24:32Z, about 91.1 hours old at this run. Current-season minutes, health/status and role evidence are not refreshed. Exact lock scope/timezone/activation, game UTC instants and counted-game eligibility, caps/minimums/rounding, exact waiver processing, full pool and opponent roster remain unresolved. The daily forecasts are advisory only.
+
+The saved-evidence doctor/report ran successfully but still reads the stale pre-draft snapshot with zero rostered players. It was copied into today’s artifact folder and clearly labeled historical; no source ages or hashes were renewed. No code changed and no tests were run. No model was promoted and no live actions were executed.
+
+The next intended run is **November 1 at 02:30 EST (07:30 UTC)**. The same automation is configured for that UTC hour; actual firing remains to be observed. The 2027 spring-forward date has no 02:30 local instant, so the recorded policy is to skip that nonexistent occurrence rather than invent a shifted time.
+
+Evidence: [browser readback](browser-readback.json), [period-one capture](period-1-browser-capture.json), [period-two capture](period-2-browser-capture.json), [period-one forecast](period-1-report/677df4b470312349ce90bfe4c3db46c136321ba57e2a13bd50adeaf230fc8fd5/weekly-report.md), [period-two forecast](period-2-report/db141b9a26be4a9122d71cf86b5ca5d3053163edf76f78b8baa872a92e2b8a9e/weekly-report.md), [saved historical doctor JSON](saved-evidence-doctor.json), [saved historical doctor report](saved-evidence-report.md), [run summary](run-summary.json).

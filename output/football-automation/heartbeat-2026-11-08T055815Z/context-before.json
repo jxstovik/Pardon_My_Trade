@@ -1,0 +1,88 @@
+{
+  "pmt_get_current_scoring_period": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_current_scoring_period",
+    "generated_at": "2026-11-08T05:59:33.335Z",
+    "ok": true,
+    "data": {
+      "scoring_period": "2026-W9",
+      "week": 9,
+      "season": "2026",
+      "offseason": false,
+      "evaluated_at": "2026-11-08T05:59:33.335Z"
+    }
+  },
+  "pmt_get_inseason_status": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_inseason_status",
+    "generated_at": "2026-11-08T05:59:33.785Z",
+    "ok": true,
+    "data": {
+      "league": {
+        "league_id": "98806880",
+        "external_id": "98806880",
+        "name": "The Smaracko",
+        "platform": "espn",
+        "season": "2026"
+      },
+      "snapshot_id": "espn-98806880-f3a68ed1-2a06-4b6e-a197-83a3ac92b2d2-1793564745874",
+      "team": {
+        "team_id": "7",
+        "name": "Bored Man Gets Paid",
+        "manager_id": "7"
+      },
+      "requested_league_id": "98806880",
+      "requested_season": "2026",
+      "scoring_period": "2026-W9",
+      "offseason": false
+    }
+  },
+  "pmt_get_projection_status": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_projection_status",
+    "generated_at": "2026-11-08T05:59:36.606Z",
+    "ok": true,
+    "data": {
+      "periods": [
+        {
+          "scoring_period": "2026-ROS",
+          "count": 614
+        },
+        {
+          "scoring_period": "2026-W5",
+          "count": 650
+        },
+        {
+          "scoring_period": "2026-W6",
+          "count": 659
+        },
+        {
+          "scoring_period": "2026-W7",
+          "count": 668
+        },
+        {
+          "scoring_period": "2026-W8",
+          "count": 670
+        }
+      ]
+    }
+  },
+  "pmt_get_model_status": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_model_status",
+    "generated_at": "2026-11-08T05:59:36.607Z",
+    "ok": true,
+    "data": {
+      "model_store": {
+        "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-08T055815Z/runtime/models.json",
+        "exists": true,
+        "bytes": 368781,
+        "modified_at": "2026-11-08T05:59:32.947Z"
+      },
+      "probabilistic_projections": {
+        "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-08T055815Z/runtime/probabilistic-projections.json",
+        "exists": false
+      }
+    }
+  }
+}

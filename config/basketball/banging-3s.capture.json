@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "leagueSource": {
+    "url": "https://www.fantrax.com/fxea/general/getLeagueInfo?leagueId=mmioj1mvmvgsc3io&excludePlayerInfo=true",
+    "observedAt": "2026-10-25T13:28:03Z",
+    "kind": "browser-transcription",
+    "completeness": "field-subset"
+  },
+  "rosterSource": {
+    "url": "https://www.fantrax.com/fxea/general/getTeamRosters?leagueId=mmioj1mvmvgsc3io&period=1",
+    "observedAt": "2026-10-25T18:18:55Z",
+    "kind": "browser-transcription",
+    "completeness": "field-subset"
+  },
+  "leagueInfo": {
+    "leagueName": "Banging 3s",
+    "seasonYear": 2026,
+    "startDate": "2026-11-01",
+    "endDate": "2027-03-14",
+    "scoringSystem": {
+      "type": "HEAD_TO_HEAD_ROTI_MULTI_WIN",
+      "scoringCategories": {
+        "PLAYER": {
+          "BLK": {
+            "Default": "1.0"
+          },
+          "ST": {
+            "Default": "1.0"
+          },
+          "AST": {
+            "Default": "1.0"
+          },
+          "FG%": {
+            "Default": "1.0"
+          },
+          "FT%": {
+            "Default": "1.0"
+          },
+          "PTS": {
+            "Default": "1.0"
+          },
+          "REB": {
+            "Default": "1.0"
+          },
+          "3PTM": {
+            "Default": "1.0"
+          }
+        }
+      }
+    },
+    "rosterInfo": {
+      "positionConstraints": {
+        "Flx": {
+          "maxActive": 2
+        },
+        "G": {
+          "maxActive": 4
+        },
+        "F/C": {
+          "maxActive": 4
+        }
+      },
+      "maxTotalPlayers": 14,
+      "maxTotalActivePlayers": 10,
+      "maxTotalReservePlayers": 4
+    },
+    "teamInfo": {
+      "evucydykmvjmlrze": {
+        "id": "evucydykmvjmlrze",
+        "name": "Connormcl12"
+      },
+      "2rc1dg43mvgsurtp": {
+        "id": "2rc1dg43mvgsurtp",
+        "name": "CatsByAtLeast1"
+      },
+      "kq1erunqmvhbzx4y": {
+        "id": "kq1erunqmvhbzx4y",
+        "name": "Perks"
+      },
+      "wwc1n3o4mvn1c6hk": {
+        "id": "wwc1n3o4mvn1c6hk",
+        "name": "jxstovik"
+      },
+      "ir66qwd2mvgsj4wg": {
+        "id": "ir66qwd2mvgsj4wg",
+        "name": "NorseUppers"
+      },
+      "hhkzj65hmvjokk2e": {
+        "id": "hhkzj65hmvjokk2e",
+        "name": "Sjdedden"
+      },
+      "rlfm3uhjmvk7q70x": {
+        "id": "rlfm3uhjmvk7q70x",
+        "name": "JeffWischer"
+      },
+      "vyfs1k8xmvgtitmc": {
+        "id": "vyfs1k8xmvgtitmc",
+        "name": "JakeMess"
+      }
+    },
+    "scoringPeriods": [
+      {
+        "number": 1,
+        "startDate": "2026-11-01T09:30:00.0-0500",
+        "endDate": "2026-11-09T10:59:59.0-0500"
+      },
+      {
+        "number": 2,
+        "startDate": "2026-11-09T11:00:00.0-0500",
+        "endDate": "2026-11-16T10:59:59.0-0500"
+      },
+      {
+        "number": 3,
+        "startDate": "2026-11-16T11:00:00.0-0500",
+        "endDate": "2026-11-23T10:59:59.0-0500"
+      },
+      {
+        "number": 4,
+        "startDate": "2026-11-23T11:00:00.0-0500",
+        "endDate": "2026-11-30T11:59:59.0-0500"
+      },
+      {
+        "number": 5,
+        "startDate": "2026-11-30T12:00:00.0-0500",
+        "endDate": "2026-12-07T10:59:59.0-0500"
+      },
+      {
+        "number": 6,
+        "startDate": "2026-12-07T11:00:00.0-0500",
+        "endDate": "2026-12-14T10:59:59.0-0500"
+      },
+      {
+        "number": 7,
+        "startDate": "2026-12-14T11:00:00.0-0500",
+        "endDate": "2026-12-21T10:59:59.0-0500"
+      },
+      {
+        "number": 8,
+        "startDate": "2026-12-21T11:00:00.0-0500",
+        "endDate": "2026-12-28T11:59:59.0-0500"
+      },
+      {
+        "number": 9,
+        "startDate": "2026-12-28T12:00:00.0-0500",
+        "endDate": "2027-01-04T12:59:59.0-0500"
+      },
+      {
+        "number": 10,
+        "startDate": "2027-01-04T13:00:00.0-0500",
+        "endDate": "2027-01-11T12:59:59.0-0500"
+      },
+      {
+        "number": 11,
+        "startDate": "2027-01-11T13:00:00.0-0500",
+        "endDate": "2027-01-18T12:59:59.0-0500"
+      },
+      {
+        "number": 12,
+        "startDate": "2027-01-18T13:00:00.0-0500",
+        "endDate": "2027-01-25T12:59:59.0-0500"
+      },
+      {
+        "number": 13,
+        "startDate": "2027-01-25T13:00:00.0-0500",
+        "endDate": "2027-02-01T12:59:59.0-0500"
+      },
+      {
+        "number": 14,
+        "startDate": "2027-02-01T13:00:00.0-0500",
+        "endDate": "2027-02-08T12:59:59.0-0500"
+      },
+      {
+        "number": 15,
+        "startDate": "2027-02-08T13:00:00.0-0500",
+        "endDate": "2027-02-15T12:59:59.0-0500"
+      },
+      {
+        "number": 16,
+        "startDate": "2027-02-15T13:00:00.0-0500",
+        "endDate": "2027-02-22T12:59:59.0-0500"
+      },
+      {
+        "number": 17,
+        "startDate": "2027-02-22T13:00:00.0-0500",
+        "endDate": "2027-03-01T12:59:59.0-0500"
+      },
+      {
+        "number": 18,
+        "startDate": "2027-03-01T13:00:00.0-0500",
+        "endDate": "2027-03-08T11:59:59.0-0500"
+      },
+      {
+        "number": 19,
+        "startDate": "2027-03-08T12:00:00.0-0500",
+        "endDate": "2027-03-15T11:59:59.0-0400"
+      }
+    ],
+    "rosterPeriods": [
+      {
+        "number": 1,
+        "startDate": "2026-11-01T09:30:00.0-0500",
+        "endDate": "2026-11-09T10:59:59.0-0500"
+      },
+      {
+        "number": 2,
+        "startDate": "2026-11-09T11:00:00.0-0500",
+        "endDate": "2026-11-16T10:59:59.0-0500"
+      },
+      {
+        "number": 3,
+        "startDate": "2026-11-16T11:00:00.0-0500",
+        "endDate": "2026-11-23T10:59:59.0-0500"
+      },
+      {
+        "number": 4,
+        "startDate": "2026-11-23T11:00:00.0-0500",
+        "endDate": "2026-11-30T11:59:59.0-0500"
+      },
+      {
+        "number": 5,
+        "startDate": "2026-11-30T12:00:00.0-0500",
+        "endDate": "2026-12-07T10:59:59.0-0500"
+      },
+      {
+        "number": 6,
+        "startDate": "2026-12-07T11:00:00.0-0500",
+        "endDate": "2026-12-14T10:59:59.0-0500"
+      },
+      {
+        "number": 7,
+        "startDate": "2026-12-14T11:00:00.0-0500",
+        "endDate": "2026-12-21T10:59:59.0-0500"
+      },
+      {
+        "number": 8,
+        "startDate": "2026-12-21T11:00:00.0-0500",
+        "endDate": "2026-12-28T11:59:59.0-0500"
+      },
+      {
+        "number": 9,
+        "startDate": "2026-12-28T12:00:00.0-0500",
+        "endDate": "2027-01-04T12:59:59.0-0500"
+      },
+      {
+        "number": 10,
+        "startDate": "2027-01-04T13:00:00.0-0500",
+        "endDate": "2027-01-11T12:59:59.0-0500"
+      },
+      {
+        "number": 11,
+        "startDate": "2027-01-11T13:00:00.0-0500",
+        "endDate": "2027-01-18T12:59:59.0-0500"
+      },
+      {
+        "number": 12,
+        "startDate": "2027-01-18T13:00:00.0-0500",
+        "endDate": "2027-01-25T12:59:59.0-0500"
+      },
+      {
+        "number": 13,
+        "startDate": "2027-01-25T13:00:00.0-0500",
+        "endDate": "2027-02-01T12:59:59.0-0500"
+      },
+      {
+        "number": 14,
+        "startDate": "2027-02-01T13:00:00.0-0500",
+        "endDate": "2027-02-08T12:59:59.0-0500"
+      },
+      {
+        "number": 15,
+        "startDate": "2027-02-08T13:00:00.0-0500",
+        "endDate": "2027-02-15T12:59:59.0-0500"
+      },
+      {
+        "number": 16,
+        "startDate": "2027-02-15T13:00:00.0-0500",
+        "endDate": "2027-02-22T12:59:59.0-0500"
+      },
+      {
+        "number": 17,
+        "startDate": "2027-02-22T13:00:00.0-0500",
+        "endDate": "2027-03-01T12:59:59.0-0500"
+      },
+      {
+        "number": 18,
+        "startDate": "2027-03-01T13:00:00.0-0500",
+        "endDate": "2027-03-08T11:59:59.0-0500"
+      },
+      {
+        "number": 19,
+        "startDate": "2027-03-08T12:00:00.0-0500",
+        "endDate": "2027-03-15T11:59:59.0-0400"
+      }
+    ],
+    "playoffs": {
+      "used": true,
+      "lastRegularSeasonPeriod": 17,
+      "firstPlayoffPeriod": 18,
+      "numPlayoffTeams": 4,
+      "mergePlayoffPeriods": false
+    }
+  },
+  "rosters": {
+    "period": 1,
+    "rosters": {
+      "evucydykmvjmlrze": {
+        "teamName": "Connormcl12",
+        "rosterItems": []
+      },
+      "2rc1dg43mvgsurtp": {
+        "teamName": "CatsByAtLeast1",
+        "rosterItems": []
+      },
+      "kq1erunqmvhbzx4y": {
+        "teamName": "Perks",
+        "rosterItems": []
+      },
+      "wwc1n3o4mvn1c6hk": {
+        "teamName": "jxstovik",
+        "rosterItems": []
+      },
+      "ir66qwd2mvgsj4wg": {
+        "teamName": "NorseUppers",
+        "rosterItems": []
+      },
+      "hhkzj65hmvjokk2e": {
+        "teamName": "Sjdedden",
+        "rosterItems": []
+      },
+      "rlfm3uhjmvk7q70x": {
+        "teamName": "JeffWischer",
+        "rosterItems": []
+      },
+      "vyfs1k8xmvgtitmc": {
+        "teamName": "JakeMess",
+        "rosterItems": []
+      }
+    }
+  },
+  "draftObservation": {
+    "source": {
+      "url": "https://www.fantrax.com/fxea/general/getDraftResults?leagueId=mmioj1mvmvgsc3io",
+      "observedAt": "2026-10-25T18:18:55Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset"
+    },
+    "state": "running",
+    "pickEntries": 112,
+    "selectedPlayers": 0
+  }
+}

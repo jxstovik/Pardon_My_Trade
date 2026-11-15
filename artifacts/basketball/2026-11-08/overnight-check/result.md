@@ -1,0 +1,15 @@
+# Sunday basketball weekly review — November 8, 2026
+
+The scheduled workflow ran at **02:34:45.569 EST (07:34:45.569Z)**, 4m45.569s after the intended 02:30 local time. The existing automation identity, active state, 07:30 UTC recurrence, destination and March 15 seasonal expiry were preserved. Notification delivery remains unverified.
+
+Authenticated Fantrax reads refreshed the current roster, live active/reserve slots, Nov 9–15 schedule and Standard YTD per-game results. Our roster remains 14 players with 10 active and four reserves. Fantrax lists 28 player-game entries including two for Cade Tyson; its Nov 6 news says he remains ineligible for the season, so the weekly forecast marks him unavailable and excludes him despite those schedule rows. Quion Williams remains listed with N/A school and zero schedule entries; this is not converted into a proven zero-counting player or availability clearance.
+
+The Nov 6 Karasinski concussion report only says he was out against Stony Brook that Friday; it gives no next-period clearance. Campbell's latest relevant item remains the Nov 2 foot-related DNP, and his current YTD GP remains zero. The current YTD rates cover only 0–3 games per player, so they do not establish stable roles or a sound updated baseline.
+
+I made a bounded lineup improvement attempt using the fresh actual YTD per-game lines and displayed schedule as an explicitly exploratory sensitivity. It would put Leonhardt and Feroah at Flex and leave Campbell and Cox out, while keeping Tyson unavailable. The calculation is saved separately in [YTD sensitivity](ytd-lineup-sensitivity.md); it is not a forecast or lineup recommendation because the sample is extremely small and status/role and legal lineup rules remain unresolved. The approved corrected board report remains a separate conditional analysis with its Oct 27 dependency preserved.
+
+The coming-period opponent is CatsByAtLeast1. Its current roster view shows 14 named roster rows (four reserves, matching the UI summary Reserve 4/4) and 31 listed schedule entries. Stable player IDs were not exposed, so I did not join these rows to the model or compute a matchup forecast. No candidate/waiver rows were refreshed today.
+
+The immutable conditional report is [period 2 report](period-2-report/b8d95406343c4e710bcbc1c4e1c7b99cf056f2b4d35b7c5b0504af6832f7ec69/weekly-report.md). Fresh actual player lines are in [current YTD stats](current-ytd-standard-stats.json); ownership/schedules and the opponent schedule are captured separately. The saved-evidence [doctor](saved-evidence-doctor.json) and [report](saved-evidence-report.md) still describe the stale Oct25 pre-draft zero-player snapshot and were not refreshed with live browser data.
+
+**No qualified lineup proposal is ready. Notification recommendation: NOTIFY.** The material Tyson ineligibility and the fresh but low-sample sensitivity change readiness and keep the old Karasinski-over-Feroah arithmetic from being presented as advice. No lineup, claim, drop, trade, configuration or model action occurred; no code changed and no tests ran.

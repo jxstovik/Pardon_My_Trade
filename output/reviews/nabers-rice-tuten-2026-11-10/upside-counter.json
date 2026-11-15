@@ -1,0 +1,68 @@
+{
+  "send": [
+    "Jameson Williams",
+    "Tony Pollard"
+  ],
+  "receive": [
+    "Rashee Rice",
+    "Mike Evans"
+  ],
+  "baseline": {
+    "week": 10,
+    "mean": 111.29676462164896,
+    "lineup": {
+      "QB": "Josh Allen",
+      "RB1": "Ashton Jeanty",
+      "RB2": "Tony Pollard",
+      "WR1": "Malik Nabers",
+      "WR2": "Jameson Williams",
+      "TE": "George Kittle",
+      "FLEX": "Wan'Dale Robinson",
+      "D/ST": "Saints D/ST",
+      "K": "Drew Stevens"
+    }
+  },
+  "week10Scenarios": {
+    "evans_active": {
+      "week": 10,
+      "mean": 115.26573845848665,
+      "lineup": {
+        "QB": "Josh Allen",
+        "RB1": "Ashton Jeanty",
+        "RB2": "Rico Dowdle",
+        "WR1": "Malik Nabers",
+        "WR2": "Mike Evans",
+        "TE": "George Kittle",
+        "FLEX": "Rashee Rice",
+        "D/ST": "Saints D/ST",
+        "K": "Drew Stevens"
+      },
+      "delta": 3.968973836837691
+    },
+    "evans_out": {
+      "week": 10,
+      "mean": 111.10300318797707,
+      "lineup": {
+        "QB": "Josh Allen",
+        "RB1": "Ashton Jeanty",
+        "RB2": "Rico Dowdle",
+        "WR1": "Malik Nabers",
+        "WR2": "Rashee Rice",
+        "TE": "George Kittle",
+        "FLEX": "Wan'Dale Robinson",
+        "D/ST": "Saints D/ST",
+        "K": "Drew Stevens"
+      },
+      "delta": -0.19376143367189513
+    }
+  },
+  "modelVersion": "weekly-2026-W10-a5f6795d8f00-368dedd8bda2-d1284c4271e7",
+  "limitations": "Week 10 candidate active-state means and existing lineup optimizer. Evans ACTIVE is hypothetical; prior ESPN read QUESTIONABLE. No recovery probability, future role improvement or season upside probability inferred. No live action.",
+  "news": {
+    "source": "San Francisco 49ers official team report",
+    "publishedDate": "2026-11-09",
+    "url": "https://www.49ers.com/news/after-further-review-shanahan-shares-injury-updates-talks-defensive-performance-following-week-9-win",
+    "claim": "Evans not expected to be ready this week; team continues evaluating. Earlier Nov 6 official report identifies Achilles/ribs injuries. ESPN QUESTIONABLE does not imply return is expected."
+  },
+  "interpretation": "Prefer this as an opening counter for a user seeking injury-recovery upside while keeping Nabers. Healthy-state +3.97 is a Week 10 what-if, not a return-date or future weekly-gain forecast. Evans-out scenario -0.19 only for Week 10, not a season downside bound. No model promotion or platform action."
+}

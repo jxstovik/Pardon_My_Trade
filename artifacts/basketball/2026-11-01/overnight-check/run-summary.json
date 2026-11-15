@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-01T07:31:02.567Z",
+  "triggerLocal": "2026-11-01T02:31:02.567-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "deltaSeconds": 62.567,
+  "firstObservedStandardTimeFiring": true,
+  "automationConfigurationUnchanged": true,
+  "observationAt": "2026-11-01T07:33:11Z",
+  "freshInputs": [
+    "our full 14-player ownership, school/position and active/reserve slots",
+    "our period-one daily schedule labels and game IDs",
+    "JeffWischer's 14-player roster and period-one schedule labels/game IDs",
+    "official league general/schedule/roster rules pages"
+  ],
+  "proposal": {
+    "status": "withheld: no qualified Sunday lineup proposal",
+    "reason": "Current 2026-27 roles/health were not established for all 14; baseline dependency remains October 27; game UTC instants/count eligibility, exact lock scope/timezone/first-period activation and caps/minima/rounding remain unresolved. Refreshed opponent roster/schedule has no aligned current forecast inputs, so no exposure-aware category comparison is supportable.",
+    "historicalConditionalProposalMayBeConsultedAsResearchOnly": "Oct 31 conditional Feroah over Karasinski, 21 listed active appearances, remains stale and unqualified; it is not repeated or endorsed as today's advice."
+  },
+  "nextVerifiedDeadline": null,
+  "deadlineBoundary": "Known platform policy is weekly Monday execution, lock zero minutes before a scheduled game, but lock scope/timezone/first-period activation are unknown. Monday Nov 2 displayed own games begin at 6:00PM on Fantrax schedule labels; label timezone and counted eligibility were not proved, so no exact deadline is claimed. Recheck/verify before first Monday game.",
+  "sourceFailures": [
+    "Initial guessed roster URL was a 404; recovered using the authenticated league selector, then used observed league links.",
+    "Team Preferences exposed Team Info, not lineup cadence/activation/lock settings.",
+    "Rules Schedule and Rosters views confirmed season boundaries and roster/slot maxima; exact lock and activation details were absent.",
+    "No current dated individual role/health source or official game-time/counting confirmation was captured.",
+    "Full available pool was not refreshed; no waiver recommendation was attempted."
+  ],
+  "unchangedHistoricalForecastInputs": {
+    "oldestDependencyAt": "2026-10-27T11:24:32Z",
+    "ageAtObservationHoursApprox": 92.1,
+    "Oct31Period1InputHash": "ac7d15d9c70a20a3a5b420d320832b1901590d1d67aed06d81f693ae8ba40b43",
+    "Oct31Period1BoardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+    "replayedOrRenewed": false
+  },
+  "historicalDoctorSnapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+  "historicalDoctorObservedPlayers": 0,
+  "historicalDoctorSourcesStale": true,
+  "liveActionsExecuted": 0,
+  "modelPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "syntheticDataUsed": false,
+  "historicalDoctorRerun": true,
+  "targetedPublicPrimarySourceResearch": "artifacts/basketball/2026-11-01/overnight-check/feroah-karasinski-public-check.json",
+  "schoolScheduleOpponentReconciliation": "dates and opponents align for both players; time-zone interpretation remains unverified",
+  "currentOpeningWeekHealthAndStartingRoleCleared": false
+}

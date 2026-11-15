@@ -1,0 +1,494 @@
+{
+  "verifiedAt": "2026-10-24T12:19:56.940376+00:00",
+  "weekly": {
+    "workflowStatus": "complete",
+    "completedAt": "2026-10-24T12:14:17.876Z",
+    "candidateBuiltAt": "2026-10-24T12:00:23.561399+00:00",
+    "statsCutoffWeek": 6,
+    "rosterReadAt": "2026-10-24T12:13:42.967Z",
+    "currentQB": "Aaron Rodgers",
+    "allenBenchVerified": true,
+    "ownedPlayers": 16,
+    "availableModeled": 410,
+    "modelCountsByPosition": {
+      "QB": 41,
+      "RB": 90,
+      "WR": 163,
+      "TE": 101,
+      "K": 24,
+      "DST": 23
+    },
+    "pregameArchive": "not_archived"
+  },
+  "ros": {
+    "fetchedStart": "2026-10-24T12:15:47.910Z",
+    "fetchedEnd": "2026-10-24T12:15:48.330Z",
+    "publishedUpdatedRaw": [
+      "2026-10-24 05:07:39 AM EST"
+    ],
+    "parsedCandidates": 711,
+    "rawRows": 743,
+    "counts": {
+      "qb": {
+        "candidates": 102,
+        "rawRows": 102
+      },
+      "rb": {
+        "candidates": 163,
+        "rawRows": 163
+      },
+      "wr": {
+        "candidates": 259,
+        "rawRows": 259
+      },
+      "te": {
+        "candidates": 147,
+        "rawRows": 147
+      },
+      "k": {
+        "candidates": 40,
+        "rawRows": 40
+      },
+      "dst": {
+        "candidates": 0,
+        "rawRows": 32
+      }
+    },
+    "liveRosPersistencePerformed": false,
+    "scopedDatabasePeriods": [
+      [
+        "2026-W5",
+        650
+      ],
+      [
+        "2026-W6",
+        659
+      ],
+      [
+        "2026-W7",
+        668
+      ]
+    ],
+    "sourceSeasonTitleConflicts": [
+      "wr",
+      "te",
+      "k",
+      "dst"
+    ],
+    "blockers": [
+      "D/ST mapper requires player/name column but actual source exposes only Team: 32 raw rows, zero adapter candidates.",
+      "WR/TE/K/DST page titles say 2025 despite a 2026-10-24 Updated stamp; season-label inconsistency preserved, not silently corrected.",
+      "Existing adapter outputs per-game means; these are not summed remaining-season points or certified global ROS keep/drop ranks.",
+      "Full-PPR parser source fix passes tests in isolated verification-build; shared dist not rebuilt.",
+      "No ROS rows imported or live model priors rewritten. Preserve fail-closed protection on missing ROS rank."
+    ],
+    "ownedRosterReview": [
+      {
+        "name": "Ashton Jeanty",
+        "espnId": "4890973",
+        "team": "LV",
+        "position": "RB",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-rb",
+            "source_position": "RB",
+            "name": "Ashton Jeanty",
+            "team": "LV",
+            "remaining_games": 11.0,
+            "published_remaining_points": 163.5,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 14.9,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.264Z",
+            "page_title": "2026 RB Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-rb-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Malik Nabers",
+        "espnId": "4595348",
+        "team": "NYG",
+        "position": "WR",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-wr",
+            "source_position": "WR",
+            "name": "Malik Nabers",
+            "team": "NYG",
+            "remaining_games": 11.0,
+            "published_remaining_points": 172.1,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 15.6,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.192Z",
+            "page_title": "2025 WR Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-wr-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Josh Allen",
+        "espnId": "3918298",
+        "team": "BUF",
+        "position": "QB",
+        "group": "bench",
+        "matches": [
+          {
+            "source": "razzball-qb",
+            "source_position": "QB",
+            "name": "Josh Allen",
+            "team": "BUF",
+            "remaining_games": 11.0,
+            "published_remaining_points": 223.2,
+            "points_column": "STD PTS",
+            "published_or_total_div_games_ppg": 20.3,
+            "ppg_column": "STD PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.141Z",
+            "page_title": "2026 QB Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-qb-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Jameson Williams",
+        "espnId": "4426388",
+        "team": "DET",
+        "position": "WR",
+        "group": "bench",
+        "matches": [
+          {
+            "source": "razzball-wr",
+            "source_position": "WR",
+            "name": "Jameson Williams",
+            "team": "DET",
+            "remaining_games": 12.0,
+            "published_remaining_points": 121.6,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 10.1,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.192Z",
+            "page_title": "2025 WR Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-wr-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "George Kittle",
+        "espnId": "3040151",
+        "team": "SF",
+        "position": "TE",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-te",
+            "source_position": "TE",
+            "name": "George Kittle",
+            "team": "SF",
+            "remaining_games": 11.0,
+            "published_remaining_points": 145.4,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 13.2,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.212Z",
+            "page_title": "2025 TE Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-te-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Wan'Dale Robinson",
+        "espnId": "4569587",
+        "team": "TEN",
+        "position": "WR",
+        "group": "bench",
+        "matches": [
+          {
+            "source": "razzball-wr",
+            "source_position": "WR",
+            "name": "Wan\u2019Dale Robinson",
+            "team": "TEN",
+            "remaining_games": 11.0,
+            "published_remaining_points": 102.0,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 9.3,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.192Z",
+            "page_title": "2025 WR Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-wr-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Tony Pollard",
+        "espnId": "3916148",
+        "team": "TEN",
+        "position": "RB",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-rb",
+            "source_position": "RB",
+            "name": "Tony Pollard",
+            "team": "TEN",
+            "remaining_games": 11.0,
+            "published_remaining_points": 150.3,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 13.7,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.264Z",
+            "page_title": "2026 RB Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-rb-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Michael Wilson",
+        "espnId": "4360761",
+        "team": "ARI",
+        "position": "WR",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-wr",
+            "source_position": "WR",
+            "name": "Michael Wilson",
+            "team": "ARI",
+            "remaining_games": 11.0,
+            "published_remaining_points": 131.8,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 12.0,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.192Z",
+            "page_title": "2025 WR Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-wr-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Kenny Gainwell",
+        "espnId": "4371733",
+        "team": "TB",
+        "position": "RB",
+        "group": "bench",
+        "matches": [
+          {
+            "source": "razzball-rb",
+            "source_position": "RB",
+            "name": "Kenny Gainwell",
+            "team": "TB",
+            "remaining_games": 11.0,
+            "published_remaining_points": 60.5,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 5.5,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.264Z",
+            "page_title": "2026 RB Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-rb-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "RJ Harvey",
+        "espnId": "4568490",
+        "team": "DEN",
+        "position": "RB",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-rb",
+            "source_position": "RB",
+            "name": "RJ Harvey",
+            "team": "DEN",
+            "remaining_games": 11.0,
+            "published_remaining_points": 92.7,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 8.4,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.264Z",
+            "page_title": "2026 RB Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-rb-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Eddy Pineiro",
+        "espnId": "4034949",
+        "team": "SF",
+        "position": "K",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-k",
+            "source_position": "K",
+            "name": "Eddy Pineiro",
+            "team": "SF",
+            "remaining_games": 11.0,
+            "published_remaining_points": 86.17,
+            "points_column": "STD PTS",
+            "published_or_total_div_games_ppg": 7.833636363636364,
+            "ppg_column": "STD PTS / Games",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.110Z",
+            "page_title": "2025 Kicker Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-pk-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Tyjae Spears",
+        "espnId": "4428557",
+        "team": "TEN",
+        "position": "RB",
+        "group": "bench",
+        "matches": [
+          {
+            "source": "razzball-rb",
+            "source_position": "RB",
+            "name": "Tyjae Spears",
+            "team": "TEN",
+            "remaining_games": 11.0,
+            "published_remaining_points": 67.2,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 6.1,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.264Z",
+            "page_title": "2026 RB Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-rb-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Rashid Shaheed",
+        "espnId": "4032473",
+        "team": "SEA",
+        "position": "WR",
+        "group": "bench",
+        "matches": [
+          {
+            "source": "razzball-wr",
+            "source_position": "WR",
+            "name": "Rashid Shaheed",
+            "team": "SEA",
+            "remaining_games": 11.0,
+            "published_remaining_points": 68.2,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 6.2,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.192Z",
+            "page_title": "2025 WR Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-wr-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Colts D/ST",
+        "espnId": "-16011",
+        "team": "IND",
+        "position": "DST",
+        "group": "starter",
+        "matches": [],
+        "matchStatus": "missing_or_ambiguous",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Pat Freiermuth",
+        "espnId": "4361411",
+        "team": "PIT",
+        "position": "TE",
+        "group": "bench",
+        "matches": [
+          {
+            "source": "razzball-te",
+            "source_position": "TE",
+            "name": "Pat Freiermuth",
+            "team": "PIT",
+            "remaining_games": 11.0,
+            "published_remaining_points": 96.6,
+            "points_column": "PPR PTS",
+            "published_or_total_div_games_ppg": 8.8,
+            "ppg_column": "PPR PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.212Z",
+            "page_title": "2025 TE Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-te-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      },
+      {
+        "name": "Aaron Rodgers",
+        "espnId": "8439",
+        "team": "PIT",
+        "position": "QB",
+        "group": "starter",
+        "matches": [
+          {
+            "source": "razzball-qb",
+            "source_position": "QB",
+            "name": "Aaron Rodgers",
+            "team": "PIT",
+            "remaining_games": 11.0,
+            "published_remaining_points": 160.4,
+            "points_column": "STD PTS",
+            "published_or_total_div_games_ppg": 14.6,
+            "ppg_column": "STD PPG",
+            "source_updated_raw": "2026-10-24 05:07:39 AM EST",
+            "fetched_at": "2026-10-24T12:15:48.141Z",
+            "page_title": "2026 QB Fantasy Football Projections &amp; Rankings | Razzball",
+            "source_url": "https://football.razzball.com/projections-qb-restofseason/"
+          }
+        ],
+        "matchStatus": "unique_name_position_review_only",
+        "safeDropRankVerified": false
+      }
+    ]
+  },
+  "safety": {
+    "platformWrites": 0,
+    "modelPromotion": false,
+    "distRebuilt": false,
+    "modelStoreWritten": false
+  }
+}

@@ -1,3 +1,4 @@
+import { parseEspnWaiverSettings } from "../adapters/espn/espn-waiver-settings.js";
 import { sameScoringPeriod } from "../models/scoring-period.js";
 import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -486,9 +487,14 @@ export class ActionExecutor {
     for (const teamId of Object.keys(preconditions?.expectedRosterHashes ?? {})) teamIds.add(teamId);
     const rosters = new Map<string, Roster>();
     try {
-      const freshReader = this.reader as PlatformReader & { getLeagueFresh?: () => Promise<{ scoringPeriodId?: number; seasonId?: number }> };
+      const freshReader = this.reader as PlatformReader & { getLeagueFresh?: () => Promise<{ scoringPeriodId?: number; seasonId?: number; settings?: { acquisitionSettings?: Record<string, unknown> } }> };
       if (freshReader.getLeagueFresh) {
         const fresh = await freshReader.getLeagueFresh();
+        if (action.type === "waiver_claim" && fresh.settings?.acquisitionSettings) {
+          const settings = parseEspnWaiverSettings(fresh.settings.acquisitionSettings);
+          if (settings.type === "none" || (settings.type === "rolling" && action.faabBid !== undefined)) return { reason: "waiver_rules_changed" };
+          if (settings.type === "faab" && (action.faabBid === undefined || action.faabBid < (settings.minimum_bid ?? 0))) return { reason: "waiver_bid_required" };
+        }
         if (preconditions?.scoringPeriod && fresh.scoringPeriodId !== undefined) {
           const season = fresh.seasonId ?? preconditions.scoringPeriod.slice(0, 4);
           if (!sameScoringPeriod(`${season}-W${fresh.scoringPeriodId}`, preconditions.scoringPeriod)) return { reason: "scoring_period_precondition_mismatch" };
@@ -506,6 +512,17 @@ export class ActionExecutor {
       if (!current || rosterFingerprint(current) !== expectedHash) {
         return { reason: `roster_precondition_mismatch:${teamId}` };
       }
+    }
+
+    if (action.type === "waiver_claim" || action.type === "add_drop") {
+      const reader = this.reader as PlatformReader & { getAcquisitionStatus?: (leagueId: string, playerId: string) => Promise<string | undefined> };
+      if (reader.getAcquisitionStatus) {
+        try {
+          const ids = action.type === "waiver_claim" ? [action.addPlayerId] : action.addPlayerIds;
+          const expected = action.type === "waiver_claim" ? "WAIVERS" : "FREEAGENT";
+          for (const id of ids) if (await reader.getAcquisitionStatus(leagueExternalId, id) !== expected) return { reason: "acquisition_status_changed" };
+        } catch (error) { return { reason: "acquisition_status_unavailable", details: { error: errorMessage(error) } }; }
+      } else if (this.writer.platform === "espn") return { reason: "acquisition_status_unavailable" };
     }
 
     const needsFreeAgents = action.type === "add_drop" || action.type === "waiver_claim" || preconditions?.expectedFreeAgentIds;
@@ -672,6 +689,7 @@ function validateAction(action: AgentAction, state: RevalidatedState): Validatio
     case "waiver_claim": {
       const roster = state.rosters.get(action.teamId);
       if (!roster || !state.freeAgentIds || !state.waiverState) return { reason: "waiver_state_missing" };
+      if (action.priority !== undefined && (!Number.isSafeInteger(action.priority) || action.priority < 1)) return { reason: "invalid_waiver_priority" };
       if (!action.addPlayerId) return { reason: "waiver_add_player_missing" };
       if (action.dropPlayerId === action.addPlayerId) return { reason: "waiver_player_both_added_and_dropped" };
       if (!state.freeAgentIds.has(action.addPlayerId)) return { reason: "waiver_add_player_not_free" };

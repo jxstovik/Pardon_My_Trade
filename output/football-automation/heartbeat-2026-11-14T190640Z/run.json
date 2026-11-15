@@ -1,0 +1,2484 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-14T19:06:40.865Z",
+  "triggerLocal": "2026-11-14T14:06:40.865-05:00",
+  "finishedAt": "2026-11-14T19:17:44.560Z",
+  "status": "analysis_complete_execution_blocked",
+  "notificationRecommended": false,
+  "scope": {
+    "leagueId": "98806880",
+    "teamId": "7",
+    "season": 2026,
+    "scoringPeriod": "2026-W10",
+    "opponentTeamId": "2",
+    "configuredOwnerMatches": true,
+    "authenticatedOwnershipVerified": false,
+    "fantasySeasonEndWeek": 17
+  },
+  "schedule": {
+    "id": "pmt-football-lineup-and-free-agent-checks",
+    "status": "ACTIVE",
+    "rrule": "FREQ=WEEKLY;BYDAY=TH,SA,SU;BYHOUR=1;BYMINUTE=0;BYSECOND=0",
+    "targetThreadId": "01a1aba9-f206-7c11-8339-8ff0f4782974",
+    "fileSha256": "4e448080262bd14e61a905a59859dd5341cc640578a2eb4719ccac80b03715d6",
+    "workerModelRequired": "gpt-6.1-sol",
+    "workerReasoningRequired": "medium",
+    "workerInheritedOriginalConfiguration": true,
+    "triggerAt": "2026-11-14T19:06:40.865Z",
+    "localTrigger": "2026-11-14T14:06:40.865-05:00",
+    "lateTriggerSeconds": 47200.865,
+    "changed": false,
+    "observation": "Stored recurrence remains01:00local TH/SA/SU. Late dispatch cause not established; controller should inspect app availability/dispatch history rather than create a duplicate schedule.",
+    "controllerNextStep": "Investigate app availability/heartbeat dispatch history for late delivery; recurrence is correct, no duplicate or speculative cadence change recommended."
+  },
+  "steps": [
+    {
+      "step": "read_contracts_and_policies",
+      "status": "complete"
+    },
+    {
+      "step": "build",
+      "status": "passed"
+    },
+    {
+      "step": "writer_check",
+      "status": "complete",
+      "otherActiveRefreshWriters": 0,
+      "persistentMcpServices": "No other PMT refresh/migration/writer process found in host process inventory."
+    },
+    {
+      "step": "live_scope_roster_scoring_slots_pool_schedule_rules",
+      "status": "complete_public_reads",
+      "readAt": "2026-11-14T19:08:56.908Z",
+      "ownedPlayers": 15,
+      "availablePlayers": 902,
+      "privateAuthenticationVerified": false
+    },
+    {
+      "step": "private_pending_claims",
+      "status": "failed",
+      "code": "ESPN_AUTH_REQUIRED",
+      "retryable": false,
+      "retried": false,
+      "details": "No private claim count assumed."
+    },
+    {
+      "step": "calendar_reconciliation",
+      "status": "complete",
+      "calendar": {
+        "scoring_period": "2026-W10",
+        "week": 10,
+        "season": "2026",
+        "offseason": false,
+        "evaluated_at": "2026-11-14T19:09:42.046Z"
+      },
+      "espnWeek": 10,
+      "timing": "in_progress_refresh_not_pregame",
+      "firstKickoff": "2026-11-13T01:15:00.000Z",
+      "lastKickoff": "2026-11-17T01:15:00.000Z"
+    },
+    {
+      "step": "projection_refresh",
+      "status": "complete",
+      "isolated": true,
+      "rows": 689,
+      "priors": 1061,
+      "starterCoverage": {
+        "total": 9,
+        "covered": 9,
+        "starters": [
+          {
+            "playerId": "4890973",
+            "espnId": "4890973",
+            "name": "Ashton Jeanty",
+            "proTeamId": 13,
+            "slot": 2,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              13.59
+            ]
+          },
+          {
+            "playerId": "4595348",
+            "espnId": "4595348",
+            "name": "Malik Nabers",
+            "proTeamId": 19,
+            "slot": 4,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              16.07
+            ]
+          },
+          {
+            "playerId": "3918298",
+            "espnId": "3918298",
+            "name": "Josh Allen",
+            "proTeamId": 2,
+            "slot": 0,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              24.31
+            ]
+          },
+          {
+            "playerId": "4426388",
+            "espnId": "4426388",
+            "name": "Jameson Williams",
+            "proTeamId": 8,
+            "slot": 4,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              12.09
+            ]
+          },
+          {
+            "playerId": "3040151",
+            "espnId": "3040151",
+            "name": "George Kittle",
+            "proTeamId": 25,
+            "slot": 6,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              15.34
+            ]
+          },
+          {
+            "playerId": "3916148",
+            "espnId": "3916148",
+            "name": "Tony Pollard",
+            "proTeamId": 10,
+            "slot": 2,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              13.47
+            ]
+          },
+          {
+            "playerId": "4038815",
+            "espnId": "4038815",
+            "name": "Rico Dowdle",
+            "proTeamId": 23,
+            "slot": 23,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              9.76
+            ]
+          },
+          {
+            "playerId": "-16018",
+            "espnId": "-16018",
+            "name": "Saints D/ST",
+            "proTeamId": 18,
+            "slot": 16,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              4.73
+            ]
+          },
+          {
+            "playerId": "5081335",
+            "espnId": "5081335",
+            "name": "Drew Stevens",
+            "proTeamId": 28,
+            "slot": 17,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              7.58
+            ]
+          }
+        ]
+      },
+      "sources": {
+        "espn": 689
+      },
+      "errors": []
+    },
+    {
+      "step": "normalized_news_refresh",
+      "status": "complete",
+      "counts": {
+        "espn": 65,
+        "razzball": 0
+      },
+      "ingested": 65,
+      "degraded": {
+        "razzball": "Empty, unavailable, or unmappable; not evidence of no news."
+      },
+      "filters": {
+        "since": "2026-11-12T19:09:44.512Z",
+        "until": "2026-11-14T19:09:44.512Z"
+      },
+      "coverage": {
+        "basis": "persisted_player_linked_items_only",
+        "scoped_player_count": 15,
+        "players_with_news_count": 4,
+        "players_without_observed_news_count": 11,
+        "unresolved_player_count": 0,
+        "source_completeness": "unknown",
+        "no_news_is_not_clearance": true
+      },
+      "omissions": {
+        "out_of_scope_count": 2314,
+        "unmapped_item_count": 301,
+        "unmapped_high_impact_count": 72,
+        "outside_window_count": 117,
+        "outside_window_high_impact_count": 18,
+        "invalid_timestamp_count": 0,
+        "invalid_timestamp_high_impact_count": 0,
+        "compacted_item_count": 0,
+        "remaining_count": 0,
+        "remaining_high_impact_count": 0
+      }
+    },
+    {
+      "step": "individual_owned_and_candidate_news",
+      "status": "complete_bounded_review",
+      "ownedReports": 14,
+      "candidateReviews": 7,
+      "limit": 12,
+      "additionalSupportedCandidatesMayRemain": false,
+      "smythRoleWatch": "smyth-role-watch.json"
+    },
+    {
+      "step": "candidate_training",
+      "status": "complete",
+      "details": {
+        "startedAt": "2026-11-14T19:09:41.824Z",
+        "week": 10,
+        "status": "complete",
+        "platformWrites": 0,
+        "calendar": {
+          "scoring_period": "2026-W10",
+          "week": 10,
+          "season": "2026",
+          "offseason": false,
+          "evaluated_at": "2026-11-14T19:09:42.046Z"
+        },
+        "stage": "Candidate fit complete; no production promotion",
+        "news": {
+          "counts": {
+            "espn": 65,
+            "razzball": 0
+          },
+          "degraded": {
+            "razzball": "Empty, unavailable, or unmappable; not evidence of no news."
+          },
+          "filters": {
+            "since": "2026-11-12T19:09:44.512Z",
+            "until": "2026-11-14T19:09:44.512Z"
+          }
+        },
+        "completedAt": "2026-11-14T19:12:24.936Z",
+        "pregameArchive": "not_attempted_readonly_heartbeat",
+        "optionalPdf": "skipped_known_obsolete_helper_path"
+      },
+      "independentCoverage": {
+        "publishedWeekCompletion": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true,
+          "7": true,
+          "8": true,
+          "9": true,
+          "10": false,
+          "11": false,
+          "12": false,
+          "13": false,
+          "14": false,
+          "15": false,
+          "16": false,
+          "17": false,
+          "18": false
+        },
+        "latestFullyCompletedWeek": 9,
+        "requestedWeek": 10,
+        "latestCompletedWeek": 9,
+        "publishedGames": 136,
+        "cutoffWeekGames": 15,
+        "modeledInputRows": 3313,
+        "maxObservedWeek": 9,
+        "missingGameIds": [],
+        "futureRowsExcluded": true,
+        "allPublishedGamesCompleted": true,
+        "gameIds": [
+          "2026_01_ARI_LAC",
+          "2026_01_ATL_PIT",
+          "2026_01_BAL_IND",
+          "2026_01_BUF_HOU",
+          "2026_01_CHI_CAR",
+          "2026_01_CLE_JAX",
+          "2026_01_DAL_NYG",
+          "2026_01_DEN_KC",
+          "2026_01_GB_MIN",
+          "2026_01_MIA_LV",
+          "2026_01_NE_SEA",
+          "2026_01_NO_DET",
+          "2026_01_NYJ_TEN",
+          "2026_01_SF_LA",
+          "2026_01_TB_CIN",
+          "2026_01_WAS_PHI",
+          "2026_02_CAR_ATL",
+          "2026_02_CIN_HOU",
+          "2026_02_CLE_TB",
+          "2026_02_DET_BUF",
+          "2026_02_GB_NYJ",
+          "2026_02_IND_KC",
+          "2026_02_JAX_DEN",
+          "2026_02_LV_LAC",
+          "2026_02_MIA_SF",
+          "2026_02_MIN_CHI",
+          "2026_02_NO_BAL",
+          "2026_02_NYG_LA",
+          "2026_02_PHI_TEN",
+          "2026_02_PIT_NE",
+          "2026_02_SEA_ARI",
+          "2026_02_WAS_DAL",
+          "2026_03_ARI_SF",
+          "2026_03_ATL_GB",
+          "2026_03_BAL_DAL",
+          "2026_03_CAR_CLE",
+          "2026_03_CIN_PIT",
+          "2026_03_HOU_IND",
+          "2026_03_KC_MIA",
+          "2026_03_LAC_BUF",
+          "2026_03_LA_DEN",
+          "2026_03_LV_NO",
+          "2026_03_MIN_TB",
+          "2026_03_NE_JAX",
+          "2026_03_NYJ_DET",
+          "2026_03_PHI_CHI",
+          "2026_03_SEA_WAS",
+          "2026_03_TEN_NYG",
+          "2026_04_ARI_NYG",
+          "2026_04_ATL_NO",
+          "2026_04_DAL_HOU",
+          "2026_04_DEN_SF",
+          "2026_04_DET_CAR",
+          "2026_04_GB_TB",
+          "2026_04_IND_WAS",
+          "2026_04_JAX_CIN",
+          "2026_04_KC_LV",
+          "2026_04_LAC_SEA",
+          "2026_04_LA_PHI",
+          "2026_04_MIA_MIN",
+          "2026_04_NE_BUF",
+          "2026_04_NYJ_CHI",
+          "2026_04_PIT_CLE",
+          "2026_04_TEN_BAL",
+          "2026_05_BAL_ATL",
+          "2026_05_BUF_LA",
+          "2026_05_CHI_GB",
+          "2026_05_CIN_MIA",
+          "2026_05_CLE_NYJ",
+          "2026_05_DEN_LAC",
+          "2026_05_DET_ARI",
+          "2026_05_HOU_TEN",
+          "2026_05_IND_PIT",
+          "2026_05_LV_NE",
+          "2026_05_MIN_NO",
+          "2026_05_NYG_WAS",
+          "2026_05_PHI_JAX",
+          "2026_05_SF_SEA",
+          "2026_05_TB_DAL",
+          "2026_06_ARI_LA",
+          "2026_06_BAL_CLE",
+          "2026_06_BUF_LV",
+          "2026_06_CAR_PHI",
+          "2026_06_CHI_ATL",
+          "2026_06_DAL_GB",
+          "2026_06_HOU_JAX",
+          "2026_06_LAC_KC",
+          "2026_06_NO_NYG",
+          "2026_06_NYJ_NE",
+          "2026_06_PIT_TB",
+          "2026_06_SEA_DEN",
+          "2026_06_TEN_IND",
+          "2026_06_WAS_SF",
+          "2026_07_CIN_BAL",
+          "2026_07_CLE_TEN",
+          "2026_07_DAL_PHI",
+          "2026_07_DEN_ARI",
+          "2026_07_GB_DET",
+          "2026_07_IND_MIN",
+          "2026_07_KC_SEA",
+          "2026_07_LA_LV",
+          "2026_07_MIA_NYJ",
+          "2026_07_NE_CHI",
+          "2026_07_NYG_HOU",
+          "2026_07_PIT_NO",
+          "2026_07_SF_ATL",
+          "2026_07_TB_CAR",
+          "2026_08_ARI_DAL",
+          "2026_08_ATL_TB",
+          "2026_08_BAL_BUF",
+          "2026_08_CAR_GB",
+          "2026_08_CHI_SEA",
+          "2026_08_CLE_PIT",
+          "2026_08_IND_JAX",
+          "2026_08_KC_DEN",
+          "2026_08_LAC_LA",
+          "2026_08_LV_NYJ",
+          "2026_08_MIN_DET",
+          "2026_08_NE_MIA",
+          "2026_08_PHI_WAS",
+          "2026_08_TEN_CIN",
+          "2026_09_ARI_SEA",
+          "2026_09_BUF_MIN",
+          "2026_09_CIN_ATL",
+          "2026_09_CLE_NO",
+          "2026_09_DAL_IND",
+          "2026_09_DEN_CAR",
+          "2026_09_DET_MIA",
+          "2026_09_GB_NE",
+          "2026_09_HOU_LAC",
+          "2026_09_JAX_BAL",
+          "2026_09_LA_WAS",
+          "2026_09_LV_SF",
+          "2026_09_NYG_PHI",
+          "2026_09_NYJ_KC",
+          "2026_09_TB_CHI"
+        ]
+      }
+    },
+    {
+      "step": "owned_lineup_before_acquisitions",
+      "status": "preview_complete_execution_skipped_auth_block",
+      "currentLegal": true,
+      "currentPoints": 110.71011615560715,
+      "optimalPoints": 111.16993749831427,
+      "gain": 0.45982134270711583,
+      "changes": [
+        {
+          "playerId": "4426388",
+          "from": "WR",
+          "to": "FLEX",
+          "name": "Jameson Williams"
+        },
+        {
+          "playerId": "4038815",
+          "from": "FLEX",
+          "to": "BN",
+          "name": "Rico Dowdle"
+        },
+        {
+          "playerId": "4569587",
+          "from": "BN",
+          "to": "WR",
+          "name": "Wan'Dale Robinson"
+        }
+      ]
+    },
+    {
+      "step": "acquisition_comparison",
+      "status": "read_only_complete_bounded_execution_blocked",
+      "rawAlternatives": 7,
+      "positiveTimestampedKickerReviews": 0,
+      "currentWeekLockEligibleAlternatives": 7,
+      "lockedUnownedExcluded": 43
+    },
+    {
+      "step": "queue_approve_execute",
+      "status": "skipped_ESPN_AUTH_REQUIRED",
+      "newProposals": 0,
+      "newApprovals": 0,
+      "newSubmissions": 0
+    },
+    {
+      "step": "final_lineup",
+      "status": "preview_complete_execution_skipped_auth_block",
+      "currentLegal": true,
+      "currentPoints": 110.71011615560715,
+      "optimalPoints": 111.16993749831427,
+      "gain": 0.45982134270711583
+    },
+    {
+      "step": "pregame_archive",
+      "status": "skipped_after_first_kickoff",
+      "details": "Week10 already started Thursday; no new pregame label or archive attempted."
+    },
+    {
+      "step": "optional_pdf_publication",
+      "status": "skipped_known_obsolete_helper",
+      "details": "No source tooling changed; prior PDFs are not current evidence."
+    }
+  ],
+  "model": {
+    "status": "candidate_not_promoted",
+    "modelVersion": "weekly-2026-W10-19789406c2bc-368dedd8bda2-d1284c4271e7",
+    "builtAt": "2026-11-14T19:10:40.473294+00:00",
+    "cutoffWeek": 9,
+    "completedOutcomeCoverage": {
+      "cutoffWeek": 9,
+      "gameIds": [
+        "2026_01_ARI_LAC",
+        "2026_01_ATL_PIT",
+        "2026_01_BAL_IND",
+        "2026_01_BUF_HOU",
+        "2026_01_CHI_CAR",
+        "2026_01_CLE_JAX",
+        "2026_01_DAL_NYG",
+        "2026_01_DEN_KC",
+        "2026_01_GB_MIN",
+        "2026_01_MIA_LV",
+        "2026_01_NE_SEA",
+        "2026_01_NO_DET",
+        "2026_01_NYJ_TEN",
+        "2026_01_SF_LA",
+        "2026_01_TB_CIN",
+        "2026_01_WAS_PHI",
+        "2026_02_CAR_ATL",
+        "2026_02_CIN_HOU",
+        "2026_02_CLE_TB",
+        "2026_02_DET_BUF",
+        "2026_02_GB_NYJ",
+        "2026_02_IND_KC",
+        "2026_02_JAX_DEN",
+        "2026_02_LV_LAC",
+        "2026_02_MIA_SF",
+        "2026_02_MIN_CHI",
+        "2026_02_NO_BAL",
+        "2026_02_NYG_LA",
+        "2026_02_PHI_TEN",
+        "2026_02_PIT_NE",
+        "2026_02_SEA_ARI",
+        "2026_02_WAS_DAL",
+        "2026_03_ARI_SF",
+        "2026_03_ATL_GB",
+        "2026_03_BAL_DAL",
+        "2026_03_CAR_CLE",
+        "2026_03_CIN_PIT",
+        "2026_03_HOU_IND",
+        "2026_03_KC_MIA",
+        "2026_03_LAC_BUF",
+        "2026_03_LA_DEN",
+        "2026_03_LV_NO",
+        "2026_03_MIN_TB",
+        "2026_03_NE_JAX",
+        "2026_03_NYJ_DET",
+        "2026_03_PHI_CHI",
+        "2026_03_SEA_WAS",
+        "2026_03_TEN_NYG",
+        "2026_04_ARI_NYG",
+        "2026_04_ATL_NO",
+        "2026_04_DAL_HOU",
+        "2026_04_DEN_SF",
+        "2026_04_DET_CAR",
+        "2026_04_GB_TB",
+        "2026_04_IND_WAS",
+        "2026_04_JAX_CIN",
+        "2026_04_KC_LV",
+        "2026_04_LAC_SEA",
+        "2026_04_LA_PHI",
+        "2026_04_MIA_MIN",
+        "2026_04_NE_BUF",
+        "2026_04_NYJ_CHI",
+        "2026_04_PIT_CLE",
+        "2026_04_TEN_BAL",
+        "2026_05_BAL_ATL",
+        "2026_05_BUF_LA",
+        "2026_05_CHI_GB",
+        "2026_05_CIN_MIA",
+        "2026_05_CLE_NYJ",
+        "2026_05_DEN_LAC",
+        "2026_05_DET_ARI",
+        "2026_05_HOU_TEN",
+        "2026_05_IND_PIT",
+        "2026_05_LV_NE",
+        "2026_05_MIN_NO",
+        "2026_05_NYG_WAS",
+        "2026_05_PHI_JAX",
+        "2026_05_SF_SEA",
+        "2026_05_TB_DAL",
+        "2026_06_ARI_LA",
+        "2026_06_BAL_CLE",
+        "2026_06_BUF_LV",
+        "2026_06_CAR_PHI",
+        "2026_06_CHI_ATL",
+        "2026_06_DAL_GB",
+        "2026_06_HOU_JAX",
+        "2026_06_LAC_KC",
+        "2026_06_NO_NYG",
+        "2026_06_NYJ_NE",
+        "2026_06_PIT_TB",
+        "2026_06_SEA_DEN",
+        "2026_06_TEN_IND",
+        "2026_06_WAS_SF",
+        "2026_07_CIN_BAL",
+        "2026_07_CLE_TEN",
+        "2026_07_DAL_PHI",
+        "2026_07_DEN_ARI",
+        "2026_07_GB_DET",
+        "2026_07_IND_MIN",
+        "2026_07_KC_SEA",
+        "2026_07_LA_LV",
+        "2026_07_MIA_NYJ",
+        "2026_07_NE_CHI",
+        "2026_07_NYG_HOU",
+        "2026_07_PIT_NO",
+        "2026_07_SF_ATL",
+        "2026_07_TB_CAR",
+        "2026_08_ARI_DAL",
+        "2026_08_ATL_TB",
+        "2026_08_BAL_BUF",
+        "2026_08_CAR_GB",
+        "2026_08_CHI_SEA",
+        "2026_08_CLE_PIT",
+        "2026_08_IND_JAX",
+        "2026_08_KC_DEN",
+        "2026_08_LAC_LA",
+        "2026_08_LV_NYJ",
+        "2026_08_MIN_DET",
+        "2026_08_NE_MIA",
+        "2026_08_PHI_WAS",
+        "2026_08_TEN_CIN",
+        "2026_09_ARI_SEA",
+        "2026_09_BUF_MIN",
+        "2026_09_CIN_ATL",
+        "2026_09_CLE_NO",
+        "2026_09_DAL_IND",
+        "2026_09_DEN_CAR",
+        "2026_09_DET_MIA",
+        "2026_09_GB_NE",
+        "2026_09_HOU_LAC",
+        "2026_09_JAX_BAL",
+        "2026_09_LA_WAS",
+        "2026_09_LV_SF",
+        "2026_09_NYG_PHI",
+        "2026_09_NYJ_KC",
+        "2026_09_TB_CHI"
+      ],
+      "completedGames": 136,
+      "cutoffGames": 15,
+      "currentSeasonStatsRows": 3313,
+      "maxObservedWeek": 9
+    },
+    "validation": {
+      "QB": {
+        "n": 664,
+        "model_mae": 6.305523356044045,
+        "model_rmse": 7.899620701842621,
+        "baseline_mae": 6.840054400101094,
+        "baseline_rmse": 8.745470772773915,
+        "model_bias": 0.17666730977480924,
+        "baseline_bias": 0.15712808376524584,
+        "q10_q90_coverage": 0.7454819277108434,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 13.356144578313252,
+        "mean_score_predicted": 13.532811888088062,
+        "mean_score_baseline": 13.513272662078498,
+        "final_training_rows": 7199,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "RB": {
+        "n": 1575,
+        "model_mae": 4.418761786359458,
+        "model_rmse": 6.140907935424215,
+        "baseline_mae": 4.372439877023188,
+        "baseline_rmse": 6.445443654194985,
+        "model_bias": 0.07276808047945124,
+        "baseline_bias": -0.4014324451363098,
+        "q10_q90_coverage": 0.8171428571428572,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 7.585625396825397,
+        "mean_score_predicted": 7.658393477304847,
+        "mean_score_baseline": 7.184192951689086,
+        "final_training_rows": 17154,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "WR": {
+        "n": 2511,
+        "model_mae": 4.259189622872146,
+        "model_rmse": 5.774551183060853,
+        "baseline_mae": 4.375647282891668,
+        "baseline_rmse": 6.165648953351186,
+        "model_bias": 0.2976952157338492,
+        "baseline_bias": 0.06455432508463911,
+        "q10_q90_coverage": 0.8470728793309439,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 6.667630426125049,
+        "mean_score_predicted": 6.965325641858899,
+        "mean_score_baseline": 6.732184751209689,
+        "final_training_rows": 27078,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "TE": {
+        "n": 1287,
+        "model_mae": 3.5747511648766768,
+        "model_rmse": 5.0402821845432735,
+        "baseline_mae": 3.5879436816528147,
+        "baseline_rmse": 5.216754707331339,
+        "model_bias": 0.04387440368947951,
+        "baseline_bias": -0.2819333923872812,
+        "q10_q90_coverage": 0.8515928515928516,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 5.603092463092463,
+        "mean_score_predicted": 5.646966866781943,
+        "mean_score_baseline": 5.321159070705182,
+        "final_training_rows": 13585,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "K": {
+        "n": 543,
+        "model_mae": 3.8503008860763783,
+        "model_rmse": 4.822400900820652,
+        "baseline_mae": 4.1096639985277195,
+        "baseline_rmse": 5.1657144255106,
+        "model_bias": -0.28383236083811486,
+        "baseline_bias": 0.002417213116182175,
+        "q10_q90_coverage": 0.7845303867403315,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 8.149171270718233,
+        "mean_score_predicted": 7.865338909880117,
+        "mean_score_baseline": 8.151588483834415,
+        "final_training_rows": 6072,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "DST": {
+        "n": 544,
+        "model_mae": 4.83131445658407,
+        "model_rmse": 6.194070446197261,
+        "baseline_mae": 5.321245377886003,
+        "baseline_rmse": 6.822716177999133,
+        "model_bias": -0.4599421745855512,
+        "baseline_bias": -0.11565156402013017,
+        "q10_q90_coverage": 0.7886029411764706,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 5.801470588235294,
+        "mean_score_predicted": 5.341528413649742,
+        "mean_score_baseline": 5.685819024215164,
+        "final_training_rows": 6062,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      }
+    },
+    "hashChecks": {
+      "modelCodeSha256": {
+        "path": "python/scout/weekly_scout.py",
+        "sha256": "368dedd8bda24e7029b9824e45c83aad6b37b70ea8be28eed57e1aacdcf662e6",
+        "matches": true
+      },
+      "scoringCodeSha256": {
+        "path": "python/scout/dst_scoring.py",
+        "sha256": "d1284c4271e70fb879a50c5ef5537f32eb3d0624c36a53f361cbbc3483af1c54",
+        "matches": true
+      },
+      "waiverHorizonCodeSha256": {
+        "path": "python/scout/waiver_horizon.py",
+        "sha256": "9bc21c4a77a455e99f4f9e7d840de5302ba2dcab00324211183b6382bc508206",
+        "matches": true
+      },
+      "waiverHorizonSha256": {
+        "path": "artifacts/week10-2026-scout/waiver-horizon.json",
+        "sha256": "a21507721ae1fd06c8b21b599a99872d5e4c8b63db62bf2f17ab9152b7b7fdc3",
+        "matches": true
+      },
+      "dstTargetSourceSha256": {
+        "path": "data/scout/espn-dst-targets.json",
+        "sha256": "9a6279ae5cfac07c862f7d2c899f9a504bcf543d0bf3aaa23e7b7ab55730a7f6",
+        "matches": true
+      },
+      "stats": {
+        "path": "data/nflverse/stats_player_week_2026.csv",
+        "sha256": "19789406c2bc142b17890632d745ad3a8228077f0a01fda18a76b6e99fd97c2d",
+        "matches": true
+      },
+      "games": {
+        "path": "data/nflverse/games.csv",
+        "sha256": "7d791bb4776e81a3e7687d38da0a89563233bb2e419b2bd44261b36ba70c39e1",
+        "matches": true
+      }
+    },
+    "forecastCount": 487,
+    "matchedAvailable": 456,
+    "unmatchedAvailable": 446,
+    "healthyScenarioCoverageMissing": [],
+    "limitations": [
+      "Independent team draws",
+      "Q forecasts conditional on playing",
+      "One-point safety absent from source",
+      "Historical 2015-2025 D/ST component parity incomplete; captured 2026 ESPN targets rescored independently",
+      "No model promotion"
+    ],
+    "production": {
+      "savedAt": "2026-11-10T13:22:46.867Z",
+      "records": 1061,
+      "sha256": "dc43a032e6ce4cd5cf841dbd7ef8b2596dc072090517453ba3afc27749f23b52",
+      "unchanged": true,
+      "promotion": false
+    }
+  },
+  "lineup": {
+    "currentLegal": true,
+    "currentPoints": 110.71011615560715,
+    "optimalPoints": 111.16993749831427,
+    "expectedGain": 0.45982134270711583,
+    "recommendedStarters": [
+      {
+        "playerId": "3918298",
+        "slot": "QB",
+        "currentSlot": "QB",
+        "locked": false,
+        "eligiblePositions": [
+          "QB"
+        ],
+        "name": "Josh Allen",
+        "projectedPoints": 18.767249942847712
+      },
+      {
+        "playerId": "4890973",
+        "slot": "RB",
+        "currentSlot": "RB",
+        "locked": false,
+        "eligiblePositions": [
+          "RB",
+          "FLEX"
+        ],
+        "name": "Ashton Jeanty",
+        "projectedPoints": 14.110673463054074
+      },
+      {
+        "playerId": "3916148",
+        "slot": "RB",
+        "currentSlot": "RB",
+        "locked": false,
+        "eligiblePositions": [
+          "RB",
+          "FLEX"
+        ],
+        "name": "Tony Pollard",
+        "projectedPoints": 12.738420658387785
+      },
+      {
+        "playerId": "4595348",
+        "slot": "WR",
+        "currentSlot": "WR",
+        "locked": true,
+        "eligiblePositions": [
+          "WR",
+          "FLEX"
+        ],
+        "name": "Malik Nabers",
+        "projectedPoints": 18.344404342269787
+      },
+      {
+        "playerId": "4569587",
+        "slot": "WR",
+        "currentSlot": "BN",
+        "locked": false,
+        "eligiblePositions": [
+          "WR",
+          "FLEX"
+        ],
+        "name": "Wan'Dale Robinson",
+        "projectedPoints": 10.619376955826192
+      },
+      {
+        "playerId": "3040151",
+        "slot": "TE",
+        "currentSlot": "TE",
+        "locked": false,
+        "eligiblePositions": [
+          "TE",
+          "FLEX"
+        ],
+        "name": "George Kittle",
+        "projectedPoints": 11.568016989778014
+      },
+      {
+        "playerId": "-16018",
+        "slot": "DST",
+        "currentSlot": "DST",
+        "locked": false,
+        "eligiblePositions": [
+          "DST"
+        ],
+        "name": "Saints D/ST",
+        "projectedPoints": 5.083678604046658
+      },
+      {
+        "playerId": "5081335",
+        "slot": "K",
+        "currentSlot": "K",
+        "locked": true,
+        "eligiblePositions": [
+          "K"
+        ],
+        "name": "Drew Stevens",
+        "projectedPoints": 8.660592294471781
+      },
+      {
+        "playerId": "4426388",
+        "slot": "FLEX",
+        "currentSlot": "WR",
+        "locked": false,
+        "eligiblePositions": [
+          "WR",
+          "FLEX"
+        ],
+        "name": "Jameson Williams",
+        "projectedPoints": 11.277524247632266
+      }
+    ],
+    "changes": [
+      {
+        "playerId": "4426388",
+        "from": "WR",
+        "to": "FLEX",
+        "name": "Jameson Williams"
+      },
+      {
+        "playerId": "4038815",
+        "from": "FLEX",
+        "to": "BN",
+        "name": "Rico Dowdle"
+      },
+      {
+        "playerId": "4569587",
+        "from": "BN",
+        "to": "WR",
+        "name": "Wan'Dale Robinson"
+      }
+    ],
+    "unavailable": [
+      {
+        "playerId": "4371733",
+        "name": "Kenny Gainwell",
+        "status": "ACTIVE",
+        "bye": true
+      },
+      {
+        "playerId": "4568490",
+        "name": "RJ Harvey",
+        "status": "INJURY_RESERVE",
+        "bye": true
+      }
+    ],
+    "executed": false,
+    "postWriteVerified": false
+  },
+  "injuryWatch": {
+    "snapshot_id": "espn-98806880-72ad994e-499b-4c42-86c3-2b96ca755c27-1794683374927",
+    "scope": {
+      "league_id": "98806880",
+      "team_id": "7",
+      "selection": "roster_plus_explicit_candidates"
+    },
+    "coverage": {
+      "basis": "snapshot_status_not_live_injury_feed",
+      "scoped_player_count": 15,
+      "unresolved_player_count": 0,
+      "unknown_status_count": 0,
+      "source_completeness": "unknown",
+      "no_news_is_not_clearance": true,
+      "stale_alert_count": 0
+    },
+    "omissions": {
+      "out_of_scope_count": 1046,
+      "non_alert_status_count": 12,
+      "remaining_count": 0,
+      "remaining_high_impact_count": 0
+    },
+    "window_semantics": "Freshness only; stale current injury statuses remain visible.",
+    "players": [
+      {
+        "player_id": "4568490",
+        "full_name": "RJ Harvey",
+        "team": "7",
+        "positions": [
+          "RB"
+        ],
+        "status": "injured_reserve",
+        "injury_status": "injured_reserve",
+        "updated_at": "2026-11-14T19:09:36.126Z",
+        "stale": false,
+        "impact": "high"
+      },
+      {
+        "player_id": "4361411",
+        "full_name": "Pat Freiermuth",
+        "team": "23",
+        "positions": [
+          "TE"
+        ],
+        "status": "questionable",
+        "injury_status": "questionable",
+        "updated_at": "2026-11-14T19:09:36.126Z",
+        "stale": false,
+        "impact": "medium"
+      },
+      {
+        "player_id": "4428557",
+        "full_name": "Tyjae Spears",
+        "team": "10",
+        "positions": [
+          "RB"
+        ],
+        "status": "questionable",
+        "injury_status": "questionable",
+        "updated_at": "2026-11-14T19:09:36.126Z",
+        "stale": false,
+        "impact": "medium"
+      }
+    ],
+    "total_count": 3,
+    "returned_count": 3,
+    "truncated": false,
+    "next_cursor": null,
+    "filters": {
+      "since": "2026-11-12T19:09:44.512Z",
+      "until": "2026-11-14T19:09:44.512Z"
+    },
+    "next_step": null
+  },
+  "newsEvidence": {
+    "newsRefreshedAt": "2026-11-14T19:09:45.317Z",
+    "recoveries": [],
+    "additionReviews": [
+      {
+        "playerId": "-16011",
+        "name": "Colts D/ST",
+        "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100",
+        "publishedAt": null,
+        "retrievedAt": "2026-11-14T19:08:56.908Z",
+        "quote": "{\"id\":\"401873059\",\"name\":\"Miami Dolphins at Indianapolis Colts\",\"kickoff\":\"2026-11-15T18:00:00.000Z\",\"week\":10,\"season\":\"2026\",\"teams\":[{\"id\":\"11\",\"abbreviation\":\"IND\"},{\"id\":\"15\",\"abbreviation\":\"MIA\"}],\"state\":\"pre\"}",
+        "availableThisWeek": true,
+        "hasOffensiveRole": true,
+        "eligibleForSubmission": false,
+        "reviewOutcome": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "note": "Schedule retrieval timestamp is preserved separately; publication time is unknown and is not invented. Reconfirm source provenance before any submission."
+      },
+      {
+        "playerId": "-16025",
+        "name": "49ers D/ST",
+        "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100",
+        "publishedAt": null,
+        "retrievedAt": "2026-11-14T19:08:56.908Z",
+        "quote": "{\"id\":\"401873063\",\"name\":\"San Francisco 49ers at Dallas Cowboys\",\"kickoff\":\"2026-11-15T21:25:00.000Z\",\"week\":10,\"season\":\"2026\",\"teams\":[{\"id\":\"6\",\"abbreviation\":\"DAL\"},{\"id\":\"25\",\"abbreviation\":\"SF\"}],\"state\":\"pre\"}",
+        "availableThisWeek": true,
+        "hasOffensiveRole": true,
+        "eligibleForSubmission": false,
+        "reviewOutcome": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "note": "Schedule retrieval timestamp is preserved separately; publication time is unknown and is not invented. Reconfirm source provenance before any submission."
+      },
+      {
+        "playerId": "-16012",
+        "name": "Chiefs D/ST",
+        "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100",
+        "publishedAt": null,
+        "retrievedAt": "2026-11-14T19:08:56.908Z",
+        "quote": "{\"id\":\"401873058\",\"name\":\"Kansas City Chiefs at Atlanta Falcons\",\"kickoff\":\"2026-11-15T18:00:00.000Z\",\"week\":10,\"season\":\"2026\",\"teams\":[{\"id\":\"1\",\"abbreviation\":\"ATL\"},{\"id\":\"12\",\"abbreviation\":\"KC\"}],\"state\":\"pre\"}",
+        "availableThisWeek": true,
+        "hasOffensiveRole": true,
+        "eligibleForSubmission": false,
+        "reviewOutcome": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "note": "Schedule retrieval timestamp is preserved separately; publication time is unknown and is not invented. Reconfirm source provenance before any submission."
+      },
+      {
+        "playerId": "-16008",
+        "name": "Lions D/ST",
+        "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100",
+        "publishedAt": null,
+        "retrievedAt": "2026-11-14T19:08:56.908Z",
+        "quote": "{\"id\":\"401873053\",\"name\":\"New England Patriots at Detroit Lions\",\"kickoff\":\"2026-11-15T14:30:00.000Z\",\"week\":10,\"season\":\"2026\",\"teams\":[{\"id\":\"8\",\"abbreviation\":\"DET\"},{\"id\":\"17\",\"abbreviation\":\"NE\"}],\"state\":\"pre\"}",
+        "availableThisWeek": true,
+        "hasOffensiveRole": true,
+        "eligibleForSubmission": false,
+        "reviewOutcome": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "note": "Schedule retrieval timestamp is preserved separately; publication time is unknown and is not invented. Reconfirm source provenance before any submission."
+      },
+      {
+        "playerId": "-16022",
+        "name": "Cardinals D/ST",
+        "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100",
+        "publishedAt": null,
+        "retrievedAt": "2026-11-14T19:08:56.908Z",
+        "quote": "{\"id\":\"401873061\",\"name\":\"Los Angeles Rams at Arizona Cardinals\",\"kickoff\":\"2026-11-15T21:05:00.000Z\",\"week\":10,\"season\":\"2026\",\"teams\":[{\"id\":\"22\",\"abbreviation\":\"ARI\"},{\"id\":\"14\",\"abbreviation\":\"LAR\"}],\"state\":\"pre\"}",
+        "availableThisWeek": true,
+        "hasOffensiveRole": true,
+        "eligibleForSubmission": false,
+        "reviewOutcome": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "note": "Schedule retrieval timestamp is preserved separately; publication time is unknown and is not invented. Reconfirm source provenance before any submission."
+      },
+      {
+        "playerId": "-16024",
+        "name": "Chargers D/ST",
+        "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100",
+        "publishedAt": null,
+        "retrievedAt": "2026-11-14T19:08:56.908Z",
+        "quote": "{\"id\":\"401873065\",\"name\":\"Los Angeles Chargers at Baltimore Ravens\",\"kickoff\":\"2026-11-17T01:15:00.000Z\",\"week\":10,\"season\":\"2026\",\"teams\":[{\"id\":\"33\",\"abbreviation\":\"BAL\"},{\"id\":\"24\",\"abbreviation\":\"LAC\"}],\"state\":\"pre\"}",
+        "availableThisWeek": true,
+        "hasOffensiveRole": true,
+        "eligibleForSubmission": false,
+        "reviewOutcome": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "note": "Schedule retrieval timestamp is preserved separately; publication time is unknown and is not invented. Reconfirm source provenance before any submission."
+      },
+      {
+        "playerId": "4887558",
+        "name": "Emanuel Wilson",
+        "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4887558",
+        "publishedAt": "2026-11-11T02:28:46.000Z",
+        "retrievedAt": "2026-11-14T19:13:55.324Z",
+        "quote": "Wilson didn't log any snaps during Sunday's win over the Cardinals. Wilson averaged 18.2 carries for 66.7 yards over six games between Week 2 and Week 7, culminating with a 24-100-1 rushing line against Kansas City. However, that opportunity came while Jadarian Price and Zach Charbonnet were on IR. Both running backs returned ahead of the Week 8 matchup against Chicago, and Wilson hasn't played a single offensive snap in two games since. As long as Charbonnet and Price are both healthy, it appears Wilson is going to be relegated primarily to a special-teams role, if he plays at all.",
+        "availableThisWeek": false,
+        "hasOffensiveRole": false,
+        "eligibleForSubmission": false,
+        "reviewOutcome": "no_current_offensive_snaps"
+      }
+    ],
+    "executionBlocked": "ESPN_AUTH_REQUIRED",
+    "modelVersion": "weekly-2026-W10-19789406c2bc-368dedd8bda2-d1284c4271e7",
+    "newsRefreshedAtBasis": "Actual current-refresh ingested_at; if no scoped item, explicit source refresh cutoff"
+  },
+  "acquisitions": {
+    "alternativeComparisons": [
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "-16011",
+          "dropPlayerId": "-16018",
+          "priority": 1
+        },
+        "nearTermGain": 7.103949132281649,
+        "seasonGain": 6.06338392861004,
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 3.204077278108606
+          },
+          {
+            "week": 11,
+            "gain": 0.48780792435626097
+          },
+          {
+            "week": 12,
+            "gain": 3.4120639298167816
+          },
+          {
+            "week": 13,
+            "gain": -5.01624853840645
+          },
+          {
+            "week": 14,
+            "gain": 3.328107981887799
+          },
+          {
+            "week": 15,
+            "gain": 2.685016436366368
+          },
+          {
+            "week": 16,
+            "gain": -4.439668982258607
+          },
+          {
+            "week": 17,
+            "gain": 2.4022278987392807
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.6640625,
+            "worsens": 0.3359375,
+            "ties": 0,
+            "expectedGain": 3.204077278108606,
+            "favorableMarginLowerBound": 0.21004571093600125
+          },
+          "nearTerm": {
+            "improves": 0.6875,
+            "worsens": 0.3125,
+            "ties": 0,
+            "expectedGain": 7.103949132281649,
+            "favorableMarginLowerBound": 0.25912189863913027
+          },
+          "season": {
+            "improves": 0.59765625,
+            "worsens": 0.40234375,
+            "ties": 0,
+            "expectedGain": 6.06338392861004,
+            "favorableMarginLowerBound": 0.07271986746343158
+          },
+          "probabilityAddedPlayerStarts": 0.875,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 10,
+              "gain": 3.204077278108606
+            },
+            {
+              "week": 11,
+              "gain": 0.48780792435626097
+            },
+            {
+              "week": 12,
+              "gain": 3.4120639298167816
+            },
+            {
+              "week": 13,
+              "gain": -5.01624853840645
+            },
+            {
+              "week": 14,
+              "gain": 3.328107981887799
+            },
+            {
+              "week": 15,
+              "gain": 2.685016436366368
+            },
+            {
+              "week": 16,
+              "gain": -4.439668982258607
+            },
+            {
+              "week": 17,
+              "gain": 2.4022278987392807
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "stream_defense",
+        "suggestions": {
+          "nearTermMet": true,
+          "seasonMet": false
+        },
+        "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.664/0.336, next three 0.688/0.313; expected gains 7.10 near / 6.06 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "Colts D/ST",
+        "dropName": "Saints D/ST",
+        "acquisitionStatus": "FREEAGENT",
+        "sourceReview": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "eligibleForSubmission": false,
+        "executionBlock": "ESPN_AUTH_REQUIRED; private pending reservations unknown"
+      },
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "-16025",
+          "dropPlayerId": "-16018",
+          "priority": 1
+        },
+        "nearTermGain": 16.522109577181283,
+        "seasonGain": 34.90235384236994,
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 2.0862078420739043
+          },
+          {
+            "week": 11,
+            "gain": 7.302665164281036
+          },
+          {
+            "week": 12,
+            "gain": 7.133236570826344
+          },
+          {
+            "week": 13,
+            "gain": 3.789966181746657
+          },
+          {
+            "week": 14,
+            "gain": 3.7778762232036365
+          },
+          {
+            "week": 15,
+            "gain": 5.901749308644165
+          },
+          {
+            "week": 16,
+            "gain": 0.5902133284835998
+          },
+          {
+            "week": 17,
+            "gain": 4.320439223110596
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.65625,
+            "worsens": 0.34375,
+            "ties": 0,
+            "expectedGain": 2.0862078420739043,
+            "favorableMarginLowerBound": 0.1937602800502292
+          },
+          "nearTerm": {
+            "improves": 0.89453125,
+            "worsens": 0.10546875,
+            "ties": 0,
+            "expectedGain": 16.522109577181283,
+            "favorableMarginLowerBound": 0.7122733842456183
+          },
+          "season": {
+            "improves": 0.90234375,
+            "worsens": 0.09765625,
+            "ties": 0,
+            "expectedGain": 34.90235384236994,
+            "favorableMarginLowerBound": 0.7304751750313933
+          },
+          "probabilityAddedPlayerStarts": 1,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 10,
+              "gain": 2.0862078420739043
+            },
+            {
+              "week": 11,
+              "gain": 7.302665164281036
+            },
+            {
+              "week": 12,
+              "gain": 7.133236570826344
+            },
+            {
+              "week": 13,
+              "gain": 3.789966181746657
+            },
+            {
+              "week": 14,
+              "gain": 3.7778762232036365
+            },
+            {
+              "week": 15,
+              "gain": 5.901749308644165
+            },
+            {
+              "week": 16,
+              "gain": 0.5902133284835998
+            },
+            {
+              "week": 17,
+              "gain": 4.320439223110596
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "stream_defense",
+        "suggestions": {
+          "nearTermMet": true,
+          "seasonMet": true
+        },
+        "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.656/0.344, next three 0.895/0.105; expected gains 16.52 near / 34.90 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "49ers D/ST",
+        "dropName": "Saints D/ST",
+        "acquisitionStatus": "FREEAGENT",
+        "sourceReview": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "eligibleForSubmission": false,
+        "executionBlock": "ESPN_AUTH_REQUIRED; private pending reservations unknown"
+      },
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "-16012",
+          "dropPlayerId": "-16018",
+          "priority": 1
+        },
+        "nearTermGain": 8.705686982509116,
+        "seasonGain": 10.474477920502501,
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 2.3098409366596613
+          },
+          {
+            "week": 11,
+            "gain": 4.980892884684637
+          },
+          {
+            "week": 12,
+            "gain": 1.4149531611648172
+          },
+          {
+            "week": 13,
+            "gain": 1.1001278782570125
+          },
+          {
+            "week": 14,
+            "gain": -1.3312698983214144
+          },
+          {
+            "week": 15,
+            "gain": 1.1016595534202906
+          },
+          {
+            "week": 16,
+            "gain": -2.0967979902674325
+          },
+          {
+            "week": 17,
+            "gain": 2.9950713949049286
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.6328125,
+            "worsens": 0.3671875,
+            "ties": 0,
+            "expectedGain": 2.3098409366596613,
+            "favorableMarginLowerBound": 0.14511544647732538
+          },
+          "nearTerm": {
+            "improves": 0.76953125,
+            "worsens": 0.23046875,
+            "ties": 0,
+            "expectedGain": 8.705686982509116,
+            "favorableMarginLowerBound": 0.4337792792115484
+          },
+          "season": {
+            "improves": 0.703125,
+            "worsens": 0.296875,
+            "ties": 0,
+            "expectedGain": 10.474477920502501,
+            "favorableMarginLowerBound": 0.29202975377177
+          },
+          "probabilityAddedPlayerStarts": 1,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 10,
+              "gain": 2.3098409366596613
+            },
+            {
+              "week": 11,
+              "gain": 4.980892884684637
+            },
+            {
+              "week": 12,
+              "gain": 1.4149531611648172
+            },
+            {
+              "week": 13,
+              "gain": 1.1001278782570125
+            },
+            {
+              "week": 14,
+              "gain": -1.3312698983214144
+            },
+            {
+              "week": 15,
+              "gain": 1.1016595534202906
+            },
+            {
+              "week": 16,
+              "gain": -2.0967979902674325
+            },
+            {
+              "week": 17,
+              "gain": 2.9950713949049286
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "stream_defense",
+        "suggestions": {
+          "nearTermMet": true,
+          "seasonMet": false
+        },
+        "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.633/0.367, next three 0.770/0.230; expected gains 8.71 near / 10.47 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "Chiefs D/ST",
+        "dropName": "Saints D/ST",
+        "acquisitionStatus": "FREEAGENT",
+        "sourceReview": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "eligibleForSubmission": false,
+        "executionBlock": "ESPN_AUTH_REQUIRED; private pending reservations unknown"
+      },
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "-16008",
+          "dropPlayerId": "-16018",
+          "priority": 1
+        },
+        "nearTermGain": 7.222347177105745,
+        "seasonGain": 12.070048149365586,
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.2012715001507344
+          },
+          {
+            "week": 11,
+            "gain": 3.5330406995101704
+          },
+          {
+            "week": 12,
+            "gain": 2.4880349774448405
+          },
+          {
+            "week": 13,
+            "gain": 1.5094741186345526
+          },
+          {
+            "week": 14,
+            "gain": 2.661177525506676
+          },
+          {
+            "week": 15,
+            "gain": 2.2946003830296604
+          },
+          {
+            "week": 16,
+            "gain": -0.02031859100614497
+          },
+          {
+            "week": 17,
+            "gain": -1.597232463904902
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.58984375,
+            "worsens": 0.41015625,
+            "ties": 0,
+            "expectedGain": 1.2012715001507344,
+            "favorableMarginLowerBound": 0.056722032137591194
+          },
+          "nearTerm": {
+            "improves": 0.73828125,
+            "worsens": 0.26171875,
+            "ties": 0,
+            "expectedGain": 7.222347177105745,
+            "favorableMarginLowerBound": 0.3666699257802087
+          },
+          "season": {
+            "improves": 0.7421875,
+            "worsens": 0.2578125,
+            "ties": 0,
+            "expectedGain": 12.070048149365586,
+            "favorableMarginLowerBound": 0.3750174400064889
+          },
+          "probabilityAddedPlayerStarts": 1,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 10,
+              "gain": 1.2012715001507344
+            },
+            {
+              "week": 11,
+              "gain": 3.5330406995101704
+            },
+            {
+              "week": 12,
+              "gain": 2.4880349774448405
+            },
+            {
+              "week": 13,
+              "gain": 1.5094741186345526
+            },
+            {
+              "week": 14,
+              "gain": 2.661177525506676
+            },
+            {
+              "week": 15,
+              "gain": 2.2946003830296604
+            },
+            {
+              "week": 16,
+              "gain": -0.02031859100614497
+            },
+            {
+              "week": 17,
+              "gain": -1.597232463904902
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "stream_defense",
+        "suggestions": {
+          "nearTermMet": true,
+          "seasonMet": false
+        },
+        "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.590/0.410, next three 0.738/0.262; expected gains 7.22 near / 12.07 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "Lions D/ST",
+        "dropName": "Saints D/ST",
+        "acquisitionStatus": "FREEAGENT",
+        "sourceReview": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "eligibleForSubmission": false,
+        "executionBlock": "ESPN_AUTH_REQUIRED; private pending reservations unknown"
+      },
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "-16022",
+          "dropPlayerId": "-16018",
+          "priority": 1
+        },
+        "nearTermGain": 6.765958464050881,
+        "seasonGain": 3.7481585050839605,
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 0.7794030694165315
+          },
+          {
+            "week": 11,
+            "gain": 2.09458670700586
+          },
+          {
+            "week": 12,
+            "gain": 3.8919686876284896
+          },
+          {
+            "week": 13,
+            "gain": 3.1051265065998477
+          },
+          {
+            "week": 14,
+            "gain": -4.7579153719544625
+          },
+          {
+            "week": 15,
+            "gain": 0.8401849365336034
+          },
+          {
+            "week": 16,
+            "gain": -0.8440217953582021
+          },
+          {
+            "week": 17,
+            "gain": -1.3611742347877058
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.57421875,
+            "worsens": 0.42578125,
+            "ties": 0,
+            "expectedGain": 0.7794030694165315,
+            "favorableMarginLowerBound": 0.02482227613264075
+          },
+          "nearTerm": {
+            "improves": 0.7421875,
+            "worsens": 0.2578125,
+            "ties": 0,
+            "expectedGain": 6.765958464050881,
+            "favorableMarginLowerBound": 0.3750174400064889
+          },
+          "season": {
+            "improves": 0.640625,
+            "worsens": 0.359375,
+            "ties": 0,
+            "expectedGain": 3.7481585050839605,
+            "favorableMarginLowerBound": 0.1612956833376243
+          },
+          "probabilityAddedPlayerStarts": 0.875,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 10,
+              "gain": 0.7794030694165315
+            },
+            {
+              "week": 11,
+              "gain": 2.09458670700586
+            },
+            {
+              "week": 12,
+              "gain": 3.8919686876284896
+            },
+            {
+              "week": 13,
+              "gain": 3.1051265065998477
+            },
+            {
+              "week": 14,
+              "gain": -4.7579153719544625
+            },
+            {
+              "week": 15,
+              "gain": 0.8401849365336034
+            },
+            {
+              "week": 16,
+              "gain": -0.8440217953582021
+            },
+            {
+              "week": 17,
+              "gain": -1.3611742347877058
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "stream_defense",
+        "suggestions": {
+          "nearTermMet": true,
+          "seasonMet": false
+        },
+        "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.574/0.426, next three 0.742/0.258; expected gains 6.77 near / 3.75 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "Cardinals D/ST",
+        "dropName": "Saints D/ST",
+        "acquisitionStatus": "FREEAGENT",
+        "sourceReview": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "eligibleForSubmission": false,
+        "executionBlock": "ESPN_AUTH_REQUIRED; private pending reservations unknown"
+      },
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "-16024",
+          "dropPlayerId": "-16018",
+          "priority": 1
+        },
+        "nearTermGain": 9.661850461003095,
+        "seasonGain": 8.536722348571779,
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.7093153292013312
+          },
+          {
+            "week": 11,
+            "gain": 3.6897372126531143
+          },
+          {
+            "week": 12,
+            "gain": 4.26279791914865
+          },
+          {
+            "week": 13,
+            "gain": 1.0713155538698214
+          },
+          {
+            "week": 14,
+            "gain": -0.34076842377629646
+          },
+          {
+            "week": 15,
+            "gain": -2.510657179957195
+          },
+          {
+            "week": 16,
+            "gain": 2.7049420068253767
+          },
+          {
+            "week": 17,
+            "gain": -2.0499600693930233
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.5625,
+            "worsens": 0.4375,
+            "ties": 0,
+            "expectedGain": 1.7093153292013312,
+            "favorableMarginLowerBound": 0.0009804072938473102
+          },
+          "nearTerm": {
+            "improves": 0.7421875,
+            "worsens": 0.2578125,
+            "ties": 0,
+            "expectedGain": 9.661850461003095,
+            "favorableMarginLowerBound": 0.3750174400064889
+          },
+          "season": {
+            "improves": 0.65234375,
+            "worsens": 0.34765625,
+            "ties": 0,
+            "expectedGain": 8.536722348571779,
+            "favorableMarginLowerBound": 0.18563095307902594
+          },
+          "probabilityAddedPlayerStarts": 1,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 10,
+              "gain": 1.7093153292013312
+            },
+            {
+              "week": 11,
+              "gain": 3.6897372126531143
+            },
+            {
+              "week": 12,
+              "gain": 4.26279791914865
+            },
+            {
+              "week": 13,
+              "gain": 1.0713155538698214
+            },
+            {
+              "week": 14,
+              "gain": -0.34076842377629646
+            },
+            {
+              "week": 15,
+              "gain": -2.510657179957195
+            },
+            {
+              "week": 16,
+              "gain": 2.7049420068253767
+            },
+            {
+              "week": 17,
+              "gain": -2.0499600693930233
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "stream_defense",
+        "suggestions": {
+          "nearTermMet": true,
+          "seasonMet": false
+        },
+        "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.563/0.438, next three 0.742/0.258; expected gains 9.66 near / 8.54 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "Chargers D/ST",
+        "dropName": "Saints D/ST",
+        "acquisitionStatus": "FREEAGENT",
+        "sourceReview": "scheduled_defensive_unit_confirmed_but_no_published_at_article",
+        "eligibleForSubmission": false,
+        "executionBlock": "ESPN_AUTH_REQUIRED; private pending reservations unknown"
+      },
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "4887558",
+          "dropPlayerId": "4361411",
+          "priority": 1
+        },
+        "nearTermGain": 1.1346739136767434,
+        "seasonGain": 3.134852684921384,
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.1346739136767434
+          },
+          {
+            "week": 11,
+            "gain": 0
+          },
+          {
+            "week": 12,
+            "gain": 0
+          },
+          {
+            "week": 13,
+            "gain": 0.6490576610748917
+          },
+          {
+            "week": 14,
+            "gain": 0
+          },
+          {
+            "week": 15,
+            "gain": 0.14132206040352457
+          },
+          {
+            "week": 16,
+            "gain": 0
+          },
+          {
+            "week": 17,
+            "gain": 1.209799049766224
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.53515625,
+            "worsens": 0.46484375,
+            "ties": 0,
+            "expectedGain": 1.1346739136767434,
+            "favorableMarginLowerBound": -0.05437812667406518
+          },
+          "nearTerm": {
+            "improves": 0.53515625,
+            "worsens": 0.46484375,
+            "ties": 0,
+            "expectedGain": 1.1346739136767434,
+            "favorableMarginLowerBound": -0.05437812667406518
+          },
+          "season": {
+            "improves": 0.59375,
+            "worsens": 0.40625,
+            "ties": 0,
+            "expectedGain": 3.134852684921384,
+            "favorableMarginLowerBound": 0.06471692464451788
+          },
+          "probabilityAddedPlayerStarts": 0.5,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 10,
+              "gain": 1.1346739136767434
+            },
+            {
+              "week": 11,
+              "gain": 0
+            },
+            {
+              "week": 12,
+              "gain": 0
+            },
+            {
+              "week": 13,
+              "gain": 0.6490576610748917
+            },
+            {
+              "week": 14,
+              "gain": 0
+            },
+            {
+              "week": 15,
+              "gain": 0.14132206040352457
+            },
+            {
+              "week": 16,
+              "gain": 0
+            },
+            {
+              "week": 17,
+              "gain": 1.209799049766224
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "lineup_upgrade",
+        "suggestions": {
+          "nearTermMet": false,
+          "seasonMet": false
+        },
+        "rationale": "lineup_upgrade: pregame-selected lineup, P(improve)/P(worsen) next week 0.535/0.465, next three 0.535/0.465; expected gains 1.13 near / 3.13 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "Emanuel Wilson",
+        "dropName": "Pat Freiermuth",
+        "acquisitionStatus": "FREEAGENT",
+        "sourceReview": "no_current_offensive_snaps",
+        "eligibleForSubmission": false,
+        "executionBlock": "ESPN_AUTH_REQUIRED; private pending reservations unknown"
+      }
+    ],
+    "sourceClearedKickerComparison": [],
+    "capacity": {
+      "period": "2026-W10",
+      "limit": 5,
+      "usedConfirmedCanonicalReceipts": 0,
+      "externalPendingReservations": null,
+      "remainingExecutable": null,
+      "status": "unknown_until_private_pending_state_restored",
+      "week9SwapsExcludedFromCurrentWeek": true
+    },
+    "platformPendingClaims": null,
+    "pendingStateError": {
+      "code": "ESPN_AUTH_REQUIRED",
+      "message": "ESPN session is unauthenticated; refresh ESPN_S2 and SWID locally before reading private pending claims or submitting moves.",
+      "recordedAt": "2026-11-14T19:08:55.871Z"
+    },
+    "canonicalQueue": [
+      {
+        "actionId": "act-1794384103416-2prmmb",
+        "type": "set_roster",
+        "status": "pending",
+        "expiresAt": "2026-11-12T08:01:43.416Z",
+        "expired": true
+      },
+      {
+        "actionId": "act-1794384103422-lqw0jy",
+        "type": "waiver_claim",
+        "status": "pending",
+        "expiresAt": "2026-11-12T08:01:43.422Z",
+        "expired": true
+      },
+      {
+        "actionId": "act-1794384103425-tgyhwz",
+        "type": "waiver_claim",
+        "status": "pending",
+        "expiresAt": "2026-11-12T08:01:43.425Z",
+        "expired": true
+      },
+      {
+        "actionId": "act-1794384103429-n9w5hc",
+        "type": "waiver_claim",
+        "status": "pending",
+        "expiresAt": "2026-11-12T08:01:43.429Z",
+        "expired": true
+      }
+    ],
+    "newProposals": 0,
+    "newApprovals": 0,
+    "newSubmissions": 0,
+    "newAwards": 0,
+    "canonicalReceiptsUnchanged": true,
+    "excludedAlreadyStartedUnowned": [
+      {
+        "playerId": "5082424",
+        "name": "Dominic Zvada",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4575131",
+        "name": "Jacory Croskey-Merritt",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "3121422",
+        "name": "Terry McLaurin",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "-16019",
+        "name": "Giants D/ST",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "-16028",
+        "name": "Commanders D/ST",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4433970",
+        "name": "J.J. McCarthy",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4689114",
+        "name": "Jaxson Dart",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "5081432",
+        "name": "Antonio Williams",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4360635",
+        "name": "Chig Okonkwo",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4682648",
+        "name": "Malachi Fields",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4567156",
+        "name": "Treylon Burks",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "3068267",
+        "name": "Austin Ekeler",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4360516",
+        "name": "Tyrone Tracy Jr.",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "2969939",
+        "name": "Jameis Winston",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "2576980",
+        "name": "Marcus Mariota",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4040655",
+        "name": "Darnell Mooney",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "3930066",
+        "name": "Van Jefferson",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4426948",
+        "name": "Luke McCaffrey",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4429148",
+        "name": "Theo Johnson",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "3127586",
+        "name": "Jeremy McNichols",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4566158",
+        "name": "Ben Sauls",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4257188",
+        "name": "Charlie Jones",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4361577",
+        "name": "Dyami Brown",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "2975417",
+        "name": "Patrick Ricard",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "3123075",
+        "name": "Braxton Berrios",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4691889",
+        "name": "Greg Desrosiers Jr.",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4602667",
+        "name": "Jaylin Lane",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4243389",
+        "name": "Calvin Austin III",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4048228",
+        "name": "John Bates",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4690923",
+        "name": "Ben Sinnott",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "2531358",
+        "name": "Chris Manhertz",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4431562",
+        "name": "Phil Mafah",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4361088",
+        "name": "Colson Yankoff",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4432722",
+        "name": "Athan Kaliakmanis",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4424106",
+        "name": "Gunner Olszewski",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4590292",
+        "name": "Thomas Fidone II",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "5083297",
+        "name": "Jacoby Jones",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4421446",
+        "name": "Craig Reynolds",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4692590",
+        "name": "Jalin Hyatt",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4361100",
+        "name": "Jack Westover",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4570296",
+        "name": "Dalen Cambre",
+        "team": "19",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "5151317",
+        "name": "Robert Henry Jr.",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      },
+      {
+        "playerId": "4683111",
+        "name": "Jaden Bradley",
+        "team": "28",
+        "kickoff": "2026-11-13T01:15:00.000Z",
+        "gameId": "401873052",
+        "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+      }
+    ],
+    "lockedCandidatePolicy": "Already-started unowned games excluded from current-week automatic coverage; future-only claim value is unresolved, never assigned zero.",
+    "futureOnlyLockedClaimsUnresolved": true
+  },
+  "writes": {
+    "confirmedEspnLineupWrites": 0,
+    "confirmedEspnAcquisitionWrites": 0,
+    "canonicalReceiptChanges": 0,
+    "productionPromotion": false,
+    "canonicalMigrationLock": {
+      "present": true,
+      "modifiedAt": "2026-11-12T08:00:35.025Z"
+    },
+    "workerDeletedLock": false,
+    "local": "Build, dated isolated SQLite backup, isolated projections/priors/news, fresh candidate artifacts and dated report; no repository source edits.",
+    "canonicalAcquisitionCrashLockPresent": false,
+    "canonicalAcquisitionReconciliationMarkerPresent": false
+  },
+  "materialFindings": [
+    "ESPN_AUTH_REQUIRED remains the previously notified execution blocker; private pending reservations and remaining executable capacity remain unknown.",
+    "Current legal lineup and substantive WanDale-over-Dowdle +0.459821 recommendation are unchanged and unapplied.",
+    "Shaheed is now ACTIVE, resolving the prior OUT/practice conflict; this does not change the optimum.",
+    "Freiermuth has a new illness/questionable tag while benched behind Kittle; Spears is questionable after full Friday practice; Pollard has no designation.",
+    "Nabers and Stevens are immutable Thursday starters; current-week kicker rotation and already-started unowned candidate coverage are excluded."
+  ],
+  "limitations": [
+    "446 available identities lack unique statistical forecasts; not assigned zero.",
+    "Razzball returned zero items in the48-hour window and was marked degraded/unknown; source completeness is not established.",
+    "D/ST schedule evidence confirms upcoming games but lacks published-at article provenance; no executable positive addition review fabricated.",
+    "Emanuel Wilson fresh individual news still shows no offensive snaps; Smyth follow-up still lacks confirmed elevation. Owned kicker is locked, so no kicker rotation is considered.",
+    "Already-started unowned games are excluded from current-week automatic coverage; future-only claims remain unresolved.",
+    "Questionable and healthy-return forecasts remain conditional; no recovery probabilities or latest-return dates invented."
+  ],
+  "nextAction": "No action this run. Restore ESPN session and authenticate private pending moves before determining capacity or submitting any move. Preserve/reconcile the canonical migration lock before canonical MCP startup when needed; never delete blindly. Recheck current evidence and locks in the next existing scheduled run; no added monitoring or schedule.",
+  "notificationDisposition": "DONT_NOTIFY",
+  "worker": {
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "medium",
+    "configurationProvenance": "Original explicitly configured worker reused; no override, downgrade or recursive delegation."
+  },
+  "comparisonWithNov12": {
+    "authenticationBlockUnchanged": true,
+    "lineupPointGainDelta": 0.0,
+    "currentLegal": true,
+    "actionableLineupRecommendationUnchanged": "WanDale Robinson replaces Rico Dowdle in starters; Jameson/WanDale WR/FLEX ordering is a tied legal allocation.",
+    "sourceNewsChangedIds": [
+      "4595348",
+      "3916148",
+      "5081335",
+      "4428557",
+      "4361411"
+    ],
+    "shaheedOutConflictResolved": true,
+    "freiermuthNewBenchQuestionableIllness": true,
+    "kickerNowLocked": true,
+    "newWrites": 0
+  }
+}

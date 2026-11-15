@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "status": "approved",
+  "enabled": true,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "season": 2026,
+  "schedule": {
+    "timezone": "America/New_York",
+    "days": [
+      "TH",
+      "SA",
+      "SU"
+    ],
+    "hour": 1
+  },
+  "allowedTypes": [
+    "add_drop",
+    "waiver_claim"
+  ],
+  "trades": false,
+  "standaloneDrops": false,
+  "model": "gpt-6.1-sol",
+  "reasoningEffort": "medium",
+  "proposedLimits": {
+    "maximumSuccessfulAcquisitionsPerScoringWeek": 5,
+    "maximumOutstandingAutomaticClaims": 5,
+    "faabSpendingAllowed": false,
+    "countingRule": "One completed add/drop pair or awarded waiver claim counts as one transaction. Pending automatic claims reserve weekly capacity; releases of unsuccessful claims do not count as successful acquisitions. Count all automated acquisition channels together."
+  },
+  "rules": [
+    "Use the freshly outcome-trained PMT statistical artifacts demonstrated in this preview, including their candidate status, for acquisition decisions only after configured training coverage, validation and provenance checks pass. This authority does not promote or overwrite the production model store.",
+    "Show this-week, next-three-weeks and remaining-fantasy-season lineup impact; validated candidate artifacts are explicitly authorized for acquisition decisions without promoting production models.",
+    "Require positive supported starting-lineup value under the configured model rules; specialist streaming may qualify on this-week value with season cost shown.",
+    "Injury or reserve status alone does not prohibit an acquisition or conditional drop. Use current sourced expected missed games, return-window uncertainty, remaining fantasy schedule, roster/IR capacity and injury-adjusted weekly and remaining-season model value to compare holding versus replacing the player.",
+    "A short absence with valuable expected return favors holding or legal IR placement; a long or season-ending absence may justify replacement when PMT models support the improvement. Apply the same injury-duration and recovery-value analysis when acquiring an injured player. Do not invent a fixed injury-duration cutoff or return date.",
+    "Protect the offensive core using injury-adjusted remaining-season model value, not an unadjusted pre-injury rank. Locked-player and missing-data protections remain. Use sourced return windows where possible. If duration is uncertain, an active high-value replacement may qualify against a conditional healthy-return baseline using PMT simulation/value evidence. Missing statistical coverage still requires review.",
+    "Limit combined successful automated acquisitions to five per NFL scoring week. Reserve capacity for pending automatic claims so all possible awards remain within the cap. An add/drop pair counts as one transaction.",
+    "Only rotate a kicker or defense for the same position; keep one of each.",
+    "One exact add and at most one conditional drop per action; no independent drops or trades.",
+    "Re-read FREEAGENT versus WAIVERS; use immediate add/drop only for FREEAGENT and ranked conditional claims only for WAIVERS.",
+    "No FAAB expenditure under the current traditional priority-waiver authorization; changed acquisition rules require review.",
+    "Deduplicate against PMT receipts and ESPN pending moves and count all automated acquisition channels against the weekly limit.",
+    "Validate live ownership, roster, scoring, eligibility, locks, status/news freshness and model hashes before each submission; retain TTL, audit and durable idempotency.",
+    "Unknown submissions or conflicting existing claims block further submissions until reconciled; never silently retry.",
+    "Verify acquisitions against the roster and claim submissions against ESPN pending moves; a submitted claim is not an award.",
+    "Stop automatic acquisitions when authorization is disabled or the 2026 fantasy season ends."
+  ],
+  "approvalEffect": "User approval recorded. Scoped future add/drop and traditional waiver execution is enabled through scripts/execute-automatic-transaction.mjs; no production model promotion, trade or standalone drop authority.",
+  "injuryPolicy": {
+    "blanketInjuryProtection": false,
+    "basis": [
+      "sourced expected missed games",
+      "return-window uncertainty",
+      "remaining fantasy schedule",
+      "roster and IR capacity",
+      "injury-adjusted model value versus replacement"
+    ],
+    "unknownTimeline": "allow_high_value_replacement_against_healthy_return_baseline",
+    "fixedMissedWeekCutoff": null,
+    "highValueBenchmarks": {
+      "nextThreeWeekGain": 6,
+      "remainingSeasonGain": 20,
+      "requireAtLeastOne": true,
+      "requireSupportedPMTProbabilityMargin": true
+    }
+  },
+  "authorizedBy": "user-explicit-future-add-drop-waiver-protocol-2026-11-05",
+  "authorizationText": "Use player news for recovery estimates, where possible. If injury duration is uncertain, but new player demonstrates high value, then the transaction can be executed. Execute the two proposed actions and then approve the future automatic transaction protocol.",
+  "maximumSuccessfulAcquisitionsPerScoringWeek": 5,
+  "nearTermWeeks": 3,
+  "maxClaims": 5,
+  "protectTopRank": 100,
+  "maxArtifactAgeHours": 20,
+  "simulations": 256,
+  "suggestedNearTermLineupGain": 6,
+  "suggestedSeasonLineupGain": 20,
+  "allowRedundantTightEndReplacement": true,
+  "lineupObjective": "Maximum current-week modeled score subject to exact live slot eligibility, full starting-slot counts, roster capacity and immutable locks.",
+  "tightEndPreference": "Avoid a redundant second TE when another owned TE dominates both current-week and remaining-season model value and replacing the extra TE improves the legal lineup. Never remove the last TE or override locks/missing-data protection."
+}

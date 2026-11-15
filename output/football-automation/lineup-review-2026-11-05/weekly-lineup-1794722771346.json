@@ -1,0 +1,156 @@
+{
+  "at": "2026-11-15T06:06:11.345Z",
+  "week": 10,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "modelVersion": "weekly-2026-W10-19789406c2bc-368dedd8bda2-d1284c4271e7",
+  "objective": "maximum current-week model expected points subject to exact live eligibility, capacity and locks",
+  "mode": "preview",
+  "starters": [
+    {
+      "playerId": "3918298",
+      "slot": "QB",
+      "currentSlot": "QB",
+      "locked": false,
+      "eligiblePositions": [
+        "QB"
+      ],
+      "name": "Josh Allen",
+      "projectedPoints": 18.767249942847712
+    },
+    {
+      "playerId": "4890973",
+      "slot": "RB",
+      "currentSlot": "RB",
+      "locked": false,
+      "eligiblePositions": [
+        "RB",
+        "FLEX"
+      ],
+      "name": "Ashton Jeanty",
+      "projectedPoints": 14.110673463054074
+    },
+    {
+      "playerId": "3916148",
+      "slot": "RB",
+      "currentSlot": "RB",
+      "locked": false,
+      "eligiblePositions": [
+        "RB",
+        "FLEX"
+      ],
+      "name": "Tony Pollard",
+      "projectedPoints": 12.738420658387785
+    },
+    {
+      "playerId": "4595348",
+      "slot": "WR",
+      "currentSlot": "WR",
+      "locked": true,
+      "eligiblePositions": [
+        "WR",
+        "FLEX"
+      ],
+      "name": "Malik Nabers",
+      "projectedPoints": 18.344404342269787
+    },
+    {
+      "playerId": "4569587",
+      "slot": "WR",
+      "currentSlot": "BN",
+      "locked": false,
+      "eligiblePositions": [
+        "WR",
+        "FLEX"
+      ],
+      "name": "Wan'Dale Robinson",
+      "projectedPoints": 10.619376955826192
+    },
+    {
+      "playerId": "3040151",
+      "slot": "TE",
+      "currentSlot": "TE",
+      "locked": false,
+      "eligiblePositions": [
+        "TE",
+        "FLEX"
+      ],
+      "name": "George Kittle",
+      "projectedPoints": 11.568016989778014
+    },
+    {
+      "playerId": "-16018",
+      "slot": "DST",
+      "currentSlot": "DST",
+      "locked": false,
+      "eligiblePositions": [
+        "DST"
+      ],
+      "name": "Saints D/ST",
+      "projectedPoints": 5.083678604046658
+    },
+    {
+      "playerId": "5081335",
+      "slot": "K",
+      "currentSlot": "K",
+      "locked": true,
+      "eligiblePositions": [
+        "K"
+      ],
+      "name": "Drew Stevens",
+      "projectedPoints": 8.660592294471781
+    },
+    {
+      "playerId": "4426388",
+      "slot": "FLEX",
+      "currentSlot": "WR",
+      "locked": false,
+      "eligiblePositions": [
+        "WR",
+        "FLEX"
+      ],
+      "name": "Jameson Williams",
+      "projectedPoints": 11.277524247632266
+    }
+  ],
+  "changes": [
+    {
+      "playerId": "4426388",
+      "from": "WR",
+      "to": "FLEX",
+      "name": "Jameson Williams"
+    },
+    {
+      "playerId": "4038815",
+      "from": "FLEX",
+      "to": "BN",
+      "name": "Rico Dowdle"
+    },
+    {
+      "playerId": "4569587",
+      "from": "BN",
+      "to": "WR",
+      "name": "Wan'Dale Robinson"
+    }
+  ],
+  "currentLegal": true,
+  "currentPoints": 110.71011615560715,
+  "expectedPoints": 111.16993749831427,
+  "expectedGain": 0.45982134270711583,
+  "unavailable": [
+    {
+      "playerId": "4371733",
+      "name": "Kenny Gainwell",
+      "status": "ACTIVE",
+      "bye": true
+    },
+    {
+      "playerId": "4568490",
+      "name": "RJ Harvey",
+      "status": "INJURY_RESERVE",
+      "bye": true
+    }
+  ],
+  "executed": false,
+  "verified": false
+}

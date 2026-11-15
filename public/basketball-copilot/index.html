@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>PMT Basketball Copilot</title>
+  <link rel="stylesheet" href="/app.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main id="app" data-revision="" data-rendered-at="" data-rendered-monotonic-ms="0">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">PMT</span><div><strong>Basketball Copilot</strong><small>Eight-category draft desk</small></div></div>
+      <div class="header-status"><span id="mode-badge" class="badge">Connecting</span><span id="connection" class="connection"><i></i> Connecting</span></div>
+    </header>
+
+    <section class="notice" id="mode-notice" aria-live="polite">
+      <div class="notice-icon">◎</div>
+      <div><strong id="notice-title">Local draft workspace</strong><p id="notice-copy">Loading the board and session state…</p></div>
+    </section>
+
+    <section class="controlbar" aria-label="Draft controls">
+      <div class="control-title"><span class="eyebrow">SESSION CONTROLS</span><strong id="session-label">No active session</strong></div>
+      <div class="control-actions">
+        <label class="scenario-label" for="scenario">Opponent scenario
+          <select id="scenario" class="mock-only"><option value="balanced">Balanced ADP</option><option value="guards">Guard demand</option><option value="bigs">Big demand</option></select>
+        </label>
+        <button class="button primary mock-only" data-action="start">Start mock</button>
+        <button class="button mock-only" data-action="next-opponent">Next opponent</button>
+        <button class="button mock-only" data-action="burst">Burst to my turn</button>
+        <button class="button quiet mock-only" data-action="elapse-clock" data-seconds="60">Advance clock 60s</button>
+        <button class="button quiet" data-action="pause" id="pause-button">Pause</button>
+        <button class="button danger mock-only" data-action="reset">Reset session</button>
+      </div>
+    </section>
+
+    <section class="summary-grid" aria-label="Draft status">
+      <article class="summary-card turn-card"><span class="eyebrow">NEXT PICK</span><div class="summary-main"><strong id="next-pick">—</strong><span id="turn-state" class="turn-pill">Waiting</span></div><small id="round-detail">Round — · Pick — of 112</small><small id="clock-detail">60-second own clock · not running</small></article>
+      <article class="summary-card"><span class="eyebrow">YOUR ROSTER</span><strong class="summary-value" id="own-count">0 / 14</strong><small id="own-team">Team —</small></article>
+      <article class="summary-card"><span class="eyebrow">BOARD REVISION</span><strong class="summary-value revision" id="revision-short">—</strong><small id="updated-at">Waiting for state</small></article>
+      <article class="summary-card"><span class="eyebrow">SOURCE AGE</span><strong class="summary-value" id="source-age">—</strong><small id="source-label">No observation yet</small></article>
+    </section>
+
+    <section class="panel reconciliation-panel" id="reconciliation-panel" aria-labelledby="reconciliation-title">
+      <div class="panel-heading"><div><span class="eyebrow">OPTIONAL · READ-ONLY RESEARCH</span><h2 id="reconciliation-title">Reconciliation candidates</h2></div><span id="reconciliation-scope" class="count-label">Loading candidate scope…</span></div>
+      <p class="panel-intro">Review-only comparison. This selector changes this view only; it does not change the active board, session, Balanced strategy, queue, or actions.</p>
+      <div class="reconciliation-toolbar">
+        <label for="reconciliation-view">Comparison view
+          <select id="reconciliation-view" class="wide-select" disabled>
+            <option value="original">Original active board</option>
+            <option value="correctedCategory">Corrected category-value</option>
+            <option value="providerFirst">Provider-first rank-only</option>
+          </select>
+        </label>
+        <div class="evidence-age"><span class="eyebrow">NEWEST EVIDENCE</span><strong id="reconciliation-evidence-age">—</strong><small id="reconciliation-evidence-time">No reconciliation evidence</small></div>
+        <p class="reconciliation-note" id="reconciliation-note" role="status">No reconciliation candidates were supplied.</p>
+      </div>
+      <div class="reconciliation-grid">
+        <div>
+          <div class="section-heading"><div><span class="eyebrow" id="candidate-view-label">ORIGINAL ACTIVE BOARD</span><h3>Top candidates</h3></div><span id="candidate-count" class="count-label"></span></div>
+          <div class="table-wrap"><table class="player-table reconciliation-table"><thead id="reconciliation-head"></thead><tbody id="reconciliation-rows"></tbody></table></div>
+        </div>
+        <aside class="outlier-panel"><div class="section-heading"><div><span class="eyebrow">EXPLANATION CARDS</span><h3>Review items</h3></div></div><div id="reconciliation-outliers" class="outlier-list"><p class="muted">Waiting for candidate evidence.</p></div></aside>
+      </div>
+      <p class="reconciliation-footnote">Stale ranks remain labeled with their recorded age. Forecast coverage gaps remain visible for review and are never treated as automatic picks.</p>
+    </section>
+
+    <div class="main-grid">
+      <section class="panel paths-panel">
+        <div class="panel-heading"><div><span class="eyebrow">THREE CONSTRUCTIONS</span><h1>Draft paths</h1></div><span id="suggestion" class="suggestion">Suggested: Balanced</span></div>
+        <p class="panel-intro">The same available pool is compared across all eight categories. Suggestions never change your selected profile.</p>
+        <div id="profiles" class="profile-grid" aria-live="polite"></div>
+        <div class="section-heading"><div><span class="eyebrow">NEXT-UP BOARD</span><h2>Available players</h2></div><span id="available-count" class="count-label"></span></div>
+        <div class="table-wrap"><table class="player-table"><thead><tr><th>Player</th><th>Slot</th><th>ADP</th><th>Profile signal</th><th></th></tr></thead><tbody id="available-players"></tbody></table></div>
+      </section>
+
+      <aside class="right-column">
+        <section class="panel pick-panel">
+          <div class="panel-heading"><div><span class="eyebrow">LOCAL ACTION PREVIEW</span><h2>Mock pick desk</h2></div><span class="lock-icon" aria-hidden="true">⌑</span></div>
+          <p class="panel-intro">Choose a recommendation, review a legal slot, then confirm the synthetic pick.</p>
+          <label for="candidate">Candidate</label><select id="candidate" class="wide-select mock-only"><option value="">Choose an available player</option></select>
+          <button class="button full-button mock-only" data-action="queue">Queue candidate</button>
+          <div class="queue-state"><span class="queue-dot"></span><div><small>QUEUED CANDIDATE</small><strong id="queued-player">None</strong></div></div>
+          <label for="slot">Roster slot</label><select id="slot" class="wide-select mock-only"><option value="G">G</option><option value="F/C">F/C</option><option value="Flx">Flx</option><option value="Res">Res</option></select>
+          <button class="button primary full-button mock-only" data-action="confirm-ownpick">Confirm own pick</button>
+          <p id="pick-feedback" class="feedback" role="status">Mock picks are isolated from league data.</p>
+          <div class="receipt" id="latest-receipt"><span class="eyebrow">LATEST RECEIPT</span><p>No local selection recorded.</p></div>
+        </section>
+        <section class="panel trends-panel"><div class="section-heading"><div><span class="eyebrow">OBSERVED DRAFT</span><h2>Trends &amp; source notes</h2></div></div><div id="trends" class="trend-list"><p class="muted">Waiting for the first pick.</p></div><div class="source-notes" id="warnings"></div></section>
+      </aside>
+    </div>
+
+    <section class="panel board-panel">
+      <div class="panel-heading"><div><span class="eyebrow">EIGHT TEAMS · 14 ROUNDS</span><h2>Draft board</h2></div><span class="board-legend"><i class="legend-own"></i> Your team <i class="legend-filled"></i> Selected</span></div>
+      <div class="board-scroll"><div id="draft-board" class="draft-board" aria-label="112-pick draft board"></div></div>
+    </section>
+
+    <section class="panel roster-panel">
+      <div class="panel-heading"><div><span class="eyebrow">TEAM-BY-TEAM</span><h2>Rosters</h2></div><span id="roster-summary" class="count-label"></span></div>
+      <div id="rosters" class="roster-grid"></div>
+    </section>
+    <footer><span>PMT local advisory workspace</span><span>Platform writes: 0 · Local mock actions are separately counted</span><span id="render-stamp">Render pending</span></footer>
+  </main>
+</body>
+</html>

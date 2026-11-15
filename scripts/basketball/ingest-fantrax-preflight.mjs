@@ -1,0 +1,26 @@
+// A bounded local bridge for a fresh, supported-browser DOM capture. No Fantrax HTTP call.
+import { readFile, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { createHash } from 'node:crypto';
+import { decodeFantraxPreflight } from '../../dist/src/basketball/fantrax-dom.js';
+import { DraftSessionSchema } from '../../dist/src/basketball/draft.js';
+import { contentHash } from '../../dist/src/basketball/store.js';
+const flag = name => { const i=process.argv.indexOf(name);if(i<0||!process.argv[i+1])throw new Error(`Required ${name}`);return process.argv[i+1]; };
+const json = async name => JSON.parse(await readFile(resolve(flag(name)),'utf8'));
+const board=await json('--board'),template=DraftSessionSchema.parse(await json('--state'));
+const {revision,...content}=board;if(contentHash(content)!==revision)throw new Error('Board hash mismatch');
+const captureBytes=await readFile(resolve(flag('--capture'))),capture=JSON.parse(captureBytes.toString('utf8'));
+const names=await json('--team-directory');
+const target=new URL(flag('--target'));
+if(target.protocol!=='http:'||!['127.0.0.1','localhost','[::1]'].includes(target.hostname)||target.username||target.password||target.search||target.hash||target.pathname!=='/')throw new Error('Target must be a plain loopback copilot origin');
+const health=await fetch(new URL('/api/health',target));
+const healthBody=await health.json();if(!health.ok||healthBody.data?.mode!=='coach')throw new Error('Target is not an explicit Coach server');
+const response=await fetch(new URL('/api/state',target));const current=await response.json();
+if(!response.ok||current.data?.session?.leagueId!==board.leagueId||current.data?.session?.teamId!==board.teamId||current.data?.session?.boardRevision!==board.revision)throw new Error('Coach scope mismatch');
+const sequence=(current.data?.copilotState?.observation?.sequence??0)+1;
+const observation=decodeFantraxPreflight(board,template,capture,names,new Date(),sequence);
+const receipt=await fetch(new URL('/api/observation',target),{method:'POST',headers:{'content-type':'application/json',origin:target.origin},body:JSON.stringify({observation})});
+const result=await receipt.json();if(!receipt.ok||!result.ok)throw new Error(result.error??'Local ingest rejected');
+const evidence={schemaVersion:1,kind:'real-browser-pre-draft-local-coach-receipt',captureSha256:createHash('sha256').update(captureBytes).digest('hex'),capturedAt:capture.capturedAt,receivedAt:observation.receivedAt,sequence,boardRevision:board.revision,copilotRevision:result.data.copilotState.revision,phase:result.data.session.phase,picks:result.data.session.picks.length,venue:observation.venue,liveActionsExecuted:0,limitations:['Fresh pre-draft bootstrap only; live selected cells, player identity, clock and turn remain unverified.','DOM read was performed separately through supported browser tools. No Fantrax network request, queue, rank or pick was made by this helper.']};
+await writeFile(resolve(flag('--out')),JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(evidence));

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-13T07:32:53.674Z",
+  "triggerLocal": "2026-11-13T02:32:53.674-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": 173.674,
+  "automation": {
+    "identity": "banging-3s-basketball-workflow",
+    "kind": "heartbeat",
+    "status": "ACTIVE",
+    "configuredUtcHour": "07:30Z daily",
+    "destinationThreadId": "01a17337-732c-7b52-b98b-d2f2c144c4c5",
+    "expiryUtc": "2027-03-16T03:59:59Z",
+    "identityDestinationActiveStateExpiryChanged": false,
+    "nextIntendedRun": "2026-11-14T02:30 America/New_York / 07:30Z"
+  },
+  "observedAt": "2026-11-13T07:35:56Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "teamName": "Board Man Gets pAId",
+  "manager": "jxstovik",
+  "season": "2026-27",
+  "profile": "balanced",
+  "browserAccess": "Fresh authenticated rendered UI reads: roster and P3/P4 schedules, available-player page/profile card, player card and league home news/matchup; no raw API export.",
+  "period2": {
+    "opponent": "CatsByAtLeast1",
+    "matchupSnapshot": "Fantrax League Home displayed 6-2-0 CatsByAtLeast1, 2-6-0 Board Man Gets pAId at read time; provisional live period view.",
+    "ownership": "14 players: 10 active/four bench; Reid active G, Fisher bench, Quion in disabled active Flex."
+  },
+  "nextPeriods": {
+    "3": { "dates": "Nov 16-Nov 22, 2026", "opponent": "NorseUppers", "ownedScheduleRows": 14, "unknownQuionSchedule": true },
+    "4": { "dates": "Nov 23-Nov 29, 2026", "opponent": "Perks", "ownedScheduleRows": 14, "unknownQuionSchedule": true }
+  },
+  "fridayWaiverReview": {
+    "firstPageCoverage": "20 rows, current displayed Score order; bounded only.",
+    "MaxWeisbrod": "Still Claim/FA and not owned; no clearance/news signal or candidate-specific waiver result visible.",
+    "BenHammond": "Still Claim/FA and not owned; no clearance/news signal or candidate-specific waiver result visible.",
+    "result": "No confirmed waiver clearing, acquisition or ownership change. No claim/drop proposed or queued. The prior Nov 9 exact Weisbrod/Quion rejection was not retried or substituted.",
+    "ranking": "The rendered first-page provider order was refreshed. No projection rerank or acquisition recommendation was generated because no fresh approved rate board or complete pool is available."
+  },
+  "ownedStatusAndParticipation": {
+    "Campbell": "0 displayed GP; only Nov 2 foot-related DNP visible, no clearance.",
+    "Karasinski": "1 displayed GP; only Nov 9 concussion note visible ('could return Friday against Boston University'), still unconfirmed and opponent/date conflicting with current Northwestern schedule.",
+    "Reid": "Latest card game Nov 10 at Vanderbilt, 30 MIN, 11 PTS, 2 REB, 2 AST, 1 3PTM, 4/11 FG, 2/4 FT; no newer participation result listed.",
+    "Fisher": "Remains bench at 3 YTD GP; latest saved boxscore Nov 10, 31 MIN, 27 PTS; no newer participation result verified."
+  },
+  "freshness": {
+    "approvedCorrectedBoardRefreshed": false,
+    "approvedCorrectedBoardOldestDependencyAt": "2026-10-27T11:24:32Z",
+    "weeklyForecastGenerated": false,
+    "reason": "Rates are stale, and no complete refreshed future per-game model input was available. Schedule/role reads do not refresh the category baseline."
+  },
+  "historicalDoctor": {
+    "ran": true,
+    "asOf": "2026-11-13T07:32:53.674Z",
+    "result": "partial, zero players on unchanged Oct 25 pre-draft snapshot; stale source inputs and empty historical roster remain separate from current Fantrax reads.",
+    "liveActionsExecuted": 0
+  },
+  "actions": { "lineupChanges": 0, "claims": 0, "drops": 0, "trades": 0, "settingsChanges": 0, "modelPromotions": 0 },
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationDeliveryVerified": false,
+  "notificationRecommendation": "DONT_NOTIFY: no candidate cleared/acquired; no new owned-player clearance; no supported recommendation or material roster change. First-page availability remains incomplete."
+}

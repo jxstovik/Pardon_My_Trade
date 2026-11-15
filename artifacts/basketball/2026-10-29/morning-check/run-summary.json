@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-10-29T12:01:56.751Z",
+  "triggerLocal": "2026-10-29T08:01:56.751-04:00",
+  "desiredLocal": "08:00 America/New_York",
+  "newPromptScheduledRunObserved": true,
+  "notificationDeliveryVerified": false,
+  "nextDesiredRun": "2026-10-30T08:00:00-04:00",
+  "recurrenceChangeNeededForNextDay": false,
+  "dstReminder": "On October31 adjust the same automation for November1 08:00EST =13:00UTC; retain seasonal expiry.",
+  "actuallyRefreshed": [
+    "own14-player period1 roster and schedules",
+    "opponent JeffWischer14-player roster and schedules",
+    "settled first20 available W(Fri) rows and schedules",
+    "three public Southern Utah primary pages"
+  ],
+  "notRefreshed": [
+    "per-game statistical baseline/provider projections",
+    "full available pool",
+    "league-wide raw capture or rules"
+  ],
+  "opponentForecastCoverage": 14,
+  "opponentForecastComputed": false,
+  "conditionalAdviceChanged": false,
+  "ownRosterOrActiveAssignmentChanged": false,
+  "availableFirst20MembershipChanged": false,
+  "currentConditionalLineup": [
+    {
+      "id": "06nnk",
+      "slot": "F/C1"
+    },
+    {
+      "id": "06n8t",
+      "slot": "G1"
+    },
+    {
+      "id": "0655r",
+      "slot": "G2"
+    },
+    {
+      "id": "06g7r",
+      "slot": "F/C2"
+    },
+    {
+      "id": "06dun",
+      "slot": "G3"
+    },
+    {
+      "id": "06h14",
+      "slot": "G4"
+    },
+    {
+      "id": "064kr",
+      "slot": "Flx1"
+    },
+    {
+      "id": "05wk5",
+      "slot": "Flx2"
+    },
+    {
+      "id": "065cb",
+      "slot": "F/C3"
+    },
+    {
+      "id": "065ct",
+      "slot": "F/C4"
+    }
+  ],
+  "pendingBlockers": [
+    "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+    "Exact lineup deadline, timezone and first-period activation unresolved",
+    "Team/player game caps and shot minimum/rounding semantics unresolved",
+    "Waiver Friday label observed; exact clearance instant and lineup activation unresolved",
+    "oldest baseline dependency older than 24 hours; revalidate rates/roles",
+    "schedule lacks verified game instants",
+    "health/role evidence incomplete"
+  ],
+  "codeChanged": false,
+  "testsRun": false,
+  "priorTestEvidence": "October28:67/67 compiled basketball tests; final19/19 weekly/workflow after rebuild. Historical, not rerun.",
+  "liveActionsExecuted": 0,
+  "syntheticDataUsed": false,
+  "modelPromoted": false,
+  "transportNote": "Supported authenticated browser AX reads succeeded. Optional screenshot capture unavailable; no HTTP client requests attempted.",
+  "automationWorkerPreference": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "high",
+    "implementation": "The heartbeat prompt mandates one Luna/High worker for substantive future runs and parent relay only; the native heartbeat rejected model/reasoning override fields.",
+    "nativeModelOverrideAvailable": false
+  },
+  "actualRunWorkerModel": "gpt-6-luna",
+  "actualRunWorkerReasoningEffort": "high",
+  "controllerModelChanged": false,
+  "priorResearchReexecutedByPreferredWorker": false,
+  "nextDecisions": "No human decision required; continue counting/lock/role reconciliation and full-pool acquisition before any claim or lineup execution."
+}

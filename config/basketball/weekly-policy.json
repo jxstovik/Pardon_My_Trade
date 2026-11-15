@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "season": "2026-27",
+  "profile": "balanced",
+  "mode": "advisory-only",
+  "morningCheckLocalTime": "02:30",
+  "operatorTimezone": "America/New_York",
+  "cadence": {
+    "daily": "fresh ownership, schedule and actual status/role evidence; material changes only",
+    "thursday": "upcoming-lineup and two-period waiver review",
+    "friday": "verify actual waiver clearance/results and rerank",
+    "sunday": "main coming-period lineup proposal",
+    "monday": "final pre-lock review only when exact deadline is verified"
+  },
+  "lineupCadence": "weekly-monday",
+  "lockOffsetMinutes": 0,
+  "lockScope": null,
+  "activationRule": null,
+  "verifiedLockInstant": null,
+  "automaticRosterChanges": false,
+  "automaticClaimsDropsTrades": false,
+  "automaticModelPromotion": false,
+  "minimumWeeklyLineupQuality": "full owned identity/forecast/schedule coverage; fresh role/status evidence; verified counting and lock rules",
+  "deadlineRelativeMonitoring": "not configured; resolve actual instants first",
+  "documentation": "docs/basketball/weekly-operations.md"
+}

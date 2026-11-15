@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "observedAtLowerBound": "2026-10-29T12:01:56.751Z",
+  "sourceKind": "public-primary-page-excerpts",
+  "sources": [
+    {
+      "url": "https://suutbirds.com/sports/mens-basketball/schedule",
+      "facts": "2026-27 schedule lists Nov2 West Coast Baptist8PM MT, Nov5 Grace University(California)6:30PM MT, Nov7 Bethesda University of California6:30PM MT, all in Cedar City. Oct12 Ottawa Arizona is explicitly an exhibition; these November entries are not labeled exhibitions.",
+      "limits": "Listing does not establish Fantrax counted-stat eligibility."
+    },
+    {
+      "url": "https://suutbirds.com/sports/mens-basketball/roster/jaiden-feroah/12995",
+      "facts": "2026-27 roster lists graduate forward Jaiden Feroah. Page shows no season statistics.",
+      "limits": "Roster membership does not clear injury status or project current minutes."
+    },
+    {
+      "url": "https://suutbirds.com/news/2026/10/14/mens-basketball-feroah-named-to-big-sky-preseason-all-conference-team.aspx",
+      "publishedDate": "2026-10-14",
+      "facts": "Preseason all-conference selection; describes32 starts and958 minutes in2025-26, plus13.5PTS/6.7REB and52 blocks.",
+      "limits": "Prior-year biography; no new statistical forecast or current health clearance."
+    }
+  ],
+  "gameCrosswalk": [
+    {
+      "fantraxGameId": "06shj",
+      "date": "2026-11-02",
+      "opponent": "West Coast Baptist College",
+      "schoolDisplayTime": "8:00PM MT",
+      "derivedStartAt": "2026-11-03T03:00:00Z"
+    },
+    {
+      "fantraxGameId": "06shk",
+      "date": "2026-11-05",
+      "opponent": "Grace University (California)",
+      "schoolDisplayTime": "6:30PM MT",
+      "derivedStartAt": "2026-11-06T01:30:00Z"
+    },
+    {
+      "fantraxGameId": "06shl",
+      "date": "2026-11-07",
+      "opponent": "Bethesda University of California",
+      "schoolDisplayTime": "6:30PM MT",
+      "derivedStartAt": "2026-11-08T01:30:00Z"
+    }
+  ],
+  "derivation": "Unique Southern Utah home game by displayed date. MT converted using America/Denver for Cedar City in November2026 (UTC-07); Nov2 is independently consistent with Fantrax detail10PM EST captured previously. Unknown Fantrax opponent labels remain uncorrected source values.",
+  "healthCleared": false,
+  "countedGameEligibilityVerified": false,
+  "modelRefreshedOrPromoted": false
+}

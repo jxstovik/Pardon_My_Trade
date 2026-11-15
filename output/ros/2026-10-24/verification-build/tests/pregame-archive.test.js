@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtemp, readFile, writeFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { savePregameArchive, readPregameArchive } from '../src/probabilistic/pregame-archive.js';
+const payload = { season: 2026, week: 6, leagueId: '98806880', teamId: '7', builtAt: '2026-10-14T12:00:00Z', firstKickoff: '2026-10-16T00:15:00Z', cutoffWeek: 5, modelManifest: { status: 'candidate_not_promoted' }, forecasts: [{ mean: 10 }], models: { mean: 'weights' }, reportData: {} };
+test('archives preserve the first recorded time and reject tampering', async () => { const dir = await mkdtemp(join(tmpdir(), 'pmt-archive-')); try {
+    const first = await savePregameArchive(dir, payload, new Date('2026-10-14T13:00:00Z'));
+    const content = await readFile(first.path, 'utf8');
+    const second = await savePregameArchive(dir, payload, new Date('2026-10-14T14:00:00Z'));
+    assert.equal(second.created, false);
+    assert.equal(await readFile(first.path, 'utf8'), content);
+    assert.equal((await readPregameArchive(first.path)).payload.models.mean, 'weights');
+    const altered = JSON.parse(content);
+    altered.payload.forecasts[0].mean = 20;
+    await writeFile(first.path, JSON.stringify(altered));
+    await assert.rejects(readPregameArchive(first.path), /tampered/);
+}
+finally {
+    await rm(dir, { recursive: true, force: true });
+} });
+test('archives reject post-kickoff, future-dated and noncausal snapshots', async () => { await assert.rejects(savePregameArchive('/unused', payload, new Date(payload.firstKickoff)), /late/); await assert.rejects(savePregameArchive('/unused', payload, new Date('2026-10-14T11:00:00Z')), /future/); await assert.rejects(savePregameArchive('/unused', { ...payload, cutoffWeek: 6 }, new Date('2026-10-14T13:00:00Z')), /causal/); });

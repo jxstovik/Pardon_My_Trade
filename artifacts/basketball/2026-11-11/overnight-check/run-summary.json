@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-11T07:26:50.792Z",
+  "triggerLocal": "2026-11-11T02:26:50.792-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": -189.208,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "browserAccess": "Authenticated Fantrax canonical league home, roster, schedule and live matchup UI succeeded; browser UI transcription only.",
+  "observedAt": "2026-11-11T07:30:28Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "teamName": "Board Man Gets pAId",
+  "season": "2026-27",
+  "profile": "balanced",
+  "currentPeriod": {
+    "number": 2,
+    "dates": "Nov 9-Nov 15, 2026",
+    "opponent": "CatsByAtLeast1",
+    "opponentTeamId": "2rc1dg43mvgsurtp",
+    "ownRoster": "14 players, 10 active/four reserve. Fresh roster and schedule views confirm Jayden Reid at active G and Keshawn Fisher at Reserve; Quion remains in disabled active Flex; Tyson and Cox absent.",
+    "liveMatchup": "CatsByAtLeast1 leads 7-1-0 after games through Nov 10; provisional. Visible totals: opponent 95 PTS/30 REB/26 AST/13 ST/4 BLK/13 3PTM/.438 FG/.839 FT; Board Man Gets pAId 35/11/9/4/1/4/.464/.714. Counts shown as of UI observation; categories can change.",
+    "recentActuals": {
+      "Jayden Reid": {
+        "game": "Memphis 81 at Vanderbilt 105, Nov 10 final",
+        "fantraxBoxscoreId": "06q3n",
+        "minutes": 30,
+        "stats": {"PTS": 11, "REB": 2, "AST": 2, "ST": 0, "BLK": 0, "3PTM": 1, "FGM": 4, "FGA": 11, "FTM": 2, "FTA": 4},
+        "limits": "Fantrax boxscore transcription; roster YTD line shows 3 GP."
+      },
+      "Keshawn Fisher": {
+        "game": "Winthrop 79 at Kennesaw State 88, Nov 10 final",
+        "fantraxBoxscoreId": "06ruc",
+        "minutes": 31,
+        "stats": {"PTS": 27, "REB": 4, "AST": 3, "ST": 0, "BLK": 1, "3PTM": 3, "FGM": 8, "FGA": 12, "FTM": 8, "FTA": 12},
+        "limits": "Fantrax boxscore transcription. Fisher remained in Reserve, so do not count this as a fantasy lineup contribution."
+      },
+      "Markus Burton": {
+        "game": "Syracuse 80 at Indiana 83, Nov 9 final",
+        "fantraxBoxscoreId": "06od8",
+        "stats": {"PTS": 20, "REB": 3, "AST": 4, "ST": 3},
+        "limits": "Previously captured; prospective actual evidence only."
+      },
+      "Javontae Campbell": {
+        "game": "Minnesota 63 at Cincinnati 61, Nov 9 final",
+        "fantraxBoxscoreId": "06qgh",
+        "participation": "Not listed in Cincinnati's Fantrax player table; roster YTD GP remains 0.",
+        "limits": "No cause inferred; last injury article remains Nov 2 foot-related DNP."
+      },
+      "Jack Karasinski": {
+        "currentYtdGP": 1,
+        "nov9Boxscore": "Boston University 55 at Northwestern 72, final; absent from player table. Next listed Northwestern game is DePaul Fri Nov 13.",
+        "latestFantraxNews": "Nov 9: concussion; could return Friday against Boston University.",
+        "limits": "Source's return wording conflicts with observed schedule and remains unverified; not clearance."
+      }
+    },
+    "transactions": "Nov 9 approved Fisher/Tyson and Reid/Cox pairs remain reflected in ownership. Exact Weisbrod/Quion pair remains rejected for cross-period eligibility and was not retried, deferred or substituted."
+  },
+  "operationalBlockers": [
+    "Whole-roster versus player-level lock scope unresolved.",
+    "Acquisition activation timing unresolved; Fisher remains on Reserve.",
+    "N/A game counting, caps and shooting thresholds/rounding unresolved.",
+    "Approved category-rate baseline remains stale from Oct 27; no fresh weekly forecast is justified."
+  ],
+  "lineupReadiness": "No qualified recommendation; current period has started, rate baseline remains stale and operational gates remain open. No lineup changes made.",
+  "historicalDoctor": "Ran at trigger against unchanged Oct25 pre-draft capture. Copied output remains partial, zero observed players, stale sources; separate from current UI reads.",
+  "baselineOldestDependencyObservedAt": "2026-10-27T11:24:32Z",
+  "baselineRefreshedOrRehashed": false,
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationRecommendation": "NOTIFY: period matchup is now 1-7 (provisional); Fisher had 27 points/4 rebounds/3 assists/1 block in 31 minutes but remained on Reserve, while Reid logged 11 points in 30 minutes. Do not imply Fisher's line counted for the team or issue a midweek lineup change."
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "type": "planning-and-read-only-browser-preflight",
+  "files": {
+    "docs/basketball/live-draft-copilot-plan.md": "4a866855de4d29942a7e4ebb2b148e7c93c06d2f097a9d2abd8f9db1ec27a90f",
+    "docs/basketball/committee/11-live-copilot-plan-review.md": "9f986636d4496827273d1aa0f1b4200aaa0ac6ce2bc308299a2ff46b616c899b",
+    "artifacts/basketball/2026-10-27/live-copilot-plan/browser-preflight.json": "0d55afa040e8e8d1637c9f99ed0ca8129659cd472f7c265d0ac867cc9d834b25",
+    "artifacts/basketball/2026-10-27/live-copilot-plan/validation-matrix.json": "43c19f9f3fd6467ed119fadb9959aea84addf9846b06ac8750c70b9fe5c86630"
+  },
+  "markdownLocalLinks": "passed",
+  "priorBasketballValidationHashes": "matched;26 tests previously passed,not rerun in documentation-only turn",
+  "newBrowserMockRun": false,
+  "latencyMeasurements": null,
+  "newImplementation": false,
+  "realLeagueMutations": 0,
+  "automation": {
+    "id": "banging-3s-basketball-workflow",
+    "promptUpdatedAndPersisted": true,
+    "identityScheduleDestinationPreserved": true,
+    "meaning": "Daily bounded followup only,not a foreground draft monitor"
+  },
+  "review": "Luna xhigh critical review; corrections incorporated; live readiness withheld"
+}

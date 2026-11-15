@@ -1,0 +1,86 @@
+{
+  "coverage": {
+    "basis": "persisted_player_linked_items_only",
+    "scoped_player_count": 16,
+    "players_with_news_count": 2,
+    "players_without_observed_news_count": 14,
+    "unresolved_player_count": 0,
+    "source_completeness": "unknown",
+    "no_news_is_not_clearance": true
+  },
+  "scope": {
+    "league_id": "98806880",
+    "team_id": "7",
+    "selection": "roster_plus_explicit_candidates"
+  },
+  "omissions": {
+    "out_of_scope_count": 2049,
+    "unmapped_item_count": 270,
+    "unmapped_high_impact_count": 67,
+    "outside_window_count": 110,
+    "outside_window_high_impact_count": 17,
+    "invalid_timestamp_count": 0,
+    "invalid_timestamp_high_impact_count": 0,
+    "compacted_item_count": 0,
+    "remaining_count": 0,
+    "remaining_high_impact_count": 0
+  },
+  "snapshot_id": "espn-98806880-98c84b7e-2589-4bb9-aa44-871dfbb191cb-1794117627264",
+  "league_id": "98806880",
+  "counts": {
+    "espn": 89,
+    "razzball": 17
+  },
+  "degraded": {},
+  "ingested": 106,
+  "news": [
+    {
+      "news_id": "50402740:4032473",
+      "player_id": "4032473",
+      "full_name": "Rashid Shaheed",
+      "source": "espn",
+      "headline": "Seahawks' Quenton Nelson, Sam Darnold among starters ruled out",
+      "summary": "New Seahawks trade acquisition Quenton Nelson will have a \"minor procedure\" and is one of six starters, including QB Sam Darnold, who won't play vs. the Cardinals.",
+      "impact": "high",
+      "published_at": "2026-11-07T03:11:40.000Z",
+      "ingested_at": "2026-11-08T06:00:32.689Z",
+      "source_url": "https://www.espn.com/nfl/story/_/id/50402740/seahawks-quenton-nelson-sam-darnold-starters-ruled-out",
+      "text_truncated": false
+    },
+    {
+      "news_id": "50402162:4595348",
+      "player_id": "4595348",
+      "full_name": "Malik Nabers",
+      "source": "espn",
+      "headline": "Giants' Cam Skattebo doubtful vs. Eagles; Malik Nabers 'full go'",
+      "summary": "Giants running back Cam Skattebo is unlikely to play against the Eagles on Sunday, but receiver Malik Nabers is expected to be a \"full go\" without limitations.",
+      "impact": "medium",
+      "published_at": "2026-11-07T00:36:48.000Z",
+      "ingested_at": "2026-11-08T06:00:32.689Z",
+      "source_url": "https://www.espn.com/nfl/story/_/id/50402162/giants-cam-skattebo-doubtful-vs-eagles-nabers-full-go",
+      "text_truncated": false
+    },
+    {
+      "news_id": "414288:4595348",
+      "player_id": "4595348",
+      "full_name": "Malik Nabers",
+      "source": "razzball",
+      "headline": "WR Slot vs. Wide – Week 9",
+      "summary": "We’re back after a brief hiatus! This week, I’m breaking down my favorite WR starts and sits using receiving production from the slot and perimeter, along with defensive matchup data. We’ll identify which wide receivers have favorable alignment-based matchups and who might struggle to deliver. Please, blog, may I have some more?",
+      "impact": "low",
+      "published_at": "2026-11-07T21:39:24.000Z",
+      "ingested_at": "2026-11-08T06:00:32.846Z",
+      "source_url": "https://football.razzball.com/wr-slot-vs-wide-week-9-2/",
+      "text_truncated": false
+    }
+  ],
+  "total_count": 3,
+  "returned_count": 3,
+  "truncated": false,
+  "next_cursor": null,
+  "filters": {
+    "since": "2026-11-06T06:00:31.902Z",
+    "until": "2026-11-08T06:00:31.902Z"
+  },
+  "next_step": null
+}

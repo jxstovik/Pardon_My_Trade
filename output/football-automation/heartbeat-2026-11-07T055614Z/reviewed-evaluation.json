@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-07T06:02:47.411Z",
+  "modelVersion": "weekly-2026-W9-c187741d77f8-368dedd8bda2-d1284c4271e7",
+  "cutoff": 8,
+  "capacity": {
+    "used": 2,
+    "remaining": 3,
+    "limit": 5
+  },
+  "availablePlayers": 897,
+  "availableModeled": 437,
+  "seasonEndWeek": 17,
+  "unknownHealthyCoverage": [],
+  "choices": [],
+  "unreviewedCandidateRemainder": 0,
+  "platformWrites": 0
+}

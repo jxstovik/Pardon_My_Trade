@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-05T14:28:22.301Z",
+  "actor": "human-explicit-approved-both-transactions-2026-11-05",
+  "outcomes": [
+    {
+      "add": "-16018",
+      "drop": "-16028",
+      "addName": "Saints D/ST",
+      "dropName": "Commanders D/ST",
+      "actionId": "act-1793888263139-6yktre",
+      "status": "executed",
+      "verified": true,
+      "audit": [
+        {
+          "auditId": "audit-act-1793888263139-6yktre-1793888903940-xndy11",
+          "actionId": "act-1793888263139-6yktre",
+          "idempotencyKey": "pmt-action:act-1793888263139-6yktre:9eafcc48553da93df0e156831cf6e8e8c7177d9aa00e75ef25402d48721e037f",
+          "payloadHash": "9eafcc48553da93df0e156831cf6e8e8c7177d9aa00e75ef25402d48721e037f",
+          "event": "submission_started",
+          "recordedAt": "2026-11-05T14:28:23.940Z",
+          "actor": "human-explicit-approved-both-transactions-2026-11-05",
+          "details": {
+            "approvedBy": "human-explicit-approved-both-transactions-2026-11-05"
+          }
+        },
+        {
+          "auditId": "audit-act-1793888263139-6yktre-1793888904184-kla2ut",
+          "actionId": "act-1793888263139-6yktre",
+          "idempotencyKey": "pmt-action:act-1793888263139-6yktre:9eafcc48553da93df0e156831cf6e8e8c7177d9aa00e75ef25402d48721e037f",
+          "payloadHash": "9eafcc48553da93df0e156831cf6e8e8c7177d9aa00e75ef25402d48721e037f",
+          "event": "executed",
+          "recordedAt": "2026-11-05T14:28:24.184Z",
+          "actor": "human-explicit-approved-both-transactions-2026-11-05",
+          "details": {
+            "approvedBy": "human-explicit-approved-both-transactions-2026-11-05"
+          }
+        }
+      ]
+    },
+    {
+      "add": "5081335",
+      "drop": "3055899",
+      "addName": "Drew Stevens",
+      "dropName": "Harrison Butker",
+      "actionId": "act-1793888263400-qro14s",
+      "status": "blocked",
+      "reason": "roster_precondition_mismatch:7",
+      "verified": false
+    }
+  ]
+}

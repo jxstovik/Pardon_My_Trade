@@ -4,6 +4,7 @@ import { runOrchestrator, buildModelsForOrchestrator } from "../src/agents/ff-or
 import { ActionQueue, InMemoryActionQueueStore } from "../src/agents/action-queue.js";
 import type { ModelPrior, Observation } from "../src/probabilistic/bayesian-model.js";
 import type { OrchestratorInput } from "../src/agents/types.js";
+import { scanWaivers } from "../src/agents/skills/waiver-scanner.js";
 
 const priors: ModelPrior[] = [
   { playerId: "101", playerName: "Q", position: "QB", historyMean: 18, historyVar: 4 },
@@ -67,7 +68,7 @@ test("buildModelsForOrchestrator applies observations", () => {
 });
 
 test("orchestrator produces optimal lineup", async () => {
-  const result = await runOrchestrator({ input, priors, queue: makeQueue() });
+  const result = await runOrchestrator({ input, priors, queue: makeQueue(), doNotDropRankLimit: 3 });
   const starterIds = result.lineup.map((s) => s.playerId).sort();
   assert.deepEqual(starterIds, ["101", "102", "103", "104", "105", "106", "107", "108", "109"]);
   assert.ok(!starterIds.includes("110"), "bench player kept on bench");
@@ -75,28 +76,66 @@ test("orchestrator produces optimal lineup", async () => {
 });
 
 test("orchestrator finds a +EV waiver add/drop", async () => {
-  const result = await runOrchestrator({ input, priors, queue: makeQueue() });
+  const result = await runOrchestrator({ input, priors, queue: makeQueue(), doNotDropRankLimit: 3 });
   assert.equal(result.waiverCandidates.length, 1);
   assert.deepEqual(result.waiverCandidates[0].addPlayerIds, ["301"]);
   assert.deepEqual(result.waiverCandidates[0].dropPlayerIds, ["110"]);
 });
 
+test("waiver scanner protects top-ranked Josh Allen from a stronger free-agent add", () => {
+  const models = buildModelsForOrchestrator([
+    { playerId: "allen", playerName: "Josh Allen", position: "QB", historyMean: 28, historyVar: 4 },
+    { playerId: "fa-qb", playerName: "Free Agent QB", position: "QB", historyMean: 31, historyVar: 4 }
+  ]);
+  const candidates = scanWaivers(
+    [{ playerId: "fa-qb", position: "QB", projectedPoints: 31 }],
+    [{ playerId: "allen", slot: "QB" }],
+    models
+  );
+  assert.deepEqual(candidates, []);
+});
+
+test("waiver scanner fails closed when an owned player's ranking model is missing", () => {
+  const models = buildModelsForOrchestrator([
+    { playerId: "allen", playerName: "Josh Allen", position: "QB", historyMean: 0, historyVar: 4 }
+  ]);
+  const candidates = scanWaivers(
+    [{ playerId: "fa-qb", position: "QB", projectedPoints: 31 }],
+    [{ playerId: "allen", slot: "QB" }],
+    models
+  );
+  assert.deepEqual(candidates, []);
+});
+
 test("orchestrator proposes a +EV trade to a surplus opponent", async () => {
-  const result = await runOrchestrator({ input, priors, queue: makeQueue() });
+  const result = await runOrchestrator({ input, priors, queue: makeQueue(), doNotDropRankLimit: 3 });
   assert.equal(result.tradeCandidates.length, 1);
   assert.equal(result.tradeCandidates[0].toTeamId, "2");
   assert.deepEqual(result.tradeCandidates[0].receivePlayerIds, ["202"]);
 });
 
 test("without auto-approve all actions are queued for humans", async () => {
-  const result = await runOrchestrator({ input, priors, queue: makeQueue(), autoApproveLowRisk: false });
+  const result = await runOrchestrator({ input, priors, queue: makeQueue(), autoApproveLowRisk: false, doNotDropRankLimit: 3 });
   assert.equal(result.queued.length, 3, "set roster + waiver + trade queued");
   assert.equal(result.executed.length, 0);
 });
 
 test("with auto-approve low-risk set_roster executes, high-risk stays queued", async () => {
-  const result = await runOrchestrator({ input, priors, queue: makeQueue(), autoApproveLowRisk: true });
+  const result = await runOrchestrator({ input, priors, queue: makeQueue(), autoApproveLowRisk: true, doNotDropRankLimit: 3 });
   assert.equal(result.executed.length, 1);
   assert.equal(result.executed[0].type, "set_roster");
   assert.equal(result.queued.length, 2, "waiver + trade require human approval");
+});
+
+test("live advisory sweep classifies waiver claims, preserves preference, and never submits", async () => {
+  const queue = makeQueue();
+  const result = await runOrchestrator({ input, priors, queue, doNotDropRankLimit: 3, acquisitionStatus: async () => "WAIVERS" });
+  assert.equal(result.waiverCandidates.length, 0);
+  assert.equal(result.waiverClaims?.length, 1);
+  assert.equal(result.waiverClaims?.[0].priority, 1);
+  assert.equal(result.queued.find(row => row.action.type === "waiver_claim")?.risk, "high");
+  assert.equal(result.executed.length, 0);
+  const unknown = await runOrchestrator({ input, priors, queue: makeQueue(), doNotDropRankLimit: 3, acquisitionStatus: async () => undefined });
+  assert.equal(unknown.waiverClaims?.length, 0);
+  assert.equal(unknown.waiverCandidates.length, 0);
 });

@@ -199,30 +199,22 @@ export function detectColumnRoles(headers: string[], pointsPreference: PointsPre
   return { playerIdx, teamIdx, posIdx, pointsIdx, pointsIsPerGame, gamesIdx, rankIdx, floorIdx, ceilingIdx, statCols };
 }
 
+function matchesPointsPreference(header: string, preference: PointsPreference): boolean {
+  const raw = header.toLowerCase();
+  const half = /1\s*\/\s*2|half|0?\.5|½/.test(raw);
+  if (preference === "ppr") return /ppr/.test(raw) && !half;
+  if (preference === "half") return half;
+  if (preference === "std") return /std/.test(raw);
+  return true;
+}
+
 function selectPointsColumn(headers: string[], candidates: number[], preference: PointsPreference): number {
   if (candidates.length === 0) return -1;
-  // When a table exposes both season totals and a per-game rate ("PPG"),
-  // prefer the per-game column: it is already on the weekly scale the
-  // prediction pipeline needs. Rest-of-season totals spanning 17+ games
-  // (Razzball's ROS pages include postseason) must not be divided down.
+  // Prefer a published per-game rate over season totals, without confusing
+  // the half-PPR column (which also contains "PPR") with full PPR.
   const ppgCandidates = candidates.filter((idx) => /\bppg\b|per.?game/i.test(headers[idx]));
-  if (ppgCandidates.length > 0) {
-    const preferred = ppgCandidates.find((idx) => {
-      const raw = headers[idx].toLowerCase();
-      if (preference === "ppr") return /ppr/.test(raw);
-      if (preference === "std") return /std/.test(raw);
-      return true;
-    });
-    return preferred ?? ppgCandidates[0];
-  }
-  if (preference === "first" || candidates.length === 1) return candidates[0];
-  for (const idx of candidates) {
-    const raw = headers[idx].toLowerCase();
-    if (preference === "ppr" && /ppr/.test(raw)) return idx;
-    if (preference === "half" && /1\/2|half/.test(raw)) return idx;
-    if (preference === "std" && /std/.test(raw)) return idx;
-  }
-  return candidates[0];
+  const pool = ppgCandidates.length > 0 ? ppgCandidates : candidates;
+  return pool.find((idx) => matchesPointsPreference(headers[idx], preference)) ?? pool[0];
 }
 
 export interface MapTableOptions {
@@ -241,11 +233,16 @@ export interface MapTableOptions {
  */
 export function mapTableToCandidates(table: ParsedTable, options: MapTableOptions): ProjectionCandidate[] {
   const roles = detectColumnRoles(table.headers, options.pointsPreference ?? "first");
-  if (roles.playerIdx === -1) return [];
+  // Team defenses are team identities, not individual players. Only accept
+  // Team-only tables when the caller explicitly requested DST; offense tables
+  // without a player/name column must still fail closed.
+  const playerIdx = roles.playerIdx >= 0 ? roles.playerIdx
+    : options.fallbackPosition === "DST" ? roles.teamIdx : -1;
+  if (playerIdx === -1) return [];
 
   const candidates: ProjectionCandidate[] = [];
   for (const row of table.rows) {
-    const name = row[roles.playerIdx]?.trim();
+    const name = row[playerIdx]?.trim();
     if (!name || /^\W*$/.test(name)) continue;
 
     const team = roles.teamIdx >= 0 ? (row[roles.teamIdx]?.trim() ?? "") : "";

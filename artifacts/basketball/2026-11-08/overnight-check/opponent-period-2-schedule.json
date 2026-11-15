@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "opponentTeamId": "2rc1dg43mvgsurtp",
+  "opponentName": "CatsByAtLeast1",
+  "season": "2026-27",
+  "period": {
+    "number": 2,
+    "firstDate": "2026-11-09",
+    "lastDate": "2026-11-15"
+  },
+  "observedAt": "2026-11-08T07:37:57Z",
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;view=SCHEDULE_PERIOD;scoringCategoryType=1;teamId=2rc1dg43mvgsurtp",
+  "sourceKind": "authenticated-browser-transcription",
+  "rosterRows": [
+    {
+      "name": "Mark Mitchell",
+      "school": "Mizzou",
+      "slot": "G",
+      "games": [
+        {
+          "id": "06nvo",
+          "date": "2026-11-09",
+          "label": "Fantrax Schedule - Period UI SIU-E Mon 8:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nwf",
+          "date": "2026-11-15",
+          "label": "Fantrax Schedule - Period UI @Marq Sun 2:30PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Hamad Mousa",
+      "school": "CAPoly",
+      "slot": "G",
+      "games": [
+        {
+          "id": "06ozu",
+          "date": "2026-11-11",
+          "label": "Fantrax Schedule - Period UI @GrCan Wed 9:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06qmw",
+          "date": "2026-11-13",
+          "label": "Fantrax Schedule - Period UI @Ida Fri 9:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06qbm",
+          "date": "2026-11-15",
+          "label": "Fantrax Schedule - Period UI @MTSt Sun 6:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Robert Wright",
+      "school": "BYU",
+      "slot": "G",
+      "games": [
+        {
+          "id": "06nvs",
+          "date": "2026-11-10",
+          "label": "Fantrax Schedule - Period UI QUC Tue 9:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nvx",
+          "date": "2026-11-12",
+          "label": "Fantrax Schedule - Period UI MTSt Thu 9:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Tounde Yessoufou",
+      "school": "StJon",
+      "slot": "G",
+      "games": [
+        {
+          "id": "06ruf",
+          "date": "2026-11-11",
+          "label": "Fantrax Schedule - Period UI Colg Wed 7:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06ruk",
+          "date": "2026-11-15",
+          "label": "Fantrax Schedule - Period UI Syr Sun 7:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "DJ Hall",
+      "school": "TxSt",
+      "slot": "F/C",
+      "games": [
+        {
+          "id": "06q1e",
+          "date": "2026-11-10",
+          "label": "Fantrax Schedule - Period UI @UTRGV Tue 7:30PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06ruh",
+          "date": "2026-11-13",
+          "label": "Fantrax Schedule - Period UI USM Fri 8:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06t2b",
+          "date": "2026-11-15",
+          "label": "Fantrax Schedule - Period UI @UTSA Sun 8:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Thomas Haugh",
+      "school": "Fla",
+      "slot": "F/C",
+      "games": [
+        {
+          "id": "06oe1",
+          "date": "2026-11-10",
+          "label": "Fantrax Schedule - Period UI @FSU Tue 6:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nw2",
+          "date": "2026-11-13",
+          "label": "Fantrax Schedule - Period UI Merrim Fri 7:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Milan Momcilovic",
+      "school": "KY",
+      "slot": "F/C",
+      "games": [
+        {
+          "id": "06q6x",
+          "date": "2026-11-10",
+          "label": "Fantrax Schedule - Period UI Kan Tue 9:30PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nw4",
+          "date": "2026-11-13",
+          "label": "Fantrax Schedule - Period UI NoAZ Fri 7:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Malik Reneau",
+      "school": "Mia-FL",
+      "slot": "F/C",
+      "games": [
+        {
+          "id": "06nvn",
+          "date": "2026-11-09",
+          "label": "Fantrax Schedule - Period UI NFla Mon 7:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nw3",
+          "date": "2026-11-13",
+          "label": "Fantrax Schedule - Period UI N AL Fri 5:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Donovan Dent",
+      "school": "LSU",
+      "slot": "Flx",
+      "games": [
+        {
+          "id": "06nvm",
+          "date": "2026-11-09",
+          "label": "Fantrax Schedule - Period UI LaTec Mon 8:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nwa",
+          "date": "2026-11-14",
+          "label": "Fantrax Schedule - Period UI @Gonz Sat 3:30PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Dior Johnson",
+      "school": "UCF",
+      "slot": "Flx",
+      "games": [
+        {
+          "id": "06qj2",
+          "date": "2026-11-10",
+          "label": "Fantrax Schedule - Period UI USA Tue 7:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06qj5",
+          "date": "2026-11-13",
+          "label": "Fantrax Schedule - Period UI GaSo Fri 8:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Acaden Lewis",
+      "school": "Mia-FL",
+      "slot": "Res",
+      "games": [
+        {
+          "id": "06nvn",
+          "date": "2026-11-09",
+          "label": "Fantrax Schedule - Period UI NFla Mon 7:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nw3",
+          "date": "2026-11-13",
+          "label": "Fantrax Schedule - Period UI N AL Fri 5:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Je'Shawn Stevenson",
+      "school": "N TX",
+      "slot": "Res",
+      "games": [
+        {
+          "id": "06s7f",
+          "date": "2026-11-11",
+          "label": "Fantrax Schedule - Period UI SCla Wed 8:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06s7n",
+          "date": "2026-11-14",
+          "label": "Fantrax Schedule - Period UI USA Sat 6:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "Rashaud Marshall",
+      "school": "APSU",
+      "slot": "Res",
+      "games": [
+        {
+          "id": "06q6w",
+          "date": "2026-11-10",
+          "label": "Fantrax Schedule - Period UI (N/A) Tue 8:00PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06r20",
+          "date": "2026-11-14",
+          "label": "Fantrax Schedule - Period UI @WichSt Sat 7:00PM; displayed time is not a verified instant"
+        }
+      ]
+    },
+    {
+      "name": "TJ Power",
+      "school": "Penn",
+      "slot": "Res",
+      "games": [
+        {
+          "id": "06qz6",
+          "date": "2026-11-09",
+          "label": "Fantrax Schedule - Period UI How Mon 6:30PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06nvv",
+          "date": "2026-11-11",
+          "label": "Fantrax Schedule - Period UI @Navy Wed 5:30PM; displayed time is not a verified instant"
+        },
+        {
+          "id": "06qk8",
+          "date": "2026-11-14",
+          "label": "Fantrax Schedule - Period UI @StJos Sat 6:30PM; displayed time is not a verified instant"
+        }
+      ]
+    }
+  ],
+  "rosterRowCount": 14,
+  "listedGames": 31,
+  "reserveSlots": "Four listed reserve players; UI summary Reserve 4/4. A generic placeholder row is not counted as a player.",
+  "limitation": "Stable player IDs are not exposed in this supported roster view; no model crosswalk or opponent forecast joined."
+}

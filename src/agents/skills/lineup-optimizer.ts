@@ -16,8 +16,9 @@ function isEligible(playerPosition: PlayerPosition, slot: PlayerPosition): boole
   return false;
 }
 
-function candidateCanPlay(candidate: RosterSlotInput, slot: PlayerPosition): boolean {
+function candidateCanPlay(candidate: RosterSlotInput, slot: PlayerPosition, exact = false): boolean {
   if (candidate.eligiblePositions) {
+    if (exact) return candidate.eligiblePositions.includes(slot);
     return candidate.eligiblePositions.some((position) => isEligible(position, slot));
   }
   return isEligible(candidate.slot, slot);
@@ -37,7 +38,8 @@ export interface LineupResult {
 export function optimizeLineup(
   rosterSlots: ReadonlyArray<RosterSlotInput>,
   starterCounts: ReadonlyArray<{ readonly slot: PlayerPosition; readonly count: number }>,
-  models: Map<string, PlayerModel>
+  models: Map<string, PlayerModel>,
+  options: { exactEligibility?: boolean } = {}
 ): LineupResult {
   const needed: PlayerPosition[] = [];
   for (const { slot, count } of starterCounts) {
@@ -46,8 +48,8 @@ export function optimizeLineup(
   const players = rosterSlots.filter((candidate) => !candidate.locked ||
     (candidate.currentSlot ?? candidate.slot) !== "BN" && needed.includes(candidate.currentSlot ?? candidate.slot));
   const weights = needed.map((slot) => players.map((candidate) => {
-    if (candidate.locked) return (candidate.currentSlot ?? candidate.slot) === slot && candidateCanPlay(candidate, slot) ? 1e12 + muOf(models, candidate.playerId) : -1e12;
-    if (!candidateCanPlay(candidate, slot)) return -1e12;
+    if (candidate.locked) return (candidate.currentSlot ?? candidate.slot) === slot && candidateCanPlay(candidate, slot, options.exactEligibility) ? 1e12 + muOf(models, candidate.playerId) : -1e12;
+    if (!candidateCanPlay(candidate, slot, options.exactEligibility)) return -1e12;
     return 1e9 + muOf(models, candidate.playerId);
   }).concat(Array(needed.length).fill(0)));
   const assignment = maximumAssignment(weights);
@@ -60,13 +62,9 @@ export function optimizeLineup(
     used.add(player.playerId);
     starters.push({ ...player, slot: needed[slotIndex]! });
   });
-  // A locked player assigned to the bench is frozen there and unavailable to
-  // the matching problem above.
-  for (const candidate of rosterSlots) if (candidate.locked && !needed.includes(candidate.currentSlot ?? candidate.slot)) used.add(candidate.playerId);
-
   const bench: RosterSlotInput[] = rosterSlots
     .filter((slot) => !used.has(slot.playerId))
-    .map((slot) => ({ playerId: slot.playerId, slot: "BN" as PlayerPosition }));
+    .map((slot) => ({ ...slot, slot: "BN" as PlayerPosition }));
 
   const expectedPoints = starters.reduce((sum, slot) => sum + muOf(models, slot.playerId), 0);
   return { starters, bench, expectedPoints };

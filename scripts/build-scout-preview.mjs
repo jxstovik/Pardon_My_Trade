@@ -1,0 +1,17 @@
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = fileURLToPath(new URL('../', import.meta.url));
+const read = (name) => readFile(resolve(root, 'public', name), 'utf8');
+const [matchup, lab, css, source, json] = await Promise.all(['scout.html', 'player-comparison.html', 'scout.css', 'scout.js', 'scout-data.json'].map(read));
+const week = JSON.parse(json).meta.week;
+const main = (html) => html.match(/<main class="page">([\s\S]*?)<\/main>/)[1].replaceAll('href="/scout/players"', 'href="#player"').replaceAll('href="/scout"', 'href="#matchup"');
+const labMain = main(lab).replace(/<div id="(?:provenance|modelCaveat)"[^>]*><\/div>/g, '');
+const js = source.replace(/      const response = await fetch[\s\S]*?      data = await response.json\(\);/, '      data = JSON.parse(document.getElementById("scoutData").textContent);').replace(/      if \(location.pathname[\s\S]*?      else renderScout\(\);/, '      renderScout();\n      renderPlayerLab();');
+if (js.includes('await fetch(')) throw new Error('Offline data embedding failed');
+const navigation = `document.addEventListener('click', (event) => { const link = event.target.closest('a[href="#player"],a[href="#matchup"]'); if (!link) return; event.preventDefault(); const player = link.getAttribute('href') === '#player'; document.getElementById('matchupView').hidden = player; document.getElementById('playerView').hidden = !player; document.querySelectorAll('.nav-links a').forEach(a => { const selected = a.getAttribute('href') === (player ? '#player' : '#matchup'); a.classList.toggle('active', selected); if (selected) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }); window.scrollTo(0,0); });`;
+const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Week ${week} · PMT offline scout desk</title><style>${css}\n[hidden]{display:none!important}</style></head><body><header class="topbar"><a class="brand" href="#matchup">PMT <span>SCOUT DESK</span></a><nav class="nav-links" aria-label="Scout pages"><a class="active" aria-current="page" href="#matchup">Matchup</a><a href="#player">Player lab</a></nav><span id="dataStatus" class="freshness">Loading model outputs…</span></header><main class="page"><div id="matchupView">${main(matchup)}</div><div id="playerView" hidden>${labMain}</div></main><script id="scoutData" type="application/json">${json.replaceAll('<', '\\u003c')}</script><script>${js}\n${navigation}</script></body></html>`;
+const dir = resolve(root,`output/pdf/week${week}-scout`);
+await mkdir(dir,{recursive:true});
+await writeFile(resolve(dir,`week${week}-scout-interactive.html`),html);
+console.log('Built standalone matchup and player lab HTML.');

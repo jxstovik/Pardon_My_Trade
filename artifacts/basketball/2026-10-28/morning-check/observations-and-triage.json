@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-10-28T12:03:45.813010+00:00",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "boardRegenerated": false,
+  "sourcesActuallyRead": [
+    "Authenticated Fantrax draft-room rendered accessibility tree",
+    "Public RotoWire article, last displayed update October27 1:38PM EST"
+  ],
+  "sourcesNotRefreshed": [
+    "historical export",
+    "saved provider projection rows",
+    "rules",
+    "all rosters",
+    "schedule"
+  ],
+  "draft": {
+    "displayedStart": "2026-10-28T21:00:00-04:00",
+    "ownSnakeSlot": 6,
+    "emptyPickCells": 112,
+    "evidence": "fresh rendered draft-room AX read around12:01UTC; no completed names displayed"
+  },
+  "trigger": "2026-10-28T12:01:45.194Z",
+  "localTrigger": "2026-10-28T08:01:45.194-04:00",
+  "top20Covered": 20,
+  "top20OutsideOwn112": [
+    {
+      "name": "Jordan Smith",
+      "id": "07a8s",
+      "providerRank": 4,
+      "draftPriority": 364,
+      "basis": "provider-plus-cold-start-prior"
+    },
+    {
+      "name": "Thijs De Ridder",
+      "id": "071n6",
+      "providerRank": 8,
+      "draftPriority": 125,
+      "basis": "provider-plus-model"
+    },
+    {
+      "name": "John Blackwell",
+      "id": "06g9s",
+      "providerRank": 13,
+      "draftPriority": 253,
+      "basis": "provider-plus-model"
+    },
+    {
+      "name": "Juke Harris",
+      "id": "06n9r",
+      "providerRank": 15,
+      "draftPriority": 169,
+      "basis": "provider-plus-model"
+    },
+    {
+      "name": "Ivan Kharchenkov",
+      "id": "070ld",
+      "providerRank": 17,
+      "draftPriority": 184,
+      "basis": "provider-plus-model"
+    },
+    {
+      "name": "Trey Kaufman-Renn",
+      "id": "05wt9",
+      "providerRank": 19,
+      "draftPriority": 687,
+      "basis": "provider-plus-model"
+    },
+    {
+      "name": "Quinn Ellis",
+      "id": "07ank",
+      "providerRank": 20,
+      "draftPriority": 349,
+      "basis": "provider-plus-cold-start-prior"
+    }
+  ],
+  "liveAdvice": "stale inputs; no timestamp renewal or model promotion",
+  "liveActions": 0
+}

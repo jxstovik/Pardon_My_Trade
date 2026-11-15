@@ -1,0 +1,3582 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Week 5 · PMT offline scout desk</title><style>:root{color-scheme:dark;--bg:#101b1c;--panel:#172526;--panel2:#1e3030;--ink:#f3f2e9;--muted:#9caeaa;--line:#2d4140;--mint:#a8e2bf;--lime:#d3ec93;--coral:#efa18a;--blue:#9bbce5;--gold:#eacb78;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -15%,#294241 0,transparent 38rem),var(--bg);color:var(--ink);min-height:100vh}.topbar{height:64px;padding:0 clamp(17px,5vw,72px);display:flex;align-items:center;gap:28px;border-bottom:1px solid #ffffff12;background:#101b1cdd;position:sticky;top:0;z-index:3;backdrop-filter:blur(16px)}.brand{font-weight:900;letter-spacing:-.07em;font-size:21px;color:var(--ink);text-decoration:none;white-space:nowrap}.brand span{font-size:9px;letter-spacing:.17em;color:var(--mint);margin-left:7px}.nav-links{height:100%;display:flex;align-items:center;gap:19px}.nav-links a,.settings-link{color:var(--muted);text-decoration:none;font-size:11px}.nav-links a.active,.nav-links a:hover,.settings-link{color:var(--mint)}.topbar .freshness{margin-left:auto;text-align:right;font-size:10px;max-width:260px}.page{width:min(1240px,100%);margin:0 auto;padding:39px clamp(17px,4vw,48px) 35px}.intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}.eyebrow{color:var(--mint);font-weight:800;letter-spacing:.14em;font-size:9px;margin:0 0 8px}.intro h1{font-size:clamp(32px,5vw,48px);letter-spacing:-.065em;margin:0;line-height:1}.intro .muted,.muted{color:var(--muted);font-size:12px}.intro .muted{margin:10px 0 0}.settings-link{border:1px solid var(--line);padding:10px 12px;border-radius:8px;white-space:nowrap}.provenance{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 14px}.provenance span,.tag{border:1px solid var(--line);border-radius:99px;padding:6px 9px;color:var(--muted);font-size:9px;white-space:nowrap}.card{background:linear-gradient(145deg,#1b2a2a,#152223);border:1px solid var(--line);border-radius:15px;padding:21px 22px;margin-bottom:14px;box-shadow:0 12px 32px #00000012}.hero{padding:24px 25px}.hero-head,.card-heading{display:flex;justify-content:space-between;align-items:start;gap:12px}.card h2,.section-heading h2{font-size:19px;letter-spacing:-.035em;margin:0}.card h3{font-size:16px;letter-spacing:-.03em;margin:0}.subnote{color:#9caeaa;font-size:10px;line-height:1.55;margin:12px 0 4px}.switch{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10px;white-space:nowrap;cursor:pointer}.switch input{position:absolute;opacity:0}.switch-track{width:32px;height:18px;border-radius:99px;background:#334a47;position:relative;transition:background .16s}.switch-track:after{content:"";position:absolute;width:12px;height:12px;left:3px;top:3px;border-radius:50%;background:#a7b6ad;transition:transform .16s}.switch input:checked+.switch-track{background:#599b78}.switch input:checked+.switch-track:after{background:#eff9e8;transform:translateX(14px)}.chart-legend{display:flex;gap:13px;flex-wrap:wrap;margin-top:17px}.legend-item{display:inline-flex;gap:7px;align-items:center;color:#c7d3ce;font-size:10px}.legend-line{display:inline-block;width:16px;height:3px;border-radius:4px;background:var(--series);box-shadow:0 0 8px color-mix(in srgb,var(--series),transparent 60%)}.legend-line.dashed{height:0;border-top:2px dashed var(--series);background:none;box-shadow:none}.chart{width:100%;height:290px;margin-top:3px}.chart svg{width:100%;height:100%;overflow:visible}.distribution-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:6px}.dist-card{border:1px solid var(--line);background:#11201f66;border-radius:9px;padding:11px 12px;min-width:0}.dist-card .label{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}.dist-card strong{font-size:23px;letter-spacing:-.05em;display:block;margin:4px 0 1px;font-weight:650}.dist-card small{font-size:9px;color:#a7b7b1}.sensitivity{font-size:10px;color:var(--muted);border-top:1px solid #ffffff10;margin-top:13px;padding-top:11px;line-height:1.5}.sensitivity strong{color:var(--ink)}.section-heading{display:flex;align-items:end;justify-content:space-between;margin:26px 3px 10px;gap:10px}.section-heading .eyebrow{margin-bottom:5px}.section-heading h2{font-size:21px}.section-heading>.muted{font-size:10px}.lineup-grid,.scenario-grid,.grid-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.lineup-table{margin-top:13px}.lineup-row{display:grid;grid-template-columns:42px minmax(0,1fr) 70px;gap:9px;align-items:center;padding:8px 0;border-bottom:1px solid #ffffff0c}.lineup-row:last-child{border:0}.slot-badge{font-size:8px;font-weight:800;color:var(--mint);background:#a8e2bf15;border-radius:5px;text-align:center;padding:5px 3px}.player-main{font-size:11px;font-weight:680}.player-sub{font-size:9px;color:var(--muted);margin-top:3px}.player-score{text-align:right;font-size:12px;font-variant-numeric:tabular-nums;color:var(--lime)}.tag.status{margin-left:5px;padding:3px 5px;color:var(--gold);border-color:#eacb7844}.recommended-card{border-color:#89c1a055}.callout{font-size:10px;color:var(--muted);margin:11px 0 0;line-height:1.5}.callout strong{color:var(--mint)}.text-button{background:transparent;color:var(--mint);border:1px solid #a8e2bf50;border-radius:7px;padding:7px 9px;font-size:9px;cursor:pointer;white-space:nowrap}.slot-controls{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.slot-control{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:9px}.slot-control select,.player-pickers select{font:inherit;color:var(--ink);background:var(--panel2);border:1px solid var(--line);padding:9px 10px;border-radius:8px;min-width:0;width:100%;font-size:10px}.scenario-result-card{margin-top:1px}.scenario-result-card .chart-legend{margin-top:15px}.compact-chart{height:260px}.recommendation-list{padding:12px 0 8px;border-top:1px solid #ffffff0e;margin-top:11px}.recommendation-list:first-of-type{border:0;margin-top:1px}.recommendation-list h3{font-size:11px;margin:0 0 9px;color:#e1e9df}.mini-row{display:grid;grid-template-columns:1fr auto;gap:9px;align-items:center;padding:7px 0;border-bottom:1px solid #ffffff0a}.mini-row:last-child{border:0}.mini-row strong{font-size:10px}.mini-row p{margin:3px 0 0;font-size:9px;color:var(--muted);line-height:1.4}.mini-row .value{font-size:11px;color:var(--lime);font-variant-numeric:tabular-nums}.mini-row .value span{font-size:8px;color:var(--muted)}.bench-plan{margin-top:12px}.bench-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #ffffff0c}.bench-row strong{font-size:10px}.bench-row span{font-size:9px;color:var(--muted);text-align:right}.news-card{margin-top:1px}.news-list{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:15px}.news-item{border:1px solid var(--line);background:#11201f55;border-radius:9px;padding:12px}.news-item h3{font-size:11px;line-height:1.35;margin:0 0 6px}.news-item p{font-size:9px;color:var(--muted);line-height:1.5;margin:5px 0}.news-item a{font-size:9px;color:var(--mint);text-decoration:none}.news-item a:hover{text-decoration:underline}.rules-card{margin-top:1px}.rules-card summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;cursor:pointer}.rules-card summary::-webkit-details-marker{display:none}.rules-card summary .eyebrow{margin:0 0 4px}.rules-card summary strong{font-size:13px}.rules-content{border-top:1px solid var(--line);margin-top:16px;padding-top:14px}.rules-intro{font-size:10px;color:var(--muted);margin:0 0 14px}.rule-columns{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.rule-group h3{font-size:11px;color:var(--mint);margin:0 0 7px}.rule-row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #ffffff0a;padding:5px 0;font-size:9px;color:#c4d0ca}.rule-row span:last-child{text-align:right;color:var(--lime);white-space:nowrap}.rule-pills{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 15px}.rule-pills span{padding:6px 8px;border:1px solid var(--line);border-radius:7px;color:#c7d3ce;font-size:9px}.compare-card{padding:23px}.player-pickers{display:grid;grid-template-columns:1fr 1fr 180px;gap:11px;align-items:end}.player-pickers label{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:10px}.player-chart{height:330px;margin:15px 0 0}.player-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:9px}.player-metric{padding:13px;border:1px solid var(--line);border-radius:10px;background:#11201f66}.player-metric h3{font-size:12px;margin:0 0 8px}.metric-main{font-size:24px;letter-spacing:-.05em;color:var(--lime)}.metric-sub{font-size:9px;color:var(--muted);margin-top:2px}.thresholds{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.thresholds span{border:1px solid var(--line);border-radius:99px;padding:5px 7px;font-size:8px;color:#c8d3ce}.table-scroll{overflow:auto;margin-top:14px}table{border-collapse:collapse;width:100%;min-width:620px}th{text-align:left;text-transform:uppercase;letter-spacing:.09em;font-size:8px;font-weight:700;color:#81948e;padding:0 8px 9px}td{font-size:9px;color:#d2ddd6;padding:9px 8px;border-top:1px solid #ffffff0e}td:first-child{font-weight:700}.position-pill{font-size:8px;color:var(--mint);background:#a8e2bf15;padding:4px 6px;border-radius:5px}.warning{color:var(--gold)}footer{color:#71817d;text-align:center;font-size:9px;padding:12px 0 0;line-height:1.6}footer a{color:var(--mint);text-decoration:none;margin-left:5px}footer a:hover{text-decoration:underline}.error-panel{padding:15px;color:var(--coral);border:1px solid #efa18a66;border-radius:10px;font-size:11px}.gridline{stroke:#ffffff12;stroke-width:1}.axis-label{fill:#81948e;font-size:10px;font-family:inherit}.chart-title{fill:#cdd8d2;font-size:10px;font-family:inherit}.density-area{opacity:.08}.density-line{fill:none;stroke-width:2.3;vector-effect:non-scaling-stroke}.density-line.dashed{stroke-dasharray:6 5;opacity:.65}.dot{stroke:#101b1c;stroke-width:2}
+@media(max-width:800px){.topbar{gap:13px}.nav-links{gap:11px}.nav-links a{font-size:9px}.topbar .freshness{display:none}.page{padding-top:28px}.hero{padding:18px}.card{padding:17px}.hero-head{align-items:start;flex-direction:column}.lineup-grid,.scenario-grid,.grid-two{grid-template-columns:1fr}.news-list{grid-template-columns:1fr}.chart{height:250px}.distribution-cards{grid-template-columns:1fr 1fr}.distribution-cards .dist-card:last-child{grid-column:1/-1}.rule-columns{grid-template-columns:1fr}.player-pickers{grid-template-columns:1fr 1fr}.player-pickers label:last-child{grid-column:1/-1}.player-metrics{grid-template-columns:1fr}.intro{align-items:start;flex-direction:column}.chart.compact-chart{height:230px}}
+@media(max-width:420px){.nav-links{gap:8px}.nav-links a{font-size:8px}.brand{font-size:18px}.brand span{font-size:8px}.slot-controls{grid-template-columns:1fr}.distribution-cards{grid-template-columns:1fr}.distribution-cards .dist-card:last-child{grid-column:auto}.player-pickers{grid-template-columns:1fr}.player-pickers label:last-child{grid-column:auto}.card-heading{align-items:flex-start}}
+.model-caveat{padding:10px 12px;margin:-4px 0 13px;border:1px solid #eacb7855;border-radius:8px;background:#eacb780d;color:#e6d7a6;font-size:10px;line-height:1.5}.hero h2 small{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:0}
+
+/* Aligned opponent-left / owner-right matchup, including narrow phones. */
+.matchup-card{padding:18px 12px}.matchup-toolbar{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:18px}.matchup-toolbar>span{font-size:10px;color:var(--muted)}.matchup-head,.matchup-row{display:grid;grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr);gap:12px}.matchup-head{align-items:center;text-align:center;margin-bottom:8px}.matchup-head h3{font-size:15px}.matchup-head>span{font-size:9px;color:var(--muted)}.matchup-row{padding:15px 0;border-top:1px solid var(--line);align-items:center}.matchup-player{min-width:0}.matchup-player select{width:100%;min-width:0;border:1px solid var(--line);border-radius:7px;background:var(--panel2);color:var(--ink);padding:9px 5px;font:inherit;font-size:12px}.matchup-player.opponent select{border-color:#efa18a55}.matchup-player.owner select{border-color:#a8e2bf55}.matchup-meta{display:flex;justify-content:space-between;gap:6px;padding-top:7px;font-size:10px;color:var(--muted)}.matchup-meta strong{color:var(--ink);white-space:nowrap}.slot-curve{height:160px}.slot-curve svg,.bench-curve svg{height:100%;width:100%}.curve-note{font-size:9px;color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.action-row{border-top:1px solid var(--line);padding:14px 0}.action-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px}.action-badge{font-size:9px;letter-spacing:.05em;color:var(--gold);border:1px solid #eacb7855;border-radius:5px;padding:5px}.action-badge.cut{color:var(--coral);border-color:#efa18a77}.action-badge.start{color:var(--mint);border-color:#a8e2bf77}.action-row p{font-size:11px;color:var(--muted);line-height:1.5;margin:7px 0}.bench-curve{height:130px}.matchup-head .muted{font-size:10px}
+@media(max-width:600px){.matchup-row,.matchup-head{grid-template-columns:minmax(0,1fr) 27px minmax(0,1fr);gap:5px}.matchup-card{padding:13px 8px}.matchup-head h3{font-size:12px}.matchup-player select{font-size:11px;padding:9px 3px}.matchup-meta{font-size:9px;flex-direction:column}.slot-curve{height:130px}.curve-note{font-size:8px}.matchup-toolbar{flex-wrap:wrap}.matchup-toolbar>span{display:none}.matchup-toolbar .text-button{font-size:9px;padding:8px 5px}.slot-badge{font-size:8px;padding:7px 1px}.action-heading{font-size:11px}}
+
+[hidden]{display:none!important}</style></head><body><header class="topbar"><a class="brand" href="#matchup">PMT <span>SCOUT DESK</span></a><nav class="nav-links" aria-label="Scout pages"><a class="active" aria-current="page" href="#matchup">Matchup</a><a href="#player">Player lab</a></nav><span id="dataStatus" class="freshness">Loading model outputs…</span></header><main class="page"><div id="matchupView">
+    <section class="intro">
+      <div><p class="eyebrow">WEEK 5 · MODEL FORECAST</p><h1>The matchup desk</h1><p id="subtitle" class="muted">Current lineup, model recommendation, and scenario controls.</p></div>
+      <a class="settings-link" href="https://fantasy.espn.com/football/league/settings?leagueId=98806880&view=summary" target="_blank" rel="noreferrer">ESPN league rules ↗</a>
+    </section>
+    <div id="provenance" class="provenance"></div>
+    <div id="modelCaveat" class="model-caveat"></div>
+
+    <section class="hero card">
+      <div class="hero-head">
+        <div><p class="eyebrow">WEEKLY SCORING DISTRIBUTIONS</p><h2><span id="opponentName">opponent</span> <small id="opponentRecord"></small> vs <span id="ownerName">Your team</span> <small id="ownerRecord"></small></h2></div>
+        <label class="switch"><input id="chaseActive" type="checkbox" checked><span class="switch-track"></span><span>Ja’Marr Chase active</span></label>
+      </div>
+      <p class="subnote">Player outcomes come from PMT’s candidate metamodels, not ESPN’s displayed estimates. Baseline curves show your current, your recommended, and the opponent’s current lineup. Chase, Nabers and Pollard forecasts are conditional on playing; Q tags are not estimated play probabilities.</p>
+      <div id="baselineLegend" class="chart-legend"></div>
+      <div id="baselineChart" class="chart" role="img" aria-label="Scoring probability distributions for current and recommended lineups"></div>
+      <div id="baselineStats" class="distribution-cards"></div>
+      <div id="sensitivity" class="sensitivity"></div>
+    </section>
+
+    <section class="section-heading"><div><p class="eyebrow">HEAD-TO-HEAD LINEUP</p><h2>23andMe vs Bored Man Gets Paid</h2></div><span id="lineupRule" class="muted"></span></section>
+    <section class="card matchup-card">
+      <div class="matchup-toolbar"><button id="resetOpponent" class="text-button" type="button">Reset opponent</button><span>Changes stay in this preview</span><div><button id="resetCurrent" class="text-button" type="button">Your current</button> <button id="resetOwner" class="text-button" type="button">Your recommendation</button></div></div>
+      <div class="matchup-head"><div><h3 id="opponentScenarioTitle"></h3><span class="muted">Opponent · left</span></div><span>Slot</span><div><h3 id="ownerScenarioTitle"></h3><span class="muted">Your team · right</span></div></div>
+      <p class="subnote">Each row shows two scoring density curves on the same point and density scales. Select a bench player or move an eligible starter between slots. Legal direct swaps exchange both players; empty a slot first when a direct swap is not eligible.</p>
+      <div id="matchupRows"></div><p id="swapMessage" class="callout" role="status" aria-live="polite"></p>
+    </section>
+    <details class="card rules-card"><summary><strong>Your current vs recommended lineup</strong><span class="tag" id="recommendedMean"></span></summary><div class="lineup-grid rules-content"><article><h3>Current <span id="currentMean"></span></h3><div id="currentLineup" class="lineup-table"></div></article><article><h3>Recommended</h3><div id="recommendedLineup" class="lineup-table"></div></article></div><p id="lineupDelta" class="callout"></p></details>
+    <section class="card scenario-result-card">
+      <div class="card-heading"><div><p class="eyebrow">SCENARIO PROJECTION</p><h3>How the matchup moves</h3></div><span class="tag">Model quantiles · independent player draws</span></div>
+      <div id="scenarioSummary" class="distribution-cards"></div>
+      <div id="scenarioLegend" class="chart-legend"></div>
+      <div id="scenarioChart" class="chart compact-chart" role="img" aria-label="What-if team scoring distributions"></div>
+      <p class="subnote">The win chance is conditional on the selected lineups and Chase toggle. Team simulations add independent player distributions, so they do not capture shared game-script or weather correlation.</p>
+    </section>
+
+    <section class="grid-two">
+      <article class="card"><div class="card-heading"><div><p class="eyebrow">WAIVER DESK</p><h2>Model-backed moves</h2></div><span class="tag">Modeled pool · ownership checked</span></div><div id="flexAdds" class="recommendation-list"></div><div id="dstAdds" class="recommendation-list"></div></article>
+      <article class="card"><div class="card-heading"><div><p class="eyebrow">ROSTER HOLD</p><h2>Start, bench, stash or cut</h2></div></div><div id="benchPlan" class="bench-plan"></div></article>
+    </section>
+
+    <section class="card news-card"><div class="card-heading"><div><p class="eyebrow">AVAILABILITY WATCH</p><h2>News that changes the range</h2></div><span class="tag">Retrieved Oct 8 · latest published reports</span></div><div id="newsList" class="news-list"></div></section>
+
+    <details class="card rules-card"><summary><span><p class="eyebrow">LEAGUE SETTINGS</p><strong>Scoring, lineup and transaction rules</strong></span><span class="tag">10 teams · PPR</span></summary><div id="rulesContent" class="rules-content"></div></details>
+
+    <details class="card rules-card"><summary><span><p class="eyebrow">MODEL CHECK</p><strong>2025 holdout performance</strong></span><span class="tag">Six candidate models</span></summary><div id="modelValidation" class="rules-content"></div><p class="subnote">MAE is mean absolute error in fantasy points; lower is better. Coverage is the observed share inside the model’s 10th–90th percentile interval (nominal 80%). Candidates are not promoted, and 2026 projections use NFL stats through Week 4.</p></details>
+
+    <footer>Forecasts are decision support. Candidate model artifacts are not promoted to PMT production. <a href="#player">Compare individual scoring distributions ↗</a></footer>
+  </div><div id="playerView" hidden>
+    <section class="intro"><div><p class="eyebrow">WEEK 5 · PLAYER DISTRIBUTIONS</p><h1>Player lab</h1><p class="muted">Overlay model scoring distributions for roster and available players.</p></div><a class="settings-link" href="#matchup">← Back to matchup</a></section>
+    
+    
+    <section class="card compare-card">
+      <div class="player-pickers">
+        <label>Player A<select id="playerA"></select></label>
+        <label>Player B<select id="playerB"></select></label>
+        <label>Filter position<select id="positionFilter"><option value="ALL">All positions</option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option></select></label>
+      </div>
+      <div id="compareLegend" class="chart-legend"></div>
+      <div id="playerChart" class="chart player-chart" role="img" aria-label="Overlay of individual player point scoring distributions"></div>
+      <div id="playerMetrics" class="player-metrics"></div>
+      <p id="compareNote" class="subnote"></p>
+    </section>
+    <section class="card"><div class="card-heading"><div><p class="eyebrow">MODEL OUTPUTS</p><h2>Available projections</h2></div><span class="tag" id="playerCount">—</span></div><div id="playerTable" class="table-scroll"></div></section>
+    <footer>Individual distributions are reconstructed from per-player model quantiles. A Q status means the forecast is conditional on playing. <a href="#matchup">Return to matchup ↗</a></footer>
+  </div></main><script id="scoutData" type="application/json">{
+  "meta": {
+    "leagueName": "The Smaracko",
+    "leagueId": "98806880",
+    "season": 2026,
+    "week": 5,
+    "owner": "Bored Man Gets Paid",
+    "opponent": "23andMe",
+    "asOf": "2026-10-07T15:50:11.346047+00:00",
+    "statsCutoff": "2026-10-07 09:04:51 UTC; season 2026 Weeks 1-4",
+    "statsSha256": "4783f7c943064e80793d221edfd5db211303a69a32a0bcad9c3176b1e4a8b7cb",
+    "source": "NFLverse statistics through Week 4; current lineups and statuses from authenticated ESPN reads",
+    "modelStatus": "Candidate models · not promoted to PMT production",
+    "modelNote": "All six position models were retrained against the scoring weights from these ESPN settings, including missed-kick penalties and the D/ST points- and yards-allowed tiers. NFLverse does not separately identify the rare 1-point-safety event, so that D/ST event is not reflected in the model target.",
+    "distributionNote": "Per-player model quantiles are interpolated into distributions. Team simulations use independent player draws and do not model shared game-script correlation. Q-tagged player forecasts are conditional on playing.",
+    "validation": {
+      "QB": {
+        "n": 664,
+        "model_mae": 6.318479886569466,
+        "model_rmse": 7.919004743619869,
+        "baseline_mae": 6.840054400101094,
+        "baseline_rmse": 8.745470772773915,
+        "model_bias": 0.17808531924186308,
+        "baseline_bias": 0.15712808376524584,
+        "q10_q90_coverage": 0.75,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 13.356144578313252,
+        "mean_score_predicted": 13.534229897555116,
+        "mean_score_baseline": 13.513272662078498,
+        "final_training_rows": 7030,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "RB": {
+        "n": 1575,
+        "model_mae": 4.4117238111935055,
+        "model_rmse": 6.1420145824156736,
+        "baseline_mae": 4.372439877023188,
+        "baseline_rmse": 6.445443654194985,
+        "model_bias": 0.05401388919731085,
+        "baseline_bias": -0.4014324451363098,
+        "q10_q90_coverage": 0.8215873015873015,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 7.585625396825397,
+        "mean_score_predicted": 7.639639286022707,
+        "mean_score_baseline": 7.184192951689086,
+        "final_training_rows": 16747,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "WR": {
+        "n": 2511,
+        "model_mae": 4.255441107296547,
+        "model_rmse": 5.770136912275158,
+        "baseline_mae": 4.375647282891668,
+        "baseline_rmse": 6.165648953351186,
+        "model_bias": 0.28048768431672433,
+        "baseline_bias": 0.06455432508463911,
+        "q10_q90_coverage": 0.8458781362007168,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 6.667630426125049,
+        "mean_score_predicted": 6.948118110441774,
+        "mean_score_baseline": 6.732184751209689,
+        "final_training_rows": 26421,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "TE": {
+        "n": 1287,
+        "model_mae": 3.5677660287487085,
+        "model_rmse": 5.029645921658942,
+        "baseline_mae": 3.5879436816528147,
+        "baseline_rmse": 5.216754707331339,
+        "model_bias": 0.029838764809697133,
+        "baseline_bias": -0.2819333923872812,
+        "q10_q90_coverage": 0.846930846930847,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 5.603092463092463,
+        "mean_score_predicted": 5.63293122790216,
+        "mean_score_baseline": 5.321159070705182,
+        "final_training_rows": 13215,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "K": {
+        "n": 543,
+        "model_mae": 3.848621687286565,
+        "model_rmse": 4.817449555429518,
+        "baseline_mae": 4.1096639985277195,
+        "baseline_rmse": 5.1657144255106,
+        "model_bias": -0.28294944151058227,
+        "baseline_bias": 0.002417213116182175,
+        "q10_q90_coverage": 0.7882136279926335,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 8.149171270718233,
+        "mean_score_predicted": 7.866221829207649,
+        "mean_score_baseline": 8.151588483834415,
+        "final_training_rows": 5926,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "DST": {
+        "n": 544,
+        "model_mae": 4.352643309493381,
+        "model_rmse": 5.526815144105112,
+        "baseline_mae": 4.761761336600491,
+        "baseline_rmse": 6.081715201099757,
+        "model_bias": -0.5154780067040851,
+        "baseline_bias": 0.0001998741658667862,
+        "q10_q90_coverage": 0.7996323529411765,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 3.8566176470588234,
+        "mean_score_predicted": 3.3411396403547386,
+        "mean_score_baseline": 3.856817521224691,
+        "final_training_rows": 5918,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      }
+    },
+    "scoring": {
+      "source": "ESPN League Settings",
+      "sourceUrl": "https://fantasy.espn.com/football/league/settings?leagueId=98806880&view=summary",
+      "scoringType": "Head to Head Points, Point Per Reception (PPR)",
+      "positions": [
+        {
+          "slot": "QB",
+          "label": "Quarterback",
+          "starters": 1,
+          "maximum": 4
+        },
+        {
+          "slot": "RB",
+          "label": "Running Back",
+          "starters": 2,
+          "maximum": 8
+        },
+        {
+          "slot": "WR",
+          "label": "Wide Receiver",
+          "starters": 2,
+          "maximum": 8
+        },
+        {
+          "slot": "TE",
+          "label": "Tight End",
+          "starters": 1,
+          "maximum": 3
+        },
+        {
+          "slot": "FLEX",
+          "label": "RB/WR/TE Flex",
+          "starters": 1
+        },
+        {
+          "slot": "D/ST",
+          "label": "Team Defense/Special Teams",
+          "starters": 1,
+          "maximum": 3
+        },
+        {
+          "slot": "K",
+          "label": "Place Kicker",
+          "starters": 1,
+          "maximum": 3
+        },
+        {
+          "slot": "BE",
+          "label": "Bench",
+          "starters": 7
+        }
+      ],
+      "categories": [
+        {
+          "group": "Passing",
+          "rows": [
+            [
+              "Passing yards",
+              "+0.04 / yard"
+            ],
+            [
+              "Passing TD",
+              "+4"
+            ],
+            [
+              "Interception thrown",
+              "−2"
+            ],
+            [
+              "2-point passing conversion",
+              "+2"
+            ]
+          ]
+        },
+        {
+          "group": "Rushing",
+          "rows": [
+            [
+              "Rushing yards",
+              "+0.1 / yard"
+            ],
+            [
+              "Rushing TD",
+              "+6"
+            ],
+            [
+              "2-point rushing conversion",
+              "+2"
+            ]
+          ]
+        },
+        {
+          "group": "Receiving",
+          "rows": [
+            [
+              "Receiving yards",
+              "+0.1 / yard"
+            ],
+            [
+              "Reception",
+              "+1"
+            ],
+            [
+              "Receiving TD",
+              "+6"
+            ],
+            [
+              "2-point receiving conversion",
+              "+2"
+            ]
+          ]
+        },
+        {
+          "group": "Kicking",
+          "rows": [
+            [
+              "FG made, 0–39 yards",
+              "+3"
+            ],
+            [
+              "FG made, 40–49 yards",
+              "+4"
+            ],
+            [
+              "FG made, 50–59 yards",
+              "+5"
+            ],
+            [
+              "FG made, 60+ yards",
+              "+5"
+            ],
+            [
+              "PAT made / missed",
+              "+1 / −1"
+            ],
+            [
+              "FG missed",
+              "−1"
+            ]
+          ]
+        },
+        {
+          "group": "D/ST",
+          "rows": [
+            [
+              "Sack",
+              "+1"
+            ],
+            [
+              "Interception / fumble recovery",
+              "+2 each"
+            ],
+            [
+              "Safety",
+              "+2"
+            ],
+            [
+              "Blocked punt, PAT, or FG",
+              "+2"
+            ],
+            [
+              "Kickoff / punt / defensive return TD",
+              "+6"
+            ],
+            [
+              "2-point return / 1-point safety",
+              "+2 / +1"
+            ],
+            [
+              "Points allowed: 0 / 1–6 / 7–13 / 14–17",
+              "+5 / +4 / +3 / +1"
+            ],
+            [
+              "Points allowed: 18–27 / 28–34 / 35–45 / 46+",
+              "0 / −1 / −3 / −5"
+            ],
+            [
+              "Total yards allowed: \u003c100 / 100–199 / 200–299",
+              "+5 / +3 / +2"
+            ],
+            [
+              "Total yards allowed: 300–349 / 350–399 / 400–449",
+              "0 / −1 / −3"
+            ],
+            [
+              "Total yards allowed: 450–499 / 500–549 / 550+",
+              "−5 / −6 / −7"
+            ],
+            [
+              "Fumble lost",
+              "−2"
+            ]
+          ]
+        }
+      ],
+      "transactionRules": [
+        [
+          "Lineup changes",
+          "Lock individually at scheduled game time"
+        ],
+        [
+          "Acquisitions",
+          "Waivers; one-day waiver period; order resets weekly to inverse standings"
+        ],
+        [
+          "Season acquisition limit",
+          "No limit"
+        ],
+        [
+          "Roster",
+          "16 total: 9 starters, 7 bench; no IR slot"
+        ]
+      ]
+    },
+    "news": [
+      {
+        "headline": "Malik Nabers missed Wednesday practice with a knee injury",
+        "detail": "NFL.com reports a Wednesday non-participation; ESPN flags him questionable. No final Sunday availability is confirmed.",
+        "date": "2026-10-07",
+        "retrievedAt": "2026-10-08T12:46:22.602Z",
+        "source": "NFL.com news roundup",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-7",
+        "impact": "Keep his model forecast conditional on playing. If inactive, use Wan’Dale Robinson at WR; Jameson Williams is the next WR alternative by current model mean."
+      },
+      {
+        "headline": "Tony Pollard missed Wednesday practice with a foot injury",
+        "detail": "The Titans list Pollard as a non-participant. ESPN flags him questionable; the team has not published a final game designation.",
+        "date": "2026-10-07",
+        "retrievedAt": "2026-10-08T12:46:22.602Z",
+        "source": "Titans injury report",
+        "url": "https://www.tennesseetitans.com/team/injury-report/",
+        "impact": "He is in your live FLEX. If inactive, Wan’Dale Robinson is the highest-mean unused eligible player; keep Tyjae Spears as RB depth without assuming a usage increase."
+      },
+      {
+        "headline": "Ja’Marr Chase remains a concussion concern",
+        "detail": "The Bengals report Wednesday non-participation with a concussion. ESPN still lists him questionable and 23andMe still has him starting.",
+        "date": "2026-10-07",
+        "retrievedAt": "2026-10-08T12:46:22.602Z",
+        "source": "Bengals injury report",
+        "url": "https://www.bengals.com/team/injury-report/",
+        "impact": "Compare active/out scenarios. If replaced, Khalil Shakir is the highest-mean available non-bye WR on the opponent roster; an empty slot exaggerates your advantage."
+      },
+      {
+        "headline": "Adonai Mitchell missed practice with a finger injury",
+        "detail": "NFL.com lists Wednesday non-participation; ESPN marks him doubtful.",
+        "date": "2026-10-07",
+        "retrievedAt": "2026-10-08T12:46:22.602Z",
+        "source": "NFL.com news roundup",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-7",
+        "impact": "Stash/monitor on your bench; his active-state curve is not a clearance estimate."
+      },
+      {
+        "headline": "Baker Mayfield ruled out for Thursday",
+        "detail": "NFL.com lists Mayfield out with a right-thumb injury for Tampa Bay at Dallas.",
+        "date": "2026-10-07",
+        "retrievedAt": "2026-10-08T12:46:22.602Z",
+        "source": "NFL.com Week 5 report",
+        "url": "https://www.nfl.com/news/nfl-week-5-injury-report-player-statuses-for-all-15-games",
+        "impact": "Relevant to available Dallas D/ST, but no injury-based mean adjustment or untrained defensive boost is applied."
+      }
+    ],
+    "rosterReadAt": "2026-10-08T13:15:38.513Z",
+    "reportAsOf": "2026-10-08T13:15:38.513Z",
+    "lineupSource": "authenticated ESPN read",
+    "availabilityCoverage": "38 previously modeled available players matched against 892 live ESPN free agents; unmodeled players are excluded.",
+    "newsStatus": "Primary-source web refresh; PMT automated news ingestion not run.",
+    "rosterMove": {
+      "actionId": "act-1791464660329-bsshp3",
+      "added": "Brian Robinson Jr.",
+      "dropped": "Jauan Jennings",
+      "executedAt": "2026-10-08T13:12:20.102Z"
+    }
+  },
+  "teams": [
+    {
+      "id": "7",
+      "name": "Bored Man Gets Paid",
+      "record": "1–3",
+      "currentLineup": {
+        "RB1": "Ashton Jeanty",
+        "WR1": "Malik Nabers",
+        "QB": "Josh Allen",
+        "TE": "George Kittle",
+        "FLEX": "Tony Pollard",
+        "WR2": "Michael Wilson",
+        "RB2": "RJ Harvey",
+        "K": "Eddy Pineiro",
+        "D/ST": "Bills D/ST"
+      },
+      "players": [
+        {
+          "name": "Ashton Jeanty",
+          "player": "Ashton Jeanty",
+          "position": "RB",
+          "team": "LV",
+          "opponent": "NE",
+          "mean": 16.080659926016008,
+          "q10": 6.191362727053596,
+          "q25": 10.610079996092038,
+          "median": 15.070851067059483,
+          "q75": 21.122634757397527,
+          "q90": 27.93145711488208,
+          "week4_form": 18.475,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "RB1",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.916,
+            "10_plus": 0.7694666666666666,
+            "15_plus": 0.5034333333333333,
+            "20_plus": 0.2944,
+            "25_plus": 0.16486666666666666
+          },
+          "quantiles": {
+            "5": 2.8683575065835685,
+            "10": 6.191362727053596,
+            "25": 10.610079996092038,
+            "50": 15.070851067059483,
+            "75": 21.122634757397527,
+            "90": 27.93145711488208,
+            "95": 31.186605484878505
+          },
+          "espnId": "4890973"
+        },
+        {
+          "name": "Malik Nabers",
+          "player": "Malik Nabers",
+          "position": "WR",
+          "team": "NYG",
+          "opponent": "WAS",
+          "mean": 14.114145574826754,
+          "q10": 3.9056769307448205,
+          "q25": 7.086703274652021,
+          "median": 14.094981888267899,
+          "q75": 19.84650980977488,
+          "q90": 25.721052727853618,
+          "week4_form": 11.2,
+          "available": false,
+          "status": "Q",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "WR1",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.8513,
+            "10_plus": 0.6451333333333333,
+            "15_plus": 0.46126666666666666,
+            "20_plus": 0.2452,
+            "25_plus": 0.1174
+          },
+          "quantiles": {
+            "5": 2.2520197426053574,
+            "10": 3.9056769307448205,
+            "25": 7.086703274652021,
+            "50": 14.094981888267899,
+            "75": 19.84650980977488,
+            "90": 25.721052727853618,
+            "95": 27.62910719092204
+          },
+          "espnId": "4595348"
+        },
+        {
+          "name": "Josh Allen",
+          "player": "Josh Allen",
+          "position": "QB",
+          "team": "BUF",
+          "opponent": "LA",
+          "mean": 19.558395677789868,
+          "q10": 9.639309672817514,
+          "q25": 14.446349783462948,
+          "median": 18.89889574187029,
+          "q75": 24.731633826467213,
+          "q90": 30.42941092877649,
+          "week4_form": 28.115,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "QB",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 1,
+            "10_plus": 0.8889,
+            "15_plus": 0.7158333333333333,
+            "20_plus": 0.4515,
+            "25_plus": 0.24063333333333334
+          },
+          "quantiles": {
+            "5": 7.17577650641083,
+            "10": 9.639309672817514,
+            "25": 14.446349783462948,
+            "50": 18.89889574187029,
+            "75": 24.731633826467213,
+            "90": 30.42941092877649,
+            "95": 32.70692962928064
+          },
+          "espnId": "3918298"
+        },
+        {
+          "name": "Jameson Williams",
+          "player": "Jameson Williams",
+          "position": "WR",
+          "team": "DET",
+          "opponent": "ARI",
+          "mean": 10.318389541384862,
+          "q10": 1.9157524756173023,
+          "q25": 5.2494702028571005,
+          "median": 9.692242306103813,
+          "q75": 14.651114965662435,
+          "q90": 19.733447770761757,
+          "week4_form": 9.725000000000001,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7649666666666667,
+            "10_plus": 0.48673333333333335,
+            "15_plus": 0.24413333333333334,
+            "20_plus": 0.09776666666666667,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0.5437467414545489,
+            "10": 1.9157524756173023,
+            "25": 5.2494702028571005,
+            "50": 9.692242306103813,
+            "75": 14.651114965662435,
+            "90": 19.733447770761757,
+            "95": 22.793478678773397
+          },
+          "espnId": "4426388"
+        },
+        {
+          "name": "George Kittle",
+          "player": "George Kittle",
+          "position": "TE",
+          "team": "SF",
+          "opponent": "SEA",
+          "mean": 12.572746066781134,
+          "q10": 3.341901608619575,
+          "q25": 6.210335547607771,
+          "median": 11.320572613854015,
+          "q75": 18.659548805150973,
+          "q90": 24.255825156205145,
+          "week4_form": 16.1,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "TE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.8101666666666667,
+            "10_plus": 0.5623666666666667,
+            "15_plus": 0.37496666666666667,
+            "20_plus": 0.21496666666666667,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 2.3063886199603854,
+            "10": 3.341901608619575,
+            "25": 6.210335547607771,
+            "50": 11.320572613854015,
+            "75": 18.659548805150973,
+            "90": 24.255825156205145,
+            "95": 24.478322930485074
+          },
+          "espnId": "3040151"
+        },
+        {
+          "name": "Wan'Dale Robinson",
+          "player": "Wan'Dale Robinson",
+          "position": "WR",
+          "team": "TEN",
+          "opponent": "HOU",
+          "mean": 10.439170493318912,
+          "q10": 3.161626577024301,
+          "q25": 5.155183221844613,
+          "median": 9.428596371288531,
+          "q75": 14.314556491826128,
+          "q90": 19.527628140666472,
+          "week4_form": 10.1,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7579,
+            "10_plus": 0.46366666666666667,
+            "15_plus": 0.22736666666666666,
+            "20_plus": 0.09246666666666667,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 1.9231786917746858,
+            "10": 3.161626577024301,
+            "25": 5.155183221844613,
+            "50": 9.428596371288531,
+            "75": 14.314556491826128,
+            "90": 19.527628140666472,
+            "95": 23.66546112147268
+          },
+          "espnId": "4569587"
+        },
+        {
+          "name": "Tony Pollard",
+          "player": "Tony Pollard",
+          "position": "RB",
+          "team": "TEN",
+          "opponent": "HOU",
+          "mean": 10.722552414721727,
+          "q10": 3.021190136297787,
+          "q25": 6.179016483572738,
+          "median": 9.734433143876188,
+          "q75": 14.47206452239189,
+          "q90": 19.751688049323846,
+          "week4_form": 9.625,
+          "available": false,
+          "status": "Q",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "FLEX",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.8049666666666667,
+            "10_plus": 0.48556666666666665,
+            "15_plus": 0.23233333333333334,
+            "20_plus": 0.0971,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 1.3136500331254206,
+            "10": 3.021190136297787,
+            "25": 6.179016483572738,
+            "50": 9.734433143876188,
+            "75": 14.47206452239189,
+            "90": 19.751688049323846,
+            "95": 23.77221808684245
+          },
+          "espnId": "3916148"
+        },
+        {
+          "name": "Michael Wilson",
+          "player": "Michael Wilson",
+          "position": "WR",
+          "team": "ARI",
+          "opponent": "DET",
+          "mean": 14.35994869657814,
+          "q10": 4.19695343773223,
+          "q25": 8.438777937409359,
+          "median": 12.98143626429855,
+          "q75": 19.20927086326919,
+          "q90": 26.158526205737015,
+          "week4_form": 14.2,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "WR2",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.867,
+            "10_plus": 0.6652333333333333,
+            "15_plus": 0.4183,
+            "20_plus": 0.23063333333333333,
+            "25_plus": 0.12443333333333334
+          },
+          "quantiles": {
+            "5": 2.0469155747472207,
+            "10": 4.19695343773223,
+            "25": 8.438777937409359,
+            "50": 12.98143626429855,
+            "75": 19.20927086326919,
+            "90": 26.158526205737015,
+            "95": 31.945509838864343
+          },
+          "espnId": "4360761"
+        },
+        {
+          "name": "Kenny Gainwell",
+          "player": "Kenny Gainwell",
+          "position": "RB",
+          "team": "TB",
+          "opponent": "DAL",
+          "mean": 5.626209687083378,
+          "q10": 0.0072145306160819045,
+          "q25": 1.429144313287649,
+          "median": 4.297853395909214,
+          "q75": 8.391446384587471,
+          "q90": 13.667772456877433,
+          "week4_form": 5.25,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.4594,
+            "10_plus": 0.2079,
+            "15_plus": 0.07643333333333334,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": -0.24745223336178387,
+            "10": 0.0072145306160819045,
+            "25": 1.429144313287649,
+            "50": 4.297853395909214,
+            "75": 8.391446384587471,
+            "90": 13.667772456877433,
+            "95": 16.51584556378444
+          },
+          "espnId": "4371733"
+        },
+        {
+          "name": "RJ Harvey",
+          "player": "RJ Harvey",
+          "position": "RB",
+          "team": "DEN",
+          "opponent": "LAC",
+          "mean": 11.85264861804004,
+          "q10": 2.621612660385725,
+          "q25": 6.777329526722296,
+          "median": 10.76001460042169,
+          "q75": 16.212065237786497,
+          "q90": 22.22486956516648,
+          "week4_form": 12.699999999999998,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "RB2",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.8174666666666667,
+            "10_plus": 0.5512333333333334,
+            "15_plus": 0.3108,
+            "20_plus": 0.1603,
+            "25_plus": 0.0693
+          },
+          "quantiles": {
+            "5": 1.444031117887537,
+            "10": 2.621612660385725,
+            "25": 6.777329526722296,
+            "50": 10.76001460042169,
+            "75": 16.212065237786497,
+            "90": 22.22486956516648,
+            "95": 26.290872781814336
+          },
+          "espnId": "4568490"
+        },
+        {
+          "name": "Adonai Mitchell",
+          "player": "Adonai Mitchell",
+          "position": "WR",
+          "team": "NYJ",
+          "opponent": "CLE",
+          "mean": 9.722791025089592,
+          "q10": 2.3625460469309854,
+          "q25": 4.287875896514637,
+          "median": 8.234704524599284,
+          "q75": 13.742244779572584,
+          "q90": 20.14929455341138,
+          "week4_form": 10.65,
+          "available": false,
+          "status": "D",
+          "club": "Bored Man Gets Paid",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7038,
+            "10_plus": 0.4149333333333333,
+            "15_plus": 0.21856666666666666,
+            "20_plus": 0.10126666666666667,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 1.4406825127610583,
+            "10": 2.3625460469309854,
+            "25": 4.287875896514637,
+            "50": 8.234704524599284,
+            "75": 13.742244779572584,
+            "90": 20.14929455341138,
+            "95": 22.65140680308015
+          },
+          "espnId": "4597500"
+        },
+        {
+          "name": "Eddy Pineiro",
+          "player": "Eddy Pineiro",
+          "position": "K",
+          "team": "SF",
+          "opponent": "SEA",
+          "mean": 8.150903488435166,
+          "q10": 2.8361130936506567,
+          "q25": 4.650646011064773,
+          "median": 7.790390880157903,
+          "q75": 11.032345900806291,
+          "q90": 14.16557501741136,
+          "week4_form": 6.5,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "K",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7224,
+            "10_plus": 0.3310666666666667,
+            "15_plus": 0.08586666666666666,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 1.5155556372907832,
+            "10": 2.8361130936506567,
+            "25": 4.650646011064773,
+            "50": 7.790390880157903,
+            "75": 11.032345900806291,
+            "90": 14.16557501741136,
+            "95": 16.704958694912882
+          },
+          "espnId": "4034949"
+        },
+        {
+          "name": "Tyjae Spears",
+          "player": "Tyjae Spears",
+          "position": "RB",
+          "team": "TEN",
+          "opponent": "HOU",
+          "mean": 4.811909882425166,
+          "q10": 0.2000996293243484,
+          "q25": 1.5324970562950735,
+          "median": 3.4788046965275683,
+          "q75": 7.028257715978843,
+          "q90": 10.90648158606036,
+          "week4_form": 3.875,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.39436666666666664,
+            "10_plus": 0.13766666666666666,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0.005423316461388343,
+            "10": 0.2000996293243484,
+            "25": 1.5324970562950735,
+            "50": 3.4788046965275683,
+            "75": 7.028257715978843,
+            "90": 10.90648158606036,
+            "95": 14.919905114205527
+          },
+          "espnId": "4428557"
+        },
+        {
+          "name": "Bills D/ST",
+          "player": "BUF",
+          "position": "DST",
+          "team": "BUF",
+          "opponent": "LA",
+          "mean": 3.528623563526243,
+          "q10": -3.208295637578686,
+          "q25": -0.2483769654171847,
+          "median": 2.8098691672682383,
+          "q75": 7.150010128601013,
+          "q90": 11.516756626898093,
+          "week4_form": 0.75,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "D/ST",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.37006666666666665,
+            "10_plus": 0.15086666666666668,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": -5.006295175764828,
+            "10": -3.208295637578686,
+            "25": -0.2483769654171847,
+            "50": 2.8098691672682383,
+            "75": 7.150010128601013,
+            "90": 11.516756626898093,
+            "95": 13.206075710971191
+          },
+          "espnId": "-16002"
+        },
+        {
+          "name": "Rashid Shaheed",
+          "player": "Rashid Shaheed",
+          "position": "WR",
+          "team": "SEA",
+          "opponent": "SF",
+          "mean": 7.6740537668817135,
+          "q10": 1.7873424074636537,
+          "q25": 3.075092836102577,
+          "median": 5.875041328224006,
+          "q75": 10.925571180081963,
+          "q90": 16.43493429503455,
+          "week4_form": 6,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.5755666666666667,
+            "10_plus": 0.2933,
+            "15_plus": 0.13636666666666666,
+            "20_plus": 0.0518,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0.8175960725812979,
+            "10": 1.7873424074636537,
+            "25": 3.075092836102577,
+            "50": 5.875041328224006,
+            "75": 10.925571180081963,
+            "90": 16.43493429503455,
+            "95": 20.28817674527181
+          },
+          "espnId": "4032473"
+        },
+        {
+          "name": "Brian Robinson Jr.",
+          "player": "Brian Robinson",
+          "position": "RB",
+          "team": "ATL",
+          "opponent": "BAL",
+          "mean": 10.153621091535511,
+          "q10": 1.9518856514663852,
+          "q25": 4.509901701130877,
+          "median": 8.434359763111916,
+          "q75": 14.135694514630574,
+          "q90": 21.335001073629165,
+          "week4_form": 12.125,
+          "available": false,
+          "status": "—",
+          "club": "Bored Man Gets Paid",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7187,
+            "10_plus": 0.4311333333333333,
+            "15_plus": 0.23176666666666668,
+            "20_plus": 0.12623333333333334,
+            "25_plus": 0.05366666666666667
+          },
+          "quantiles": {
+            "5": 1.1688118194280437,
+            "10": 1.9518856514663852,
+            "25": 4.509901701130877,
+            "50": 8.434359763111916,
+            "75": 14.135694514630574,
+            "90": 21.335001073629165,
+            "95": 25.327497981847763
+          },
+          "espnId": "4241474"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "23andMe",
+      "record": "2–2",
+      "currentLineup": {
+        "WR1": "Ja'Marr Chase",
+        "TE": "Trey McBride",
+        "RB1": "Bucky Irving",
+        "WR2": "Matthew Golden",
+        "RB2": "Tyler Allgeier",
+        "D/ST": "Texans D/ST",
+        "K": "Harrison Mevis",
+        "QB": "Sam Darnold",
+        "FLEX": "Keon Coleman"
+      },
+      "players": [
+        {
+          "name": "Ja'Marr Chase",
+          "player": "Ja'Marr Chase",
+          "position": "WR",
+          "team": "CIN",
+          "opponent": "MIA",
+          "mean": 15.710957105876968,
+          "q10": 5.040924666796358,
+          "q25": 8.674779243448853,
+          "median": 15.02812198716968,
+          "q75": 22.676726932244712,
+          "q90": 26.546292609032385,
+          "week4_form": 15.05,
+          "available": false,
+          "status": "Q",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "WR1",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.9007333333333334,
+            "10_plus": 0.6952666666666667,
+            "15_plus": 0.49273333333333336,
+            "20_plus": 0.3319666666666667,
+            "25_plus": 0.15866666666666668
+          },
+          "quantiles": {
+            "5": 2.976291406245025,
+            "10": 5.040924666796358,
+            "25": 8.674779243448853,
+            "50": 15.02812198716968,
+            "75": 22.676726932244712,
+            "90": 26.546292609032385,
+            "95": 30.689090545261124
+          },
+          "espnId": "4362628"
+        },
+        {
+          "name": "Kenneth Walker III",
+          "player": "Kenneth Walker III",
+          "position": "RB",
+          "team": "KC",
+          "opponent": "BYE",
+          "mean": 0,
+          "q10": 0,
+          "q25": 0,
+          "median": 0,
+          "q75": 0,
+          "q90": 0,
+          "week4_form": 27.525,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": true,
+          "probabilities": {
+            "5_plus": 0,
+            "10_plus": 0,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0,
+            "10": 0,
+            "25": 0,
+            "50": 0,
+            "75": 0,
+            "90": 0,
+            "95": 0
+          },
+          "espnId": "4567048"
+        },
+        {
+          "name": "Trey McBride",
+          "player": "Trey McBride",
+          "position": "TE",
+          "team": "ARI",
+          "opponent": "DET",
+          "mean": 16.045618824868825,
+          "q10": 4.9492731771692675,
+          "q25": 9.940585391184182,
+          "median": 15.947581703622067,
+          "q75": 21.27380726582013,
+          "q90": 27.64069977203995,
+          "week4_form": 17.3,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "TE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.8975333333333333,
+            "10_plus": 0.7445,
+            "15_plus": 0.5386,
+            "20_plus": 0.3086,
+            "25_plus": 0.16253333333333334
+          },
+          "quantiles": {
+            "5": 3.7906087803488777,
+            "10": 4.9492731771692675,
+            "25": 9.940585391184182,
+            "50": 15.947581703622067,
+            "75": 21.27380726582013,
+            "90": 27.64069977203995,
+            "95": 30.30069218820476
+          },
+          "espnId": "4361307"
+        },
+        {
+          "name": "Tetairoa McMillan",
+          "player": "Tetairoa McMillan",
+          "position": "WR",
+          "team": "CAR",
+          "opponent": "BYE",
+          "mean": 0,
+          "q10": 0,
+          "q25": 0,
+          "median": 0,
+          "q75": 0,
+          "q90": 0,
+          "week4_form": 18.625,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": true,
+          "probabilities": {
+            "5_plus": 0,
+            "10_plus": 0,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0,
+            "10": 0,
+            "25": 0,
+            "50": 0,
+            "75": 0,
+            "90": 0,
+            "95": 0
+          },
+          "espnId": "4685472"
+        },
+        {
+          "name": "Bucky Irving",
+          "player": "Bucky Irving",
+          "position": "RB",
+          "team": "TB",
+          "opponent": "DAL",
+          "mean": 16.159675111154865,
+          "q10": 6.542580631096515,
+          "q25": 10.225670312973346,
+          "median": 15.307436673269468,
+          "q75": 21.970258067768544,
+          "q90": 26.458039449141616,
+          "week4_form": 11.799999999999999,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "RB1",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.9399666666666666,
+            "10_plus": 0.7550333333333333,
+            "15_plus": 0.5118666666666667,
+            "20_plus": 0.3191,
+            "25_plus": 0.1438
+          },
+          "quantiles": {
+            "5": 4.642405568282726,
+            "10": 6.542580631096515,
+            "25": 10.225670312973346,
+            "50": 15.307436673269468,
+            "75": 21.970258067768544,
+            "90": 26.458039449141616,
+            "95": 29.93850454725468
+          },
+          "espnId": "4596448"
+        },
+        {
+          "name": "Jadarian Price",
+          "player": "Jadarian Price",
+          "position": "RB",
+          "team": "SEA",
+          "opponent": "SF",
+          "mean": 0,
+          "q10": 0,
+          "q25": 0,
+          "median": 0,
+          "q75": 0,
+          "q90": 0,
+          "week4_form": 4.666666666666667,
+          "available": false,
+          "status": "IR",
+          "club": "23andMe",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0,
+            "10_plus": 0,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0,
+            "10": 0,
+            "25": 0,
+            "50": 0,
+            "75": 0,
+            "90": 0,
+            "95": 0
+          },
+          "espnId": "4685512"
+        },
+        {
+          "name": "Matthew Golden",
+          "player": "Matthew Golden",
+          "position": "WR",
+          "team": "GB",
+          "opponent": "CHI",
+          "mean": 10.72261566647981,
+          "q10": 2.8359284719408917,
+          "q25": 5.6667171709834365,
+          "median": 8.95872191020457,
+          "q75": 15.0170033073505,
+          "q90": 20.852160695896366,
+          "week4_form": 14.5,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "WR2",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7847,
+            "10_plus": 0.45926666666666666,
+            "15_plus": 0.2534666666666667,
+            "20_plus": 0.12443333333333334,
+            "25_plus": 0.05383333333333333
+          },
+          "quantiles": {
+            "5": 1.0655330503680132,
+            "10": 2.8359284719408917,
+            "25": 5.6667171709834365,
+            "50": 8.95872191020457,
+            "75": 15.0170033073505,
+            "90": 20.852160695896366,
+            "95": 25.299562636007373
+          },
+          "espnId": "4701936"
+        },
+        {
+          "name": "Khalil Shakir",
+          "player": "Khalil Shakir",
+          "position": "WR",
+          "team": "BUF",
+          "opponent": "LA",
+          "mean": 9.336329973116738,
+          "q10": 2.0447284990303753,
+          "q25": 4.404019012488358,
+          "median": 7.6654737178454555,
+          "q75": 13.508186521827586,
+          "q90": 19.03949272119491,
+          "week4_form": 7.65,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7064666666666667,
+            "10_plus": 0.4018333333333333,
+            "15_plus": 0.21196666666666666,
+            "20_plus": 0.08613333333333334,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0.8569101133273604,
+            "10": 2.0447284990303753,
+            "25": 4.404019012488358,
+            "50": 7.6654737178454555,
+            "75": 13.508186521827586,
+            "90": 19.03949272119491,
+            "95": 22.1977340836014
+          },
+          "espnId": "4373678"
+        },
+        {
+          "name": "Travis Kelce",
+          "player": "Travis Kelce",
+          "position": "TE",
+          "team": "KC",
+          "opponent": "BYE",
+          "mean": 0,
+          "q10": 0,
+          "q25": 0,
+          "median": 0,
+          "q75": 0,
+          "q90": 0,
+          "week4_form": 13.15,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": true,
+          "probabilities": {
+            "5_plus": 0,
+            "10_plus": 0,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0,
+            "10": 0,
+            "25": 0,
+            "50": 0,
+            "75": 0,
+            "90": 0,
+            "95": 0
+          },
+          "espnId": "15847"
+        },
+        {
+          "name": "Tyler Allgeier",
+          "player": "Tyler Allgeier",
+          "position": "RB",
+          "team": "ARI",
+          "opponent": "DET",
+          "mean": 8.487667682824613,
+          "q10": 0.9870497337194694,
+          "q25": 3.422339208989554,
+          "median": 6.891888337739364,
+          "q75": 12.398050011168175,
+          "q90": 17.98675996459246,
+          "week4_form": 7.675000000000001,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "RB2",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.6397666666666667,
+            "10_plus": 0.362,
+            "15_plus": 0.18113333333333334,
+            "20_plus": 0.0765,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0.6304668909575724,
+            "10": 0.9870497337194694,
+            "25": 3.422339208989554,
+            "50": 6.891888337739364,
+            "75": 12.398050011168175,
+            "90": 17.98675996459246,
+            "95": 22.079356902736187
+          },
+          "espnId": "4373626"
+        },
+        {
+          "name": "Texans D/ST",
+          "player": "HOU",
+          "position": "DST",
+          "team": "HOU",
+          "opponent": "TEN",
+          "mean": 4.471469118202724,
+          "q10": -1.9291051430765973,
+          "q25": 1.0512739938631794,
+          "median": 3.5966864300274217,
+          "q75": 7.211274626591908,
+          "q90": 12.616821777117888,
+          "week4_form": 2.5,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "D/ST",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.39816666666666667,
+            "10_plus": 0.17123333333333332,
+            "15_plus": 0.0613,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": -4.310144527868516,
+            "10": -1.9291051430765973,
+            "25": 1.0512739938631794,
+            "50": 3.5966864300274217,
+            "75": 7.211274626591908,
+            "90": 12.616821777117888,
+            "95": 15.657026170544803
+          },
+          "espnId": "-16034"
+        },
+        {
+          "name": "Harrison Mevis",
+          "player": "Harrison Mevis",
+          "position": "K",
+          "team": "LA",
+          "opponent": "BUF",
+          "mean": 8.983623204436828,
+          "q10": 3.194843500904004,
+          "q25": 5.3512931262374765,
+          "median": 8.95364193544005,
+          "q75": 12.249826560849996,
+          "q90": 15.469095106429688,
+          "week4_form": 6.5,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "K",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.7739333333333334,
+            "10_plus": 0.4213,
+            "15_plus": 0.12183333333333334,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 1.9494479468547559,
+            "10": 3.194843500904004,
+            "25": 5.3512931262374765,
+            "50": 8.95364193544005,
+            "75": 12.249826560849996,
+            "90": 15.469095106429688,
+            "95": 16.165151018824616
+          },
+          "espnId": "4574716"
+        },
+        {
+          "name": "Patrick Mahomes",
+          "player": "Patrick Mahomes",
+          "position": "QB",
+          "team": "KC",
+          "opponent": "BYE",
+          "mean": 0,
+          "q10": 0,
+          "q25": 0,
+          "median": 0,
+          "q75": 0,
+          "q90": 0,
+          "week4_form": 20.895,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": true,
+          "probabilities": {
+            "5_plus": 0,
+            "10_plus": 0,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0,
+            "10": 0,
+            "25": 0,
+            "50": 0,
+            "75": 0,
+            "90": 0,
+            "95": 0
+          },
+          "espnId": "3139477"
+        },
+        {
+          "name": "Sam Darnold",
+          "player": "Sam Darnold",
+          "position": "QB",
+          "team": "SEA",
+          "opponent": "SF",
+          "mean": 12.47865207171322,
+          "q10": 2.907930184755023,
+          "q25": 7.279818990770013,
+          "median": 12.327351865562981,
+          "q75": 17.69232374397081,
+          "q90": 22.067085153275258,
+          "week4_form": 13.833333333333334,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "QB",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.8298,
+            "10_plus": 0.6131,
+            "15_plus": 0.3772,
+            "20_plus": 0.16956666666666667,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 1.22416338405235,
+            "10": 2.907930184755023,
+            "25": 7.279818990770013,
+            "50": 12.327351865562981,
+            "75": 17.69232374397081,
+            "90": 22.067085153275258,
+            "95": 24.174290276898077
+          },
+          "espnId": "3912547"
+        },
+        {
+          "name": "Packers D/ST",
+          "player": "GB",
+          "position": "DST",
+          "team": "GB",
+          "opponent": "CHI",
+          "mean": 1.5578347176737302,
+          "q10": -6.156876735056437,
+          "q25": -2.279629843178917,
+          "median": 1.1430213387402617,
+          "q75": 5.456329965942616,
+          "q90": 8.582849809438413,
+          "week4_form": 4.25,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "bench",
+          "active_lineup": false,
+          "slot": "BE",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.27836666666666665,
+            "10_plus": 0.07473333333333333,
+            "15_plus": 0,
+            "20_plus": 0,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": -6.270414657142059,
+            "10": -6.156876735056437,
+            "25": -2.279629843178917,
+            "50": 1.1430213387402617,
+            "75": 5.456329965942616,
+            "90": 8.582849809438413,
+            "95": 11.52564200377842
+          },
+          "espnId": "-16009"
+        },
+        {
+          "name": "Keon Coleman",
+          "player": "Keon Coleman",
+          "position": "WR",
+          "team": "BUF",
+          "opponent": "LA",
+          "mean": 9.24683222938729,
+          "q10": 1.9802214329486103,
+          "q25": 3.844970176057717,
+          "median": 7.652380461599227,
+          "q75": 13.48313076845755,
+          "q90": 19.507022685365733,
+          "week4_form": 10.425,
+          "available": false,
+          "status": "—",
+          "club": "23andMe",
+          "group": "starter",
+          "active_lineup": true,
+          "slot": "FLEX",
+          "bye": false,
+          "probabilities": {
+            "5_plus": 0.6763666666666667,
+            "10_plus": 0.4024333333333333,
+            "15_plus": 0.2144,
+            "20_plus": 0.09013333333333333,
+            "25_plus": 0
+          },
+          "quantiles": {
+            "5": 0.8593550637714751,
+            "10": 1.9802214329486103,
+            "25": 3.844970176057717,
+            "50": 7.652380461599227,
+            "75": 13.48313076845755,
+            "90": 19.507022685365733,
+            "95": 22.065878446268478
+          },
+          "espnId": "4635008"
+        }
+      ]
+    }
+  ],
+  "freeAgents": [
+    {
+      "name": "Courtland Sutton",
+      "player": "Courtland Sutton",
+      "position": "WR",
+      "team": "DEN",
+      "opponent": "LAC",
+      "mean": 7.382413992531908,
+      "q10": -0.04488891254645999,
+      "q25": 2.7666769153321216,
+      "median": 6.07518826135292,
+      "q75": 11.203755883455859,
+      "q90": 15.990243572116688,
+      "week4_form": 4.3999999999999995,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.5784333333333334,
+        "10_plus": 0.309,
+        "15_plus": 0.1275,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -0.04488891254645999,
+        "10": -0.04488891254645999,
+        "25": 2.7666769153321216,
+        "50": 6.07518826135292,
+        "75": 11.203755883455859,
+        "90": 15.990243572116688,
+        "95": 19.711487598933928
+      },
+      "espnId": "3128429"
+    },
+    {
+      "name": "Ravens D/ST",
+      "player": "BAL",
+      "position": "DST",
+      "team": "BAL",
+      "opponent": "ATL",
+      "mean": 3.715093957698685,
+      "q10": -3.311032261697663,
+      "q25": -0.5362541970908304,
+      "median": 3.3379627536239314,
+      "q75": 6.992354936260609,
+      "q90": 12.26972282615744,
+      "week4_form": 2.75,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.38593333333333335,
+        "10_plus": 0.16346666666666668,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.225825059299501,
+        "10": -3.311032261697663,
+        "25": -0.5362541970908304,
+        "50": 3.3379627536239314,
+        "75": 6.992354936260609,
+        "90": 12.26972282615744,
+        "95": 14.472679259469741
+      },
+      "espnId": "-16033"
+    },
+    {
+      "name": "Rachaad White",
+      "player": "Rachaad White",
+      "position": "RB",
+      "team": "WAS",
+      "opponent": "NYG",
+      "mean": 9.559810326819862,
+      "q10": 2.312471053858859,
+      "q25": 4.951212838127904,
+      "median": 8.055475462657286,
+      "q75": 14.033413617732524,
+      "q90": 18.007290489170288,
+      "week4_form": 10.033333333333333,
+      "available": true,
+      "status": "Q",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.7471666666666666,
+        "10_plus": 0.41846666666666665,
+        "15_plus": 0.2137,
+        "20_plus": 0.07373333333333333,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 1.3036323101211247,
+        "10": 2.312471053858859,
+        "25": 4.951212838127904,
+        "50": 8.055475462657286,
+        "75": 14.033413617732524,
+        "90": 18.007290489170288,
+        "95": 21.590234565619397
+      },
+      "espnId": "4697815"
+    },
+    {
+      "name": "Eagles D/ST",
+      "player": "PHI",
+      "position": "DST",
+      "team": "PHI",
+      "opponent": "JAX",
+      "mean": 2.204756935329895,
+      "q10": -3.7134305110458987,
+      "q25": -1.1249458549449376,
+      "median": 1.8342743354053566,
+      "q75": 4.89790372017217,
+      "q90": 8.995645536809343,
+      "week4_form": 2.5,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.24383333333333335,
+        "10_plus": 0.08516666666666667,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.793439956248298,
+        "10": -3.7134305110458987,
+        "25": -1.1249458549449376,
+        "50": 1.8342743354053566,
+        "75": 4.89790372017217,
+        "90": 8.995645536809343,
+        "95": 11.971776967671827
+      },
+      "espnId": "-16021"
+    },
+    {
+      "name": "KC Concepcion",
+      "player": "KC Concepcion",
+      "position": "WR",
+      "team": "CLE",
+      "opponent": "NYJ",
+      "mean": 8.354476336465003,
+      "q10": 2.014969543188755,
+      "q25": 3.8484233701382182,
+      "median": 7.310800650035038,
+      "q75": 11.944846302670781,
+      "q90": 16.133172036783737,
+      "week4_form": 7.574999999999999,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.6667,
+        "10_plus": 0.35286666666666666,
+        "15_plus": 0.1405,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.9312446923881537,
+        "10": 2.014969543188755,
+        "25": 3.8484233701382182,
+        "50": 7.310800650035038,
+        "75": 11.944846302670781,
+        "90": 16.133172036783737,
+        "95": 19.779529726241105
+      },
+      "espnId": "4870653"
+    },
+    {
+      "name": "Kenyon Sadiq",
+      "player": "Kenyon Sadiq",
+      "position": "TE",
+      "team": "NYJ",
+      "opponent": "CLE",
+      "mean": 7.508267719949904,
+      "q10": 1.5648672340415182,
+      "q25": 2.8638246991184713,
+      "median": 6.292530706234931,
+      "q75": 10.82992210259418,
+      "q90": 15.593035697811327,
+      "week4_form": 9.65,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.5918666666666667,
+        "10_plus": 0.2937666666666667,
+        "15_plus": 0.11936666666666666,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.718290712128022,
+        "10": 1.5648672340415182,
+        "25": 2.8638246991184713,
+        "50": 6.292530706234931,
+        "75": 10.82992210259418,
+        "90": 15.593035697811327,
+        "95": 19.022981152716735
+      },
+      "espnId": "5083315"
+    },
+    {
+      "name": "Patriots D/ST",
+      "player": "NE",
+      "position": "DST",
+      "team": "NE",
+      "opponent": "LV",
+      "mean": 2.455737421957426,
+      "q10": -3.855816796778611,
+      "q25": -0.7027642061027888,
+      "median": 1.712207263227373,
+      "q75": 5.853864972817474,
+      "q90": 8.772160227997936,
+      "week4_form": 4.5,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.2999,
+        "10_plus": 0.0818,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.793127649621246,
+        "10": -3.855816796778611,
+        "25": -0.7027642061027888,
+        "50": 1.712207263227373,
+        "75": 5.853864972817474,
+        "90": 8.772160227997936,
+        "95": 12.537542445430748
+      },
+      "espnId": "-16017"
+    },
+    {
+      "name": "MarShawn Lloyd",
+      "player": "MarShawn Lloyd",
+      "position": "RB",
+      "team": "GB",
+      "opponent": "CHI",
+      "mean": 7.604172849862609,
+      "q10": 0.8013429131921093,
+      "q25": 2.822896202227215,
+      "median": 5.513550993162641,
+      "q75": 11.535738592615205,
+      "q90": 16.980918540308053,
+      "week4_form": 6.5,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.5484666666666667,
+        "10_plus": 0.31733333333333336,
+        "15_plus": 0.1585,
+        "20_plus": 0.06353333333333333,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.2906738202209232,
+        "10": 0.8013429131921093,
+        "25": 2.822896202227215,
+        "50": 5.513550993162641,
+        "75": 11.535738592615205,
+        "90": 16.980918540308053,
+        "95": 20.720419476491713
+      },
+      "espnId": "4429023"
+    },
+    {
+      "name": "Hunter Henry",
+      "player": "Hunter Henry",
+      "position": "TE",
+      "team": "NE",
+      "opponent": "LV",
+      "mean": 7.836542262421852,
+      "q10": 1.8262938356633138,
+      "q25": 3.105764218958401,
+      "median": 6.748897360140947,
+      "q75": 11.062013070084515,
+      "q90": 16.25678189096591,
+      "week4_form": 6.324999999999999,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.6212,
+        "10_plus": 0.3119,
+        "15_plus": 0.13743333333333332,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 1.0532251357398017,
+        "10": 1.8262938356633138,
+        "25": 3.105764218958401,
+        "50": 6.748897360140947,
+        "75": 11.062013070084515,
+        "90": 16.25678189096591,
+        "95": 19.046173423128337
+      },
+      "espnId": "3046439"
+    },
+    {
+      "name": "49ers D/ST",
+      "player": "SF",
+      "position": "DST",
+      "team": "SF",
+      "opponent": "SEA",
+      "mean": 2.1271085596062655,
+      "q10": -4.16276525385973,
+      "q25": -1.456972010173136,
+      "median": 1.6229331814890995,
+      "q75": 5.1021644201510306,
+      "q90": 9.313125824825972,
+      "week4_form": 4.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.2561333333333333,
+        "10_plus": 0.0898,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.85274849305759,
+        "10": -4.16276525385973,
+        "25": -1.456972010173136,
+        "50": 1.6229331814890995,
+        "75": 5.1021644201510306,
+        "90": 9.313125824825972,
+        "95": 12.216758161614758
+      },
+      "espnId": "-16025"
+    },
+    {
+      "name": "Cowboys D/ST",
+      "player": "DAL",
+      "position": "DST",
+      "team": "DAL",
+      "opponent": "TB",
+      "mean": 2.9866490740988447,
+      "q10": -2.3348275095442075,
+      "q25": -0.7420772951334773,
+      "median": 2.4069378970507858,
+      "q75": 6.344250437286082,
+      "q90": 9.600481963322338,
+      "week4_form": -1.75,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.33266666666666667,
+        "10_plus": 0.0886,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -4.5586224251249705,
+        "10": -2.3348275095442075,
+        "25": -0.7420772951334773,
+        "50": 2.4069378970507858,
+        "75": 6.344250437286082,
+        "90": 9.600481963322338,
+        "95": 11.730816105495833
+      },
+      "espnId": "-16006"
+    },
+    {
+      "name": "Keenan Allen",
+      "player": "Keenan Allen",
+      "position": "WR",
+      "team": "IND",
+      "opponent": "PIT",
+      "mean": 11.17985901008727,
+      "q10": 3.5045363997235865,
+      "q25": 6.525732714279528,
+      "median": 10.04846479080214,
+      "q75": 14.863758853591417,
+      "q90": 20.727257821351287,
+      "week4_form": 9.666666666666666,
+      "available": true,
+      "status": "Q",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.8277666666666667,
+        "10_plus": 0.5055333333333333,
+        "15_plus": 0.24693333333333334,
+        "20_plus": 0.11676666666666667,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 1.7929610303781651,
+        "10": 3.5045363997235865,
+        "25": 6.525732714279528,
+        "50": 10.04846479080214,
+        "75": 14.863758853591417,
+        "90": 20.727257821351287,
+        "95": 24.429239992355946
+      },
+      "espnId": "15818"
+    },
+    {
+      "name": "Lions D/ST",
+      "player": "DET",
+      "position": "DST",
+      "team": "DET",
+      "opponent": "ARI",
+      "mean": 1.7149712520391904,
+      "q10": -3.0312457116629856,
+      "q25": -1.0259231379397602,
+      "median": 0.7112648520827847,
+      "q75": 4.489970047998559,
+      "q90": 8.63624962916326,
+      "week4_form": -0.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.23136666666666666,
+        "10_plus": 0,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.397219137034626,
+        "10": -3.0312457116629856,
+        "25": -1.0259231379397602,
+        "50": 0.7112648520827847,
+        "75": 4.489970047998559,
+        "90": 8.63624962916326,
+        "95": 9.18182267379072
+      },
+      "espnId": "-16008"
+    },
+    {
+      "name": "Bears D/ST",
+      "player": "CHI",
+      "position": "DST",
+      "team": "CHI",
+      "opponent": "GB",
+      "mean": 4.923332901795932,
+      "q10": -0.5392768377665897,
+      "q25": 1.2067221785749853,
+      "median": 4.6031344894444075,
+      "q75": 7.896261517530216,
+      "q90": 11.945935980632125,
+      "week4_form": 5,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.46896666666666664,
+        "10_plus": 0.1734,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -3.13170709318144,
+        "10": -0.5392768377665897,
+        "25": 1.2067221785749853,
+        "50": 4.6031344894444075,
+        "75": 7.896261517530216,
+        "90": 11.945935980632125,
+        "95": 13.948862105544595
+      },
+      "espnId": "-16003"
+    },
+    {
+      "name": "Malik Washington",
+      "player": "Malik Washington",
+      "position": "WR",
+      "team": "MIA",
+      "opponent": "CIN",
+      "mean": 9.99889532927323,
+      "q10": 2.8134796025244277,
+      "q25": 4.933591662799294,
+      "median": 8.690470143626277,
+      "q75": 13.936474773351328,
+      "q90": 19.206970644848663,
+      "week4_form": 9.525,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.7463333333333333,
+        "10_plus": 0.4333666666666667,
+        "15_plus": 0.2185,
+        "20_plus": 0.08813333333333333,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 1.912628681404103,
+        "10": 2.8134796025244277,
+        "25": 4.933591662799294,
+        "50": 8.690470143626277,
+        "75": 13.936474773351328,
+        "90": 19.206970644848663,
+        "95": 22.756964403918936
+      },
+      "espnId": "4569603"
+    },
+    {
+      "name": "Brenton Strange",
+      "player": "Brenton Strange",
+      "position": "TE",
+      "team": "JAX",
+      "opponent": "PHI",
+      "mean": 9.79146382599399,
+      "q10": 2.708086350045587,
+      "q25": 4.431238259271941,
+      "median": 8.290646706358622,
+      "q75": 14.051160699829389,
+      "q90": 19.183878302472998,
+      "week4_form": 9.175,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.7152333333333334,
+        "10_plus": 0.43,
+        "15_plus": 0.22426666666666667,
+        "20_plus": 0.08596666666666666,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 2.2528442364416037,
+        "10": 2.708086350045587,
+        "25": 4.431238259271941,
+        "50": 8.290646706358622,
+        "75": 14.051160699829389,
+        "90": 19.183878302472998,
+        "95": 22.188834327987877
+      },
+      "espnId": "4430539"
+    },
+    {
+      "name": "Keaton Mitchell",
+      "player": "Keaton Mitchell",
+      "position": "RB",
+      "team": "LAC",
+      "opponent": "DEN",
+      "mean": 9.254188746737102,
+      "q10": 1.4810092988917485,
+      "q25": 3.991701950802851,
+      "median": 7.67860598602257,
+      "q75": 13.773857015840075,
+      "q90": 18.597074603710787,
+      "week4_form": 7.7,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.6750333333333334,
+        "10_plus": 0.402,
+        "15_plus": 0.21056666666666668,
+        "20_plus": 0.08306666666666666,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 1.0424903414666018,
+        "10": 1.4810092988917485,
+        "25": 3.991701950802851,
+        "50": 7.67860598602257,
+        "75": 13.773857015840075,
+        "90": 18.597074603710787,
+        "95": 22.60573721376832
+      },
+      "espnId": "4596334"
+    },
+    {
+      "name": "Pat Freiermuth",
+      "player": "Pat Freiermuth",
+      "position": "TE",
+      "team": "PIT",
+      "opponent": "IND",
+      "mean": 9.478146670277614,
+      "q10": 2.9849994659748145,
+      "q25": 4.678184837088685,
+      "median": 8.273399891054993,
+      "q75": 12.965802983174802,
+      "q90": 17.807929972711662,
+      "week4_form": 9.7,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.7258,
+        "10_plus": 0.4071,
+        "15_plus": 0.1857,
+        "20_plus": 0.07093333333333333,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 2.1384229440613183,
+        "10": 2.9849994659748145,
+        "25": 4.678184837088685,
+        "50": 8.273399891054993,
+        "75": 12.965802983174802,
+        "90": 17.807929972711662,
+        "95": 21.88432625050561
+      },
+      "espnId": "4361411"
+    },
+    {
+      "name": "Roman Wilson",
+      "player": "Roman Wilson",
+      "position": "WR",
+      "team": "PIT",
+      "opponent": "IND",
+      "mean": 9.87226490584362,
+      "q10": 2.1339138233377994,
+      "q25": 4.322131208885478,
+      "median": 8.309692781266879,
+      "q75": 14.534954109894223,
+      "q90": 19.484299720021454,
+      "week4_form": 11.2,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.7101666666666666,
+        "10_plus": 0.4304,
+        "15_plus": 0.23383333333333334,
+        "20_plus": 0.0917,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 1.2376759350845759,
+        "10": 2.1339138233377994,
+        "25": 4.322131208885478,
+        "50": 8.309692781266879,
+        "75": 14.534954109894223,
+        "90": 19.484299720021454,
+        "95": 23.583701297382554
+      },
+      "espnId": "4431492"
+    },
+    {
+      "name": "Chargers D/ST",
+      "player": "LAC",
+      "position": "DST",
+      "team": "LAC",
+      "opponent": "DEN",
+      "mean": 4.862974492628769,
+      "q10": -1.3388707965428377,
+      "q25": 1.4426988124794278,
+      "median": 3.503814039646046,
+      "q75": 8.510551978639297,
+      "q90": 12.818256897122637,
+      "week4_form": 3.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.42673333333333335,
+        "10_plus": 0.19626666666666667,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -3.2837710012018126,
+        "10": -1.3388707965428377,
+        "25": 1.4426988124794278,
+        "50": 3.503814039646046,
+        "75": 8.510551978639297,
+        "90": 12.818256897122637,
+        "95": 14.596200527008916
+      },
+      "espnId": "-16024"
+    },
+    {
+      "name": "Buccaneers D/ST",
+      "player": "TB",
+      "position": "DST",
+      "team": "TB",
+      "opponent": "DAL",
+      "mean": 2.4615837180154205,
+      "q10": -3.2975239020697864,
+      "q25": -1.1816780312612833,
+      "median": 2.9978193718972355,
+      "q75": 4.769236669303362,
+      "q90": 9.583802872677376,
+      "week4_form": 5.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.2442,
+        "10_plus": 0.09066666666666667,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -6.898178869973844,
+        "10": -3.2975239020697864,
+        "25": -1.1816780312612833,
+        "50": 2.9978193718972355,
+        "75": 4.769236669303362,
+        "90": 9.583802872677376,
+        "95": 11.77803554159967
+      },
+      "espnId": "-16027"
+    },
+    {
+      "name": "Raiders D/ST",
+      "player": "LV",
+      "position": "DST",
+      "team": "LV",
+      "opponent": "NE",
+      "mean": 5.061318334271163,
+      "q10": -2.0195445564637806,
+      "q25": 1.1594497138263515,
+      "median": 5.178346033121552,
+      "q75": 8.200706309725405,
+      "q90": 12.404286553635131,
+      "week4_form": 4.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.5113,
+        "10_plus": 0.18436666666666668,
+        "15_plus": 0.0523,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -3.6517174241792008,
+        "10": -2.0195445564637806,
+        "25": 1.1594497138263515,
+        "50": 5.178346033121552,
+        "75": 8.200706309725405,
+        "90": 12.404286553635131,
+        "95": 15.06806971168972
+      },
+      "espnId": "-16013"
+    },
+    {
+      "name": "Caleb Douglas",
+      "player": "Caleb Douglas",
+      "position": "WR",
+      "team": "MIA",
+      "opponent": "CIN",
+      "mean": 9.06334411759679,
+      "q10": 2.219972073841669,
+      "q25": 4.22666542236178,
+      "median": 7.401874733051851,
+      "q75": 12.547281922914088,
+      "q90": 19.01340876085746,
+      "week4_form": 9.15,
+      "available": true,
+      "status": "Q",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.6884666666666667,
+        "10_plus": 0.3692666666666667,
+        "15_plus": 0.19086666666666666,
+        "20_plus": 0.08383333333333333,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.9666323481459957,
+        "10": 2.219972073841669,
+        "25": 4.22666542236178,
+        "50": 7.401874733051851,
+        "75": 12.547281922914088,
+        "90": 19.01340876085746,
+        "95": 22.163339409303873
+      },
+      "espnId": "4869645"
+    },
+    {
+      "name": "Commanders D/ST",
+      "player": "WAS",
+      "position": "DST",
+      "team": "WAS",
+      "opponent": "NYG",
+      "mean": 2.5562026830624487,
+      "q10": -4.027675921852936,
+      "q25": -0.5067893530783304,
+      "median": 1.8355073839581681,
+      "q75": 6.26942887993177,
+      "q90": 9.863905419245159,
+      "week4_form": 2.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.3159666666666667,
+        "10_plus": 0.09203333333333333,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -6.025175543187835,
+        "10": -4.027675921852936,
+        "25": -0.5067893530783304,
+        "50": 1.8355073839581681,
+        "75": 6.26942887993177,
+        "90": 9.863905419245159,
+        "95": 10.84084196936112
+      },
+      "espnId": "-16028"
+    },
+    {
+      "name": "Kendre Miller",
+      "player": "Kendre Miller",
+      "position": "RB",
+      "team": "NO",
+      "opponent": "MIN",
+      "mean": 5.8193320203994565,
+      "q10": 0.3676528059599786,
+      "q25": 1.7750232511721136,
+      "median": 4.4563791331161715,
+      "q75": 8.95463500245454,
+      "q90": 13.014151435859427,
+      "week4_form": 4.933333333333334,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.47346666666666665,
+        "10_plus": 0.21096666666666666,
+        "15_plus": 0.06713333333333334,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.14015026551057555,
+        "10": 0.3676528059599786,
+        "25": 1.7750232511721136,
+        "50": 4.4563791331161715,
+        "75": 8.95463500245454,
+        "90": 13.014151435859427,
+        "95": 16.14151856399799
+      },
+      "espnId": "4599739"
+    },
+    {
+      "name": "Mack Hollins",
+      "player": "Mack Hollins",
+      "position": "WR",
+      "team": "NE",
+      "opponent": "LV",
+      "mean": 7.193761761798227,
+      "q10": 0.7470155565111278,
+      "q25": 2.8778989154473416,
+      "median": 5.400828600054461,
+      "q75": 10.445653053319255,
+      "q90": 16.34880752230206,
+      "week4_form": 8.975,
+      "available": true,
+      "status": "Q",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.5377,
+        "10_plus": 0.2697333333333333,
+        "15_plus": 0.13346666666666668,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -0.08170850310629296,
+        "10": 0.7470155565111278,
+        "25": 2.8778989154473416,
+        "50": 5.400828600054461,
+        "75": 10.445653053319255,
+        "90": 16.34880752230206,
+        "95": 19.67186730510594
+      },
+      "espnId": "2991662"
+    },
+    {
+      "name": "Malachi Fields",
+      "player": "Malachi Fields",
+      "position": "WR",
+      "team": "NYG",
+      "opponent": "WAS",
+      "mean": 6.721007884938243,
+      "q10": 0.32917769997690394,
+      "q25": 2.3314558678791797,
+      "median": 5.598810252202637,
+      "q75": 9.576727235097543,
+      "q90": 15.371113124624237,
+      "week4_form": 6.65,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.5500666666666667,
+        "10_plus": 0.2412,
+        "15_plus": 0.10883333333333334,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.2139615269732067,
+        "10": 0.32917769997690394,
+        "25": 2.3314558678791797,
+        "50": 5.598810252202637,
+        "75": 9.576727235097543,
+        "90": 15.371113124624237,
+        "95": 18.04790005745512
+      },
+      "espnId": "4682648"
+    },
+    {
+      "name": "Giants D/ST",
+      "player": "NYG",
+      "position": "DST",
+      "team": "NYG",
+      "opponent": "WAS",
+      "mean": 4.312321593857003,
+      "q10": -3.0090493430864402,
+      "q25": 0.6225255578279513,
+      "median": 3.7821123127011766,
+      "q75": 7.28978654980649,
+      "q90": 12.669988233109796,
+      "week4_form": 5,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.4160333333333333,
+        "10_plus": 0.1801,
+        "15_plus": 0.06386666666666667,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -4.6959582447917665,
+        "10": -3.0090493430864402,
+        "25": 0.6225255578279513,
+        "50": 3.7821123127011766,
+        "75": 7.28978654980649,
+        "90": 12.669988233109796,
+        "95": 15.60578764682491
+      },
+      "espnId": "-16019"
+    },
+    {
+      "name": "Darius Cooper",
+      "player": "Darius Cooper",
+      "position": "WR",
+      "team": "PHI",
+      "opponent": "JAX",
+      "mean": 5.900489987633418,
+      "q10": 0.6066385798420354,
+      "q25": 1.9036030113861602,
+      "median": 4.608925854221529,
+      "q75": 8.435601408463524,
+      "q90": 13.180277899772243,
+      "week4_form": 7.225,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.4728,
+        "10_plus": 0.19633333333333333,
+        "15_plus": 0.07406666666666667,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.49142240683833815,
+        "10": 0.6066385798420354,
+        "25": 1.9036030113861602,
+        "50": 4.608925854221529,
+        "75": 8.435601408463524,
+        "90": 13.180277899772243,
+        "95": 16.864924155117286
+      },
+      "espnId": "4715355"
+    },
+    {
+      "name": "Jauan Jennings",
+      "player": "Jauan Jennings",
+      "position": "WR",
+      "team": "MIN",
+      "opponent": "NO",
+      "mean": 2.8319926232717774,
+      "q10": -0.4102321627018597,
+      "q25": -0.07777173414312588,
+      "median": 1.3924290573118068,
+      "q75": 4.366774787545489,
+      "q90": 8.275089191020635,
+      "week4_form": 0.9666666666666668,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.22963333333333333,
+        "10_plus": 0.07696666666666667,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -0.4102321627018597,
+        "10": -0.4102321627018597,
+        "25": -0.07777173414312588,
+        "50": 1.3924290573118068,
+        "75": 4.366774787545489,
+        "90": 8.275089191020635,
+        "95": 11.6048861017882
+      },
+      "espnId": "3886598"
+    },
+    {
+      "name": "Ryan Flournoy",
+      "player": "Ryan Flournoy",
+      "position": "WR",
+      "team": "DAL",
+      "opponent": "TB",
+      "mean": 7.469841861111258,
+      "q10": 1.4839777749268503,
+      "q25": 2.7063114799856356,
+      "median": 6.087105753417398,
+      "q75": 10.961325880338501,
+      "q90": 15.764099766659855,
+      "week4_form": 5.85,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.5776333333333333,
+        "10_plus": 0.29763333333333336,
+        "15_plus": 0.12223333333333333,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.6938866963022847,
+        "10": 1.4839777749268503,
+        "25": 2.7063114799856356,
+        "50": 6.087105753417398,
+        "75": 10.961325880338501,
+        "90": 15.764099766659855,
+        "95": 19.16918259080984
+      },
+      "espnId": "5083754"
+    },
+    {
+      "name": "Cade Otton",
+      "player": "Cade Otton",
+      "position": "TE",
+      "team": "TB",
+      "opponent": "DAL",
+      "mean": 9.51194096022976,
+      "q10": 3.0039945830861243,
+      "q25": 4.577826662781883,
+      "median": 8.565302324699779,
+      "q75": 13.197666351210106,
+      "q90": 18.091503870718235,
+      "week4_form": 7.675,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.7213333333333334,
+        "10_plus": 0.4179,
+        "15_plus": 0.19103333333333333,
+        "20_plus": 0.06093333333333333,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 2.1197390162227805,
+        "10": 3.0039945830861243,
+        "25": 4.577826662781883,
+        "50": 8.565302324699779,
+        "75": 13.197666351210106,
+        "90": 18.091503870718235,
+        "95": 20.62648672879031
+      },
+      "espnId": "4243331"
+    },
+    {
+      "name": "Falcons D/ST",
+      "player": "ATL",
+      "position": "DST",
+      "team": "ATL",
+      "opponent": "BAL",
+      "mean": 2.14538544956316,
+      "q10": -4.1341052635682365,
+      "q25": -1.5628433735460947,
+      "median": 1.8462779930615505,
+      "q75": 5.338853077263365,
+      "q90": 8.692554741894273,
+      "week4_form": 2.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.27553333333333335,
+        "10_plus": 0.08013333333333333,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.723099130990394,
+        "10": -4.1341052635682365,
+        "25": -1.5628433735460947,
+        "50": 1.8462779930615505,
+        "75": 5.338853077263365,
+        "90": 8.692554741894273,
+        "95": 12.02668663394659
+      },
+      "espnId": "-16001"
+    },
+    {
+      "name": "Saints D/ST",
+      "player": "NO",
+      "position": "DST",
+      "team": "NO",
+      "opponent": "MIN",
+      "mean": 2.079653352170859,
+      "q10": -3.423353552557719,
+      "q25": -0.6928946396086748,
+      "median": 2.0926468113246557,
+      "q75": 5.0392627744560645,
+      "q90": 7.385448717649226,
+      "week4_form": -0.5,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.2523666666666667,
+        "10_plus": 0,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.7421987162367545,
+        "10": -3.423353552557719,
+        "25": -0.6928946396086748,
+        "50": 2.0926468113246557,
+        "75": 5.0392627744560645,
+        "90": 7.385448717649226,
+        "95": 9.622312127717642
+      },
+      "espnId": "-16018"
+    },
+    {
+      "name": "Colts D/ST",
+      "player": "IND",
+      "position": "DST",
+      "team": "IND",
+      "opponent": "PIT",
+      "mean": 3.1579978289935706,
+      "q10": -3.468279087345012,
+      "q25": -0.32095190341025936,
+      "median": 2.2982123035002178,
+      "q75": 6.804771286276468,
+      "q90": 11.247771115922264,
+      "week4_form": -0.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.3491666666666667,
+        "10_plus": 0.1451,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -4.948426689227327,
+        "10": -3.468279087345012,
+        "25": -0.32095190341025936,
+        "50": 2.2982123035002178,
+        "75": 6.804771286276468,
+        "90": 11.247771115922264,
+        "95": 11.73151567172798
+      },
+      "espnId": "-16011"
+    },
+    {
+      "name": "Titans D/ST",
+      "player": "TEN",
+      "position": "DST",
+      "team": "TEN",
+      "opponent": "HOU",
+      "mean": 4.138059443344589,
+      "q10": -2.713059119081693,
+      "q25": 0.5068119051372024,
+      "median": 3.290843610211994,
+      "q75": 7.575379982260704,
+      "q90": 12.421326718285723,
+      "week4_form": 4.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.3994666666666667,
+        "10_plus": 0.17693333333333333,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.059630864810086,
+        "10": -2.713059119081693,
+        "25": 0.5068119051372024,
+        "50": 3.290843610211994,
+        "75": 7.575379982260704,
+        "90": 12.421326718285723,
+        "95": 14.767409576698157
+      },
+      "espnId": "-16010"
+    },
+    {
+      "name": "Colby Parkinson",
+      "player": "Colby Parkinson",
+      "position": "TE",
+      "team": "LA",
+      "opponent": "BUF",
+      "mean": 3.4924858291902803,
+      "q10": 0.059683530184258426,
+      "q25": 1.0095228747710328,
+      "median": 2.380499039101288,
+      "q75": 4.7796327218146555,
+      "q90": 8.959262341176833,
+      "week4_form": 1.7,
+      "available": true,
+      "status": "Q",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.2432,
+        "10_plus": 0.0773,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": 0.059683530184258426,
+        "10": 0.059683530184258426,
+        "25": 1.0095228747710328,
+        "50": 2.380499039101288,
+        "75": 4.7796327218146555,
+        "90": 8.959262341176833,
+        "95": 11.1087879759719
+      },
+      "espnId": "4242557"
+    },
+    {
+      "name": "Dolphins D/ST",
+      "player": "MIA",
+      "position": "DST",
+      "team": "MIA",
+      "opponent": "CIN",
+      "mean": 3.2111201278441284,
+      "q10": -3.455593884998908,
+      "q25": -1.0727168642869316,
+      "median": 2.137799662140682,
+      "q75": 7.014348420347856,
+      "q90": 11.894273745348501,
+      "week4_form": 2.25,
+      "available": true,
+      "status": "—",
+      "club": "available",
+      "group": "available",
+      "active_lineup": false,
+      "slot": "",
+      "bye": false,
+      "probabilities": {
+        "5_plus": 0.34776666666666667,
+        "10_plus": 0.1522,
+        "15_plus": 0,
+        "20_plus": 0,
+        "25_plus": 0
+      },
+      "quantiles": {
+        "5": -5.696027182286867,
+        "10": -3.455593884998908,
+        "25": -1.0727168642869316,
+        "50": 2.137799662140682,
+        "75": 7.014348420347856,
+        "90": 11.894273745348501,
+        "95": 14.289039383111048
+      },
+      "espnId": "-16015"
+    }
+  ]
+}
+</script><script>(() => {
+  const $ = (id) => document.getElementById(id);
+  const SLOTS = [["QB", "QB"], ["RB1", "RB"], ["RB2", "RB"], ["WR1", "WR"], ["WR2", "WR"], ["TE", "TE"], ["FLEX", "FLEX"], ["D/ST", "DST"], ["K", "K"]];
+  const COLORS = { current: "#91b7df", recommended: "#d3ec93", opponent: "#efa18a", scenario: "#a8e2bf", scenarioOpp: "#f0b986" };
+  const $esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  let data;
+  let owner;
+  let opponent;
+  let recommended;
+  let ownerScenario;
+  let opponentScenario;
+  let sampleCache = new Map();
+
+  async function init() {
+    try {
+      data = JSON.parse(document.getElementById("scoutData").textContent);
+      owner = data.teams.find((team) => team.name === data.meta.owner);
+      opponent = data.teams.find((team) => team.name === data.meta.opponent);
+      if (!owner || !opponent) throw new Error("The saved Week 5 matchup roster is incomplete.");
+      recommended = recommendLineup(owner);
+      ownerScenario = { ...owner.currentLineup };
+      opponentScenario = { ...opponent.currentLineup };
+      renderProvenance();
+      renderScout();
+      renderPlayerLab();
+    } catch (error) {
+      document.querySelector("main").innerHTML = `<div class="error-panel">${$esc(error.message)}</div>`;
+    }
+  }
+
+  function renderProvenance() {
+    const stamp = new Date(data.meta.asOf).toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
+    const bits = [`Week ${data.meta.week} · ${data.meta.season}`, `Stats through ${data.meta.statsCutoff}`, ...(data.meta.rosterReadAt ? [`Live rosters read ${data.meta.rosterReadAt}`] : []), `${data.meta.modelStatus}`, `Source data SHA ${data.meta.statsSha256.slice(0, 12)}`];
+    const status = $("dataStatus");
+    if (status) status.textContent = `Model built ${stamp}${data.meta.rosterReadAt ? ` · ESPN read ${new Date(data.meta.rosterReadAt).toLocaleString()}` : ""}`;
+    if ($("provenance")) $("provenance").innerHTML = bits.map((bit) => `<span>${$esc(bit)}</span>`).join("");
+    if ($("modelCaveat")) $("modelCaveat").textContent = "Scoring fit: all six position models use the ESPN scoring weights, including kicker misses and D/ST points- and yards-allowed tiers. NFLverse does not separately identify the rare 1-point-safety event, so it is not reflected in D/ST targets.";
+  }
+
+  function recommendLineup(team) {
+    const candidates = team.players.filter((player) => player.group !== "IR" && player.status !== "IR");
+    const used = new Set();
+    const result = {};
+    const takeBest = (position, key, filter = (p) => !p.bye) => {
+      const player = candidates.filter((p) => p.position === position && !used.has(p.name) && filter(p)).sort((a, b) => b.mean - a.mean)[0];
+      if (player) { result[key] = player.name; used.add(player.name); }
+    };
+    takeBest("QB", "QB");
+    takeBest("RB", "RB1"); takeBest("RB", "RB2");
+    takeBest("WR", "WR1"); takeBest("WR", "WR2");
+    takeBest("TE", "TE");
+    const flex = candidates.filter((p) => ["RB", "WR", "TE"].includes(p.position) && !used.has(p.name) && !p.bye).sort((a, b) => b.mean - a.mean)[0];
+    if (flex) { result.FLEX = flex.name; used.add(flex.name); }
+    takeBest("DST", "D/ST"); takeBest("K", "K");
+    for (const [slot] of SLOTS) if (!result[slot]) result[slot] = team.currentLineup[slot] || "";
+    return result;
+  }
+
+  function playerByName(team, name) { return team.players.find((p) => p.name === name) || data.freeAgents.find((p) => p.name === name); }
+  function meanForLineup(team, lineup, chaseActive = true) {
+    return SLOTS.reduce((sum, [slot]) => {
+      const player = playerByName(team, lineup[slot]);
+      if (!player || player.bye || player.status === "IR") return sum;
+      if (!chaseActive && player.name === "Ja'Marr Chase") return sum;
+      return sum + Number(player.mean || 0);
+    }, 0);
+  }
+
+  function hashSeed(text) {
+    let h = 2166136261;
+    for (const char of text) { h ^= char.charCodeAt(0); h = Math.imul(h, 16777619); }
+    return h >>> 0 || 1;
+  }
+  function rng(seed) {
+    let state = seed >>> 0;
+    return () => { state ^= state << 13; state ^= state >>> 17; state ^= state << 5; return (state >>> 0) / 4294967296; };
+  }
+  function playerSamples(player, chaseActive = true, count = 7000) {
+    if (!player) return new Float32Array(count);
+    const key = `${player.name}|${chaseActive}|${count}`;
+    if (sampleCache.has(key)) return sampleCache.get(key);
+    const values = new Float32Array(count);
+    if (player.bye || player.status === "IR" || (!chaseActive && player.name === "Ja'Marr Chase")) { sampleCache.set(key, values); return values; }
+    const qs = Object.entries(player.quantiles || {}).map(([q, score]) => [Number(q) / 100, Number(score)]).filter((entry) => Number.isFinite(entry[0]) && Number.isFinite(entry[1])).sort((a, b) => a[0] - b[0]);
+    if (!qs.length) { values.fill(Number(player.mean || 0)); sampleCache.set(key, values); return values; }
+    const random = rng(hashSeed(player.name));
+    for (let i = 0; i < count; i++) {
+      const u = random();
+      let left = qs[0]; let right = qs[qs.length - 1];
+      if (u <= left[0]) values[i] = left[1];
+      else if (u >= right[0]) values[i] = right[1];
+      else {
+        for (let j = 1; j < qs.length; j++) if (u <= qs[j][0]) { left = qs[j - 1]; right = qs[j]; break; }
+        const t = (u - left[0]) / (right[0] - left[0]);
+        values[i] = left[1] + t * (right[1] - left[1]);
+      }
+    }
+    sampleCache.set(key, values);
+    return values;
+  }
+  function teamSamples(team, lineup, chaseActive = true) {
+    const count = 7000;
+    const total = new Float32Array(count);
+    for (const [slot] of SLOTS) {
+      const player = playerByName(team, lineup[slot]);
+      const values = playerSamples(player, chaseActive, count);
+      for (let i = 0; i < count; i++) total[i] += values[i];
+    }
+    return total;
+  }
+  function percentile(sorted, p) {
+    if (!sorted.length) return 0;
+    const at = (sorted.length - 1) * p; const low = Math.floor(at); const high = Math.ceil(at);
+    return sorted[low] + (sorted[high] - sorted[low]) * (at - low);
+  }
+  function stats(values, mean) {
+    const sorted = Array.from(values).sort((a, b) => a - b);
+    return { mean, p10: percentile(sorted, .1), p25: percentile(sorted, .25), median: percentile(sorted, .5), p75: percentile(sorted, .75), p90: percentile(sorted, .9), p05: percentile(sorted, .05), p95: percentile(sorted, .95) };
+  }
+  function chanceToWin(ownDraws, opponentDraws) {
+    let wins = 0;
+    for (let i = 0; i < ownDraws.length; i++) if (ownDraws[i] > opponentDraws[i]) wins++;
+    return wins / ownDraws.length;
+  }
+  function number(v) { return Number.isFinite(Number(v)) ? Number(v).toFixed(1) : "—"; }
+  function pct(v) { return `${Math.round(Number(v) * 100)}%`; }
+
+  function density(samples, xs, bandwidth) {
+    const result = new Array(xs.length).fill(0);
+    const inv = 1 / (samples.length * bandwidth * Math.sqrt(2 * Math.PI));
+    for (let i = 0; i < xs.length; i++) {
+      let sum = 0;
+      for (let j = 0; j < samples.length; j++) {
+        const z = (xs[i] - samples[j]) / bandwidth;
+        if (Math.abs(z) < 4) sum += Math.exp(-.5 * z * z);
+      }
+      result[i] = sum * inv;
+    }
+    return result;
+  }
+  function drawChart(elementId, series, opts = {}) {
+    const target = $(elementId);
+    if (!target) return;
+    if (!series.length) { target.innerHTML = `<p class="muted">No forecast curves to display.</p>`; return; }
+    const quantileVals = series.flatMap((item) => { const s = stats(item.values, item.mean); return [s.p05, s.p95]; });
+    let xMin = Math.floor(Math.min(...quantileVals) - 3); let xMax = Math.ceil(Math.max(...quantileVals) + 3);
+    if (opts.player) xMin = Math.floor(Math.min(...quantileVals) - 2);
+    xMin = Math.min(xMin, 0); if (xMax - xMin < 20) xMax = xMin + 20;
+    if (opts.xRange) [xMin, xMax] = opts.xRange;
+    const width = opts.width || 900; const height = opts.height || 270; const ml = 45; const mr = 14; const mt = 14; const mb = 31;
+    const plotW = width - ml - mr; const plotH = height - mt - mb; const steps = 88;
+    const xs = Array.from({ length: steps }, (_, i) => xMin + (xMax - xMin) * i / (steps - 1));
+    const bandwidth = Math.max(opts.player ? 1.2 : 2.0, (xMax - xMin) / 95);
+    const curves = series.map((item) => ({ ...item, ys: density(item.values, xs, bandwidth) }));
+    const scaleCurves = opts.scaleValues ? opts.scaleValues.filter((values) => !values.every((value) => value === values[0])).map((values) => density(values, xs, bandwidth)) : curves.map((c) => c.ys);
+    const maxY = Math.max(...scaleCurves.flat(), 0.001) * 1.12;
+    const px = (x) => ml + ((x - xMin) / (xMax - xMin)) * plotW;
+    const py = (y) => mt + plotH - (y / maxY) * plotH;
+    const ticksX = 5; const ticksY = 4;
+    const gridX = Array.from({ length: ticksX + 1 }, (_, i) => xMin + (xMax - xMin) * i / ticksX);
+    const gridY = Array.from({ length: ticksY + 1 }, (_, i) => maxY * i / ticksY);
+    const grids = gridY.map((y) => `<line class="gridline" x1="${ml}" y1="${py(y)}" x2="${width - mr}" y2="${py(y)}"/>`).join("") + gridX.map((x) => `<line class="gridline" x1="${px(x)}" y1="${mt}" x2="${px(x)}" y2="${mt + plotH}"/><text class="axis-label" text-anchor="middle" x="${px(x)}" y="${height - 9}">${number(x)}</text>`).join("");
+    const paths = curves.map((curve) => {
+      if (curve.values.every((v) => v === curve.values[0])) return `<path class="density-line" d="M${px(curve.values[0])},${py(0)} L${px(curve.values[0])},${mt}" stroke="${curve.color}"/><text class="axis-label" x="${px(curve.values[0]) + 6}" y="${mt + 12}">Certain ${number(curve.values[0])} pts</text>`;
+      const coords = curve.ys.map((y, i) => [px(xs[i]), py(y)]);
+      const line = coords.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
+      const area = `${line} L${px(xs.at(-1)).toFixed(1)},${py(0).toFixed(1)} L${px(xs[0]).toFixed(1)},${py(0).toFixed(1)} Z`;
+      const dashed = curve.dashed ? " dashed" : "";
+      return `<path class="density-area${dashed}" d="${area}" fill="${curve.color}"/><path class="density-line${dashed}" d="${line}" stroke="${curve.color}"/>`;
+    }).join("");
+    const meanLines = curves.map((curve) => `<line x1="${px(curve.mean)}" y1="${mt}" x2="${px(curve.mean)}" y2="${mt + plotH}" stroke="${curve.color}" stroke-width="1" stroke-dasharray="3 5" opacity=".7"><title>${$esc(curve.name)} model mean ${number(curve.mean)}</title></line>`).join("");
+    target.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${$esc(opts.aria || "Scoring distributions")}" xmlns="http://www.w3.org/2000/svg"><g>${grids}</g>${paths}${meanLines}<text class="chart-title" text-anchor="middle" x="${ml + plotW / 2}" y="${height - 1}">Fantasy points · model distributions</text></svg>`;
+  }
+  function legend(items, elementId) {
+    const target = $(elementId); if (!target) return;
+    target.innerHTML = items.map((item) => `<span class="legend-item"><i class="legend-line${item.dashed ? " dashed" : ""}" style="--series:${item.color}"></i>${$esc(item.label)}</span>`).join("");
+  }
+  function distributionCard(label, s, chance, sublabel = "") {
+    return `<div class="dist-card"><span class="label">${$esc(label)}</span><strong>${number(s.mean)}</strong><small>Middle 80% ${number(s.p10)}–${number(s.p90)}${chance == null ? "" : ` · win ${pct(chance)}`}${sublabel ? ` · ${$esc(sublabel)}` : ""}</small></div>`;
+  }
+  function lineupDraw(team, lineup, active) {
+    const values = teamSamples(team, lineup, active);
+    return { values, summary: stats(values, meanForLineup(team, lineup, active)) };
+  }
+  function renderScout() {
+    $("ownerName").textContent = owner.name; $("opponentName").textContent = opponent.name;
+    $("ownerRecord").textContent = owner.record ? `(${owner.record})` : "";
+    $("opponentRecord").textContent = opponent.record ? `(${opponent.record})` : "";
+    $("subtitle").textContent = `${data.meta.leagueName} · 10-team PPR · Week ${data.meta.week} · current lineups from ${data.meta.lineupSource || "saved ESPN screenshots"}, forecasts from PMT models.`;
+    $("lineupRule").textContent = "1 QB · 2 RB · 2 WR · 1 TE · 1 FLEX · 1 D/ST · 1 K";
+    const chaseToggle = $("chaseActive");
+    const active = chaseToggle.checked;
+    const cur = lineupDraw(owner, owner.currentLineup, active);
+    const rec = lineupDraw(owner, recommended, active);
+    const opp = lineupDraw(opponent, opponent.currentLineup, active);
+    const curWin = chanceToWin(cur.values, opp.values);
+    const recWin = chanceToWin(rec.values, opp.values);
+    legend([
+      { label: "Your current", color: COLORS.current },
+      { label: "Your recommended", color: COLORS.recommended },
+      { label: `${opponent.name} · ${active ? "Chase active" : "Chase out"}`, color: COLORS.opponent }
+    ], "baselineLegend");
+    drawChart("baselineChart", [
+      { name: "Your current", values: cur.values, mean: cur.summary.mean, color: COLORS.current },
+      { name: "Your recommended", values: rec.values, mean: rec.summary.mean, color: COLORS.recommended },
+      { name: `${opponent.name} current`, values: opp.values, mean: opp.summary.mean, color: COLORS.opponent }
+    ], { height: 285, aria: "Model distribution of current and recommended lineup scores" });
+    $("baselineStats").innerHTML = [distributionCard("Your current", cur.summary, curWin), distributionCard("Your recommended", rec.summary, recWin), distributionCard(`${opponent.name} current`, opp.summary, null, active ? "Chase active" : "Chase out")].join("");
+    const chaseOutOpp = lineupDraw(opponent, opponent.currentLineup, false);
+    const chaseOutWin = chanceToWin(cur.values, chaseOutOpp.values);
+    $("sensitivity").innerHTML = `Against the same model draws, your current lineup has a <strong>${pct(chanceToWin(cur.values, lineupDraw(opponent, opponent.currentLineup, true).values))}</strong> win chance with Chase active and <strong>${pct(chaseOutWin)}</strong> if Chase is out with his slot left empty; substitute Shakir to model an opponent replacement. Those are scenario results, not a probability that he will play.`;
+
+    $("currentMean").textContent = `${number(meanForLineup(owner, owner.currentLineup, active))} model pts`;
+    $("recommendedMean").textContent = `${number(meanForLineup(owner, recommended, active))} model pts`;
+    $("currentLineup").innerHTML = renderLineupRows(owner, owner.currentLineup);
+    $("recommendedLineup").innerHTML = renderLineupRows(owner, recommended, true);
+    const delta = meanForLineup(owner, recommended, active) - meanForLineup(owner, owner.currentLineup, active);
+    $("lineupDelta").innerHTML = delta > .05 ? `<strong>+${number(delta)} expected model points</strong> versus the submitted lineup.` : `The model keeps your current starters: no roster-only swap raises the projected mean.`;
+    renderMatchup(active);
+    renderScenario(active);
+    renderWaivers(); renderBench(); renderNews(); renderRules(); renderDiagnostics();
+    chaseToggle.onchange = () => { sampleCache = new Map(); renderScout(); };
+    $("resetOwner").onclick = () => { ownerScenario = { ...recommended }; refreshSelection(); };
+    $("resetCurrent").onclick = () => { ownerScenario = { ...owner.currentLineup }; refreshSelection(); };
+    $("resetOpponent").onclick = () => { opponentScenario = { ...opponent.currentLineup }; refreshSelection(); };
+  }
+
+  function renderLineupRows(team, lineup, recommendedLineup = false) {
+    return SLOTS.map(([slot]) => {
+      const player = playerByName(team, lineup[slot]);
+      const value = player ? player.mean : 0;
+      const note = player ? `${player.team || "—"} · vs ${player.opponent || "—"}${player.bye ? " · BYE" : ""}` : "No forecast";
+      const status = player?.status && player.status !== "—" ? `<span class="tag status">${$esc(player.status)}</span>` : "";
+      const moved = recommendedLineup && owner.currentLineup[slot] !== lineup[slot] ? " · model move" : "";
+      return `<div class="lineup-row"><span class="slot-badge">${$esc(slot)}</span><div><div class="player-main">${$esc(lineup[slot] || "—")}${status}</div><div class="player-sub">${$esc(note)}${$esc(moved)}</div></div><div class="player-score">${number(value)}<div class="player-sub">model pts</div></div></div>`;
+    }).join("");
+  }
+
+  function slotEligible(player, slot) {
+    if (!player || player.group === "IR" || player.status === "IR") return false;
+    if (slot === "FLEX") return ["RB", "WR", "TE"].includes(player.position);
+    const position = slot.startsWith("RB") ? "RB" : slot.startsWith("WR") ? "WR" : slot === "D/ST" ? "DST" : slot;
+    return player.position === position;
+  }
+  function swapLineup(team, lineup, slot, name) {
+    if (!SLOTS.some(([key]) => key === slot)) throw new Error("Unknown lineup slot.");
+    const incoming = team.players.find((p) => p.name === name);
+    if (name && !slotEligible(incoming, slot)) throw new Error("That player cannot fill this slot.");
+    const result = { ...lineup };
+    const source = name ? SLOTS.find(([key]) => key !== slot && result[key] === name)?.[0] : undefined;
+    if (source) {
+      const outgoing = team.players.find((p) => p.name === result[slot]);
+      if (result[slot] && !slotEligible(outgoing, source)) throw new Error(`Empty ${slot} first; its player cannot move to ${source}.`);
+      result[source] = result[slot] || "";
+    }
+    result[slot] = name;
+    return result;
+  }
+  function refreshSelection() {
+    const active = $("chaseActive").checked;
+    renderMatchup(active); renderScenario(active); renderBench();
+  }
+  function renderMatchup(active) {
+    const cell = (team, lineup, slot, side) => {
+      const p = playerByName(team, lineup[slot]);
+      const options = team.players.filter((player) => slotEligible(player, slot)).sort((a, b) => b.mean - a.mean).map((player) => {
+        const source = SLOTS.find(([key]) => key !== slot && lineup[key] === player.name)?.[0];
+        const outgoing = team.players.find((row) => row.name === lineup[slot]);
+        const blocked = source && lineup[slot] && !slotEligible(outgoing, source);
+        return `<option value="${$esc(player.name)}"${lineup[slot] === player.name ? " selected" : ""}${blocked ? " disabled" : ""}>${$esc(player.name)} · ${number(player.mean)}${source ? ` · from ${source}${blocked ? " (empty target first)" : " (swap)"}` : ""}${player.bye ? " · BYE" : ""}${player.status && player.status !== "—" ? ` · ${$esc(player.status)}` : ""}</option>`;
+      }).join("");
+      const zero = !p || p.bye || p.status === "IR" || (!active && p.name === "Ja'Marr Chase");
+      const mean = zero ? 0 : p.mean;
+      return `<div class="matchup-player ${side}"><label><span class="sr-only">${$esc(team.name)} ${slot}</span><select data-team="${side}" data-slot="${slot}" aria-label="${$esc(team.name)} ${slot}"><option value=""${!lineup[slot] ? " selected" : ""}>Empty slot (0 points)</option>${options}</select></label><div class="matchup-meta"><span>${p ? `${$esc(p.position)} · ${$esc(p.team)} vs ${$esc(p.opponent)}${p.status && p.status !== "—" ? ` · ${$esc(p.status)}` : ""}` : "No starter selected"}</span><strong>${number(mean)} pts</strong></div><div id="slotCurve-${side}-${slot.replace("/", "")}" class="slot-curve"></div><span class="curve-note">${zero ? "Certain zero points in this scenario" : "Density curve · dotted line = model mean"}</span></div>`;
+    };
+    $("matchupRows").innerHTML = SLOTS.map(([slot]) => `<div class="matchup-row">${cell(opponent, opponentScenario, slot, "opponent")}<span class="slot-badge">${slot}</span>${cell(owner, ownerScenario, slot, "owner")}</div>`).join("");
+    for (const [slot] of SLOTS) {
+      const left = playerByName(opponent, opponentScenario[slot]); const right = playerByName(owner, ownerScenario[slot]);
+      const leftValues = playerSamples(left, active, 2000); const rightValues = playerSamples(right, active, 2000);
+      const bounds = [left, right].filter(Boolean).flatMap((p) => Object.values(p.quantiles || {}).map(Number));
+      const range = [Math.floor(Math.min(0, ...bounds) - 2), Math.ceil(Math.max(20, ...bounds) + 2)];
+      for (const [side, p, values, color] of [["opponent", left, leftValues, COLORS.opponent], ["owner", right, rightValues, COLORS.scenario]]) {
+        const zero = !p || p.bye || p.status === "IR" || (!active && p.name === "Ja'Marr Chase");
+        drawChart(`slotCurve-${side}-${slot.replace("/", "")}`, [{ name: p?.name || "Empty slot", values, mean: zero ? 0 : p.mean, color }], { width: 360, height: 160, player: true, xRange: range, scaleValues: [leftValues, rightValues], aria: `${slot} ${p?.name || "empty slot"} projected points density` });
+      }
+    }
+    $("matchupRows").querySelectorAll("select").forEach((select) => select.addEventListener("change", (event) => {
+      const target = event.currentTarget; const isOwner = target.dataset.team === "owner";
+      try {
+        const result = swapLineup(isOwner ? owner : opponent, isOwner ? ownerScenario : opponentScenario, target.dataset.slot, target.value);
+        if (isOwner) ownerScenario = result; else opponentScenario = result;
+        $("swapMessage").textContent = `${isOwner ? owner.name : opponent.name}: ${target.value || "empty"} at ${target.dataset.slot}. Team curves and win probabilities updated.`;
+      } catch (error) { $("swapMessage").textContent = error.message; }
+      refreshSelection();
+    }));
+  }
+  function renderScenario(active) {
+    const own = lineupDraw(owner, ownerScenario, active); const opp = lineupDraw(opponent, opponentScenario, active);
+    const ownCurrent = lineupDraw(owner, owner.currentLineup, active); const oppCurrent = lineupDraw(opponent, opponent.currentLineup, active);
+    const win = chanceToWin(own.values, opp.values);
+    const ownDelta = own.summary.mean - ownCurrent.summary.mean; const oppDelta = opp.summary.mean - oppCurrent.summary.mean;
+    $("ownerScenarioTitle").textContent = `${owner.name} · ${number(own.summary.mean)} pts`;
+    $("opponentScenarioTitle").textContent = `${opponent.name} · ${number(opp.summary.mean)} pts`;
+    $("scenarioSummary").innerHTML = [
+      distributionCard("Opponent · left", opp.summary, 1 - win - Array.from(own.values).filter((v, i) => v === opp.values[i]).length / own.values.length, `${oppDelta >= 0 ? "+" : ""}${number(oppDelta)} vs current`),
+      distributionCard("Your team · right", own.summary, win, `${ownDelta >= 0 ? "+" : ""}${number(ownDelta)} vs current`),
+      `<div class="dist-card"><span class="label">Scenario win chance</span><strong>${pct(win)}</strong><small>${active ? "Chase active" : "Chase out"} · ${number(own.summary.mean - opp.summary.mean)} mean-point margin</small></div>`
+    ].join("");
+    legend([
+      { label: "Your current", color: COLORS.current, dashed: true },
+      { label: "Your scenario", color: COLORS.scenario },
+      { label: "Opponent current", color: COLORS.opponent, dashed: true },
+      { label: "Opponent scenario", color: COLORS.scenarioOpp }
+    ], "scenarioLegend");
+    drawChart("scenarioChart", [
+      { name: "Your current", values: ownCurrent.values, mean: ownCurrent.summary.mean, color: COLORS.current, dashed: true },
+      { name: "Your scenario", values: own.values, mean: own.summary.mean, color: COLORS.scenario },
+      { name: "Opponent current", values: oppCurrent.values, mean: oppCurrent.summary.mean, color: COLORS.opponent, dashed: true },
+      { name: "Opponent scenario", values: opp.values, mean: opp.summary.mean, color: COLORS.scenarioOpp }
+    ], { height: 260, aria: "Model score distributions for edited lineups compared with current lineups" });
+  }
+
+  function renderWaivers() {
+    const flex = data.freeAgents.filter((p) => ["RB", "WR", "TE"].includes(p.position) && !p.bye).sort((a, b) => b.mean - a.mean).slice(0, 4);
+    const currentFlex = playerByName(owner, owner.currentLineup.FLEX);
+    $("flexAdds").innerHTML = `<h3>Best available FLEX-eligible forecasts</h3>${flex.map((p, i) => `<div class="mini-row"><div><strong>${$esc(p.name)}${p.status && p.status !== "—" ? ` <span class="warning">· ${$esc(p.status)}</span>` : ""}</strong><p>${$esc(p.position)} · ${$esc(p.team)} vs ${$esc(p.opponent)} · ${i === 0 && currentFlex && currentFlex.mean > p.mean ? `below current FLEX ${$esc(currentFlex.name)} (${number(currentFlex.mean)})` : "model forecast conditional on status"}</p></div><div class="value">${number(p.mean)} <span>pts</span></div></div>`).join("")}<p class="callout">${flex[0] && currentFlex && flex[0].mean > currentFlex.mean ? `${$esc(flex[0].name)} is ${number(flex[0].mean - currentFlex.mean)} mean points above ${$esc(currentFlex.name)}, conditional on playing; compare availability and roster cost before a claim.` : `No modeled available FLEX option beats ${$esc(currentFlex?.name || "your current FLEX")} on mean.`} Keep Michael Wilson at WR.</p>`;
+    const dst = data.freeAgents.filter((p) => p.position === "DST" && !p.bye).sort((a, b) => b.mean - a.mean).slice(0, 4);
+    const currentDst = playerByName(owner, owner.currentLineup["D/ST"]);
+    const dropCandidate = owner.players.filter((p) => p.group === "bench" && p.position !== "DST").sort((a, b) => a.mean - b.mean)[0];
+    const topDst = dst[0];
+    const edge = topDst && currentDst ? topDst.mean - currentDst.mean : 0;
+    const dstCall = topDst && currentDst && edge > 0
+      ? `The model’s top visible stream is ${$esc(topDst.name)} (+${number(edge)} mean points vs Bills). Your one-defense policy means a stream replaces Bills D/ST; do not cut an offensive bench player to carry a second defense. Otherwise keep Buffalo given D/ST variance.`
+      : "Keep Bills D/ST; the visible options do not show a meaningful model edge.";
+    $("dstAdds").innerHTML = `<h3>Available D/ST model ranking</h3>${dst.map((p) => `<div class="mini-row"><div><strong>${$esc(p.name)}</strong><p>${$esc(p.team)} vs ${$esc(p.opponent)} · ${number(p.mean - (currentDst?.mean || 0))} vs current Bills D/ST</p></div><div class="value">${number(p.mean)} <span>pts</span></div></div>`).join("")}<p class="callout">${dstCall} Team defense forecasts use the ESPN points-allowed and total-yards-allowed tiers.</p>`;
+  }
+  function renderBench() {
+    const recommendedNames = new Set(Object.values(recommended));
+    const selectedNames = new Set(Object.values(ownerScenario));
+    const lowest = owner.players.filter((p) => p.group === "bench" && !recommendedNames.has(p.name)).sort((a, b) => a.mean - b.mean)[0];
+    const rows = owner.players;
+    $("benchPlan").innerHTML = rows.map((p, i) => {
+      let action = "BENCH / KEEP"; let reason = "Keep as roster depth; below the recommended starters by this week's model mean.";
+      if (recommendedNames.has(p.name)) { action = "START"; reason = "Start or retain in the model's recommended lineup, conditional on availability."; }
+      else if (p.name === "Brian Robinson Jr.") { action = "BENCH / KEEP"; reason = "Added for RB/FLEX depth. His 10.2-point active-state mean is below your current starters; keep him available if Pollard is inactive."; }
+      else if (p.status === "D" || p.status === "IR" || p.group === "IR") { action = "STASH / MONITOR"; reason = "Keep pending availability updates; this active-state forecast does not assume clearance."; }
+      else if (p.bye || p.name === "Tyjae Spears") { action = "STASH / KEEP"; reason = p.bye ? "No game this week; retain depth through the bye." : "Retain RB depth behind Pollard; a low one-week mean alone is insufficient to cut."; }
+      return `<article class="action-row"><div class="action-heading"><strong>${$esc(p.name)}</strong><span class="action-badge ${action === "CUT CANDIDATE" ? "cut" : action === "START" ? "start" : ""}">${action}</span></div><p>${$esc(p.position)} · ${number(p.mean)} model pts${p.status && p.status !== "—" ? ` · ${$esc(p.status)}` : ""} · ${selectedNames.has(p.name) ? "starting in your edited lineup" : "on your edited bench"}</p><p>${reason}</p><div id="benchCurve-${i}" class="bench-curve"></div></article>`;
+    }).join("") + `<p class="callout">Brian Robinson Jr. was added and Jauan Jennings dropped on October 8. Seven bench places, no dedicated IR slot. Keep one defense. No further cut is recommended from a one-week forecast alone.</p>`;
+    rows.forEach((p, i) => drawChart(`benchCurve-${i}`, [{ name: p.name, values: playerSamples(p, true, 2000), mean: p.bye || p.status === "IR" ? 0 : p.mean, color: COLORS.scenario }], { width: 360, height: 135, player: true, aria: `${p.name} bench scoring density` }));
+  }
+  function renderNews() {
+    $("newsList").innerHTML = data.meta.news.map((item) => `<article class="news-item"><p class="eyebrow">${$esc(item.date)} · ${$esc(item.source)}</p><h3>${$esc(item.headline)}</h3><p>${$esc(item.detail)}</p><p><strong>Fantasy impact:</strong> ${$esc(item.impact)}</p><a href="${$esc(item.url)}" target="_blank" rel="noreferrer">View source ↗</a></article>`).join("");
+  }
+  function renderRules() {
+    const rules = data.meta.scoring;
+    const groups = rules.categories.map((group) => `<div class="rule-group"><h3>${$esc(group.group)}</h3>${group.rows.map(([label, score]) => `<div class="rule-row"><span>${$esc(label)}</span><span>${$esc(score)}</span></div>`).join("")}</div>`).join("");
+    const positions = rules.positions.map((position) => `<span>${$esc(position.label)}: ${$esc(position.starters)}${position.maximum ? ` · max ${$esc(position.maximum)}` : ""}</span>`).join("");
+    const transactions = rules.transactionRules.map(([label, value]) => `<span>${$esc(label)}: ${$esc(value)}</span>`).join("");
+    $("rulesContent").innerHTML = `<p class="rules-intro">${$esc(rules.scoringType)} · 10 teams · nine starters · ${$esc(rules.source)}. Values transcribed from the league settings page supplied for this report.</p><div class="rule-pills">${positions}${transactions}</div><div class="rule-columns">${groups}</div><p class="subnote">Projection alignment: all six candidate position models were retrained with these ESPN scoring weights, including kicker misses and D/ST points-allowed and total-yards-allowed tiers. NFLverse does not separately identify rare D/ST 1-point safeties, so that event is excluded from the D/ST model target.</p><a class="settings-link" href="${$esc(rules.sourceUrl)}" target="_blank" rel="noreferrer">Open ESPN settings ↗</a>`;
+  }
+
+  function renderDiagnostics() {
+    const metrics = Object.entries(data.meta.validation || {});
+    $("modelValidation").innerHTML = `<div class="table-scroll"><table><thead><tr><th>Position</th><th>2025 games</th><th>Candidate MAE</th><th>Baseline MAE</th><th>80% interval coverage</th></tr></thead><tbody>${metrics.map(([position, m]) => `<tr><td>${$esc(position)}</td><td>${Number(m.n).toLocaleString()}</td><td>${number(m.model_mae)}</td><td>${number(m.baseline_mae)}</td><td>${pct(m.q10_q90_coverage)}</td></tr>`).join("")}</tbody></table></div>`;
+  }
+
+  function renderPlayerLab() {
+    const all = [...owner.players, ...opponent.players, ...data.freeAgents].filter((p) => p.quantiles);
+    const position = $("positionFilter");
+    const selectA = $("playerA"); const selectB = $("playerB");
+    if (!selectA || !selectB) return;
+    let selectedA = "Josh Allen"; let selectedB = "Sam Darnold";
+    const setOptions = () => {
+      const filter = position.value;
+      const rows = all.filter((p) => filter === "ALL" || p.position === filter).sort((a, b) => a.position.localeCompare(b.position) || b.mean - a.mean);
+      const options = rows.map((p) => `<option value="${$esc(p.name)}">${$esc(p.name)} · ${$esc(p.position)} · ${number(p.mean)} · ${$esc(p.club === "available" ? "FA" : p.club)}</option>`).join("");
+      selectA.innerHTML = options; selectB.innerHTML = options;
+      selectA.value = rows.some((p) => p.name === selectedA) ? selectedA : rows[0]?.name || "";
+      selectB.value = rows.some((p) => p.name === selectedB) ? selectedB : rows[1]?.name || rows[0]?.name || "";
+      selectedA = selectA.value; selectedB = selectB.value;
+      renderPlayerComparison(all, selectedA, selectedB);
+      $("playerCount").textContent = `${rows.length} visible · ${all.length} modelled`;
+      renderPlayerTable(rows);
+    };
+    selectA.onchange = () => { selectedA = selectA.value; renderPlayerComparison(all, selectedA, selectedB); };
+    selectB.onchange = () => { selectedB = selectB.value; renderPlayerComparison(all, selectedA, selectedB); };
+    position.onchange = setOptions;
+    setOptions();
+  }
+  function playerThresholds(player) {
+    const probs = player.probabilities || {};
+    return [5, 10, 15, 20, 25].map((x) => `<span>P(${x}+): ${pct(probs[`${x}_plus`] || 0)}</span>`).join("");
+  }
+  function renderPlayerComparison(all, nameA, nameB) {
+    const a = all.find((p) => p.name === nameA); const b = all.find((p) => p.name === nameB);
+    if (!a || !b) return;
+    const samplesA = playerSamples(a, true, 7000); const samplesB = playerSamples(b, true, 7000);
+    const statA = stats(samplesA, a.mean); const statB = stats(samplesB, b.mean);
+    legend([{ label: `${a.name} · ${a.position}`, color: COLORS.current }, { label: `${b.name} · ${b.position}`, color: COLORS.opponent }], "compareLegend");
+    drawChart("playerChart", [{ name: a.name, values: samplesA, mean: a.mean, color: COLORS.current }, { name: b.name, values: samplesB, mean: b.mean, color: COLORS.opponent }], { player: true, height: 320, aria: `Scoring probability distribution: ${a.name} and ${b.name}` });
+    const statusA = a.status && a.status !== "—" ? `<span class="warning">· ${$esc(a.status)} · conditional on playing</span>` : "";
+    const statusB = b.status && b.status !== "—" ? `<span class="warning">· ${$esc(b.status)} · conditional on playing</span>` : "";
+    $("playerMetrics").innerHTML = [`<article class="player-metric"><h3>${$esc(a.name)} <span class="position-pill">${$esc(a.position)}</span> ${statusA}</h3><div class="metric-main">${number(a.mean)} pts</div><div class="metric-sub">Median ${number(statA.median)} · P10–P90 ${number(statA.p10)}–${number(statA.p90)}</div><div class="thresholds">${playerThresholds(a)}</div></article>`, `<article class="player-metric"><h3>${$esc(b.name)} <span class="position-pill">${$esc(b.position)}</span> ${statusB}</h3><div class="metric-main">${number(b.mean)} pts</div><div class="metric-sub">Median ${number(statB.median)} · P10–P90 ${number(statB.p10)}–${number(statB.p90)}</div><div class="thresholds">${playerThresholds(b)}</div></article>`].join("");
+    const delta = Number(a.mean) - Number(b.mean);
+    $("compareNote").textContent = `${Math.abs(delta).toFixed(1)} model-point mean edge to ${delta >= 0 ? a.name : b.name}. Overlaid density curves are interpolated from the saved quantile model heads; they show outcome range, not an ESPN projection. ${data.meta.modelNote}`;
+  }
+  function renderPlayerTable(rows) {
+    $("playerTable").innerHTML = `<table><thead><tr><th>Player</th><th>Team / opponent</th><th>Position</th><th>Model mean</th><th>Median</th><th>P10–P90</th><th>Role</th></tr></thead><tbody>${rows.map((p) => `<tr><td>${$esc(p.name)}${p.status && p.status !== "—" ? ` <span class="warning">${$esc(p.status)}</span>` : ""}</td><td>${$esc(p.team || "—")} / ${$esc(p.opponent || "—")}</td><td><span class="position-pill">${$esc(p.position)}</span></td><td>${number(p.mean)}</td><td>${number(p.median)}</td><td>${number(p.q10)}–${number(p.q90)}</td><td>${p.club === "available" ? "Available" : `${$esc(p.club)} · ${$esc(p.group)}`}</td></tr>`).join("")}</tbody></table>`;
+  }
+
+  init();
+})();
+
+document.addEventListener('click', (event) => { const link = event.target.closest('a[href="#player"],a[href="#matchup"]'); if (!link) return; event.preventDefault(); const player = link.getAttribute('href') === '#player'; document.getElementById('matchupView').hidden = player; document.getElementById('playerView').hidden = !player; document.querySelectorAll('.nav-links a').forEach(a => { const selected = a.getAttribute('href') === (player ? '#player' : '#matchup'); a.classList.toggle('active', selected); if (selected) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); }); window.scrollTo(0,0); });</script></body></html>

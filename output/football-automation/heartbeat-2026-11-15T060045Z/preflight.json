@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-15T06:02:12.027Z",
+  "week": 10,
+  "opponent": 2,
+  "available": 902,
+  "pending": null,
+  "pendingReadError": {
+    "code": "ESPN_AUTH_REQUIRED",
+    "message": "ESPN session is unauthenticated; refresh ESPN_S2 and SWID locally before reading private pending claims or submitting moves.",
+    "recordedAt": "2026-11-15T06:02:09.837Z"
+  },
+  "ownedNews": 14,
+  "canonicalModelsSha256": "dc43a032e6ce4cd5cf841dbd7ef8b2596dc072090517453ba3afc27749f23b52",
+  "migrationLockDeleted": false
+}

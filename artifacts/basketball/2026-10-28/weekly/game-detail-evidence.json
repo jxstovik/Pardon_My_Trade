@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "kind": "browser-field-transcription",
+  "gameId": "06shj",
+  "url": "https://www.fantrax.com/news/ncaab/boxscore/06shj?view=GAMECAST",
+  "observationWindowLowerBound": "2026-10-29T01:57:11Z",
+  "displayedDate": "Monday, Nov 2, 2026",
+  "displayedStart": "10:00 PM EST",
+  "resolvedStartAt": "2026-11-03T03:00:00Z",
+  "home": "Southern Utah",
+  "away": "N/A (Unknown)",
+  "countedGameEligibility": "unverified",
+  "appliesTo": "This game only; no timezone inference for other game links",
+  "usedByInitialWeeklyReport": false
+}

@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-27T18:09:33.494Z",
+  "sourceFiles": [
+    {
+      "path": "artifacts/basketball/2026-10-27/check-in-1201/draft-forecast/board.json",
+      "sha256": "730e71f8f4b6c256e9f0f71f75a63fd0f46be9ae93b43dde3324dbbc5d69c9c6"
+    },
+    {
+      "path": "docs/basketball/committee/12-sol-copilot-implementation-review.md",
+      "sha256": "f55304d29fd2c159efdb79e01782a4a7a8a0b4010604291281225323bc0c640b"
+    },
+    {
+      "path": "docs/basketball/copilot-runbook.md",
+      "sha256": "b5856f4f314c664455cf2f76fa17c82e869ea3c88335da7a9fb6e12c9923bc2c"
+    },
+    {
+      "path": "docs/basketball/daily-followup-prompt.md",
+      "sha256": "53fd13c95181944d0431083acf5e91ccc0a0c1646e91c2f1f58f19ef9e18de83"
+    },
+    {
+      "path": "public/basketball-copilot/app.css",
+      "sha256": "cdc2f41802eb392d8e9c9082a885b6e9b0c333a21155ed32ba1241294f580188"
+    },
+    {
+      "path": "public/basketball-copilot/app.js",
+      "sha256": "f9a8671bdcb60d057b045ccee69eecf57c43c26e49d3fdf280fa6f48c7ac030a"
+    },
+    {
+      "path": "public/basketball-copilot/index.html",
+      "sha256": "8c746f5c6df912d5600618cd4ba342abf4ce1eacbb2cc773138e7fd9891c21a3"
+    },
+    {
+      "path": "scripts/basketball/draft-rehearsal.mjs",
+      "sha256": "1546ae6f06323930aa357610e90ce70f469f6214cf45e794b4d706872098f18f"
+    },
+    {
+      "path": "scripts/basketball/ingest-fantrax-preflight.mjs",
+      "sha256": "7022153e255e157df810d13f7242bd6509ccd7d39a8a6e3c4ee28ae8a7d937d8"
+    },
+    {
+      "path": "scripts/basketball/read-fantrax-dom.js",
+      "sha256": "656d8cc2e9d0fae1e218b0d1e963daecbe57e6ae02e983e4a61a5ba11fdb5c54"
+    },
+    {
+      "path": "scripts/basketball/validate-copilot-rehearsal.mjs",
+      "sha256": "7b05a96c74f54ae1f9d497952c457b71d900cc646b3ad2fd3c47fabf8b6b7514"
+    },
+    {
+      "path": "src/basketball/calendar.ts",
+      "sha256": "ec9b75c423ed171b8ca19d03693ab7ab9ff796a578700be7c1d03b0e0ab83ff7"
+    },
+    {
+      "path": "src/basketball/categories.ts",
+      "sha256": "3e94a6937bbe13017d2e463626bca5382edab6d3a986709986c5e692826d4c9c"
+    },
+    {
+      "path": "src/basketball/cli.ts",
+      "sha256": "85368867d0d3445056635a9e62f5a1d31f918b378b275e4224a78007ae73f88c"
+    },
+    {
+      "path": "src/basketball/contracts.ts",
+      "sha256": "804ce720aa0d52e16a69a8000f06dee19006242b477f3460f98562d3821c180a"
+    },
+    {
+      "path": "src/basketball/copilot-contracts.ts",
+      "sha256": "028bbc4930b8d027219818fc2616b5e6210e679606527ab3458ce6ec5cc87f16"
+    },
+    {
+      "path": "src/basketball/copilot-server.ts",
+      "sha256": "a2ce9b427bcee77db8b871f3b09845519087756eb27de1f2b152bc6c9cf17fd6"
+    },
+    {
+      "path": "src/basketball/draft-adaptive.ts",
+      "sha256": "74a25a6266e9bcf89b90c7ccaa853504ca8bb8be9d0dce698045b2c6c29f1a34"
+    },
+    {
+      "path": "src/basketball/draft-browser-actor.ts",
+      "sha256": "e3d4aaadea4594bf338ce2667ac2223b804071821a73d7fc5b93363fad16291f"
+    },
+    {
+      "path": "src/basketball/draft-journal.ts",
+      "sha256": "444e8d467f885eb8468c228a971dccf50ae690a4d87e6bb7d6bf93762274acf9"
+    },
+    {
+      "path": "src/basketball/draft-observer.ts",
+      "sha256": "80b5a83688c78066d4bec321324c33ac9f0b9c8154476e32cdc1d515677d6bfa"
+    },
+    {
+      "path": "src/basketball/draft.ts",
+      "sha256": "fb8b947edb6b319f06fdf53993a6b832da2227fab6e006a4a4eddd0e6a842f19"
+    },
+    {
+      "path": "src/basketball/fantrax-dom.ts",
+      "sha256": "f7d0a0ca58359945abb5aac13a8722f2f23930118fbcd23a524effcdc05ef9b5"
+    },
+    {
+      "path": "src/basketball/fantrax-reader.ts",
+      "sha256": "f05463ccf2d616a9d1424237b5b50b7d7c97475b428b87a6bf51881feae95de6"
+    },
+    {
+      "path": "src/basketball/forecast.ts",
+      "sha256": "245417eb40477079e11d46bef6c0403cf347a7ea28b96ebed107d0d77aef8e45"
+    },
+    {
+      "path": "src/basketball/history.ts",
+      "sha256": "c2a999af432064bd92af3c6cc46e150a6f95d1f8a31f4b191040bf2b7b720e1b"
+    },
+    {
+      "path": "src/basketball/player-pool.ts",
+      "sha256": "1babbd1b6cc49505f71abbda4982ac94547561fb1e2ad461eecfcc72bbcb3520"
+    },
+    {
+      "path": "src/basketball/report.ts",
+      "sha256": "443ccf23292dca9df4bd9cf1b9c80edc620a4760f4b6b2b03a7e0a0a0f62f65d"
+    },
+    {
+      "path": "src/basketball/store.ts",
+      "sha256": "0584dad683bf3471f130df981734982a1b25317f513549f0849576550ca44026"
+    },
+    {
+      "path": "tests/basketball-adaptive.test.ts",
+      "sha256": "7c331107decd1f63df5933cf417d8d955889a24337e7be7138a02ee80063ff20"
+    },
+    {
+      "path": "tests/basketball-copilot-server.test.ts",
+      "sha256": "df5b3e5c5f3b46013c6943fb9f51960407a5ff81bee2f5d82064e76ecd2d4d15"
+    },
+    {
+      "path": "tests/basketball-draft-forecast.test.ts",
+      "sha256": "10acb74274c080bdd6aa85ac6b8cb3383c19acdf3f6b074005ac018c7c5fa13c"
+    },
+    {
+      "path": "tests/basketball-fantrax-dom.test.ts",
+      "sha256": "dae5f57a28ef11b94033320fad1ca1ab05abe4e1ab84fc45ded68f32d68834eb"
+    },
+    {
+      "path": "tests/basketball-history.test.ts",
+      "sha256": "6db7793d02c897b21efe79730e973a6fa357caa31b24c2a0467d15e6749abf01"
+    },
+    {
+      "path": "tests/basketball-observer.test.ts",
+      "sha256": "15304aa22f7a8fbe708f75b76aa977b88560052867afd0e4c2c7a7f8c8def6f9"
+    },
+    {
+      "path": "tests/basketball-player-pool.test.ts",
+      "sha256": "8bad3bfbc0a87ab5dc2a2ac398649fec935970c9eac6d38c0153f0c1d14e12c8"
+    },
+    {
+      "path": "tests/basketball-workflow.test.ts",
+      "sha256": "11dcc4a872034e4944e7991b2ceeff9b3b14958676e307eaf792e12c85386217"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/automation-update.json",
+      "sha256": "7394aa72b4ddfd07b328a29ca07e002259450c06878b1756a9599ae70fc87c95"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/browser-export.json",
+      "sha256": "32c63d13138d54e6586247501e1e808d4cff71b56dcfac9f6aced8fb9f32de7b"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/browser-measurements.json",
+      "sha256": "5fd2cfc3eb1421fba840e164fd30279b14163e4a25ffac82f735e66f11b25002"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/browser-trace.json",
+      "sha256": "69763984a4ac77f915d0c391a00872a1332a8bc6545233f8729bb31708f127ee"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/compiled-tests.log",
+      "sha256": "788bf5d7fbbde658932e208e67954e5a5357239e81dd562dd08c86edcf294a61"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/completed-mock.jpg",
+      "sha256": "612c9ac9f3ea14ae6a9f36bce79e861fcc8e6820494da2e0fb392ae643bfc24e"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/confirmed-team-directory.json",
+      "sha256": "cd293b55316028eed295f7b0af98eb044584ddc10d4cbf727fed004ab6dcc734"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/copilot-ready.jpg",
+      "sha256": "618fad709bacef150b2176a152362f975583217a77f70f89028be4caaeefcfa6"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/engine-benchmark.json",
+      "sha256": "a4d2cb2b2b7c3af682fb72e70b4c80f87c40df26b09c624484500cf4b82bcd05"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/fantrax-coach-receipt.json",
+      "sha256": "f0e89ae3df879ea5d579dd6f861ac8438d5eefbb952b1233431537833db671fb"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/fantrax-preflight-fresh.json",
+      "sha256": "7badbbb650d3f6dfcb41e0c2b2617956522ab5c56f6f47d2f0cc488b93fd5da1"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/final-browser-smoke.json",
+      "sha256": "e364aceb40880bddb2024c8bfab37e455774a8eeb74069d2f9b42a695c922dc7"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/final-client-measurements.json",
+      "sha256": "46ba8ac705c273fd7671b6511d5907c56936b083bc0c5c2d3117af98f64b38c6"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/journal-benchmark-snapshot.jsonl.gz",
+      "sha256": "621937b204ff55cff0116ddd2c52c872eea7eeedf6e33af8783c12ebb6cf6b96"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/latency-summary.json",
+      "sha256": "01e5d6d3fa05255616c01a11b2d5eb11889ac663fc53597e75a4a86e2f21e87a"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/mock-run-balanced.json",
+      "sha256": "eccd0977dca19d93218f8af79a4d1ae7ff09327c989453cfecd281c14d679b14"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/mock-run-bigs.json",
+      "sha256": "c9019e1223f8c58009938b23c1404af7eb35455cc8fbc5cc66867e14e9736c63"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/mock-run-guards.json",
+      "sha256": "da80ed107b4cb04893879e428af7d76a56809161f8c6dc0225f9b68924102daa"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/report.md",
+      "sha256": "5ea91e8ca122d442ce32e554e3c7f817a24c9e30ec38d0f818534fc919ad9c22"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/saved-evidence-doctor.json",
+      "sha256": "f661b58a61bfd7dc1d99a1e3225dc7bf18c389bf802c3bd339e367dfd5b0deeb"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/saved-evidence-report.md",
+      "sha256": "956f40dcea25033859fb149073eaadbbbcc1c633a5bf3fa4a1a2f9eb0eb72f6c"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-27/copilot-build/validation/validation.json",
+      "sha256": "3476289238837188704d11536a4cd5ba454f4ad9b335fd74dd60141b9886322b"
+    }
+  ],
+  "scope": "Basketball-only source/evidence snapshot; compiled tests, 3 full browser runs and final client smoke have separate scopes described in report.md."
+}

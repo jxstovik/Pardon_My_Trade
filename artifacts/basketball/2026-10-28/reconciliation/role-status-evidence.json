@@ -1,0 +1,46 @@
+{
+  "observedAt": "2026-10-28T20:03:00Z",
+  "kind": "web-source-field-transcription",
+  "observations": [
+    {
+      "fantraxId": "06n8t",
+      "name": "Javontae Campbell",
+      "url": "https://gobearcats.com/news/2026/09/22/bearcats-add-javontae-campbell-for-2026-27",
+      "publishedAt": "2026-09-22",
+      "finding": "Official Cincinnati addition; one season eligibility stated. Prior Bowling Green34MIN,18.7PTS,5.1AST,4.5REB,3.0ST confirms historical baseline rather than new-conference role.",
+      "effect": "Identity/transfer confirmed; current minutes, usage, injury clearance and high-major defensive rate remain unverified; no numeric adjustment from narrative."
+    },
+    {
+      "fantraxId": "065cb",
+      "name": "Kyle Evans",
+      "url": "https://gopack.com/sports/mens-basketball/roster/kyle-evans/16887",
+      "publishedAt": null,
+      "finding": "Official2026-27NCState roster; graduate transfer from UC Irvine. Prior12PTS,8.7REB,3.29BLK season cited.",
+      "effect": "Identity/transfer confirmed. Preserve historical discrepancy within bio(also8.5REB elsewhere); no automatic current-role projection or eligibility-law inference."
+    },
+    {
+      "fantraxId": "05wt9",
+      "name": "Trey Kaufman-Renn",
+      "url": "https://kuathletics.com/news/2026/10/19/mens-basketball-kansas-mens-basketball-adds-standout-trey-kaufman-renn",
+      "publishedAt": "2026-10-19",
+      "finding": "Kansas announces addition and practicing status; prior Purdue14.2PTS,8.3REB,2.5AST and57.8%FG cited.",
+      "effect": "Current-school identity confirmed; historical season/basis differs from provider25.1MIN13.1PTS6.2REB1.7AST. No overwrite of forward projection; no independent guarantee of future eligibility."
+    },
+    {
+      "fantraxId": "07a8s",
+      "name": "Jordan Smith Jr.",
+      "url": "https://arkansasrazorbacks.com/roster/jordan-smith-jr/",
+      "publishedAt": null,
+      "finding": "Official Arkansas freshman profile; prior high-school26.6PTS6.3REB5.6AST3.2ST and56%FG36.9%3P72.4%FT.",
+      "effect": "Suffix alias/current-school identity corroborated. High-school stats are not directly substituted into DivisionI forecast; cold-start translation remains unresolved."
+    },
+    {
+      "fantraxId": "06g3w",
+      "name": "JT Toppin",
+      "url": "https://www.rotowire.com/cbasketball/player/jt-toppin-22578",
+      "publishedAt": "2026-10-20",
+      "finding": "Current retrieved page displays Out/Knee and no return timetable; update remains datedOctober20.",
+      "effect": "Retain manual-review-only exclusion, conditional stats retained; current publication age remains explicit."
+    }
+  ]
+}

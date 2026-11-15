@@ -1,6 +1,7 @@
 import type { PlayerPosition } from "../../models/types.js";
 import type { PlayerModel, ModelPosition } from "../../probabilistic/bayesian-model.js";
 import { DEFAULT_SCARCITY } from "../../probabilistic/model-engine.js";
+import { DEFAULT_DO_NOT_DROP_RANK_LIMIT, buildDoNotDropList } from "../../decisions/do-not-drop.js";
 import type { AddDropAction, FreeAgentInput, RosterSlotInput } from "../types.js";
 
 function scarcityFor(position: PlayerPosition): number {
@@ -21,7 +22,7 @@ export function scanWaivers(
   freeAgents: ReadonlyArray<FreeAgentInput>,
   rosterSlots: ReadonlyArray<RosterSlotInput>,
   models: Map<string, PlayerModel>,
-  options: { threshold?: number; maxCandidates?: number } = {}
+  options: { threshold?: number; maxCandidates?: number; doNotDropRankLimit?: number } = {}
 ): AddDropAction[] {
   const threshold = options.threshold ?? 2;
   const maxCandidates = options.maxCandidates ?? 3;
@@ -30,7 +31,13 @@ export function scanWaivers(
     .map((fa) => ({ fa, value: fa.projectedPoints * scarcityFor(fa.position) }))
     .sort((a, b) => b.value - a.value);
 
+  const doNotDrop = buildDoNotDropList(
+    rosterSlots.map((slot) => slot.playerId),
+    [...models.values()].map((model) => ({ playerId: model.playerId, value: valueOf(models, model.playerId) })),
+    options.doNotDropRankLimit ?? DEFAULT_DO_NOT_DROP_RANK_LIMIT
+  );
   const rosterWithValue = rosterSlots
+    .filter((slot) => !doNotDrop.has(slot.playerId))
     .map((slot) => ({ slot, value: valueOf(models, slot.playerId) }))
     .sort((a, b) => a.value - b.value);
 

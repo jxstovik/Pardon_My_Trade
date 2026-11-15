@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "status": "complete",
+  "leagueId": "98806880",
+  "teamId": "7",
+  "season": "2026",
+  "startedAt": "2026-11-07T05:58:54.605Z",
+  "targetWeek": 9,
+  "scoringPeriod": "2026-W9",
+  "platformWrites": 0,
+  "proposals": 0,
+  "readAt": "2026-11-07T05:58:54.907Z",
+  "week": 9,
+  "firstKickoff": "2026-11-06T01:15:00.000Z",
+  "lastKickoff": "2026-11-10T01:15:00.000Z",
+  "timing": "in_progress_refresh_not_pregame",
+  "receiptPath": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-07T055614Z/runtime/weekly-projections/2026-W9.json",
+  "espn": {
+    "scoringPeriodId": 9,
+    "matchupPeriodId": 9,
+    "mapping": [
+      9
+    ],
+    "ownershipVerified": true
+  },
+  "schedule": {
+    "source": "ESPN proTeamSchedules_wl",
+    "retrievedAt": "2026-11-07T05:58:54.907Z",
+    "games": [
+      {
+        "id": 401873037,
+        "homeProTeamId": 33,
+        "awayProTeamId": 30,
+        "kickoff": "2026-11-06T01:15:00.000Z"
+      },
+      {
+        "id": 401873038,
+        "homeProTeamId": 1,
+        "awayProTeamId": 4,
+        "kickoff": "2026-11-08T14:30:00.000Z"
+      },
+      {
+        "id": 401873040,
+        "homeProTeamId": 11,
+        "awayProTeamId": 6,
+        "kickoff": "2026-11-08T18:00:00.000Z"
+      },
+      {
+        "id": 401873045,
+        "homeProTeamId": 12,
+        "awayProTeamId": 20,
+        "kickoff": "2026-11-08T18:00:00.000Z"
+      },
+      {
+        "id": 401873043,
+        "homeProTeamId": 28,
+        "awayProTeamId": 14,
+        "kickoff": "2026-11-08T18:00:00.000Z"
+      },
+      {
+        "id": 401873042,
+        "homeProTeamId": 15,
+        "awayProTeamId": 8,
+        "kickoff": "2026-11-08T18:00:00.000Z"
+      },
+      {
+        "id": 401873039,
+        "homeProTeamId": 18,
+        "awayProTeamId": 5,
+        "kickoff": "2026-11-08T18:00:00.000Z"
+      },
+      {
+        "id": 401873044,
+        "homeProTeamId": 21,
+        "awayProTeamId": 19,
+        "kickoff": "2026-11-08T18:00:00.000Z"
+      },
+      {
+        "id": 401873041,
+        "homeProTeamId": 29,
+        "awayProTeamId": 7,
+        "kickoff": "2026-11-08T18:00:00.000Z"
+      },
+      {
+        "id": 401873046,
+        "homeProTeamId": 24,
+        "awayProTeamId": 34,
+        "kickoff": "2026-11-08T21:05:00.000Z"
+      },
+      {
+        "id": 401873047,
+        "homeProTeamId": 25,
+        "awayProTeamId": 13,
+        "kickoff": "2026-11-08T21:25:00.000Z"
+      },
+      {
+        "id": 401873049,
+        "homeProTeamId": 17,
+        "awayProTeamId": 9,
+        "kickoff": "2026-11-08T21:25:00.000Z"
+      },
+      {
+        "id": 401873048,
+        "homeProTeamId": 26,
+        "awayProTeamId": 22,
+        "kickoff": "2026-11-08T21:25:00.000Z"
+      },
+      {
+        "id": 401873050,
+        "homeProTeamId": 3,
+        "awayProTeamId": 27,
+        "kickoff": "2026-11-09T01:20:00.000Z"
+      },
+      {
+        "id": 401873051,
+        "homeProTeamId": 16,
+        "awayProTeamId": 2,
+        "kickoff": "2026-11-10T01:15:00.000Z"
+      }
+    ],
+    "sha256": "c6c8babbe17845d3f58ba24320a516f4970823b06be80c59c9f8254f2eb615d6"
+  },
+  "refreshStartedAt": "2026-11-07T05:58:54.928Z",
+  "refresh": {
+    "snapshotId": "espn-98806880-70a4d1f1-9b4f-4894-b45e-d6ae9a82be75-1794031135257",
+    "season": "2026",
+    "scoringPeriod": "2026-W9",
+    "sources": {
+      "espn": 680
+    },
+    "skipped": {},
+    "projectionsStored": 680,
+    "playersUpdated": 680,
+    "modelsRebuilt": 1056,
+    "errors": []
+  },
+  "persistence": {
+    "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-07T055614Z/runtime/pmt.sqlite",
+    "leagueId": "98806880",
+    "scoringPeriod": "2026-W9",
+    "freshRows": 680,
+    "totalRows": 680,
+    "sources": {
+      "espn": 680
+    },
+    "oldestFreshAt": "2026-11-07T05:58:58.141Z",
+    "newestFreshAt": "2026-11-07T05:58:58.141Z"
+  },
+  "coverage": {
+    "total": 9,
+    "covered": 9,
+    "starters": [
+      {
+        "playerId": "4890973",
+        "espnId": "4890973",
+        "name": "Ashton Jeanty",
+        "proTeamId": 13,
+        "slot": 2,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          14.83
+        ]
+      },
+      {
+        "playerId": "4595348",
+        "espnId": "4595348",
+        "name": "Malik Nabers",
+        "proTeamId": 19,
+        "slot": 23,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          17.1
+        ]
+      },
+      {
+        "playerId": "3918298",
+        "espnId": "3918298",
+        "name": "Josh Allen",
+        "proTeamId": 2,
+        "slot": 0,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          19.94
+        ]
+      },
+      {
+        "playerId": "4426388",
+        "espnId": "4426388",
+        "name": "Jameson Williams",
+        "proTeamId": 8,
+        "slot": 4,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          14.01
+        ]
+      },
+      {
+        "playerId": "3040151",
+        "espnId": "3040151",
+        "name": "George Kittle",
+        "proTeamId": 25,
+        "slot": 6,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          16.18
+        ]
+      },
+      {
+        "playerId": "4360761",
+        "espnId": "4360761",
+        "name": "Michael Wilson",
+        "proTeamId": 22,
+        "slot": 4,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          13.1
+        ]
+      },
+      {
+        "playerId": "4371733",
+        "espnId": "4371733",
+        "name": "Kenny Gainwell",
+        "proTeamId": 27,
+        "slot": 2,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          8.33
+        ]
+      },
+      {
+        "playerId": "-16018",
+        "espnId": "-16018",
+        "name": "Saints D/ST",
+        "proTeamId": 18,
+        "slot": 16,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          5.82
+        ]
+      },
+      {
+        "playerId": "5081335",
+        "espnId": "5081335",
+        "name": "Drew Stevens",
+        "proTeamId": 28,
+        "slot": 17,
+        "status": "positive",
+        "sources": [
+          "espn"
+        ],
+        "points": [
+          8.77
+        ]
+      }
+    ]
+  },
+  "modelFile": {
+    "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-07T055614Z/runtime/models.json",
+    "savedAt": "2026-11-07T05:58:58.770Z",
+    "modifiedAt": "2026-11-07T05:58:58.771Z",
+    "bytes": 369276,
+    "sha256": "65f1cc7f62223352a58fa02177fcce2ca7bab5b4a8a32ef79af13253ae2ba7d8",
+    "records": 1056
+  },
+  "completedAt": "2026-11-07T05:58:58.813Z"
+}

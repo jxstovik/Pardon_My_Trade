@@ -1,0 +1,28 @@
+{
+  "observedDuring": { "triggerAt": "2026-11-03T07:32:37.229Z", "completedNoLaterThan": "2026-11-03T07:35:28Z" },
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players",
+  "scope": "Current Players page 1, Score/Rank order, 20 rows; not an exhaustive pool.",
+  "scheduleView": "Not captured; selecting Schedule left the Stats view visible. Schedules remain unknown.",
+  "rows": [
+    { "rank": 1, "name": "Isaiah Miranda", "positionSchool": "F/C - Gram", "status": "Claim / FA" },
+    { "rank": 2, "name": "Brady Koehler", "positionSchool": "F/C - ND", "status": "Claim / FA" },
+    { "rank": 3, "name": "Braeden Smith", "positionSchool": "G - ND", "status": "Claim / FA" },
+    { "rank": 4, "name": "Zander Carter", "positionSchool": "G - Lib", "status": "Claim / FA" },
+    { "rank": 5, "name": "Tyler Perkins", "positionSchool": "G - Vill", "status": "Claim / FA" },
+    { "rank": 6, "name": "Elijah Crawford", "positionSchool": "G - Vill", "status": "Claim / FA" },
+    { "rank": 7, "name": "Braeden Shrewsberry", "positionSchool": "G - ND", "status": "Claim / FA" },
+    { "rank": 8, "name": "Jaylen Colon", "positionSchool": "G - App", "status": "Claim / FA" },
+    { "rank": 9, "name": "Ted Neal", "positionSchool": "G, F/C - App", "status": "Claim / FA" },
+    { "rank": 10, "name": "Eli Sancomb", "positionSchool": "G - Lib", "status": "Claim / FA" },
+    { "rank": 11, "name": "Trevor Polite", "positionSchool": "G, F/C - NIU", "status": "Claim / FA" },
+    { "rank": 12, "name": "Dwayne Pierce", "positionSchool": "G - Gram", "status": "Claim / FA" },
+    { "rank": 13, "name": "Max Weisbrod", "positionSchool": "G - NIU", "status": "Claim / FA" },
+    { "rank": 14, "name": "Frankquon Sherman", "positionSchool": "F/C - HiPt", "status": "Claim / FA" },
+    { "rank": 15, "name": "Ben Kopetzki", "positionSchool": "G - App", "status": "Claim / FA" },
+    { "rank": 16, "name": "Isaiah Howard", "positionSchool": "G - Gram", "status": "Claim / FA" },
+    { "rank": 17, "name": "Brayden Gross", "positionSchool": "F/C - NIU", "status": "Claim / FA" },
+    { "rank": 18, "name": "Antoine Shannon", "positionSchool": "G, F/C - Gram", "status": "Claim / FA" },
+    { "rank": 19, "name": "Nino Carter-Smith", "positionSchool": "G - NIU", "status": "Claim / FA" },
+    { "rank": 20, "name": "Curtis Williams", "positionSchool": "G - HiPt", "status": "Claim / FA" }
+  ]
+}

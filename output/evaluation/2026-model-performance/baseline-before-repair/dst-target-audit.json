@@ -1,0 +1,1266 @@
+[
+  {
+    "name": "Cardinals D/ST",
+    "week": 1,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 12,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 2,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 3,
+    "modelTrainingTarget": -8.0,
+    "espnActual": -4,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 4,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 9,
+    "difference": 6.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 5,
+    "modelTrainingTarget": -3.0,
+    "espnActual": -3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 1,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 7,
+    "difference": 5.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 2,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 3,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 4,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 4,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 5,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 10,
+    "difference": 10.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 1,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 8,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 2,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 3,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 4,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 7,
+    "difference": 2.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 5,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 5,
+    "difference": 1.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 1,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 5,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 2,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 2,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 3,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 4,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 5,
+    "modelTrainingTarget": -3.0,
+    "espnActual": -3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 1,
+    "modelTrainingTarget": -10.0,
+    "espnActual": -8,
+    "difference": 2.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 16.0,
+    "espnActual": 24,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 6,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 4,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 1,
+    "modelTrainingTarget": -6.0,
+    "espnActual": 2,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 2,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 3,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 13,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 4,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 5,
+    "modelTrainingTarget": -2.0,
+    "espnActual": -2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 1,
+    "modelTrainingTarget": -2.0,
+    "espnActual": 20,
+    "difference": 22.0,
+    "opponentFumblesLost": 4.0
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 2,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 3,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 0,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 4,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 5,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 9,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 1,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 2,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 3,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 4,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 5,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 11,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 1,
+    "modelTrainingTarget": -2.0,
+    "espnActual": 2,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 2,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 3,
+    "modelTrainingTarget": -2.0,
+    "espnActual": -2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 4,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 5,
+    "modelTrainingTarget": -2.0,
+    "espnActual": -2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 1,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 2,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 9,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 3,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 4,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 1,
+    "difference": -4.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 5,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 14,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 1,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 5,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 2,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 3,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 7,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 4,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 5,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 7,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 7,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 3,
+    "modelTrainingTarget": -6.0,
+    "espnActual": -6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 10,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 19,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 1,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 2,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 3,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 10,
+    "difference": 6.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 4,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 5,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 15,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 1,
+    "modelTrainingTarget": -9.0,
+    "espnActual": -5,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 2,
+    "modelTrainingTarget": -5.0,
+    "espnActual": -5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 3,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 4,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 5,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 1,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 14,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 2,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 1,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 3,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 13,
+    "difference": 5.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 4,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 5,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 1,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 14,
+    "difference": 5.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 2,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 3,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 7,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 4,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 1,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 2,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 11,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 3,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 5,
+    "difference": 1.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 4,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 5,
+    "modelTrainingTarget": -5.0,
+    "espnActual": -1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 13,
+    "difference": 12.0,
+    "opponentFumblesLost": 3.0
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 6,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 5,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 1,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 14,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 2,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 12,
+    "difference": 6.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 3,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 11,
+    "difference": 10.0,
+    "opponentFumblesLost": 3.0
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 4,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 5,
+    "modelTrainingTarget": -10.0,
+    "espnActual": -6,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 1,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 2,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 3,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 4,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 5,
+    "modelTrainingTarget": -1.0,
+    "espnActual": 1,
+    "difference": 2.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 1,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 5,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 2,
+    "modelTrainingTarget": 12.0,
+    "espnActual": 16,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 3,
+    "modelTrainingTarget": 19.0,
+    "espnActual": 19,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 4,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 10,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 5,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 13,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 1,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 2,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 20,
+    "difference": 10.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 3,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 5,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 5,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 6,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 1,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 2,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 3,
+    "modelTrainingTarget": -2.0,
+    "espnActual": 2,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 4,
+    "modelTrainingTarget": -5.0,
+    "espnActual": -5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 5,
+    "modelTrainingTarget": -3.0,
+    "espnActual": 11,
+    "difference": 14.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 1,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 2,
+    "modelTrainingTarget": -5.0,
+    "espnActual": -1,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 3,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 9,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 4,
+    "modelTrainingTarget": 16.0,
+    "espnActual": 16,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 5,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 1,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 11,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 2,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 3,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 4,
+    "modelTrainingTarget": -4.0,
+    "espnActual": 0,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 5,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 18,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 1,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 2,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 3,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 4,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 5,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 19.0,
+    "espnActual": 19,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 8,
+    "difference": 5.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 3,
+    "modelTrainingTarget": -4.0,
+    "espnActual": 4,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 5,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 1,
+    "modelTrainingTarget": 14.0,
+    "espnActual": 14,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 2,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 10,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 3,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 4,
+    "difference": 1.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 4,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 12,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 5,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 11,
+    "difference": 9.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 9,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 0,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 5,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 20,
+    "difference": 12.0,
+    "opponentFumblesLost": 2.0
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 8,
+    "difference": 1.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 7,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 6,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 1,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 2,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 3,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 8,
+    "difference": -2.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 5,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 1,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 2,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 3,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 8,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 4,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 7,
+    "difference": 4.0,
+    "opponentFumblesLost": 1.0
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 5,
+    "modelTrainingTarget": -5.0,
+    "espnActual": 3,
+    "difference": 8.0,
+    "opponentFumblesLost": 2.0
+  }
+]

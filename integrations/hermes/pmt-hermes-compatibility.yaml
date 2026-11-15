@@ -41,6 +41,16 @@ hermes:
 capabilities:
   read_server: pmt-read
   read_tools:
+    - pmt_get_nfl_kickoff_schedule
+    - pmt_schedule_kickoff_reviews
+    - pmt_run_kickoff_review
+    - pmt_finalize_kickoff_report
+    - pmt_archive_pregame_forecasts
+    - pmt_get_forecast_archives
+    - pmt_start_model_evaluation
+    - pmt_get_model_evaluation
+    - pmt_generate_scout_report
+    - pmt_get_scout_report
     - pmt_sync_league
     - pmt_get_roster_analytics
     - pmt_compare_free_agent
@@ -51,6 +61,7 @@ capabilities:
     - pmt_espn_read_schedule
     - pmt_espn_read_transactions
     - pmt_espn_read_players
+    - pmt_espn_read_waivers
     - pmt_espn_read_free_agents
     - pmt_refresh_projections
     - pmt_run_projection_refresh
@@ -71,6 +82,10 @@ capabilities:
     - pmt_update_post_week_outcomes
   operator_server: pmt-operator
   operator_tools:
+    - pmt_prepare_kickoff_lineup
+    - pmt_prepare_lineup
+    - pmt_prepare_waiver_claim
+    - pmt_prepare_add_drop
     - pmt_list_pending_actions
     - pmt_get_action
     - pmt_preview_action

@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "rlfm3uhjmvk7q70x",
+  "displayName": "JeffWischer",
+  "period": 1,
+  "observedAtLowerBound": "2026-10-30T06:30:58.000Z",
+  "sourceKind": "browser-field-transcription",
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;view=SCHEDULE_PERIOD;teamId=rlfm3uhjmvk7q70x",
+  "active": 10,
+  "reserves": 4,
+  "players": [
+    {
+      "name": "Cruz Davis",
+      "school": "TxTch",
+      "observedSlot": "G",
+      "fantraxId": "065pz",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06p0q",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06p0r",
+          "displayedColumnDate": "2026-11-05",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "PJ Haggerty",
+      "school": "TAMU",
+      "observedSlot": "G",
+      "fantraxId": "064kt",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06nuw",
+          "displayedColumnDate": "2026-11-03",
+          "startAt": null
+        },
+        {
+          "id": "06nvd",
+          "displayedColumnDate": "2026-11-06",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Rodney Rice",
+      "school": "USC",
+      "observedSlot": "G",
+      "fantraxId": "064zc",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06qv2",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06qt1",
+          "displayedColumnDate": "2026-11-08",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Tyler Tanner",
+      "school": "Vand",
+      "observedSlot": "G",
+      "fantraxId": "06n46",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06q3e",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06q3h",
+          "displayedColumnDate": "2026-11-05",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Alex Condon",
+      "school": "Fla",
+      "observedSlot": "F/C",
+      "fantraxId": "06ga8",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06nuq",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06nv1",
+          "displayedColumnDate": "2026-11-05",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Will Heimbrodt",
+      "school": "SeatU",
+      "observedSlot": "F/C",
+      "fantraxId": "06gu8",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06su6",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06qqw",
+          "displayedColumnDate": "2026-11-07",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Amani Lyles",
+      "school": "Cin",
+      "observedSlot": "F/C",
+      "fantraxId": "0655p",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06qg5",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06qgc",
+          "displayedColumnDate": "2026-11-05",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Paulius Murauskas",
+      "school": "AzSt",
+      "observedSlot": "F/C",
+      "fantraxId": "06g0o",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06qsr",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06qsx",
+          "displayedColumnDate": "2026-11-06",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Ethan Potter",
+      "school": "UT",
+      "observedSlot": "Flx",
+      "fantraxId": "065p6",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06oi7",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06qbd",
+          "displayedColumnDate": "2026-11-04",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Money Williams",
+      "school": "BC",
+      "observedSlot": "Flx",
+      "fantraxId": "06hkh",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06nux",
+          "displayedColumnDate": "2026-11-03",
+          "startAt": null
+        },
+        {
+          "id": "06o0o",
+          "displayedColumnDate": "2026-11-06",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Baraka Okojie",
+      "school": "GMas",
+      "observedSlot": "RES",
+      "fantraxId": "06g3v",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06r9o",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06r9v",
+          "displayedColumnDate": "2026-11-06",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Dylan Faulkner",
+      "school": "Clem",
+      "observedSlot": "RES",
+      "fantraxId": "06gcm",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06qqk",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06qqt",
+          "displayedColumnDate": "2026-11-06",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Nick Townsend",
+      "school": "Stan",
+      "observedSlot": "RES",
+      "fantraxId": "065xr",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06q14",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06q17",
+          "displayedColumnDate": "2026-11-06",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "name": "Patrick Wessler",
+      "school": "UNCW",
+      "observedSlot": "RES",
+      "fantraxId": "064zb",
+      "identityMatch": "exact saved name/school",
+      "forecastCovered": true,
+      "games": [
+        {
+          "id": "06nhu",
+          "displayedColumnDate": "2026-11-02",
+          "startAt": null
+        },
+        {
+          "id": "06oaz",
+          "displayedColumnDate": "2026-11-07",
+          "startAt": null
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Displayed column dates are retained without UTC inference.",
+    "Heimbrodt game06su6 is under Monday but label says Tuesday12:00AM; reconcile before counting.",
+    "No opponent lineup probability, category margin or W/L/T forecast was computed.",
+    "Fantrax still labels Potter UT; the school article mentioning Portland State is conflicting role evidence and is not joined."
+  ]
+}

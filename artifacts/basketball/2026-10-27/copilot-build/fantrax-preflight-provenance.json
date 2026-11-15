@@ -1,0 +1,15 @@
+{
+  "kind": "browser-dom-field-transcription",
+  "capturedAt": "2026-10-27T13:04:30.700Z",
+  "meaning": "Fields returned by supported read-only browser evaluation. Compact empty-cell labels expanded to records without changing values. Not original raw API or HTML bytes.",
+  "originalRawPayloadHash": null,
+  "liveWrites": 0,
+  "mockLobby": {
+    "urls": [
+      "https://www.fantrax.com/game/mock-draft/ncaab",
+      "https://www.fantrax.com/game/mock-draft/nba",
+      "https://www.fantrax.com/game/mock-draft/all"
+    ],
+    "result": "Each displayed no available draft games during this build turn; no entry or purchase."
+  }
+}

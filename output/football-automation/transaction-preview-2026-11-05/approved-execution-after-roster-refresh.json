@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-05T14:29:28.340Z",
+  "actor": "human-explicit-approved-both-transactions-2026-11-05",
+  "outcomes": [
+    {
+      "add": "-16018",
+      "drop": "-16028",
+      "addName": "Saints D/ST",
+      "dropName": "Commanders D/ST",
+      "status": "already_owned_verified",
+      "verified": true
+    },
+    {
+      "add": "5081335",
+      "drop": "3055899",
+      "addName": "Drew Stevens",
+      "dropName": "Harrison Butker",
+      "actionId": "act-1793888969761-9h2y6v",
+      "status": "executed",
+      "verified": true,
+      "audit": [
+        {
+          "auditId": "audit-act-1793888969761-9h2y6v-1793888970734-c9f5dy",
+          "actionId": "act-1793888969761-9h2y6v",
+          "idempotencyKey": "human-explicit-approved-both-transactions-2026-11-05:5081335:3055899",
+          "payloadHash": "b83287c08cf8baa703a59a29e8ad494026ddc2962f8948399f4b6270581f7cb6",
+          "event": "submission_started",
+          "recordedAt": "2026-11-05T14:29:30.734Z",
+          "actor": "human-explicit-approved-both-transactions-2026-11-05",
+          "details": {
+            "approvedBy": "human-explicit-approved-both-transactions-2026-11-05"
+          }
+        },
+        {
+          "auditId": "audit-act-1793888969761-9h2y6v-1793888971014-4zjtbc",
+          "actionId": "act-1793888969761-9h2y6v",
+          "idempotencyKey": "human-explicit-approved-both-transactions-2026-11-05:5081335:3055899",
+          "payloadHash": "b83287c08cf8baa703a59a29e8ad494026ddc2962f8948399f4b6270581f7cb6",
+          "event": "executed",
+          "recordedAt": "2026-11-05T14:29:31.015Z",
+          "actor": "human-explicit-approved-both-transactions-2026-11-05",
+          "details": {
+            "approvedBy": "human-explicit-approved-both-transactions-2026-11-05"
+          }
+        }
+      ]
+    }
+  ]
+}

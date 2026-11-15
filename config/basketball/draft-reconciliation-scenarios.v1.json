@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "version": "draft-reconciliation-scenarios-v1",
+  "categoryMetric": "frozen-board-reference-z-equal-eight-category",
+  "replacementRankScenarios": [
+    { "label": "no-positional-replacement", "rankBy": "category-value" },
+    { "label": "current-40th-per-group-proxy", "rankBy": "positional-value", "groupRanks": { "G": 40, "F/C": 40 } },
+    { "label": "32nd-per-group-proxy", "rankBy": "positional-value", "groupRanks": { "G": 32, "F/C": 32 } },
+    { "label": "48th-per-group-proxy", "rankBy": "positional-value", "groupRanks": { "G": 48, "F/C": 48 } }
+  ],
+  "minutesCases": ["low", "current", "high"],
+  "priorStrengthMultipliers": [0, 1, 2],
+  "profileWeights": {
+    "balanced": { "PTS": 1, "REB": 1, "AST": 1, "ST": 1, "BLK": 1, "3PTM": 1, "FG%": 1, "FT%": 1 },
+    "guards": { "PTS": 0.9, "REB": 0.78, "AST": 1.3, "ST": 1.05, "BLK": 0.78, "3PTM": 1.3, "FG%": 0.83, "FT%": 1.28 },
+    "bigs": { "PTS": 0.92, "REB": 1.32, "AST": 0.78, "ST": 0.82, "BLK": 1.32, "3PTM": 0.72, "FG%": 1.3, "FT%": 0.82 }
+  },
+  "limits": {
+    "providerRankCoverage": "Use source rank as supplied; provider-unranked players fall back to model category rank.",
+    "rankOnlyFallback": "No projected or modeled statistics are copied into the provider-first ranking artifact.",
+    "sensitivity": "Declared deterministic stress cases; not probabilities, confidence intervals, validation, or edge claims.",
+    "positionProxies": "G/F-C ranked-player cutoffs; dual-eligible players may occur in both groups and this is not a joint allocation."
+  }
+}

@@ -1,0 +1,902 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "season": "2026-27",
+  "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "observedAt": "2026-10-30T06:30:58.000Z",
+  "sourceKind": "browser-transcription",
+  "sourceUrls": [
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;view=SCHEDULE_PERIOD",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players;view=SCHEDULE_PERIOD;pageNumber=1"
+  ],
+  "period": {
+    "number": 1,
+    "firstDate": "2026-11-01",
+    "lastDate": "2026-11-08",
+    "opponentTeamId": "rlfm3uhjmvk7q70x"
+  },
+  "unresolvedRules": [
+    "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+    "Exact lineup deadline, timezone and first-period activation unresolved",
+    "Team/player game caps and shot minimum/rounding semantics unresolved",
+    "Waiver Friday label observed; exact clearance instant and lineup activation unresolved"
+  ],
+  "candidateScope": "Exactly the 20 rows displayed on Fantrax Players page 1 in current Score order, re-read Oct 30 2026 06:30:58Z. Every row shows Claim and W (Fri). This is not the full available pool; page membership changes are not proof of acquisition or waiver results. Schedules are the displayed period-one date columns.",
+  "protectedIds": [
+    "06dun",
+    "06n8t",
+    "06h14",
+    "0655r",
+    "065cb",
+    "065ct",
+    "065mj",
+    "06g7r",
+    "05wk5",
+    "064kr"
+  ],
+  "currentActiveIds": [
+    "06dun",
+    "06n8t",
+    "06h14",
+    "0655r",
+    "065cb",
+    "065ct",
+    "065mj",
+    "06g7r",
+    "05wk5",
+    "064kr"
+  ],
+  "players": [
+    {
+      "id": "06dun",
+      "name": "Markus Burton",
+      "school": "Ind",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qjx",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qjx in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qjz",
+          "date": "2026-11-05",
+          "label": "Fantrax game link 06qjz in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06n8t",
+      "name": "Javontae Campbell",
+      "school": "Cin",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qg5",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qg5 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qgc",
+          "date": "2026-11-05",
+          "label": "Fantrax game link 06qgc in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06h14",
+      "name": "Jalen Cox",
+      "school": "USC",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qv2",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qv2 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qt1",
+          "date": "2026-11-08",
+          "label": "Fantrax game link 06qt1 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "0655r",
+      "name": "Tavari Johnson",
+      "school": "Charl",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06uz4",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06uz4 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06s79",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06s79 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065cb",
+      "name": "Kyle Evans",
+      "school": "NCSU",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06r9n",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06r9n in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06r9w",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06r9w in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065ct",
+      "name": "Keyshawn Hall",
+      "school": "StJon",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06ru4",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06ru4 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06sme",
+          "date": "2026-11-08",
+          "label": "Fantrax game link 06sme in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065mj",
+      "name": "Jack Karasinski",
+      "school": "NW",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qnm",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qnm in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qnp",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06qnp in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06g7r",
+      "name": "Pryce Sandfort",
+      "school": "Nebras",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o0f",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06o0f in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o0p",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06o0p in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "05wk5",
+      "name": "Daeshun Ruffin",
+      "school": "JackSt",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06p0q",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06p0q in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qk0",
+          "date": "2026-11-05",
+          "label": "Fantrax game link 06qk0 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064kr",
+      "name": "Quion Williams",
+      "school": "ArkPB",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06s74",
+          "date": "2026-11-03",
+          "label": "Fantrax game link 06s74 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o5t",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06o5t in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "0729c",
+      "name": "Michael James",
+      "school": "ASU",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06nuw",
+          "date": "2026-11-03",
+          "label": "Fantrax game link 06nuw in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065p8",
+      "name": "Trevan Leonhardt",
+      "school": "Nebras",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o0f",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06o0f in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o0p",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06o0p in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064gk",
+      "name": "Cade Tyson",
+      "school": "Minn",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qqm",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qqm in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qqq",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06qqq in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06nnk",
+      "name": "Jaiden Feroah",
+      "school": "S UT",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06shj",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06shj in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": "2026-11-03T03:00:00Z"
+        },
+        {
+          "id": "06shk",
+          "date": "2026-11-05",
+          "label": "Fantrax game link 06shk in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": "2026-11-06T01:30:00Z"
+        },
+        {
+          "id": "06shl",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06shl in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": "2026-11-08T01:30:00Z"
+        }
+      ]
+    },
+    {
+      "id": "06nde",
+      "name": "JaQuan Johnson",
+      "school": "IaSt",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06omw",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06omw in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ni9",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06ni9 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06h51",
+      "name": "Corey Hadnot",
+      "school": "Hou",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06s70",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06s70 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qt3",
+          "date": "2026-11-08",
+          "label": "Fantrax game link 06qt3 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06h0n",
+      "name": "Michael McNair",
+      "school": "MD",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06obs",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06obs in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nib",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06nib in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "07133",
+      "name": "Joshua Ward",
+      "school": "CS-Ful",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06ru8",
+          "date": "2026-11-03",
+          "label": "Fantrax game link 06ru8 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06t0m",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06t0m in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06h4n",
+      "name": "Nasir Whitlock",
+      "school": "GaTec",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06q2i",
+          "date": "2026-11-03",
+          "label": "Fantrax game link 06q2i in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06q2k",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06q2k in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06n2p",
+      "name": "Ty Robinson",
+      "school": "CenAR",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06omo",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06omo in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06shz",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06shz in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064gr",
+      "name": "Trey Campbell",
+      "school": "Utah",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06oib",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06oib in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06oif",
+          "date": "2026-11-05",
+          "label": "Fantrax game link 06oif in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "071vo",
+      "name": "Chaze Harris",
+      "school": "UNCC",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06nhx",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06nhx in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06smp",
+          "date": "2026-11-05",
+          "label": "Fantrax game link 06smp in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06duc",
+      "name": "Dennis Parker",
+      "school": "Kan",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06nhw",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06nhw in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ni8",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06ni8 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06eod",
+      "name": "Nils Machowski",
+      "school": "UConn",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06r0s",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06r0s in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o0m",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06o0m in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "0653y",
+      "name": "Jed Miller",
+      "school": "MTSt",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qss",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qss in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qbg",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06qbg in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06nn1",
+      "name": "Tarence Guinyard",
+      "school": "Duques",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06sh7",
+          "date": "2026-11-03",
+          "label": "Fantrax game link 06sh7 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06sh8",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06sh8 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "071sq",
+      "name": "Krystian Lewis",
+      "school": "Tul",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qjw",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qjw in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qk0",
+          "date": "2026-11-05",
+          "label": "Fantrax game link 06qk0 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065ev",
+      "name": "Javon Bennett",
+      "school": "Gonz",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o0i",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06o0i in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06sy3",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06sy3 in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064lb",
+      "name": "Josiah Davis",
+      "school": "CSNor",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06r1x",
+          "date": "2026-11-04",
+          "label": "Fantrax game link 06r1x in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nva",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06nva in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06hdq",
+      "name": "Jaden Winston",
+      "school": "Pacif",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qsu",
+          "date": "2026-11-03",
+          "label": "Fantrax game link 06qsu in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qoy",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06qoy in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06gr2",
+      "name": "Koree Cotton",
+      "school": "DeP",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06nhz",
+          "date": "2026-11-02",
+          "label": "W GA Mon 8:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ni4",
+          "date": "2026-11-05",
+          "label": "SoFL Thu 8:30PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "071x0",
+      "name": "Preston Edmead",
+      "school": "NCSU",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06r9n",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06r9n in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06r9w",
+          "date": "2026-11-06",
+          "label": "Fantrax game link 06r9w in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06q3e",
+      "name": "Justin Pippen",
+      "school": "OhSt",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06nup",
+          "date": "2026-11-02",
+          "label": "@BYU Mon 9:00PM",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06q6t",
+          "date": "2026-11-06",
+          "label": "YSU Fri 6:30PM",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065vv",
+      "name": "LJ Wells",
+      "school": "Lou",
+      "ownership": "waiver",
+      "availability": "unknown",
+      "waiverLabel": "W (Fri)",
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qsq",
+          "date": "2026-11-02",
+          "label": "Fantrax game link 06qsq in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qsz",
+          "date": "2026-11-07",
+          "label": "Fantrax game link 06qsz in displayed period-one date column",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    }
+  ]
+}

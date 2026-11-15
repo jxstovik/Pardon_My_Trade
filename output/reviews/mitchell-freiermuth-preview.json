@@ -1,0 +1,66 @@
+{
+  "prepared": {
+    "action": {
+      "actionId": "act-1792019193280-zb8269",
+      "action": {
+        "type": "add_drop",
+        "teamId": "7",
+        "addPlayerIds": [
+          "4361411"
+        ],
+        "dropPlayerIds": [
+          "4597500"
+        ]
+      },
+      "risk": "high",
+      "rationale": "Human-requested add/drop: add Pat Freiermuth; drop player 4597500.",
+      "status": "pending",
+      "createdAt": "2026-10-14T23:06:33.280Z",
+      "expiresAt": "2026-10-14T23:36:33.280Z",
+      "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "preconditions": {
+        "leagueExternalId": "98806880",
+        "scoringPeriod": "2026-W6",
+        "expectedRosterHashes": {
+          "7": "fedbd42ece0633fecde8af3b9e01acdf2ad69e17c8366506667264eed83ea354"
+        }
+      }
+    },
+    "execution_allowed": false,
+    "note": "Pending human review. Confirm FREEAGENT versus WAIVERS before approving; no ESPN POST occurred."
+  },
+  "preview": {
+    "action": {
+      "actionId": "act-1792019193280-zb8269",
+      "action": {
+        "type": "add_drop",
+        "teamId": "7",
+        "addPlayerIds": [
+          "4361411"
+        ],
+        "dropPlayerIds": [
+          "4597500"
+        ]
+      },
+      "risk": "high",
+      "rationale": "Human-requested add/drop: add Pat Freiermuth; drop player 4597500.",
+      "status": "pending",
+      "createdAt": "2026-10-14T23:06:33.280Z",
+      "expiresAt": "2026-10-14T23:36:33.280Z",
+      "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "preconditions": {
+        "leagueExternalId": "98806880",
+        "scoringPeriod": "2026-W6",
+        "expectedRosterHashes": {
+          "7": "fedbd42ece0633fecde8af3b9e01acdf2ad69e17c8366506667264eed83ea354"
+        }
+      }
+    },
+    "execution_allowed": false,
+    "note": "Execution still revalidates current ESPN state and idempotency before POST."
+  },
+  "authorization": "Evaluate whether to keep Adonai Mitchell or replace him with an available player, considering current news and longer-term roster value. Execute a move if it provides long term value",
+  "selectionRationale": "Rest-of-season redraft roster value: active TE depth with consistent targets and Week 8 Kittle bye coverage; Mitchell week-to-week after hand procedure; no IR or keepers."
+}

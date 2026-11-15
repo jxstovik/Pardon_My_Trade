@@ -1,0 +1,91 @@
+{
+  "snapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+  "captureHash": "2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+  "configHash": "bea08b8a41d281bd8c3d43434ab23feca731ca007930bd38ddc4b9faa712681e",
+  "policyHash": "20a89f735563b02f86eef970470a98c0e726e63a6440d452b87772b6263baaac",
+  "configuration": {
+    "schemaVersion": 1,
+    "leagueId": "mmioj1mvmvgsc3io",
+    "leagueName": "Banging 3s",
+    "seasonYear": 2026,
+    "teamId": "wwc1n3o4mvn1c6hk",
+    "teamConfirmed": true,
+    "initialProfile": "balanced",
+    "operatorTimezone": "America/New_York",
+    "competition": "NCAAB",
+    "authenticatedState": {
+      "source": {
+        "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+        "observedAt": "2026-10-27T12:02:13Z",
+        "kind": "browser-transcription",
+        "completeness": "field-subset"
+      },
+      "competitionCode": "NCAAB",
+      "draftState": "not-held-scheduled",
+      "ownRosterCount": 0,
+      "draftStart": "2026-10-28T21:00:00-04:00"
+    },
+    "rules": {
+      "source": {
+        "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+        "observedAt": "2026-10-27T12:02:36Z",
+        "kind": "browser-transcription",
+        "completeness": "field-subset"
+      },
+      "seasonLabel": "2026-27",
+      "lineupCadence": "weekly-monday",
+      "lockOffsetMinutes": 0,
+      "lockScope": null,
+      "leagueTimezone": null,
+      "activationRule": null,
+      "minimumTotal": 0,
+      "minimumActive": 0,
+      "injuryReserve": false,
+      "minorLeague": false,
+      "preventIllegalTransactions": "always",
+      "weeklyClaims": "unlimited",
+      "seasonClaims": "unlimited",
+      "freeAgents": "first-come-first-served",
+      "waiverMethod": "rotating-priority",
+      "waiverDays": 2,
+      "minimumWaiverHours": 23,
+      "antiChurning": true,
+      "undraftedToWaivers": true,
+      "claimsBeforeDraft": false,
+      "dropsDuringDraft": false,
+      "currentWaiverPriority": null,
+      "waiverProcessing": null,
+      "tradeReviewDays": 2,
+      "tradeObjections": 4,
+      "tradeDeadline": "none",
+      "playoffReseed": false,
+      "playoffTie": "higher-seed",
+      "standingsTies": [
+        "head-to-head-among-tied",
+        "season-wins",
+        "random"
+      ],
+      "statFreezeHours": 168,
+      "gameCaps": null,
+      "shotMinimums": null,
+      "categoryComparison": null
+    }
+  },
+  "policy": {
+    "schemaVersion": 1,
+    "leagueId": "mmioj1mvmvgsc3io",
+    "teamId": "wwc1n3o4mvn1c6hk",
+    "profile": "balanced",
+    "overlay": "none",
+    "effectivePeriod": null,
+    "selectedAt": "2026-10-25T13:45:30.462Z",
+    "previousRevision": null,
+    "revision": "27efa58369690b518d1c6566fff15493c33ddb409a7ea479a560d40103413509"
+  },
+  "originalPayloadHash": null,
+  "hashMeaning": "Hash of validated imported/transcribed fields; not proof of original API bytes.",
+  "ingestedAt": "2026-10-25T18:19:59.036Z",
+  "analysisVersion": "basketball-readiness-v1",
+  "mode": "read-only",
+  "reportId": "d8852ac66db169675f59c4093cac36cb1627537eb6717347aa375ad657fa7d87"
+}

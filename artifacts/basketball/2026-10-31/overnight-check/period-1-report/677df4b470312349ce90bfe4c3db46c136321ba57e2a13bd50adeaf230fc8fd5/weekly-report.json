@@ -1,0 +1,2487 @@
+{
+  "revision": "677df4b470312349ce90bfe4c3db46c136321ba57e2a13bd50adeaf230fc8fd5",
+  "schemaVersion": 1,
+  "kind": "basketball-weekly-conditional-research",
+  "generatedAt": "2026-10-31T06:32:00.000Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "season": "2026-27",
+  "period": {
+    "number": 1,
+    "firstDate": "2026-11-01",
+    "lastDate": "2026-11-08",
+    "opponentTeamId": "rlfm3uhjmvk7q70x"
+  },
+  "sourceKind": "browser-transcription",
+  "inputHash": "ac7d15d9c70a20a3a5b420d320832b1901590d1d67aed06d81f693ae8ba40b43",
+  "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "observedAt": "2026-10-31T06:32:00.000Z",
+  "forecastGeneratedAt": "2026-10-27T11:24:32.000Z",
+  "forecastAgeHours": 91.12444444444445,
+  "sourceUrls": [
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;view=SCHEDULE_PERIOD",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players;view=SCHEDULE_PERIOD;pageNumber=1"
+  ],
+  "candidateScope": "Exactly the same 20 rows on Fantrax Players page 1 in current Score order, re-read Oct 31 2026 about 06:32Z after schedule view settled. All 20 displayed Claim and FA (no W(Fri) label). This is not the full available pool; page membership changes are not proof of acquisition or full-pool absence. Schedules are freshly re-read displayed period-one date columns.",
+  "status": "advisory-only-no-platform-writer",
+  "objective": "Equal-category normalized production plus volume-weighted FG/FT impact; deterministic surrogate, not category wins/probabilities",
+  "blockers": [
+    "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+    "Exact lineup deadline, timezone and first-period activation unresolved",
+    "Team/player game caps and shot minimum/rounding semantics unresolved",
+    "Waiver Friday label observed; exact clearance instant and lineup activation unresolved",
+    "oldest baseline dependency older than 24 hours; revalidate rates/roles",
+    "schedule lacks verified game instants",
+    "health/role evidence incomplete"
+  ],
+  "ranked": [
+    {
+      "id": "06nnk",
+      "name": "Jaiden Feroah",
+      "school": "S UT",
+      "ownership": "own",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "games": 3,
+      "score": 6.609583739464746,
+      "totals": {
+        "PTS": 41.58616495153957,
+        "REB": 20.651920811548674,
+        "AST": 5.439567168847489,
+        "ST": 2.6963297209908736,
+        "BLK": 4.418315440096762,
+        "3PTM": 3.4068622142913245,
+        "FGM": 15.157717025887155,
+        "FGA": 27.579376549661493,
+        "FTM": 7.863868685473934,
+        "FTA": 9.48994207844677
+      },
+      "lowTotals": {
+        "PTS": 29.110315466077697,
+        "REB": 14.456344568084072,
+        "AST": 3.807697018193242,
+        "ST": 1.8874308046936112,
+        "BLK": 3.092820808067734,
+        "3PTM": 2.3848035500039275,
+        "FGM": 10.610401918121008,
+        "FGA": 19.305563584763046,
+        "FTM": 5.504708079831754,
+        "FTA": 6.642959454912739
+      },
+      "highTotals": {
+        "PTS": 54.06201443700145,
+        "REB": 26.847497055013278,
+        "AST": 7.0714373195017375,
+        "ST": 3.505228637288136,
+        "BLK": 5.743810072125792,
+        "3PTM": 4.428920878578722,
+        "FGM": 19.705032133653305,
+        "FGA": 35.85318951455994,
+        "FTM": 10.223029291116115,
+        "FTA": 12.336924701980802
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06n8t",
+      "name": "Javontae Campbell",
+      "school": "Cin",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 5.1089140759526295,
+      "totals": {
+        "PTS": 37.02204991944118,
+        "REB": 9.013135311313532,
+        "AST": 9.661150762371449,
+        "ST": 5.357047084308077,
+        "BLK": 0.5986534005168663,
+        "3PTM": 1.8002513182067295,
+        "FGM": 12.748181173605552,
+        "FGA": 25.731950999402475,
+        "FTM": 9.725436254023345,
+        "FTA": 12.763144998905155
+      },
+      "lowTotals": {
+        "PTS": 25.915434943608826,
+        "REB": 6.309194717919471,
+        "AST": 6.762805533660013,
+        "ST": 3.749932959015653,
+        "BLK": 0.4190573803618064,
+        "3PTM": 1.2601759227447105,
+        "FGM": 8.923726821523886,
+        "FGA": 18.01236569958173,
+        "FTM": 6.807805377816341,
+        "FTA": 8.934201499233607
+      },
+      "highTotals": {
+        "PTS": 43.83749032740127,
+        "REB": 10.672375864897266,
+        "AST": 11.439685377189846,
+        "ST": 6.34323329617868,
+        "BLK": 0.7088603335506531,
+        "3PTM": 2.131662074912196,
+        "FGM": 15.095011489259203,
+        "FGA": 30.46898147174494,
+        "FTM": 11.515805273970667,
+        "FTA": 15.112730025868052
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "0655r",
+      "name": "Tavari Johnson",
+      "school": "Charl",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 5.0033035467186515,
+      "totals": {
+        "PTS": 39.417482604091205,
+        "REB": 6.571211507490225,
+        "AST": 9.546718248147537,
+        "ST": 2.6494474030251176,
+        "BLK": 0.5987390020368383,
+        "3PTM": 4.204052807994163,
+        "FGM": 14.284530835985734,
+        "FGA": 28.17673671401874,
+        "FTM": 6.6443681241255765,
+        "FTA": 7.777036094148789
+      },
+      "lowTotals": {
+        "PTS": 27.592237822863844,
+        "REB": 4.599848055243157,
+        "AST": 6.682702773703276,
+        "ST": 1.8546131821175824,
+        "BLK": 0.4191173014257868,
+        "3PTM": 2.942836965595914,
+        "FGM": 9.999171585190014,
+        "FGA": 19.723715699813116,
+        "FTM": 4.651057686887903,
+        "FTA": 5.443925265904152
+      },
+      "highTotals": {
+        "PTS": 48.8845934766097,
+        "REB": 8.14945506335146,
+        "AST": 11.839605417825075,
+        "ST": 3.2857795749010967,
+        "BLK": 0.7425413998945721,
+        "3PTM": 5.213763003009826,
+        "FGM": 17.715324185841876,
+        "FGA": 34.944096597871166,
+        "FTM": 8.240182101916124,
+        "FTA": 9.644889089795015
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06g7r",
+      "name": "Pryce Sandfort",
+      "school": "Nebras",
+      "ownership": "own",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "games": 2,
+      "score": 4.989273826653636,
+      "totals": {
+        "PTS": 38.4,
+        "REB": 10.4,
+        "AST": 4.6,
+        "ST": 2.4,
+        "BLK": 0.6,
+        "3PTM": 7.8,
+        "FGM": 12.84073092499547,
+        "FGA": 26.93628478682336,
+        "FTM": 4.91853815000906,
+        "FTA": 6.038613873046677
+      },
+      "lowTotals": {
+        "PTS": 30.719999999999995,
+        "REB": 8.32,
+        "AST": 3.6799999999999997,
+        "ST": 1.9199999999999997,
+        "BLK": 0.4799999999999999,
+        "3PTM": 6.239999999999999,
+        "FGM": 10.272584739996375,
+        "FGA": 21.54902782945869,
+        "FTM": 3.9348305200072486,
+        "FTA": 4.830891098437342
+      },
+      "highTotals": {
+        "PTS": 45.850746268656714,
+        "REB": 12.417910447761194,
+        "AST": 5.492537313432836,
+        "ST": 2.8656716417910446,
+        "BLK": 0.7164179104477612,
+        "3PTM": 9.313432835820896,
+        "FGM": 15.332216029845336,
+        "FGA": 32.16272810366968,
+        "FTM": 5.872881373145146,
+        "FTA": 7.210285221548272
+      },
+      "flags": [
+        "current-availability-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06dun",
+      "name": "Markus Burton",
+      "school": "Ind",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.968156884405988,
+      "totals": {
+        "PTS": 38.999999999999986,
+        "REB": 7,
+        "AST": 9,
+        "ST": 3.6,
+        "BLK": 0.2,
+        "3PTM": 3.2,
+        "FGM": 13.335704826840356,
+        "FGA": 27.757937438457972,
+        "FTM": 9.128590346319278,
+        "FTA": 10.512451700279362
+      },
+      "lowTotals": {
+        "PTS": 31.199999999999992,
+        "REB": 5.6,
+        "AST": 7.2,
+        "ST": 2.88,
+        "BLK": 0.16,
+        "3PTM": 2.56,
+        "FGM": 10.668563861472284,
+        "FGA": 22.206349950766377,
+        "FTM": 7.302872277055423,
+        "FTA": 8.40996136022349
+      },
+      "highTotals": {
+        "PTS": 45.48104956268221,
+        "REB": 8.16326530612245,
+        "AST": 10.495626822157435,
+        "ST": 4.198250728862974,
+        "BLK": 0.23323615160349856,
+        "3PTM": 3.731778425655977,
+        "FGM": 15.551842363662224,
+        "FGA": 32.37077252298307,
+        "FTM": 10.645586409701783,
+        "FTA": 12.259418892454068
+      },
+      "flags": [
+        "current-availability-unverified",
+        "provider-role-or-eligibility-note-review",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06h14",
+      "name": "Jalen Cox",
+      "school": "USC",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.872683139113274,
+      "totals": {
+        "PTS": 35.88760884720307,
+        "REB": 10.118609536044053,
+        "AST": 9.962108850729788,
+        "ST": 3.287484973480084,
+        "BLK": 0.5986345893938547,
+        "3PTM": 1.6536232360003467,
+        "FGM": 13.224558937051317,
+        "FGA": 25.73085923163818,
+        "FTM": 7.784867737100089,
+        "FTA": 9.273492292344034
+      },
+      "lowTotals": {
+        "PTS": 25.121326193042147,
+        "REB": 7.083026675230836,
+        "AST": 6.97347619551085,
+        "ST": 2.301239481436059,
+        "BLK": 0.4190442125756983,
+        "3PTM": 1.1575362652002426,
+        "FGM": 9.25719125593592,
+        "FGA": 18.011601462146725,
+        "FTM": 5.449407415970061,
+        "FTA": 6.491444604640823
+      },
+      "highTotals": {
+        "PTS": 42.401480298309515,
+        "REB": 11.955213419639593,
+        "AST": 11.770306680567677,
+        "ST": 3.8841882703162645,
+        "BLK": 0.7072912786176999,
+        "3PTM": 1.953768314869495,
+        "FGM": 15.624916043045765,
+        "FGA": 30.40120408729633,
+        "FTM": 9.197879897348486,
+        "FTA": 10.956701027491158
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "064kr",
+      "name": "Quion Williams",
+      "school": "ArkPB",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.872595678377147,
+      "totals": {
+        "PTS": 35.19215863810204,
+        "REB": 14.839778724626916,
+        "AST": 10.118042250836854,
+        "ST": 3.446214830911562,
+        "BLK": 1.3851463542405507,
+        "3PTM": 2.1361660959748248,
+        "FGM": 12.37226254475829,
+        "FGA": 26.702395790923127,
+        "FTM": 8.311467452610641,
+        "FTA": 11.175792317066827
+      },
+      "lowTotals": {
+        "PTS": 24.634511046671427,
+        "REB": 10.38784510723884,
+        "AST": 7.082629575585798,
+        "ST": 2.4123503816380936,
+        "BLK": 0.9696024479683854,
+        "3PTM": 1.4953162671823772,
+        "FGM": 8.660583781330802,
+        "FGA": 18.69167705364619,
+        "FTM": 5.818027216827448,
+        "FTA": 7.8230546219467785
+      },
+      "highTotals": {
+        "PTS": 39.696549455758394,
+        "REB": 16.739183751486802,
+        "AST": 11.413092579405912,
+        "ST": 3.8873102067212892,
+        "BLK": 1.5624369996741663,
+        "3PTM": 2.409582883124678,
+        "FGM": 13.955839908492528,
+        "FGA": 30.12014653610863,
+        "FTM": 9.375286755648656,
+        "FTA": 12.606228477880437
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "05wk5",
+      "name": "Daeshun Ruffin",
+      "school": "JackSt",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.785172074615393,
+      "totals": {
+        "PTS": 43.69528013860063,
+        "REB": 6.379200857972304,
+        "AST": 9.917135037403426,
+        "ST": 3.124355859210191,
+        "BLK": 0.28855755324650845,
+        "3PTM": 3.078638365172261,
+        "FGM": 13.76018511487236,
+        "FGA": 32.07453755375207,
+        "FTM": 13.096271543683647,
+        "FTA": 15.643170050142102
+      },
+      "lowTotals": {
+        "PTS": 30.58669609702044,
+        "REB": 4.465440600580613,
+        "AST": 6.941994526182398,
+        "ST": 2.1870491014471334,
+        "BLK": 0.20199028727255589,
+        "3PTM": 2.1550468556205824,
+        "FGM": 9.632129580410652,
+        "FGA": 22.452176287626447,
+        "FTM": 9.167390080578551,
+        "FTA": 10.95021903509947
+      },
+      "highTotals": {
+        "PTS": 52.37990215036058,
+        "REB": 7.6470940494761335,
+        "AST": 11.888207633030179,
+        "ST": 3.7453348203565646,
+        "BLK": 0.34590958922465515,
+        "3PTM": 3.690530780728701,
+        "FGM": 16.495080191765194,
+        "FGA": 38.44948775369963,
+        "FTM": 15.69921098610149,
+        "FTA": 18.752316358856415
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "065p8",
+      "name": "Trevan Leonhardt",
+      "school": "Nebras",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.677672166344865,
+      "totals": {
+        "PTS": 26.468911286329586,
+        "REB": 10.610817936426237,
+        "AST": 11.108785736902792,
+        "ST": 3.9314686383997195,
+        "BLK": 1.077834846319726,
+        "3PTM": 2.5919798284661484,
+        "FGM": 9.55647781085036,
+        "FGA": 19.18810497520319,
+        "FTM": 4.763975836162718,
+        "FTA": 6.227850796342567
+      },
+      "lowTotals": {
+        "PTS": 18.52823790043071,
+        "REB": 7.427572555498366,
+        "AST": 7.776150015831955,
+        "ST": 2.7520280468798037,
+        "BLK": 0.7544843924238082,
+        "3PTM": 1.814385879926304,
+        "FGM": 6.6895344675952515,
+        "FGA": 13.431673482642232,
+        "FTM": 3.3347830853139024,
+        "FTA": 4.359495557439797
+      },
+      "highTotals": {
+        "PTS": 31.114293102682364,
+        "REB": 12.473051715718922,
+        "AST": 13.058414518598076,
+        "ST": 4.621454438224274,
+        "BLK": 1.2669984406195411,
+        "3PTM": 3.0468808945983437,
+        "FGM": 11.233671397344073,
+        "FGA": 22.555681109251186,
+        "FTM": 5.600069413395872,
+        "FTA": 7.320859289639751
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "065cb",
+      "name": "Kyle Evans",
+      "school": "NCSU",
+      "ownership": "own",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "games": 2,
+      "score": 4.544288994258127,
+      "totals": {
+        "PTS": 25.44875586081018,
+        "REB": 16.68877274231186,
+        "AST": 2.152753654908192,
+        "ST": 0.9802511448215538,
+        "BLK": 5.751462339107536,
+        "3PTM": 0.48306438879843205,
+        "FGM": 10.062371709756626,
+        "FGA": 16.543807615961022,
+        "FTM": 4.840948052498497,
+        "FTA": 6.266683965595934
+      },
+      "lowTotals": {
+        "PTS": 17.814129102567126,
+        "REB": 11.682140919618298,
+        "AST": 1.506927558435734,
+        "ST": 0.6861758013750876,
+        "BLK": 4.026023637375275,
+        "3PTM": 0.3381450721589024,
+        "FGM": 7.043660196829637,
+        "FGA": 11.580665331172714,
+        "FTM": 3.3886636367489475,
+        "FTA": 4.3866787759171535
+      },
+      "highTotals": {
+        "PTS": 33.08338261905324,
+        "REB": 21.695404565005415,
+        "AST": 2.7985797513806494,
+        "ST": 1.2743264882680199,
+        "BLK": 7.476901040839797,
+        "3PTM": 0.6279837054379618,
+        "FGM": 13.081083222683613,
+        "FGA": 21.50694990074933,
+        "FTM": 6.293232468248046,
+        "FTA": 8.146689155274716
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "065ct",
+      "name": "Keyshawn Hall",
+      "school": "StJon",
+      "ownership": "own",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "games": 2,
+      "score": 4.537822500874006,
+      "totals": {
+        "PTS": 37.428894902058275,
+        "REB": 13.681108190540545,
+        "AST": 4.881723851306616,
+        "ST": 1.4891441741325386,
+        "BLK": 1.3636808808020495,
+        "3PTM": 3.1942755302926034,
+        "FGM": 10.935606033797225,
+        "FGA": 23.938956776389826,
+        "FTM": 12.363407304171222,
+        "FTA": 14.676598146339673
+      },
+      "lowTotals": {
+        "PTS": 26.200226431440793,
+        "REB": 9.576775733378382,
+        "AST": 3.417206695914631,
+        "ST": 1.042400921892777,
+        "BLK": 0.9545766165614346,
+        "3PTM": 2.235992871204822,
+        "FGM": 7.654924223658057,
+        "FGA": 16.757269743472875,
+        "FTM": 8.654385112919856,
+        "FTA": 10.273618702437771
+      },
+      "highTotals": {
+        "PTS": 45.631328750935815,
+        "REB": 16.67928340265653,
+        "AST": 5.9515394860885085,
+        "ST": 1.8154858043550175,
+        "BLK": 1.6625275938836788,
+        "3PTM": 3.8942917557482066,
+        "FGM": 13.332112404726043,
+        "FGA": 29.1851097788574,
+        "FTM": 15.07281218573552,
+        "FTA": 17.892932097339916
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "065mj",
+      "name": "Jack Karasinski",
+      "school": "NW",
+      "ownership": "own",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "games": 2,
+      "score": 4.517028800934007,
+      "totals": {
+        "PTS": 40.77863461158148,
+        "REB": 10.620151060605513,
+        "AST": 2.678071371504755,
+        "ST": 1.3226626004943796,
+        "BLK": 0.8761076539256357,
+        "3PTM": 4.164438968937177,
+        "FGM": 13.512234444082843,
+        "FGA": 24.270148119845903,
+        "FTM": 9.589726754478615,
+        "FTA": 12.058662019445304
+      },
+      "lowTotals": {
+        "PTS": 28.545044228107034,
+        "REB": 7.434105742423859,
+        "AST": 1.8746499600533284,
+        "ST": 0.9258638203460657,
+        "BLK": 0.613275357747945,
+        "3PTM": 2.9151072782560243,
+        "FGM": 9.45856411085799,
+        "FGA": 16.989103683892132,
+        "FTM": 6.71280872813503,
+        "FTA": 8.441063413611712
+      },
+      "highTotals": {
+        "PTS": 53.01222499505593,
+        "REB": 13.806196378787169,
+        "AST": 3.481492782956182,
+        "ST": 1.7194613806426935,
+        "BLK": 1.1389399501033266,
+        "3PTM": 5.413770659618331,
+        "FGM": 17.565904777307697,
+        "FGA": 31.551192555799677,
+        "FTM": 12.466644780822202,
+        "FTA": 15.676260625278896
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06nde",
+      "name": "JaQuan Johnson",
+      "school": "IaSt",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.4922745460613855,
+      "totals": {
+        "PTS": 34.28383832698659,
+        "REB": 8.03780245228497,
+        "AST": 7.273927924056099,
+        "ST": 4.7756417961769,
+        "BLK": 0.10888738276300698,
+        "3PTM": 3.230120267474011,
+        "FGM": 10.589076160714232,
+        "FGA": 24.4509284927692,
+        "FTM": 9.875565738084115,
+        "FTA": 12.513571853074858
+      },
+      "lowTotals": {
+        "PTS": 23.998686828890612,
+        "REB": 5.626461716599478,
+        "AST": 5.091749546839268,
+        "ST": 3.3429492573238293,
+        "BLK": 0.07622116793410488,
+        "3PTM": 2.2610841872318073,
+        "FGM": 7.412353312499961,
+        "FGA": 17.11564994493844,
+        "FTM": 6.9128960166588795,
+        "FTA": 8.7595002971524
+      },
+      "highTotals": {
+        "PTS": 44.28086244858338,
+        "REB": 10.381592089656808,
+        "AST": 9.394974938162026,
+        "ST": 6.1681990057034035,
+        "BLK": 0.1406384889733775,
+        "3PTM": 4.1720098517618345,
+        "FGM": 13.676806559931471,
+        "FGA": 31.580717158971233,
+        "FTM": 12.755239476958593,
+        "FTA": 16.162477161441466
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "064gk",
+      "name": "Cade Tyson",
+      "school": "Minn",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G",
+        "F/C"
+      ],
+      "games": 2,
+      "score": 4.437443649261172,
+      "totals": {
+        "PTS": 38.0961436192041,
+        "REB": 11.189054021676908,
+        "AST": 4.68821778735173,
+        "ST": 1.614854389034529,
+        "BLK": 0.6073441656119135,
+        "3PTM": 4.135657977882713,
+        "FGM": 11.82972216439859,
+        "FGA": 23.709851835792385,
+        "FTM": 10.301041312524212,
+        "FTA": 12.607154577723936
+      },
+      "lowTotals": {
+        "PTS": 26.667300533442866,
+        "REB": 7.832337815173834,
+        "AST": 3.2817524511462106,
+        "ST": 1.1303980723241702,
+        "BLK": 0.4251409159283394,
+        "3PTM": 2.8949605845178983,
+        "FGM": 8.280805515079011,
+        "FGA": 16.59689628505467,
+        "FTM": 7.210728918766947,
+        "FTA": 8.825008204406755
+      },
+      "highTotals": {
+        "PTS": 42.85512046903391,
+        "REB": 12.586792585267718,
+        "AST": 5.273870764198455,
+        "ST": 1.8165822786098766,
+        "BLK": 0.6832137038233689,
+        "3PTM": 4.652285087762581,
+        "FGM": 13.307493103184957,
+        "FGA": 26.671690627857192,
+        "FTM": 11.587849174901423,
+        "FTA": 14.182042508043734
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "0653y",
+      "name": "Jed Miller",
+      "school": "MTSt",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.4086520072045605,
+      "totals": {
+        "PTS": 30.815171658708817,
+        "REB": 10.917211981050214,
+        "AST": 6.16918580881172,
+        "ST": 3.131243932590057,
+        "BLK": 0.281705616509712,
+        "3PTM": 5.134198920350967,
+        "FGM": 10.027709821509104,
+        "FGA": 21.772881443978005,
+        "FTM": 5.625553095339644,
+        "FTA": 7.051311765589792
+      },
+      "lowTotals": {
+        "PTS": 21.57062016109617,
+        "REB": 7.64204838673515,
+        "AST": 4.3184300661682045,
+        "ST": 2.1918707528130397,
+        "BLK": 0.19719393155679837,
+        "3PTM": 3.5939392442456763,
+        "FGM": 7.019396875056373,
+        "FGA": 15.241017010784601,
+        "FTM": 3.9378871667377506,
+        "FTA": 4.935918235912854
+      },
+      "highTotals": {
+        "PTS": 36.06098424988297,
+        "REB": 12.77570067308141,
+        "AST": 7.2193955221173844,
+        "ST": 3.6642904146782524,
+        "BLK": 0.32966169757452357,
+        "3PTM": 6.008217914639392,
+        "FGM": 11.734774348843862,
+        "FGA": 25.479382153756873,
+        "FTM": 6.583217637555858,
+        "FTA": 8.251689957666859
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06hdq",
+      "name": "Jaden Winston",
+      "school": "Pacif",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.389812543646423,
+      "totals": {
+        "PTS": 31.278235122393973,
+        "REB": 6.8094414366048035,
+        "AST": 7.599028641168553,
+        "ST": 4.709612425482416,
+        "BLK": 0.12549068960440815,
+        "3PTM": 2.7604100487840277,
+        "FGM": 10.206447024633574,
+        "FGA": 22.58907885606242,
+        "FTM": 8.104931024342797,
+        "FTA": 9.910818926341499
+      },
+      "lowTotals": {
+        "PTS": 21.894764585675777,
+        "REB": 4.766609005623362,
+        "AST": 5.3193200488179855,
+        "ST": 3.296728697837691,
+        "BLK": 0.08784348272308569,
+        "3PTM": 1.9322870341488194,
+        "FGM": 7.144512917243501,
+        "FGA": 15.812355199243695,
+        "FTM": 5.673451717039956,
+        "FTA": 6.9375732484390475
+      },
+      "highTotals": {
+        "PTS": 35.930130216953685,
+        "REB": 7.822184230169719,
+        "AST": 8.729203790787583,
+        "ST": 5.410055492479295,
+        "BLK": 0.14415445119771195,
+        "3PTM": 3.1709555260036817,
+        "FGM": 11.72441377246914,
+        "FGA": 25.948668190625128,
+        "FTM": 9.310347146011729,
+        "FTA": 11.384818011203832
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06h4n",
+      "name": "Nasir Whitlock",
+      "school": "GaTec",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.359017007028816,
+      "totals": {
+        "PTS": 40.717841553318195,
+        "REB": 7.415998524305444,
+        "AST": 6.957625975456154,
+        "ST": 2.174129780825962,
+        "BLK": 0.1187596554531717,
+        "3PTM": 4.351985948800072,
+        "FGM": 13.501709380210432,
+        "FGA": 28.46547084649955,
+        "FTM": 9.362436844097257,
+        "FTA": 11.824021660869942
+      },
+      "lowTotals": {
+        "PTS": 28.502489087322733,
+        "REB": 5.19119896701381,
+        "AST": 4.8703381828193075,
+        "ST": 1.521890846578173,
+        "BLK": 0.08313175881722018,
+        "3PTM": 3.0463901641600506,
+        "FGM": 9.451196566147301,
+        "FGA": 19.925829592549686,
+        "FTM": 6.553705790868079,
+        "FTA": 8.276815162608958
+      },
+      "highTotals": {
+        "PTS": 47.0711248952758,
+        "REB": 8.57313107581252,
+        "AST": 8.043237774194413,
+        "ST": 2.5133634433394376,
+        "BLK": 0.13728995352163045,
+        "3PTM": 5.031034709200091,
+        "FGM": 15.608407132863121,
+        "FGA": 32.90699315836453,
+        "FTM": 10.82327592034947,
+        "FTA": 13.668946563251689
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06h0n",
+      "name": "Michael McNair",
+      "school": "MD",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.296078705208462,
+      "totals": {
+        "PTS": 34.141341943938514,
+        "REB": 9.978577175668066,
+        "AST": 4.897302932138305,
+        "ST": 2.1800552528876027,
+        "BLK": 0.7585205346364067,
+        "3PTM": 5.781509980048876,
+        "FGM": 11.596862504221793,
+        "FGA": 24.329072593684,
+        "FTM": 5.166106955446057,
+        "FTA": 6.888694844948736
+      },
+      "lowTotals": {
+        "PTS": 23.89893936075696,
+        "REB": 6.9850040229676456,
+        "AST": 3.4281120524968136,
+        "ST": 1.526038677021322,
+        "BLK": 0.5309643742454846,
+        "3PTM": 4.047056986034213,
+        "FGM": 8.117803752955254,
+        "FGA": 17.0303508155788,
+        "FTM": 3.6162748688122393,
+        "FTA": 4.822086391464115
+      },
+      "highTotals": {
+        "PTS": 38.47822603365629,
+        "REB": 11.246129360999172,
+        "AST": 5.519394330999961,
+        "ST": 2.4569818879471974,
+        "BLK": 0.8548733857865032,
+        "3PTM": 6.5159198543939025,
+        "FGM": 13.069981181507218,
+        "FGA": 27.419530139916148,
+        "FTM": 5.822343816247954,
+        "FTA": 7.76374747530626
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06n2p",
+      "name": "Ty Robinson",
+      "school": "CenAR",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.274050633948109,
+      "totals": {
+        "PTS": 29.47356785321838,
+        "REB": 10.898536284624855,
+        "AST": 4.609870715958442,
+        "ST": 3.6630711206135906,
+        "BLK": 0.6016988012140186,
+        "3PTM": 4.246844734829917,
+        "FGM": 10.26844639146538,
+        "FGA": 21.83686560902101,
+        "FTM": 4.689830335457704,
+        "FTA": 6.067338360179861
+      },
+      "lowTotals": {
+        "PTS": 20.631497497252866,
+        "REB": 7.628975399237398,
+        "AST": 3.226909501170909,
+        "ST": 2.564149784429513,
+        "BLK": 0.421189160849813,
+        "3PTM": 2.9727913143809417,
+        "FGM": 7.187912474025765,
+        "FGA": 15.285805926314707,
+        "FTM": 3.2828812348203926,
+        "FTA": 4.2471368521259025
+      },
+      "highTotals": {
+        "PTS": 38.315638209183895,
+        "REB": 14.168097170012313,
+        "AST": 5.992831930745974,
+        "ST": 4.761992456797668,
+        "BLK": 0.7822084415782242,
+        "3PTM": 5.520898155278893,
+        "FGM": 13.348980308904993,
+        "FGA": 28.387925291727317,
+        "FTM": 6.096779436095016,
+        "FTA": 7.88753986823382
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06q3e",
+      "name": "Justin Pippen",
+      "school": "OhSt",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.139877008203995,
+      "totals": {
+        "PTS": 29.50368485434908,
+        "REB": 8.056920129240096,
+        "AST": 8.718765324243245,
+        "ST": 3.454782843516178,
+        "BLK": 1.0791378213762095,
+        "3PTM": 3.391862778756323,
+        "FGM": 8.880152219360298,
+        "FGA": 23.185399533611395,
+        "FTM": 8.35151763687216,
+        "FTA": 10.22415459673951
+      },
+      "lowTotals": {
+        "PTS": 20.652579398044356,
+        "REB": 5.639844090468067,
+        "AST": 6.103135726970271,
+        "ST": 2.4183479904613243,
+        "BLK": 0.7553964749633466,
+        "3PTM": 2.374303945129426,
+        "FGM": 6.216106553552208,
+        "FGA": 16.229779673527975,
+        "FTM": 5.846062345810512,
+        "FTA": 7.156908217717657
+      },
+      "highTotals": {
+        "PTS": 37.67755664352336,
+        "REB": 10.289055961667083,
+        "AST": 11.134262584062897,
+        "ST": 4.411915898649715,
+        "BLK": 1.3781084156705605,
+        "3PTM": 4.3315640946053415,
+        "FGM": 11.34036103963933,
+        "FGA": 29.608816950930528,
+        "FTM": 10.665270469639355,
+        "FTA": 13.056713622468344
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06eod",
+      "name": "Nils Machowski",
+      "school": "UConn",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.124412143020637,
+      "totals": {
+        "PTS": 34.40049486691103,
+        "REB": 10.923282362788896,
+        "AST": 5.683024781370311,
+        "ST": 1.6984843629370492,
+        "BLK": 0.9171074556666923,
+        "3PTM": 5.141461900211887,
+        "FGM": 11.347534178867333,
+        "FGA": 26.048888345260323,
+        "FTM": 6.563964608964481,
+        "FTA": 8.307724704916303
+      },
+      "lowTotals": {
+        "PTS": 24.080346406837723,
+        "REB": 7.646297653952228,
+        "AST": 3.978117346959218,
+        "ST": 1.1889390540559344,
+        "BLK": 0.6419752189666845,
+        "3PTM": 3.599023330148321,
+        "FGM": 7.943273925207134,
+        "FGA": 18.234221841682224,
+        "FTM": 4.594775226275137,
+        "FTA": 5.815407293441412
+      },
+      "highTotals": {
+        "PTS": 41.024792194843045,
+        "REB": 13.026713445626886,
+        "AST": 6.777370837130501,
+        "ST": 2.025551327248673,
+        "BLK": 1.0937093473401451,
+        "3PTM": 6.131522434486291,
+        "FGM": 13.532660893773741,
+        "FGA": 31.06496680950021,
+        "FTM": 7.827947972809273,
+        "FTA": 9.90749350989668
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06gr2",
+      "name": "Koree Cotton",
+      "school": "DeP",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 4.118704217949614,
+      "totals": {
+        "PTS": 29.240186966310013,
+        "REB": 10.404520984820183,
+        "AST": 5.459439704420749,
+        "ST": 2.156438436338481,
+        "BLK": 2.1117236876207013,
+        "3PTM": 3.2438131855434347,
+        "FGM": 9.76416777833822,
+        "FGA": 20.695224855659106,
+        "FTM": 6.46803822409014,
+        "FTA": 8.26266889560508
+      },
+      "lowTotals": {
+        "PTS": 20.468130876417003,
+        "REB": 7.283164689374127,
+        "AST": 3.8216077930945236,
+        "ST": 1.5095069054369366,
+        "BLK": 1.4782065813344907,
+        "3PTM": 2.2706692298804043,
+        "FGM": 6.834917444836752,
+        "FGA": 14.486657398961373,
+        "FTM": 4.527626756863098,
+        "FTA": 5.783868226923555
+      },
+      "highTotals": {
+        "PTS": 38.01224305620301,
+        "REB": 13.525877280266236,
+        "AST": 7.0972716157469735,
+        "ST": 2.803369967240025,
+        "BLK": 2.7452407939069117,
+        "3PTM": 4.216957141206465,
+        "FGM": 12.693418111839684,
+        "FGA": 26.903792312356835,
+        "FTM": 8.408449691317182,
+        "FTA": 10.741469564286602
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "071sq",
+      "name": "Krystian Lewis",
+      "school": "Tul",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.9945459140450414,
+      "totals": {
+        "PTS": 35.91251844981147,
+        "REB": 9.025316343280192,
+        "AST": 6.661432895568388,
+        "ST": 2.8178045138431775,
+        "BLK": 0.28517354252414706,
+        "3PTM": 3.7079496665783207,
+        "FGM": 10.385114987557325,
+        "FGA": 27.96059581921249,
+        "FTM": 11.434338808118504,
+        "FTA": 13.689610558877966
+      },
+      "lowTotals": {
+        "PTS": 25.13876291486803,
+        "REB": 6.317721440296134,
+        "AST": 4.663003026897871,
+        "ST": 1.972463159690224,
+        "BLK": 0.19962147976690292,
+        "3PTM": 2.595564766604824,
+        "FGM": 7.269580491290127,
+        "FGA": 19.57241707344874,
+        "FTM": 8.004037165682952,
+        "FTA": 9.582727391214576
+      },
+      "highTotals": {
+        "PTS": 40.41792874192619,
+        "REB": 10.157588734575523,
+        "AST": 7.497143940725759,
+        "ST": 3.171312594196228,
+        "BLK": 0.3209500313082092,
+        "3PTM": 4.173131038188114,
+        "FGM": 11.687981118071798,
+        "FGA": 31.468396486369567,
+        "FTM": 12.868835467594478,
+        "FTA": 15.407042668052
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "064gr",
+      "name": "Trey Campbell",
+      "school": "Utah",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.99078862293159,
+      "totals": {
+        "PTS": 28.742668474521075,
+        "REB": 7.874538858345077,
+        "AST": 7.756394809271021,
+        "ST": 3.136743358177508,
+        "BLK": 0.5986908634761602,
+        "3PTM": 3.715051302782388,
+        "FGM": 10.083237505864883,
+        "FGA": 22.812234384206583,
+        "FTM": 4.861142160008922,
+        "FTA": 6.1581721173084745
+      },
+      "lowTotals": {
+        "PTS": 20.119867932164755,
+        "REB": 5.5121772008415535,
+        "AST": 5.429476366489714,
+        "ST": 2.1957203507242555,
+        "BLK": 0.4190836044333121,
+        "3PTM": 2.6005359119476714,
+        "FGM": 7.058266254105417,
+        "FGA": 15.968564068944609,
+        "FTM": 3.4027995120062453,
+        "FTA": 4.310720482115932
+      },
+      "highTotals": {
+        "PTS": 34.51736170209693,
+        "REB": 9.456613475247044,
+        "AST": 9.314733090047094,
+        "ST": 3.7669468705329487,
+        "BLK": 0.7189739220165321,
+        "3PTM": 4.461442738820817,
+        "FGM": 12.109062052697498,
+        "FGA": 27.39544333438203,
+        "FTM": 5.837794857881112,
+        "FTA": 7.395411271063151
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "065ev",
+      "name": "Javon Bennett",
+      "school": "Gonz",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.9687293586811387,
+      "totals": {
+        "PTS": 32.6143085818968,
+        "REB": 5.4976271935387455,
+        "AST": 6.3184553287002,
+        "ST": 2.974530584469404,
+        "BLK": 0.2790145054154747,
+        "3PTM": 4.671609032885203,
+        "FGM": 10.390399842314757,
+        "FGA": 26.06568005057349,
+        "FTM": 7.161899864382082,
+        "FTA": 8.144332270496124
+      },
+      "lowTotals": {
+        "PTS": 22.83001600732776,
+        "REB": 3.848339035477122,
+        "AST": 4.42291873009014,
+        "ST": 2.082171409128583,
+        "BLK": 0.19531015379083227,
+        "3PTM": 3.270126323019642,
+        "FGM": 7.27327988962033,
+        "FGA": 18.245976035401444,
+        "FTM": 5.013329905067457,
+        "FTA": 5.701032589347286
+      },
+      "highTotals": {
+        "PTS": 37.61517801150801,
+        "REB": 6.340598176612954,
+        "AST": 7.287286846814914,
+        "ST": 3.4306260748877837,
+        "BLK": 0.3217968046951483,
+        "3PTM": 5.387923675612867,
+        "FGM": 11.983597282094637,
+        "FGA": 30.062424675700804,
+        "FTM": 8.260059771705862,
+        "FTA": 9.39313207791339
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "07133",
+      "name": "Joshua Ward",
+      "school": "CS-Ful",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.942277827284603,
+      "totals": {
+        "PTS": 30.09697156139585,
+        "REB": 9.015717019652692,
+        "AST": 7.106952339843058,
+        "ST": 3.141025537806366,
+        "BLK": 0.9269012809814265,
+        "3PTM": 2.9009811320447447,
+        "FGM": 9.791361855986112,
+        "FGA": 22.14588582686932,
+        "FTM": 7.61326671737888,
+        "FTA": 10.058081354405266
+      },
+      "lowTotals": {
+        "PTS": 21.067880092977095,
+        "REB": 6.3110019137568845,
+        "AST": 4.97486663789014,
+        "ST": 2.1987178764644564,
+        "BLK": 0.6488308966869986,
+        "3PTM": 2.030686792431321,
+        "FGM": 6.853953299190278,
+        "FGA": 15.502120078808524,
+        "FTM": 5.3292867021652155,
+        "FTA": 7.0406569480836865
+      },
+      "highTotals": {
+        "PTS": 38.48462565225899,
+        "REB": 11.528285953297496,
+        "AST": 9.087572142245842,
+        "ST": 4.0163905441473995,
+        "BLK": 1.185217215041125,
+        "3PTM": 3.7094487285295057,
+        "FGM": 12.520093421517563,
+        "FGA": 28.31767056848715,
+        "FTM": 9.734990080694361,
+        "FTA": 12.861144348514664
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06duc",
+      "name": "Dennis Parker",
+      "school": "Kan",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.9275411954541726,
+      "totals": {
+        "PTS": 36.35509511078191,
+        "REB": 11.327716014366723,
+        "AST": 3.5098547453715385,
+        "ST": 2.817964441583981,
+        "BLK": 0.9282100512319374,
+        "3PTM": 3.726477758920358,
+        "FGM": 12.252283643815716,
+        "FGA": 25.466651013503874,
+        "FTM": 8.124050064230122,
+        "FTA": 12.043843037766088
+      },
+      "lowTotals": {
+        "PTS": 25.448566577547332,
+        "REB": 7.929401210056705,
+        "AST": 2.4568983217600766,
+        "ST": 1.9725751091087862,
+        "BLK": 0.649747035862356,
+        "3PTM": 2.60853443124425,
+        "FGM": 8.576598550671001,
+        "FGA": 17.82665570945271,
+        "FTM": 5.686835044961084,
+        "FTA": 8.43069012643626
+      },
+      "highTotals": {
+        "PTS": 47.26162364401649,
+        "REB": 14.726030818676742,
+        "AST": 4.562811168983,
+        "ST": 3.6633537740591753,
+        "BLK": 1.2066730666015189,
+        "3PTM": 4.8444210865964665,
+        "FGM": 15.927968736960432,
+        "FGA": 33.10664631755504,
+        "FTM": 10.56126508349916,
+        "FTA": 15.656995949095915
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06nn1",
+      "name": "Tarence Guinyard",
+      "school": "Duques",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.923921273489685,
+      "totals": {
+        "PTS": 33.39244048168601,
+        "REB": 7.097430557849998,
+        "AST": 9.029342096844818,
+        "ST": 2.6534314445243563,
+        "BLK": 0.12001282045889511,
+        "3PTM": 4.187276507675725,
+        "FGM": 10.666457249059201,
+        "FGA": 23.655635100406347,
+        "FTM": 7.872249475891879,
+        "FTA": 10.856089849601098
+      },
+      "lowTotals": {
+        "PTS": 23.374708337180202,
+        "REB": 4.968201390494999,
+        "AST": 6.320539467791372,
+        "ST": 1.8574020111670493,
+        "BLK": 0.08400897432122657,
+        "3PTM": 2.9310935553730073,
+        "FGM": 7.46652007434144,
+        "FGA": 16.558944570284442,
+        "FTM": 5.510574633124314,
+        "FTA": 7.599262894720768
+      },
+      "highTotals": {
+        "PTS": 40.109622566852416,
+        "REB": 8.52514092301632,
+        "AST": 10.845673401141942,
+        "ST": 3.1871924367211237,
+        "BLK": 0.14415445119771192,
+        "3PTM": 5.029583878364116,
+        "FGM": 12.812108615417682,
+        "FGA": 28.414173440748105,
+        "FTM": 9.455821457652933,
+        "FTA": 13.039887475674321
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "065vv",
+      "name": "LJ Wells",
+      "school": "Lou",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "games": 2,
+      "score": 3.8557638679431347,
+      "totals": {
+        "PTS": 30.016528353522528,
+        "REB": 14.72714512093264,
+        "AST": 4.108148417014986,
+        "ST": 2.440411948902106,
+        "BLK": 1.8242063431893352,
+        "3PTM": 1.1481435146820556,
+        "FGM": 10.370111862434568,
+        "FGA": 18.860335480139465,
+        "FTM": 8.128161113971338,
+        "FTA": 11.941117177795274
+      },
+      "lowTotals": {
+        "PTS": 21.011569847465772,
+        "REB": 10.309001584652847,
+        "AST": 2.87570389191049,
+        "ST": 1.708288364231474,
+        "BLK": 1.2769444402325345,
+        "3PTM": 0.8037004602774389,
+        "FGM": 7.2590783037041975,
+        "FGA": 13.202234836097626,
+        "FTM": 5.689712779779936,
+        "FTA": 8.35878202445669
+      },
+      "highTotals": {
+        "PTS": 39.021486859579284,
+        "REB": 19.145288657212433,
+        "AST": 5.340592942119482,
+        "ST": 3.172535533572738,
+        "BLK": 2.371468246146136,
+        "3PTM": 1.4925865690866722,
+        "FGM": 13.481145421164939,
+        "FGA": 24.518436124181303,
+        "FTM": 10.56660944816274,
+        "FTA": 15.523452331133857
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "064lb",
+      "name": "Josiah Davis",
+      "school": "CSNor",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.820590732951537,
+      "totals": {
+        "PTS": 32.40856964372978,
+        "REB": 9.172643872189884,
+        "AST": 13.406056682553693,
+        "ST": 2.3279982533348473,
+        "BLK": 0.59865967053104,
+        "3PTM": 0.9684086906210296,
+        "FGM": 11.511331823138311,
+        "FGA": 25.08704553380058,
+        "FTM": 8.417497306832123,
+        "FTA": 11.831618915256678
+      },
+      "lowTotals": {
+        "PTS": 22.685998750610842,
+        "REB": 6.4208507105329184,
+        "AST": 9.384239677787585,
+        "ST": 1.629598777334393,
+        "BLK": 0.41906176937172795,
+        "3PTM": 0.6778860834347207,
+        "FGM": 8.057932276196818,
+        "FGA": 17.560931873660408,
+        "FTM": 5.892248114782486,
+        "FTA": 8.282133240679675
+      },
+      "highTotals": {
+        "PTS": 38.922337261985604,
+        "REB": 11.01624484826761,
+        "AST": 16.100527276821815,
+        "ST": 2.7959004102219995,
+        "BLK": 0.7189837088680805,
+        "3PTM": 1.1630482331725542,
+        "FGM": 13.824983468269256,
+        "FGA": 30.12926697807205,
+        "FTM": 10.109322092274539,
+        "FTA": 14.209644758697529
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "071vo",
+      "name": "Chaze Harris",
+      "school": "UNCC",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.8190877743034815,
+      "totals": {
+        "PTS": 37.3686889365207,
+        "REB": 9.334899122586682,
+        "AST": 9.367251294639322,
+        "ST": 3.296226380069232,
+        "BLK": 0.5987383907841642,
+        "3PTM": 0.8127557995849631,
+        "FGM": 13.819495715805923,
+        "FGA": 26.058359822393076,
+        "FTM": 8.91694170532389,
+        "FTA": 14.407784790717711
+      },
+      "lowTotals": {
+        "PTS": 26.158082255564487,
+        "REB": 6.534429385810677,
+        "AST": 6.557075906247524,
+        "ST": 2.307358466048462,
+        "BLK": 0.4191168735489149,
+        "3PTM": 0.5689290597094742,
+        "FGM": 9.673647001064145,
+        "FGA": 18.24085187567515,
+        "FTM": 6.241859193726722,
+        "FTA": 10.085449353502396
+      },
+      "highTotals": {
+        "PTS": 46.67997001402395,
+        "REB": 11.660907126458493,
+        "AST": 11.701320597315638,
+        "ST": 4.117558120448009,
+        "BLK": 0.7479280361033723,
+        "3PTM": 1.0152728777238869,
+        "FGM": 17.262945636615527,
+        "FGA": 32.55140840478231,
+        "FTM": 11.13880586306901,
+        "FTA": 17.99782066589765
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "071x0",
+      "name": "Preston Edmead",
+      "school": "NCSU",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 3.750660721364726,
+      "totals": {
+        "PTS": 32.01156872737828,
+        "REB": 7.401100678957863,
+        "AST": 8.560963637742173,
+        "ST": 1.3628765986673976,
+        "BLK": 0.1154254708676464,
+        "3PTM": 4.840100754363515,
+        "FGM": 9.563280274151905,
+        "FGA": 23.31781927495989,
+        "FTM": 8.044907424710958,
+        "FTA": 9.73481097178029
+      },
+      "lowTotals": {
+        "PTS": 22.408098109164797,
+        "REB": 5.180770475270505,
+        "AST": 5.992674546419521,
+        "ST": 0.9540136190671784,
+        "BLK": 0.08079782960735248,
+        "3PTM": 3.3880705280544605,
+        "FGM": 6.694296191906334,
+        "FGA": 16.322473492471925,
+        "FTM": 5.63143519729767,
+        "FTA": 6.814367680246202
+      },
+      "highTotals": {
+        "PTS": 38.07536369312848,
+        "REB": 8.803054998044136,
+        "AST": 10.182625126768583,
+        "ST": 1.6210396499167434,
+        "BLK": 0.13728995352163045,
+        "3PTM": 5.756937377959903,
+        "FGM": 11.374805703484085,
+        "FGA": 27.73479978397335,
+        "FTM": 9.56881490820041,
+        "FTA": 11.578828622584297
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "0729c",
+      "name": "Michael James",
+      "school": "ASU",
+      "ownership": "own",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 1,
+      "score": 2.3845575430323294,
+      "totals": {
+        "PTS": 20.635834973036353,
+        "REB": 3.647841782062522,
+        "AST": 3.015828686115837,
+        "ST": 1.723107415455781,
+        "BLK": 0.06389858041178578,
+        "3PTM": 2.404016565992953,
+        "FGM": 7.133034235697257,
+        "FGA": 16.258817905238327,
+        "FTM": 3.965749935648886,
+        "FTA": 4.487715614293556
+      },
+      "lowTotals": {
+        "PTS": 14.445084481125447,
+        "REB": 2.5534892474437654,
+        "AST": 2.1110800802810856,
+        "ST": 1.2061751908190468,
+        "BLK": 0.04472900628825005,
+        "3PTM": 1.682811596195067,
+        "FGM": 4.993123964988079,
+        "FGA": 11.38117253366683,
+        "FTM": 2.77602495495422,
+        "FTA": 3.141400930005489
+      },
+      "highTotals": {
+        "PTS": 23.277101356354457,
+        "REB": 4.114744230314038,
+        "AST": 3.4018371484287195,
+        "ST": 1.9436551033606446,
+        "BLK": 0.07207722559885596,
+        "3PTM": 2.711716649318572,
+        "FGM": 8.046020967875613,
+        "FGA": 18.339851661406115,
+        "FTM": 4.473342771284657,
+        "FTA": 5.06211700902332
+      },
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "current-health-and-role-not-cleared",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    },
+    {
+      "id": "06h51",
+      "name": "Corey Hadnot",
+      "school": "Hou",
+      "ownership": "free-agent",
+      "eligibleGroups": [
+        "G"
+      ],
+      "games": 2,
+      "score": 2.232436900583704,
+      "totals": {
+        "PTS": 17.2,
+        "REB": 4.4,
+        "AST": 3.6,
+        "ST": 1.895554565778308,
+        "BLK": 0.32872280541544086,
+        "3PTM": 1.5325596077724954,
+        "FGM": 6.348465372878934,
+        "FGA": 12.350923593101095,
+        "FTM": 2.970509646469636,
+        "FTA": 4.204975356301704
+      },
+      "lowTotals": {
+        "PTS": 13.76,
+        "REB": 3.5200000000000005,
+        "AST": 2.8800000000000003,
+        "ST": 1.5164436526226466,
+        "BLK": 0.2629782443323527,
+        "3PTM": 1.2260476862179965,
+        "FGM": 5.078772298303147,
+        "FGA": 9.880738874480876,
+        "FTM": 2.376407717175709,
+        "FTA": 3.363980285041363
+      },
+      "highTotals": {
+        "PTS": 20.64,
+        "REB": 5.28,
+        "AST": 4.32,
+        "ST": 2.2746654789339695,
+        "BLK": 0.39446736649852904,
+        "3PTM": 1.8390715293269946,
+        "FGM": 7.6181584474547215,
+        "FGA": 14.821108311721316,
+        "FTM": 3.5646115757635632,
+        "FTA": 5.045970427562045
+      },
+      "flags": [
+        "current-availability-unverified",
+        "provider-role-or-eligibility-note-review",
+        "large-provider-category-rank-disagreement",
+        "conditional-on-listed-games-and-per-game-baseline",
+        "game-instants-and-locks-unverified"
+      ],
+      "waiverLabel": null
+    }
+  ],
+  "excluded": [],
+  "lineup": {
+    "score": 50.2917944604336,
+    "active": [
+      {
+        "id": "06nnk",
+        "slot": "F/C1"
+      },
+      {
+        "id": "06n8t",
+        "slot": "G1"
+      },
+      {
+        "id": "0655r",
+        "slot": "G2"
+      },
+      {
+        "id": "06g7r",
+        "slot": "F/C2"
+      },
+      {
+        "id": "06dun",
+        "slot": "G3"
+      },
+      {
+        "id": "06h14",
+        "slot": "G4"
+      },
+      {
+        "id": "064kr",
+        "slot": "Flx1"
+      },
+      {
+        "id": "05wk5",
+        "slot": "Flx2"
+      },
+      {
+        "id": "065cb",
+        "slot": "F/C3"
+      },
+      {
+        "id": "065ct",
+        "slot": "F/C4"
+      }
+    ],
+    "reserveIds": [
+      "065p8",
+      "065mj",
+      "064gk",
+      "0729c"
+    ],
+    "scheduledAppearances": 21,
+    "totals": {
+      "PTS": 373.0783958618462,
+      "REB": 115.3437376818481,
+      "AST": 75.27919982455136,
+      "ST": 29.030275190879994,
+      "BLK": 15.803189559440966,
+      "3PTM": 30.956933956730683,
+      "FGM": 128.7218491275501,
+      "FGA": 261.17284345702825,
+      "FTM": 84.67776365001528,
+      "FTA": 103.61692551631532,
+      "FG%": 0.4928607715247745,
+      "FT%": 0.8172194188166882
+    },
+    "lowTotals": {
+      "PTS": 268.8948771032923,
+      "REB": 82.48061637729367,
+      "AST": 54.05543987718594,
+      "ST": 20.921192633616002,
+      "BLK": 11.142232691608676,
+      "3PTM": 22.769853769711478,
+      "FGM": 92.72293796446863,
+      "FGA": 188.29041264244793,
+      "FTM": 60.67914740464352,
+      "FTA": 74.18695441875333,
+      "FG%": 0.49244641117518745,
+      "FT%": 0.8179220710710933
+    },
+    "highTotals": {
+      "PTS": 451.3085373467689,
+      "REB": 140.96668292541014,
+      "AST": 90.16061838057985,
+      "ST": 34.804809469039085,
+      "BLK": 19.899932369862274,
+      "3PTM": 37.395714657886664,
+      "FGM": 155.88845797297512,
+      "FGA": 315.46266626754004,
+      "FTM": 102.13590674293204,
+      "FTA": 124.91911504848886,
+      "FG%": 0.49415818301861436,
+      "FT%": 0.8176163167925642
+    }
+  },
+  "currentTotals": {
+    "PTS": 372.27086552188814,
+    "REB": 105.31196793090494,
+    "AST": 72.51770402720862,
+    "ST": 27.656608070383502,
+    "BLK": 12.26098177326984,
+    "3PTM": 31.714510711376537,
+    "FGM": 127.07636654574577,
+    "FGA": 257.8636150272127,
+    "FTM": 86.40362171901997,
+    "FTA": 106.18564545731385,
+    "FG%": 0.49280456466235156,
+    "FT%": 0.8137034092216714
+  },
+  "waiverResearch": [
+    {
+      "addId": "06nde",
+      "name": "JaQuan Johnson",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "0653y",
+      "name": "Jed Miller",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06hdq",
+      "name": "Jaden Winston",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06h4n",
+      "name": "Nasir Whitlock",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06h0n",
+      "name": "Michael McNair",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06n2p",
+      "name": "Ty Robinson",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06q3e",
+      "name": "Justin Pippen",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06eod",
+      "name": "Nils Machowski",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06gr2",
+      "name": "Koree Cotton",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "071sq",
+      "name": "Krystian Lewis",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "064gr",
+      "name": "Trey Campbell",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "065ev",
+      "name": "Javon Bennett",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "07133",
+      "name": "Joshua Ward",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06duc",
+      "name": "Dennis Parker",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06nn1",
+      "name": "Tarence Guinyard",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "065vv",
+      "name": "LJ Wells",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "064lb",
+      "name": "Josiah Davis",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "071vo",
+      "name": "Chaze Harris",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "071x0",
+      "name": "Preston Edmead",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    },
+    {
+      "addId": "06h51",
+      "name": "Corey Hadnot",
+      "ownership": "free-agent",
+      "waiverLabel": null,
+      "conditionalBestReplacement": {
+        "dropId": "0729c",
+        "gain": 0,
+        "activeIds": [
+          "06nnk",
+          "06n8t",
+          "0655r",
+          "06g7r",
+          "06dun",
+          "06h14",
+          "064kr",
+          "05wk5",
+          "065cb",
+          "065ct"
+        ]
+      },
+      "executionEligible": false,
+      "reason": "Research only; clearance/activation, priority cost, current status and exact human approval required"
+    }
+  ],
+  "limitations": [
+    "Historical conditional per-game baseline; no trained weekly model or opponent adjustment.",
+    "Displayed scheduled appearances are not verified legal counted starts.",
+    "Low/high totals are fixed minutes stress scenarios, not confidence intervals.",
+    "No automatic model promotion, roster change, claim or drop."
+  ],
+  "liveActionsExecuted": 0
+}

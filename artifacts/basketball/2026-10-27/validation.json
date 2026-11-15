@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T08:13:18.739753+00:00",
+  "runtime": "Node 26.11.1",
+  "scope": "basketball only",
+  "build": "pass",
+  "typecheck": "pass",
+  "compiledBasketballTests": {
+    "pass": 19,
+    "fail": 0,
+    "log": "targeted-tests.log"
+  },
+  "history": {
+    "rawSha256": "71e31bdff0b388fded25d9abd8781e8a3097f277a867016a16ecb554e949912f",
+    "revision": "2d469843c45e23adbb2c777246410ebc68c4d78a9dc86cc7e1628ad204ceef4e",
+    "sourceObservedAt": "2026-10-27T08:00:08.452079+00:00",
+    "quality": {
+      "totalPlayers": 5687,
+      "positiveGames": 3218,
+      "zeroGamesUnresolved": 2469,
+      "quarantined": 2,
+      "baselineResearchRows": 3216,
+      "currentSeasonForecasts": 0,
+      "precision": "One-decimal display rates; exact season makes/attempts are unavailable.",
+      "warnings": [
+        "Prior-season history is not a current-season forecast or draft recommendation.",
+        "Rates and percentages are separately rounded; never multiply rates by GP and label the result exact totals.",
+        "The nearest-tenth coherence envelope is an explicit screening assumption; flagged rows remain quarantined, never repaired.",
+        "Zero displayed GP is unresolved coverage, not proof of no playing history or a zero forecast.",
+        "Current school labels do not establish historical school stints or future roles.",
+        "Available-player scope does not prove owned/ineligible coverage. Schedule, current availability and transfer/freshman priors remain missing.",
+        "Turnovers are retained only as a source field; this league has no turnover category."
+      ]
+    }
+  },
+  "readinessReportId": "f39674cfe952c1c05ae0bb190a8a92f761243bb65a2884c51a2a057c3ffd8f6e",
+  "liveActionsExecuted": 0,
+  "modelsTrained": 0,
+  "modelPromotions": 0,
+  "forecastsProduced": 0,
+  "sourcesNotRefreshed": [
+    "league-info-api",
+    "all-team-rosters-api",
+    "draft-results-api"
+  ],
+  "automation": {
+    "id": "banging-3s-basketball-workflow",
+    "status": "ACTIVE",
+    "recurrence": "DTSTART:20261027T120000Z\nRRULE:FREQ=DAILY;BYHOUR=12;BYMINUTE=0;BYSECOND=0;UNTIL=20270316T035959Z",
+    "observedTrigger": "2026-10-27T07:57:13.163Z",
+    "correctLocalHourFiringVerified": false,
+    "nextIntended": "2026-10-27T12:00:00Z"
+  },
+  "review": "docs/basketball/committee/08-luna-history-review.md",
+  "codeSha256": {
+    "src/basketball/calendar.ts": "ec9b75c423ed171b8ca19d03693ab7ab9ff796a578700be7c1d03b0e0ab83ff7",
+    "src/basketball/report.ts": "06c865800db7b642bed7dc3552918723b5980117d7686e84ca316279d30049f7",
+    "src/basketball/player-pool.ts": "1babbd1b6cc49505f71abbda4982ac94547561fb1e2ad461eecfcc72bbcb3520",
+    "src/basketball/fantrax-reader.ts": "f05463ccf2d616a9d1424237b5b50b7d7c97475b428b87a6bf51881feae95de6",
+    "src/basketball/history.ts": "c2a999af432064bd92af3c6cc46e150a6f95d1f8a31f4b191040bf2b7b720e1b",
+    "src/basketball/cli.ts": "36540ad179b982679d01f97858c585ac9926629dbb6fc0e695fe15c2015a5d85",
+    "src/basketball/contracts.ts": "804ce720aa0d52e16a69a8000f06dee19006242b477f3460f98562d3821c180a",
+    "src/basketball/categories.ts": "3e94a6937bbe13017d2e463626bca5382edab6d3a986709986c5e692826d4c9c",
+    "src/basketball/store.ts": "0584dad683bf3471f130df981734982a1b25317f513549f0849576550ca44026"
+  }
+}

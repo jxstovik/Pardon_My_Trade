@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "historyObservedAt": "2026-10-27T08:00:08.452079+00:00",
+  "providerEarliestObservation": "2026-10-27T11:24:32Z",
+  "meaning": "Coverage only among saved positive cached ADP thresholds; ADP method/representativeness unvalidated, not the first N players or full draft-candidate universe. Forecast coverage does not establish current role/status clearance.",
+  "thresholds": [
+    {
+      "maximumCachedADP": 50,
+      "knownPositiveADPRows": 17,
+      "forecasted": 17,
+      "providerSupplemented": 8,
+      "historyOnly": 9,
+      "unmodeled": []
+    },
+    {
+      "maximumCachedADP": 112,
+      "knownPositiveADPRows": 57,
+      "forecasted": 57,
+      "providerSupplemented": 17,
+      "historyOnly": 40,
+      "unmodeled": []
+    },
+    {
+      "maximumCachedADP": 150,
+      "knownPositiveADPRows": 95,
+      "forecasted": 95,
+      "providerSupplemented": 23,
+      "historyOnly": 72,
+      "unmodeled": []
+    },
+    {
+      "maximumCachedADP": 200,
+      "knownPositiveADPRows": 149,
+      "forecasted": 149,
+      "providerSupplemented": 25,
+      "historyOnly": 124,
+      "unmodeled": []
+    }
+  ]
+}

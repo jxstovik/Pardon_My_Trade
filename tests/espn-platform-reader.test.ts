@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { EspnPlatformReader } from "../src/adapters/espn/espn-platform-reader.js";
 import { loadEspnCredentials } from "../src/adapters/espn/espn-auth.js";
-import type { PlayerPosition } from "../src/models/types.js";
+import { readFile } from "node:fs/promises";
+import { scoreProjectionPoints, ScoringRuleEngine } from "../src/rules/rule-engine.js";
+import type { PlayerPosition, Projection, Roster } from "../src/models/types.js";
 
 const sampleLeague = {
   id: 999,
@@ -119,12 +121,75 @@ test("getFreeAgents excludes owned players", async () => {
   assert.ok(free.some((p) => p.player_id === "301"));
 });
 
-test("getScoringSettings maps known keys with defaults", async () => {
+test("getScoringSettings maps explicit known keys without guessed defaults", async () => {
   const reader = makeReader();
   const scoring = await reader.getScoringSettings("999");
   assert.ok(scoring.rules.some((r) => r.stat === "passing_yards" && r.points === 0.04));
   assert.ok(scoring.rules.some((r) => r.stat === "receptions" && r.points === 1));
   assert.equal(scoring.rules.length, 2, "unknown bonus stat IDs are not misrepresented as defaults");
+});
+
+test("live league scoring imports every configured stat and D/ST position override", async () => {
+  // Safe mSettings capture: only identifiers and scoring weights, no members/cookies.
+  const data = JSON.parse(await readFile("tests/fixtures/espn-scoring-98806880-2026.json", "utf8"));
+  const reader = new EspnPlatformReader({
+    credentials: { leagueId: "98806880", season: "2026" },
+    fetchImpl: fakeFetch(() => new Response(JSON.stringify(data), { status: 200 }))
+  });
+  const scoring = await reader.getScoringSettings("98806880");
+  const items = data.settings.scoringSettings.scoringItems;
+  assert.equal(new Set(scoring.rules.map(rule => rule.rule_id)).size, scoring.rules.length);
+  assert.equal(new Set(scoring.rules.map(rule => rule.rule_id.match(/^espn-stat-(\d+)/)?.[1])).size, items.length);
+  for (const item of items) {
+    const rules = scoring.rules.filter(rule => rule.rule_id === `espn-stat-${item.statId}` || rule.rule_id.startsWith(`espn-stat-${item.statId}-`));
+    assert.ok(rules.length, `missing ESPN stat ${item.statId}`);
+    for (const rule of rules) {
+      const expected = rule.applies_to_positions.includes("DST") ? item.pointsOverrides?.["16"] ?? item.points : item.points;
+      assert.equal(rule.points, expected, `wrong points for ESPN stat ${item.statId}`);
+    }
+  }
+  assert.equal(scoring.rules.find(rule => rule.stat === "sacks")?.points, 1);
+  assert.equal(scoring.rules.find(rule => rule.stat === "points_allowed_0")?.points, 5);
+  assert.equal(scoring.rules.find(rule => rule.stat === "yards_allowed_550_plus")?.points, -7);
+  assert.ok(!scoring.rules.some(rule => rule.stat === "points_allowed_18_21"), "absent tiers are not synthesized");
+  assert.ok(!scoring.rules.some(rule => rule.stat === "yards_allowed_300_349"), "absent tiers are not synthesized");
+
+  const base = { schema_version: "1.0.0", created_at: "2026-10-24T00:00:00Z", updated_at: "2026-10-24T00:00:00Z",
+    source_system: "espn", source: "espn", projection_id: "test", scoring_period: "2026-W7", floor: 0, ceiling: 30, confidence: 1 };
+  const kicker: Projection = { ...base, player_id: "k", projected_points: 0, projected_stats: {
+    field_goals_0_39: 1, field_goals_40_49: 1, field_goals_50_59: 1, field_goals_60_plus: 1,
+    field_goals_missed: 1, extra_points: 2, extra_points_missed: 1
+  } };
+  const defense: Projection = { ...base, player_id: "dst", projected_points: 0, projected_stats: {
+    sacks: 3, defensive_interceptions: 1, defensive_fumble_recoveries: 1, blocked_kicks: 1,
+    safeties: 1, def_interception_td: 1, points_allowed_28_34: 1, yards_allowed_400_449: 1
+  } };
+  assert.equal(scoreProjectionPoints(scoring, kicker, ["K"]), 17);
+  assert.equal(scoreProjectionPoints(scoring, defense, ["DST"]), 13);
+  assert.equal(scoreProjectionPoints(scoring, defense, ["QB"]), 0, "defensive interceptions are not interceptions thrown");
+  const roster: Roster = { team_id: "7", last_updated_at: "2026-10-24T00:00:00Z", bench: [], injured_reserve: [], taxi: [], starters: [
+    {slot_id: "k", slot_type: "K", allowed_positions: ["K"], locked: false, player_id: "k"},
+    {slot_id: "dst", slot_type: "DST", allowed_positions: ["DST"], locked: false, player_id: "dst"}
+  ] };
+  assert.equal(new ScoringRuleEngine().calculateProjectedScore(scoring, [kicker, defense], roster), 30);
+});
+
+test("scoring overrides preserve zero and do not leak D/ST weights to offensive returners", async () => {
+  const data = { scoringSettings: { scoringItems: [
+    { statId: 101, points: 6, pointsOverrides: {"16": 0} },
+    { statId: 99, points: 9, pointsOverrides: {"16": 0} },
+    { statId: 80, points: 3, pointsOverrides: {"5": 0} },
+    { statId: 89, pointsOverrides: {"16": 5} }
+  ] } };
+  const reader = new EspnPlatformReader({ credentials: {leagueId: "999", season: "2026"},
+    fetchImpl: fakeFetch(() => new Response(JSON.stringify(data), {status: 200})) });
+  const { rules } = await reader.getScoringSettings("999");
+  assert.equal(rules.find(rule => rule.stat === "kickoff_return_touchdowns" && rule.applies_to_positions.includes("DST"))?.points, 0);
+  assert.equal(rules.find(rule => rule.stat === "kickoff_return_touchdowns" && rule.applies_to_positions.includes("WR"))?.points, 6);
+  assert.equal(rules.find(rule => rule.stat === "sacks")?.points, 0);
+  assert.equal(rules.find(rule => rule.stat === "field_goals_0_39")?.points, 0);
+  assert.equal(rules.find(rule => rule.stat === "points_allowed_0")?.points, 5, "an explicit override works without a base weight");
+  assert.equal(new Set(rules.map(rule => rule.rule_id)).size, rules.length);
 });
 
 test("player position IDs preserve kicker and D/ST, and actual ESPN eligibility is retained", async () => {
@@ -185,4 +250,33 @@ test("proposeTrade builds give/receive assets", async () => {
   const receive = body.assets.find((a) => a.playerId === 201);
   assert.equal(give?.teamId, 1);
   assert.equal(receive?.teamId, 2);
+});
+
+test('pending waiver reads distinguish an empty queue from an unavailable view',async()=>{
+ let payload:Record<string,unknown>={id:999,seasonId:2026,transactions:[]};
+ const reader=new EspnPlatformReader({credentials:{leagueId:'999',season:'2026'},fetchImpl:async(input)=>{
+  const url=new URL(String(input));
+  if(!url.searchParams.getAll('view').includes('mTransactions2'))return new Response(JSON.stringify({id:999,seasonId:2026,scoringPeriodId:9}));
+  assert.equal(url.searchParams.get('scoringPeriodId'),'9');
+  return new Response(JSON.stringify(payload),{headers:{'x-fantasy-role':'OWNER'}});
+ }});
+ assert.deepEqual(await reader.getPendingWaiverClaims('999','7'),[]);
+ payload={id:999,seasonId:2026};await assert.rejects(reader.getPendingWaiverClaims('999','7'),/unavailable/);
+ payload={id:998,seasonId:2026,transactions:[]};await assert.rejects(reader.getPendingWaiverClaims('999','7'),/mismatched/);
+ payload={id:999,seasonId:2026,transactions:[{id:'claim1',teamId:7,type:'WAIVER',status:'PENDING',priority:1,items:[{playerId:301,type:'ADD'}]},{id:'other',teamId:8,type:'WAIVER',status:'PENDING',priority:1,items:[]}]};
+ assert.deepEqual((await reader.getPendingWaiverClaims('999','7')).map(c=>c.id),['claim1']);
+});
+test('public league access cannot stand in for authenticated private pending claims',async()=>{
+ for(const role of [undefined,'NONE']){
+  const reader=new EspnPlatformReader({credentials:{leagueId:'999',season:'2026'},fetchImpl:async(input)=>{
+   const pending=String(input).includes('mTransactions2');
+   return new Response(JSON.stringify(pending?{id:999,seasonId:2026,transactions:[]}:{id:999,seasonId:2026,scoringPeriodId:10}),{headers:role?{'x-fantasy-role':role}:{}});
+  }});
+  await assert.rejects(reader.getPendingWaiverClaims('999','7'),/unauthenticated/);
+ }
+});
+test('waiver pool accepts only explicitly confirmed WAIVERS, not immediate free agents',async()=>{
+ const reader=new EspnPlatformReader({credentials:{leagueId:'999',season:'2026'},fetchImpl:async(input)=>new Response(JSON.stringify(String(input).includes('kona_player_info')?{players:[{player:{id:301},status:'WAIVERS'},{player:{id:302},status:'FREEAGENT'}]}:sampleLeague))});
+ assert.deepEqual(await reader.getWaiverPlayerIds('999'),['301']);
+ await assert.rejects(reader.getWaiverPlayerIds('998'),/scope/);
 });

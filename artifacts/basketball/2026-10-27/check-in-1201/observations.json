@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "browser-ui-transcription",
+  "originalRawPayloadHash": null,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "observedWindowUTC": [
+    "2026-10-27T12:02:13Z",
+    "2026-10-27T12:05:00Z"
+  ],
+  "sources": [
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster"
+  ],
+  "facts": {
+    "draftNotHeld": true,
+    "draftStart": "2026-10-28T21:00:00-04:00",
+    "ownSlot": 6,
+    "rounds": 14,
+    "minutesPerPick": 1,
+    "snakeOrder": [
+      "CatsByAtLeast1",
+      "NorseUppers",
+      "JeffWischer",
+      "JakeMess",
+      "Perks",
+      "jxstovik",
+      "Connormcl12",
+      "Sjdedden"
+    ],
+    "absentManagerImmediateAutopick": true,
+    "active": 0,
+    "reserve": 0,
+    "eightCategoriesAndRosterLimits": "unchanged from prior capture",
+    "weeklyMondayAndWaiverRules": "unchanged in displayed rules"
+  },
+  "notRefreshed": [
+    "official historical/pool CSV bytes",
+    "league-info API",
+    "all-team roster API",
+    "draft-shell API",
+    "full-pool current role/status"
+  ],
+  "liveActionsExecuted": 0,
+  "viewportChanged": false,
+  "automation": {
+    "id": "banging-3s-basketball-workflow",
+    "actualTrigger": "2026-10-27T12:01:13.359Z",
+    "localTrigger": "2026-10-27T08:01:13.359-04:00",
+    "configurationVerified": true,
+    "oneCorrectedHourRunObserved": true,
+    "futureDeliveryVerified": false,
+    "promptUpdated": true,
+    "rrulePreserved": true
+  }
+}

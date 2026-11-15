@@ -1,0 +1,85 @@
+{
+  "contract_version": "1.0.0",
+  "tool": "pmt_list_news",
+  "generated_at": "2026-11-15T06:03:24.057Z",
+  "ok": true,
+  "data": {
+    "coverage": {
+      "basis": "persisted_player_linked_items_only",
+      "scoped_player_count": 15,
+      "players_with_news_count": 3,
+      "players_without_observed_news_count": 12,
+      "unresolved_player_count": 0,
+      "source_completeness": "unknown",
+      "no_news_is_not_clearance": true
+    },
+    "scope": {
+      "league_id": "98806880",
+      "team_id": "7",
+      "selection": "roster_plus_explicit_candidates"
+    },
+    "omissions": {
+      "out_of_scope_count": 2308,
+      "unmapped_item_count": 304,
+      "unmapped_high_impact_count": 75,
+      "outside_window_count": 117,
+      "outside_window_high_impact_count": 18,
+      "invalid_timestamp_count": 0,
+      "invalid_timestamp_high_impact_count": 0,
+      "compacted_item_count": 0,
+      "remaining_count": 0,
+      "remaining_high_impact_count": 0
+    },
+    "snapshot_id": "espn-98806880-1bddfc15-8d58-4534-866d-217585ac966d-1794722566842",
+    "news": [
+      {
+        "news_id": "50475505:4032473",
+        "player_id": "4032473",
+        "full_name": "Rashid Shaheed",
+        "source": "espn",
+        "headline": "Seahawks are hurting with injuries, but two players will return vs. Raiders",
+        "summary": "QB Drew Lock will start again for Darnold. And LB Uchenna Nwosu and WR Rashid Shaheed will return to the field in Las Vegas.",
+        "impact": "medium",
+        "published_at": "2026-11-14T04:01:15.000Z",
+        "ingested_at": "2026-11-15T06:02:52.402Z",
+        "source_url": "https://www.espn.com/nfl/story/_/id/50475505/seahawks-raiders-week-10-darnold-lock-shaheed-returns",
+        "text_truncated": false
+      },
+      {
+        "news_id": "50463729:4038815",
+        "player_id": "4038815",
+        "full_name": "Rico Dowdle",
+        "source": "espn",
+        "headline": "Week 10 betting preview: Analysis, best bets, TD predictions for Sunday",
+        "summary": "Our experts dive into the odds and player props for Week 10 and offer their betting tips and favorite plays.",
+        "impact": "low",
+        "published_at": "2026-11-14T17:44:31.000Z",
+        "ingested_at": "2026-11-15T06:02:52.402Z",
+        "source_url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games",
+        "text_truncated": false
+      },
+      {
+        "news_id": "50463729:4426388",
+        "player_id": "4426388",
+        "full_name": "Jameson Williams",
+        "source": "espn",
+        "headline": "Week 10 betting preview: Analysis, best bets, TD predictions for Sunday",
+        "summary": "Our experts dive into the odds and player props for Week 10 and offer their betting tips and favorite plays.",
+        "impact": "low",
+        "published_at": "2026-11-14T17:44:31.000Z",
+        "ingested_at": "2026-11-15T06:02:52.402Z",
+        "source_url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games",
+        "text_truncated": false
+      }
+    ],
+    "total_count": 3,
+    "returned_count": 3,
+    "truncated": false,
+    "next_cursor": null,
+    "filters": {
+      "since": "2026-11-13T06:02:51.653Z",
+      "until": "2026-11-15T06:02:51.653Z"
+    },
+    "next_step": null
+  }
+}

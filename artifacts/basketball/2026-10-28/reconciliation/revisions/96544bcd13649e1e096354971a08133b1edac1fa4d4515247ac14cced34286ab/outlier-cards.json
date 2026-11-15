@@ -1,0 +1,373 @@
+{
+  "top20Outliers": [
+    {
+      "fantraxId": "05wt9",
+      "name": "Trey Kaufman-Renn",
+      "school": "Kan",
+      "providerRank": 19,
+      "modelCategoryRank": 849,
+      "rankGap": 830,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank."
+    },
+    {
+      "fantraxId": "07a8s",
+      "name": "Jordan Smith",
+      "school": "Ark",
+      "providerRank": 4,
+      "modelCategoryRank": 273,
+      "rankGap": 269,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank."
+    },
+    {
+      "fantraxId": "070ld",
+      "name": "Ivan Kharchenkov",
+      "school": "Ariz",
+      "providerRank": 17,
+      "modelCategoryRank": 279,
+      "rankGap": 262,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank."
+    },
+    {
+      "fantraxId": "07ank",
+      "name": "Quinn Ellis",
+      "school": "StJon",
+      "providerRank": 20,
+      "modelCategoryRank": 265,
+      "rankGap": 245,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank."
+    },
+    {
+      "fantraxId": "071n6",
+      "name": "Thijs De Ridder",
+      "school": "UVA",
+      "providerRank": 8,
+      "modelCategoryRank": 203,
+      "rankGap": 195,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank."
+    },
+    {
+      "fantraxId": "06g9s",
+      "name": "John Blackwell",
+      "school": "Duke",
+      "providerRank": 13,
+      "modelCategoryRank": 187,
+      "rankGap": 174,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank."
+    },
+    {
+      "fantraxId": "06ga8",
+      "name": "Alex Condon",
+      "school": "Fla",
+      "providerRank": 14,
+      "modelCategoryRank": 120,
+      "rankGap": 106,
+      "disposition": "unresolved",
+      "reason": "Provider-top20/model-outside-top112; preserve for human review, do not tune either rank."
+    }
+  ],
+  "historicalOnly": [
+    {
+      "fantraxId": "06n8t",
+      "name": "Javontae Campbell",
+      "school": "Cin",
+      "providerRank": null,
+      "modelCategoryRank": 2,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "0655r",
+      "name": "Tavari Johnson",
+      "school": "Charl",
+      "providerRank": null,
+      "modelCategoryRank": 3,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06g3w",
+      "name": "JT Toppin",
+      "school": "TxTch",
+      "providerRank": null,
+      "modelCategoryRank": 5,
+      "historicalGP": 25,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06h14",
+      "name": "Jalen Cox",
+      "school": "USC",
+      "providerRank": null,
+      "modelCategoryRank": 8,
+      "historicalGP": 31,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "064kr",
+      "name": "Quion Williams",
+      "school": "ArkPB",
+      "providerRank": null,
+      "modelCategoryRank": 9,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06n56",
+      "name": "Kamrin Oriol",
+      "school": "Akr",
+      "providerRank": null,
+      "modelCategoryRank": 10,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "05wk5",
+      "name": "Daeshun Ruffin",
+      "school": "JackSt",
+      "providerRank": null,
+      "modelCategoryRank": 11,
+      "historicalGP": 28,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "0729c",
+      "name": "Michael James",
+      "school": "ASU",
+      "providerRank": null,
+      "modelCategoryRank": 12,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06ntt",
+      "name": "Nolan Minessale",
+      "school": "Marq",
+      "providerRank": null,
+      "modelCategoryRank": 13,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06hkh",
+      "name": "Money Williams",
+      "school": "BC",
+      "providerRank": null,
+      "modelCategoryRank": 14,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06gdn",
+      "name": "Jason Rivera-Torres",
+      "school": "HiPt",
+      "providerRank": null,
+      "modelCategoryRank": 15,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "064yz",
+      "name": "Dior Johnson",
+      "school": "UCF",
+      "providerRank": null,
+      "modelCategoryRank": 16,
+      "historicalGP": 20,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06pqo",
+      "name": "Hamad Mousa",
+      "school": "CAPoly",
+      "providerRank": null,
+      "modelCategoryRank": 17,
+      "historicalGP": 32,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "065p8",
+      "name": "Trevan Leonhardt",
+      "school": "Nebras",
+      "providerRank": null,
+      "modelCategoryRank": 19,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "0651t",
+      "name": "Donovan Oday",
+      "school": "Troy",
+      "providerRank": null,
+      "modelCategoryRank": 21,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06grf",
+      "name": "Thomas Dowd",
+      "school": "Aub",
+      "providerRank": null,
+      "modelCategoryRank": 22,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06gv0",
+      "name": "Jackson Holcombe",
+      "school": "Utah",
+      "providerRank": null,
+      "modelCategoryRank": 23,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "07115",
+      "name": "Cedric Taylor",
+      "school": "How",
+      "providerRank": null,
+      "modelCategoryRank": 24,
+      "historicalGP": 22,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "065cy",
+      "name": "Mason Falslev",
+      "school": "UtSt",
+      "providerRank": null,
+      "modelCategoryRank": 26,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "065cb",
+      "name": "Kyle Evans",
+      "school": "NCSU",
+      "providerRank": null,
+      "modelCategoryRank": 28,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "064jf",
+      "name": "B.J. Edwards",
+      "school": "Okla",
+      "providerRank": null,
+      "modelCategoryRank": 29,
+      "historicalGP": 28,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "065ct",
+      "name": "Keyshawn Hall",
+      "school": "StJon",
+      "providerRank": null,
+      "modelCategoryRank": 30,
+      "historicalGP": 31,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06dvi",
+      "name": "Milan Momcilovic",
+      "school": "KY",
+      "providerRank": null,
+      "modelCategoryRank": 31,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06mz2",
+      "name": "Daniel Freitag",
+      "school": "OrSt",
+      "providerRank": null,
+      "modelCategoryRank": 32,
+      "historicalGP": 23,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "065mj",
+      "name": "Jack Karasinski",
+      "school": "NW",
+      "providerRank": null,
+      "modelCategoryRank": 33,
+      "historicalGP": 30,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06nde",
+      "name": "JaQuan Johnson",
+      "school": "IaSt",
+      "providerRank": null,
+      "modelCategoryRank": 35,
+      "historicalGP": 33,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "05wgg",
+      "name": "Justin Neely",
+      "school": "Col",
+      "providerRank": null,
+      "modelCategoryRank": 37,
+      "historicalGP": 34,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06gra",
+      "name": "Dontae Horne",
+      "school": "PVAM",
+      "providerRank": null,
+      "modelCategoryRank": 39,
+      "historicalGP": 35,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    },
+    {
+      "fantraxId": "06gcd",
+      "name": "Colby Garland",
+      "school": "GaTec",
+      "providerRank": null,
+      "modelCategoryRank": 40,
+      "historicalGP": 29,
+      "disposition": "unresolved",
+      "reason": "Historical-only high candidate; current role/projection coverage is absent."
+    }
+  ],
+  "unmatchedPoolRows": [],
+  "dispositionGuide": {
+    "data-error": "verified identity or impossible arithmetic contradiction",
+    "format": "source presentation/schema interpretation issue",
+    "projection": "same-identity projection difference with explicit same-field provenance",
+    "unresolved": "evidence does not resolve current projection/rank disagreement"
+  }
+}

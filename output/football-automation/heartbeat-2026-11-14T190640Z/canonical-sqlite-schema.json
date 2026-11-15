@@ -1,0 +1,66 @@
+[
+  {
+    "name": "league_snapshots",
+    "sql": "CREATE TABLE league_snapshots (\n        snapshot_id TEXT PRIMARY KEY,\n        league_id TEXT NOT NULL,\n        data TEXT NOT NULL,\n        created_at TEXT NOT NULL\n      )"
+  },
+  {
+    "name": "recommendations",
+    "sql": "CREATE TABLE recommendations (\n        recommendation_id TEXT PRIMARY KEY,\n        league_id TEXT NOT NULL,\n        team_id TEXT NOT NULL,\n        type TEXT NOT NULL,\n        data TEXT NOT NULL,\n        created_at TEXT NOT NULL,\n        updated_at TEXT\n      )"
+  },
+  {
+    "name": "decision_audits",
+    "sql": "CREATE TABLE decision_audits (\n        audit_id TEXT PRIMARY KEY,\n        recommendation_id TEXT NOT NULL,\n        data TEXT NOT NULL,\n        created_at TEXT NOT NULL\n      )"
+  },
+  {
+    "name": "projections",
+    "sql": "CREATE TABLE projections (\n        projection_id TEXT PRIMARY KEY,\n        player_id TEXT NOT NULL,\n        source TEXT NOT NULL,\n        scoring_period TEXT NOT NULL,\n        league_id TEXT NOT NULL,\n        data TEXT NOT NULL,\n        created_at TEXT NOT NULL,\n        updated_at TEXT\n      )"
+  },
+  {
+    "name": "pmt_runtime_migrations",
+    "sql": "CREATE TABLE pmt_runtime_migrations(migration_name TEXT PRIMARY KEY, applied_at TEXT NOT NULL)"
+  },
+  {
+    "name": "latest_snapshots",
+    "sql": "CREATE TABLE latest_snapshots (\n      league_id TEXT PRIMARY KEY, snapshot_id TEXT NOT NULL, updated_at TEXT NOT NULL,\n      FOREIGN KEY(snapshot_id) REFERENCES league_snapshots(snapshot_id)\n    )"
+  },
+  {
+    "name": "pmt_schema_migrations",
+    "sql": "CREATE TABLE pmt_schema_migrations (\n      version INTEGER PRIMARY KEY,\n      applied_at TEXT NOT NULL\n    )"
+  },
+  {
+    "name": "actions",
+    "sql": "CREATE TABLE actions (\n      action_id TEXT PRIMARY KEY,\n      status TEXT NOT NULL,\n      data TEXT NOT NULL,\n      created_at TEXT NOT NULL,\n      updated_at TEXT NOT NULL\n    )"
+  },
+  {
+    "name": "action_receipts",
+    "sql": "CREATE TABLE action_receipts (\n      action_id TEXT PRIMARY KEY,\n      receipt_id TEXT NOT NULL UNIQUE,\n      idempotency_key TEXT NOT NULL UNIQUE,\n      payload_hash TEXT NOT NULL,\n      status TEXT NOT NULL,\n      data TEXT NOT NULL,\n      recorded_at TEXT NOT NULL,\n      updated_at TEXT NOT NULL\n    )"
+  },
+  {
+    "name": "audit_events",
+    "sql": "CREATE TABLE audit_events (\n      audit_id TEXT PRIMARY KEY,\n      action_id TEXT NOT NULL,\n      recorded_at TEXT NOT NULL,\n      data TEXT NOT NULL\n    )"
+  },
+  {
+    "name": "job_runs",
+    "sql": "CREATE TABLE job_runs (\n      job_id TEXT PRIMARY KEY,\n      job_type TEXT NOT NULL,\n      dedupe_key TEXT,\n      status TEXT NOT NULL,\n      available_at TEXT NOT NULL,\n      lease_owner TEXT,\n      lease_expires_at TEXT,\n      attempts INTEGER NOT NULL DEFAULT 0,\n      data TEXT NOT NULL,\n      result TEXT,\n      last_error TEXT,\n      created_at TEXT NOT NULL,\n      updated_at TEXT NOT NULL,\n      UNIQUE(job_type, dedupe_key)\n    )"
+  },
+  {
+    "name": "scoped_projections",
+    "sql": "CREATE TABLE scoped_projections (\n      scoped_projection_id TEXT PRIMARY KEY,\n      projection_id TEXT NOT NULL,\n      league_external_id TEXT NOT NULL,\n      scoring_period TEXT NOT NULL,\n      data TEXT NOT NULL,\n      updated_at TEXT NOT NULL\n    )"
+  },
+  {
+    "name": "v1_news",
+    "sql": "CREATE TABLE v1_news (\n        news_id TEXT PRIMARY KEY,\n        player_id TEXT NOT NULL,\n        league_ref TEXT NOT NULL,\n        data TEXT NOT NULL,\n        published_at TEXT NOT NULL\n      )"
+  },
+  {
+    "name": "v1_history",
+    "sql": "CREATE TABLE v1_history (\n        record_id TEXT PRIMARY KEY,\n        league_id TEXT NOT NULL,\n        snapshot_id TEXT NOT NULL,\n        data TEXT NOT NULL,\n        captured_at TEXT NOT NULL\n      )"
+  },
+  {
+    "name": "v1_manager_profiles",
+    "sql": "CREATE TABLE v1_manager_profiles (\n        manager_id TEXT PRIMARY KEY,\n        display_name TEXT NOT NULL,\n        data TEXT NOT NULL,\n        updated_at TEXT NOT NULL\n      )"
+  },
+  {
+    "name": "v1_notifications",
+    "sql": "CREATE TABLE v1_notifications (\n        notification_id TEXT PRIMARY KEY,\n        league_id TEXT NOT NULL,\n        data TEXT NOT NULL,\n        created_at TEXT NOT NULL\n      )"
+  }
+]

@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "2rc1dg43mvgsurtp",
+  "teamName": "CatsByAtLeast1",
+  "season": "2026-27",
+  "profile": "unknown",
+  "observedAt": "2026-11-06T07:30:12.272Z",
+  "sourceKind": "authenticated-browser-transcription",
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=2rc1dg43mvgsurtp;view=SCHEDULE_PERIOD;period=2",
+  "period": {
+    "number": 2,
+    "firstDate": "2026-11-09",
+    "lastDate": "2026-11-15",
+    "opponentOfTeamId": "wwc1n3o4mvn1c6hk"
+  },
+  "rosterSlots": {
+    "active": 10,
+    "reserve": 4,
+    "groups": {
+      "G": 4,
+      "F/C": 4,
+      "Flex": 2
+    }
+  },
+  "players": [
+    {
+      "playerId": null,
+      "name": "Mark Mitchell",
+      "schoolDisplayed": "Mizzou",
+      "position": "G/F/C",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06nvo",
+          "date": "2026-11-09",
+          "label": "Fantrax roster schedule SIU-E Mon 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nwf",
+          "date": "2026-11-15",
+          "label": "Fantrax roster schedule @Marq Sun 2:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Hamad Mousa",
+      "schoolDisplayed": "CAPoly",
+      "position": "G/F/C",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06ozu",
+          "date": "2026-11-11",
+          "label": "Fantrax roster schedule @GrCan Wed 9:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qmw",
+          "date": "2026-11-13",
+          "label": "Fantrax roster schedule @Ida Fri 9:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qbm",
+          "date": "2026-11-15",
+          "label": "Fantrax roster schedule @MTSt Sun 6:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Robert Wright",
+      "schoolDisplayed": "BYU",
+      "position": "G",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06nvs",
+          "date": "2026-11-10",
+          "label": "Fantrax roster schedule QUC Tue 9:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nvx",
+          "date": "2026-11-12",
+          "label": "Fantrax roster schedule MTSt Thu 9:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Tounde Yessoufou",
+      "schoolDisplayed": "StJon",
+      "position": "G",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06ruf",
+          "date": "2026-11-11",
+          "label": "Fantrax roster schedule Colg Wed 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ruk",
+          "date": "2026-11-15",
+          "label": "Fantrax roster schedule Syr Sun 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "DJ Hall",
+      "schoolDisplayed": "TxSt",
+      "position": "F/C",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06q1e",
+          "date": "2026-11-10",
+          "label": "Fantrax roster schedule @UTRGV Tue 7:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ruh",
+          "date": "2026-11-13",
+          "label": "Fantrax roster schedule USM Fri 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06t2b",
+          "date": "2026-11-15",
+          "label": "Fantrax roster schedule @UTSA Sun 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Thomas Haugh",
+      "schoolDisplayed": "Fla",
+      "position": "F/C",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06oe1",
+          "date": "2026-11-10",
+          "label": "Fantrax roster schedule @FSU Tue 6:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nw2",
+          "date": "2026-11-13",
+          "label": "Fantrax roster schedule Merrim Fri 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Milan Momcilovic",
+      "schoolDisplayed": "KY",
+      "position": "F/C",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06q6x",
+          "date": "2026-11-10",
+          "label": "Fantrax roster schedule Kan Tue 9:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nw4",
+          "date": "2026-11-13",
+          "label": "Fantrax roster schedule NoAZ Fri 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Malik Reneau",
+      "schoolDisplayed": "Mia-FL",
+      "position": "F/C",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06nvn",
+          "date": "2026-11-09",
+          "label": "Fantrax roster schedule NFla Mon 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nw3",
+          "date": "2026-11-13",
+          "label": "Fantrax roster schedule N AL Fri 5:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Donovan Dent",
+      "schoolDisplayed": "LSU",
+      "position": "G",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06nvm",
+          "date": "2026-11-09",
+          "label": "Fantrax roster schedule LaTec Mon 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nwa",
+          "date": "2026-11-14",
+          "label": "Fantrax roster schedule @Gonz Sat 3:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Dior Johnson",
+      "schoolDisplayed": "UCF",
+      "position": "G",
+      "rosterSlot": "active",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06qj2",
+          "date": "2026-11-10",
+          "label": "Fantrax roster schedule USA Tue 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qj5",
+          "date": "2026-11-13",
+          "label": "Fantrax roster schedule GaSo Fri 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Acaden Lewis",
+      "schoolDisplayed": "Mia-FL",
+      "position": "G",
+      "rosterSlot": "reserve",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06nvn",
+          "date": "2026-11-09",
+          "label": "Fantrax roster schedule NFla Mon 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nw3",
+          "date": "2026-11-13",
+          "label": "Fantrax roster schedule N AL Fri 5:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Je'Shawn Stevenson",
+      "schoolDisplayed": "N TX",
+      "position": "G",
+      "rosterSlot": "reserve",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06s7f",
+          "date": "2026-11-11",
+          "label": "Fantrax roster schedule SCla Wed 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06s7n",
+          "date": "2026-11-14",
+          "label": "Fantrax roster schedule USA Sat 6:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "Rashaud Marshall",
+      "schoolDisplayed": "APSU",
+      "position": "F/C",
+      "rosterSlot": "reserve",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06q6w",
+          "date": "2026-11-10",
+          "label": "Fantrax roster schedule (N/A) Tue 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06r20",
+          "date": "2026-11-14",
+          "label": "Fantrax roster schedule @WichSt Sat 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "playerId": null,
+      "name": "TJ Power",
+      "schoolDisplayed": "Penn",
+      "position": "F/C",
+      "rosterSlot": "reserve",
+      "availability": "owned",
+      "stableIdMatched": false,
+      "games": [
+        {
+          "id": "06qz6",
+          "date": "2026-11-09",
+          "label": "Fantrax roster schedule How Mon 6:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nvv",
+          "date": "2026-11-11",
+          "label": "Fantrax roster schedule @Navy Wed 5:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qk8",
+          "date": "2026-11-14",
+          "label": "Fantrax roster schedule @StJos Sat 6:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Player stable IDs were not visible in the supported roster transcription; rows are names/schools and cannot yet be joined to the validated opponent forecast crosswalk.",
+    "Displayed time labels are not verified UTC instants.",
+    "N/A counted-game eligibility is unresolved.",
+    "This is a fresh opponent ownership/schedule observation, not a validated projection or claim about full league roster details."
+  ]
+}

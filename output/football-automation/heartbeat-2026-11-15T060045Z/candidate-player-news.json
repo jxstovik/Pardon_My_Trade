@@ -1,0 +1,188 @@
+[
+  {
+    "playerId": "-16011",
+    "name": "Colts D/ST",
+    "position": [
+      "DST"
+    ],
+    "team": "11",
+    "scheduleEvidence": {
+      "id": "401873059",
+      "name": "Miami Dolphins at Indianapolis Colts",
+      "kickoff": "2026-11-15T18:00:00.000Z",
+      "week": 10,
+      "season": "2026",
+      "teams": [
+        {
+          "id": "11",
+          "abbreviation": "IND"
+        },
+        {
+          "id": "15",
+          "abbreviation": "MIA"
+        }
+      ],
+      "state": "pre"
+    },
+    "retrievedAt": "2026-11-15T06:02:10.263Z",
+    "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100"
+  },
+  {
+    "playerId": "-16025",
+    "name": "49ers D/ST",
+    "position": [
+      "DST"
+    ],
+    "team": "25",
+    "scheduleEvidence": {
+      "id": "401873063",
+      "name": "San Francisco 49ers at Dallas Cowboys",
+      "kickoff": "2026-11-15T21:25:00.000Z",
+      "week": 10,
+      "season": "2026",
+      "teams": [
+        {
+          "id": "6",
+          "abbreviation": "DAL"
+        },
+        {
+          "id": "25",
+          "abbreviation": "SF"
+        }
+      ],
+      "state": "pre"
+    },
+    "retrievedAt": "2026-11-15T06:02:10.263Z",
+    "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100"
+  },
+  {
+    "playerId": "-16012",
+    "name": "Chiefs D/ST",
+    "position": [
+      "DST"
+    ],
+    "team": "12",
+    "scheduleEvidence": {
+      "id": "401873058",
+      "name": "Kansas City Chiefs at Atlanta Falcons",
+      "kickoff": "2026-11-15T18:00:00.000Z",
+      "week": 10,
+      "season": "2026",
+      "teams": [
+        {
+          "id": "1",
+          "abbreviation": "ATL"
+        },
+        {
+          "id": "12",
+          "abbreviation": "KC"
+        }
+      ],
+      "state": "pre"
+    },
+    "retrievedAt": "2026-11-15T06:02:10.263Z",
+    "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100"
+  },
+  {
+    "playerId": "-16008",
+    "name": "Lions D/ST",
+    "position": [
+      "DST"
+    ],
+    "team": "8",
+    "scheduleEvidence": {
+      "id": "401873053",
+      "name": "New England Patriots at Detroit Lions",
+      "kickoff": "2026-11-15T14:30:00.000Z",
+      "week": 10,
+      "season": "2026",
+      "teams": [
+        {
+          "id": "8",
+          "abbreviation": "DET"
+        },
+        {
+          "id": "17",
+          "abbreviation": "NE"
+        }
+      ],
+      "state": "pre"
+    },
+    "retrievedAt": "2026-11-15T06:02:10.263Z",
+    "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100"
+  },
+  {
+    "playerId": "-16022",
+    "name": "Cardinals D/ST",
+    "position": [
+      "DST"
+    ],
+    "team": "22",
+    "scheduleEvidence": {
+      "id": "401873061",
+      "name": "Los Angeles Rams at Arizona Cardinals",
+      "kickoff": "2026-11-15T21:05:00.000Z",
+      "week": 10,
+      "season": "2026",
+      "teams": [
+        {
+          "id": "22",
+          "abbreviation": "ARI"
+        },
+        {
+          "id": "14",
+          "abbreviation": "LAR"
+        }
+      ],
+      "state": "pre"
+    },
+    "retrievedAt": "2026-11-15T06:02:10.263Z",
+    "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100"
+  },
+  {
+    "playerId": "-16024",
+    "name": "Chargers D/ST",
+    "position": [
+      "DST"
+    ],
+    "team": "24",
+    "scheduleEvidence": {
+      "id": "401873065",
+      "name": "Los Angeles Chargers at Baltimore Ravens",
+      "kickoff": "2026-11-17T01:15:00.000Z",
+      "week": 10,
+      "season": "2026",
+      "teams": [
+        {
+          "id": "33",
+          "abbreviation": "BAL"
+        },
+        {
+          "id": "24",
+          "abbreviation": "LAC"
+        }
+      ],
+      "state": "pre"
+    },
+    "retrievedAt": "2026-11-15T06:02:10.263Z",
+    "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=10&limit=100"
+  },
+  {
+    "playerId": "4887558",
+    "name": "Emanuel Wilson",
+    "position": [
+      "RB"
+    ],
+    "news": [
+      {
+        "playerId": "4887558",
+        "status": "unverified",
+        "publishedAt": "2026-11-11T02:28:46.000Z",
+        "retrievedAt": "2026-11-15T06:06:59.960Z",
+        "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4887558",
+        "text": "Wilson didn't log any snaps during Sunday's win over the Cardinals. Wilson averaged 18.2 carries for 66.7 yards over six games between Week 2 and Week 7, culminating with a 24-100-1 rushing line against Kansas City. However, that opportunity came while Jadarian Price and Zach Charbonnet were on IR. Both running backs returned ahead of the Week 8 matchup against Chicago, and Wilson hasn't played a single offensive snap in two games since. As long as Charbonnet and Price are both healthy, it appears Wilson is going to be relegated primarily to a special-teams role, if he plays at all.",
+        "kind": "news"
+      }
+    ]
+  }
+]

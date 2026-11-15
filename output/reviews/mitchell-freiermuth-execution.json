@@ -1,0 +1,199 @@
+{
+  "approval": {
+    "action": {
+      "actionId": "act-1792019193280-zb8269",
+      "action": {
+        "type": "add_drop",
+        "teamId": "7",
+        "addPlayerIds": [
+          "4361411"
+        ],
+        "dropPlayerIds": [
+          "4597500"
+        ]
+      },
+      "risk": "high",
+      "rationale": "Human-requested add/drop: add Pat Freiermuth; drop player 4597500.",
+      "status": "approved",
+      "createdAt": "2026-10-14T23:06:33.280Z",
+      "expiresAt": "2026-10-14T23:36:33.280Z",
+      "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "preconditions": {
+        "leagueExternalId": "98806880",
+        "scoringPeriod": "2026-W6",
+        "expectedRosterHashes": {
+          "7": "fedbd42ece0633fecde8af3b9e01acdf2ad69e17c8366506667264eed83ea354"
+        }
+      },
+      "resolvedAt": "2026-10-14T23:06:47.048Z",
+      "approvedAt": "2026-10-14T23:06:47.048Z",
+      "approvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth",
+      "resolvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth"
+    },
+    "execution_allowed": false
+  },
+  "execution": {
+    "execution": {
+      "actionId": "act-1792019193280-zb8269",
+      "status": "executed",
+      "receipt": {
+        "receiptId": "rcpt-act-1792019193280-zb8269",
+        "actionId": "act-1792019193280-zb8269",
+        "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+        "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+        "approvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth",
+        "status": "executed",
+        "recordedAt": "2026-10-14T23:06:47.816Z",
+        "completedAt": "2026-10-14T23:06:48.118Z",
+        "response": {
+          "bidAmount": 0,
+          "executionType": "EXECUTE",
+          "id": "a3a5b854-62e9-4a4d-8cb9-1c28d45349e6",
+          "isActingAsTeamOwner": false,
+          "isLeagueManager": false,
+          "isPending": false,
+          "items": [
+            {
+              "fromLineupSlotId": -1,
+              "fromTeamId": 0,
+              "isKeeper": false,
+              "overallPickNumber": 0,
+              "playerId": 4361411,
+              "toLineupSlotId": 20,
+              "toTeamId": 7,
+              "type": "ADD"
+            },
+            {
+              "fromLineupSlotId": 20,
+              "fromTeamId": 7,
+              "isKeeper": false,
+              "overallPickNumber": 0,
+              "playerId": 4597500,
+              "toLineupSlotId": -1,
+              "toTeamId": 0,
+              "type": "DROP"
+            }
+          ],
+          "memberId": "{77026C07-04F1-4E06-9363-88003B588B59}",
+          "proposedDate": 1792019208035,
+          "rating": 0,
+          "scoringPeriodId": 6,
+          "skipTransactionCounters": false,
+          "status": "EXECUTED",
+          "subOrder": 0,
+          "teamId": 7,
+          "type": "FREEAGENT"
+        }
+      }
+    }
+  },
+  "audit": {
+    "action": {
+      "actionId": "act-1792019193280-zb8269",
+      "action": {
+        "type": "add_drop",
+        "teamId": "7",
+        "addPlayerIds": [
+          "4361411"
+        ],
+        "dropPlayerIds": [
+          "4597500"
+        ]
+      },
+      "risk": "high",
+      "rationale": "Human-requested add/drop: add Pat Freiermuth; drop player 4597500.",
+      "status": "executed",
+      "createdAt": "2026-10-14T23:06:33.280Z",
+      "expiresAt": "2026-10-14T23:36:33.280Z",
+      "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "preconditions": {
+        "leagueExternalId": "98806880",
+        "scoringPeriod": "2026-W6",
+        "expectedRosterHashes": {
+          "7": "fedbd42ece0633fecde8af3b9e01acdf2ad69e17c8366506667264eed83ea354"
+        }
+      },
+      "resolvedAt": "2026-10-14T23:06:48.119Z",
+      "approvedAt": "2026-10-14T23:06:47.048Z",
+      "approvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth",
+      "resolvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth"
+    },
+    "receipt": {
+      "receiptId": "rcpt-act-1792019193280-zb8269",
+      "actionId": "act-1792019193280-zb8269",
+      "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+      "approvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth",
+      "status": "executed",
+      "recordedAt": "2026-10-14T23:06:47.816Z",
+      "completedAt": "2026-10-14T23:06:48.118Z",
+      "response": {
+        "bidAmount": 0,
+        "executionType": "EXECUTE",
+        "id": "a3a5b854-62e9-4a4d-8cb9-1c28d45349e6",
+        "isActingAsTeamOwner": false,
+        "isLeagueManager": false,
+        "isPending": false,
+        "items": [
+          {
+            "fromLineupSlotId": -1,
+            "fromTeamId": 0,
+            "isKeeper": false,
+            "overallPickNumber": 0,
+            "playerId": 4361411,
+            "toLineupSlotId": 20,
+            "toTeamId": 7,
+            "type": "ADD"
+          },
+          {
+            "fromLineupSlotId": 20,
+            "fromTeamId": 7,
+            "isKeeper": false,
+            "overallPickNumber": 0,
+            "playerId": 4597500,
+            "toLineupSlotId": -1,
+            "toTeamId": 0,
+            "type": "DROP"
+          }
+        ],
+        "memberId": "{77026C07-04F1-4E06-9363-88003B588B59}",
+        "proposedDate": 1792019208035,
+        "rating": 0,
+        "scoringPeriodId": 6,
+        "skipTransactionCounters": false,
+        "status": "EXECUTED",
+        "subOrder": 0,
+        "teamId": 7,
+        "type": "FREEAGENT"
+      }
+    },
+    "audit": [
+      {
+        "auditId": "audit-act-1792019193280-zb8269-1792019207816-olqmzw",
+        "actionId": "act-1792019193280-zb8269",
+        "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+        "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+        "event": "submission_started",
+        "recordedAt": "2026-10-14T23:06:47.816Z",
+        "actor": "pmt-executor",
+        "details": {
+          "approvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth"
+        }
+      },
+      {
+        "auditId": "audit-act-1792019193280-zb8269-1792019208119-fkckdq",
+        "actionId": "act-1792019193280-zb8269",
+        "idempotencyKey": "pmt-action:act-1792019193280-zb8269:d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+        "payloadHash": "d1d1b88601a186aa6a6dc8ea25997aefdda7693c0a8a934144c1ac14df73eea3",
+        "event": "executed",
+        "recordedAt": "2026-10-14T23:06:48.119Z",
+        "actor": "pmt-executor",
+        "details": {
+          "approvedBy": "user-authorized conditional upgrade; Codex selected Freiermuth"
+        }
+      }
+    ]
+  }
+}

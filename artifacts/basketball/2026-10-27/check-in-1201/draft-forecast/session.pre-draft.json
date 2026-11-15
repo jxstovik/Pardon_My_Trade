@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "sourceKind": "manual-local",
+  "observedAt": "2026-10-27T12:02:13Z",
+  "draftStart": "2026-10-28T21:00:00-04:00",
+  "phase": "pre-draft",
+  "teamOrder": [
+    "2rc1dg43mvgsurtp",
+    "ir66qwd2mvgsj4wg",
+    "rlfm3uhjmvk7q70x",
+    "vyfs1k8xmvgtitmc",
+    "kq1erunqmvhbzx4y",
+    "wwc1n3o4mvn1c6hk",
+    "evucydykmvjmlrze",
+    "hhkzj65hmvjokk2e"
+  ],
+  "rounds": 14,
+  "unavailablePlayerIds": [],
+  "picks": []
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-10T07:30:19.260Z",
+  "triggerLocal": "2026-11-10T02:30:19.260-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": 19.26,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "browserAccess": "Authenticated Fantrax canonical league home and documented league UI views succeeded; browser UI transcription only.",
+  "observedAt": "2026-11-10T07:32:27Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "teamName": "Board Man Gets pAId",
+  "season": "2026-27",
+  "profile": "balanced",
+  "currentPeriod": {
+    "number": 2,
+    "dates": "Nov 9-Nov 15, 2026",
+    "opponent": "CatsByAtLeast1",
+    "opponentTeamId": "2rc1dg43mvgsurtp",
+    "ownRoster": "14 players, 10 active/four reserves. Fresh roster read confirms Jayden Reid active G and Keshawn Fisher reserve after approved paired transactions; Quion remains in disabled active Flex; Tyson and Cox absent.",
+    "currentMatchup": "6-2-0 for Board Man Gets pAId vs 2-6-0 for CatsByAtLeast1 on live period panel; provisional.",
+    "transactionEvidence": [
+      "Fantrax home Recent Transactions: Keshawn Fisher add / Cade Tyson remove processed Nov 9, 11:17 AM.",
+      "Fantrax home Recent Transactions: Jayden Reid add / Jalen Cox remove processed Nov 9, 11:20 AM.",
+      "Prior exact-pair attempt Max Weisbrod / Quion Williams was platform-rejected because claim Period 2 and drop Period 3 do not match. No execution; no retry, substitution or deferral."
+    ]
+  },
+  "mondayActuals": {
+    "Markus Burton": {
+      "game": "Syracuse 80 at Indiana 83, final",
+      "fantraxBoxscoreId": "06od8",
+      "stats": {"PTS": 20, "REB": 3, "AST": 4, "ST": 3},
+      "limits": "Boxscore transcription; retained as prospective actual evidence."
+    },
+    "Javontae Campbell": {
+      "game": "Minnesota 63 at Cincinnati 61, final",
+      "fantraxBoxscoreId": "06qgh",
+      "participation": "Not listed in Cincinnati's Fantrax boxscore player table; current roster YTD GP remains 0.",
+      "limits": "No cause inferred; latest distinct injury article remains Nov 2 foot-related DNP."
+    },
+    "Jack Karasinski": {
+      "currentYtdGP": 1,
+      "latestFantraxNews": "Nov 9: concussion; could return Friday against Boston University.",
+      "nov9Boxscore": "Boston University 55 at Northwestern 72, final; Karasinski absent from player table. Next listed Northwestern game is DePaul Fri Nov 13.",
+      "limits": "Source's Friday/Boston University return wording conflicts with the observed schedule/boxscore. Treat timing/opponent as unresolved and do not treat as clearance."
+    }
+  },
+  "operationalBlockers": [
+    "Whole-roster versus player-level lock scope unresolved.",
+    "Acquisition activation timing unresolved.",
+    "N/A game counting, caps, and shooting thresholds/rounding unresolved."
+  ],
+  "lineupReadiness": "No qualified recommendation; stale Oct 27 rate baseline and unresolved rules/status gates. No lineup changes made.",
+  "historicalDoctor": "Ran doctor at trigger timestamp against unchanged Oct25 pre-draft snapshot; partial, zero observed players, and stale source observations. Output copied separately under doctor/.",
+  "baselineOldestDependencyObservedAt": "2026-10-27T11:24:32Z",
+  "baselineRefreshedOrRehashed": false,
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationRecommendation": "NOTIFY: Monday boxscores show Campbell and Karasinski did not appear and Burton recorded 20 PTS/3 REB/4 AST/3 ST; latest Karasinski note's Friday/Boston University wording conflicts with the observed schedule. Current matchup is provisional; no lineup advice/action is ready."
+}

@@ -1,0 +1,141 @@
+{
+  "at": "2026-11-12T06:12:11.182Z",
+  "modelVersion": "weekly-2026-W10-18db0750aba2-368dedd8bda2-d1284c4271e7",
+  "cutoff": 9,
+  "capacity": {
+    "usedKnownReceipts": 0,
+    "externalPendingUnknown": true,
+    "reservedExternal": null,
+    "remaining": null,
+    "limit": 5,
+    "executionAllowed": false,
+    "reason": "Private pending-move read blocked by ESPN_AUTH_REQUIRED"
+  },
+  "availablePlayers": 903,
+  "availableModeled": 457,
+  "seasonEndWeek": 17,
+  "unknownHealthyCoverage": [],
+  "choices": [
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "5082424",
+        "dropPlayerId": "5081335",
+        "priority": 1
+      },
+      "nearTermGain": 2.9519682941159218,
+      "seasonGain": 8.251155235199814,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 1.3339686243210522
+        },
+        {
+          "week": 11,
+          "gain": 0.956236346411373
+        },
+        {
+          "week": 12,
+          "gain": 0.6617633233834965
+        },
+        {
+          "week": 13,
+          "gain": 0.4316988258111678
+        },
+        {
+          "week": 14,
+          "gain": 0.8161521441012469
+        },
+        {
+          "week": 15,
+          "gain": 1.0792789180349018
+        },
+        {
+          "week": 16,
+          "gain": 1.0410069372052524
+        },
+        {
+          "week": 17,
+          "gain": 1.9310501159313238
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.6328125,
+          "worsens": 0.3671875,
+          "ties": 0,
+          "expectedGain": 1.3339686243210522,
+          "favorableMarginLowerBound": 0.14511544647732538
+        },
+        "nearTerm": {
+          "improves": 0.6015625,
+          "worsens": 0.3984375,
+          "ties": 0,
+          "expectedGain": 2.9519682941159218,
+          "favorableMarginLowerBound": 0.0807308981727086
+        },
+        "season": {
+          "improves": 0.6953125,
+          "worsens": 0.3046875,
+          "ties": 0,
+          "expectedGain": 8.251155235199814,
+          "favorableMarginLowerBound": 0.27555626311206693
+        },
+        "probabilityAddedPlayerStarts": 1,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.3339686243210522
+          },
+          {
+            "week": 11,
+            "gain": 0.956236346411373
+          },
+          {
+            "week": 12,
+            "gain": 0.6617633233834965
+          },
+          {
+            "week": 13,
+            "gain": 0.4316988258111678
+          },
+          {
+            "week": 14,
+            "gain": 0.8161521441012469
+          },
+          {
+            "week": 15,
+            "gain": 1.0792789180349018
+          },
+          {
+            "week": 16,
+            "gain": 1.0410069372052524
+          },
+          {
+            "week": 17,
+            "gain": 1.9310501159313238
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_kicker",
+      "suggestions": {
+        "nearTermMet": false,
+        "seasonMet": false
+      },
+      "rationale": "stream_kicker: pregame-selected lineup, P(improve)/P(worsen) next week 0.633/0.367, next three 0.602/0.398; expected gains 2.95 near / 8.25 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Dominic Zvada",
+      "dropName": "Drew Stevens"
+    }
+  ],
+  "unreviewedCandidateRemainder": 1,
+  "platformWrites": 0
+}

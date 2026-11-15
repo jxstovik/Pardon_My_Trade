@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-15T07:29:45.925Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "leagueName": "Banging 3s",
+  "team": {
+    "id": "wwc1n3o4mvn1c6hk",
+    "name": "jxstovik",
+    "confirmed": true
+  },
+  "season": "2026-27",
+  "competition": "NCAAB",
+  "operatorTimezone": "America/New_York",
+  "status": "partial",
+  "readyForPersonalAdvice": false,
+  "readyForExecution": false,
+  "liveActionsExecuted": 0,
+  "categories": [
+    "BLK",
+    "ST",
+    "AST",
+    "FG%",
+    "FT%",
+    "PTS",
+    "REB",
+    "3PTM"
+  ],
+  "objective": "Expected category wins; retain losses/ties separately. No turnover penalty or fantasy-points sum.",
+  "roster": {
+    "period": 1,
+    "observedPlayers": 0,
+    "maxTotalPlayers": 14,
+    "maxTotalActivePlayers": 10,
+    "maxTotalReservePlayers": 4,
+    "positionConstraints": {
+      "Flx": {
+        "maxActive": 2
+      },
+      "G": {
+        "maxActive": 4
+      },
+      "F/C": {
+        "maxActive": 4
+      }
+    }
+  },
+  "draft": {
+    "publicApi": {
+      "source": {
+        "url": "https://www.fantrax.com/fxea/general/getDraftResults?leagueId=mmioj1mvmvgsc3io",
+        "observedAt": "2026-10-25T18:18:55Z",
+        "kind": "browser-transcription",
+        "completeness": "field-subset"
+      },
+      "state": "running",
+      "pickEntries": 112,
+      "selectedPlayers": 0
+    },
+    "authenticated": {
+      "source": {
+        "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+        "observedAt": "2026-10-27T12:02:13Z",
+        "kind": "browser-transcription",
+        "completeness": "field-subset"
+      },
+      "competitionCode": "NCAAB",
+      "draftState": "not-held-scheduled",
+      "ownRosterCount": 0,
+      "draftStart": "2026-10-28T21:00:00-04:00"
+    }
+  },
+  "strategy": {
+    "profile": "balanced",
+    "revision": "27efa58369690b518d1c6566fff15493c33ddb409a7ea479a560d40103413509",
+    "saved": true,
+    "requestedOverlay": "none",
+    "activeOverlay": "none",
+    "effectivePeriod": null,
+    "alternatives": {
+      "balanced": "Selected starting approach: compete across all eight categories; no intentional punt.",
+      "bigs": "Explore REB, BLK and attempt-weighted FG% strength; display AST, threes and FT% costs. No automatic punt.",
+      "guards": "Explore AST, threes, points and FT% creation; display REB, BLK and FG% costs. No turnover penalty."
+    },
+    "forecastsAvailable": false,
+    "probabilities": null
+  },
+  "knownRules": {
+    "source": {
+      "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+      "observedAt": "2026-10-27T12:02:36Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset"
+    },
+    "seasonLabel": "2026-27",
+    "lineupCadence": "weekly-monday",
+    "lockOffsetMinutes": 0,
+    "lockScope": null,
+    "leagueTimezone": null,
+    "activationRule": null,
+    "minimumTotal": 0,
+    "minimumActive": 0,
+    "injuryReserve": false,
+    "minorLeague": false,
+    "preventIllegalTransactions": "always",
+    "weeklyClaims": "unlimited",
+    "seasonClaims": "unlimited",
+    "freeAgents": "first-come-first-served",
+    "waiverMethod": "rotating-priority",
+    "waiverDays": 2,
+    "minimumWaiverHours": 23,
+    "antiChurning": true,
+    "undraftedToWaivers": true,
+    "claimsBeforeDraft": false,
+    "dropsDuringDraft": false,
+    "currentWaiverPriority": null,
+    "waiverProcessing": null,
+    "tradeReviewDays": 2,
+    "tradeObjections": 4,
+    "tradeDeadline": "none",
+    "playoffReseed": false,
+    "playoffTie": "higher-seed",
+    "standingsTies": [
+      "head-to-head-among-tied",
+      "season-wins",
+      "random"
+    ],
+    "statFreezeHours": 168,
+    "gameCaps": null,
+    "shotMinimums": null,
+    "categoryComparison": null
+  },
+  "playoffs": {
+    "used": true,
+    "lastRegularSeasonPeriod": 17,
+    "firstPlayoffPeriod": 18,
+    "numPlayoffTeams": 4,
+    "mergePlayoffPeriods": false
+  },
+  "calendar": {
+    "state": "in-period",
+    "current": {
+      "number": 2,
+      "startDate": "2026-11-09T11:00:00.0-0500",
+      "endDate": "2026-11-16T10:59:59.0-0500"
+    },
+    "next": {
+      "number": 3,
+      "startDate": "2026-11-16T11:00:00.0-0500",
+      "endDate": "2026-11-23T10:59:59.0-0500"
+    },
+    "importedPeriods": 19,
+    "accumulationStart": "2026-11-01",
+    "accumulationEnd": "2027-03-14",
+    "finalPeriodEnd": "2027-03-15T11:59:59.0-0400",
+    "accumulationAndPeriodDatesDiffer": true,
+    "lockInstant": null,
+    "note": "Period boundaries are not verified lineup locks. Accumulation dates are a separate constraint; date/timezone reconciliation is required."
+  },
+  "sourceHealth": {
+    "league": {
+      "url": "https://www.fantrax.com/fxea/general/getLeagueInfo?leagueId=mmioj1mvmvgsc3io&excludePlayerInfo=true",
+      "observedAt": "2026-10-25T13:28:03Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset",
+      "ageHours": 498.02859027777777,
+      "maximumAgeHours": 24,
+      "status": "stale"
+    },
+    "roster": {
+      "url": "https://www.fantrax.com/fxea/general/getTeamRosters?leagueId=mmioj1mvmvgsc3io&period=1",
+      "observedAt": "2026-10-25T18:18:55Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset",
+      "ageHours": 493.1808125,
+      "maximumAgeHours": 1,
+      "status": "stale"
+    },
+    "rules": {
+      "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+      "observedAt": "2026-10-27T12:02:36Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset",
+      "ageHours": 451.45275694444445,
+      "maximumAgeHours": 24,
+      "status": "stale"
+    },
+    "draft": {
+      "url": "https://www.fantrax.com/fxea/general/getDraftResults?leagueId=mmioj1mvmvgsc3io",
+      "observedAt": "2026-10-25T18:18:55Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset",
+      "ageHours": 493.1808125,
+      "maximumAgeHours": 1,
+      "status": "stale"
+    },
+    "authenticated": {
+      "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+      "observedAt": "2026-10-27T12:02:13Z",
+      "kind": "browser-transcription",
+      "completeness": "field-subset",
+      "ageHours": 451.4591458333333,
+      "maximumAgeHours": 1,
+      "status": "stale"
+    }
+  },
+  "blockers": [
+    "One or more source observations are stale or in the future; reimport does not refresh them.",
+    "Roster is observed empty. Authenticated home observed 2026-10-27T12:02:13Z reported draft not held, scheduled 2026-10-28T21:00:00-04:00; prepare a draft board before roster advice.",
+    "Unverified operational rule: lockScope.",
+    "Unverified operational rule: leagueTimezone.",
+    "Unverified operational rule: activationRule.",
+    "Unverified operational rule: gameCaps.",
+    "Unverified operational rule: shotMinimums.",
+    "Unverified operational rule: categoryComparison.",
+    "The separate weekly-forecast command provides conditional lineup research; verified lock/counting semantics and a validated probabilistic basketball model remain unavailable."
+  ],
+  "capabilities": {
+    "browserAssistedRead": "evidence provided",
+    "unattendedHttp": "not established; a capture is not a live transport check",
+    "localReport": "implemented",
+    "categoryArithmetic": "implemented; W/L/T uses explicit synthetic policy only",
+    "draftPreparation": "experimental baseline via separate draft-forecast output; not evaluated by this readiness report",
+    "customModel": "not-trained",
+    "optimizer": "conditional linear weekly-forecast command; separate input coverage and legality gates",
+    "scheduler": "external-interim-only",
+    "platformWriter": "absent"
+  },
+  "manifest": {
+    "snapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+    "captureHash": "2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+    "configHash": "bea08b8a41d281bd8c3d43434ab23feca731ca007930bd38ddc4b9faa712681e",
+    "policyHash": "20a89f735563b02f86eef970470a98c0e726e63a6440d452b87772b6263baaac",
+    "configuration": {
+      "schemaVersion": 1,
+      "leagueId": "mmioj1mvmvgsc3io",
+      "leagueName": "Banging 3s",
+      "seasonYear": 2026,
+      "teamId": "wwc1n3o4mvn1c6hk",
+      "teamConfirmed": true,
+      "initialProfile": "balanced",
+      "operatorTimezone": "America/New_York",
+      "competition": "NCAAB",
+      "authenticatedState": {
+        "source": {
+          "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+          "observedAt": "2026-10-27T12:02:13Z",
+          "kind": "browser-transcription",
+          "completeness": "field-subset"
+        },
+        "competitionCode": "NCAAB",
+        "draftState": "not-held-scheduled",
+        "ownRosterCount": 0,
+        "draftStart": "2026-10-28T21:00:00-04:00"
+      },
+      "rules": {
+        "source": {
+          "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+          "observedAt": "2026-10-27T12:02:36Z",
+          "kind": "browser-transcription",
+          "completeness": "field-subset"
+        },
+        "seasonLabel": "2026-27",
+        "lineupCadence": "weekly-monday",
+        "lockOffsetMinutes": 0,
+        "lockScope": null,
+        "leagueTimezone": null,
+        "activationRule": null,
+        "minimumTotal": 0,
+        "minimumActive": 0,
+        "injuryReserve": false,
+        "minorLeague": false,
+        "preventIllegalTransactions": "always",
+        "weeklyClaims": "unlimited",
+        "seasonClaims": "unlimited",
+        "freeAgents": "first-come-first-served",
+        "waiverMethod": "rotating-priority",
+        "waiverDays": 2,
+        "minimumWaiverHours": 23,
+        "antiChurning": true,
+        "undraftedToWaivers": true,
+        "claimsBeforeDraft": false,
+        "dropsDuringDraft": false,
+        "currentWaiverPriority": null,
+        "waiverProcessing": null,
+        "tradeReviewDays": 2,
+        "tradeObjections": 4,
+        "tradeDeadline": "none",
+        "playoffReseed": false,
+        "playoffTie": "higher-seed",
+        "standingsTies": [
+          "head-to-head-among-tied",
+          "season-wins",
+          "random"
+        ],
+        "statFreezeHours": 168,
+        "gameCaps": null,
+        "shotMinimums": null,
+        "categoryComparison": null
+      }
+    },
+    "policy": {
+      "schemaVersion": 1,
+      "leagueId": "mmioj1mvmvgsc3io",
+      "teamId": "wwc1n3o4mvn1c6hk",
+      "profile": "balanced",
+      "overlay": "none",
+      "effectivePeriod": null,
+      "selectedAt": "2026-10-25T13:45:30.462Z",
+      "previousRevision": null,
+      "revision": "27efa58369690b518d1c6566fff15493c33ddb409a7ea479a560d40103413509"
+    },
+    "originalPayloadHash": null,
+    "hashMeaning": "Hash of validated imported/transcribed fields; not proof of original API bytes.",
+    "ingestedAt": "2026-10-25T18:19:59.036Z",
+    "analysisVersion": "basketball-readiness-v1",
+    "mode": "read-only"
+  }
+}

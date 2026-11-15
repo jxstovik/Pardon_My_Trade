@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-09T07:26:17.134Z",
+  "triggerLocal": "2026-11-09T02:26:17.134-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": -222.866,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "browserAccess": "Authenticated Fantrax canonical league home succeeded through hidden in-app browser; supported UI-only reads.",
+  "observedAt": "2026-11-09T07:34:30Z",
+  "currentPeriod": {
+    "number": 2,
+    "dates": "Nov 9-Nov 15, 2026",
+    "opponent": "CatsByAtLeast1",
+    "opponentTeamId": "2rc1dg43mvgsurtp",
+    "ownRoster": "14 players; 10 active/four reserve; Balanced; exact current slot state refreshed",
+    "ownSchedule": "Freshly reread; 28 displayed rows including two for season-ineligible Tyson. Exclude Tyson; Quion has zero rows and N/A affiliation, which remains unknown versus zero counted games.",
+    "opponentSchedule": "Freshly reread 14 named roster rows and displayed schedules; IDs unavailable for model join. Displayed schedule count is 30 from current capture; no opponent forecast.",
+    "candidatePool": "Current available-player Stats page showed first 20 score-sorted Claim/FA rows. Schedule view switched to a different rank cohort (20 rows); partial page captures only, no stable IDs or complete league pool, so no candidate forecast/ranking.",
+    "currentOwnedNews": [
+      "Fantrax Nov 8: Trevan Leonhardt 0 points (0-1 FG, 0-1 3Pt) in 15 minutes Saturday.",
+      "Fantrax Nov 6: Jack Karasinski out for Nov 6 only; no Nov 9-15 clearance stated.",
+      "Fantrax Nov 6: Cade Tyson remains ineligible for this season; exclude despite two scheduled entries.",
+      "Fantrax Nov 2: Javontae Campbell foot-related DNP; fresh YTD still 0 GP, which is not clearance or proof of current injury."
+    ],
+    "mondayFirstGame": {
+      "player": "Markus Burton",
+      "event": "Syracuse at Indiana",
+      "observedFantraxGamecastTime": "2026-11-09 6:30 PM EST",
+      "gameId": "06od8",
+      "sourceUrl": "https://www.fantrax.com/news/ncaab/boxscore/06od8?view=GAMECAST",
+      "limits": "Exact event start independently shown; league rules say 0:00 lock offset before scheduled game start, but team-versus-player lock scope and activation behavior remain unresolved. Not enough to promise whole-lineup deadline."
+    }
+  },
+  "period1Actual": {
+    "status": "provisional; Seven-day fantasy stat freeze is not complete",
+    "matchup": "Board Man Gets pAId 2-6-0 vs JeffWischer 6-2-0",
+    "ourTotals": {"FG%": 0.519, "3PTM": 19, "FT%": 0.851, "PTS": 193, "REB": 52, "AST": 44, "ST": 15, "BLK": 9},
+    "opponentTotals": {"FG%": 0.538, "3PTM": 16, "FT%": 0.819, "PTS": 357, "REB": 119, "AST": 74, "ST": 31, "BLK": 10},
+    "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/livescoring?matchupId=wwc1n3o4mvn1c6hk_rlfm3uhjmvk7q70x&mobileMatchupView=true",
+    "limits": "Live scoring view still labeled Period 1; preserve as provisional actuals only. No model training, accuracy claim, or promotion."
+  },
+  "lineupReadiness": "withheld; no firm advice. The stale Oct27 per-game baseline is not refreshed; YTD samples remain 0-3 games; Campbell's role/health and Karasinski's current status unresolved; Tyson excluded; Quion's school/counting ambiguous; N/A games, caps, shooting thresholds/rounding, and whole-roster lock scope unresolved. The first event time is known but that does not settle lineup lock semantics.",
+  "historicalDoctor": "Reran doctor and report against unchanged saved Oct25 pre-draft snapshot; still partial with zero observed players; saved separately.",
+  "baseline": {
+    "correctedBoardRevision": "344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1",
+    "oldestDependencyObservedAt": "2026-10-27T11:24:32Z",
+    "refreshedOrRehashed": false
+  },
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationRecommendation": "NOTIFY: first period's visible 2-6 result is provisional, Monday event time was verified, and exact whole-roster lock behavior remains unresolved. No lineup advice/action is recommended."
+}

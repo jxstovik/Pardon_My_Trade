@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-12T07:29:22.250Z",
+  "triggerLocal": "2026-11-12T02:29:22.250-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": -37.75,
+  "automation": {
+    "identity": "banging-3s-basketball-workflow",
+    "kind": "heartbeat",
+    "status": "ACTIVE",
+    "configuredUtcHour": "07:30Z daily",
+    "destinationThreadId": "01a17337-732c-7b52-b98b-d2f2c144c4c5",
+    "expiryUtc": "2027-03-16T03:59:59Z",
+    "identityDestinationActiveStateExpiryChanged": false,
+    "nextIntendedRun": "2026-11-13T02:30 America/New_York / 07:30Z"
+  },
+  "observedAt": "2026-11-12T07:33:18Z",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "teamName": "Board Man Gets pAId",
+  "manager": "jxstovik",
+  "season": "2026-27",
+  "profile": "balanced",
+  "browserAccess": "Authenticated Fantrax home, roster period schedules, available-player page/profile cards and rules page; visible UI transcription only.",
+  "period2": {
+    "dates": "Nov 9-Nov 15, 2026",
+    "opponent": "CatsByAtLeast1",
+    "matchupSnapshot": "CatsByAtLeast1 6-1-1, Board Man Gets pAId 1-6-1; provisional live matchup.",
+    "seasonStandingsSnapshot": "2-6-0; different surface from the current period matchup.",
+    "ownership": "14 players: 10 active and four reserve; Reid active at G, Fisher reserve, Quion active in disabled Flex, Tyson and Cox absent.",
+    "freshResults": "Nov 10 Reid: 30 minutes, 11 points, 2 rebounds, 2 assists, 4/11 FG and 2/4 FT. Fisher: 31 minutes, 27 points, 4 rebounds, 3 assists, 1 block, 8/12 FG and 8/12 FT; remained Reserve, so not counted as a fantasy lineup contribution."
+  },
+  "nextPeriods": {
+    "3": {"dates":"Nov 16-Nov 22, 2026","opponent":"NorseUppers","ownedScheduleRows":14,"unknownQuionSchedule":true},
+    "4": {"dates":"Nov 23-Nov 29, 2026","opponent":"Perks","ownedScheduleRows":14,"unknownQuionSchedule":true}
+  },
+  "waiverResearch": {
+    "availableView": "Current All Available Players first page, 20 rows in displayed Score order; every row displayed Claim and FA.",
+    "coverage": "Bounded first-page cohort only; no exhaustive pool or stable ID list from the rendered rows.",
+    "MaxWeisbrod": "Available (Claim/FA), NIU G; 4 starts in 4 games and 30.8 MPG; upcoming period schedule 2 games in P3 and 2 in P4; 7.3 assists per game. Nov 11 boxscore 14 points, 4 rebounds, 5 assists in 25 minutes vs N/A. No new player news/clearance visible. Exact Nov 9 Weisbrod/Quion P2/P3 pair rejection remains unchanged and was not retried.",
+    "BenHammond": "Available (Claim/FA), Virginia Tech G; 3 starts in 3 games and 30.7 MPG; P3 3 listed games and P4 1; Nov 11 Fantrax item reports 32 points, 5 rebounds, 4 assists and 1 steal in 33 minutes vs Iowa. Useful role/schedule card, not a stable forecast or pickup recommendation."
+  },
+  "operationalRules": {
+    "lineupSystem": "Managers enter lineup changes",
+    "cadence": "Weekly every Monday",
+    "pregameOffset": "0:00 before scheduled game start-time",
+    "unresolved": ["whole-roster versus player lock scope","exact timezone/UTC lock instants","new-claim activation period","N/A game counting","caps","shooting minimums and rounding"]
+  },
+  "forecastAndFreshness": {
+    "approvedCorrectedBoardRefreshed": false,
+    "approvedCorrectedBoardOldestDependencyAt": "2026-10-27T11:24:32Z",
+    "weeklyForecastGenerated": false,
+    "reason": "The approved category-rate baseline is stale and no refreshed future per-game input was available. Fresh schedule/UI evidence alone does not refresh rates or support a forecast.",
+    "historicalDoctor": "Ran at trigger against unchanged Oct 25 pre-draft capture. Output reports partial readiness and zero observed roster players; this is stale historical evidence, distinct from current UI evidence."
+  },
+  "actions": {"lineupChanges":0,"claims":0,"drops":0,"trades":0,"settingsChanges":0,"modelPromotions":0},
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationDeliveryVerified": false,
+  "notificationRecommendation": "NOTIFY: Thursday research refreshed the P3/P4 ownership and schedule view and surfaced current first-page FA Max Weisbrod plus a fresh Ben Hammond role/boxscore card with three P3 games. This is limited-candidate research only; no supported pickup or lineup recommendation is ready."
+}

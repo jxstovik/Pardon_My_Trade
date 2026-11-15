@@ -1,0 +1,1244 @@
+{
+  "schemaVersion": 1,
+  "kind": "synthetic-browser-rehearsal-final-state",
+  "scenario": "bigs",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "state": {
+    "revision": "g114-ec3ef6ce7ff27cf981796435d35b8de5b233dd1f8f02688e188f46317a709795",
+    "observation": {
+      "schemaVersion": 1,
+      "sessionId": "mmioj1mvmvgsc3io-mvqzfab4-bad539b02614fe70",
+      "venue": "local-mock",
+      "pageUrl": "http://127.0.0.1",
+      "receivedAt": "2026-10-27T17:54:21.009Z",
+      "sequence": 236,
+      "completeHistory": true,
+      "identityVerified": true,
+      "currentTeamId": null,
+      "clockSeconds": null,
+      "correction": false,
+      "session": {
+        "schemaVersion": 1,
+        "leagueId": "mmioj1mvmvgsc3io",
+        "teamId": "wwc1n3o4mvn1c6hk",
+        "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+        "sourceKind": "local-simulator",
+        "observedAt": "2026-10-27T17:54:21.009Z",
+        "draftStart": "2026-10-27T17:51:24.388Z",
+        "phase": "complete",
+        "teamOrder": [
+          "2rc1dg43mvgsurtp",
+          "ir66qwd2mvgsj4wg",
+          "rlfm3uhjmvk7q70x",
+          "vyfs1k8xmvgtitmc",
+          "kq1erunqmvhbzx4y",
+          "wwc1n3o4mvn1c6hk",
+          "evucydykmvjmlrze",
+          "hhkzj65hmvjokk2e"
+        ],
+        "rounds": 14,
+        "unavailablePlayerIds": [],
+        "picks": [
+          {
+            "overall": 1,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "06grf"
+          },
+          {
+            "overall": 2,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "064gk"
+          },
+          {
+            "overall": 3,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "0660s"
+          },
+          {
+            "overall": 4,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "06553"
+          },
+          {
+            "overall": 5,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "06pqo"
+          },
+          {
+            "overall": 6,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06n46"
+          },
+          {
+            "overall": 7,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06ga0"
+          },
+          {
+            "overall": 8,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06mts"
+          },
+          {
+            "overall": 9,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06dtg"
+          },
+          {
+            "overall": 10,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06g0o"
+          },
+          {
+            "overall": 11,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "065cb"
+          },
+          {
+            "overall": 12,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "06ga8"
+          },
+          {
+            "overall": 13,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "06psa"
+          },
+          {
+            "overall": 14,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "05wgg"
+          },
+          {
+            "overall": 15,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "06g7r"
+          },
+          {
+            "overall": 16,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "06dui"
+          },
+          {
+            "overall": 17,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "06nnu"
+          },
+          {
+            "overall": 18,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "06ptg"
+          },
+          {
+            "overall": 19,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "06gcz"
+          },
+          {
+            "overall": 20,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "06mu6"
+          },
+          {
+            "overall": 21,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "05wen"
+          },
+          {
+            "overall": 22,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06n8t"
+          },
+          {
+            "overall": 23,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "065p6"
+          },
+          {
+            "overall": 24,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06g9b"
+          },
+          {
+            "overall": 25,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "065xr"
+          },
+          {
+            "overall": 26,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "065ct"
+          },
+          {
+            "overall": 27,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "0655r"
+          },
+          {
+            "overall": 28,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "06na8"
+          },
+          {
+            "overall": 29,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "064ht"
+          },
+          {
+            "overall": 30,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "064ds"
+          },
+          {
+            "overall": 31,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "06ptd"
+          },
+          {
+            "overall": 32,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "06g54"
+          },
+          {
+            "overall": 33,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "0650z"
+          },
+          {
+            "overall": 34,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "064sc"
+          },
+          {
+            "overall": 35,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "064zb"
+          },
+          {
+            "overall": 36,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "0655p"
+          },
+          {
+            "overall": 37,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "06gvc"
+          },
+          {
+            "overall": 38,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06g0r"
+          },
+          {
+            "overall": 39,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06no6"
+          },
+          {
+            "overall": 40,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "071bf"
+          },
+          {
+            "overall": 41,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "071uc"
+          },
+          {
+            "overall": 42,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06n0z"
+          },
+          {
+            "overall": 43,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06g9r"
+          },
+          {
+            "overall": 44,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "065bi"
+          },
+          {
+            "overall": 45,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "06gcm"
+          },
+          {
+            "overall": 46,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "06gcf"
+          },
+          {
+            "overall": 47,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "06h34"
+          },
+          {
+            "overall": 48,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "071n6"
+          },
+          {
+            "overall": 49,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "06nnk"
+          },
+          {
+            "overall": 50,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "06nb6"
+          },
+          {
+            "overall": 51,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "06dvi"
+          },
+          {
+            "overall": 52,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "06gu8"
+          },
+          {
+            "overall": 53,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "06q7m"
+          },
+          {
+            "overall": 54,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "064kr"
+          },
+          {
+            "overall": 55,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06mub"
+          },
+          {
+            "overall": 56,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "0711h"
+          },
+          {
+            "overall": 57,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06ynp"
+          },
+          {
+            "overall": 58,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "065mj"
+          },
+          {
+            "overall": 59,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06vye"
+          },
+          {
+            "overall": 60,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "064f9"
+          },
+          {
+            "overall": 61,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "06gan"
+          },
+          {
+            "overall": 62,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "06n5h"
+          },
+          {
+            "overall": 63,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "071u8"
+          },
+          {
+            "overall": 64,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "064dy"
+          },
+          {
+            "overall": 65,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "06g7j"
+          },
+          {
+            "overall": 66,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "071w5"
+          },
+          {
+            "overall": 67,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "065vv"
+          },
+          {
+            "overall": 68,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "070js"
+          },
+          {
+            "overall": 69,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "064f5"
+          },
+          {
+            "overall": 70,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06h14"
+          },
+          {
+            "overall": 71,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06npr"
+          },
+          {
+            "overall": 72,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06mvl"
+          },
+          {
+            "overall": 73,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06g4a"
+          },
+          {
+            "overall": 74,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "0715h"
+          },
+          {
+            "overall": 75,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06gdn"
+          },
+          {
+            "overall": 76,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "070o5"
+          },
+          {
+            "overall": 77,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "07108"
+          },
+          {
+            "overall": 78,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "064x0"
+          },
+          {
+            "overall": 79,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "064ft"
+          },
+          {
+            "overall": 80,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "0725h"
+          },
+          {
+            "overall": 81,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "06q0j"
+          },
+          {
+            "overall": 82,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "06ne8"
+          },
+          {
+            "overall": 83,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "06gzi"
+          },
+          {
+            "overall": 84,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "05wt9"
+          },
+          {
+            "overall": 85,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "06q2a"
+          },
+          {
+            "overall": 86,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "064m3"
+          },
+          {
+            "overall": 87,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "071vr"
+          },
+          {
+            "overall": 88,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06dt0"
+          },
+          {
+            "overall": 89,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "064xh"
+          },
+          {
+            "overall": 90,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06nm4"
+          },
+          {
+            "overall": 91,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06n56"
+          },
+          {
+            "overall": 92,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "05xhb"
+          },
+          {
+            "overall": 93,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "06pql"
+          },
+          {
+            "overall": 94,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "06gd5"
+          },
+          {
+            "overall": 95,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "06hyf"
+          },
+          {
+            "overall": 96,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "065zr"
+          },
+          {
+            "overall": 97,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "05pb0"
+          },
+          {
+            "overall": 98,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "064h9"
+          },
+          {
+            "overall": 99,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "0655s"
+          },
+          {
+            "overall": 100,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "075yy"
+          },
+          {
+            "overall": 101,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "071gf"
+          },
+          {
+            "overall": 102,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "06gv0"
+          },
+          {
+            "overall": 103,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "06n5q"
+          },
+          {
+            "overall": 104,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06mu8"
+          },
+          {
+            "overall": 105,
+            "teamId": "hhkzj65hmvjokk2e",
+            "playerId": "06pl8"
+          },
+          {
+            "overall": 106,
+            "teamId": "evucydykmvjmlrze",
+            "playerId": "071jo"
+          },
+          {
+            "overall": 107,
+            "teamId": "wwc1n3o4mvn1c6hk",
+            "playerId": "064yz"
+          },
+          {
+            "overall": 108,
+            "teamId": "kq1erunqmvhbzx4y",
+            "playerId": "064fs"
+          },
+          {
+            "overall": 109,
+            "teamId": "vyfs1k8xmvgtitmc",
+            "playerId": "07105"
+          },
+          {
+            "overall": 110,
+            "teamId": "rlfm3uhjmvk7q70x",
+            "playerId": "06eo8"
+          },
+          {
+            "overall": 111,
+            "teamId": "ir66qwd2mvgsj4wg",
+            "playerId": "0713y"
+          },
+          {
+            "overall": 112,
+            "teamId": "2rc1dg43mvgsurtp",
+            "playerId": "0652w"
+          }
+        ]
+      }
+    },
+    "session": {
+      "schemaVersion": 1,
+      "leagueId": "mmioj1mvmvgsc3io",
+      "teamId": "wwc1n3o4mvn1c6hk",
+      "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+      "sourceKind": "local-simulator",
+      "observedAt": "2026-10-27T17:54:21.009Z",
+      "draftStart": "2026-10-27T17:51:24.388Z",
+      "phase": "complete",
+      "teamOrder": [
+        "2rc1dg43mvgsurtp",
+        "ir66qwd2mvgsj4wg",
+        "rlfm3uhjmvk7q70x",
+        "vyfs1k8xmvgtitmc",
+        "kq1erunqmvhbzx4y",
+        "wwc1n3o4mvn1c6hk",
+        "evucydykmvjmlrze",
+        "hhkzj65hmvjokk2e"
+      ],
+      "rounds": 14,
+      "unavailablePlayerIds": [],
+      "picks": [
+        {
+          "overall": 1,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "06grf"
+        },
+        {
+          "overall": 2,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "064gk"
+        },
+        {
+          "overall": 3,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "0660s"
+        },
+        {
+          "overall": 4,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "06553"
+        },
+        {
+          "overall": 5,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "06pqo"
+        },
+        {
+          "overall": 6,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06n46"
+        },
+        {
+          "overall": 7,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06ga0"
+        },
+        {
+          "overall": 8,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06mts"
+        },
+        {
+          "overall": 9,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06dtg"
+        },
+        {
+          "overall": 10,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06g0o"
+        },
+        {
+          "overall": 11,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "065cb"
+        },
+        {
+          "overall": 12,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "06ga8"
+        },
+        {
+          "overall": 13,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "06psa"
+        },
+        {
+          "overall": 14,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "05wgg"
+        },
+        {
+          "overall": 15,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "06g7r"
+        },
+        {
+          "overall": 16,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "06dui"
+        },
+        {
+          "overall": 17,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "06nnu"
+        },
+        {
+          "overall": 18,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "06ptg"
+        },
+        {
+          "overall": 19,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "06gcz"
+        },
+        {
+          "overall": 20,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "06mu6"
+        },
+        {
+          "overall": 21,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "05wen"
+        },
+        {
+          "overall": 22,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06n8t"
+        },
+        {
+          "overall": 23,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "065p6"
+        },
+        {
+          "overall": 24,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06g9b"
+        },
+        {
+          "overall": 25,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "065xr"
+        },
+        {
+          "overall": 26,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "065ct"
+        },
+        {
+          "overall": 27,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "0655r"
+        },
+        {
+          "overall": 28,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "06na8"
+        },
+        {
+          "overall": 29,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "064ht"
+        },
+        {
+          "overall": 30,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "064ds"
+        },
+        {
+          "overall": 31,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "06ptd"
+        },
+        {
+          "overall": 32,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "06g54"
+        },
+        {
+          "overall": 33,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "0650z"
+        },
+        {
+          "overall": 34,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "064sc"
+        },
+        {
+          "overall": 35,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "064zb"
+        },
+        {
+          "overall": 36,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "0655p"
+        },
+        {
+          "overall": 37,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "06gvc"
+        },
+        {
+          "overall": 38,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06g0r"
+        },
+        {
+          "overall": 39,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06no6"
+        },
+        {
+          "overall": 40,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "071bf"
+        },
+        {
+          "overall": 41,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "071uc"
+        },
+        {
+          "overall": 42,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06n0z"
+        },
+        {
+          "overall": 43,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06g9r"
+        },
+        {
+          "overall": 44,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "065bi"
+        },
+        {
+          "overall": 45,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "06gcm"
+        },
+        {
+          "overall": 46,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "06gcf"
+        },
+        {
+          "overall": 47,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "06h34"
+        },
+        {
+          "overall": 48,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "071n6"
+        },
+        {
+          "overall": 49,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "06nnk"
+        },
+        {
+          "overall": 50,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "06nb6"
+        },
+        {
+          "overall": 51,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "06dvi"
+        },
+        {
+          "overall": 52,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "06gu8"
+        },
+        {
+          "overall": 53,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "06q7m"
+        },
+        {
+          "overall": 54,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "064kr"
+        },
+        {
+          "overall": 55,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06mub"
+        },
+        {
+          "overall": 56,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "0711h"
+        },
+        {
+          "overall": 57,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06ynp"
+        },
+        {
+          "overall": 58,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "065mj"
+        },
+        {
+          "overall": 59,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06vye"
+        },
+        {
+          "overall": 60,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "064f9"
+        },
+        {
+          "overall": 61,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "06gan"
+        },
+        {
+          "overall": 62,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "06n5h"
+        },
+        {
+          "overall": 63,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "071u8"
+        },
+        {
+          "overall": 64,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "064dy"
+        },
+        {
+          "overall": 65,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "06g7j"
+        },
+        {
+          "overall": 66,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "071w5"
+        },
+        {
+          "overall": 67,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "065vv"
+        },
+        {
+          "overall": 68,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "070js"
+        },
+        {
+          "overall": 69,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "064f5"
+        },
+        {
+          "overall": 70,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06h14"
+        },
+        {
+          "overall": 71,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06npr"
+        },
+        {
+          "overall": 72,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06mvl"
+        },
+        {
+          "overall": 73,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06g4a"
+        },
+        {
+          "overall": 74,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "0715h"
+        },
+        {
+          "overall": 75,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06gdn"
+        },
+        {
+          "overall": 76,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "070o5"
+        },
+        {
+          "overall": 77,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "07108"
+        },
+        {
+          "overall": 78,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "064x0"
+        },
+        {
+          "overall": 79,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "064ft"
+        },
+        {
+          "overall": 80,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "0725h"
+        },
+        {
+          "overall": 81,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "06q0j"
+        },
+        {
+          "overall": 82,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "06ne8"
+        },
+        {
+          "overall": 83,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "06gzi"
+        },
+        {
+          "overall": 84,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "05wt9"
+        },
+        {
+          "overall": 85,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "06q2a"
+        },
+        {
+          "overall": 86,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "064m3"
+        },
+        {
+          "overall": 87,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "071vr"
+        },
+        {
+          "overall": 88,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06dt0"
+        },
+        {
+          "overall": 89,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "064xh"
+        },
+        {
+          "overall": 90,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06nm4"
+        },
+        {
+          "overall": 91,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06n56"
+        },
+        {
+          "overall": 92,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "05xhb"
+        },
+        {
+          "overall": 93,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "06pql"
+        },
+        {
+          "overall": 94,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "06gd5"
+        },
+        {
+          "overall": 95,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "06hyf"
+        },
+        {
+          "overall": 96,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "065zr"
+        },
+        {
+          "overall": 97,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "05pb0"
+        },
+        {
+          "overall": 98,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "064h9"
+        },
+        {
+          "overall": 99,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "0655s"
+        },
+        {
+          "overall": 100,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "075yy"
+        },
+        {
+          "overall": 101,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "071gf"
+        },
+        {
+          "overall": 102,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "06gv0"
+        },
+        {
+          "overall": 103,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "06n5q"
+        },
+        {
+          "overall": 104,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06mu8"
+        },
+        {
+          "overall": 105,
+          "teamId": "hhkzj65hmvjokk2e",
+          "playerId": "06pl8"
+        },
+        {
+          "overall": 106,
+          "teamId": "evucydykmvjmlrze",
+          "playerId": "071jo"
+        },
+        {
+          "overall": 107,
+          "teamId": "wwc1n3o4mvn1c6hk",
+          "playerId": "064yz"
+        },
+        {
+          "overall": 108,
+          "teamId": "kq1erunqmvhbzx4y",
+          "playerId": "064fs"
+        },
+        {
+          "overall": 109,
+          "teamId": "vyfs1k8xmvgtitmc",
+          "playerId": "07105"
+        },
+        {
+          "overall": 110,
+          "teamId": "rlfm3uhjmvk7q70x",
+          "playerId": "06eo8"
+        },
+        {
+          "overall": 111,
+          "teamId": "ir66qwd2mvgsj4wg",
+          "playerId": "0713y"
+        },
+        {
+          "overall": 112,
+          "teamId": "2rc1dg43mvgsurtp",
+          "playerId": "0652w"
+        }
+      ]
+    },
+    "status": "ready",
+    "paused": false,
+    "issues": []
+  },
+  "rosters": [
+    {
+      "teamId": "2rc1dg43mvgsurtp",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    },
+    {
+      "teamId": "ir66qwd2mvgsj4wg",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    },
+    {
+      "teamId": "rlfm3uhjmvk7q70x",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    },
+    {
+      "teamId": "vyfs1k8xmvgtitmc",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    },
+    {
+      "teamId": "kq1erunqmvhbzx4y",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    },
+    {
+      "teamId": "wwc1n3o4mvn1c6hk",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    },
+    {
+      "teamId": "evucydykmvjmlrze",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    },
+    {
+      "teamId": "hhkzj65hmvjokk2e",
+      "players": 14,
+      "activeSlots": 10,
+      "reserve": 4
+    }
+  ],
+  "liveActionsExecuted": 0
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-01",
+  "scope": "Targeted independent public primary-source research for the conditional Jaiden Feroah vs Jack Karasinski period-one choice; no health inference from silence.",
+  "searchAttempts": [
+    {"date":"2026-11-01","queries":["site:suutbirds.com Jaiden Feroah men's basketball 2026 November preview","site:nusports.com Jack Karasinski men's basketball 2026 November preview","Southern Utah men's basketball 2026 season preview Jaiden Feroah November 2026 official","Northwestern men's basketball 2026 season preview Jack Karasinski November 2026 official"]},
+    {"date":"2026-11-01","queries":["site:suutbirds.com/news/2026/10 Jaiden Feroah 2026-27 preview opener West Coast Baptist","site:nusports.com/news/2026/10/31 OR site:nusports.com/news/2026/10/30 Northwestern men's basketball preview 2026 Karasinski","site:nusports.com/news/2026/10/ Jack Karasinski preseason 2026 Northwestern starter","site:suutbirds.com/news/2026/10 Jaiden Feroah injury status 2026"]},
+    {"date":"2026-11-01","queries":["site:suutbirds.com/news/2026/11/1 West Coast Baptist Feroah men's basketball preview","site:suutbirds.com/news/2026/10/30 basketball Feroah Southern Utah opener 2026","site:nusports.com/news/2026/11/1 Binghamton Jack Karasinski game preview","site:nusports.com/news/2026/10/31 Binghamton men's basketball preview Karasinski"]},
+    {"date":"2026-11-01","queries":["site:suutbirds.com/news/2026/10/31 Grace University Feroah men's basketball","site:suutbirds.com/news/2026/10 Grace University California Southern Utah men's basketball 2026 box score","site:suutbirds.com/sports/mens-basketball/schedule Jaiden Feroah October 31 Grace 2026"]}
+  ],
+  "officialSources": [
+    {
+      "player":"Jaiden Feroah",
+      "source":"Southern Utah official 2026-27 opener preview (published 2026-10-10)",
+      "url":"https://suutbirds.com/news/2026/10/10/mens-basketball-thunderbirds-open-2026-27-with-exhibition-against-ottawa-university-arizona.aspx",
+      "finding":"Describes Feroah as headlining the returning group; says he started all 32 games in 2025-26 and led current-roster returners in PPG and RPG. This is historical role context, not a current opening-week start confirmation.",
+      "freshness":"Before the Oct 12 exhibition; superseded as the newest actual participation evidence below."
+    },
+    {
+      "player":"Jaiden Feroah",
+      "source":"Southern Utah official Ottawa exhibition recap (published 2026-10-12)",
+      "url":"https://suutbirds.com/news/2026/10/12/mens-basketball-jajuan-nicholls-scores-20-as-thunderbirds-beat-ottawa-ariz-in-exhibition.aspx",
+      "finding":"Feroah played 26 minutes (team high), grabbed a game-high 11 rebounds, scored 7 points, and had 3 assists in SUU's Oct 12 exhibition. This establishes participation in that exhibition only; no Nov 2 availability/start is stated.",
+      "freshness":"Latest official player-specific participation found for Feroah in targeted opening-week searches."
+    },
+    {
+      "player":"Jaiden Feroah",
+      "source":"Southern Utah official preseason-all-conference release (published 2026-10-14)",
+      "url":"https://suutbirds.com/news/2026/10/14/mens-basketball-feroah-named-to-big-sky-preseason-all-conference-team.aspx",
+      "finding":"Preseason all-conference selection; confirms 2025-26 workload/production and 958 minutes. Historical/preseason role evidence; no current injury or confirmed opening-week lineup status.",
+      "freshness":"No current status update."
+    },
+    {
+      "player":"Jack Karasinski",
+      "source":"Northwestern official Oct 18 exhibition recap linked from Oct 23 Iowa State preview; Oct 23 preview itself",
+      "url":"https://nusports.com/news/2026/10/23/nu-continues-preseason-slate-at-home-against-iowa-state",
+      "finding":"Northwestern reports Karasinski's NU debut included 13 points on 5-of-6 shooting, 3 rebounds and 2 steals. The Oct 23 preview calls him a player to watch and a major scoring addition; coaches described him among possible double-digit scoring options. These sources support actual exhibition participation and expected offensive use, but do not confirm a regular-season starting slot or opening-week minutes.",
+      "freshness":"Contains Oct 18 performance and looks ahead to Oct 25; not a health report."
+    },
+    {
+      "player":"Jack Karasinski",
+      "source":"Northwestern official Iowa State exhibition recap (published 2026-10-25)",
+      "url":"https://nusports.com/news/2026/10/25/northwestern-challenged-by-no-18-iowa-state-in-sunday-exhibition",
+      "finding":"Karasinski scored 11 points in Northwestern's second exhibition. Recap gives no minutes, starter status, injury designation, or opening-week role confirmation.",
+      "freshness":"Latest official player-specific participation found for Karasinski in targeted opening-week searches."
+    },
+    {
+      "player":"Jaiden Feroah",
+      "source":"Southern Utah official 2026-27 schedule",
+      "url":"https://suutbirds.com/sports/mens-basketball/schedule",
+      "finding":"Lists Nov 2 West Coast Baptist at 8:00 PM MT, Nov 5 Grace University (California) at 6:30 PM MT, and Nov 7 Bethesda University of California at 6:30 PM MT; all are regular-season scheduled events. These match the Fantrax period-one dates for Feroah's game IDs 06shj/06shk/06shl and resolve the previously displayed N/A opponents by date/order. Fantrax labels are 10:00 PM, 8:30 PM, 8:30 PM respectively, a +2h difference consistent with Eastern-vs-Mountain display but not proof of Fantrax timezone.",
+      "freshness":"Schedule page current on access date; schedule remains subject to change."
+    },
+    {
+      "player":"Jack Karasinski",
+      "source":"Northwestern official 2026-27 schedule",
+      "url":"https://nusports.com/sports/mens-basketball/schedule",
+      "finding":"Lists Nov 2 Binghamton 7:00 PM CT and Nov 6 Stony Brook 7:00 PM CT. Dates/opponents match Fantrax's period-one labels for Jack's game IDs 06qnm/06qnp (Mon Nov 2 Binghamton and Fri Nov 6 Stony Brook). Fantrax labels are 8:00 PM, consistent with a possible Eastern display, but not authoritative timezone proof.",
+      "freshness":"Current schedule page on access date."
+    },
+    {
+      "player":"Both",
+      "source":"Official team/news search for current opening-week preview/status",
+      "url":"https://suutbirds.com/sports/mens-basketball/news and https://nusports.com/sports/mens-basketball/news",
+      "finding":"Targeted searches found no newer player-specific opening-week injury/status/availability report for either player as of Nov 1. Lack of a report is not evidence of health or availability. Northwestern's latest relevant pregame/player preview was Oct 23 followed by Oct 25 exhibition recap; SUU's latest player-specific participation report found was Oct 12 exhibition recap; its Oct 10 preview/Oct 14 award release provide role context only.",
+      "freshness":"Search attempted 2026-11-01; no health clearance inferred."
+    }
+  ],
+  "anomalyAndCaveat": "Southern Utah's official live-events/coverage page search result displayed an Oct 31 6:30 PM MT Men's Basketball vs Grace University event, while the current official season schedule and dated live-event listings place Grace on Nov 5. The official schedule lists Oct 12 as the exhibition and Oct 31 is not a listed season game; treat the isolated Oct 31 event row as a stale/misdated listing, not evidence of a played game. Oct 31 no longer needs to be used to infer Feroah availability.",
+  "decisionImpact": {
+    "updatedEvidence": "Both players have played in public official preseason exhibitions: Feroah's latest found participation was Oct 12 (team-high 26 min, 11 reb); Karasinski's Oct 25 recap reports 11 points but no minutes. Official schedules confirm Feroah has 3 period-one regular-season dates and Karasinski 2.",
+    "notEstablished": ["current injury/availability for Nov 2/5/6/7", "regular-season starting slots", "current minutes/role distribution", "official fantasy counting eligibility for opponent-labeled games", "Fantrax timezone or exact lock instants"],
+    "recommendation": "Do not upgrade or publish the historical conditional Feroah-over-Karasinski lineup as firm advice; baseline inputs, full roster status, activation and lock gates remain open."
+  },
+  "dataProvenance": "URLs and source publication dates retained. No non-public feed, paywall, account, raw API, or fabricated status used."
+}

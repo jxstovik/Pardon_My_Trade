@@ -1,0 +1,186 @@
+{
+  "week": 9,
+  "season": 2026,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "startedAt": "2026-11-05T14:36:01.409Z",
+  "status": "complete",
+  "stage": "Complete",
+  "platformWrites": 0,
+  "calendar": {
+    "scoring_period": "2026-W9",
+    "week": 9,
+    "season": "2026",
+    "offseason": false,
+    "evaluated_at": "2026-11-05T14:36:01.633Z"
+  },
+  "modelBefore": {
+    "model_store": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/transaction-preview-2026-11-05/runtime/models.json",
+      "exists": true,
+      "bytes": 368967,
+      "modified_at": "2026-11-05T14:36:01.194Z"
+    },
+    "probabilistic_projections": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/transaction-preview-2026-11-05/runtime/probabilistic-projections.json",
+      "exists": false
+    }
+  },
+  "projectionStatus": {
+    "periods": [
+      {
+        "scoring_period": "2026-ROS",
+        "count": 614
+      },
+      {
+        "scoring_period": "2026-W5",
+        "count": 650
+      },
+      {
+        "scoring_period": "2026-W6",
+        "count": 659
+      },
+      {
+        "scoring_period": "2026-W7",
+        "count": 668
+      },
+      {
+        "scoring_period": "2026-W8",
+        "count": 670
+      },
+      {
+        "scoring_period": "2026-W9",
+        "count": 675
+      }
+    ]
+  },
+  "news": {
+    "counts": {
+      "espn": 73,
+      "razzball": 139
+    },
+    "degraded": {}
+  },
+  "archiveStatus": "pregame_archived",
+  "completedAt": "2026-11-05T14:39:03.251Z",
+  "summary": {
+    "week": 9,
+    "owner": "Bored Man Gets Paid",
+    "opponent": "Bibbins! Get The Tarp!",
+    "currentMean": 75.11842414142401,
+    "recommendedMean": 118.71165745046002,
+    "opponentCurrentMean": 129.2211437449443,
+    "opponentRecommendedMean": 129.2211437449443,
+    "currentWin": 0.019857142857142858,
+    "recommendedWin": 0.362,
+    "winAgainstOpponentRecommended": 0.362,
+    "recommendedLineup": {
+      "QB": "Josh Allen",
+      "RB1": "Ashton Jeanty",
+      "RB2": "Kenny Gainwell",
+      "WR1": "Malik Nabers",
+      "WR2": "Michael Wilson",
+      "TE": "George Kittle",
+      "FLEX": "Jameson Williams",
+      "D/ST": "Saints D/ST",
+      "K": "Drew Stevens"
+    },
+    "opponentRecommendedLineup": {
+      "QB": "Joe Burrow",
+      "RB1": "Kyren Williams",
+      "RB2": "Derrick Henry",
+      "WR1": "Amon-Ra St. Brown",
+      "WR2": "Chris Olave",
+      "TE": "Dallas Goedert",
+      "FLEX": "Tee Higgins",
+      "D/ST": "Lions D/ST",
+      "K": "Will Reichard"
+    },
+    "currentRange10_90": [
+      54.34057540893555,
+      96.74399948120117
+    ],
+    "recommendedRange10_90": [
+      92.15817031860351,
+      146.73436279296877
+    ],
+    "freeAgentFlex": [
+      {
+        "name": "Emanuel Wilson",
+        "mean": 10.513912107950349,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Hunter Henry",
+        "mean": 10.492171733202067,
+        "status": "Q",
+        "position": "TE"
+      },
+      {
+        "name": "Brenton Strange",
+        "mean": 10.427109675979734,
+        "status": "—",
+        "position": "TE"
+      },
+      {
+        "name": "Dameon Pierce",
+        "mean": 10.111537820054135,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Caleb Douglas",
+        "mean": 10.040930595860747,
+        "status": "—",
+        "position": "WR"
+      },
+      {
+        "name": "Jacory Croskey-Merritt",
+        "mean": 9.949461458094328,
+        "status": "—",
+        "position": "RB"
+      },
+      {
+        "name": "Terry McLaurin",
+        "mean": 9.496082173176806,
+        "status": "—",
+        "position": "WR"
+      },
+      {
+        "name": "Ryan Flournoy",
+        "mean": 9.478848559183298,
+        "status": "—",
+        "position": "WR"
+      }
+    ],
+    "freeAgentDefenses": [
+      {
+        "name": "Chiefs D/ST",
+        "mean": 6.514229502546889
+      },
+      {
+        "name": "Bills D/ST",
+        "mean": 6.4407918821358745
+      },
+      {
+        "name": "Packers D/ST",
+        "mean": 6.362499035383248
+      },
+      {
+        "name": "Browns D/ST",
+        "mean": 6.132688583674644
+      },
+      {
+        "name": "Chargers D/ST",
+        "mean": 6.005732985740523
+      }
+    ]
+  },
+  "artifacts": {
+    "html": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week9-scout/week9-scout-interactive.html",
+    "markdown": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week9-scout/week9-scout-report.md",
+    "pdf": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week9-scout/week9-scout-report.pdf",
+    "modelManifest": "/home/jordan-stovik/Pardon_My_Trade/artifacts/week9-2026-scout/manifest.json"
+  }
+}

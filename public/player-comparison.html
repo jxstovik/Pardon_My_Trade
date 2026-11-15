@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101b1c">
+  <meta name="description" content="Overlay individual player fantasy scoring distributions from PMT model outputs.">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/scout.css">
+  <title>Player lab · Pardon My Trade</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">PMT <span>PLAYER LAB</span></a>
+    <nav class="nav-links" aria-label="Scout pages"><a href="/scout">Matchup</a><a class="active" href="/scout/players">Player lab</a><a href="/">Roster</a></nav>
+    <span id="dataStatus" class="freshness">Loading model outputs…</span>
+  </header>
+  <main class="page">
+    <section class="intro"><div><p class="eyebrow">WEEK 5 · PLAYER DISTRIBUTIONS</p><h1>Player lab</h1><p class="muted">Overlay model scoring distributions for roster and available players.</p></div><a class="settings-link" href="/scout">← Back to matchup</a></section>
+    <div id="provenance" class="provenance"></div>
+    <div id="modelCaveat" class="model-caveat"></div>
+    <section class="card compare-card">
+      <div class="player-pickers">
+        <label>Player A<select id="playerA"></select></label>
+        <label>Player B<select id="playerB"></select></label>
+        <label>Filter position<select id="positionFilter"><option value="ALL">All positions</option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option>DST</option></select></label>
+      </div>
+      <div id="compareLegend" class="chart-legend"></div>
+      <div id="playerChart" class="chart player-chart" role="img" aria-label="Overlay of individual player point scoring distributions"></div>
+      <div id="playerMetrics" class="player-metrics"></div>
+      <p id="compareNote" class="subnote"></p>
+    </section>
+    <section class="card"><div class="card-heading"><div><p class="eyebrow">MODEL OUTPUTS</p><h2>Available projections</h2></div><span class="tag" id="playerCount">—</span></div><div id="playerTable" class="table-scroll"></div></section>
+    <footer>Individual distributions are reconstructed from per-player model quantiles. A Q status means the forecast is conditional on playing. <a href="/scout">Return to matchup ↗</a></footer>
+  </main>
+  <script src="/scout.js" defer></script>
+</body>
+</html>

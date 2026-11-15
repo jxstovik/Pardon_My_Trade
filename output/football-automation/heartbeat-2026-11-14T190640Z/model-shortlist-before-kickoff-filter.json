@@ -1,0 +1,1093 @@
+{
+  "at": "2026-11-14T19:13:55.262Z",
+  "modelVersion": "weekly-2026-W10-19789406c2bc-368dedd8bda2-d1284c4271e7",
+  "cutoff": 9,
+  "capacity": {
+    "usedKnownReceipts": 0,
+    "externalPendingUnknown": true,
+    "reservedExternal": null,
+    "remaining": null,
+    "limit": 5,
+    "executionAllowed": false,
+    "reason": "Private pending-move read blocked by ESPN_AUTH_REQUIRED"
+  },
+  "availablePlayers": 902,
+  "availableModeled": 456,
+  "seasonEndWeek": 17,
+  "unknownHealthyCoverage": [],
+  "choices": [
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16011",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 7.103949132281649,
+      "seasonGain": 6.06338392861004,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 3.204077278108606
+        },
+        {
+          "week": 11,
+          "gain": 0.48780792435626097
+        },
+        {
+          "week": 12,
+          "gain": 3.4120639298167816
+        },
+        {
+          "week": 13,
+          "gain": -5.01624853840645
+        },
+        {
+          "week": 14,
+          "gain": 3.328107981887799
+        },
+        {
+          "week": 15,
+          "gain": 2.685016436366368
+        },
+        {
+          "week": 16,
+          "gain": -4.439668982258607
+        },
+        {
+          "week": 17,
+          "gain": 2.4022278987392807
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.6640625,
+          "worsens": 0.3359375,
+          "ties": 0,
+          "expectedGain": 3.204077278108606,
+          "favorableMarginLowerBound": 0.21004571093600125
+        },
+        "nearTerm": {
+          "improves": 0.6875,
+          "worsens": 0.3125,
+          "ties": 0,
+          "expectedGain": 7.103949132281649,
+          "favorableMarginLowerBound": 0.25912189863913027
+        },
+        "season": {
+          "improves": 0.59765625,
+          "worsens": 0.40234375,
+          "ties": 0,
+          "expectedGain": 6.06338392861004,
+          "favorableMarginLowerBound": 0.07271986746343158
+        },
+        "probabilityAddedPlayerStarts": 0.875,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 3.204077278108606
+          },
+          {
+            "week": 11,
+            "gain": 0.48780792435626097
+          },
+          {
+            "week": 12,
+            "gain": 3.4120639298167816
+          },
+          {
+            "week": 13,
+            "gain": -5.01624853840645
+          },
+          {
+            "week": 14,
+            "gain": 3.328107981887799
+          },
+          {
+            "week": 15,
+            "gain": 2.685016436366368
+          },
+          {
+            "week": 16,
+            "gain": -4.439668982258607
+          },
+          {
+            "week": 17,
+            "gain": 2.4022278987392807
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": true,
+        "seasonMet": false
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.664/0.336, next three 0.688/0.313; expected gains 7.10 near / 6.06 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Colts D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16025",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 16.522109577181283,
+      "seasonGain": 34.90235384236994,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 2.0862078420739043
+        },
+        {
+          "week": 11,
+          "gain": 7.302665164281036
+        },
+        {
+          "week": 12,
+          "gain": 7.133236570826344
+        },
+        {
+          "week": 13,
+          "gain": 3.789966181746657
+        },
+        {
+          "week": 14,
+          "gain": 3.7778762232036365
+        },
+        {
+          "week": 15,
+          "gain": 5.901749308644165
+        },
+        {
+          "week": 16,
+          "gain": 0.5902133284835998
+        },
+        {
+          "week": 17,
+          "gain": 4.320439223110596
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.65625,
+          "worsens": 0.34375,
+          "ties": 0,
+          "expectedGain": 2.0862078420739043,
+          "favorableMarginLowerBound": 0.1937602800502292
+        },
+        "nearTerm": {
+          "improves": 0.89453125,
+          "worsens": 0.10546875,
+          "ties": 0,
+          "expectedGain": 16.522109577181283,
+          "favorableMarginLowerBound": 0.7122733842456183
+        },
+        "season": {
+          "improves": 0.90234375,
+          "worsens": 0.09765625,
+          "ties": 0,
+          "expectedGain": 34.90235384236994,
+          "favorableMarginLowerBound": 0.7304751750313933
+        },
+        "probabilityAddedPlayerStarts": 1,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 2.0862078420739043
+          },
+          {
+            "week": 11,
+            "gain": 7.302665164281036
+          },
+          {
+            "week": 12,
+            "gain": 7.133236570826344
+          },
+          {
+            "week": 13,
+            "gain": 3.789966181746657
+          },
+          {
+            "week": 14,
+            "gain": 3.7778762232036365
+          },
+          {
+            "week": 15,
+            "gain": 5.901749308644165
+          },
+          {
+            "week": 16,
+            "gain": 0.5902133284835998
+          },
+          {
+            "week": 17,
+            "gain": 4.320439223110596
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": true,
+        "seasonMet": true
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.656/0.344, next three 0.895/0.105; expected gains 16.52 near / 34.90 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "49ers D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16012",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 8.705686982509116,
+      "seasonGain": 10.474477920502501,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 2.3098409366596613
+        },
+        {
+          "week": 11,
+          "gain": 4.980892884684637
+        },
+        {
+          "week": 12,
+          "gain": 1.4149531611648172
+        },
+        {
+          "week": 13,
+          "gain": 1.1001278782570125
+        },
+        {
+          "week": 14,
+          "gain": -1.3312698983214144
+        },
+        {
+          "week": 15,
+          "gain": 1.1016595534202906
+        },
+        {
+          "week": 16,
+          "gain": -2.0967979902674325
+        },
+        {
+          "week": 17,
+          "gain": 2.9950713949049286
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.6328125,
+          "worsens": 0.3671875,
+          "ties": 0,
+          "expectedGain": 2.3098409366596613,
+          "favorableMarginLowerBound": 0.14511544647732538
+        },
+        "nearTerm": {
+          "improves": 0.76953125,
+          "worsens": 0.23046875,
+          "ties": 0,
+          "expectedGain": 8.705686982509116,
+          "favorableMarginLowerBound": 0.4337792792115484
+        },
+        "season": {
+          "improves": 0.703125,
+          "worsens": 0.296875,
+          "ties": 0,
+          "expectedGain": 10.474477920502501,
+          "favorableMarginLowerBound": 0.29202975377177
+        },
+        "probabilityAddedPlayerStarts": 1,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 2.3098409366596613
+          },
+          {
+            "week": 11,
+            "gain": 4.980892884684637
+          },
+          {
+            "week": 12,
+            "gain": 1.4149531611648172
+          },
+          {
+            "week": 13,
+            "gain": 1.1001278782570125
+          },
+          {
+            "week": 14,
+            "gain": -1.3312698983214144
+          },
+          {
+            "week": 15,
+            "gain": 1.1016595534202906
+          },
+          {
+            "week": 16,
+            "gain": -2.0967979902674325
+          },
+          {
+            "week": 17,
+            "gain": 2.9950713949049286
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": true,
+        "seasonMet": false
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.633/0.367, next three 0.770/0.230; expected gains 8.71 near / 10.47 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Chiefs D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16019",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 7.590211137293805,
+      "seasonGain": 8.998281674294365,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 1.4814812914535764
+        },
+        {
+          "week": 11,
+          "gain": 1.2142059843278048
+        },
+        {
+          "week": 12,
+          "gain": 4.894523861512424
+        },
+        {
+          "week": 13,
+          "gain": -1.1531323329047858
+        },
+        {
+          "week": 14,
+          "gain": 1.752031091799158
+        },
+        {
+          "week": 15,
+          "gain": 2.765782813200427
+        },
+        {
+          "week": 16,
+          "gain": -1.3529945158953183
+        },
+        {
+          "week": 17,
+          "gain": -0.6036165191989202
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.6015625,
+          "worsens": 0.3984375,
+          "ties": 0,
+          "expectedGain": 1.4814812914535764,
+          "favorableMarginLowerBound": 0.0807308981727086
+        },
+        "nearTerm": {
+          "improves": 0.75,
+          "worsens": 0.25,
+          "ties": 0,
+          "expectedGain": 7.590211137293805,
+          "favorableMarginLowerBound": 0.3917468245269452
+        },
+        "season": {
+          "improves": 0.67578125,
+          "worsens": 0.32421875,
+          "ties": 0,
+          "expectedGain": 8.998281674294365,
+          "favorableMarginLowerBound": 0.2345419483465518
+        },
+        "probabilityAddedPlayerStarts": 1,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.4814812914535764
+          },
+          {
+            "week": 11,
+            "gain": 1.2142059843278048
+          },
+          {
+            "week": 12,
+            "gain": 4.894523861512424
+          },
+          {
+            "week": 13,
+            "gain": -1.1531323329047858
+          },
+          {
+            "week": 14,
+            "gain": 1.752031091799158
+          },
+          {
+            "week": 15,
+            "gain": 2.765782813200427
+          },
+          {
+            "week": 16,
+            "gain": -1.3529945158953183
+          },
+          {
+            "week": 17,
+            "gain": -0.6036165191989202
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": true,
+        "seasonMet": false
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.602/0.398, next three 0.750/0.250; expected gains 7.59 near / 9.00 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Giants D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16008",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 7.222347177105745,
+      "seasonGain": 12.070048149365586,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 1.2012715001507344
+        },
+        {
+          "week": 11,
+          "gain": 3.5330406995101704
+        },
+        {
+          "week": 12,
+          "gain": 2.4880349774448405
+        },
+        {
+          "week": 13,
+          "gain": 1.5094741186345526
+        },
+        {
+          "week": 14,
+          "gain": 2.661177525506676
+        },
+        {
+          "week": 15,
+          "gain": 2.2946003830296604
+        },
+        {
+          "week": 16,
+          "gain": -0.02031859100614497
+        },
+        {
+          "week": 17,
+          "gain": -1.597232463904902
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.58984375,
+          "worsens": 0.41015625,
+          "ties": 0,
+          "expectedGain": 1.2012715001507344,
+          "favorableMarginLowerBound": 0.056722032137591194
+        },
+        "nearTerm": {
+          "improves": 0.73828125,
+          "worsens": 0.26171875,
+          "ties": 0,
+          "expectedGain": 7.222347177105745,
+          "favorableMarginLowerBound": 0.3666699257802087
+        },
+        "season": {
+          "improves": 0.7421875,
+          "worsens": 0.2578125,
+          "ties": 0,
+          "expectedGain": 12.070048149365586,
+          "favorableMarginLowerBound": 0.3750174400064889
+        },
+        "probabilityAddedPlayerStarts": 1,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.2012715001507344
+          },
+          {
+            "week": 11,
+            "gain": 3.5330406995101704
+          },
+          {
+            "week": 12,
+            "gain": 2.4880349774448405
+          },
+          {
+            "week": 13,
+            "gain": 1.5094741186345526
+          },
+          {
+            "week": 14,
+            "gain": 2.661177525506676
+          },
+          {
+            "week": 15,
+            "gain": 2.2946003830296604
+          },
+          {
+            "week": 16,
+            "gain": -0.02031859100614497
+          },
+          {
+            "week": 17,
+            "gain": -1.597232463904902
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": true,
+        "seasonMet": false
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.590/0.410, next three 0.738/0.262; expected gains 7.22 near / 12.07 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Lions D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16022",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 6.765958464050881,
+      "seasonGain": 3.7481585050839605,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 0.7794030694165315
+        },
+        {
+          "week": 11,
+          "gain": 2.09458670700586
+        },
+        {
+          "week": 12,
+          "gain": 3.8919686876284896
+        },
+        {
+          "week": 13,
+          "gain": 3.1051265065998477
+        },
+        {
+          "week": 14,
+          "gain": -4.7579153719544625
+        },
+        {
+          "week": 15,
+          "gain": 0.8401849365336034
+        },
+        {
+          "week": 16,
+          "gain": -0.8440217953582021
+        },
+        {
+          "week": 17,
+          "gain": -1.3611742347877058
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.57421875,
+          "worsens": 0.42578125,
+          "ties": 0,
+          "expectedGain": 0.7794030694165315,
+          "favorableMarginLowerBound": 0.02482227613264075
+        },
+        "nearTerm": {
+          "improves": 0.7421875,
+          "worsens": 0.2578125,
+          "ties": 0,
+          "expectedGain": 6.765958464050881,
+          "favorableMarginLowerBound": 0.3750174400064889
+        },
+        "season": {
+          "improves": 0.640625,
+          "worsens": 0.359375,
+          "ties": 0,
+          "expectedGain": 3.7481585050839605,
+          "favorableMarginLowerBound": 0.1612956833376243
+        },
+        "probabilityAddedPlayerStarts": 0.875,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 0.7794030694165315
+          },
+          {
+            "week": 11,
+            "gain": 2.09458670700586
+          },
+          {
+            "week": 12,
+            "gain": 3.8919686876284896
+          },
+          {
+            "week": 13,
+            "gain": 3.1051265065998477
+          },
+          {
+            "week": 14,
+            "gain": -4.7579153719544625
+          },
+          {
+            "week": 15,
+            "gain": 0.8401849365336034
+          },
+          {
+            "week": 16,
+            "gain": -0.8440217953582021
+          },
+          {
+            "week": 17,
+            "gain": -1.3611742347877058
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": true,
+        "seasonMet": false
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.574/0.426, next three 0.742/0.258; expected gains 6.77 near / 3.75 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Cardinals D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16028",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 5.651692687350389,
+      "seasonGain": 8.897161913307972,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 0.7725330848981287
+        },
+        {
+          "week": 11,
+          "gain": 0.30697623293538356
+        },
+        {
+          "week": 12,
+          "gain": 4.5721833695168765
+        },
+        {
+          "week": 13,
+          "gain": 3.416002539848966
+        },
+        {
+          "week": 14,
+          "gain": -0.8280722982030484
+        },
+        {
+          "week": 15,
+          "gain": 0.8017614811647604
+        },
+        {
+          "week": 16,
+          "gain": 2.2006706384781993
+        },
+        {
+          "week": 17,
+          "gain": -2.344893135331293
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.57421875,
+          "worsens": 0.42578125,
+          "ties": 0,
+          "expectedGain": 0.7725330848981287,
+          "favorableMarginLowerBound": 0.02482227613264075
+        },
+        "nearTerm": {
+          "improves": 0.71484375,
+          "worsens": 0.28515625,
+          "ties": 0,
+          "expectedGain": 5.651692687350389,
+          "favorableMarginLowerBound": 0.31681529264641317
+        },
+        "season": {
+          "improves": 0.6875,
+          "worsens": 0.3125,
+          "ties": 0,
+          "expectedGain": 8.897161913307972,
+          "favorableMarginLowerBound": 0.25912189863913027
+        },
+        "probabilityAddedPlayerStarts": 1,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 0.7725330848981287
+          },
+          {
+            "week": 11,
+            "gain": 0.30697623293538356
+          },
+          {
+            "week": 12,
+            "gain": 4.5721833695168765
+          },
+          {
+            "week": 13,
+            "gain": 3.416002539848966
+          },
+          {
+            "week": 14,
+            "gain": -0.8280722982030484
+          },
+          {
+            "week": 15,
+            "gain": 0.8017614811647604
+          },
+          {
+            "week": 16,
+            "gain": 2.2006706384781993
+          },
+          {
+            "week": 17,
+            "gain": -2.344893135331293
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": false,
+        "seasonMet": false
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.574/0.426, next three 0.715/0.285; expected gains 5.65 near / 8.90 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Commanders D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "-16024",
+        "dropPlayerId": "-16018",
+        "priority": 1
+      },
+      "nearTermGain": 9.661850461003095,
+      "seasonGain": 8.536722348571779,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 1.7093153292013312
+        },
+        {
+          "week": 11,
+          "gain": 3.6897372126531143
+        },
+        {
+          "week": 12,
+          "gain": 4.26279791914865
+        },
+        {
+          "week": 13,
+          "gain": 1.0713155538698214
+        },
+        {
+          "week": 14,
+          "gain": -0.34076842377629646
+        },
+        {
+          "week": 15,
+          "gain": -2.510657179957195
+        },
+        {
+          "week": 16,
+          "gain": 2.7049420068253767
+        },
+        {
+          "week": 17,
+          "gain": -2.0499600693930233
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.5625,
+          "worsens": 0.4375,
+          "ties": 0,
+          "expectedGain": 1.7093153292013312,
+          "favorableMarginLowerBound": 0.0009804072938473102
+        },
+        "nearTerm": {
+          "improves": 0.7421875,
+          "worsens": 0.2578125,
+          "ties": 0,
+          "expectedGain": 9.661850461003095,
+          "favorableMarginLowerBound": 0.3750174400064889
+        },
+        "season": {
+          "improves": 0.65234375,
+          "worsens": 0.34765625,
+          "ties": 0,
+          "expectedGain": 8.536722348571779,
+          "favorableMarginLowerBound": 0.18563095307902594
+        },
+        "probabilityAddedPlayerStarts": 1,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.7093153292013312
+          },
+          {
+            "week": 11,
+            "gain": 3.6897372126531143
+          },
+          {
+            "week": 12,
+            "gain": 4.26279791914865
+          },
+          {
+            "week": 13,
+            "gain": 1.0713155538698214
+          },
+          {
+            "week": 14,
+            "gain": -0.34076842377629646
+          },
+          {
+            "week": 15,
+            "gain": -2.510657179957195
+          },
+          {
+            "week": 16,
+            "gain": 2.7049420068253767
+          },
+          {
+            "week": 17,
+            "gain": -2.0499600693930233
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "stream_defense",
+      "suggestions": {
+        "nearTermMet": true,
+        "seasonMet": false
+      },
+      "rationale": "stream_defense: pregame-selected lineup, P(improve)/P(worsen) next week 0.563/0.438, next three 0.742/0.258; expected gains 9.66 near / 8.54 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Chargers D/ST",
+      "dropName": "Saints D/ST"
+    },
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "4887558",
+        "dropPlayerId": "4361411",
+        "priority": 1
+      },
+      "nearTermGain": 1.1346739136767434,
+      "seasonGain": 3.134852684921384,
+      "weeklyGains": [
+        {
+          "week": 10,
+          "gain": 1.1346739136767434
+        },
+        {
+          "week": 11,
+          "gain": 0
+        },
+        {
+          "week": 12,
+          "gain": 0
+        },
+        {
+          "week": 13,
+          "gain": 0.6490576610748917
+        },
+        {
+          "week": 14,
+          "gain": 0
+        },
+        {
+          "week": 15,
+          "gain": 0.14132206040352457
+        },
+        {
+          "week": 16,
+          "gain": 0
+        },
+        {
+          "week": 17,
+          "gain": 1.209799049766224
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.53515625,
+          "worsens": 0.46484375,
+          "ties": 0,
+          "expectedGain": 1.1346739136767434,
+          "favorableMarginLowerBound": -0.05437812667406518
+        },
+        "nearTerm": {
+          "improves": 0.53515625,
+          "worsens": 0.46484375,
+          "ties": 0,
+          "expectedGain": 1.1346739136767434,
+          "favorableMarginLowerBound": -0.05437812667406518
+        },
+        "season": {
+          "improves": 0.59375,
+          "worsens": 0.40625,
+          "ties": 0,
+          "expectedGain": 3.134852684921384,
+          "favorableMarginLowerBound": 0.06471692464451788
+        },
+        "probabilityAddedPlayerStarts": 0.5,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 10,
+            "gain": 1.1346739136767434
+          },
+          {
+            "week": 11,
+            "gain": 0
+          },
+          {
+            "week": 12,
+            "gain": 0
+          },
+          {
+            "week": 13,
+            "gain": 0.6490576610748917
+          },
+          {
+            "week": 14,
+            "gain": 0
+          },
+          {
+            "week": 15,
+            "gain": 0.14132206040352457
+          },
+          {
+            "week": 16,
+            "gain": 0
+          },
+          {
+            "week": 17,
+            "gain": 1.209799049766224
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "lineup_upgrade",
+      "suggestions": {
+        "nearTermMet": false,
+        "seasonMet": false
+      },
+      "rationale": "lineup_upgrade: pregame-selected lineup, P(improve)/P(worsen) next week 0.535/0.465, next three 0.535/0.465; expected gains 1.13 near / 3.13 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Emanuel Wilson",
+      "dropName": "Pat Freiermuth"
+    }
+  ],
+  "unreviewedCandidateRemainder": 447,
+  "platformWrites": 0
+}

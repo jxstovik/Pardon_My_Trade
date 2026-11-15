@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-04T07:33:08.939Z",
+  "triggerLocal": "2026-11-04T02:33:08.939-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": 188.939,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "actualObservationWindow": {
+    "lowerBound": "2026-11-04T07:33:08.939Z",
+    "completedNoLaterThan": "2026-11-04T07:38:05Z",
+    "method": "authenticated Fantrax UI"
+  },
+  "freshReads": [
+    "all 14 owned roster identities and period-two roster-page slots (10 active/four reserve); the displayed period-two slots place Jaiden Feroah active and Jack Karasinski in reserve; this is not an ownership/transaction change",
+    "own full period-two schedule (Nov 9-15), 14 players",
+    "current selected matchup period 1 Nov 1-8 vs JeffWischer; live matchup still displays Board Man Gets pAId 2-5-1 vs JeffWischer 5-2-1",
+    "first 20 current Score-ordered available page-one rows; all Claim/FA",
+    "Fantrax injury report opened; no new relevant owned-player status found; Nov2 Campbell DNP/undisclosed and Tyson eligibility pending remain latest relevant entries"
+  ],
+  "notFreshOrUnresolved": [
+    "approved corrected board and oldest underlying statistical dependency remain Oct27; not replayed as newly refreshed",
+    "current minutes/role evidence incomplete; no new status is not health/role clearance",
+    "period-two opponent roster/matchup not refreshed",
+    "candidate schedules not captured and available list is only first-page cohort",
+    "exact lock scope/timezone/activation, game instants, counted-game rules, caps, shooting minimum and rounding unresolved"
+  ],
+  "period1": {
+    "number": 1,
+    "dates": "Nov 1-8",
+    "opponent": "JeffWischer",
+    "liveMatchup": "2-5-1 vs 5-2-1",
+    "forecastRerun": false,
+    "reason": "Games in selected period have started; preserve immutable Nov2 pre-lock forecast and do not replay it as fresh."
+  },
+  "period2": {
+    "number": 2,
+    "dates": "Nov 9-15",
+    "opponent": "not refreshed",
+    "input": "period-2-browser-capture.json",
+    "inputObservedAt": "2026-11-04T07:33:08.939Z",
+    "inputHash": "9a6b069c2d795b8af80ffc7752c53df5f9e8c60d5cfcdd61e7ca13729e7652c9",
+    "forecastRevision": "b4ed1cf9eb301ff8f563fc59f3e681a41007426dd91809f1881543f6a0352554",
+    "baselineRevision": "344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1",
+    "baselineGeneratedAt": "2026-10-27T11:24:32.000Z",
+    "owned": 14,
+    "available": 0,
+    "scheduledAppearances": 23,
+    "conditionalOptimizer": "Karasinski is selected over the refreshed active Feroah slot; research-only, role and counted eligibility unclear.",
+    "slotObservation": "Fantrax period-two roster view: Feroah active, Karasinski reserve. Forecast optimizer selects Karasinski; this is a lineup comparison only."
+  },
+  "historicalDoctor": {
+    "command": "doctor + report",
+    "generatedAt": "2026-11-04T07:38:05Z",
+    "snapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+    "status": "partial; stale Oct25 pre-draft 0-player capture; separate from fresh weekly evidence"
+  },
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "sourceFailure": "No documented API/HTTP attempt made; no authenticated source failure in this run. Injury report has no new relevant owned-player item.",
+  "notificationRecommendation": "NOTIFY: period-two conditional optimizer differs from the refreshed current active Feroah slot, but stale rates and unresolved status/lock/counting rules prevent qualified advice. Include that no action is suggested or submitted."
+}

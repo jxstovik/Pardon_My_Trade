@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-10-29T00:25:24.885714+00:00",
+  "reconciliationRevision": "344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1",
+  "correctedBoardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "baselineRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "evidenceHash": "062eb8105179549b2c3a47ba085a7cdf229c16102b5ae3b694809b4257f1d852",
+  "baselineReproduced": "exact-match",
+  "build": "passed",
+  "compiledTests": {
+    "passed": 59,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 39557.988634,
+    "log": "compiled-basketball-tests.tap",
+    "loopbackPermission": "Approved local test escalation; default sandbox blocks bind127.0.0.1"
+  },
+  "review": "docs/basketball/committee/13-sol-reconciliation-review.md",
+  "browserValidation": "browser-validation.json",
+  "rehearsals": {
+    "corrected": {
+      "totalPicks": 112,
+      "uniquePlayers": 112,
+      "ownPicks": 14,
+      "activeSlots": 10,
+      "reserves": 4
+    },
+    "provider-first": {
+      "totalPicks": 112,
+      "uniquePlayers": 112,
+      "ownPicks": 14,
+      "activeSlots": 10,
+      "reserves": 4
+    }
+  },
+  "sourceRefresh": {
+    "fantraxStandardPoolHistory": true,
+    "rotowirePublicProjectionRows": 10,
+    "savedExpertRanksRefreshed": false,
+    "rulesScheduleAllRostersRefreshed": false,
+    "savedEvidenceDoctorDoesNotFetch": true
+  },
+  "providerTop20": {
+    "covered": 20,
+    "outside112": 8,
+    "absoluteGapOver40": 11,
+    "displayCardsCappedAt": 7
+  },
+  "liveActionsExecuted": 0,
+  "modelPromoted": false,
+  "files": [
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/fantrax-rank-import.provider-first.PROPOSED.csv",
+      "sha256": "cd24b0606eeb8532d44a9a7f16b2d309fcc97ba61df1af8993b6b40e504a9bc6"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/fantrax-rank-import.corrected.PROPOSED.csv",
+      "sha256": "b5290546be3ddc23c07f7f5ed7c9f76fff62593992cca15d233dee2f001d080b"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/corrected-category-board.csv",
+      "sha256": "1c4f0d52ea3a652400e52b1d4b46e6486999168177faef891fe39d36fd1559c0"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/corrected-category-board.json",
+      "sha256": "a43cef246d2e099c0a78f5b4fbb744098ba38de52158a9b5aed1f3890532404c"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/synthetic-rehearsal.corrected.json",
+      "sha256": "592796b10d156ae482489cd72a48219c314fed920de71e94f230fef28ccb5739"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/outlier-cards.json",
+      "sha256": "b2be14db589d7f7c1b617fffa093419029419737daef37bd26858ed98929f639"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/provider-first-rank-only.json",
+      "sha256": "b329a31a875224b6e8c03b54f017b61fad7a1e2a1b5d1bc7688c367e6fec8483"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/reconciliation-scenarios.json",
+      "sha256": "cc14b378442d911b0ce1e1bac79c9732eac031ad2dae99a7d426cd5379d0a2bf"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/reconciliation.json",
+      "sha256": "4a2eda084b7642b7d4591bf3c09abd0523b2e9a6e62cbae8219b0dd0795daa7a"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/synthetic-rehearsal.provider-first.json",
+      "sha256": "d4e2a8fa90fb2e2ed4df3ab463b1743ca4d6747af384d5818d0b7b85f47a277d"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/provider-first-rank-only.csv",
+      "sha256": "f0f9f07bf25220a104284cab009f08f82a7eac7fe55f3d7b1baffed021e9b48c"
+    },
+    {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/basketball/2026-10-28/reconciliation/revisions/344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1/corrected-category-board.md",
+      "sha256": "df8b5734ca72e111f3744a603d17b8a80f576c33fcce09dc4eb28d3790f8fe60"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-28/reconciliation/evidence-manifest.json",
+      "sha256": "5674cd50a55c09e74d5b084361621b122885362de4eda8bc11ea95b084d03a7b"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-28/reconciliation/compiled-basketball-tests.tap",
+      "sha256": "6660d2825341a1435337e1940bba9397512e692e1cf8642eeef3945bef344881"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-28/reconciliation/browser-validation.json",
+      "sha256": "f58663662a16dd747b0823dc97579c9cee2075cd21b94f9cbeeec329f5532d98"
+    },
+    {
+      "path": "artifacts/basketball/2026-10-28/reconciliation/browser-comparison.jpg",
+      "sha256": "dedb2b8f331ecde73e34f153749a17c1ca96d5045d46c989ff84d14a46d049b7"
+    },
+    {
+      "path": "docs/basketball/committee/13-sol-reconciliation-review.md",
+      "sha256": "7e059aeb973a6053ce859c489234208808caaf22e5d120b5a7598c03e3858bfa"
+    },
+    {
+      "path": "src/basketball/reconcile.ts",
+      "sha256": "7b1a6c223e2e6b09bce418348241571f0bb6e95c1e4517cf2dbf7eba23908869"
+    },
+    {
+      "path": "src/basketball/forecast.ts",
+      "sha256": "ad55cba575b680ef7be1dd5a044e55193521fd3c8e6e9629b7b559726c655a7c"
+    },
+    {
+      "path": "src/basketball/history.ts",
+      "sha256": "bd2b4b7ca652543964220a6bb13b109a1ee432b2e9a714b9f17b9fa1fd623a69"
+    },
+    {
+      "path": "src/basketball/cli.ts",
+      "sha256": "c979bed7aa7da5ca5f7259084de83ff2a7fc03790a1dc8c4624cca88907a1938"
+    },
+    {
+      "path": "src/basketball/copilot-server.ts",
+      "sha256": "bcf1f2a6a8da330bce56d7985061c3a495a5179e4401090ca378c2f4f44e17e3"
+    },
+    {
+      "path": "public/basketball-copilot/app.js",
+      "sha256": "f345b8e4bead3f127be81f73e16a442b304eb140ab62cec35b35dc9fa9f47879"
+    },
+    {
+      "path": "tests/basketball-reconcile.test.ts",
+      "sha256": "3395fa2f1f2607163899181a8a47873dcaad42118cdaf3489805d4a1f2e63f28"
+    },
+    {
+      "path": "tests/basketball-copilot-server.test.ts",
+      "sha256": "1c12a20b2bf92961482c01ebd4b12e1e1a99c53ee9f564ff46069b56f34b701b"
+    }
+  ],
+  "priorSensitivityComparableCounts": [
+    {
+      "multiplier": 0,
+      "compared": 179,
+      "changed": 170,
+      "unavailable": 12
+    },
+    {
+      "multiplier": 1,
+      "compared": 179,
+      "changed": 0,
+      "unavailable": 12
+    },
+    {
+      "multiplier": 2,
+      "compared": 179,
+      "changed": 169,
+      "unavailable": 12
+    }
+  ]
+}

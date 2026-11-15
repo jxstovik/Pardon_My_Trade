@@ -1,0 +1,39 @@
+{
+  "revision": "2d469843c45e23adbb2c777246410ebc68c4d78a9dc86cc7e1628ad204ceef4e",
+  "rawSha256": "71e31bdff0b388fded25d9abd8781e8a3097f277a867016a16ecb554e949912f",
+  "source": {
+    "schemaVersion": 1,
+    "leagueId": "mmioj1mvmvgsc3io",
+    "leagueName": "Banging 3s",
+    "leagueSeason": "2026-27",
+    "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players",
+    "observedAt": "2026-10-27T08:00:08.452079+00:00",
+    "kind": "official-csv-export",
+    "statsSeason": "2025-26",
+    "statsLabel": "2025-26 Reg Season - YTD",
+    "statsBasis": "per-game",
+    "filter": "all-available-players",
+    "completeness": "all-matching-export-rows",
+    "scopeVerification": "browser-league-header-and-selected-filters",
+    "statView": "standard",
+    "displayCountDecimals": 1
+  },
+  "quality": {
+    "totalPlayers": 5687,
+    "positiveGames": 3218,
+    "zeroGamesUnresolved": 2469,
+    "quarantined": 2,
+    "baselineResearchRows": 3216,
+    "currentSeasonForecasts": 0,
+    "precision": "One-decimal display rates; exact season makes/attempts are unavailable.",
+    "warnings": [
+      "Prior-season history is not a current-season forecast or draft recommendation.",
+      "Rates and percentages are separately rounded; never multiply rates by GP and label the result exact totals.",
+      "The nearest-tenth coherence envelope is an explicit screening assumption; flagged rows remain quarantined, never repaired.",
+      "Zero displayed GP is unresolved coverage, not proof of no playing history or a zero forecast.",
+      "Current school labels do not establish historical school stints or future roles.",
+      "Available-player scope does not prove owned/ineligible coverage. Schedule, current availability and transfer/freshman priors remain missing.",
+      "Turnovers are retained only as a source field; this league has no turnover category."
+    ]
+  }
+}

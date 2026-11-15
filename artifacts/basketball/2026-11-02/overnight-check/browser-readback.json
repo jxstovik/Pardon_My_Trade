@@ -1,0 +1,713 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-02T07:29:35.058Z",
+  "triggerLocal": "2026-11-02T02:29:35.058-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": -24.942,
+  "observedAt": "2026-11-02T07:30:00Z (conservative lower bound; reads completed before 07:31:11Z)",
+  "captureMethod": "Supported authenticated Fantrax browser accessibility views; no raw API/HTTP access.",
+  "firstStandardTimeFiring": true,
+  "automationConfiguration": {
+    "existingIdentity": "banging-3s-basketball-workflow",
+    "configuredUtcHour": "07:30Z daily",
+    "destinationAndExpiryChanged": false,
+    "futureFiringOrNotificationVerified": false,
+    "automationChangedByWorker": false
+  },
+  "ownRoster": {
+    "teamId": "wwc1n3o4mvn1c6hk",
+    "team": "Board Man Gets pAId",
+    "capturedFrom": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=wwc1n3o4mvn1c6hk",
+    "players": [
+      {
+        "name": "Markus Burton",
+        "school": "Ind",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "Javontae Campbell",
+        "school": "Cin",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "Jalen Cox",
+        "school": "USC",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "Tavari Johnson",
+        "school": "Charl",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "Kyle Evans",
+        "school": "NCSU",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Keyshawn Hall",
+        "school": "StJon",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Jack Karasinski",
+        "school": "NW",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Pryce Sandfort",
+        "school": "Nebras",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Daeshun Ruffin",
+        "school": "JackSt",
+        "position": "G",
+        "slot": "Flex"
+      },
+      {
+        "name": "Quion Williams",
+        "school": "ArkPB",
+        "position": "G",
+        "slot": "Flex"
+      },
+      {
+        "name": "Michael James",
+        "school": "ASU",
+        "position": "G",
+        "slot": "Reserve"
+      },
+      {
+        "name": "Trevan Leonhardt",
+        "school": "Nebras",
+        "position": "G",
+        "slot": "Reserve"
+      },
+      {
+        "name": "Cade Tyson",
+        "school": "Minn",
+        "position": "G, F/C",
+        "slot": "Reserve"
+      },
+      {
+        "name": "Jaiden Feroah",
+        "school": "S UT",
+        "position": "F/C",
+        "slot": "Reserve"
+      }
+    ],
+    "active": 10,
+    "reserves": 4,
+    "allSameAsOct31IdentityAndSlotSet": true
+  },
+  "ownPeriod1Schedule": {
+    "dates": [
+      "2026-11-01",
+      "2026-11-08"
+    ],
+    "capturedFrom": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=wwc1n3o4mvn1c6hk;view=SCHEDULE_PERIOD",
+    "gamesByPlayer": {
+      "Markus Burton": [
+        {
+          "date": "2026-11-02",
+          "opponent": "E IL",
+          "time": "7:00PM",
+          "gameId": "06qjx"
+        },
+        {
+          "date": "2026-11-05",
+          "opponent": "BELL",
+          "time": "6:00PM",
+          "gameId": "06qjz"
+        }
+      ],
+      "Javontae Campbell": [
+        {
+          "date": "2026-11-02",
+          "opponent": "Amer",
+          "time": "7:00PM",
+          "gameId": "06qg5"
+        },
+        {
+          "date": "2026-11-05",
+          "opponent": "WIGB",
+          "time": "7:00PM",
+          "gameId": "06qgc"
+        }
+      ],
+      "Jalen Cox": [
+        {
+          "date": "2026-11-02",
+          "opponent": "WIMil",
+          "time": "10:30PM",
+          "gameId": "06qv2"
+        },
+        {
+          "date": "2026-11-08",
+          "opponent": "WichSt",
+          "time": "11:00PM",
+          "gameId": "06qt1"
+        }
+      ],
+      "Tavari Johnson": [
+        {
+          "date": "2026-11-02",
+          "opponent": "S Wes",
+          "time": "7:30PM",
+          "gameId": "06uz4"
+        },
+        {
+          "date": "2026-11-06",
+          "opponent": "N/A",
+          "time": "7:00PM",
+          "gameId": "06s79"
+        }
+      ],
+      "Kyle Evans": [
+        {
+          "date": "2026-11-02",
+          "opponent": "Campbl",
+          "time": "7:30PM",
+          "gameId": "06r9n"
+        },
+        {
+          "date": "2026-11-06",
+          "opponent": "ETSU",
+          "time": "7:00PM",
+          "gameId": "06r9w"
+        }
+      ],
+      "Keyshawn Hall": [
+        {
+          "date": "2026-11-02",
+          "opponent": "Monm",
+          "time": "6:30PM",
+          "gameId": "06ru4"
+        },
+        {
+          "date": "2026-11-08",
+          "opponent": "Iona",
+          "time": "12:00PM",
+          "gameId": "06sme"
+        }
+      ],
+      "Jack Karasinski": [
+        {
+          "date": "2026-11-02",
+          "opponent": "Bingha",
+          "time": "8:00PM",
+          "gameId": "06qnm"
+        },
+        {
+          "date": "2026-11-06",
+          "opponent": "Stony",
+          "time": "8:00PM",
+          "gameId": "06qnp"
+        }
+      ],
+      "Pryce Sandfort": [
+        {
+          "date": "2026-11-02",
+          "opponent": "LeMoy",
+          "time": "7:30PM",
+          "gameId": "06o0f"
+        },
+        {
+          "date": "2026-11-07",
+          "opponent": "Prov",
+          "time": "7:00PM",
+          "gameId": "06o0p"
+        }
+      ],
+      "Daeshun Ruffin": [
+        {
+          "date": "2026-11-02",
+          "opponent": "@TxTch",
+          "time": "7:00PM",
+          "gameId": "06p0q"
+        },
+        {
+          "date": "2026-11-05",
+          "opponent": "@Tul",
+          "time": "7:30PM",
+          "gameId": "06qk0"
+        }
+      ],
+      "Quion Williams": [
+        {
+          "date": "2026-11-03",
+          "opponent": "@Ark",
+          "time": "8:00PM",
+          "gameId": "06s74"
+        },
+        {
+          "date": "2026-11-06",
+          "opponent": "@Baylor",
+          "time": "5:00PM",
+          "gameId": "06o5t"
+        }
+      ],
+      "Michael James": [
+        {
+          "date": "2026-11-03",
+          "opponent": "@TAMU",
+          "time": "8:00PM",
+          "gameId": "06nuw"
+        }
+      ],
+      "Trevan Leonhardt": [
+        {
+          "date": "2026-11-02",
+          "opponent": "LeMoy",
+          "time": "7:30PM",
+          "gameId": "06o0f"
+        },
+        {
+          "date": "2026-11-07",
+          "opponent": "Prov",
+          "time": "7:00PM",
+          "gameId": "06o0p"
+        }
+      ],
+      "Cade Tyson": [
+        {
+          "date": "2026-11-02",
+          "opponent": "NorDak",
+          "time": "9:00PM",
+          "gameId": "06qqm"
+        },
+        {
+          "date": "2026-11-06",
+          "opponent": "UST",
+          "time": "8:00PM",
+          "gameId": "06qqq"
+        }
+      ],
+      "Jaiden Feroah": [
+        {
+          "date": "2026-11-02",
+          "opponent": "N/A",
+          "time": "10:00PM",
+          "gameId": "06shj"
+        },
+        {
+          "date": "2026-11-05",
+          "opponent": "N/A",
+          "time": "8:30PM",
+          "gameId": "06shk"
+        },
+        {
+          "date": "2026-11-07",
+          "opponent": "N/A",
+          "time": "8:30PM",
+          "gameId": "06shl"
+        }
+      ]
+    },
+    "timeZone": "Fantrax display labels; timezone not established by this view",
+    "utcInstantsVerified": false,
+    "countedAppearanceEligibilityVerified": false,
+    "nAopponents": [
+      "Tavari Johnson 06s79",
+      "Jaiden Feroah 06shj",
+      "Jaiden Feroah 06shk",
+      "Jaiden Feroah 06shl"
+    ]
+  },
+  "opponentPeriod1": {
+    "name": "JeffWischer",
+    "teamId": "rlfm3uhjmvk7q70x",
+    "ownSideOpponentLabel": "JeffWischer",
+    "rosterReadFrom": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=rlfm3uhjmvk7q70x",
+    "roster": [
+      {
+        "name": "Cruz Davis",
+        "school": "TxTch",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "PJ Haggerty",
+        "school": "TAMU",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "Rodney Rice",
+        "school": "USC",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "Tyler Tanner",
+        "school": "Vand",
+        "position": "G",
+        "slot": "G"
+      },
+      {
+        "name": "Alex Condon",
+        "school": "Fla",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Will Heimbrodt",
+        "school": "SeatU",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Amani Lyles",
+        "school": "Cin",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Paulius Murauskas",
+        "school": "AzSt",
+        "position": "F/C",
+        "slot": "F/C"
+      },
+      {
+        "name": "Ethan Potter",
+        "school": "UT",
+        "position": "F/C",
+        "slot": "Flex"
+      },
+      {
+        "name": "Money Williams",
+        "school": "BC",
+        "position": "G",
+        "slot": "Flex"
+      },
+      {
+        "name": "Baraka Okojie",
+        "school": "GMas",
+        "position": "G",
+        "slot": "Reserve"
+      },
+      {
+        "name": "Dylan Faulkner",
+        "school": "Clem",
+        "position": "F/C",
+        "slot": "Reserve"
+      },
+      {
+        "name": "Nick Townsend",
+        "school": "Stan",
+        "position": "F/C",
+        "slot": "Reserve"
+      },
+      {
+        "name": "Patrick Wessler",
+        "school": "UNCW",
+        "position": "F/C",
+        "slot": "Reserve"
+      }
+    ],
+    "all14RosterSlotsVisible": true,
+    "period1ScheduleRead": true,
+    "scheduleByPlayer": {
+      "Cruz Davis": [
+        [
+          "Mon 11/2",
+          "JackSt",
+          "7:00PM",
+          "06p0q"
+        ],
+        [
+          "Thu 11/5",
+          "BethC",
+          "9:00PM",
+          "06p0r"
+        ]
+      ],
+      "PJ Haggerty": [
+        [
+          "Tue 11/3",
+          "ASU",
+          "8:00PM",
+          "06nuw"
+        ],
+        [
+          "Fri 11/6",
+          "NoKY",
+          "8:00PM",
+          "06nvd"
+        ]
+      ],
+      "Rodney Rice": [
+        [
+          "Mon 11/2",
+          "WIMil",
+          "10:30PM",
+          "06qv2"
+        ],
+        [
+          "Sun 11/8",
+          "WichSt",
+          "11:00PM",
+          "06qt1"
+        ]
+      ],
+      "Tyler Tanner": [
+        [
+          "Mon 11/2",
+          "BELL",
+          "7:00PM",
+          "06q3e"
+        ],
+        [
+          "Thu 11/5",
+          "Wake",
+          "6:00PM",
+          "06q3h"
+        ]
+      ],
+      "Alex Condon": [
+        [
+          "Mon 11/2",
+          "Mia-FL",
+          "6:00PM",
+          "06nuq"
+        ],
+        [
+          "Thu 11/5",
+          "JU",
+          "8:00PM",
+          "06nv1"
+        ]
+      ],
+      "Will Heimbrodt": [
+        [
+          "Tue 11/3",
+          "@HI",
+          "12:00AM",
+          "06su6"
+        ],
+        [
+          "Sat 11/7",
+          "PorSt",
+          "10:00PM",
+          "06qqw"
+        ]
+      ],
+      "Amani Lyles": [
+        [
+          "Mon 11/2",
+          "Amer",
+          "7:00PM",
+          "06qg5"
+        ],
+        [
+          "Thu 11/5",
+          "WIGB",
+          "7:00PM",
+          "06qgc"
+        ]
+      ],
+      "Paulius Murauskas": [
+        [
+          "Mon 11/2",
+          "ETSU",
+          "10:00PM",
+          "06qsr"
+        ],
+        [
+          "Fri 11/6",
+          "N CO",
+          "9:00PM",
+          "06qsx"
+        ]
+      ],
+      "Ethan Potter": [
+        [
+          "Mon 11/2",
+          "@NM",
+          "9:00PM",
+          "06oi7"
+        ],
+        [
+          "Wed 11/4",
+          "N/A",
+          "9:00PM",
+          "06qbd"
+        ]
+      ],
+      "Money Williams": [
+        [
+          "Tue 11/3",
+          "Wagn",
+          "7:00PM",
+          "06nux"
+        ],
+        [
+          "Fri 11/6",
+          "UMass",
+          "4:00PM",
+          "06o0o"
+        ]
+      ],
+      "Baraka Okojie": [
+        [
+          "Mon 11/2",
+          "UMBC",
+          "4:00PM",
+          "06r9o"
+        ],
+        [
+          "Fri 11/6",
+          "Copp",
+          "7:00PM",
+          "06r9v"
+        ]
+      ],
+      "Dylan Faulkner": [
+        [
+          "Mon 11/2",
+          "Stetsn",
+          "7:00PM",
+          "06qqk"
+        ],
+        [
+          "Fri 11/6",
+          "Amer",
+          "7:00PM",
+          "06qqt"
+        ]
+      ],
+      "Nick Townsend": [
+        [
+          "Mon 11/2",
+          "E WA",
+          "10:00PM",
+          "06q14"
+        ],
+        [
+          "Fri 11/6",
+          "Oakl",
+          "10:00PM",
+          "06q17"
+        ]
+      ],
+      "Patrick Wessler": [
+        [
+          "Mon 11/2",
+          "N/A",
+          "7:00PM",
+          "06nhu"
+        ],
+        [
+          "Sat 11/7",
+          "@ECU",
+          "2:00PM",
+          "06oaz"
+        ]
+      ]
+    },
+    "utcInstantsAndCountEligibilityVerified": false,
+    "scheduleReadAt": "2026-11-02T07:30:00Z (conservative lower bound; reads completed before 07:31:11Z)",
+    "scheduleChangedVsNov1": true,
+    "scheduleNote": "Current Nov 2 UI refresh records Tyler Tanner vs BELL as game ID 06q3e, not Nov 1 ID 06qjz. Treat the fresh UI row as the current observation; prior discrepancy recorded for audit. Exact instants/timezone and N/A counted eligibility remain unverified."
+  },
+  "currentStatusAndRoleEvidence": {
+    "own14IndividualCurrent2026_27StatusOrRoleSources": "not obtained; Fantrax roster status summary remains blank and YTD stat rows all display zero before our listed first games. No health or starter confirmation inferred.",
+    "fantraxRosterDisplayedStatsSeason": "2025-26 Reg Season - YTD",
+    "statusSummary": "Roster view showed Status Summary heading but no player-specific current status/role evidence in captured accessibility text",
+    "homeInjuriesPanel": "Earlier in this session the authenticated league home view displayed No injured players; no player-specific, dated source was shown and this is not treated as 14-player health clearance",
+    "gameDetailsOpened": false,
+    "targetedOfficialPublicSources": {
+      "Jaiden Feroah": "Southern Utah Nov 1 opener preview identifies him as top returning player with 2025-26 rates; does not confirm Nov 2 availability/start.",
+      "Jack Karasinski": "Northwestern Nov 1 opener preview identifies him as a player to watch and reports 11 points in the Oct 25 exhibition; does not confirm Nov 2 availability/start."
+    }
+  },
+  "officialRulesAttempt": {
+    "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+    "general": "Head-to-Head Each Category",
+    "schedule": {
+      "seasonStart": "2026-11-01",
+      "seasonEnd": "2027-03-14"
+    },
+    "rosters": {
+      "totalMax": 14,
+      "activeMax": 10,
+      "reserveMax": 4,
+      "injuryReserve": "Not Used",
+      "positionMaxima": {
+        "G": 4,
+        "F/C": 4,
+        "Flex": 2
+      },
+      "minimumActive": 0
+    },
+    "knownFromPriorOfficialRules": "weekly Monday lineup cadence, 0 minutes before scheduled game start",
+    "stillUnknown": [
+      "lineup lock scope (per-player vs whole roster)",
+      "exact timezone/instant and first-period activation behavior",
+      "whether N/A games count",
+      "caps/minima/rounding"
+    ],
+    "rulePagesVisited": [
+      "General",
+      "Schedule",
+      "Rosters"
+    ],
+    "attemptedAgainNov2": false,
+    "reason": "No exact-lock or activation evidence exposed by the current roster/schedule/matchup views; existing Nov 1 Rules General/Schedule/Rosters record remains the latest rules-page inspection."
+  },
+  "attemptsAndFailures": [
+    "Initial direct /fantasy/league/<id>/roster path returned 404; authenticated league selector recovered and routed to league Home.",
+    "Direct preference page exposed Team Info only; no lineup lock or activation control was found.",
+    "Official Rules General, Schedule and Rosters views refreshed; documented maxima and season dates confirmed but exact lock/activation semantics remain absent.",
+    "No current dated player role/health source, counted-game rule, exact game UTC instant or full available-player pool was secured.",
+    "Player schedule view reset to a different Rank-sorted cohort than the Score-sorted top-20 candidate page; no attempt to map fresh schedules to current candidates by guess."
+  ],
+  "stablePlayerIds": "Stable player IDs in the weekly input are the preserved prior name/school crosswalk, not newly observed IDs; current names/schools were confirmed in Fantrax UI.",
+  "syntheticDataUsed": false,
+  "liveActionsExecuted": 0,
+  "candidatePool": {
+    "page": "Players page 1 in Score order; page number 1; 20 rows",
+    "status": "All 20 current rows show Claim and FA; prior W(Fri) labels are absent.",
+    "members": [
+      "JaQuan Johnson",
+      "Corey Hadnot",
+      "Michael McNair",
+      "Joshua Ward",
+      "Nasir Whitlock",
+      "Ty Robinson",
+      "Trey Campbell",
+      "Chaze Harris",
+      "Dennis Parker",
+      "Nils Machowski",
+      "Jed Miller",
+      "Tarence Guinyard",
+      "Krystian Lewis",
+      "Javon Bennett",
+      "Josiah Davis",
+      "Jaden Winston",
+      "Koree Cotton",
+      "Preston Edmead",
+      "Justin Pippen",
+      "LJ Wells"
+    ],
+    "schedule": "Not refreshed for this exact cohort: selecting Schedule resets the grid to Rank order with different visible players. Current candidates are recorded with unknown schedules in the explicit weekly input.",
+    "notExhaustive": true
+  },
+  "actualFreshReads": [
+    "14 own roster identities/slots refreshed",
+    "own period-one displayed game IDs/dates/opponents/times refreshed",
+    "JeffWischer 14-player roster and period-one schedule refreshed; Tyler Tanner game ID difference noted",
+    "current first-20 available rows in Score order refreshed; all display Claim and FA",
+    "candidate schedule view reset to a different Rank-sorted cohort; current first-20 candidate schedules left unknown",
+    "current matchup remains JeffWischer",
+    "official opener previews for Feroah and Karasinski published Nov 1; role context only"
+  ]
+}

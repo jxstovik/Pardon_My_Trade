@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-10-31T06:30:00.041Z",
+  "triggerLocal": "2026-10-31T02:30:00.041-04:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": 0.041,
+  "actualObservationAt": "2026-10-31T06:32:00Z",
+  "newPromptScheduledRunObserved": true,
+  "notificationDeliveryVerified": false,
+  "recurrence": {
+    "automationIdentity": "same existing automation retained",
+    "nextIntendedRun": "2026-11-01T02:30:00-05:00",
+    "persistedUtcHour": "07:30Z daily",
+    "expiryUnchanged": true,
+    "destinationUnchanged": true,
+    "workerModel": "Luna/high",
+    "todayObservedWorker": "Luna/high",
+    "futureFiringVerified": false,
+    "springForwardMarch14Policy": "skip nonexistent 02:30 local occurrence; do not invent a shifted occurrence"
+  },
+  "actuallyRefreshed": [
+    "current 14-player roster identities/positions/active-vs-reserve placement",
+    "own period-one schedule and game IDs/displayed local date/time/opponents",
+    "own period-two schedule and displayed local date/time/opponents",
+    "current Players page 1 status and schedules: 20 rows all Claim and FA, previous W(Fri) label gone",
+    "Players page 2 status spot-check: 19 FA rows and Elijah Mahi W(Sat), not a full-pool read",
+    "official league rules summary: season starts Nov 1 and ends Mar 14; roster and position maxima"
+  ],
+  "notRefreshed": [
+    "approved board/per-game baseline; oldest dependency 2026-10-27T11:24:32Z (91.1h at forecast time)",
+    "current 2026-27 minutes, player availability/health, or role evidence",
+    "complete available-player pool or model-ranked exhaustive shortlist",
+    "actual waiver processing results/clearance time; labels do not reveal processing instant",
+    "opponent roster/schedule and category forecast",
+    "verified game UTC instants/count eligibility and lineup lock scope/timezone/activation",
+    "caps, minimums and rounding details"
+  ],
+  "period1": {
+    "revision": "677df4b470312349ce90bfe4c3db46c136321ba57e2a13bd50adeaf230fc8fd5",
+    "inputHash": "ac7d15d9c70a20a3a5b420d320832b1901590d1d67aed06d81f693ae8ba40b43",
+    "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+    "owned": 14,
+    "displayedAvailable": 20,
+    "listedActiveAppearances": 21,
+    "lineupIds": [
+      "06nnk",
+      "06n8t",
+      "0655r",
+      "06g7r",
+      "06dun",
+      "06h14",
+      "064kr",
+      "05wk5",
+      "065cb",
+      "065ct"
+    ],
+    "reserves": [
+      "065p8",
+      "065mj",
+      "064gk",
+      "0729c"
+    ],
+    "topFiveCandidates": [
+      {
+        "name": "JaQuan Johnson",
+        "status": "free-agent",
+        "games": 2
+      },
+      {
+        "name": "Jed Miller",
+        "status": "free-agent",
+        "games": 2
+      },
+      {
+        "name": "Jaden Winston",
+        "status": "free-agent",
+        "games": 2
+      },
+      {
+        "name": "Nasir Whitlock",
+        "status": "free-agent",
+        "games": 2
+      },
+      {
+        "name": "Michael McNair",
+        "status": "free-agent",
+        "games": 2
+      }
+    ],
+    "blockers": [
+      "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+      "Exact lineup deadline, timezone and first-period activation unresolved",
+      "Team/player game caps and shot minimum/rounding semantics unresolved",
+      "Waiver Friday label observed; exact clearance instant and lineup activation unresolved",
+      "oldest baseline dependency older than 24 hours; revalidate rates/roles",
+      "schedule lacks verified game instants",
+      "health/role evidence incomplete"
+    ]
+  },
+  "period2": {
+    "revision": "db141b9a26be4a9122d71cf86b5ca5d3053163edf76f78b8baa872a92e2b8a9e",
+    "inputHash": "3eb0a110de5af01144aee3687e587166cf932d832186c42abdd2218a0a871db7",
+    "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+    "owned": 14,
+    "availableCohortCaptured": 0,
+    "opponentLabelObserved": "CatsByAtLeast1",
+    "listedActiveAppearances": 23,
+    "blockers": [
+      "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+      "Exact lineup deadline, timezone and first-period activation unresolved",
+      "Team/player game caps and shot minimum/rounding semantics unresolved",
+      "Waiver Friday label observed; exact clearance instant and lineup activation unresolved",
+      "oldest baseline dependency older than 24 hours; revalidate rates/roles",
+      "schedule lacks verified game instants",
+      "health/role evidence incomplete"
+    ]
+  },
+  "historicalDoctor": {
+    "status": "partial",
+    "observedPlayers": 0,
+    "snapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+    "interpretation": "Saved pre-draft capture only; empty roster is stale and superseded by today\u2019s separate weekly capture. No source ages or hashes renewed."
+  },
+  "codeChanged": false,
+  "testsRun": false,
+  "liveActionsExecuted": 0,
+  "syntheticDataUsed": false,
+  "modelPromoted": false,
+  "notificationRecommendation": "DONT_NOTIFY: routine unchanged roster and conditional research; free-agent labels replacing W(Fri) are recorded but no exact clearance result, positive marginal lineup gain, or approved transaction exists."
+}

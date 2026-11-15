@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-26T19:42:14.904959+00:00",
+  "scope": "basketball only",
+  "runtime": "Node 26.11.1",
+  "build": "pass",
+  "typecheck": "pass",
+  "compiledBasketballTests": {
+    "pass": 15,
+    "fail": 0,
+    "log": "targeted-tests.log"
+  },
+  "realPlayerExport": {
+    "count": 5689,
+    "rawSha256": "b5f622b956838a2628b8db6f19724719587e93437ca5edc76314eb72dcdc91ec",
+    "revision": "14f18b3c80de67f5c65643c39bfc94985a7e8bf29fe98e9afb072c7c7682a38b",
+    "sourceObservedAt": "2026-10-26T19:29:41.573603+00:00"
+  },
+  "readinessReportId": "f7a8c7d3e77988a3b24dbc25ce2f67b271e1c60a420bbfd962f1265a678e4a92",
+  "refreshedSources": [
+    "authenticated-home-ui",
+    "rules-ui",
+    "own-roster-ui",
+    "official-player-export"
+  ],
+  "notRefreshedSources": [
+    "league-info-api",
+    "all-team-roster-api",
+    "draft-results-api"
+  ],
+  "forecastCount": 0,
+  "modelsTrained": 0,
+  "liveActionsExecuted": 0,
+  "codeSha256": {
+    "src/basketball/calendar.ts": "ec9b75c423ed171b8ca19d03693ab7ab9ff796a578700be7c1d03b0e0ab83ff7",
+    "src/basketball/report.ts": "06c865800db7b642bed7dc3552918723b5980117d7686e84ca316279d30049f7",
+    "src/basketball/player-pool.ts": "1babbd1b6cc49505f71abbda4982ac94547561fb1e2ad461eecfcc72bbcb3520",
+    "src/basketball/fantrax-reader.ts": "f05463ccf2d616a9d1424237b5b50b7d7c97475b428b87a6bf51881feae95de6",
+    "src/basketball/cli.ts": "a15d293d0d4563bf6a1c588fe0770b717a5628fc805820960719f9cadd43ac6f",
+    "src/basketball/contracts.ts": "804ce720aa0d52e16a69a8000f06dee19006242b477f3460f98562d3821c180a",
+    "src/basketball/categories.ts": "3e94a6937bbe13017d2e463626bca5382edab6d3a986709986c5e692826d4c9c",
+    "src/basketball/store.ts": "0584dad683bf3471f130df981734982a1b25317f513549f0849576550ca44026"
+  }
+}

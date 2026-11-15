@@ -1,0 +1,266 @@
+Week 7 scouting report
+23andMe vs Bored Man Gets Paid
+2026-10-24T12:13:42.967Z
+Current model means: you 108.2, opponent 122.6; win chance 31.4%. Your recommended lineup: 108.7, win chance 32.5%. Against
+an optimized opponent lineup: 31.8%. Their current lineup contains a bye-week player; the current win estimate assumes they leave
+it unchanged.
+
+Quantile distributions use independent player draws; Q-tag forecasts are conditional on playing. Confirm final inactive lists before
+kickoff. 410 modeled matches of 894 current available players; model forecasts unchanged. D/ST targets use repaired
+fumble-recovery and touchdown rules plus independently rescored captured 2026 ESPN stat counts. Historical D/ST component
+parity remains incomplete. Experimental interval calibration remains unpromoted and is not applied to these weekly curves. Models
+were retrained with causal data through Week 6 and remain candidates, not promoted. 2025 retrospective holdout metrics are
+included in the manifest; they are not a Week 6 accuracy guarantee. Report generation makes no ESPN writes; any separately
+approved moves are listed in provenance.
+
+Lineup and roster actions
+Slot
+
+Their current
+
+Your current
+
+Your recommended
+
+QB
+
+Patrick Mahomes
+
+Aaron Rodgers
+
+Aaron Rodgers
+
+RB1
+
+Kenneth Walker III
+
+Ashton Jeanty
+
+Ashton Jeanty
+
+RB2
+
+Bucky Irving
+
+Tony Pollard
+
+Tony Pollard
+
+WR1
+
+Ja'Marr Chase
+
+Malik Nabers
+
+Malik Nabers
+
+WR2
+
+Tetairoa McMillan
+
+Michael Wilson
+
+Michael Wilson
+
+TE
+
+Trey McBride
+
+George Kittle
+
+George Kittle
+
+FLEX
+
+Matthew Golden
+
+RJ Harvey
+
+Wan'Dale Robinson
+
+D/ST
+
+Texans D/ST
+
+Colts D/ST
+
+Colts D/ST
+
+K
+
+Spencer Shrader
+
+Eddy Pineiro
+
+Eddy Pineiro
+
+START: Ashton Jeanty - 16.6 (—). Advisory only; preserve depth.
+START: Malik Nabers - 17.6 (—). Advisory only; preserve depth.
+STASH / BYE: Josh Allen - 0.0 (—). Advisory only; preserve depth.
+BENCH / KEEP: Jameson Williams - 10.4 (—). Advisory only; preserve depth.
+START: George Kittle - 13.5 (—). Advisory only; preserve depth.
+START: Wan'Dale Robinson - 10.6 (—). Advisory only; preserve depth.
+START: Tony Pollard - 10.4 (—). Advisory only; preserve depth.
+START: Michael Wilson - 12.7 (—). Advisory only; preserve depth.
+BENCH / KEEP: Kenny Gainwell - 5.0 (—). Advisory only; preserve depth.
+BENCH / KEEP: RJ Harvey - 10.1 (—). Advisory only; preserve depth.
+START: Eddy Pineiro - 6.2 (—). Advisory only; preserve depth.
+BENCH / KEEP: Tyjae Spears - 4.5 (Q). Confirm availability before kickoff.
+BENCH / KEEP: Rashid Shaheed - 8.5 (—). Advisory only; preserve depth.
+STREAM / REPLACE: Colts D/ST - 5.6 (—). Replace this defense with Titans D/ST (7.9) if available; carry one defense.
+BENCH / KEEP: Pat Freiermuth - 7.8 (—). Advisory only; preserve depth.
+START: Aaron Rodgers - 15.5 (—). Advisory only; preserve depth.
+
+Player distributions and available options
+
+Available player
+
+Pos
+
+Mean
+
+Status
+
+Travis Etienne Jr.
+
+RB
+
+11.4
+
+—
+
+Tyler Higbee
+
+TE
+
+10.8
+
+—
+
+Pierre Strong Jr.
+
+RB
+
+10.2
+
+—
+
+Michael Mayer
+
+TE
+
+10.0
+
+—
+
+De'Von Achane
+
+RB
+
+10.0
+
+—
+
+Samaje Perine
+
+RB
+
+9.7
+
+—
+
+Titans D/ST
+
+DST
+
+7.9
+
+—
+
+Bears D/ST
+
+DST
+
+7.7
+
+—
+
+Panthers D/ST
+
+DST
+
+7.4
+
+—
+
+Any defense stream replaces your current defense. No bench defense.
+
+News and model validation
+Sean Payton: Broncos not considering benching Bo Nix amid offense's struggles
+The Broncos are not considering benching quarterback Bo Nix as the team struggles on offense, coach Sean Payton said Monday.
+espn - 2026-10-19T18:22:21.000Z
+
+Why Field Yates is concerned about Ashton Jeanty
+Why Field Yates is concerned about Ashton Jeanty
+espn - 2026-10-19T15:10:33.000Z
+
+Bills Mafia road fans surprised, confused Josh Allen on Keon Coleman TD
+Josh Allen's theatrical touchdown pass to Keon Coleman left him wondering who had the dominant fanbase at Allegiant Stadium.
+espn - 2026-10-19T13:02:00.000Z
+2025 holdout
+
+Model MAE
+
+Baseline MAE
+
+80% interval coverage
+
+QB
+
+6.32
+
+6.84
+
+74.8%
+
+RB
+
+4.42
+
+4.37
+
+81.8%
+
+WR
+
+4.26
+
+4.38
+
+84.8%
+
+TE
+
+3.57
+
+3.59
+
+85.0%
+
+K
+
+3.86
+
+4.11
+
+78.6%
+
+DST
+
+4.85
+
+5.32
+
+80.0%
+
+

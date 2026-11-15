@@ -1,0 +1,143 @@
+ M deploy/hermes/mcp-config.example.yaml
+ M docs/automated-football-lineups.md
+ M integrations/hermes/mcp-config.example.yaml
+ M integrations/hermes/pmt-hermes-compatibility.yaml
+ M package.json
+ M public/roster.html
+ M scripts/execute-automatic-lineup.mjs
+ M src/adapters/espn/espn-platform-reader.ts
+ M src/adapters/espn/espn-platform-writer.ts
+ M src/agents/action-executor.ts
+ M src/agents/ff-orchestrator.ts
+ M src/agents/skills/lineup-optimizer.ts
+ M src/agents/skills/waiver-scanner.ts
+ M src/agents/types.ts
+ M src/api/server.ts
+ M src/decisions/decision-engine.ts
+ M src/mcp/contracts.ts
+ M src/mcp/server.ts
+ M src/models/types.ts
+ M src/projections/espn-projection-source.ts
+ M src/projections/source-table-mapper.ts
+ M src/season-refresh.ts
+ M tests/controlled-execution.test.ts
+ M tests/decision-engine.test.ts
+ M tests/espn-platform-reader.test.ts
+ M tests/espn-projection-source.test.ts
+ M tests/ff-orchestrator.test.ts
+ M tests/fixtures/espn-projections.json
+ M tests/mcp-server.test.ts
+ M tests/season-refresh.test.ts
+ M tests/source-table-mapper.test.ts
+?? Pardon-My-Trade-rebuild.bundle
+?? Pardon-My-Trade-rebuild.patch
+?? artifacts/basketball/
+?? artifacts/week5-2026-scout/
+?? artifacts/week6-2026-scout/
+?? artifacts/week7-2026-scout/
+?? artifacts/week8-2026-scout/
+?? artifacts/week9-2026-scout/
+?? config/basketball/
+?? config/football/
+?? docs/27-player-metamodel-plan.md
+?? docs/automatic-football-transactions.md
+?? docs/basketball/
+?? docs/hermes/add-drop-readiness.md
+?? docs/hermes/automatic-waivers-job.txt
+?? docs/hermes/automatic-waivers.md
+?? docs/hermes/kickoff-review.md
+?? docs/hermes/model-performance.md
+?? docs/hermes/scoped-news-workflow.md
+?? docs/hermes/waiver-capability.md
+?? docs/hermes/weekly-modeling-reliability.md
+?? docs/hermes/weekly-projections.md
+?? docs/hermes/weekly-scout.md
+?? integrations/hermes/skills/
+?? output/
+?? public/basketball-copilot/
+?? public/player-comparison.html
+?? public/scout-data.json
+?? public/scout.css
+?? public/scout.html
+?? public/scout.js
+?? python/scout/
+?? rebuild-status.md
+?? scripts/archive-pregame.mjs
+?? scripts/basketball/
+?? scripts/build-evaluation-dashboard.mjs
+?? scripts/build-scout-data.mjs
+?? scripts/build-scout-preview.mjs
+?? scripts/build-scout-report.py
+?? scripts/build-sunday-scout-report.py
+?? scripts/build-weekly-scout-report.py
+?? scripts/calibrate-season.py
+?? scripts/evaluate-season.mjs
+?? scripts/execute-automatic-transaction.mjs
+?? scripts/hermes-kickoff-jobs.py
+?? scripts/hermes-tuesday-projections.sh
+?? scripts/ingest-verified-ros.mjs
+?? scripts/install-automatic-waivers.py
+?? scripts/install-waiver-capability.py
+?? scripts/optimize-weekly-lineup.mjs
+?? scripts/package-evaluation-preview.py
+?? scripts/package-scout-preview.py
+?? scripts/preview-football-transactions.mjs
+?? scripts/read-pregame-archives.mjs
+?? scripts/read-season-evaluation.mjs
+?? scripts/reconcile-evaluation-actuals.py
+?? scripts/refresh-scout-rosters.mjs
+?? scripts/refresh-tuesday-projections.mjs
+?? scripts/refresh-weekly-scout-rosters.mjs
+?? scripts/render-season-evaluation.py
+?? scripts/run-automatic-waivers.mjs
+?? scripts/scout_report_helpers.py
+?? scripts/verify-evaluation-artifacts.mjs
+?? scripts/verify-hermes-kickoff.py
+?? scripts/verify-kickoff-review.mjs
+?? scripts/verify-weekly-scout.mjs
+?? scripts/waiver-training-state.py
+?? scripts/weekly-planning.mjs
+?? scripts/weekly-scout.mjs
+?? src/adapters/espn/espn-scoring.ts
+?? src/adapters/espn/espn-waiver-settings.ts
+?? src/adapters/espn/kickoff-source.ts
+?? src/agents/automatic-waivers.ts
+?? src/agents/transaction-protocol.ts
+?? src/agents/waiver-lineup-probability.ts
+?? src/agents/weekly-lineup.ts
+?? src/basketball/
+?? src/decisions/do-not-drop.ts
+?? src/mcp/action-context.ts
+?? src/mcp/kickoff-review.ts
+?? src/mcp/news-context.ts
+?? src/mcp/scout-workflow.ts
+?? src/mcp/waiver-context.ts
+?? src/probabilistic/pregame-archive.ts
+?? tests/action-context.test.ts
+?? tests/automatic-waivers.test.ts
+?? tests/basketball-adaptive.test.ts
+?? tests/basketball-copilot-server.test.ts
+?? tests/basketball-draft-forecast.test.ts
+?? tests/basketball-fantrax-dom.test.ts
+?? tests/basketball-history.test.ts
+?? tests/basketball-observer.test.ts
+?? tests/basketball-player-pool.test.ts
+?? tests/basketball-reconcile.test.ts
+?? tests/basketball-weekly.test.ts
+?? tests/basketball-workflow.test.ts
+?? tests/espn-platform-writer.test.ts
+?? tests/fixtures/espn-scoring-98806880-2026.json
+?? tests/hermes-kickoff-jobs.py
+?? tests/kickoff-review.test.ts
+?? tests/live-lineup-availability.test.ts
+?? tests/model-evaluation-artifacts.test.ts
+?? tests/news-context.test.ts
+?? tests/pregame-archive.test.ts
+?? tests/redundant-tight-end.test.ts
+?? tests/scout-workflow.test.ts
+?? tests/transaction-protocol.test.ts
+?? tests/tuesday-projections.test.ts
+?? tests/waiver-context.test.ts
+?? tests/waiver-lineup-probability.test.ts
+?? tests/weekly-lineup.test.ts
+?? tests/weekly-planning.test.ts

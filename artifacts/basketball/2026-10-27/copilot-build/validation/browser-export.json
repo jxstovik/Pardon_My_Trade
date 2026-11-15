@@ -1,0 +1,1590 @@
+{
+  "schemaVersion": 1,
+  "kind": "supported-browser-local-simulator-rehearsal",
+  "startedAt": "2026-10-27T17:47:41.487Z",
+  "completedAt": "2026-10-27T17:53:09.704Z",
+  "venue": "local-mock",
+  "fantraxActions": 0,
+  "actions": [
+    "Reset session",
+    "Start mock",
+    "Burst to my turn",
+    "Queue candidate",
+    "Confirm own pick"
+  ],
+  "observations": [
+    [
+      365,
+      0,
+      19,
+      0,
+      0,
+      345
+    ],
+    [
+      731,
+      1,
+      0,
+      0,
+      0,
+      354
+    ],
+    [
+      1191,
+      2,
+      0,
+      5,
+      0,
+      437
+    ],
+    [
+      1619,
+      3,
+      5,
+      5,
+      0,
+      365
+    ],
+    [
+      2496,
+      4,
+      5,
+      6,
+      1,
+      864
+    ],
+    [
+      3241,
+      2,
+      6,
+      10,
+      1,
+      699
+    ],
+    [
+      3894,
+      3,
+      10,
+      10,
+      1,
+      517
+    ],
+    [
+      4548,
+      4,
+      10,
+      11,
+      2,
+      631
+    ],
+    [
+      5276,
+      2,
+      11,
+      19,
+      2,
+      695
+    ],
+    [
+      5801,
+      2,
+      19,
+      21,
+      2,
+      507
+    ],
+    [
+      6305,
+      3,
+      21,
+      21,
+      2,
+      411
+    ],
+    [
+      7100,
+      4,
+      21,
+      22,
+      3,
+      774
+    ],
+    [
+      7827,
+      2,
+      22,
+      26,
+      3,
+      687
+    ],
+    [
+      8357,
+      3,
+      26,
+      26,
+      3,
+      403
+    ],
+    [
+      8921,
+      4,
+      26,
+      27,
+      4,
+      543
+    ],
+    [
+      14474,
+      2,
+      27,
+      35,
+      4,
+      801
+    ],
+    [
+      14988,
+      2,
+      35,
+      37,
+      4,
+      496
+    ],
+    [
+      15458,
+      3,
+      37,
+      37,
+      4,
+      383
+    ],
+    [
+      16130,
+      4,
+      37,
+      38,
+      5,
+      654
+    ],
+    [
+      16827,
+      2,
+      38,
+      42,
+      5,
+      659
+    ],
+    [
+      17376,
+      3,
+      42,
+      42,
+      5,
+      428
+    ],
+    [
+      18017,
+      4,
+      42,
+      43,
+      6,
+      620
+    ],
+    [
+      18799,
+      2,
+      43,
+      51,
+      6,
+      747
+    ],
+    [
+      19314,
+      2,
+      51,
+      53,
+      6,
+      498
+    ],
+    [
+      19769,
+      3,
+      53,
+      53,
+      6,
+      374
+    ],
+    [
+      20464,
+      4,
+      53,
+      54,
+      7,
+      675
+    ],
+    [
+      21412,
+      2,
+      54,
+      58,
+      7,
+      914
+    ],
+    [
+      22057,
+      3,
+      58,
+      58,
+      7,
+      494
+    ],
+    [
+      22752,
+      4,
+      58,
+      59,
+      8,
+      673
+    ],
+    [
+      24014,
+      2,
+      59,
+      67,
+      8,
+      1219
+    ],
+    [
+      24649,
+      2,
+      67,
+      69,
+      8,
+      615
+    ],
+    [
+      25126,
+      3,
+      69,
+      69,
+      8,
+      387
+    ],
+    [
+      25797,
+      4,
+      69,
+      70,
+      9,
+      650
+    ],
+    [
+      26685,
+      2,
+      70,
+      74,
+      9,
+      844
+    ],
+    [
+      27141,
+      3,
+      74,
+      74,
+      9,
+      364
+    ],
+    [
+      28011,
+      4,
+      74,
+      75,
+      10,
+      855
+    ],
+    [
+      47802,
+      2,
+      75,
+      83,
+      10,
+      1321
+    ],
+    [
+      48338,
+      2,
+      83,
+      85,
+      10,
+      520
+    ],
+    [
+      48813,
+      3,
+      85,
+      85,
+      10,
+      386
+    ],
+    [
+      49467,
+      4,
+      85,
+      86,
+      11,
+      637
+    ],
+    [
+      50406,
+      2,
+      86,
+      90,
+      11,
+      900
+    ],
+    [
+      50921,
+      3,
+      90,
+      90,
+      11,
+      408
+    ],
+    [
+      51626,
+      4,
+      90,
+      91,
+      12,
+      687
+    ],
+    [
+      52545,
+      2,
+      91,
+      99,
+      12,
+      883
+    ],
+    [
+      53147,
+      2,
+      99,
+      101,
+      12,
+      585
+    ],
+    [
+      53617,
+      3,
+      101,
+      101,
+      12,
+      387
+    ],
+    [
+      54286,
+      4,
+      101,
+      102,
+      13,
+      650
+    ],
+    [
+      55175,
+      2,
+      102,
+      106,
+      13,
+      845
+    ],
+    [
+      55646,
+      3,
+      106,
+      106,
+      13,
+      391
+    ],
+    [
+      56264,
+      4,
+      106,
+      107,
+      14,
+      600
+    ],
+    [
+      56885,
+      2,
+      107,
+      112,
+      14,
+      585
+    ],
+    [
+      112499,
+      0,
+      112,
+      0,
+      0,
+      773
+    ],
+    [
+      131580,
+      1,
+      0,
+      0,
+      0,
+      501
+    ],
+    [
+      132377,
+      2,
+      0,
+      5,
+      0,
+      745
+    ],
+    [
+      132843,
+      3,
+      5,
+      5,
+      0,
+      374
+    ],
+    [
+      133477,
+      4,
+      5,
+      6,
+      1,
+      619
+    ],
+    [
+      134130,
+      2,
+      6,
+      10,
+      1,
+      621
+    ],
+    [
+      134616,
+      3,
+      10,
+      10,
+      1,
+      392
+    ],
+    [
+      135279,
+      4,
+      10,
+      11,
+      2,
+      646
+    ],
+    [
+      136223,
+      2,
+      11,
+      19,
+      2,
+      904
+    ],
+    [
+      136742,
+      2,
+      19,
+      21,
+      2,
+      497
+    ],
+    [
+      137254,
+      3,
+      21,
+      21,
+      2,
+      412
+    ],
+    [
+      137907,
+      4,
+      21,
+      22,
+      3,
+      633
+    ],
+    [
+      138565,
+      2,
+      22,
+      26,
+      3,
+      626
+    ],
+    [
+      139057,
+      3,
+      26,
+      26,
+      3,
+      382
+    ],
+    [
+      139712,
+      4,
+      26,
+      27,
+      4,
+      637
+    ],
+    [
+      145819,
+      2,
+      27,
+      35,
+      4,
+      618
+    ],
+    [
+      146350,
+      2,
+      35,
+      37,
+      4,
+      516
+    ],
+    [
+      146821,
+      3,
+      37,
+      37,
+      4,
+      377
+    ],
+    [
+      147520,
+      4,
+      37,
+      38,
+      5,
+      683
+    ],
+    [
+      148319,
+      2,
+      38,
+      42,
+      5,
+      758
+    ],
+    [
+      148815,
+      3,
+      42,
+      42,
+      5,
+      393
+    ],
+    [
+      149516,
+      4,
+      42,
+      43,
+      6,
+      685
+    ],
+    [
+      150324,
+      2,
+      43,
+      51,
+      6,
+      775
+    ],
+    [
+      150958,
+      2,
+      51,
+      53,
+      6,
+      614
+    ],
+    [
+      151451,
+      3,
+      53,
+      53,
+      6,
+      396
+    ],
+    [
+      152111,
+      4,
+      53,
+      54,
+      7,
+      641
+    ],
+    [
+      152900,
+      2,
+      54,
+      58,
+      7,
+      753
+    ],
+    [
+      153398,
+      3,
+      58,
+      58,
+      7,
+      386
+    ],
+    [
+      154044,
+      4,
+      58,
+      59,
+      8,
+      626
+    ],
+    [
+      154827,
+      2,
+      59,
+      67,
+      8,
+      750
+    ],
+    [
+      155359,
+      2,
+      67,
+      69,
+      8,
+      514
+    ],
+    [
+      155865,
+      3,
+      69,
+      69,
+      8,
+      408
+    ],
+    [
+      156500,
+      4,
+      69,
+      70,
+      9,
+      617
+    ],
+    [
+      157266,
+      2,
+      70,
+      74,
+      9,
+      734
+    ],
+    [
+      157738,
+      3,
+      74,
+      74,
+      9,
+      377
+    ],
+    [
+      158586,
+      4,
+      74,
+      75,
+      10,
+      833
+    ],
+    [
+      211335,
+      2,
+      75,
+      83,
+      10,
+      742
+    ],
+    [
+      211839,
+      2,
+      83,
+      85,
+      10,
+      488
+    ],
+    [
+      212351,
+      3,
+      85,
+      85,
+      10,
+      416
+    ],
+    [
+      213069,
+      4,
+      85,
+      86,
+      11,
+      692
+    ],
+    [
+      214318,
+      2,
+      86,
+      90,
+      11,
+      1202
+    ],
+    [
+      214785,
+      3,
+      90,
+      90,
+      11,
+      379
+    ],
+    [
+      215587,
+      4,
+      90,
+      91,
+      12,
+      781
+    ],
+    [
+      216788,
+      2,
+      91,
+      99,
+      12,
+      1166
+    ],
+    [
+      217421,
+      2,
+      99,
+      101,
+      12,
+      612
+    ],
+    [
+      217911,
+      3,
+      101,
+      101,
+      12,
+      397
+    ],
+    [
+      218497,
+      4,
+      101,
+      102,
+      13,
+      561
+    ],
+    [
+      219267,
+      2,
+      102,
+      106,
+      13,
+      734
+    ],
+    [
+      219776,
+      3,
+      106,
+      106,
+      13,
+      407
+    ],
+    [
+      220169,
+      4,
+      106,
+      107,
+      14,
+      375
+    ],
+    [
+      220832,
+      2,
+      107,
+      112,
+      14,
+      620
+    ],
+    [
+      221831,
+      0,
+      112,
+      0,
+      0,
+      539
+    ],
+    [
+      223399,
+      1,
+      0,
+      0,
+      0,
+      712
+    ],
+    [
+      224084,
+      2,
+      0,
+      5,
+      0,
+      647
+    ],
+    [
+      224655,
+      3,
+      5,
+      5,
+      0,
+      449
+    ],
+    [
+      225317,
+      4,
+      5,
+      6,
+      1,
+      639
+    ],
+    [
+      225972,
+      2,
+      6,
+      10,
+      1,
+      618
+    ],
+    [
+      226759,
+      3,
+      10,
+      10,
+      1,
+      691
+    ],
+    [
+      227272,
+      4,
+      10,
+      11,
+      2,
+      497
+    ],
+    [
+      227921,
+      2,
+      11,
+      19,
+      2,
+      619
+    ],
+    [
+      228442,
+      2,
+      19,
+      21,
+      2,
+      503
+    ],
+    [
+      229079,
+      3,
+      21,
+      21,
+      2,
+      538
+    ],
+    [
+      229701,
+      4,
+      21,
+      22,
+      3,
+      605
+    ],
+    [
+      230346,
+      2,
+      22,
+      26,
+      3,
+      613
+    ],
+    [
+      230799,
+      3,
+      26,
+      26,
+      3,
+      368
+    ],
+    [
+      231380,
+      4,
+      26,
+      27,
+      4,
+      563
+    ],
+    [
+      242893,
+      2,
+      27,
+      35,
+      4,
+      866
+    ],
+    [
+      243417,
+      2,
+      35,
+      37,
+      4,
+      507
+    ],
+    [
+      244022,
+      3,
+      37,
+      37,
+      4,
+      523
+    ],
+    [
+      244654,
+      4,
+      37,
+      38,
+      5,
+      611
+    ],
+    [
+      245316,
+      2,
+      38,
+      42,
+      5,
+      629
+    ],
+    [
+      245776,
+      3,
+      42,
+      42,
+      5,
+      372
+    ],
+    [
+      246318,
+      4,
+      42,
+      43,
+      6,
+      526
+    ],
+    [
+      247109,
+      2,
+      43,
+      51,
+      6,
+      756
+    ],
+    [
+      247625,
+      2,
+      51,
+      53,
+      6,
+      501
+    ],
+    [
+      248104,
+      3,
+      53,
+      53,
+      6,
+      385
+    ],
+    [
+      248961,
+      4,
+      53,
+      54,
+      7,
+      835
+    ],
+    [
+      249720,
+      2,
+      54,
+      58,
+      7,
+      729
+    ],
+    [
+      250187,
+      3,
+      58,
+      58,
+      7,
+      386
+    ],
+    [
+      250747,
+      4,
+      58,
+      59,
+      8,
+      544
+    ],
+    [
+      251531,
+      2,
+      59,
+      67,
+      8,
+      753
+    ],
+    [
+      252172,
+      2,
+      67,
+      69,
+      8,
+      623
+    ],
+    [
+      252651,
+      3,
+      69,
+      69,
+      8,
+      386
+    ],
+    [
+      253302,
+      4,
+      69,
+      70,
+      9,
+      636
+    ],
+    [
+      254061,
+      2,
+      70,
+      74,
+      9,
+      726
+    ],
+    [
+      254645,
+      3,
+      74,
+      74,
+      9,
+      488
+    ],
+    [
+      255284,
+      4,
+      74,
+      75,
+      10,
+      620
+    ],
+    [
+      286597,
+      2,
+      75,
+      83,
+      10,
+      791
+    ],
+    [
+      287221,
+      2,
+      83,
+      85,
+      10,
+      606
+    ],
+    [
+      287705,
+      3,
+      85,
+      85,
+      10,
+      381
+    ],
+    [
+      288372,
+      4,
+      85,
+      86,
+      11,
+      652
+    ],
+    [
+      289155,
+      2,
+      86,
+      90,
+      11,
+      750
+    ],
+    [
+      289621,
+      3,
+      90,
+      90,
+      11,
+      374
+    ],
+    [
+      290268,
+      4,
+      90,
+      91,
+      12,
+      633
+    ],
+    [
+      291455,
+      2,
+      91,
+      99,
+      12,
+      1131
+    ],
+    [
+      292306,
+      2,
+      99,
+      101,
+      12,
+      835
+    ],
+    [
+      292766,
+      3,
+      101,
+      101,
+      12,
+      374
+    ],
+    [
+      293323,
+      4,
+      101,
+      102,
+      13,
+      539
+    ],
+    [
+      294080,
+      2,
+      102,
+      106,
+      13,
+      726
+    ],
+    [
+      294560,
+      3,
+      106,
+      106,
+      13,
+      383
+    ],
+    [
+      295185,
+      4,
+      106,
+      107,
+      14,
+      604
+    ],
+    [
+      295800,
+      2,
+      107,
+      112,
+      14,
+      582
+    ]
+  ],
+  "ownSelections": [
+    {
+      "at": "2026-10-27T17:47:43.983Z",
+      "overall": 6,
+      "playerId": "06n8t",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTJavontae Campbell · wwc1n3o4mvn1c6hk · pick 6 · slot G · verified local receiptLegal roster assignment: G1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:47:46.035Z",
+      "overall": 11,
+      "playerId": "065cb",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTKyle Evans · wwc1n3o4mvn1c6hk · pick 11 · slot F/C · verified local receiptLegal roster assignment: F/C1: Kyle Evans · G1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:47:48.587Z",
+      "overall": 22,
+      "playerId": "06n56",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTKamrin Oriol · wwc1n3o4mvn1c6hk · pick 22 · slot G · verified local receiptLegal roster assignment: G1: Kamrin Oriol · G2: Javontae Campbell · F/C1: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:47:50.408Z",
+      "overall": 27,
+      "playerId": "064kr",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTQuion Williams · wwc1n3o4mvn1c6hk · pick 27 · slot G · verified local receiptLegal roster assignment: G1: Quion Williams · G2: Kamrin Oriol · G3: Javontae Campbell · F/C1: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:47:57.617Z",
+      "overall": 38,
+      "playerId": "06dun",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTMarkus Burton · wwc1n3o4mvn1c6hk · pick 38 · slot G · verified local receiptLegal roster assignment: G1: Markus Burton · G2: Quion Williams · G3: Kamrin Oriol · G4: Javontae Campbell · F/C1: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:47:59.504Z",
+      "overall": 43,
+      "playerId": "06g0r",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTMotiejus Krivas · wwc1n3o4mvn1c6hk · pick 43 · slot F/C · verified local receiptLegal roster assignment: F/C1: Motiejus Krivas · G1: Markus Burton · G2: Quion Williams · G3: Kamrin Oriol · G4: Javontae Campbell · F/C2: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:48:01.951Z",
+      "overall": 54,
+      "playerId": "0729c",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTMichael James · wwc1n3o4mvn1c6hk · pick 54 · slot G · verified local receiptLegal roster assignment: G1: Michael James · G2: Markus Burton · G3: Quion Williams · G4: Kamrin Oriol · F/C1: Motiejus Krivas · F/C2: Kyle Evans · Flx1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:48:04.239Z",
+      "overall": 59,
+      "playerId": "06vye",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTAmari Allen · wwc1n3o4mvn1c6hk · pick 59 · slot G · verified local receiptLegal roster assignment: G1: Amari Allen · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Motiejus Krivas · F/C2: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:48:07.284Z",
+      "overall": 70,
+      "playerId": "065mj",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTJack Karasinski · wwc1n3o4mvn1c6hk · pick 70 · slot F/C · verified local receiptLegal roster assignment: F/C1: Jack Karasinski · G1: Amari Allen · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C2: Motiejus Krivas · F/C3: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:48:09.498Z",
+      "overall": 75,
+      "playerId": "05wk5",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTDaeshun Ruffin · wwc1n3o4mvn1c6hk · pick 75 · slot G · verified local receiptLegal roster assignment: G1: Daeshun Ruffin · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Jack Karasinski · F/C2: Amari Allen · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:48:30.954Z",
+      "overall": 86,
+      "playerId": "06g9r",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTNolan Winter · wwc1n3o4mvn1c6hk · pick 86 · slot F/C · verified local receiptLegal roster assignment: F/C1: Nolan Winter · G1: Amari Allen · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C2: Jack Karasinski · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Daeshun Ruffin"
+    },
+    {
+      "at": "2026-10-27T17:48:33.113Z",
+      "overall": 91,
+      "playerId": "064jf",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTB.J. Edwards · wwc1n3o4mvn1c6hk · pick 91 · slot G · verified local receiptLegal roster assignment: G1: B.J. Edwards · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Jack Karasinski · F/C2: Amari Allen · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Daeshun Ruffin · Res: Nolan Winter"
+    },
+    {
+      "at": "2026-10-27T17:48:35.773Z",
+      "overall": 102,
+      "playerId": "064yz",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTDior Johnson · wwc1n3o4mvn1c6hk · pick 102 · slot G · verified local receiptLegal roster assignment: G1: Dior Johnson · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Jack Karasinski · F/C2: Amari Allen · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Daeshun Ruffin · Res: Nolan Winter · Res: B.J. Edwards"
+    },
+    {
+      "at": "2026-10-27T17:48:37.751Z",
+      "overall": 107,
+      "playerId": "06mz2",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTDaniel Freitag · wwc1n3o4mvn1c6hk · pick 107 · slot G · verified local receiptLegal roster assignment: G1: Daniel Freitag · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Jack Karasinski · F/C2: Amari Allen · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Daeshun Ruffin · Res: Nolan Winter · Res: B.J. Edwards · Res: Dior Johnson"
+    },
+    {
+      "at": "2026-10-27T17:49:54.964Z",
+      "overall": 6,
+      "playerId": "06n8t",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTJavontae Campbell · wwc1n3o4mvn1c6hk · pick 6 · slot G · verified local receiptLegal roster assignment: G1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:49:56.766Z",
+      "overall": 11,
+      "playerId": "065cb",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTKyle Evans · wwc1n3o4mvn1c6hk · pick 11 · slot F/C · verified local receiptLegal roster assignment: F/C1: Kyle Evans · G1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:49:59.394Z",
+      "overall": 22,
+      "playerId": "06n56",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTKamrin Oriol · wwc1n3o4mvn1c6hk · pick 22 · slot G · verified local receiptLegal roster assignment: G1: Kamrin Oriol · G2: Javontae Campbell · F/C1: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:50:01.199Z",
+      "overall": 27,
+      "playerId": "064kr",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTQuion Williams · wwc1n3o4mvn1c6hk · pick 27 · slot G · verified local receiptLegal roster assignment: G1: Quion Williams · G2: Kamrin Oriol · G3: Javontae Campbell · F/C1: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:50:09.007Z",
+      "overall": 38,
+      "playerId": "06g7r",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTPryce Sandfort · wwc1n3o4mvn1c6hk · pick 38 · slot F/C · verified local receiptLegal roster assignment: F/C1: Pryce Sandfort · G1: Quion Williams · G2: Kamrin Oriol · G3: Javontae Campbell · F/C2: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:50:11.003Z",
+      "overall": 43,
+      "playerId": "06dun",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTMarkus Burton · wwc1n3o4mvn1c6hk · pick 43 · slot G · verified local receiptLegal roster assignment: G1: Markus Burton · G2: Quion Williams · G3: Kamrin Oriol · G4: Javontae Campbell · F/C1: Pryce Sandfort · F/C2: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:50:13.598Z",
+      "overall": 54,
+      "playerId": "0729c",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTMichael James · wwc1n3o4mvn1c6hk · pick 54 · slot G · verified local receiptLegal roster assignment: G1: Michael James · G2: Markus Burton · G3: Quion Williams · G4: Kamrin Oriol · F/C1: Pryce Sandfort · F/C2: Kyle Evans · Flx1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:50:15.531Z",
+      "overall": 59,
+      "playerId": "06grf",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTThomas Dowd · wwc1n3o4mvn1c6hk · pick 59 · slot F/C · verified local receiptLegal roster assignment: F/C1: Thomas Dowd · G1: Michael James · G2: Markus Burton · G3: Quion Williams · G4: Kamrin Oriol · F/C2: Pryce Sandfort · F/C3: Kyle Evans · Flx1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:50:17.987Z",
+      "overall": 70,
+      "playerId": "06vye",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTAmari Allen · wwc1n3o4mvn1c6hk · pick 70 · slot F/C · verified local receiptLegal roster assignment: F/C1: Amari Allen · G1: Michael James · G2: Markus Burton · G3: Quion Williams · G4: Kamrin Oriol · F/C2: Thomas Dowd · F/C3: Pryce Sandfort · F/C4: Kyle Evans · Flx1: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:50:20.073Z",
+      "overall": 75,
+      "playerId": "064yz",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTDior Johnson · wwc1n3o4mvn1c6hk · pick 75 · slot G · verified local receiptLegal roster assignment: G1: Dior Johnson · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Amari Allen · F/C2: Thomas Dowd · F/C3: Pryce Sandfort · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell"
+    },
+    {
+      "at": "2026-10-27T17:51:14.556Z",
+      "overall": 86,
+      "playerId": "065ct",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTKeyshawn Hall · wwc1n3o4mvn1c6hk · pick 86 · slot F/C · verified local receiptLegal roster assignment: F/C1: Keyshawn Hall · G1: Amari Allen · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C2: Thomas Dowd · F/C3: Pryce Sandfort · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Dior Johnson"
+    },
+    {
+      "at": "2026-10-27T17:51:17.074Z",
+      "overall": 91,
+      "playerId": "064jf",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTB.J. Edwards · wwc1n3o4mvn1c6hk · pick 91 · slot G · verified local receiptLegal roster assignment: G1: B.J. Edwards · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Amari Allen · F/C2: Thomas Dowd · F/C3: Pryce Sandfort · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Dior Johnson · Res: Keyshawn Hall"
+    },
+    {
+      "at": "2026-10-27T17:51:19.984Z",
+      "overall": 102,
+      "playerId": "06nfc",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTJoshua Dent · wwc1n3o4mvn1c6hk · pick 102 · slot G · verified local receiptLegal roster assignment: G1: Joshua Dent · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C1: Amari Allen · F/C2: Thomas Dowd · F/C3: Pryce Sandfort · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Dior Johnson · Res: Keyshawn Hall · Res: B.J. Edwards"
+    },
+    {
+      "at": "2026-10-27T17:51:21.656Z",
+      "overall": 107,
+      "playerId": "06g0r",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTMotiejus Krivas · wwc1n3o4mvn1c6hk · pick 107 · slot F/C · verified local receiptLegal roster assignment: F/C1: Motiejus Krivas · G1: Amari Allen · G2: Michael James · G3: Markus Burton · G4: Quion Williams · F/C2: Thomas Dowd · F/C3: Pryce Sandfort · F/C4: Kyle Evans · Flx1: Kamrin Oriol · Flx2: Javontae Campbell · Res: Dior Johnson · Res: Keyshawn Hall · Res: B.J. Edwards · Res: Joshua Dent"
+    },
+    {
+      "at": "2026-10-27T17:51:26.804Z",
+      "overall": 6,
+      "playerId": "06n46",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTTyler Tanner · wwc1n3o4mvn1c6hk · pick 6 · slot G · verified local receiptLegal roster assignment: G1: Tyler Tanner"
+    },
+    {
+      "at": "2026-10-27T17:51:28.759Z",
+      "overall": 11,
+      "playerId": "065cb",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTKyle Evans · wwc1n3o4mvn1c6hk · pick 11 · slot F/C · verified local receiptLegal roster assignment: F/C1: Kyle Evans · G1: Tyler Tanner"
+    },
+    {
+      "at": "2026-10-27T17:51:31.188Z",
+      "overall": 22,
+      "playerId": "06n8t",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTJavontae Campbell · wwc1n3o4mvn1c6hk · pick 22 · slot G · verified local receiptLegal roster assignment: G1: Javontae Campbell · G2: Tyler Tanner · F/C1: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:51:32.867Z",
+      "overall": 27,
+      "playerId": "0655r",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTTavari Johnson · wwc1n3o4mvn1c6hk · pick 27 · slot G · verified local receiptLegal roster assignment: G1: Tavari Johnson · G2: Javontae Campbell · G3: Tyler Tanner · F/C1: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:51:46.141Z",
+      "overall": 38,
+      "playerId": "06g0r",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTMotiejus Krivas · wwc1n3o4mvn1c6hk · pick 38 · slot F/C · verified local receiptLegal roster assignment: F/C1: Motiejus Krivas · G1: Tavari Johnson · G2: Javontae Campbell · G3: Tyler Tanner · F/C2: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:51:47.805Z",
+      "overall": 43,
+      "playerId": "06g9r",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTNolan Winter · wwc1n3o4mvn1c6hk · pick 43 · slot F/C · verified local receiptLegal roster assignment: F/C1: Nolan Winter · G1: Tavari Johnson · G2: Javontae Campbell · G3: Tyler Tanner · F/C2: Motiejus Krivas · F/C3: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:51:50.448Z",
+      "overall": 54,
+      "playerId": "064kr",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTQuion Williams · wwc1n3o4mvn1c6hk · pick 54 · slot G · verified local receiptLegal roster assignment: G1: Quion Williams · G2: Tavari Johnson · G3: Javontae Campbell · G4: Tyler Tanner · F/C1: Nolan Winter · F/C2: Motiejus Krivas · F/C3: Kyle Evans"
+    },
+    {
+      "at": "2026-10-27T17:51:52.234Z",
+      "overall": 59,
+      "playerId": "06vye",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTAmari Allen · wwc1n3o4mvn1c6hk · pick 59 · slot G · verified local receiptLegal roster assignment: G1: Amari Allen · G2: Quion Williams · G3: Tavari Johnson · G4: Javontae Campbell · F/C1: Nolan Winter · F/C2: Motiejus Krivas · F/C3: Kyle Evans · Flx1: Tyler Tanner"
+    },
+    {
+      "at": "2026-10-27T17:51:54.789Z",
+      "overall": 70,
+      "playerId": "06h14",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTJalen Cox · wwc1n3o4mvn1c6hk · pick 70 · slot G · verified local receiptLegal roster assignment: G1: Jalen Cox · G2: Amari Allen · G3: Quion Williams · G4: Tavari Johnson · F/C1: Nolan Winter · F/C2: Motiejus Krivas · F/C3: Kyle Evans · Flx1: Javontae Campbell · Flx2: Tyler Tanner"
+    },
+    {
+      "at": "2026-10-27T17:51:56.771Z",
+      "overall": 75,
+      "playerId": "06gdn",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTJason Rivera-Torres · wwc1n3o4mvn1c6hk · pick 75 · slot G · verified local receiptLegal roster assignment: G1: Jason Rivera-Torres · G2: Jalen Cox · G3: Quion Williams · G4: Tavari Johnson · F/C1: Amari Allen · F/C2: Nolan Winter · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Javontae Campbell · Flx2: Tyler Tanner"
+    },
+    {
+      "at": "2026-10-27T17:52:29.859Z",
+      "overall": 86,
+      "playerId": "064m3",
+      "slot": "F/C",
+      "receipt": "LATEST RECEIPTFredrick King · wwc1n3o4mvn1c6hk · pick 86 · slot F/C · verified local receiptLegal roster assignment: F/C1: Fredrick King · G1: Jalen Cox · G2: Amari Allen · G3: Quion Williams · G4: Tavari Johnson · F/C2: Nolan Winter · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Javontae Campbell · Flx2: Tyler Tanner · Res: Jason Rivera-Torres"
+    },
+    {
+      "at": "2026-10-27T17:52:31.755Z",
+      "overall": 91,
+      "playerId": "06n56",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTKamrin Oriol · wwc1n3o4mvn1c6hk · pick 91 · slot G · verified local receiptLegal roster assignment: G1: Kamrin Oriol · G2: Jalen Cox · G3: Quion Williams · G4: Tavari Johnson · F/C1: Amari Allen · F/C2: Nolan Winter · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Javontae Campbell · Flx2: Tyler Tanner · Res: Jason Rivera-Torres · Res: Fredrick King"
+    },
+    {
+      "at": "2026-10-27T17:52:34.810Z",
+      "overall": 102,
+      "playerId": "06gv0",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTJackson Holcombe · wwc1n3o4mvn1c6hk · pick 102 · slot G · verified local receiptLegal roster assignment: G1: Jackson Holcombe · G2: Jalen Cox · G3: Quion Williams · G4: Tavari Johnson · F/C1: Amari Allen · F/C2: Nolan Winter · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Javontae Campbell · Flx2: Tyler Tanner · Res: Jason Rivera-Torres · Res: Fredrick King · Res: Kamrin Oriol"
+    },
+    {
+      "at": "2026-10-27T17:52:36.672Z",
+      "overall": 107,
+      "playerId": "064yz",
+      "slot": "G",
+      "receipt": "LATEST RECEIPTDior Johnson · wwc1n3o4mvn1c6hk · pick 107 · slot G · verified local receiptLegal roster assignment: G1: Dior Johnson · G2: Jalen Cox · G3: Quion Williams · G4: Tavari Johnson · F/C1: Amari Allen · F/C2: Nolan Winter · F/C3: Motiejus Krivas · F/C4: Kyle Evans · Flx1: Javontae Campbell · Flx2: Tyler Tanner · Res: Jason Rivera-Torres · Res: Fredrick King · Res: Kamrin Oriol · Res: Jackson Holcombe"
+    }
+  ],
+  "runs": [
+    {
+      "scenario": "balanced",
+      "profilePath": "Balanced throughout",
+      "completedAt": "2026-10-27T17:48:38.392Z",
+      "filled": 112,
+      "own": "14 / 14",
+      "rosterCounts": [
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14"
+      ]
+    },
+    {
+      "scenario": "guards",
+      "profilePath": "Balanced four selections then Guards",
+      "completedAt": "2026-10-27T17:51:22.341Z",
+      "filled": 112,
+      "own": "14 / 14",
+      "rosterCounts": [
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14"
+      ]
+    },
+    {
+      "scenario": "bigs",
+      "profilePath": "Balanced four selections then Bigs",
+      "completedAt": "2026-10-27T17:52:37.304Z",
+      "filled": 112,
+      "own": "14 / 14",
+      "rosterCounts": [
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14",
+        "14/14"
+      ]
+    }
+  ]
+}

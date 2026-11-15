@@ -1,0 +1,377 @@
+{
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "generatedAt": "2026-10-27T12:05:16.011Z",
+  "sourceKind": "manual-local",
+  "status": "draft-preparation",
+  "stateObservedAt": "2026-10-27T12:02:13Z",
+  "ageSeconds": 183.011,
+  "inputAgesHours": {
+    "board": 0.012761111111111112,
+    "pool": 4.085433055555556,
+    "provider": 0.6788919444444445
+  },
+  "staleInputs": false,
+  "providerPublicationLabel": "Updated on October 20, 2026 9:56PM EST",
+  "statusCoverage": "targeted-partial; absence of a status record is not clearance",
+  "ownSelected": 0,
+  "nextOwnOverall": 6,
+  "ownTurn": false,
+  "turnAuthority": "conditional-on-manual-team-order; not platform verified",
+  "coverage": {
+    "availablePool": 5687,
+    "forecasted": 2209,
+    "providerSupplemented": 29,
+    "coldStarts": 3,
+    "excluded": 3478
+  },
+  "recommendations": [
+    {
+      "draftRank": 1,
+      "rank": 1,
+      "playerId": "06n46",
+      "name": "Tyler Tanner",
+      "school": "Vand",
+      "eligibleGroups": [
+        "G"
+      ],
+      "categoryScore": 0.8166832687158017,
+      "positionValue": 0.6818621829225506,
+      "strengths": [
+        "ST",
+        "PTS",
+        "AST"
+      ],
+      "weaknesses": [
+        "REB",
+        "BLK",
+        "FG%"
+      ],
+      "adp": 2.4,
+      "providerRank": 2,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    },
+    {
+      "draftRank": 2,
+      "rank": 16,
+      "playerId": "06g7r",
+      "name": "Pryce Sandfort",
+      "school": "Nebras",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "categoryScore": 0.32837937291513425,
+      "positionValue": 0.37411726266272516,
+      "strengths": [
+        "3PTM",
+        "PTS",
+        "FT%"
+      ],
+      "weaknesses": [
+        "AST",
+        "ST",
+        "REB"
+      ],
+      "adp": 61.2,
+      "providerRank": 10,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    },
+    {
+      "draftRank": 3,
+      "rank": 2,
+      "playerId": "06n8t",
+      "name": "Javontae Campbell",
+      "school": "Cin",
+      "eligibleGroups": [
+        "G"
+      ],
+      "categoryScore": 0.5085277845415338,
+      "positionValue": 0.3737066987482827,
+      "strengths": [
+        "ST",
+        "AST",
+        "PTS"
+      ],
+      "weaknesses": [
+        "REB",
+        "BLK",
+        "3PTM"
+      ],
+      "adp": 95.8,
+      "providerRank": null,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    },
+    {
+      "draftRank": 4,
+      "rank": 17,
+      "playerId": "06pqo",
+      "name": "Hamad Mousa",
+      "school": "CAPoly",
+      "eligibleGroups": [
+        "G",
+        "F/C"
+      ],
+      "categoryScore": 0.3260683097278712,
+      "positionValue": 0.3718061994754621,
+      "strengths": [
+        "FT%",
+        "3PTM",
+        "PTS"
+      ],
+      "weaknesses": [
+        "FG%",
+        "AST",
+        "ST"
+      ],
+      "adp": 30.3,
+      "providerRank": null,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    },
+    {
+      "draftRank": 5,
+      "rank": 21,
+      "playerId": "06grf",
+      "name": "Thomas Dowd",
+      "school": "Aub",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "categoryScore": 0.2802148482631731,
+      "positionValue": 0.325952738010764,
+      "strengths": [
+        "REB",
+        "BLK",
+        "3PTM"
+      ],
+      "weaknesses": [
+        "AST",
+        "PTS",
+        "FG%"
+      ],
+      "adp": 13.7,
+      "providerRank": null,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    },
+    {
+      "draftRank": 6,
+      "rank": 3,
+      "playerId": "0655r",
+      "name": "Tavari Johnson",
+      "school": "Charl",
+      "eligibleGroups": [
+        "G"
+      ],
+      "categoryScore": 0.4556162661674593,
+      "positionValue": 0.32079518037420823,
+      "strengths": [
+        "PTS",
+        "AST",
+        "3PTM"
+      ],
+      "weaknesses": [
+        "REB",
+        "BLK",
+        "ST"
+      ],
+      "adp": 29,
+      "providerRank": null,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified",
+        "current-role-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    },
+    {
+      "draftRank": 7,
+      "rank": 24,
+      "playerId": "06vye",
+      "name": "Amari Allen",
+      "school": "Bama",
+      "eligibleGroups": [
+        "G",
+        "F/C"
+      ],
+      "categoryScore": 0.2548306365495171,
+      "positionValue": 0.300568526297108,
+      "strengths": [
+        "REB",
+        "3PTM",
+        "AST"
+      ],
+      "weaknesses": [
+        "FG%",
+        "FT%",
+        "PTS"
+      ],
+      "adp": 162.3,
+      "providerRank": 6,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    },
+    {
+      "draftRank": 8,
+      "rank": 5,
+      "playerId": "06hcd",
+      "name": "Jeremy Fears",
+      "school": "MSU",
+      "eligibleGroups": [
+        "G"
+      ],
+      "categoryScore": 0.4277449861892173,
+      "positionValue": 0.2929239003959662,
+      "strengths": [
+        "AST",
+        "FT%",
+        "ST"
+      ],
+      "weaknesses": [
+        "REB",
+        "BLK",
+        "FG%"
+      ],
+      "adp": 56.8,
+      "providerRank": 1,
+      "reviewRequired": true,
+      "flags": [
+        "current-availability-unverified"
+      ],
+      "activeSlotsAfterPick": 1,
+      "reserveNeededAfterPick": 0
+    }
+  ],
+  "readyForPlatformExecution": false,
+  "liveActionsExecuted": 0,
+  "unmodeledReviewCandidates": [
+    {
+      "fantraxId": "07992",
+      "name": "Caleb Holt",
+      "school": "Ariz",
+      "eligibleGroups": [
+        "G"
+      ],
+      "adp": 217.8,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    },
+    {
+      "fantraxId": "079eg",
+      "name": "Joaquim Boumtje Boumtje",
+      "school": "Duke",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "adp": 231.7,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    },
+    {
+      "fantraxId": "07a72",
+      "name": "Miikka Muurinen",
+      "school": "Ark",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "adp": 233.9,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    },
+    {
+      "fantraxId": "076jd",
+      "name": "Luigi Suigo",
+      "school": "Vill",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "adp": 235.6,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    },
+    {
+      "fantraxId": "07a9k",
+      "name": "Marcus Spears",
+      "school": "Tex",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "adp": 239.1,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    },
+    {
+      "fantraxId": "07afw",
+      "name": "Jason Crowe",
+      "school": "Mizzou",
+      "eligibleGroups": [
+        "G"
+      ],
+      "adp": 242.6,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    },
+    {
+      "fantraxId": "079ew",
+      "name": "Cameron Williams",
+      "school": "Duke",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "adp": 247.8,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    },
+    {
+      "fantraxId": "07109",
+      "name": "Sebastian Wilkins",
+      "school": "Duke",
+      "eligibleGroups": [
+        "G",
+        "F/C"
+      ],
+      "adp": 249.7,
+      "historicalGP": 0,
+      "reason": "insufficient-history-no-current-provider-projection"
+    }
+  ],
+  "warnings": [
+    "Manual local state is not an independently verified Fantrax feed. This command submits no pick.",
+    "Roster feasibility assumes future picks with needed eligibility remain available; no opponent/survival probability is modeled.",
+    "Fresh session state does not refresh the board's player pool, projections or status evidence.",
+    "The 24-hour provider gate measures retrieval age, not projection publication age; inspect providerPublicationLabel separately.",
+    "Review flags and external rank disagreements remain visible; the per-game category score is experimental."
+  ]
+}

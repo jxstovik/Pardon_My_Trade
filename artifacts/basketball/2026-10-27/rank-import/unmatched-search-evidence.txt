@@ -1,0 +1,8 @@
+Browser tab: 16, Title: "League Draft Ranking - Fantrax", URL: "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/draft-ranking?view=RANKING&search=Skylar%20Wicks".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 3573-3752
+~0 AXWebArea League Draft Ranking - Fantrax, URL: fantrax.com/fantasy/league/mmioj1mvmvgsc3io/draft-ranking?view=RANKING&search=Skylar%20Wicks
++					3758 button
++			3759 container
++				3760 text Player RK Score ADP
+The focused UI element is 3566 search text field (settable) Find Player, Value: Skylar Wicks, ID: mat-input-0

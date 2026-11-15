@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "season": "2026-27",
+  "observations": [
+    {
+      "fantraxId": "06g3w",
+      "status": "out",
+      "draftAction": "manual-review-only",
+      "observedAt": "2026-10-27T11:35:00Z",
+      "sourceUrl": "https://www.rotowire.com/cbasketball/player/jt-toppin-22578",
+      "sourcePublishedAt": "2026-10-20",
+      "reason": "Knee injury; provider reports not close to practicing and no return timetable. Conditional per-game line is retained; excluded from default recommendation queue pending explicit stash review."
+    }
+  ]
+}

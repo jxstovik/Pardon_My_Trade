@@ -1,0 +1,3082 @@
+[
+  {
+    "playerId": "3116406",
+    "name": "Tyreek Hill",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685415",
+    "name": "Travis Hunter",
+    "team": "30",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4574716",
+    "name": "Harrison Mevis",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4241457",
+    "name": "Najee Harris",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3116385",
+    "name": "Joe Mixon",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360438",
+    "name": "Brandon Aiyuk",
+    "team": "25",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916945",
+    "name": "Darius Slayton",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "15683",
+    "name": "Justin Tucker",
+    "team": "33",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243371",
+    "name": "Riley Patterson",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685279",
+    "name": "Jaydon Blue",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5529",
+    "name": "Philip Rivers",
+    "team": "11",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3049899",
+    "name": "Younghoe Koo",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4714365",
+    "name": "Carson Steele",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5208518",
+    "name": "Charlie Smyth",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3128720",
+    "name": "Nick Chubb",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240631",
+    "name": "DeeJay Dallas",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2576581",
+    "name": "Chris Moore",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3059915",
+    "name": "Kareem Hunt",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3051392",
+    "name": "Ezekiel Elliott",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4432734",
+    "name": "Jalen Milroe",
+    "team": "26",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4808759",
+    "name": "Camden Brown",
+    "team": "6",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4372066",
+    "name": "Jake Moody",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2972515",
+    "name": "Cooper Rush",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360405",
+    "name": "Jake Bobo",
+    "team": "26",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3120348",
+    "name": "JuJu Smith-Schuster",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3043234",
+    "name": "Zane Gonzalez",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3051738",
+    "name": "Marquez Valdes-Scantling",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4708486",
+    "name": "Jimmy Horn Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4386544",
+    "name": "Xavier Smith",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243003",
+    "name": "Ronnie Rivers",
+    "team": "14",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4427238",
+    "name": "Dillon Gabriel",
+    "team": "5",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "15795",
+    "name": "DeAndre Hopkins",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "14881",
+    "name": "Russell Wilson",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "11122",
+    "name": "Matt Prater",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240600",
+    "name": "Kadarius Toney",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429202",
+    "name": "Israel Abanikanda",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4570688",
+    "name": "Caden Davis",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426689",
+    "name": "Ulysses Bentley IV",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361182",
+    "name": "Adrian Martinez",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4594749",
+    "name": "Michael Trigg",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685477",
+    "name": "Jam Miller",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4570738",
+    "name": "Ke'Shawn Williams",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361259",
+    "name": "Zach Wilson",
+    "team": "18",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4374033",
+    "name": "Jermar Jefferson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036032",
+    "name": "Brittain Brown",
+    "team": "3",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431325",
+    "name": "Taylen Green",
+    "team": "5",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4432722",
+    "name": "Athan Kaliakmanis",
+    "team": "28",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4567747",
+    "name": "Garrett Nussmeier",
+    "team": "12",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4879250",
+    "name": "Cole Payton",
+    "team": "21",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5344782",
+    "name": "Jack Strand",
+    "team": "1",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2468609",
+    "name": "Taysom Hill",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3116593",
+    "name": "Dalvin Cook",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2976499",
+    "name": "Amari Cooper",
+    "team": "13",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4241555",
+    "name": "Elijah Mitchell",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5092436",
+    "name": "Jude McAtamney",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431562",
+    "name": "Phil Mafah",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2975674",
+    "name": "Robert Tonyan",
+    "team": "23",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4241401",
+    "name": "Trey Sermon",
+    "team": "1",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4241820",
+    "name": "Sam Ehlinger",
+    "team": "7",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4249030",
+    "name": "D.J. Montgomery",
+    "team": "11",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242431",
+    "name": "Ty Chandler",
+    "team": "18",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4369466",
+    "name": "Ryan Miller",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4430723",
+    "name": "Jared Wiley",
+    "team": "12",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431210",
+    "name": "Beaux Collins",
+    "team": "1",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429435",
+    "name": "Brady Cook",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431142",
+    "name": "Jimmy Holiday",
+    "team": "12",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685441",
+    "name": "Kendrick Law",
+    "team": "8",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431465",
+    "name": "Behren Morton",
+    "team": "17",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5085024",
+    "name": "CJ Williams",
+    "team": "30",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428993",
+    "name": "Haynes King",
+    "team": "29",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429582",
+    "name": "Joe Fagnano",
+    "team": "33",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4012556",
+    "name": "C.J. Ham",
+    "team": "16",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3728262",
+    "name": "Ray-Ray McCloud III",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035004",
+    "name": "Mecole Hardman Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3932442",
+    "name": "Equanimeous St. Brown",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3821683",
+    "name": "Austin Seibert",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3975763",
+    "name": "Greg Joseph",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3123052",
+    "name": "Michael Badgley",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2980453",
+    "name": "Jamaal Williams",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2577327",
+    "name": "Tyler Lockett",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "16757",
+    "name": "Derek Carr",
+    "team": "18",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "16760",
+    "name": "Jimmy Garoppolo",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "16460",
+    "name": "Adam Thielen",
+    "team": "23",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "15965",
+    "name": "Dustin Hopkins",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "14993",
+    "name": "Greg Zuerlein",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "12460",
+    "name": "Graham Gano",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3128444",
+    "name": "Matthew Wright",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240657",
+    "name": "Michael Carter",
+    "team": "10",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035886",
+    "name": "Khalil Herbert",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428963",
+    "name": "Cade York",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4372019",
+    "name": "Jerome Ford",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361418",
+    "name": "Will Levis",
+    "team": "20",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242519",
+    "name": "Anders Carlson",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361665",
+    "name": "Christopher Dunn",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4430388",
+    "name": "DeWayne McBride",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4696736",
+    "name": "Tanner Brown",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4566192",
+    "name": "Joshua Karty",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360799",
+    "name": "Jordan Travis",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361765",
+    "name": "Brayden Narveson",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4051167",
+    "name": "Parker Romo",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4432338",
+    "name": "Luke Lachey",
+    "team": "9",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4682652",
+    "name": "Devin Neal",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4698253",
+    "name": "Lan Larison",
+    "team": "17",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4573398",
+    "name": "Max Brosmer",
+    "team": "16",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428943",
+    "name": "Jacardia Wright",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428512",
+    "name": "Kedon Slovis",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4877824",
+    "name": "Zach Horton",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429466",
+    "name": "Drake Dabney",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431342",
+    "name": "Brennan Presley",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4878878",
+    "name": "Amar Johnson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242536",
+    "name": "Sal Cannella",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685381",
+    "name": "Emmanuel Henderson Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685110",
+    "name": "Anthony Smith",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429053",
+    "name": "AJ Henning",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5151317",
+    "name": "Robert Henry Jr.",
+    "team": "26",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4039160",
+    "name": "Kylen Granson",
+    "team": "10",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4034948",
+    "name": "Feleipe Franks",
+    "team": "29",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036419",
+    "name": "Skylar Thompson",
+    "team": "33",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4916349",
+    "name": "Nikola Kalinic",
+    "team": "3",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361426",
+    "name": "Justin Shorter",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3929636",
+    "name": "Irv Charles",
+    "team": "26",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4373030",
+    "name": "Ben Sims",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242442",
+    "name": "Princeton Fant",
+    "team": "6",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428678",
+    "name": "Jamari Thrash",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4686104",
+    "name": "Johnny Wilson",
+    "team": "21",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360978",
+    "name": "David Martin-Robinson",
+    "team": "10",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4248557",
+    "name": "E.J. Jenkins",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426335",
+    "name": "Graham Mertz",
+    "team": "34",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4430431",
+    "name": "Kurtis Rourke",
+    "team": "25",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4432208",
+    "name": "Caleb Lohner",
+    "team": "7",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4432731",
+    "name": "Moliki Matavao",
+    "team": "18",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4691688",
+    "name": "Robbie Ouzts",
+    "team": "26",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4688552",
+    "name": "Keleki Latu",
+    "team": "2",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4569372",
+    "name": "Dalevon Campbell",
+    "team": "24",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4569547",
+    "name": "Nick Kallerup",
+    "team": "26",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5083297",
+    "name": "Jacoby Jones",
+    "team": "28",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4578436",
+    "name": "Coleman Owen",
+    "team": "9",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4877034",
+    "name": "Jaren Kanak",
+    "team": "10",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5159802",
+    "name": "Dallen Bentley",
+    "team": "7",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3061612",
+    "name": "Jamal Agnew",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3121409",
+    "name": "Noah Brown",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3115255",
+    "name": "Brandon Powell",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2978109",
+    "name": "Zach Pascal",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3122168",
+    "name": "Trent Sherfield",
+    "team": "2",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2576399",
+    "name": "Nick Vannett",
+    "team": "33",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3052056",
+    "name": "River Cracraft",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2511973",
+    "name": "Eric Tomlinson",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036335",
+    "name": "Cedrick Wilson Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3115928",
+    "name": "Malik Turner",
+    "team": "25",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2574511",
+    "name": "Brandon Allen",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2574630",
+    "name": "Jeff Driskel",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3047876",
+    "name": "KhaDarel Hodge",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2565969",
+    "name": "Taylor Heinicke",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3051381",
+    "name": "Mike White",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3128390",
+    "name": "Allen Lazard",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2579604",
+    "name": "Phillip Dorsett II",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3135321",
+    "name": "Hunter Renfrow",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3115306",
+    "name": "Josh Reynolds",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "15807",
+    "name": "Cordarrelle Patterson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "9614",
+    "name": "Marcedes Lewis",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035222",
+    "name": "Trayveon Williams",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2511109",
+    "name": "Trevor Siemian",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "16140",
+    "name": "Ryan Griffin",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3722362",
+    "name": "Brett Rypien",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3914397",
+    "name": "Scotty Miller",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3120590",
+    "name": "Easton Stick",
+    "team": "27",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3045169",
+    "name": "Tim Boyle",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2576414",
+    "name": "Raheem Mostert",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3886818",
+    "name": "Myles Gaskin",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4045163",
+    "name": "Miles Sanders",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3121410",
+    "name": "Parris Campbell",
+    "team": "6",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3932905",
+    "name": "Diontae Johnson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4048244",
+    "name": "Alexander Mattison",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3127306",
+    "name": "Dante Pettis",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3119195",
+    "name": "Chase Edmonds",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3052177",
+    "name": "John Ross",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3139033",
+    "name": "Mike Boone",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3121427",
+    "name": "Curtis Samuel",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3059722",
+    "name": "Zay Jones",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3050487",
+    "name": "Anthony Miller",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3051926",
+    "name": "Gus Edwards",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3045138",
+    "name": "Mike Williams",
+    "team": "24",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3045144",
+    "name": "Tyler Boyd",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2574808",
+    "name": "Robbie Chosen",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "16799",
+    "name": "Allen Robinson",
+    "team": "8",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "15880",
+    "name": "Robert Woods",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3139602",
+    "name": "D'Ernest Johnson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3122154",
+    "name": "Khari Blasingame",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3115349",
+    "name": "Jakob Johnson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4421446",
+    "name": "Craig Reynolds",
+    "team": "28",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242214",
+    "name": "Clyde Edwards-Helaire",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240021",
+    "name": "Cam Akers",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4241802",
+    "name": "Jalen Reagor",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3917612",
+    "name": "Ke'Shawn Vaughn",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035676",
+    "name": "Zack Moss",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3910544",
+    "name": "Joshua Kelley",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2310331",
+    "name": "Tyler Johnson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035115",
+    "name": "Albert Okwuegbunam Jr.",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4050373",
+    "name": "Quez Watkins",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916566",
+    "name": "K.J. Osborn",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360294",
+    "name": "Antonio Gibson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3928925",
+    "name": "JaMycal Hasty",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4039607",
+    "name": "J.J. Taylor",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243315",
+    "name": "Salvon Ahmed",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3124092",
+    "name": "John Wolford",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4039274",
+    "name": "Jonathan Ward",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4046676",
+    "name": "Tony Jones Jr.",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362630",
+    "name": "Terrace Marshall Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4034946",
+    "name": "Kyle Trask",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4245645",
+    "name": "Gary Brightwell",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240573",
+    "name": "Ihmir Smith-Marsette",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4048259",
+    "name": "Avery Williams",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362452",
+    "name": "Jaret Patterson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4034704",
+    "name": "Michael Bandy",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4039358",
+    "name": "Patrick Taylor Jr.",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4057082",
+    "name": "Mason Kinsey",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4390717",
+    "name": "Josh Johnson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4372071",
+    "name": "Hassan Haskins",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361777",
+    "name": "Zamir White",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4239086",
+    "name": "Desmond Ridder",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426475",
+    "name": "Tyrion Davis-Price",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4570409",
+    "name": "David Bell",
+    "team": "5",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4250360",
+    "name": "Bailey Zappe",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4044111",
+    "name": "Chris Oladokun",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4039034",
+    "name": "Shane Buechele",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4259308",
+    "name": "Raheem Blackshear",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035312",
+    "name": "Anthony Brown Jr.",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360231",
+    "name": "Lucas Krull",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4572786",
+    "name": "Dennis Houston",
+    "team": "27",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4250764",
+    "name": "Stone Smartt",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431453",
+    "name": "Deuce Vaughn",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685035",
+    "name": "Zach Evans",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240858",
+    "name": "Hendon Hooker",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4692590",
+    "name": "Jalin Hyatt",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4259592",
+    "name": "Sean Clifford",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4569609",
+    "name": "Evan Hull",
+    "team": "22",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4570561",
+    "name": "Eric Gray",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428119",
+    "name": "Lew Nichols",
+    "team": "23",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361417",
+    "name": "Zack Kuntz",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4427391",
+    "name": "Kenny McIntosh",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243322",
+    "name": "Jake Haener",
+    "team": "19",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4367178",
+    "name": "Dorian Thompson-Robinson",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4373632",
+    "name": "Jaren Hall",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360175",
+    "name": "Clayton Tune",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360290",
+    "name": "Brayden Willis",
+    "team": "25",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4427105",
+    "name": "Max Duggan",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4372526",
+    "name": "Deneric Prince",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240750",
+    "name": "Mohamed Ibrahim",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4248909",
+    "name": "Elijah Dotson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3886812",
+    "name": "Jake Browning",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240350",
+    "name": "Xazavian Valladay",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4372070",
+    "name": "Ben VanSumeren",
+    "team": "12",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4244688",
+    "name": "Nathan Rourke",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685016",
+    "name": "Ellis Merriweather",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4249616",
+    "name": "Owen Wright",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243004",
+    "name": "Jordan Mims",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4245661",
+    "name": "Lucas Havrisik",
+    "team": "0",
+    "position": "K",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362162",
+    "name": "SaRodorick Thompson Jr.",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429001",
+    "name": "Jase McClellan",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4686781",
+    "name": "Brenden Rice",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4427985",
+    "name": "Bub Means",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426479",
+    "name": "Cornelius Johnson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428532",
+    "name": "Ainias Smith",
+    "team": "29",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4567095",
+    "name": "Keilan Robinson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429262",
+    "name": "Jaheim Bell",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361653",
+    "name": "Devin Leary",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685039",
+    "name": "Michael Pratt",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5208436",
+    "name": "Louis Rees-Zammit",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361604",
+    "name": "Blake Watson",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4569156",
+    "name": "Michael Wiley",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4391845",
+    "name": "Cody Schrader",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4363554",
+    "name": "Thomas Odukoya",
+    "team": "12",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4430104",
+    "name": "Sincere McCormick",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4427600",
+    "name": "Terrell Jennings",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4248068",
+    "name": "Aaron Shampklin",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5065495",
+    "name": "Kaden Davis",
+    "team": "3",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4567216",
+    "name": "D.J. Williams",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426893",
+    "name": "Joshua Cephus",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4372758",
+    "name": "Kevin Austin Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429012",
+    "name": "Kendall Milton",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4248425",
+    "name": "Carlos Washington Jr.",
+    "team": "15",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361100",
+    "name": "Jack Westover",
+    "team": "28",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4379405",
+    "name": "Jaylen Johnson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426364",
+    "name": "Baylor Cupp",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240911",
+    "name": "Jacob Kibodi",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4698301",
+    "name": "Jermaine Jackson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242526",
+    "name": "John Samuel Shenker",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4710341",
+    "name": "Jarquez Hunter",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4775196",
+    "name": "Tommy Mellott",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429121",
+    "name": "Kalel Mullings",
+    "team": "10",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4693331",
+    "name": "Cam Miller",
+    "team": "0",
+    "position": "QB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4808830",
+    "name": "Damien Martinez",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4596439",
+    "name": "Dominic Lovett",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4887918",
+    "name": "Junior Bergen",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431353",
+    "name": "Xavier Restrepo",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431536",
+    "name": "Donovan Edwards",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4573243",
+    "name": "Chandler Brayboy",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431506",
+    "name": "Ja'Corey Brooks",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4605841",
+    "name": "Nathan Carter",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4877203",
+    "name": "Gage Larvadain",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4596545",
+    "name": "CJ Dippre",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4570296",
+    "name": "Dalen Cambre",
+    "team": "19",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4613050",
+    "name": "Quentin Skinner",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5178972",
+    "name": "Jakobie Keeney-James",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4430684",
+    "name": "Treyton Welch",
+    "team": "18",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4876006",
+    "name": "Zaire Mitchell-Paden",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4683308",
+    "name": "Tanner Arkin",
+    "team": "17",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429811",
+    "name": "Patrick Herbert",
+    "team": "24",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4892576",
+    "name": "Jamaal Pritchett",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4876995",
+    "name": "Ja'seem Reed",
+    "team": "29",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5225419",
+    "name": "Kolbe Katsis",
+    "team": "7",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3138744",
+    "name": "Chris Myarick",
+    "team": "13",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5082269",
+    "name": "Dean Connors",
+    "team": "14",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4685116",
+    "name": "DJ Herman",
+    "team": "15",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "5155825",
+    "name": "Carter Runyon",
+    "team": "13",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3128452",
+    "name": "Jordan Akins",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3115378",
+    "name": "Russell Gage Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3040569",
+    "name": "Trent Taylor",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3049698",
+    "name": "Anthony Firkser",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2977800",
+    "name": "Alex Erickson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3120303",
+    "name": "Ross Dwelley",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2508256",
+    "name": "MyCole Pruitt",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2574576",
+    "name": "C.J. Uzomah",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3915381",
+    "name": "John Kelly Jr.",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3122976",
+    "name": "Jeff Wilson Jr.",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "16763",
+    "name": "Jordan Matthews",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3918639",
+    "name": "Gerald Everett",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3924365",
+    "name": "Hayden Hurst",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916430",
+    "name": "Nyheim Hines",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4040980",
+    "name": "Irv Smith Jr.",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3127292",
+    "name": "Will Dissly",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3115394",
+    "name": "DJ Chark",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3125116",
+    "name": "D'Onta Foreman",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3046704",
+    "name": "Geoff Swaim",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2578533",
+    "name": "Chris Conley",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2971618",
+    "name": "Nelson Agholor",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "2576716",
+    "name": "Jamison Crowder",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916564",
+    "name": "Tyree Jackson",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3917960",
+    "name": "Steven Sims",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4411193",
+    "name": "Deonte Harty",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3948283",
+    "name": "Stephen Carlson",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3931391",
+    "name": "Trenton Irwin",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3912092",
+    "name": "Donald Parham Jr.",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036431",
+    "name": "Darrynton Evans",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243160",
+    "name": "Laviska Shenault Jr.",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3914151",
+    "name": "Josiah Deguara",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4040774",
+    "name": "Harrison Bryant",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243537",
+    "name": "Gabe Davis",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4039043",
+    "name": "Collin Johnson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916204",
+    "name": "James Proche II",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035426",
+    "name": "Stephen Sullivan",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242540",
+    "name": "Isaiah Hodgins",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035170",
+    "name": "Marquez Callaway",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036275",
+    "name": "Sean McKeon",
+    "team": "11",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4046715",
+    "name": "Trishton Jackson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3929637",
+    "name": "Dan Chisena",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3917849",
+    "name": "Lawrence Cager",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3910176",
+    "name": "Kristian Wilkerson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3915821",
+    "name": "Tony Brown",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4043016",
+    "name": "Dee Eskridge",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036026",
+    "name": "Dez Fitzpatrick",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243830",
+    "name": "Jaelon Darden",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4746079",
+    "name": "Zach Davidson",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4044144",
+    "name": "Kenny Yeboah",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4408854",
+    "name": "Jody Fortson",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3144991",
+    "name": "Parker Hesse",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3923392",
+    "name": "Mitchell Wilcox",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916749",
+    "name": "Giovanni Ricci",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4608362",
+    "name": "Shane Zylstra",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916587",
+    "name": "Tyler Mabry",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3126115",
+    "name": "Cody Thompson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4689546",
+    "name": "Danny Gray",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362186",
+    "name": "Erik Ezukanma",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362087",
+    "name": "Keaontay Ingram",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4379401",
+    "name": "John FitzPatrick",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360174",
+    "name": "Michael Woods II",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4249624",
+    "name": "Nick Muse",
+    "team": "1",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361988",
+    "name": "James Mitchell",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4248822",
+    "name": "Montrell Washington",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4027873",
+    "name": "Samori Toure",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360306",
+    "name": "Justyn Ross",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036211",
+    "name": "DJ Turner",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4245131",
+    "name": "Tim Jones",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4258248",
+    "name": "Peyton Hendershot",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4036448",
+    "name": "Jalen Virgil",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4047422",
+    "name": "Tanner Conner",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035776",
+    "name": "Kendric Pryor",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4274040",
+    "name": "Troy Hairston",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4244856",
+    "name": "Austin Trammell",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4035198",
+    "name": "Brandon Johnson",
+    "team": "23",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3914307",
+    "name": "Maurice Alexander",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3886809",
+    "name": "Andre Baccellia",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4879650",
+    "name": "Grant DuBose",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4565908",
+    "name": "Tyler Scott",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4372063",
+    "name": "Ronnie Bell",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4373266",
+    "name": "Antoine Green",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426407",
+    "name": "Trey Palmer",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362019",
+    "name": "A.T. Perry",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4250945",
+    "name": "Colton Dowell",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4689988",
+    "name": "Jason Brownlee",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426426",
+    "name": "Joseph Ngata",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429006",
+    "name": "Rakim Jarrett",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4689334",
+    "name": "Malik Heath",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4367186",
+    "name": "Chase Cota",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4240069",
+    "name": "Malik Cunningham",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4427278",
+    "name": "Xavier Gipson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4241588",
+    "name": "Elijah Cooks",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361778",
+    "name": "Kearis Jackson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4242558",
+    "name": "Tucker Fisk",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361332",
+    "name": "Shedrick Jackson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4243319",
+    "name": "Terrell Bynum",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4259324",
+    "name": "Travis Vokolek",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4360794",
+    "name": "Henry Pearson",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4250969",
+    "name": "Rodney Williams",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4363551",
+    "name": "Dylan Drummond",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4429033",
+    "name": "Jermaine Burton",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4692022",
+    "name": "Javon Baker",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428796",
+    "name": "Casey Washington",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4361112",
+    "name": "Devin Culp",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4427575",
+    "name": "Jha'Quan Jackson",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4567506",
+    "name": "Tahj Washington",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4875912",
+    "name": "Tejhaun Palmer",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4384171",
+    "name": "Tanner McLachlan",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4367510",
+    "name": "Dante Miller",
+    "team": "0",
+    "position": "RB",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362489",
+    "name": "John Stephens Jr.",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4373634",
+    "name": "Dallin Holker",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362227",
+    "name": "Bryce Ford-Wheaton",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426399",
+    "name": "Ramel Keyton",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4589248",
+    "name": "Tyreik McAllister",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362603",
+    "name": "Brenden Bates",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4362617",
+    "name": "Bryce Oliver",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4700712",
+    "name": "Cam Grandy",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4426990",
+    "name": "Jalen Moreno-Cropper",
+    "team": "18",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431479",
+    "name": "Ricky White III",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4431509",
+    "name": "Kaden Prather",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4570242",
+    "name": "Nick Nash",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4428116",
+    "name": "Isaiah Neyor",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4712579",
+    "name": "Dillon Bell",
+    "team": "16",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "3916071",
+    "name": "Gary Jennings",
+    "team": "0",
+    "position": "WR",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  },
+  {
+    "playerId": "4366910",
+    "name": "Shawn Bowman",
+    "team": "0",
+    "position": "TE",
+    "reason": "missing/mismatched period, identity, team, position, league rescore or future projection coverage"
+  }
+]

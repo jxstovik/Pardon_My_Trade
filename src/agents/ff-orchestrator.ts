@@ -5,9 +5,11 @@ import { scanWaivers } from "./skills/waiver-scanner.js";
 import { proposeTrades } from "./skills/trade-proposer.js";
 import { routeActions } from "./skills/execute-or-queue.js";
 import type { ActionQueue } from "./action-queue.js";
-import type { ActionEnqueueOptions, OrchestratorInput, OrchestratorResult, QueuedAction, AgentAction } from "./types.js";
+import type { ActionEnqueueOptions, OrchestratorInput, OrchestratorResult, QueuedAction, AgentAction, WaiverClaimAction } from "./types.js";
 
 export interface OrchestratorContext {
+  /** Live acquisition classification; unavailable states must not become add/drop proposals. */
+  readonly acquisitionStatus?: (playerId: string) => Promise<string | undefined>;
   readonly input: OrchestratorInput;
   readonly priors: ReadonlyArray<ModelPrior>;
   readonly observations?: ReadonlyArray<Observation>;
@@ -16,6 +18,8 @@ export interface OrchestratorContext {
   readonly enqueueOptions?: ActionEnqueueOptions;
   readonly queue: ActionQueue;
   readonly autoApproveLowRisk?: boolean;
+  /** Maximum overall value rank protected from add/drop recommendations. */
+  readonly doNotDropRankLimit?: number;
 }
 
 export function buildModelsForOrchestrator(
@@ -42,10 +46,21 @@ export async function runOrchestrator(context: OrchestratorContext): Promise<Orc
     starters: lineup.starters
   };
 
-  const waiverCandidates = scanWaivers(input.freeAgents, input.rosterSlots, models).map((candidate) => ({
+  const waiverCandidates = scanWaivers(input.freeAgents, input.rosterSlots, models, {
+    doNotDropRankLimit: context.doNotDropRankLimit
+  }).map((candidate) => ({
     ...candidate,
     teamId: input.teamId
   }));
+
+  const waiverClaims: WaiverClaimAction[] = [];
+  const immediateCandidates: typeof waiverCandidates = [];
+  for (const candidate of waiverCandidates) {
+    const status = context.acquisitionStatus ? await context.acquisitionStatus(candidate.addPlayerIds[0]) : "FREEAGENT";
+    if (status === "WAIVERS") {
+      waiverClaims.push({ type: "waiver_claim", teamId: input.teamId, addPlayerId: candidate.addPlayerIds[0], dropPlayerId: candidate.dropPlayerIds[0], priority: waiverClaims.length + 1 });
+    } else if (status === "FREEAGENT") immediateCandidates.push(candidate);
+  }
 
   const tradeCandidates = proposeTrades(
     input.teamId,
@@ -57,10 +72,11 @@ export async function runOrchestrator(context: OrchestratorContext): Promise<Orc
   const routed = await routeActions(
     [
       { action: setRoster, rationale: "Optimal expected-points lineup for the scoring period." },
-      ...waiverCandidates.map((c) => ({
+      ...immediateCandidates.map((c) => ({
         action: c as AgentAction,
         rationale: `Add ${c.addPlayerIds[0]} over ${c.dropPlayerIds[0]} by projected value.`
       })),
+      ...waiverClaims.map(action => ({ action: action as AgentAction, rationale: `Waiver preference ${action.priority}: add ${action.addPlayerId}; conditional drop ${action.dropPlayerId}. Ranked by PMT position-adjusted projected value; individual approval required.` })),
       ...tradeCandidates.map((t) => ({
         action: t as AgentAction,
         rationale: `Propose +EV trade: give ${t.givePlayerIds.join(",")} for ${t.receivePlayerIds.join(",")}.`
@@ -78,7 +94,8 @@ export async function runOrchestrator(context: OrchestratorContext): Promise<Orc
     teamId: input.teamId,
     lineup: lineup.starters,
     lineupExpectedPoints: lineup.expectedPoints,
-    waiverCandidates,
+    waiverCandidates: immediateCandidates,
+    waiverClaims,
     tradeCandidates,
     queued,
     executed,

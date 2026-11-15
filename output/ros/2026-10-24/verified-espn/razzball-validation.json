@@ -1,0 +1,933 @@
+{
+  "snapshotId": "espn-98806880-6d7bc216-275e-4a27-93e3-ea46d0ddaace",
+  "assessment": "Contemporary 2026 body evidence is present: current ESPN identities, NFL teams, and 2026 rookie/transfer sentinels match. WR/TE/K/DST retain literal 2025 title conflicts. This is not blanket season certification or league-scoring certification. Use independently verified ESPN remaining weekly sums instead of relabeling/persisting these published PPR/STD values.",
+  "rawRows": 743,
+  "parsedRows": 743,
+  "currentEspnMatches": 583,
+  "sources": [
+    {
+      "position": "QB",
+      "url": "https://football.razzball.com/projections-qb-restofseason/",
+      "title": "2026 QB Fantasy Football Projections &amp; Rankings | Razzball",
+      "updatedRaw": "2026-10-24 05:07:39 AM EST",
+      "bodySha256": "672101610d41f0f0d9ceda044133ce751d53d4bf05e5cac25293f5eed4a1e5e9",
+      "rawRows": 102,
+      "parsedRows": 102,
+      "currentEspnNameTeamPositionMatches": 84,
+      "unmatchedCount": 18,
+      "unmatched": [
+        {
+          "name": "Jayden Daniels",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Trevor Lawrence",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Marcus Mariota",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Quinn Ewers",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Mitch Trubisky",
+          "team": "TEN",
+          "count": 0
+        },
+        {
+          "name": "DJ Uiagalelei",
+          "team": "LAC",
+          "count": 0
+        },
+        {
+          "name": "Kedon Slovis",
+          "team": "GB",
+          "count": 0
+        },
+        {
+          "name": "Sean Clifford",
+          "team": "CIN",
+          "count": 0
+        },
+        {
+          "name": "Sam Hartman",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Nick Mullens",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Athan Kaliakmanis",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Luke Altmyer",
+          "team": "DET",
+          "count": 0
+        },
+        {
+          "name": "Shane Buechele",
+          "team": "BUF",
+          "count": 0
+        },
+        {
+          "name": "Joey Aguilar",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Brett Rypien",
+          "team": "TB",
+          "count": 0
+        },
+        {
+          "name": "Miller Moss",
+          "team": "CHI",
+          "count": 0
+        },
+        {
+          "name": "Hendon Hooker",
+          "team": "TEN",
+          "count": 0
+        },
+        {
+          "name": "Brady Cook",
+          "team": "MIA",
+          "count": 0
+        }
+      ],
+      "sentinels": [
+        {
+          "name": "Fernando Mendoza",
+          "team": "LV",
+          "canonicalId": "4837248"
+        }
+      ]
+    },
+    {
+      "position": "RB",
+      "url": "https://football.razzball.com/projections-rb-restofseason/",
+      "title": "2026 RB Fantasy Football Projections &amp; Rankings | Razzball",
+      "updatedRaw": "2026-10-24 05:07:39 AM EST",
+      "bodySha256": "5195ac0f015137eb8c3634d63a4f92f66f8bb6cb053189a7d46d5fab7152a910",
+      "rawRows": 163,
+      "parsedRows": 163,
+      "currentEspnNameTeamPositionMatches": 130,
+      "unmatchedCount": 33,
+      "unmatched": [
+        {
+          "name": "Bhayshul Tuten",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Rachaad White",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Jacory Croskey-Merritt",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Chris Rodriguez Jr.",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Austin Ekeler",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Khalil Herbert",
+          "team": "ATL",
+          "count": 0
+        },
+        {
+          "name": "Jam Miller",
+          "team": "ATL",
+          "count": 0
+        },
+        {
+          "name": "Brock Lampe",
+          "team": "BUF",
+          "count": 0
+        },
+        {
+          "name": "Jerome Ford",
+          "team": "ARI",
+          "count": 0
+        },
+        {
+          "name": "LeQuint Allen",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Craig Reynolds",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Jeremy McNichols",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Israel Abanikanda",
+          "team": "DAL",
+          "count": 0
+        },
+        {
+          "name": "Amar Johnson",
+          "team": "LAC",
+          "count": 0
+        },
+        {
+          "name": "Jonathan Ward",
+          "team": "BAL",
+          "count": 0
+        },
+        {
+          "name": "Jaydn Ott",
+          "team": "KC",
+          "count": 0
+        },
+        {
+          "name": "Davon Booth",
+          "team": "IND",
+          "count": 0
+        },
+        {
+          "name": "Zamir White",
+          "team": "NO",
+          "count": 0
+        },
+        {
+          "name": "Jaydon Blue",
+          "team": "PHI",
+          "count": 0
+        },
+        {
+          "name": "Sincere McCormick",
+          "team": "SF",
+          "count": 0
+        },
+        {
+          "name": "Deuce Vaughn",
+          "team": "HOU",
+          "count": 0
+        },
+        {
+          "name": "Phil Mafah",
+          "team": "NYG",
+          "count": 0
+        },
+        {
+          "name": "Grant Finley",
+          "team": "NYG",
+          "count": 0
+        },
+        {
+          "name": "Jarquez Hunter",
+          "team": "NO",
+          "count": 0
+        },
+        {
+          "name": "Jabari Small",
+          "team": "DET",
+          "count": 0
+        },
+        {
+          "name": "Kentrel Bullock",
+          "team": "CIN",
+          "count": 0
+        },
+        {
+          "name": "DeeJay Dallas",
+          "team": "MIN",
+          "count": 0
+        },
+        {
+          "name": "Ahmani Marshall",
+          "team": "CAR",
+          "count": 0
+        },
+        {
+          "name": "Roman Hemby",
+          "team": "LV",
+          "count": 0
+        },
+        {
+          "name": "Jordan Waters",
+          "team": "LAR",
+          "count": 0
+        },
+        {
+          "name": "Lucas Scott",
+          "team": "BAL",
+          "count": 0
+        },
+        {
+          "name": "Ameer Abdullah",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Kendall Milton",
+          "team": "CIN",
+          "count": 0
+        }
+      ],
+      "sentinels": [
+        {
+          "name": "Kenneth Walker III",
+          "team": "KC",
+          "canonicalId": "4567048"
+        }
+      ]
+    },
+    {
+      "position": "WR",
+      "url": "https://football.razzball.com/projections-wr-restofseason/",
+      "title": "2025 WR Fantasy Football Projections &amp; Rankings | Razzball",
+      "updatedRaw": "2026-10-24 05:07:39 AM EST",
+      "bodySha256": "a951c072d247f8938ce9acdb87faebdf54721238ac30673b648ebd04795fa280",
+      "rawRows": 259,
+      "parsedRows": 259,
+      "currentEspnNameTeamPositionMatches": 190,
+      "unmatchedCount": 69,
+      "unmatched": [
+        {
+          "name": "Parker Washington",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Stefon Diggs",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Jakobi Meyers",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Brian Thomas Jr.",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Antonio Williams",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Treylon Burks",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Dyami Brown",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Josh Cameron",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Luke McCaffrey",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "J. Sturdivant",
+          "team": "GB",
+          "count": 0
+        },
+        {
+          "name": "Jalin Hyatt",
+          "team": "NYG",
+          "count": 0
+        },
+        {
+          "name": "Chris Moore",
+          "team": "BAL",
+          "count": 0
+        },
+        {
+          "name": "Gage Larvadain",
+          "team": "BAL",
+          "count": 0
+        },
+        {
+          "name": "Van Jefferson",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Austin Trammell",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Garrett Greene",
+          "team": "TB",
+          "count": 0
+        },
+        {
+          "name": "Eric Rivers Jr.",
+          "team": "TB",
+          "count": 0
+        },
+        {
+          "name": "Xavier Gipson",
+          "team": "PHI",
+          "count": 0
+        },
+        {
+          "name": "Stephen Gosnell",
+          "team": "BUF",
+          "count": 0
+        },
+        {
+          "name": "Marquise Brown",
+          "team": "PHI",
+          "count": 0
+        },
+        {
+          "name": "Dylan Drummond",
+          "team": "ATL",
+          "count": 0
+        },
+        {
+          "name": "Casey Washington",
+          "team": "CAR",
+          "count": 0
+        },
+        {
+          "name": "Ke’Shawn Williams",
+          "team": "CIN",
+          "count": 0
+        },
+        {
+          "name": "Anthony Smith",
+          "team": "DAL",
+          "count": 0
+        },
+        {
+          "name": "Jordan Hudson",
+          "team": "DAL",
+          "count": 0
+        },
+        {
+          "name": "Irvin Charles",
+          "team": "SEA",
+          "count": 0
+        },
+        {
+          "name": "Kevin Austin Jr.",
+          "team": "NO",
+          "count": 0
+        },
+        {
+          "name": "Ryan Miller",
+          "team": "NE",
+          "count": 0
+        },
+        {
+          "name": "Jimmy Horn Jr.",
+          "team": "CLE",
+          "count": 0
+        },
+        {
+          "name": "C.J. Williams",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Scotty Miller",
+          "team": "CHI",
+          "count": 0
+        },
+        {
+          "name": "Lucky Jackson",
+          "team": "DET",
+          "count": 0
+        },
+        {
+          "name": "Lawrence Keys",
+          "team": "DET",
+          "count": 0
+        },
+        {
+          "name": "Xavier Restrepo",
+          "team": "TEN",
+          "count": 0
+        },
+        {
+          "name": "Michael Bandy",
+          "team": "DEN",
+          "count": 0
+        },
+        {
+          "name": "Tim Jones",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Marquez Valdes-Scantling",
+          "team": "PIT",
+          "count": 0
+        },
+        {
+          "name": "K.J. Osborn",
+          "team": "TEN",
+          "count": 0
+        },
+        {
+          "name": "Nick Degennaro",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Dominic Lovett",
+          "team": "DET",
+          "count": 0
+        },
+        {
+          "name": "Emmanuel Henderson Jr.",
+          "team": "SEA",
+          "count": 0
+        },
+        {
+          "name": "Antwane Wells Jr.",
+          "team": "ATL",
+          "count": 0
+        },
+        {
+          "name": "Jordan Moore",
+          "team": "CIN",
+          "count": 0
+        },
+        {
+          "name": "Noah Thomas",
+          "team": "CIN",
+          "count": 0
+        },
+        {
+          "name": "Vinny Anthony II",
+          "team": "ATL",
+          "count": 0
+        },
+        {
+          "name": "Trebor Pena",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Michael Wortham",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Ricky White III",
+          "team": "SEA",
+          "count": 0
+        },
+        {
+          "name": "Harrison Wallace III",
+          "team": "ARI",
+          "count": 0
+        },
+        {
+          "name": "Wesley Grimes",
+          "team": "SF",
+          "count": 0
+        },
+        {
+          "name": "Gary Jennings",
+          "team": "LAC",
+          "count": 0
+        },
+        {
+          "name": "Ihmir Smith-Marsette",
+          "team": "CAR",
+          "count": 0
+        },
+        {
+          "name": "Bub Means",
+          "team": "CLE",
+          "count": 0
+        },
+        {
+          "name": "Kyrese Rowan",
+          "team": "NO",
+          "count": 0
+        },
+        {
+          "name": "Josh Kelly",
+          "team": "HOU",
+          "count": 0
+        },
+        {
+          "name": "Isaiah Neyor",
+          "team": "GB",
+          "count": 0
+        },
+        {
+          "name": "Brennan Presley",
+          "team": "LAR",
+          "count": 0
+        },
+        {
+          "name": "Max Hurleman",
+          "team": "PIT",
+          "count": 0
+        },
+        {
+          "name": "Michael Briscoe",
+          "team": "MIN",
+          "count": 0
+        },
+        {
+          "name": "Jalen Cropper",
+          "team": "NO",
+          "count": 0
+        },
+        {
+          "name": "Will Sheppard",
+          "team": "MIA",
+          "count": 0
+        },
+        {
+          "name": "Cameron Ross",
+          "team": "DEN",
+          "count": 0
+        },
+        {
+          "name": "Jamaal Pritchett",
+          "team": "NYJ",
+          "count": 0
+        },
+        {
+          "name": "JP Richardson",
+          "team": "CHI",
+          "count": 0
+        },
+        {
+          "name": "A.J. Henning",
+          "team": "MIA",
+          "count": 0
+        },
+        {
+          "name": "Tyren Montgomery",
+          "team": "TEN",
+          "count": 0
+        },
+        {
+          "name": "Cameron Dorner",
+          "team": "NE",
+          "count": 0
+        },
+        {
+          "name": "Dane Key",
+          "team": "DEN",
+          "count": 0
+        },
+        {
+          "name": "Kyle Dixon",
+          "team": "NE",
+          "count": 0
+        }
+      ],
+      "sentinels": [
+        {
+          "name": "Carnell Tate",
+          "team": "TEN",
+          "canonicalId": "4871023"
+        }
+      ]
+    },
+    {
+      "position": "TE",
+      "url": "https://football.razzball.com/projections-te-restofseason/",
+      "title": "2025 TE Fantasy Football Projections &amp; Rankings | Razzball",
+      "updatedRaw": "2026-10-24 05:07:39 AM EST",
+      "bodySha256": "4ef65908ba803f709b8573ed1967e57e4a7979225c61619b5210103497bb9f2c",
+      "rawRows": 147,
+      "parsedRows": 147,
+      "currentEspnNameTeamPositionMatches": 118,
+      "unmatchedCount": 29,
+      "unmatched": [
+        {
+          "name": "Brenton Strange",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Chigoziem Okonkwo",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Matthew Hibner",
+          "team": "BAL",
+          "count": 0
+        },
+        {
+          "name": "Nate Boerkircher",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "John Bates",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Ben Sinnott",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Josh Kattus",
+          "team": "CIN",
+          "count": 0
+        },
+        {
+          "name": "Josh Kattus",
+          "team": "CIN",
+          "count": 0
+        },
+        {
+          "name": "Colson Yankoff",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Quintin Morris",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Josiah Deguara",
+          "team": "SEA",
+          "count": 0
+        },
+        {
+          "name": "Drake Dabney",
+          "team": "GB",
+          "count": 0
+        },
+        {
+          "name": "Michael Trigg",
+          "team": "DAL",
+          "count": 0
+        },
+        {
+          "name": "Tanner Koziol",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Lake McRee",
+          "team": "PIT",
+          "count": 0
+        },
+        {
+          "name": "Jackson Acker",
+          "team": "SEA",
+          "count": 0
+        },
+        {
+          "name": "John FitzPatrick",
+          "team": "CLE",
+          "count": 0
+        },
+        {
+          "name": "Ty Pezza",
+          "team": "BAL",
+          "count": 0
+        },
+        {
+          "name": "Qadir Ismail",
+          "team": "CHI",
+          "count": 0
+        },
+        {
+          "name": "Evan Svoboda",
+          "team": "LAC",
+          "count": 0
+        },
+        {
+          "name": "Stephen Carlson",
+          "team": "CHI",
+          "count": 0
+        },
+        {
+          "name": "Lucas Krull",
+          "team": "DEN",
+          "count": 0
+        },
+        {
+          "name": "Tre Watson",
+          "team": "MIA",
+          "count": 0
+        },
+        {
+          "name": "Joel Wilson",
+          "team": "TEN",
+          "count": 0
+        },
+        {
+          "name": "Kenny Yeboah",
+          "team": "ARI",
+          "count": 0
+        },
+        {
+          "name": "Zaire Mitchell-Paden",
+          "team": "HOU",
+          "count": 0
+        },
+        {
+          "name": "Shawn Bowman",
+          "team": "ARI",
+          "count": 0
+        },
+        {
+          "name": "Thomas Gordon",
+          "team": "DET",
+          "count": 0
+        },
+        {
+          "name": "Miles Kitselman",
+          "team": "DET",
+          "count": 0
+        }
+      ],
+      "sentinels": [
+        {
+          "name": "Isaiah Likely",
+          "team": "NYG",
+          "canonicalId": "4361050"
+        },
+        {
+          "name": "Kenyon Sadiq",
+          "team": "NYJ",
+          "canonicalId": "5083315"
+        },
+        {
+          "name": "Oscar Delp",
+          "team": "NO",
+          "canonicalId": "4702559"
+        }
+      ]
+    },
+    {
+      "position": "K",
+      "url": "https://football.razzball.com/projections-pk-restofseason/",
+      "title": "2025 Kicker Fantasy Football Projections &amp; Rankings | Razzball",
+      "updatedRaw": "2026-10-24 05:07:39 AM EST",
+      "bodySha256": "44ea83c08cede1f4ad4953e7228f87ae6b5e66a33c08608fd0c6b33c509564f6",
+      "rawRows": 40,
+      "parsedRows": 40,
+      "currentEspnNameTeamPositionMatches": 31,
+      "unmatchedCount": 9,
+      "unmatched": [
+        {
+          "name": "Cam Little",
+          "team": "JAC",
+          "count": 0
+        },
+        {
+          "name": "Drew Stevens",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "Zane Gonzalez",
+          "team": "MIA",
+          "count": 0
+        },
+        {
+          "name": "Charlie Smyth",
+          "team": "NO",
+          "count": 0
+        },
+        {
+          "name": "B.T. Potter",
+          "team": "TB",
+          "count": 0
+        },
+        {
+          "name": "Lenny Krieg",
+          "team": "GB",
+          "count": 0
+        },
+        {
+          "name": "Jake Moody",
+          "team": "BAL",
+          "count": 0
+        },
+        {
+          "name": "Tanner Brown",
+          "team": "NO",
+          "count": 0
+        },
+        {
+          "name": "Kansei Matsuzawa",
+          "team": "LV",
+          "count": 0
+        }
+      ],
+      "sentinels": [
+        {
+          "name": "Brandon McManus",
+          "team": "LAR",
+          "canonicalId": "16339"
+        }
+      ]
+    },
+    {
+      "position": "DST",
+      "url": "https://football.razzball.com/projections-teamdefense-restofseason/",
+      "title": "2025 Team Defense Fantasy Football Projections/Rankings | Razzball",
+      "updatedRaw": "2026-10-24 05:07:39 AM EST",
+      "bodySha256": "fae703ae373ebdc8eb5d4a8b9804bda85eea758e81f005277658ab132496d707",
+      "rawRows": 32,
+      "parsedRows": 32,
+      "currentEspnNameTeamPositionMatches": 30,
+      "unmatchedCount": 2,
+      "unmatched": [
+        {
+          "name": "WAS",
+          "team": "WAS",
+          "count": 0
+        },
+        {
+          "name": "JAC",
+          "team": "JAC",
+          "count": 0
+        }
+      ],
+      "sentinels": []
+    }
+  ]
+}

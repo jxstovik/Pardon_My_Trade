@@ -1,0 +1,30 @@
+{
+  "kind": "browser-ui-transcription",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/draft-ranking",
+  "observationWindowUTC": [
+    "2026-10-27T11:38:00Z",
+    "2026-10-27T11:48:00Z"
+  ],
+  "helpObservedAt": "2026-10-27T11:41:33.753Z",
+  "originalPayloadHash": null,
+  "facts": {
+    "rankingList": "empty",
+    "excludeList": "empty",
+    "positionOverrides": "not fully reconciled",
+    "import": "CSV; column1 first name last name, column2 team abbreviation; import replaces existing rankings",
+    "autosave": true,
+    "autopick": "top remaining manager-ranked player; defaults after list empty/exhausted",
+    "positionPrecedence": "Position rankings supersede player rankings",
+    "excludeBehavior": "excluded player never selected",
+    "defaultFallback": "help describes queue/pre-ranked inputs then Fpts/Score from seasonal projections or last-year stats, ADP if available"
+  },
+  "mutationsExecuted": [],
+  "uploadAttempted": false,
+  "viewportOverrideReset": true,
+  "limitations": [
+    "UI field/help transcription, not original raw API response",
+    "Import name matching and actual draft-room queue/position precedence not tested"
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-30T06:30:58.000Z",
+  "triggerAt": "2026-10-30T06:28:57.791Z",
+  "intendedLocal": "02:30 America/New_York",
+  "captureMethod": "Supported authenticated Fantrax browser accessibility views; no raw API/HTTP access.",
+  "ownRoster": {
+    "teamId": "wwc1n3o4mvn1c6hk",
+    "displayName": "Board Man Gets pAId",
+    "players": 14,
+    "active": 10,
+    "reserves": 4,
+    "identitySetMatchesPreviousDraftCapture": true,
+    "period1Opponent": "JeffWischer"
+  },
+  "period1": {
+    "number": 1,
+    "dates": [
+      "2026-11-01",
+      "2026-11-08"
+    ],
+    "scheduleReviewed": true,
+    "allOwnNamesSchoolsAndGameIDsReRead": true,
+    "opponentRosterReRead": true,
+    "opponentPlayers": 14,
+    "opponentExactIdentityCrosswalk": 14,
+    "all14ForecastCovered": true
+  },
+  "period2": {
+    "number": 2,
+    "dates": [
+      "2026-11-09",
+      "2026-11-15"
+    ],
+    "ownRosterScheduleReviewed": true,
+    "periodOpponentDisplayed": "CatsByAtLeast1",
+    "opponentRosterNotCaptured": true
+  },
+  "availablePage1": {
+    "displayedRows": 20,
+    "sort": "Fantrax displayed Score",
+    "rows": [
+      {
+        "name": "JaQuan Johnson",
+        "school": "IaSt",
+        "displayRank": 19,
+        "score": 88.55,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Corey Hadnot",
+        "school": "Hou",
+        "displayRank": 23,
+        "score": 87.68,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Michael McNair",
+        "school": "MD",
+        "displayRank": 35,
+        "score": 85.79,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Joshua Ward",
+        "school": "CS-Ful",
+        "displayRank": 41,
+        "score": 85.46,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Nasir Whitlock",
+        "school": "GaTec",
+        "displayRank": 43,
+        "score": 84.76,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Ty Robinson",
+        "school": "CenAR",
+        "displayRank": 45,
+        "score": 84.18,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Trey Campbell",
+        "school": "Utah",
+        "displayRank": 47,
+        "score": 84.01,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Chaze Harris",
+        "school": "UNCC",
+        "displayRank": 48,
+        "score": 84,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Dennis Parker",
+        "school": "Kan",
+        "displayRank": 49,
+        "score": 83.9,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Nils Machowski",
+        "school": "UConn",
+        "displayRank": 50,
+        "score": 83.9,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Jed Miller",
+        "school": "MTSt",
+        "displayRank": 51,
+        "score": 83.83,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Tarence Guinyard",
+        "school": "Duques",
+        "displayRank": 53,
+        "score": 83.54,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Krystian Lewis",
+        "school": "Tul",
+        "displayRank": 55,
+        "score": 83.44,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Javon Bennett",
+        "school": "Gonz",
+        "displayRank": 56,
+        "score": 83.42,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Josiah Davis",
+        "school": "CSNor",
+        "displayRank": 59,
+        "score": 83.06,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Jaden Winston",
+        "school": "Pacif",
+        "displayRank": 62,
+        "score": 82.59,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Koree Cotton",
+        "school": "DeP",
+        "displayRank": 65,
+        "score": 82.29,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Preston Edmead",
+        "school": "NCSU",
+        "displayRank": 66,
+        "score": 82.23,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "Justin Pippen",
+        "school": "OhSt",
+        "displayRank": 67,
+        "score": 82.22,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      },
+      {
+        "name": "LJ Wells",
+        "school": "Lou",
+        "displayRank": 68,
+        "score": 82.22,
+        "button": "Claim",
+        "waiverLabel": "W (Fri)"
+      }
+    ],
+    "previousPage1MembersNowAbsent": [
+      "Cory Wells",
+      "Josh O'Garro"
+    ],
+    "newPage1Members": [
+      "Koree Cotton",
+      "Justin Pippen"
+    ],
+    "interpretation": "Page membership changes alone do not establish acquisitions or full-pool absence. Cory Wells is omitted from today's available cohort and cannot be carried forward as currently available without full-pool reconciliation. Current page rows all show Claim and W (Fri); exact clearance time and processing results were not verified."
+  },
+  "scheduleInterpretation": {
+    "timeLabels": "Fantrax shows local weekday and clock labels; timezone/UTC instants remain unverified. Opponent N/A labels retained as unknown, not converted to opponents or excluded games.",
+    "counting": "League counted-game eligibility remains unverified."
+  },
+  "unresolved": [
+    "Exact lock scope, activation semantics and league timezone",
+    "Waiver clearing instant and whether post-clearance adds can count this week",
+    "Complete available pool and model-ranked exhaustive shortlist",
+    "Current 2026-27 player minutes/status/role evidence",
+    "Game cap, minimums, rounding and legal counted-game rules"
+  ],
+  "liveActionsExecuted": 0,
+  "syntheticDataUsed": false
+}

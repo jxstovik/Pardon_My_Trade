@@ -1,0 +1,15 @@
+{
+  "id": "pmt-football-lineup-and-free-agent-checks",
+  "status": "ACTIVE",
+  "rrule": "FREQ=WEEKLY;BYDAY=TH,SA,SU;BYHOUR=1;BYMINUTE=0;BYSECOND=0",
+  "targetThreadId": "01a1aba9-f206-7c11-8339-8ff0f4782974",
+  "fileSha256": "4e448080262bd14e61a905a59859dd5341cc640578a2eb4719ccac80b03715d6",
+  "workerModelRequired": "gpt-6.1-sol",
+  "workerReasoningRequired": "medium",
+  "workerInheritedOriginalConfiguration": true,
+  "triggerAt": "2026-11-14T19:06:40.865Z",
+  "localTrigger": "2026-11-14T14:06:40.865-05:00",
+  "lateTriggerSeconds": 47200.865,
+  "changed": false,
+  "observation": "Stored recurrence remains01:00local TH/SA/SU. Late dispatch cause not established; controller should inspect app availability/dispatch history rather than create a duplicate schedule."
+}

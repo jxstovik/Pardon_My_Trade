@@ -1,0 +1,44 @@
+{
+  "revision": "14f18b3c80de67f5c65643c39bfc94985a7e8bf29fe98e9afb072c7c7682a38b",
+  "rawSha256": "b5f622b956838a2628b8db6f19724719587e93437ca5edc76314eb72dcdc91ec",
+  "source": {
+    "schemaVersion": 1,
+    "leagueId": "mmioj1mvmvgsc3io",
+    "leagueName": "Banging 3s",
+    "leagueSeason": "2026-27",
+    "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players",
+    "observedAt": "2026-10-26T19:29:41.573603+00:00",
+    "kind": "official-csv-export",
+    "statsSeason": "2025-26",
+    "statsLabel": "2025-26 Reg Season - YTD",
+    "statsBasis": "per-game",
+    "filter": "all-available-players",
+    "completeness": "all-matching-export-rows",
+    "scopeVerification": "browser-league-header-and-selected-filters"
+  },
+  "quality": {
+    "totalPlayers": 5689,
+    "freeAgents": 5678,
+    "waiverPlayers": 11,
+    "nonzeroDisplayedHistory": 3159,
+    "unavailableRosteredPercent": 38,
+    "missingFields": [
+      "GP",
+      "MIN",
+      "FGM",
+      "FGA",
+      "FTM",
+      "FTA"
+    ],
+    "warnings": [
+      "Prior-season display statistics are not current-season projections.",
+      "Current school labels do not establish the school where historical statistics were earned.",
+      "An all-zero history row does not establish DNP, missing coverage or a zero forecast.",
+      "Shooting attempts are absent; aggregate team percentages cannot be calculated from this export.",
+      "Provider rank/score/ADP are preserved source fields, not PMT recommendations.",
+      "The export scope is all available players; it is not proof of every owned or ineligible league player.",
+      "A waiver weekday is not a verified processing instant."
+    ]
+  },
+  "directory": "/home/jordan-stovik/Pardon_My_Trade/data/basketball/mmioj1mvmvgsc3io/player-pools"
+}

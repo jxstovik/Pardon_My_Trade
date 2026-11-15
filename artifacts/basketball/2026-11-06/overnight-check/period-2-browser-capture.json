@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "season": "2026-27",
+  "boardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "observedAt": "2026-11-06T07:30:12.272Z",
+  "sourceKind": "browser-transcription",
+  "sourceUrls": [
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=wwc1n3o4mvn1c6hk;view=SCHEDULE_PERIOD;period=2",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/livescoring;period=2?mobileMatchupView=false",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players",
+    "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/transactions/history"
+  ],
+  "period": {
+    "number": 2,
+    "firstDate": "2026-11-09",
+    "lastDate": "2026-11-15",
+    "opponentTeamId": "2rc1dg43mvgsurtp"
+  },
+  "unresolvedRules": [
+    "Weekly Monday confirmed; per-player versus whole-roster lock scope unresolved",
+    "Exact lineup deadline, timezone and first-period activation unresolved",
+    "Team/player game caps and shot minimum/rounding semantics unresolved",
+    "Current role/health evidence remains inadequate; Fantrax home repeats Nov2 Campbell undisclosed DNP and Tyson eligibility pending; GP=0 is not clearance",
+    "Displayed schedule times are not verified UTC instants; N/A counted-game eligibility remains unresolved",
+    "Available candidates refreshed from current page 1 but their schedules and full-pool scope were not captured; excluded from rerank",
+    "Underlying approved statistical baseline remains Oct27 and stale"
+  ],
+  "candidateScope": "Owned roster only for schedule capture; separately refreshed first 20 Score-order All Available Players rows, all displayed Claim / FA, but candidate schedules were not captured and this page is not the complete pool.",
+  "protectedIds": [
+    "06dun",
+    "06n8t",
+    "06h14",
+    "0655r",
+    "065cb",
+    "065ct",
+    "065mj",
+    "06g7r",
+    "05wk5",
+    "064kr"
+  ],
+  "currentActiveIds": [
+    "06dun",
+    "06n8t",
+    "06h14",
+    "0655r",
+    "065cb",
+    "065ct",
+    "06g7r",
+    "05wk5",
+    "064kr",
+    "06nnk"
+  ],
+  "players": [
+    {
+      "id": "06dun",
+      "name": "Markus Burton",
+      "school": "Ind",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06od8",
+          "date": "2026-11-09",
+          "label": "Fantrax current schedule UI Syr Mon 6:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qk5",
+          "date": "2026-11-12",
+          "label": "Fantrax current schedule UI TNTec Thu 6:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06n8t",
+      "name": "Javontae Campbell",
+      "school": "Cin",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qgh",
+          "date": "2026-11-09",
+          "label": "Fantrax current schedule UI Minn Mon 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06on9",
+          "date": "2026-11-14",
+          "label": "Fantrax current schedule UI @Dayt Sat 7:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06h14",
+      "name": "Jalen Cox",
+      "school": "USC",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06r8x",
+          "date": "2026-11-11",
+          "label": "Fantrax current schedule UI @Cal Wed 11:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qv3",
+          "date": "2026-11-15",
+          "label": "Fantrax current schedule UI ArkPB Sun 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "0655r",
+      "name": "Tavari Johnson",
+      "school": "Charl",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06sik",
+          "date": "2026-11-11",
+          "label": "Fantrax current schedule UI @Tem Wed 6:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06s7p",
+          "date": "2026-11-15",
+          "label": "Fantrax current schedule UI SCSt Sun 2:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065cb",
+      "name": "Kyle Evans",
+      "school": "NCSU",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06ra0",
+          "date": "2026-11-10",
+          "label": "Fantrax current schedule UI Presb Tue 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ra6",
+          "date": "2026-11-13",
+          "label": "Fantrax current schedule UI Troy Fri 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065ct",
+      "name": "Keyshawn Hall",
+      "school": "StJon",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06ruf",
+          "date": "2026-11-11",
+          "label": "Fantrax current schedule UI Colg Wed 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06ruk",
+          "date": "2026-11-15",
+          "label": "Fantrax current schedule UI Syr Sun 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065mj",
+      "name": "Jack Karasinski",
+      "school": "NW",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qns",
+          "date": "2026-11-09",
+          "label": "Fantrax current schedule UI Boston Mon 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qnx",
+          "date": "2026-11-13",
+          "label": "Fantrax current schedule UI DeP Fri 1:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06g7r",
+      "name": "Pryce Sandfort",
+      "school": "Nebras",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o0r",
+          "date": "2026-11-11",
+          "label": "Fantrax current schedule UI LINW Wed 9:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o0u",
+          "date": "2026-11-15",
+          "label": "Fantrax current schedule UI Bois Sun 1:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "05wk5",
+      "name": "Daeshun Ruffin",
+      "school": "JackSt",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o5v",
+          "date": "2026-11-09",
+          "label": "Fantrax current schedule UI @MissSt Mon 7:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06stb",
+          "date": "2026-11-11",
+          "label": "Fantrax current schedule UI @USM Wed 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06snd",
+          "date": "2026-11-14",
+          "label": "Fantrax current schedule UI @Winth Sat 2:30PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064kr",
+      "name": "Quion Williams",
+      "school": "ArkPB",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": []
+    },
+    {
+      "id": "0729c",
+      "name": "Michael James",
+      "school": "ASU",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06nvh",
+          "date": "2026-11-09",
+          "label": "Fantrax current schedule UI (N/A) Mon 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nin",
+          "date": "2026-11-11",
+          "label": "Fantrax current schedule UI (N/A) Wed 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06q0t",
+          "date": "2026-11-15",
+          "label": "Fantrax current schedule UI @SJSU Sun 9:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "065p8",
+      "name": "Trevan Leonhardt",
+      "school": "Nebras",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06o0r",
+          "date": "2026-11-11",
+          "label": "Fantrax current schedule UI LINW Wed 9:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06o0u",
+          "date": "2026-11-15",
+          "label": "Fantrax current schedule UI Bois Sun 1:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "064gk",
+      "name": "Cade Tyson",
+      "school": "Minn",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qgh",
+          "date": "2026-11-09",
+          "label": "Fantrax current schedule UI @Cin Mon 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06qr6",
+          "date": "2026-11-12",
+          "label": "Fantrax current schedule UI South Thu 8:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    },
+    {
+      "id": "06nnk",
+      "name": "Jaiden Feroah",
+      "school": "S UT",
+      "ownership": "own",
+      "availability": "unknown",
+      "waiverLabel": null,
+      "scheduleComplete": true,
+      "games": [
+        {
+          "id": "06qp3",
+          "date": "2026-11-12",
+          "label": "Fantrax current schedule UI @HiPt Thu 7:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        },
+        {
+          "id": "06nir",
+          "date": "2026-11-14",
+          "label": "Fantrax current schedule UI @Wake Sat 4:00PM; displayed time not verified as instant",
+          "state": "scheduled",
+          "startAt": null
+        }
+      ]
+    }
+  ]
+}

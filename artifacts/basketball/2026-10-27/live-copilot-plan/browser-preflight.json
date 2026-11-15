@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "kind": "browser-ui-transcription",
+  "originalRawPayloadHash": null,
+  "recordedAt": "2026-10-27T12:34:39Z",
+  "exactPerReadObservationTime": null,
+  "timingMeaning": "Inspected during this planning turn, before recordedAt; per-read source timestamps were not recorded. Not suitable as a fresh live pick-state feed.",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "draftRoom": {
+    "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/draft",
+    "phaseText": "Starting",
+    "draftTimeText": "Wed Oct 28, 9:00 PM EDT",
+    "teamHeadings": [
+      "CatsByAtLeast1",
+      "NorseUppers",
+      "JeffWischer",
+      "JakeMess",
+      "Perks",
+      "jxstovik",
+      "Connormcl12",
+      "Sjdedden"
+    ],
+    "emptySnakeCells": 112,
+    "tabs": [
+      "Players",
+      "Queue",
+      "Roster",
+      "Chat"
+    ],
+    "queueText": "Player queue is empty",
+    "playerRowExample": {
+      "nameText": "T. Tanner",
+      "schoolText": "Vand",
+      "eligibility": "G",
+      "draftAddDisabled": true,
+      "queueActionPresent": true,
+      "stablePlayerIdProven": false,
+      "fullProfileName": "Tyler Tanner",
+      "fullProfileSchool": "Vanderbilt Commodores"
+    },
+    "limitations": [
+      "No actual selection observed",
+      "No active clock/turn observed",
+      "No stable player ID established in inspected row DOM",
+      "Off-screen/virtualized selected history not tested",
+      "Native accessibility link semantics differ from DOM generic/anchor semantics"
+    ]
+  },
+  "collegeMockLobby": {
+    "url": "https://www.fantrax.com/game/mock-draft/ncaab",
+    "text": "No draft games currently available for selected sport. Check back soon!",
+    "joined": false
+  },
+  "mutations": {
+    "queueEdits": 0,
+    "rankingEdits": 0,
+    "autopickSettingChanges": 0,
+    "picks": 0
+  },
+  "readOnlyNavigation": [
+    "Opened draft room",
+    "Read empty queue",
+    "Opened and closed a player profile",
+    "Read official mock lobby"
+  ],
+  "browserViewportOverride": false
+}

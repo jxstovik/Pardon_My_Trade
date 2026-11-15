@@ -1,0 +1,71 @@
+{
+  "observedAt": "2026-10-27T10:31:57.879234+00:00",
+  "ourRankingsAvailable": false,
+  "ourTrainedModelAvailable": false,
+  "fantraxSourceObservedAt": "2026-10-27T08:00:08.452079+00:00",
+  "fantraxSourceRawSha256": "71e31bdff0b388fded25d9abd8781e8a3097f277a867016a16ecb554e949912f",
+  "externalSource": "https://www.rotowire.com/cbasketball/article/2026-27-college-basketball-player-rankings-fantasy-141463",
+  "externalScope": "2026-27 preseason Power Five, primarily DraftKings points scoring",
+  "localScope": "All-available Fantrax export selected to 2025-26 Reg Season YTD, Standard per-game view. RkOv and ADP are unvalidated provider display fields, not PMT rankings.",
+  "comparisonKind": "five-player illustrative comparison of different scopes; not an evaluation or consensus",
+  "sampleSelection": "four established high-ranked RotoWire players plus one zero-history freshman to illustrate cold-start limitations",
+  "rows": [
+    {
+      "name": "Jeremy Fears",
+      "fantraxId": "06hcd",
+      "fantraxSchool": "MSU",
+      "fantraxSavedDisplayRank": 110,
+      "fantraxSavedADP": 56.8,
+      "historicalGP": 32,
+      "rotowirePreseasonPowerConferencePointsRank": 1,
+      "join": "unique exact name in saved CSV plus matching school on source page; manual sample"
+    },
+    {
+      "name": "Tyler Tanner",
+      "fantraxId": "06n46",
+      "fantraxSchool": "Vand",
+      "fantraxSavedDisplayRank": 3,
+      "fantraxSavedADP": 2.4,
+      "historicalGP": 34,
+      "rotowirePreseasonPowerConferencePointsRank": 2,
+      "join": "unique exact name in saved CSV plus matching school on source page; manual sample"
+    },
+    {
+      "name": "Thomas Haugh",
+      "fantraxId": "06ga0",
+      "fantraxSchool": "Fla",
+      "fantraxSavedDisplayRank": 31,
+      "fantraxSavedADP": 33.3,
+      "historicalGP": 32,
+      "rotowirePreseasonPowerConferencePointsRank": 3,
+      "join": "unique exact name in saved CSV plus matching school on source page; manual sample"
+    },
+    {
+      "name": "Motiejus Krivas",
+      "fantraxId": "06g0r",
+      "fantraxSchool": "Ariz",
+      "fantraxSavedDisplayRank": 201,
+      "fantraxSavedADP": 134.4,
+      "historicalGP": 34,
+      "rotowirePreseasonPowerConferencePointsRank": 5,
+      "join": "unique exact name in saved CSV plus matching school on source page; manual sample"
+    },
+    {
+      "name": "Tyran Stokes",
+      "fantraxId": "075yy",
+      "fantraxSchool": "Kan",
+      "fantraxSavedDisplayRank": 5371,
+      "fantraxSavedADP": 217.6,
+      "historicalGP": 0,
+      "rotowirePreseasonPowerConferencePointsRank": 7,
+      "join": "unique exact name in saved CSV plus matching school on source page; manual sample"
+    }
+  ],
+  "limitations": [
+    "No own rankings exist for rank correlation or forecast accuracy benchmarking.",
+    "Differences can arise from season, conference coverage, scoring, role and eligibility assumptions; no cause assigned quantitatively.",
+    "Fantrax display ranks are not established as prospective draft recommendations.",
+    "RotoWire is one independent editorial source, not a multi-site consensus.",
+    "No paid content, full third-party rankings dataset, subscription or live action used."
+  ]
+}

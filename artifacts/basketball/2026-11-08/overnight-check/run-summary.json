@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-08T07:34:45.569Z",
+  "triggerLocal": "2026-11-08T02:34:45.569-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": 285.569,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "browserAccess": "Authenticated Fantrax in-app browser succeeded on canonical league home; read-only roster, YTD stats, period schedule, current news and opponent pages were accessible.",
+  "freshReads": [
+    "Current team roster is 14 players with 10 active/four reserves; live active IDs refreshed from roster slot buttons.",
+    "Current Nov 9-15 own schedule was refreshed for all 14 players: 28 scheduled player-team entries including Cade Tyson's two entries, though Fantrax says Tyson is ineligible; 26 remain attached to non-Tyson roster players. Quion Williams has zero listed entries and N/A school.",
+    "Fantrax Nov 8 Standard YTD per-game actuals and GP were re-read and saved separately; GP range 0-3. They are used only in a labeled exploratory sensitivity, not as a revalidated projection baseline.",
+    "Current Fantrax news remains Nov 6 Karasinski concussion/out for that Friday game, Nov 6 Tyson ineligible this season, and Campbell's Nov 2 foot-related DNP. No new Nov 9-15 clearance was established.",
+    "CatsByAtLeast1 opponent roster and period-2 schedule were refreshed: 14 named roster rows (4 G/4 F-C/2 Flex/4 Res), 31 listed scheduled entries. Stable player IDs were not exposed; no model crosswalk or matchup forecast was made.",
+    "No available-player candidate rows were refreshed on Nov 8; no candidate or waiver ranking was made."
+  ],
+  "period2": {
+    "number": 2,
+    "forecastRerun": true,
+    "input": "period-2-browser-capture.json",
+    "reportRevision": "b8d95406343c4e710bcbc1c4e1c7b99cf056f2b4d35b7c5b0504af6832f7ec69",
+    "ownedRows": 14,
+    "forecastEligibleOwned": 13,
+    "available": 0,
+    "listedScheduleEntries": 28,
+    "knownUnavailableExcluded": ["Cade Tyson; Fantrax Nov 6 season-ineligibility news; schedule still lists two entries"],
+    "status": "advisory-only-no-platform-writer",
+    "lineupReadiness": "withheld; conditional optimizer uses Oct27 baseline, current YTD sensitivity is only 0-3 games/player, current health/role and lock/counting rules incomplete",
+    "sensitivity": "Exploratory actual-YTD x listed schedule exact optimizer saved separately; selects Leonhardt and Feroah at Flex, benches Campbell and Cox; not a lineup recommendation.",
+    "blockers": [
+      "Oct27 baseline dependency stale",
+      "Karasinski next-period recovery unknown",
+      "Campbell status/role unresolved and GP=0",
+      "Tyson season ineligible; excluded from forecast despite two scheduled entries",
+      "Quion has no schedule row and N/A school; retain unknown versus zero-count distinction",
+      "exact lock scope/timezone/activation unresolved",
+      "game instants, N/A counting eligibility, caps, and shooting minimum/rounding unresolved",
+      "opponent stable player IDs unavailable; no opponent model join"
+    ]
+  },
+  "historicalDoctor": {
+    "ran": true,
+    "status": "partial stale Oct25 pre-draft zero-player snapshot; remains separate from current weekly/browser reads",
+    "outputs": ["saved-evidence-doctor.json", "saved-evidence-report.md"]
+  },
+  "baseline": {
+    "correctedBoardRevision": "344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1",
+    "oldestDependencyObservedAt": "2026-10-27T11:24:32Z",
+    "refreshedOrRehashed": false
+  },
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationRecommendation": "NOTIFY: Sunday coming-period review found current evidence materially changes readiness: Tyson's season ineligibility is explicitly excluded despite listed games, Karasinski's status remains unconfirmed for this week, and the actual-YTD sensitivity differs from stale conditional arithmetic. No qualified lineup advice or live action."
+}

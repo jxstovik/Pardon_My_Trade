@@ -1,0 +1,16 @@
+{
+  "typecheck": "passed",
+  "build": "passed",
+  "basketball_cases": 11,
+  "basketball_passed": 11,
+  "full_suite_sandbox_test_files": 71,
+  "full_suite_sandbox_passed": 68,
+  "full_suite_sandbox_failed": 3,
+  "sandbox_failure_cause": "EPERM listen/spawnSync in existing regression files",
+  "affected_regression_cases_with_execution_permissions": 25,
+  "affected_regressions_passed": 25,
+  "live_actions_executed": 0,
+  "model_trained": false,
+  "model_promoted": false,
+  "scheduled_execution_observed": false
+}

@@ -2,6 +2,17 @@ export const PMT_MCP_CONTRACT_VERSION = "1.0.0";
 export const PMT_MCP_SERVER_VERSION = "0.2.0";
 
 export const PMT_MCP_TOOL_NAMES = [
+  "pmt_get_nfl_kickoff_schedule",
+  "pmt_schedule_kickoff_reviews",
+  "pmt_prepare_kickoff_lineup",
+  "pmt_run_kickoff_review",
+  "pmt_finalize_kickoff_report",
+  "pmt_archive_pregame_forecasts",
+  "pmt_get_forecast_archives",
+  "pmt_start_model_evaluation",
+  "pmt_get_model_evaluation",
+  "pmt_generate_scout_report",
+  "pmt_get_scout_report",
   "pmt_get_inseason_status",
   "pmt_sync_league",
   "pmt_get_roster_analytics",
@@ -22,6 +33,10 @@ export const PMT_MCP_TOOL_NAMES = [
   "pmt_list_injury_alerts",
   "pmt_list_notifications",
   "pmt_run_advisory_orchestration",
+  "pmt_prepare_lineup",
+  "pmt_prepare_add_drop",
+  "pmt_espn_read_waivers",
+  "pmt_prepare_waiver_claim",
   "pmt_list_pending_actions",
   "pmt_get_action",
   "pmt_preview_action",

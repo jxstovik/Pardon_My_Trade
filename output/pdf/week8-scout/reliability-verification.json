@@ -1,0 +1,48 @@
+{
+  "status": "verified",
+  "week": 8,
+  "scheduleGames": 14,
+  "scheduledTeams": 28,
+  "completedOutcomes": {
+    "cutoffWeek": 7,
+    "completedGames": 107,
+    "cutoffGames": 14,
+    "currentSeasonStatsRows": 2608,
+    "maxObservedWeek": 7
+  },
+  "candidateState": "candidate_not_promoted",
+  "activePriorUnchangedDuringTraining": true,
+  "activePriorSha256": "7e3832977b68a8805dfab7dd53cbc005c2a401e04910e1004c31338a0619f78e",
+  "rosterEntries": 32,
+  "statisticallyModeledRosterEntries": 31,
+  "explicitUnavailableEntries": [
+    {
+      "name": "Zach Charbonnet",
+      "espnId": "4426385",
+      "coverageNote": "No current-season statistical identity; authenticated ESPN OUT/IR. Zero availability contribution only."
+    }
+  ],
+  "matchedFreeAgents": 419,
+  "artifacts": {
+    "html": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week8-scout/week8-scout-interactive.html",
+      "bytes": 480755,
+      "sha256": "d92353ce274f9c7515c37fa7f0eee2fadbd94d0f25c230b15a2853a4cf140065"
+    },
+    "markdown": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week8-scout/week8-scout-report.md",
+      "bytes": 5887,
+      "sha256": "94d91dd83d52df50b46cb0d471e309bcc8b62e60f230fcfe274d18a3af099443"
+    },
+    "pdf": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/output/pdf/week8-scout/week8-scout-report.pdf",
+      "bytes": 144836,
+      "sha256": "e8f2be40b319b5de674e1b12973e68dbac56f372d5916f85c26d7267e1981332"
+    },
+    "modelManifest": {
+      "path": "/home/jordan-stovik/Pardon_My_Trade/artifacts/week8-2026-scout/manifest.json",
+      "bytes": 15582,
+      "sha256": "3f938e4527485ffe68532bba511c83867c5369e08e69e4ea43b09c3a32d0bb6d"
+    }
+  }
+}

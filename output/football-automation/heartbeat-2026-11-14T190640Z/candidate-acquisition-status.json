@@ -1,0 +1,47 @@
+{
+  "retrievedAt": "2026-11-14T19:13:57.766Z",
+  "week": 10,
+  "pages": 1,
+  "rows": 902,
+  "complete": true,
+  "statuses": [
+    {
+      "playerId": "-16012",
+      "status": "FREEAGENT"
+    },
+    {
+      "playerId": "-16025",
+      "status": "FREEAGENT"
+    },
+    {
+      "playerId": "-16008",
+      "status": "FREEAGENT"
+    },
+    {
+      "playerId": "-16019",
+      "status": "WAIVERS"
+    },
+    {
+      "playerId": "-16028",
+      "status": "WAIVERS"
+    },
+    {
+      "playerId": "4887558",
+      "status": "FREEAGENT"
+    },
+    {
+      "playerId": "-16011",
+      "status": "FREEAGENT"
+    },
+    {
+      "playerId": "-16024",
+      "status": "FREEAGENT"
+    },
+    {
+      "playerId": "-16022",
+      "status": "FREEAGENT"
+    }
+  ],
+  "privatePendingClaims": "unknown_ESPN_AUTH_REQUIRED",
+  "executionAllowed": false
+}

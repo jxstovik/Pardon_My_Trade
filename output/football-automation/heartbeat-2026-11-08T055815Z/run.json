@@ -1,0 +1,1121 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-08T05:58:15.466Z",
+  "triggerLocal": "2026-11-08T00:58:15.466-05:00",
+  "finishedAt": "2026-11-08T06:05:03.959Z",
+  "status": "completed_with_known_coverage_limitations",
+  "scope": {
+    "leagueId": "98806880",
+    "teamId": "7",
+    "season": 2026,
+    "scoringPeriod": "2026-W9",
+    "opponentTeamId": "9",
+    "fantasySeasonEndWeek": 17,
+    "ownershipVerified": true
+  },
+  "schedule": {
+    "expected": "Thursday/Saturday/Sunday 01:00 America/New_York",
+    "earlyTriggerSeconds": 104.534,
+    "changed": false,
+    "controllerHandlesSchedule": true
+  },
+  "steps": [
+    {
+      "step": "build",
+      "status": "passed"
+    },
+    {
+      "step": "writer_check",
+      "status": "completed",
+      "details": "No other refresh/migration/scout writers found; two Oct30 persistent MCP services idle in ep_poll. Canonical migration lock preserved."
+    },
+    {
+      "step": "live_league_roster_scoring_locks_complete_pool_pending_rules",
+      "status": "completed",
+      "readAt": "2026-11-08T05:59:31.326Z",
+      "availablePlayers": 897,
+      "pendingClaims": 0
+    },
+    {
+      "step": "calendar_and_schedule",
+      "status": "completed",
+      "pmtCalendar": {
+        "scoring_period": "2026-W9",
+        "week": 9,
+        "season": "2026",
+        "offseason": false,
+        "evaluated_at": "2026-11-08T06:00:31.164Z"
+      },
+      "espnWeek": 9,
+      "firstKickoff": "2026-11-06T01:15:00.000Z",
+      "lastKickoff": "2026-11-10T01:15:00.000Z",
+      "timing": "in_progress_refresh_not_pregame"
+    },
+    {
+      "step": "projection_refresh",
+      "status": "complete",
+      "rows": 681,
+      "modelsRebuilt": 1056,
+      "coverage": {
+        "total": 9,
+        "covered": 9,
+        "starters": [
+          {
+            "playerId": "4890973",
+            "espnId": "4890973",
+            "name": "Ashton Jeanty",
+            "proTeamId": 13,
+            "slot": 2,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              14.83
+            ]
+          },
+          {
+            "playerId": "4595348",
+            "espnId": "4595348",
+            "name": "Malik Nabers",
+            "proTeamId": 19,
+            "slot": 23,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              17.06
+            ]
+          },
+          {
+            "playerId": "3918298",
+            "espnId": "3918298",
+            "name": "Josh Allen",
+            "proTeamId": 2,
+            "slot": 0,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              19.94
+            ]
+          },
+          {
+            "playerId": "4426388",
+            "espnId": "4426388",
+            "name": "Jameson Williams",
+            "proTeamId": 8,
+            "slot": 4,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              14.01
+            ]
+          },
+          {
+            "playerId": "3040151",
+            "espnId": "3040151",
+            "name": "George Kittle",
+            "proTeamId": 25,
+            "slot": 6,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              16.23
+            ]
+          },
+          {
+            "playerId": "4360761",
+            "espnId": "4360761",
+            "name": "Michael Wilson",
+            "proTeamId": 22,
+            "slot": 4,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              13.09
+            ]
+          },
+          {
+            "playerId": "4371733",
+            "espnId": "4371733",
+            "name": "Kenny Gainwell",
+            "proTeamId": 27,
+            "slot": 2,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              8.33
+            ]
+          },
+          {
+            "playerId": "-16018",
+            "espnId": "-16018",
+            "name": "Saints D/ST",
+            "proTeamId": 18,
+            "slot": 16,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              5.82
+            ]
+          },
+          {
+            "playerId": "5081335",
+            "espnId": "5081335",
+            "name": "Drew Stevens",
+            "proTeamId": 28,
+            "slot": 17,
+            "status": "positive",
+            "sources": [
+              "espn"
+            ],
+            "points": [
+              8.77
+            ]
+          }
+        ]
+      },
+      "sources": {
+        "espn": 681
+      },
+      "errors": [],
+      "isolatedRuntime": true
+    },
+    {
+      "step": "normalized_news",
+      "status": "completed",
+      "counts": {
+        "espn": 89,
+        "razzball": 17
+      },
+      "degraded": {},
+      "ingested": 106,
+      "filters": {
+        "since": "2026-11-06T06:00:31.902Z",
+        "until": "2026-11-08T06:00:31.902Z"
+      },
+      "coverage": {
+        "basis": "persisted_player_linked_items_only",
+        "scoped_player_count": 16,
+        "players_with_news_count": 2,
+        "players_without_observed_news_count": 14,
+        "unresolved_player_count": 0,
+        "source_completeness": "unknown",
+        "no_news_is_not_clearance": true
+      },
+      "omissions": {
+        "out_of_scope_count": 2049,
+        "unmapped_item_count": 270,
+        "unmapped_high_impact_count": 67,
+        "outside_window_count": 110,
+        "outside_window_high_impact_count": 17,
+        "invalid_timestamp_count": 0,
+        "invalid_timestamp_high_impact_count": 0,
+        "compacted_item_count": 0,
+        "remaining_count": 0,
+        "remaining_high_impact_count": 0
+      },
+      "pages": 1
+    },
+    {
+      "step": "current_injury_watch",
+      "status": "completed",
+      "data": {
+        "snapshot_id": "espn-98806880-98c84b7e-2589-4bb9-aa44-871dfbb191cb-1794117627264",
+        "scope": {
+          "league_id": "98806880",
+          "team_id": "7",
+          "selection": "roster_plus_explicit_candidates"
+        },
+        "coverage": {
+          "basis": "snapshot_status_not_live_injury_feed",
+          "scoped_player_count": 16,
+          "unresolved_player_count": 0,
+          "unknown_status_count": 0,
+          "source_completeness": "unknown",
+          "no_news_is_not_clearance": true,
+          "stale_alert_count": 0
+        },
+        "omissions": {
+          "out_of_scope_count": 1040,
+          "non_alert_status_count": 13,
+          "remaining_count": 0,
+          "remaining_high_impact_count": 0
+        },
+        "window_semantics": "Freshness only; stale current injury statuses remain visible.",
+        "players": [
+          {
+            "player_id": "4032473",
+            "full_name": "Rashid Shaheed",
+            "team": "26",
+            "positions": [
+              "WR"
+            ],
+            "status": "out",
+            "injury_status": "out",
+            "updated_at": "2026-11-08T06:00:27.666Z",
+            "stale": false,
+            "impact": "high"
+          },
+          {
+            "player_id": "4428557",
+            "full_name": "Tyjae Spears",
+            "team": "10",
+            "positions": [
+              "RB"
+            ],
+            "status": "out",
+            "injury_status": "out",
+            "updated_at": "2026-11-08T06:00:27.666Z",
+            "stale": false,
+            "impact": "high"
+          },
+          {
+            "player_id": "4568490",
+            "full_name": "RJ Harvey",
+            "team": "7",
+            "positions": [
+              "RB"
+            ],
+            "status": "injured_reserve",
+            "injury_status": "injured_reserve",
+            "updated_at": "2026-11-08T06:00:27.666Z",
+            "stale": false,
+            "impact": "high"
+          }
+        ],
+        "total_count": 3,
+        "returned_count": 3,
+        "truncated": false,
+        "next_cursor": null,
+        "filters": {
+          "since": "2026-11-06T06:00:31.902Z",
+          "until": "2026-11-08T06:00:31.902Z"
+        },
+        "next_step": null
+      }
+    },
+    {
+      "step": "individual_owned_and_candidate_news",
+      "status": "completed",
+      "ownedReports": 15,
+      "candidateReports": 1
+    },
+    {
+      "step": "outcome_training",
+      "status": "completed",
+      "details": {
+        "startedAt": "2026-11-08T06:00:30.941Z",
+        "week": 9,
+        "status": "complete",
+        "platformWrites": 0,
+        "calendar": {
+          "scoring_period": "2026-W9",
+          "week": 9,
+          "season": "2026",
+          "offseason": false,
+          "evaluated_at": "2026-11-08T06:00:31.164Z"
+        },
+        "stage": "Candidate fit complete; no production promotion",
+        "news": {
+          "counts": {
+            "espn": 89,
+            "razzball": 17
+          },
+          "degraded": {},
+          "filters": {
+            "since": "2026-11-06T06:00:31.902Z",
+            "until": "2026-11-08T06:00:31.902Z"
+          }
+        },
+        "completedAt": "2026-11-08T06:03:06.989Z",
+        "pregameArchive": "skipped_after_first_kickoff",
+        "optionalPdf": "skipped_known_obsolete_helper_path"
+      },
+      "independentCoverage": {
+        "requestedWeek": 9,
+        "latestCompletedWeek": 8,
+        "publishedGames": 121,
+        "cutoffWeekGames": 14,
+        "modeledInputRows": 2945,
+        "maxObservedWeek": 8,
+        "missingGameIds": [],
+        "futureRowsExcluded": true,
+        "allPublishedGamesCompleted": true,
+        "gameIds": [
+          "2026_01_ARI_LAC",
+          "2026_01_ATL_PIT",
+          "2026_01_BAL_IND",
+          "2026_01_BUF_HOU",
+          "2026_01_CHI_CAR",
+          "2026_01_CLE_JAX",
+          "2026_01_DAL_NYG",
+          "2026_01_DEN_KC",
+          "2026_01_GB_MIN",
+          "2026_01_MIA_LV",
+          "2026_01_NE_SEA",
+          "2026_01_NO_DET",
+          "2026_01_NYJ_TEN",
+          "2026_01_SF_LA",
+          "2026_01_TB_CIN",
+          "2026_01_WAS_PHI",
+          "2026_02_CAR_ATL",
+          "2026_02_CIN_HOU",
+          "2026_02_CLE_TB",
+          "2026_02_DET_BUF",
+          "2026_02_GB_NYJ",
+          "2026_02_IND_KC",
+          "2026_02_JAX_DEN",
+          "2026_02_LV_LAC",
+          "2026_02_MIA_SF",
+          "2026_02_MIN_CHI",
+          "2026_02_NO_BAL",
+          "2026_02_NYG_LA",
+          "2026_02_PHI_TEN",
+          "2026_02_PIT_NE",
+          "2026_02_SEA_ARI",
+          "2026_02_WAS_DAL",
+          "2026_03_ARI_SF",
+          "2026_03_ATL_GB",
+          "2026_03_BAL_DAL",
+          "2026_03_CAR_CLE",
+          "2026_03_CIN_PIT",
+          "2026_03_HOU_IND",
+          "2026_03_KC_MIA",
+          "2026_03_LAC_BUF",
+          "2026_03_LA_DEN",
+          "2026_03_LV_NO",
+          "2026_03_MIN_TB",
+          "2026_03_NE_JAX",
+          "2026_03_NYJ_DET",
+          "2026_03_PHI_CHI",
+          "2026_03_SEA_WAS",
+          "2026_03_TEN_NYG",
+          "2026_04_ARI_NYG",
+          "2026_04_ATL_NO",
+          "2026_04_DAL_HOU",
+          "2026_04_DEN_SF",
+          "2026_04_DET_CAR",
+          "2026_04_GB_TB",
+          "2026_04_IND_WAS",
+          "2026_04_JAX_CIN",
+          "2026_04_KC_LV",
+          "2026_04_LAC_SEA",
+          "2026_04_LA_PHI",
+          "2026_04_MIA_MIN",
+          "2026_04_NE_BUF",
+          "2026_04_NYJ_CHI",
+          "2026_04_PIT_CLE",
+          "2026_04_TEN_BAL",
+          "2026_05_BAL_ATL",
+          "2026_05_BUF_LA",
+          "2026_05_CHI_GB",
+          "2026_05_CIN_MIA",
+          "2026_05_CLE_NYJ",
+          "2026_05_DEN_LAC",
+          "2026_05_DET_ARI",
+          "2026_05_HOU_TEN",
+          "2026_05_IND_PIT",
+          "2026_05_LV_NE",
+          "2026_05_MIN_NO",
+          "2026_05_NYG_WAS",
+          "2026_05_PHI_JAX",
+          "2026_05_SF_SEA",
+          "2026_05_TB_DAL",
+          "2026_06_ARI_LA",
+          "2026_06_BAL_CLE",
+          "2026_06_BUF_LV",
+          "2026_06_CAR_PHI",
+          "2026_06_CHI_ATL",
+          "2026_06_DAL_GB",
+          "2026_06_HOU_JAX",
+          "2026_06_LAC_KC",
+          "2026_06_NO_NYG",
+          "2026_06_NYJ_NE",
+          "2026_06_PIT_TB",
+          "2026_06_SEA_DEN",
+          "2026_06_TEN_IND",
+          "2026_06_WAS_SF",
+          "2026_07_CIN_BAL",
+          "2026_07_CLE_TEN",
+          "2026_07_DAL_PHI",
+          "2026_07_DEN_ARI",
+          "2026_07_GB_DET",
+          "2026_07_IND_MIN",
+          "2026_07_KC_SEA",
+          "2026_07_LA_LV",
+          "2026_07_MIA_NYJ",
+          "2026_07_NE_CHI",
+          "2026_07_NYG_HOU",
+          "2026_07_PIT_NO",
+          "2026_07_SF_ATL",
+          "2026_07_TB_CAR",
+          "2026_08_ARI_DAL",
+          "2026_08_ATL_TB",
+          "2026_08_BAL_BUF",
+          "2026_08_CAR_GB",
+          "2026_08_CHI_SEA",
+          "2026_08_CLE_PIT",
+          "2026_08_IND_JAX",
+          "2026_08_KC_DEN",
+          "2026_08_LAC_LA",
+          "2026_08_LV_NYJ",
+          "2026_08_MIN_DET",
+          "2026_08_NE_MIA",
+          "2026_08_PHI_WAS",
+          "2026_08_TEN_CIN"
+        ]
+      }
+    },
+    {
+      "step": "pregame_archive",
+      "status": "skipped_after_first_kickoff",
+      "details": "Current week already underway; no new pregame label or archive attempted."
+    },
+    {
+      "step": "optional_scout_pdf_publication",
+      "status": "skipped_known_broken_helper",
+      "details": "Known obsolete26.909.12148 marker path remains; dated JSON/Markdown complete. No stale PDF treated as current."
+    },
+    {
+      "step": "lineup_before_acquisitions",
+      "status": "verified",
+      "changes": []
+    },
+    {
+      "step": "acquisition_engine_role_review",
+      "status": "completed",
+      "rawSupported": 1,
+      "cleared": 0
+    },
+    {
+      "step": "final_lineup",
+      "status": "verified",
+      "changes": []
+    }
+  ],
+  "model": {
+    "activeProductionStore": {
+      "path": "data/models.json",
+      "schemaVersion": "1.0.0",
+      "savedAt": "2026-10-27T12:38:22.285Z",
+      "records": 1055,
+      "sha256": "701b26d571809f7599ac4f885024c94dfc2d4d3059cb7a4e37bead300a87911e",
+      "unchanged": true
+    },
+    "status": "candidate_not_promoted",
+    "modelVersion": "weekly-2026-W9-bbb261be576e-368dedd8bda2-d1284c4271e7",
+    "builtAt": "2026-11-08T06:01:18.981398+00:00",
+    "cutoffWeek": 8,
+    "completedOutcomeCoverage": {
+      "cutoffWeek": 8,
+      "gameIds": [
+        "2026_01_ARI_LAC",
+        "2026_01_ATL_PIT",
+        "2026_01_BAL_IND",
+        "2026_01_BUF_HOU",
+        "2026_01_CHI_CAR",
+        "2026_01_CLE_JAX",
+        "2026_01_DAL_NYG",
+        "2026_01_DEN_KC",
+        "2026_01_GB_MIN",
+        "2026_01_MIA_LV",
+        "2026_01_NE_SEA",
+        "2026_01_NO_DET",
+        "2026_01_NYJ_TEN",
+        "2026_01_SF_LA",
+        "2026_01_TB_CIN",
+        "2026_01_WAS_PHI",
+        "2026_02_CAR_ATL",
+        "2026_02_CIN_HOU",
+        "2026_02_CLE_TB",
+        "2026_02_DET_BUF",
+        "2026_02_GB_NYJ",
+        "2026_02_IND_KC",
+        "2026_02_JAX_DEN",
+        "2026_02_LV_LAC",
+        "2026_02_MIA_SF",
+        "2026_02_MIN_CHI",
+        "2026_02_NO_BAL",
+        "2026_02_NYG_LA",
+        "2026_02_PHI_TEN",
+        "2026_02_PIT_NE",
+        "2026_02_SEA_ARI",
+        "2026_02_WAS_DAL",
+        "2026_03_ARI_SF",
+        "2026_03_ATL_GB",
+        "2026_03_BAL_DAL",
+        "2026_03_CAR_CLE",
+        "2026_03_CIN_PIT",
+        "2026_03_HOU_IND",
+        "2026_03_KC_MIA",
+        "2026_03_LAC_BUF",
+        "2026_03_LA_DEN",
+        "2026_03_LV_NO",
+        "2026_03_MIN_TB",
+        "2026_03_NE_JAX",
+        "2026_03_NYJ_DET",
+        "2026_03_PHI_CHI",
+        "2026_03_SEA_WAS",
+        "2026_03_TEN_NYG",
+        "2026_04_ARI_NYG",
+        "2026_04_ATL_NO",
+        "2026_04_DAL_HOU",
+        "2026_04_DEN_SF",
+        "2026_04_DET_CAR",
+        "2026_04_GB_TB",
+        "2026_04_IND_WAS",
+        "2026_04_JAX_CIN",
+        "2026_04_KC_LV",
+        "2026_04_LAC_SEA",
+        "2026_04_LA_PHI",
+        "2026_04_MIA_MIN",
+        "2026_04_NE_BUF",
+        "2026_04_NYJ_CHI",
+        "2026_04_PIT_CLE",
+        "2026_04_TEN_BAL",
+        "2026_05_BAL_ATL",
+        "2026_05_BUF_LA",
+        "2026_05_CHI_GB",
+        "2026_05_CIN_MIA",
+        "2026_05_CLE_NYJ",
+        "2026_05_DEN_LAC",
+        "2026_05_DET_ARI",
+        "2026_05_HOU_TEN",
+        "2026_05_IND_PIT",
+        "2026_05_LV_NE",
+        "2026_05_MIN_NO",
+        "2026_05_NYG_WAS",
+        "2026_05_PHI_JAX",
+        "2026_05_SF_SEA",
+        "2026_05_TB_DAL",
+        "2026_06_ARI_LA",
+        "2026_06_BAL_CLE",
+        "2026_06_BUF_LV",
+        "2026_06_CAR_PHI",
+        "2026_06_CHI_ATL",
+        "2026_06_DAL_GB",
+        "2026_06_HOU_JAX",
+        "2026_06_LAC_KC",
+        "2026_06_NO_NYG",
+        "2026_06_NYJ_NE",
+        "2026_06_PIT_TB",
+        "2026_06_SEA_DEN",
+        "2026_06_TEN_IND",
+        "2026_06_WAS_SF",
+        "2026_07_CIN_BAL",
+        "2026_07_CLE_TEN",
+        "2026_07_DAL_PHI",
+        "2026_07_DEN_ARI",
+        "2026_07_GB_DET",
+        "2026_07_IND_MIN",
+        "2026_07_KC_SEA",
+        "2026_07_LA_LV",
+        "2026_07_MIA_NYJ",
+        "2026_07_NE_CHI",
+        "2026_07_NYG_HOU",
+        "2026_07_PIT_NO",
+        "2026_07_SF_ATL",
+        "2026_07_TB_CAR",
+        "2026_08_ARI_DAL",
+        "2026_08_ATL_TB",
+        "2026_08_BAL_BUF",
+        "2026_08_CAR_GB",
+        "2026_08_CHI_SEA",
+        "2026_08_CLE_PIT",
+        "2026_08_IND_JAX",
+        "2026_08_KC_DEN",
+        "2026_08_LAC_LA",
+        "2026_08_LV_NYJ",
+        "2026_08_MIN_DET",
+        "2026_08_NE_MIA",
+        "2026_08_PHI_WAS",
+        "2026_08_TEN_CIN"
+      ],
+      "completedGames": 121,
+      "cutoffGames": 14,
+      "currentSeasonStatsRows": 2945,
+      "maxObservedWeek": 8
+    },
+    "validation": {
+      "QB": {
+        "n": 664,
+        "model_mae": 6.317354938601569,
+        "model_rmse": 7.908490180765258,
+        "baseline_mae": 6.840054400101094,
+        "baseline_rmse": 8.745470772773915,
+        "model_bias": 0.20705143458888736,
+        "baseline_bias": 0.15712808376524584,
+        "q10_q90_coverage": 0.7469879518072289,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 13.356144578313252,
+        "mean_score_predicted": 13.56319601290214,
+        "mean_score_baseline": 13.513272662078498,
+        "final_training_rows": 7161,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "RB": {
+        "n": 1575,
+        "model_mae": 4.416495950606881,
+        "model_rmse": 6.142552007239757,
+        "baseline_mae": 4.372439877023188,
+        "baseline_rmse": 6.445443654194985,
+        "model_bias": 0.06474850876962858,
+        "baseline_bias": -0.4014324451363098,
+        "q10_q90_coverage": 0.8222222222222222,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 7.585625396825397,
+        "mean_score_predicted": 7.650373905595026,
+        "mean_score_baseline": 7.184192951689086,
+        "final_training_rows": 17068,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "WR": {
+        "n": 2511,
+        "model_mae": 4.258728531372621,
+        "model_rmse": 5.77568314928866,
+        "baseline_mae": 4.375647282891668,
+        "baseline_rmse": 6.165648953351186,
+        "model_bias": 0.2867877303421001,
+        "baseline_bias": 0.06455432508463911,
+        "q10_q90_coverage": 0.8470728793309439,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 6.667630426125049,
+        "mean_score_predicted": 6.954418156467151,
+        "mean_score_baseline": 6.732184751209689,
+        "final_training_rows": 26940,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "TE": {
+        "n": 1287,
+        "model_mae": 3.5588626072802323,
+        "model_rmse": 5.021151908579837,
+        "baseline_mae": 3.5879436816528147,
+        "baseline_rmse": 5.216754707331339,
+        "model_bias": 0.017417214066293128,
+        "baseline_bias": -0.2819333923872812,
+        "q10_q90_coverage": 0.8477078477078477,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 5.603092463092463,
+        "mean_score_predicted": 5.620509677158757,
+        "mean_score_baseline": 5.321159070705182,
+        "final_training_rows": 13510,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "K": {
+        "n": 543,
+        "model_mae": 3.8454467312335767,
+        "model_rmse": 4.821367618274154,
+        "baseline_mae": 4.1096639985277195,
+        "baseline_rmse": 5.1657144255106,
+        "model_bias": -0.3010013489116493,
+        "baseline_bias": 0.002417213116182175,
+        "q10_q90_coverage": 0.7845303867403315,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 8.149171270718233,
+        "mean_score_predicted": 7.8481699218065835,
+        "mean_score_baseline": 8.151588483834415,
+        "final_training_rows": 6041,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      },
+      "DST": {
+        "n": 544,
+        "model_mae": 4.832118809115838,
+        "model_rmse": 6.1970380322127,
+        "baseline_mae": 5.321245377886003,
+        "baseline_rmse": 6.822716177999133,
+        "model_bias": -0.4894107162710386,
+        "baseline_bias": -0.11565156402013017,
+        "q10_q90_coverage": 0.7922794117647058,
+        "q10_q90_nominal": 0.8,
+        "mean_score_actual": 5.801470588235294,
+        "mean_score_predicted": 5.312059871964256,
+        "mean_score_baseline": 5.685819024215164,
+        "final_training_rows": 6032,
+        "final_training_start": 2015,
+        "final_training_end": 2026
+      }
+    },
+    "hashChecks": {
+      "modelCodeSha256": {
+        "path": "python/scout/weekly_scout.py",
+        "sha256": "368dedd8bda24e7029b9824e45c83aad6b37b70ea8be28eed57e1aacdcf662e6",
+        "matches": true
+      },
+      "scoringCodeSha256": {
+        "path": "python/scout/dst_scoring.py",
+        "sha256": "d1284c4271e70fb879a50c5ef5537f32eb3d0624c36a53f361cbbc3483af1c54",
+        "matches": true
+      },
+      "waiverHorizonCodeSha256": {
+        "path": "python/scout/waiver_horizon.py",
+        "sha256": "9bc21c4a77a455e99f4f9e7d840de5302ba2dcab00324211183b6382bc508206",
+        "matches": true
+      },
+      "waiverHorizonSha256": {
+        "path": "artifacts/week9-2026-scout/waiver-horizon.json",
+        "sha256": "a7412c2e2da856a49fea450a0bbe44e7a4ac83af89f2c6de0d0fc7388d297107",
+        "matches": true
+      },
+      "dstTargetSourceSha256": {
+        "path": "data/scout/espn-dst-targets.json",
+        "sha256": "0df2b22d06096cf5de9fd62f398a0c842a5dea96800bbea5c21d008ce795b035",
+        "matches": true
+      },
+      "stats": {
+        "path": "data/nflverse/stats_player_week_2026.csv",
+        "sha256": "bbb261be576e15e62c3cdfa57ea7d606e12993233ee53a1f9d464b733e379d45",
+        "matches": true
+      },
+      "games": {
+        "path": "data/nflverse/games.csv",
+        "sha256": "bcd236aaa5b00b04d381fdd11aee86831f3ae4e1c0c368f9191e1b7f341f621c",
+        "matches": true
+      }
+    },
+    "promoted": false,
+    "totalForecasts": 469,
+    "matchedAvailable": 437,
+    "unmatchedAvailable": 460,
+    "healthyPlayerCount": 469,
+    "healthyScenarioCoverageMissing": [],
+    "limitations": [
+      "Independent team draws",
+      "Q forecasts conditional on playing",
+      "One-point safety absent from source",
+      "Historical 2015-2025 D/ST component parity incomplete; captured 2026 ESPN targets rescored independently",
+      "No model promotion"
+    ]
+  },
+  "lineup": {
+    "currentLegal": true,
+    "currentPoints": 118.71165745046005,
+    "optimalPoints": 118.71165745046005,
+    "expectedGain": 0,
+    "starters": [
+      {
+        "playerId": "4890973",
+        "name": "Ashton Jeanty",
+        "slot": "RB",
+        "points": 12.806015820048799,
+        "locked": false
+      },
+      {
+        "playerId": "4595348",
+        "name": "Malik Nabers",
+        "slot": "FLEX",
+        "points": 19.668392710308943,
+        "locked": false
+      },
+      {
+        "playerId": "3918298",
+        "name": "Josh Allen",
+        "slot": "QB",
+        "points": 21.13916515444716,
+        "locked": false
+      },
+      {
+        "playerId": "4426388",
+        "name": "Jameson Williams",
+        "slot": "WR",
+        "points": 11.5643082836148,
+        "locked": false
+      },
+      {
+        "playerId": "3040151",
+        "name": "George Kittle",
+        "slot": "TE",
+        "points": 13.234602560906916,
+        "locked": false
+      },
+      {
+        "playerId": "4360761",
+        "name": "Michael Wilson",
+        "slot": "WR",
+        "points": 13.440966391788303,
+        "locked": false
+      },
+      {
+        "playerId": "4371733",
+        "name": "Kenny Gainwell",
+        "slot": "RB",
+        "points": 10.690238037820144,
+        "locked": false
+      },
+      {
+        "playerId": "-16018",
+        "name": "Saints D/ST",
+        "slot": "DST",
+        "points": 7.738352016104138,
+        "locked": false
+      },
+      {
+        "playerId": "5081335",
+        "name": "Drew Stevens",
+        "slot": "K",
+        "points": 8.429616475420813,
+        "locked": false
+      }
+    ],
+    "unavailable": [
+      {
+        "playerId": "4569587",
+        "name": "Wan'Dale Robinson",
+        "status": "ACTIVE",
+        "bye": true
+      },
+      {
+        "playerId": "3916148",
+        "name": "Tony Pollard",
+        "status": "ACTIVE",
+        "bye": true
+      },
+      {
+        "playerId": "4568490",
+        "name": "RJ Harvey",
+        "status": "INJURY_RESERVE",
+        "bye": false
+      },
+      {
+        "playerId": "4428557",
+        "name": "Tyjae Spears",
+        "status": "OUT",
+        "bye": true
+      },
+      {
+        "playerId": "4032473",
+        "name": "Rashid Shaheed",
+        "status": "OUT",
+        "bye": false
+      },
+      {
+        "playerId": "4361411",
+        "name": "Pat Freiermuth",
+        "status": "ACTIVE",
+        "bye": true
+      },
+      {
+        "playerId": "4038815",
+        "name": "Rico Dowdle",
+        "status": "ACTIVE",
+        "bye": true
+      }
+    ],
+    "verified": true
+  },
+  "acquisitions": {
+    "rawChoices": [
+      {
+        "action": {
+          "type": "waiver_claim",
+          "teamId": "7",
+          "addPlayerId": "4887558",
+          "dropPlayerId": "4361411",
+          "priority": 1
+        },
+        "nearTermGain": 0.5129223305143,
+        "seasonGain": 1.4672762267869928,
+        "weeklyGains": [
+          {
+            "week": 9,
+            "gain": 0.5129223305143
+          },
+          {
+            "week": 10,
+            "gain": 0
+          },
+          {
+            "week": 11,
+            "gain": 0
+          },
+          {
+            "week": 12,
+            "gain": 0
+          },
+          {
+            "week": 13,
+            "gain": 0.9543538962726927
+          },
+          {
+            "week": 14,
+            "gain": 0
+          },
+          {
+            "week": 15,
+            "gain": 0
+          },
+          {
+            "week": 16,
+            "gain": 0
+          },
+          {
+            "week": 17,
+            "gain": 0
+          }
+        ],
+        "probability": {
+          "nextWeek": {
+            "improves": 0.55078125,
+            "worsens": 0.44921875,
+            "ties": 0,
+            "expectedGain": 0.5129223305143,
+            "favorableMarginLowerBound": -0.02279114506329255
+          },
+          "nearTerm": {
+            "improves": 0.55078125,
+            "worsens": 0.44921875,
+            "ties": 0,
+            "expectedGain": 0.5129223305143,
+            "favorableMarginLowerBound": -0.02279114506329255
+          },
+          "season": {
+            "improves": 0.59375,
+            "worsens": 0.40625,
+            "ties": 0,
+            "expectedGain": 1.4672762267869928,
+            "favorableMarginLowerBound": 0.06471692464451788
+          },
+          "probabilityAddedPlayerStarts": 0.2222222222222222,
+          "probabilityAddedPlayerStartsNextWeek": 1,
+          "handcuffEvidence": [],
+          "stackEvidence": [],
+          "handcuffLeaders": [],
+          "stackQbIds": [],
+          "weeklyGains": [
+            {
+              "week": 9,
+              "gain": 0.5129223305143
+            },
+            {
+              "week": 10,
+              "gain": 0
+            },
+            {
+              "week": 11,
+              "gain": 0
+            },
+            {
+              "week": 12,
+              "gain": 0
+            },
+            {
+              "week": 13,
+              "gain": 0.9543538962726927
+            },
+            {
+              "week": 14,
+              "gain": 0
+            },
+            {
+              "week": 15,
+              "gain": 0
+            },
+            {
+              "week": 16,
+              "gain": 0
+            },
+            {
+              "week": 17,
+              "gain": 0
+            }
+          ],
+          "caveats": [
+            "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+          ]
+        },
+        "strategy": "lineup_upgrade",
+        "suggestions": {
+          "nearTermMet": false,
+          "seasonMet": false
+        },
+        "rationale": "lineup_upgrade: pregame-selected lineup, P(improve)/P(worsen) next week 0.551/0.449, next three 0.551/0.449; expected gains 0.51 near / 1.47 season. Six/twenty point suggestions do not gate a claim.",
+        "addName": "Emanuel Wilson",
+        "dropName": "Pat Freiermuth"
+      }
+    ],
+    "additionReviews": [
+      {
+        "playerId": "4887558",
+        "status": "unverified",
+        "publishedAt": "2026-11-03T15:18:42.000Z",
+        "retrievedAt": "2026-11-08T06:04:19.791Z",
+        "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4887558",
+        "text": "Wilson played just seven snaps -- all on special teams -- in Monday's 34-17 loss to the Bears. After logging double-digit carries in six of the Seahawks' previous seven games while scoring four touchdowns and averaging 66.4 scrimmage yards during that span, Wilson fell out of the game plan entirely in Week 8. With Zach Charbonnet (knee) getting cleared to make his 2026 debut, Jadarian Price (chest) returning from injured reserve and George Holani still on hand as an option on passing downs, the Seahawks had no reps available out of the backfield for Wilson. Unless Charbonnet or Price succumbs to another injury, Wilson's playing time on offense will likely remain scarce moving forward.",
+        "kind": "news",
+        "quote": "Wilson played just seven snaps -- all on special teams -- in Monday's 34-17 loss to the Bears. After logging double-digit carries in six of the Seahawks' previous seven games while scoring four touchdowns and averaging 66.4 scrimmage yards during that span, Wilson fell out of the game plan entirely in Week 8. With Zach Charbonnet (knee) getting cleared to make his 2026 debut, Jadarian Price (chest) returning from injured reserve and George Holani still on hand as an option on passing downs, the Seahawks had no reps available out of the backfield for Wilson. Unless Charbonnet or Price succumbs to another injury, Wilson's playing time on offense will likely remain scarce moving forward.",
+        "availableThisWeek": false,
+        "hasOffensiveRole": false,
+        "reviewOutcome": "excluded",
+        "reason": "The newest individual source report confirms all seven snaps on special teams and no offensive reps. No supported positive offensive-role clearance for this week."
+      }
+    ],
+    "recoveries": [],
+    "excludedRecoveryEvidence": [
+      {
+        "playerId": "4568490",
+        "reason": "Latest sourced return report published2026-10-31 exceeds the runner seven-day evidence age. Preserve source in owned-player-news.json; use immediate healthy-return baseline rather than inventing a new publication time."
+      },
+      {
+        "playerId": "4428557",
+        "reason": "Latest next-chance report published2026-10-30 exceeds seven-day evidence age; no recovery prediction."
+      }
+    ],
+    "finalChoices": [],
+    "capacity": {
+      "used": 2,
+      "remaining": 3,
+      "limit": 5
+    },
+    "pendingClaims": 0,
+    "unexpiredPendingPMTActions": [],
+    "newProposals": 0,
+    "newApprovals": 0,
+    "submittedClaims": 0,
+    "awards": 0,
+    "confirmedAddDrops": 0,
+    "canonicalReceiptsUnchanged": true,
+    "injuryAssumptions": "No fresh sourced return bounds meet the runner age gate. Owned injured players use immediate conditional healthy-return baseline; acquired injuries use conservative Week19 return. No invented recovery probabilities."
+  },
+  "writes": {
+    "confirmedEspnLineupWrites": 0,
+    "confirmedEspnAcquisitionWrites": 0,
+    "productionPromotion": false,
+    "canonicalReceiptsUnchanged": true,
+    "local": "Build output; dated canonical SQLite backup; isolated projections/priors/news; fresh candidate artifacts/input/report. No repository source edits."
+  },
+  "comparisonWithNov7": {
+    "lineupChanged": false,
+    "lineupPointsDelta": 0,
+    "newAcquisitions": 0,
+    "injuryStatusChanged": false,
+    "individualNewsTextChanged": [],
+    "newOperationalFailure": false
+  },
+  "notificationRecommended": false,
+  "limitations": [
+    "460 currently available identities have no unique statistical forecast; they are unresolved, not scored as zero.",
+    "Broad feed mapping and source completeness remain incomplete; individual reports retained separately.",
+    "Harvey and Spears latest return reports now exceed seven-day gate; no stale return bounds supplied to runner.",
+    "Late injury/inactive changes are not predicted; no continuous monitoring or last-minute guarantee.",
+    "Known canonical migration lock preserved; no fresh PDF publication attempted."
+  ],
+  "nextAction": "Keep current legal lineup and remaining capacity. No fresh role-cleared model-supported acquisition. Next scheduled Thursday November12 01:00EST run must freshly resolve week/outcomes; no additional schedule or monitoring created."
+}

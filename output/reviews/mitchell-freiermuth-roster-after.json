@@ -1,0 +1,190 @@
+{
+  "rosters": [
+    {
+      "team_id": "7",
+      "roster": {
+        "team_id": "7",
+        "starters": [
+          {
+            "slot_id": "7-ST-0",
+            "allowed_positions": [
+              "RB",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4890973",
+            "slot_type": "RB"
+          },
+          {
+            "slot_id": "7-ST-1",
+            "allowed_positions": [
+              "WR",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4595348",
+            "slot_type": "WR"
+          },
+          {
+            "slot_id": "7-ST-2",
+            "allowed_positions": [
+              "QB",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "3918298",
+            "slot_type": "QB"
+          },
+          {
+            "slot_id": "7-ST-3",
+            "allowed_positions": [
+              "TE",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "3040151",
+            "slot_type": "TE"
+          },
+          {
+            "slot_id": "7-ST-4",
+            "allowed_positions": [
+              "WR",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4569587",
+            "slot_type": "FLEX"
+          },
+          {
+            "slot_id": "7-ST-5",
+            "allowed_positions": [
+              "RB",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "3916148",
+            "slot_type": "RB"
+          },
+          {
+            "slot_id": "7-ST-6",
+            "allowed_positions": [
+              "WR",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4360761",
+            "slot_type": "WR"
+          },
+          {
+            "slot_id": "7-ST-7",
+            "allowed_positions": [
+              "K",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4034949",
+            "slot_type": "K"
+          },
+          {
+            "slot_id": "7-ST-8",
+            "allowed_positions": [
+              "DST",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "-16011",
+            "slot_type": "DST"
+          }
+        ],
+        "bench": [
+          {
+            "slot_id": "7-BN-0",
+            "allowed_positions": [
+              "WR",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4426388",
+            "slot_type": "BN"
+          },
+          {
+            "slot_id": "7-BN-1",
+            "allowed_positions": [
+              "RB",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4371733",
+            "slot_type": "BN"
+          },
+          {
+            "slot_id": "7-BN-2",
+            "allowed_positions": [
+              "RB",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4568490",
+            "slot_type": "BN"
+          },
+          {
+            "slot_id": "7-BN-3",
+            "allowed_positions": [
+              "WR",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4597500",
+            "slot_type": "BN"
+          },
+          {
+            "slot_id": "7-BN-4",
+            "allowed_positions": [
+              "RB",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4428557",
+            "slot_type": "BN"
+          },
+          {
+            "slot_id": "7-BN-5",
+            "allowed_positions": [
+              "WR",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4032473",
+            "slot_type": "BN"
+          },
+          {
+            "slot_id": "7-BN-6",
+            "allowed_positions": [
+              "RB",
+              "FLEX",
+              "BN"
+            ],
+            "locked": false,
+            "player_id": "4241474",
+            "slot_type": "BN"
+          }
+        ],
+        "injured_reserve": [],
+        "taxi": [],
+        "last_updated_at": "2026-10-14T23:06:48.122Z"
+      }
+    }
+  ]
+}

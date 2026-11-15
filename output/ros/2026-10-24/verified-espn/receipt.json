@@ -1,0 +1,3612 @@
+{
+  "version": 1,
+  "status": "persisted_verified",
+  "asOf": "2026-10-24T12:34:07.327Z",
+  "observedAt": "2026-10-24T12:34:08.852Z",
+  "leagueId": "98806880",
+  "teamId": "7",
+  "season": "2026",
+  "snapshotId": "espn-98806880-6d7bc216-275e-4a27-93e3-ea46d0ddaace",
+  "scoringRules": 47,
+  "scoringPeriod": "2026-ROS",
+  "source": "espn-ros-remaining-weekly-sum",
+  "semantics": "Sum of league-scored ESPN projected stats (statSourceId=1, statSplitTypeId=1) for explicitly identified unstarted NFL regular-season games, through Week 18. No season-total/PPG relabeling; completed/started games and byes excluded. No calibrated ROS quantiles.",
+  "ranksCertified": false,
+  "safeNonQBDropsSupported": false,
+  "platformWrites": 0,
+  "modelWrites": 0,
+  "sourceSchedule": {
+    "path": "/home/jordan-stovik/Pardon_My_Trade/output/ros/2026-10-24/verified-espn/schedule.json",
+    "sha256": "53d7ef1a467a1309e3a5524a4e02573f6a834910a4c29f93cabc29db182d6461"
+  },
+  "sourceWeeks": [
+    {
+      "week": 7,
+      "fetchedAt": "2026-10-24T12:28:16.262Z",
+      "sha256": "6bf21b589299f2105c3bd6e8585e10cd2b0e79de37c9dc4e18655b3c7baa20a8",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=7",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 7,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 8,
+      "fetchedAt": "2026-10-24T12:28:16.523Z",
+      "sha256": "d99836d000a718100ef4c8b9a473ecfdfe8da8a7e8ea04d832e95468158d1c7d",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=8",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 8,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 9,
+      "fetchedAt": "2026-10-24T12:28:16.041Z",
+      "sha256": "8cfe10e1b1969ec9d550fb4c011bf15b04e1c1340c45c06d7073a1cdcae85af2",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=9",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 9,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 10,
+      "fetchedAt": "2026-10-24T12:28:17.358Z",
+      "sha256": "e019bb112900b17880c1e2134fd1edeca0a9f3055c7b657ad2d7c4fd39301592",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=10",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 10,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 11,
+      "fetchedAt": "2026-10-24T12:28:17.537Z",
+      "sha256": "d514f54eabb5b35423cf312f513690e5b186617dd4ae93fa28f045989fe10d22",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=11",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 11,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 12,
+      "fetchedAt": "2026-10-24T12:28:17.142Z",
+      "sha256": "58d15384cd2c2f42074ae025b408d574a5cea15757a284ab6d5774980974fb3a",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=12",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 12,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 13,
+      "fetchedAt": "2026-10-24T12:28:18.194Z",
+      "sha256": "54cb257e903682dcef0c8b908718d91f4a39cb306488bb57e0aca5f0b4c2bd0e",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=13",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 13,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 14,
+      "fetchedAt": "2026-10-24T12:28:18.459Z",
+      "sha256": "6e5995aa303aa0c3867cd830cb3a96ec485008b4b385cae9b2c303523faafc4e",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=14",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 14,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 15,
+      "fetchedAt": "2026-10-24T12:28:18.645Z",
+      "sha256": "9a0551b75c175339a073ee58e3a2080fe03560c2237809b2ff66059e0d3f950b",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=15",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 15,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 16,
+      "fetchedAt": "2026-10-24T12:28:19.277Z",
+      "sha256": "e33fd14172cc41c3f71c4c717d5f70916086f0d133de82d93c202f28fd4512cf",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=16",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 16,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 17,
+      "fetchedAt": "2026-10-24T12:28:19.760Z",
+      "sha256": "e47f41780135c3569a4a2bc21e6f36ec2b6c6cf71560c97acba2a7e965cd8dc8",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=17",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 17,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    },
+    {
+      "week": 18,
+      "fetchedAt": "2026-10-24T12:28:19.486Z",
+      "sha256": "534eddbf3c2fd784b781f4cd07832637b5be2f48d549f77d542d7d1288d6ddd9",
+      "players": 1054,
+      "url": "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/2026/segments/0/leagues/98806880?view=kona_player_info&scoringPeriodId=18",
+      "exactStatSelector": {
+        "seasonId": 2026,
+        "scoringPeriodId": 18,
+        "statSourceId": 1,
+        "statSplitTypeId": 1
+      }
+    }
+  ],
+  "counts": {
+    "QB": 77,
+    "RB": 136,
+    "WR": 213,
+    "TE": 123,
+    "K": 33,
+    "DST": 32
+  },
+  "verifiedRows": 614,
+  "rejectedRows": 440,
+  "owned": [
+    {
+      "playerId": "4890973",
+      "name": "Ashton Jeanty",
+      "team": "LV",
+      "position": "RB",
+      "total": 178.67,
+      "remainingGames": 11,
+      "ppg": 16.242791269999998
+    },
+    {
+      "playerId": "4595348",
+      "name": "Malik Nabers",
+      "team": "NYG",
+      "position": "WR",
+      "total": 196.33,
+      "remainingGames": 11,
+      "ppg": 17.848384941818182
+    },
+    {
+      "playerId": "3040151",
+      "name": "George Kittle",
+      "team": "SF",
+      "position": "TE",
+      "total": 166.68,
+      "remainingGames": 11,
+      "ppg": 15.152849980909092
+    },
+    {
+      "playerId": "3916148",
+      "name": "Tony Pollard",
+      "team": "TEN",
+      "position": "RB",
+      "total": 143.44,
+      "remainingGames": 11,
+      "ppg": 13.039547976363634
+    },
+    {
+      "playerId": "4360761",
+      "name": "Michael Wilson",
+      "team": "ARI",
+      "position": "WR",
+      "total": 143.88,
+      "remainingGames": 11,
+      "ppg": 13.07978755181818
+    },
+    {
+      "playerId": "4568490",
+      "name": "RJ Harvey",
+      "team": "DEN",
+      "position": "RB",
+      "total": 119.15,
+      "remainingGames": 11,
+      "ppg": 10.832128025454546
+    },
+    {
+      "playerId": "4034949",
+      "name": "Eddy Pineiro",
+      "team": "SF",
+      "position": "K",
+      "total": 89.57,
+      "remainingGames": 11,
+      "ppg": 8.143012124545455
+    },
+    {
+      "playerId": "-16011",
+      "name": "Colts D/ST",
+      "team": "IND",
+      "position": "DST",
+      "total": 49.08,
+      "remainingGames": 11,
+      "ppg": 4.46201994909091
+    },
+    {
+      "playerId": "8439",
+      "name": "Aaron Rodgers",
+      "team": "PIT",
+      "position": "QB",
+      "total": 177.54,
+      "remainingGames": 11,
+      "ppg": 16.14027834818182
+    },
+    {
+      "playerId": "3918298",
+      "name": "Josh Allen",
+      "team": "BUF",
+      "position": "QB",
+      "total": 250.8,
+      "remainingGames": 11,
+      "ppg": 22.79987294
+    },
+    {
+      "playerId": "4426388",
+      "name": "Jameson Williams",
+      "team": "DET",
+      "position": "WR",
+      "total": 129.98,
+      "remainingGames": 12,
+      "ppg": 10.831528803333333
+    },
+    {
+      "playerId": "4569587",
+      "name": "Wan'Dale Robinson",
+      "team": "TEN",
+      "position": "WR",
+      "total": 101.07,
+      "remainingGames": 11,
+      "ppg": 9.188390658181817
+    },
+    {
+      "playerId": "4371733",
+      "name": "Kenny Gainwell",
+      "team": "TB",
+      "position": "RB",
+      "total": 76.98,
+      "remainingGames": 11,
+      "ppg": 6.997734031818182
+    },
+    {
+      "playerId": "4428557",
+      "name": "Tyjae Spears",
+      "team": "TEN",
+      "position": "RB",
+      "total": 74.18,
+      "remainingGames": 11,
+      "ppg": 6.744006070909091
+    },
+    {
+      "playerId": "4032473",
+      "name": "Rashid Shaheed",
+      "team": "SEA",
+      "position": "WR",
+      "total": 90.72,
+      "remainingGames": 11,
+      "ppg": 8.246877728181818
+    },
+    {
+      "playerId": "4361411",
+      "name": "Pat Freiermuth",
+      "team": "PIT",
+      "position": "TE",
+      "total": 101.81,
+      "remainingGames": 11,
+      "ppg": 9.255729564545454
+    }
+  ],
+  "blockers": [],
+  "remainingSchedule": [
+    {
+      "team": "IND",
+      "teamId": 11,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873014,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873028,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873040,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873059,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873066,
+          "kickoff": "2026-11-20T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873088,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873114,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873131,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873145,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873162,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873177,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "KC",
+      "teamId": 12,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873022,
+          "kickoff": "2026-10-26T00:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873033,
+          "kickoff": "2026-11-01T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873045,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873058,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873067,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873082,
+          "kickoff": "2026-11-27T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873096,
+          "kickoff": "2026-12-04T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873119,
+          "kickoff": "2026-12-13T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873139,
+          "kickoff": "2026-12-22T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873153,
+          "kickoff": "2026-12-27T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873158,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873178,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "LV",
+      "teamId": 13,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873021,
+          "kickoff": "2026-10-25T20:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873029,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873047,
+          "kickoff": "2026-11-08T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873062,
+          "kickoff": "2026-11-15T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873075,
+          "kickoff": "2026-11-22T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873086,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873118,
+          "kickoff": "2026-12-13T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873137,
+          "kickoff": "2026-12-20T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873152,
+          "kickoff": "2026-12-27T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873168,
+          "kickoff": "2027-01-03T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873178,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "LAR",
+      "teamId": 14,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873021,
+          "kickoff": "2026-10-25T20:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873032,
+          "kickoff": "2026-11-01T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873043,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873061,
+          "kickoff": "2026-11-15T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873079,
+          "kickoff": "2026-11-26T01:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873096,
+          "kickoff": "2026-12-04T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873120,
+          "kickoff": "2026-12-13T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873136,
+          "kickoff": "2026-12-20T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873143,
+          "kickoff": "2026-12-26T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873159,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873185,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "MIA",
+      "teamId": 15,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873015,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873034,
+          "kickoff": "2026-11-01T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873042,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873059,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873070,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873089,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873103,
+          "kickoff": "2026-12-06T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873111,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873133,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873150,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873161,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873180,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "MIN",
+      "teamId": 16,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873014,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873030,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873051,
+          "kickoff": "2026-11-10T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873060,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873077,
+          "kickoff": "2026-11-23T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873084,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873106,
+          "kickoff": "2026-12-06T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873109,
+          "kickoff": "2026-12-11T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873138,
+          "kickoff": "2026-12-21T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873147,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873163,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873173,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "NE",
+      "teamId": 17,
+      "games": [
+        {
+          "week": 8,
+          "id": 401873034,
+          "kickoff": "2026-11-01T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873049,
+          "kickoff": "2026-11-08T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873053,
+          "kickoff": "2026-11-15T14:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873093,
+          "kickoff": "2026-11-30T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873105,
+          "kickoff": "2026-12-06T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873109,
+          "kickoff": "2026-12-11T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873139,
+          "kickoff": "2026-12-22T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873151,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873157,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873180,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "NO",
+      "teamId": 18,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873011,
+          "kickoff": "2026-10-25T13:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873039,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873055,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873071,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873087,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873099,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873115,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873134,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873148,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873164,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873186,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "NYG",
+      "teamId": 19,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873016,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873044,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873052,
+          "kickoff": "2026-11-13T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873069,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873088,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873095,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873121,
+          "kickoff": "2026-12-13T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873130,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873155,
+          "kickoff": "2026-12-29T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873165,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873182,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "NYJ",
+      "teamId": 20,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873015,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873029,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873045,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873054,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873074,
+          "kickoff": "2026-11-22T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873089,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873112,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873135,
+          "kickoff": "2026-12-20T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873151,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873163,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873181,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "PHI",
+      "teamId": 21,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873009,
+          "kickoff": "2026-10-27T00:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873035,
+          "kickoff": "2026-11-02T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873044,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873076,
+          "kickoff": "2026-11-22T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873080,
+          "kickoff": "2026-11-26T21:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873104,
+          "kickoff": "2026-12-06T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873114,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873125,
+          "kickoff": "2026-12-19T22:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873140,
+          "kickoff": "2026-12-25T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873170,
+          "kickoff": "2027-01-04T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873182,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "ARI",
+      "teamId": 22,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873019,
+          "kickoff": "2026-10-25T20:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873024,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873048,
+          "kickoff": "2026-11-08T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873061,
+          "kickoff": "2026-11-15T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873067,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873092,
+          "kickoff": "2026-11-29T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873104,
+          "kickoff": "2026-12-06T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873135,
+          "kickoff": "2026-12-20T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873148,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873168,
+          "kickoff": "2027-01-03T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873184,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "PIT",
+      "teamId": 23,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873011,
+          "kickoff": "2026-10-25T13:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873027,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873064,
+          "kickoff": "2026-11-16T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873076,
+          "kickoff": "2026-11-22T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873083,
+          "kickoff": "2026-11-27T20:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873107,
+          "kickoff": "2026-12-07T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873123,
+          "kickoff": "2026-12-15T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873128,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873144,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873166,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873183,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "LAC",
+      "teamId": 24,
+      "games": [
+        {
+          "week": 8,
+          "id": 401873032,
+          "kickoff": "2026-11-01T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873046,
+          "kickoff": "2026-11-08T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873065,
+          "kickoff": "2026-11-17T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873074,
+          "kickoff": "2026-11-22T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873093,
+          "kickoff": "2026-11-30T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873101,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873118,
+          "kickoff": "2026-12-13T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873124,
+          "kickoff": "2026-12-18T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873150,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873158,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873179,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "SF",
+      "teamId": 25,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873017,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873047,
+          "kickoff": "2026-11-08T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873063,
+          "kickoff": "2026-11-15T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873077,
+          "kickoff": "2026-11-23T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873091,
+          "kickoff": "2026-11-29T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873095,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873120,
+          "kickoff": "2026-12-13T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873124,
+          "kickoff": "2026-12-18T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873153,
+          "kickoff": "2026-12-27T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873170,
+          "kickoff": "2027-01-04T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873184,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "SEA",
+      "teamId": 26,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873022,
+          "kickoff": "2026-10-26T00:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873036,
+          "kickoff": "2026-11-03T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873048,
+          "kickoff": "2026-11-08T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873062,
+          "kickoff": "2026-11-15T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873091,
+          "kickoff": "2026-11-29T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873108,
+          "kickoff": "2026-12-08T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873121,
+          "kickoff": "2026-12-13T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873125,
+          "kickoff": "2026-12-19T22:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873143,
+          "kickoff": "2026-12-26T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873167,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873185,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "TB",
+      "teamId": 27,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873018,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873025,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873050,
+          "kickoff": "2026-11-09T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873072,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873094,
+          "kickoff": "2026-12-01T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873101,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873116,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873134,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873146,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873159,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873186,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "WSH",
+      "teamId": 28,
+      "games": [
+        {
+          "week": 8,
+          "id": 401873035,
+          "kickoff": "2026-11-02T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873043,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873052,
+          "kickoff": "2026-11-13T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873078,
+          "kickoff": "2026-11-24T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873092,
+          "kickoff": "2026-11-29T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873102,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873113,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873127,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873147,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873160,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873175,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "CAR",
+      "teamId": 29,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873018,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873023,
+          "kickoff": "2026-10-30T00:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873041,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873055,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873068,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873094,
+          "kickoff": "2026-12-01T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873106,
+          "kickoff": "2026-12-06T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873115,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873129,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873144,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873167,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873172,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "JAX",
+      "teamId": 30,
+      "games": [
+        {
+          "week": 8,
+          "id": 401873028,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873037,
+          "kickoff": "2026-11-06T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873057,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873069,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873090,
+          "kickoff": "2026-11-29T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873100,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873123,
+          "kickoff": "2026-12-15T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873132,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873154,
+          "kickoff": "2026-12-28T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873160,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873177,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "BAL",
+      "teamId": 33,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873012,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873026,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873037,
+          "kickoff": "2026-11-06T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873065,
+          "kickoff": "2026-11-17T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873068,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873085,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873116,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873128,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873149,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873156,
+          "kickoff": "2027-01-01T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873183,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "HOU",
+      "teamId": 34,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873016,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873046,
+          "kickoff": "2026-11-08T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873056,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873066,
+          "kickoff": "2026-11-20T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873085,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873107,
+          "kickoff": "2026-12-07T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873113,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873132,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873140,
+          "kickoff": "2026-12-25T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873171,
+          "kickoff": "2027-01-05T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873187,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "ATL",
+      "teamId": 1,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873017,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873025,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873038,
+          "kickoff": "2026-11-08T14:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873058,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873084,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873098,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873110,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873127,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873146,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873164,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873172,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "BUF",
+      "teamId": 2,
+      "games": [
+        {
+          "week": 8,
+          "id": 401873026,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873051,
+          "kickoff": "2026-11-10T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873054,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873070,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873082,
+          "kickoff": "2026-11-27T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873105,
+          "kickoff": "2026-12-06T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873122,
+          "kickoff": "2026-12-14T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873126,
+          "kickoff": "2026-12-20T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873142,
+          "kickoff": "2026-12-25T21:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873161,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873181,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "CHI",
+      "teamId": 3,
+      "games": [
+        {
+          "week": 8,
+          "id": 401873036,
+          "kickoff": "2026-11-03T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873050,
+          "kickoff": "2026-11-09T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873071,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873081,
+          "kickoff": "2026-11-26T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873100,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873111,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873126,
+          "kickoff": "2026-12-20T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873141,
+          "kickoff": "2026-12-25T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873169,
+          "kickoff": "2027-01-03T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873173,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "CIN",
+      "teamId": 4,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873012,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873031,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873038,
+          "kickoff": "2026-11-08T14:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873064,
+          "kickoff": "2026-11-16T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873078,
+          "kickoff": "2026-11-24T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873087,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873097,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873119,
+          "kickoff": "2026-12-13T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873129,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873145,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 17,
+          "id": 401873156,
+          "kickoff": "2027-01-01T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873174,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "CLE",
+      "teamId": 5,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873013,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873027,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873039,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873056,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873086,
+          "kickoff": "2026-11-29T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873097,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873110,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873130,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873149,
+          "kickoff": "2026-12-27T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873162,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873174,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "DAL",
+      "teamId": 6,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873009,
+          "kickoff": "2026-10-27T00:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873024,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873040,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873063,
+          "kickoff": "2026-11-15T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873073,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873080,
+          "kickoff": "2026-11-26T21:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873108,
+          "kickoff": "2026-12-08T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873136,
+          "kickoff": "2026-12-20T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873154,
+          "kickoff": "2026-12-28T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873165,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873175,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "DEN",
+      "teamId": 7,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873019,
+          "kickoff": "2026-10-25T20:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873033,
+          "kickoff": "2026-11-01T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873041,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873075,
+          "kickoff": "2026-11-22T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873083,
+          "kickoff": "2026-11-27T20:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873103,
+          "kickoff": "2026-12-06T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873112,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873137,
+          "kickoff": "2026-12-20T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873142,
+          "kickoff": "2026-12-25T21:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873157,
+          "kickoff": null,
+          "kickoffTbd": true
+        },
+        {
+          "week": 18,
+          "id": 401873179,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "DET",
+      "teamId": 8,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873020,
+          "kickoff": "2026-10-25T20:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873030,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873042,
+          "kickoff": "2026-11-08T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873053,
+          "kickoff": "2026-11-15T14:30:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873072,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873081,
+          "kickoff": "2026-11-26T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873098,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873117,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873138,
+          "kickoff": "2026-12-21T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873155,
+          "kickoff": "2026-12-29T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873169,
+          "kickoff": "2027-01-03T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873176,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "GB",
+      "teamId": 9,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873020,
+          "kickoff": "2026-10-25T20:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873023,
+          "kickoff": "2026-10-30T00:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 9,
+          "id": 401873049,
+          "kickoff": "2026-11-08T21:25:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873060,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873079,
+          "kickoff": "2026-11-26T01:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873099,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873122,
+          "kickoff": "2026-12-14T01:20:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873133,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873141,
+          "kickoff": "2026-12-25T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873171,
+          "kickoff": "2027-01-05T01:15:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873176,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    },
+    {
+      "team": "TEN",
+      "teamId": 10,
+      "games": [
+        {
+          "week": 7,
+          "id": 401873013,
+          "kickoff": "2026-10-25T17:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 8,
+          "id": 401873031,
+          "kickoff": "2026-11-01T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 10,
+          "id": 401873057,
+          "kickoff": "2026-11-15T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 11,
+          "id": 401873073,
+          "kickoff": "2026-11-22T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 12,
+          "id": 401873090,
+          "kickoff": "2026-11-29T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 13,
+          "id": 401873102,
+          "kickoff": "2026-12-06T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 14,
+          "id": 401873117,
+          "kickoff": "2026-12-13T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 15,
+          "id": 401873131,
+          "kickoff": "2026-12-20T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 16,
+          "id": 401873152,
+          "kickoff": "2026-12-27T21:05:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 17,
+          "id": 401873166,
+          "kickoff": "2027-01-03T18:00:00.000Z",
+          "kickoffTbd": false
+        },
+        {
+          "week": 18,
+          "id": 401873187,
+          "kickoff": null,
+          "kickoffTbd": true
+        }
+      ]
+    }
+  ],
+  "excludedGames": [
+    {
+      "team": "IND",
+      "week": 1,
+      "gameId": 401872659
+    },
+    {
+      "team": "IND",
+      "week": 2,
+      "gameId": 401872945
+    },
+    {
+      "team": "IND",
+      "week": 3,
+      "gameId": 401872951
+    },
+    {
+      "team": "IND",
+      "week": 4,
+      "gameId": 401872965
+    },
+    {
+      "team": "IND",
+      "week": 5,
+      "gameId": 401872985
+    },
+    {
+      "team": "IND",
+      "week": 6,
+      "gameId": 401873003
+    },
+    {
+      "team": "KC",
+      "week": 1,
+      "gameId": 401872931
+    },
+    {
+      "team": "KC",
+      "week": 2,
+      "gameId": 401872945
+    },
+    {
+      "team": "KC",
+      "week": 3,
+      "gameId": 401872952
+    },
+    {
+      "team": "KC",
+      "week": 4,
+      "gameId": 401872976
+    },
+    {
+      "team": "KC",
+      "week": 6,
+      "gameId": 401873006
+    },
+    {
+      "team": "LV",
+      "week": 1,
+      "gameId": 401872928
+    },
+    {
+      "team": "LV",
+      "week": 2,
+      "gameId": 401872941
+    },
+    {
+      "team": "LV",
+      "week": 3,
+      "gameId": 401872961
+    },
+    {
+      "team": "LV",
+      "week": 4,
+      "gameId": 401872976
+    },
+    {
+      "team": "LV",
+      "week": 5,
+      "gameId": 401872986
+    },
+    {
+      "team": "LV",
+      "week": 6,
+      "gameId": 401873005
+    },
+    {
+      "team": "LAR",
+      "week": 1,
+      "gameId": 401872657
+    },
+    {
+      "team": "LAR",
+      "week": 2,
+      "gameId": 401872947
+    },
+    {
+      "team": "LAR",
+      "week": 3,
+      "gameId": 401872962
+    },
+    {
+      "team": "LAR",
+      "week": 4,
+      "gameId": 401872970
+    },
+    {
+      "team": "LAR",
+      "week": 5,
+      "gameId": 401872994
+    },
+    {
+      "team": "LAR",
+      "week": 6,
+      "gameId": 401873004
+    },
+    {
+      "team": "MIA",
+      "week": 1,
+      "gameId": 401872928
+    },
+    {
+      "team": "MIA",
+      "week": 2,
+      "gameId": 401872942
+    },
+    {
+      "team": "MIA",
+      "week": 3,
+      "gameId": 401872952
+    },
+    {
+      "team": "MIA",
+      "week": 4,
+      "gameId": 401872974
+    },
+    {
+      "team": "MIA",
+      "week": 5,
+      "gameId": 401872982
+    },
+    {
+      "team": "MIN",
+      "week": 1,
+      "gameId": 401872927
+    },
+    {
+      "team": "MIN",
+      "week": 2,
+      "gameId": 401872937
+    },
+    {
+      "team": "MIN",
+      "week": 3,
+      "gameId": 401872959
+    },
+    {
+      "team": "MIN",
+      "week": 4,
+      "gameId": 401872974
+    },
+    {
+      "team": "MIN",
+      "week": 5,
+      "gameId": 401872987
+    },
+    {
+      "team": "NE",
+      "week": 1,
+      "gameId": 401872656
+    },
+    {
+      "team": "NE",
+      "week": 2,
+      "gameId": 401872946
+    },
+    {
+      "team": "NE",
+      "week": 3,
+      "gameId": 401872957
+    },
+    {
+      "team": "NE",
+      "week": 4,
+      "gameId": 401872971
+    },
+    {
+      "team": "NE",
+      "week": 5,
+      "gameId": 401872986
+    },
+    {
+      "team": "NE",
+      "week": 6,
+      "gameId": 401873001
+    },
+    {
+      "team": "NE",
+      "week": 7,
+      "gameId": 401873010
+    },
+    {
+      "team": "NO",
+      "week": 1,
+      "gameId": 401872923
+    },
+    {
+      "team": "NO",
+      "week": 2,
+      "gameId": 401872938
+    },
+    {
+      "team": "NO",
+      "week": 3,
+      "gameId": 401872961
+    },
+    {
+      "team": "NO",
+      "week": 4,
+      "gameId": 401872979
+    },
+    {
+      "team": "NO",
+      "week": 5,
+      "gameId": 401872987
+    },
+    {
+      "team": "NO",
+      "week": 6,
+      "gameId": 401873000
+    },
+    {
+      "team": "NYG",
+      "week": 1,
+      "gameId": 401872930
+    },
+    {
+      "team": "NYG",
+      "week": 2,
+      "gameId": 401872947
+    },
+    {
+      "team": "NYG",
+      "week": 3,
+      "gameId": 401872956
+    },
+    {
+      "team": "NYG",
+      "week": 4,
+      "gameId": 401872966
+    },
+    {
+      "team": "NYG",
+      "week": 5,
+      "gameId": 401872988
+    },
+    {
+      "team": "NYG",
+      "week": 6,
+      "gameId": 401873000
+    },
+    {
+      "team": "NYJ",
+      "week": 1,
+      "gameId": 401872924
+    },
+    {
+      "team": "NYJ",
+      "week": 2,
+      "gameId": 401872936
+    },
+    {
+      "team": "NYJ",
+      "week": 3,
+      "gameId": 401872954
+    },
+    {
+      "team": "NYJ",
+      "week": 4,
+      "gameId": 401872972
+    },
+    {
+      "team": "NYJ",
+      "week": 5,
+      "gameId": 401872983
+    },
+    {
+      "team": "NYJ",
+      "week": 6,
+      "gameId": 401873001
+    },
+    {
+      "team": "PHI",
+      "week": 1,
+      "gameId": 401872929
+    },
+    {
+      "team": "PHI",
+      "week": 2,
+      "gameId": 401872939
+    },
+    {
+      "team": "PHI",
+      "week": 3,
+      "gameId": 401872963
+    },
+    {
+      "team": "PHI",
+      "week": 4,
+      "gameId": 401872970
+    },
+    {
+      "team": "PHI",
+      "week": 5,
+      "gameId": 401872981
+    },
+    {
+      "team": "PHI",
+      "week": 6,
+      "gameId": 401872998
+    },
+    {
+      "team": "ARI",
+      "week": 1,
+      "gameId": 401872926
+    },
+    {
+      "team": "ARI",
+      "week": 2,
+      "gameId": 401872943
+    },
+    {
+      "team": "ARI",
+      "week": 3,
+      "gameId": 401872958
+    },
+    {
+      "team": "ARI",
+      "week": 4,
+      "gameId": 401872966
+    },
+    {
+      "team": "ARI",
+      "week": 5,
+      "gameId": 401872991
+    },
+    {
+      "team": "ARI",
+      "week": 6,
+      "gameId": 401873004
+    },
+    {
+      "team": "PIT",
+      "week": 1,
+      "gameId": 401872658
+    },
+    {
+      "team": "PIT",
+      "week": 2,
+      "gameId": 401872946
+    },
+    {
+      "team": "PIT",
+      "week": 3,
+      "gameId": 401872950
+    },
+    {
+      "team": "PIT",
+      "week": 4,
+      "gameId": 401872964
+    },
+    {
+      "team": "PIT",
+      "week": 5,
+      "gameId": 401872985
+    },
+    {
+      "team": "PIT",
+      "week": 6,
+      "gameId": 401873002
+    },
+    {
+      "team": "LAC",
+      "week": 1,
+      "gameId": 401872926
+    },
+    {
+      "team": "LAC",
+      "week": 2,
+      "gameId": 401872941
+    },
+    {
+      "team": "LAC",
+      "week": 3,
+      "gameId": 401872953
+    },
+    {
+      "team": "LAC",
+      "week": 4,
+      "gameId": 401872977
+    },
+    {
+      "team": "LAC",
+      "week": 5,
+      "gameId": 401872989
+    },
+    {
+      "team": "LAC",
+      "week": 6,
+      "gameId": 401873006
+    },
+    {
+      "team": "SF",
+      "week": 1,
+      "gameId": 401872657
+    },
+    {
+      "team": "SF",
+      "week": 2,
+      "gameId": 401872942
+    },
+    {
+      "team": "SF",
+      "week": 3,
+      "gameId": 401872958
+    },
+    {
+      "team": "SF",
+      "week": 4,
+      "gameId": 401872975
+    },
+    {
+      "team": "SF",
+      "week": 5,
+      "gameId": 401872992
+    },
+    {
+      "team": "SF",
+      "week": 6,
+      "gameId": 401873008
+    },
+    {
+      "team": "SEA",
+      "week": 1,
+      "gameId": 401872656
+    },
+    {
+      "team": "SEA",
+      "week": 2,
+      "gameId": 401872943
+    },
+    {
+      "team": "SEA",
+      "week": 3,
+      "gameId": 401872955
+    },
+    {
+      "team": "SEA",
+      "week": 4,
+      "gameId": 401872977
+    },
+    {
+      "team": "SEA",
+      "week": 5,
+      "gameId": 401872992
+    },
+    {
+      "team": "SEA",
+      "week": 6,
+      "gameId": 401872995
+    },
+    {
+      "team": "TB",
+      "week": 1,
+      "gameId": 401872925
+    },
+    {
+      "team": "TB",
+      "week": 2,
+      "gameId": 401872935
+    },
+    {
+      "team": "TB",
+      "week": 3,
+      "gameId": 401872959
+    },
+    {
+      "team": "TB",
+      "week": 4,
+      "gameId": 401872968
+    },
+    {
+      "team": "TB",
+      "week": 5,
+      "gameId": 401872980
+    },
+    {
+      "team": "TB",
+      "week": 6,
+      "gameId": 401873002
+    },
+    {
+      "team": "WSH",
+      "week": 1,
+      "gameId": 401872929
+    },
+    {
+      "team": "WSH",
+      "week": 2,
+      "gameId": 401872944
+    },
+    {
+      "team": "WSH",
+      "week": 3,
+      "gameId": 401872955
+    },
+    {
+      "team": "WSH",
+      "week": 4,
+      "gameId": 401872965
+    },
+    {
+      "team": "WSH",
+      "week": 5,
+      "gameId": 401872988
+    },
+    {
+      "team": "WSH",
+      "week": 6,
+      "gameId": 401873008
+    },
+    {
+      "team": "CAR",
+      "week": 1,
+      "gameId": 401872661
+    },
+    {
+      "team": "CAR",
+      "week": 2,
+      "gameId": 401872933
+    },
+    {
+      "team": "CAR",
+      "week": 3,
+      "gameId": 401872949
+    },
+    {
+      "team": "CAR",
+      "week": 4,
+      "gameId": 401872978
+    },
+    {
+      "team": "CAR",
+      "week": 6,
+      "gameId": 401872998
+    },
+    {
+      "team": "JAX",
+      "week": 1,
+      "gameId": 401872922
+    },
+    {
+      "team": "JAX",
+      "week": 2,
+      "gameId": 401872940
+    },
+    {
+      "team": "JAX",
+      "week": 3,
+      "gameId": 401872957
+    },
+    {
+      "team": "JAX",
+      "week": 4,
+      "gameId": 401872969
+    },
+    {
+      "team": "JAX",
+      "week": 5,
+      "gameId": 401872981
+    },
+    {
+      "team": "JAX",
+      "week": 6,
+      "gameId": 401872996
+    },
+    {
+      "team": "BAL",
+      "week": 1,
+      "gameId": 401872659
+    },
+    {
+      "team": "BAL",
+      "week": 2,
+      "gameId": 401872938
+    },
+    {
+      "team": "BAL",
+      "week": 3,
+      "gameId": 401872960
+    },
+    {
+      "team": "BAL",
+      "week": 4,
+      "gameId": 401872973
+    },
+    {
+      "team": "BAL",
+      "week": 5,
+      "gameId": 401872993
+    },
+    {
+      "team": "BAL",
+      "week": 6,
+      "gameId": 401872997
+    },
+    {
+      "team": "HOU",
+      "week": 1,
+      "gameId": 401872660
+    },
+    {
+      "team": "HOU",
+      "week": 2,
+      "gameId": 401872934
+    },
+    {
+      "team": "HOU",
+      "week": 3,
+      "gameId": 401872951
+    },
+    {
+      "team": "HOU",
+      "week": 4,
+      "gameId": 401872967
+    },
+    {
+      "team": "HOU",
+      "week": 5,
+      "gameId": 401872984
+    },
+    {
+      "team": "HOU",
+      "week": 6,
+      "gameId": 401872996
+    },
+    {
+      "team": "ATL",
+      "week": 1,
+      "gameId": 401872658
+    },
+    {
+      "team": "ATL",
+      "week": 2,
+      "gameId": 401872933
+    },
+    {
+      "team": "ATL",
+      "week": 3,
+      "gameId": 401872948
+    },
+    {
+      "team": "ATL",
+      "week": 4,
+      "gameId": 401872979
+    },
+    {
+      "team": "ATL",
+      "week": 5,
+      "gameId": 401872993
+    },
+    {
+      "team": "ATL",
+      "week": 6,
+      "gameId": 401872999
+    },
+    {
+      "team": "BUF",
+      "week": 1,
+      "gameId": 401872660
+    },
+    {
+      "team": "BUF",
+      "week": 2,
+      "gameId": 401872932
+    },
+    {
+      "team": "BUF",
+      "week": 3,
+      "gameId": 401872953
+    },
+    {
+      "team": "BUF",
+      "week": 4,
+      "gameId": 401872971
+    },
+    {
+      "team": "BUF",
+      "week": 5,
+      "gameId": 401872994
+    },
+    {
+      "team": "BUF",
+      "week": 6,
+      "gameId": 401873005
+    },
+    {
+      "team": "CHI",
+      "week": 1,
+      "gameId": 401872661
+    },
+    {
+      "team": "CHI",
+      "week": 2,
+      "gameId": 401872937
+    },
+    {
+      "team": "CHI",
+      "week": 3,
+      "gameId": 401872963
+    },
+    {
+      "team": "CHI",
+      "week": 4,
+      "gameId": 401872972
+    },
+    {
+      "team": "CHI",
+      "week": 5,
+      "gameId": 401872990
+    },
+    {
+      "team": "CHI",
+      "week": 6,
+      "gameId": 401872999
+    },
+    {
+      "team": "CHI",
+      "week": 7,
+      "gameId": 401873010
+    },
+    {
+      "team": "CIN",
+      "week": 1,
+      "gameId": 401872925
+    },
+    {
+      "team": "CIN",
+      "week": 2,
+      "gameId": 401872934
+    },
+    {
+      "team": "CIN",
+      "week": 3,
+      "gameId": 401872950
+    },
+    {
+      "team": "CIN",
+      "week": 4,
+      "gameId": 401872969
+    },
+    {
+      "team": "CIN",
+      "week": 5,
+      "gameId": 401872982
+    },
+    {
+      "team": "CLE",
+      "week": 1,
+      "gameId": 401872922
+    },
+    {
+      "team": "CLE",
+      "week": 2,
+      "gameId": 401872935
+    },
+    {
+      "team": "CLE",
+      "week": 3,
+      "gameId": 401872949
+    },
+    {
+      "team": "CLE",
+      "week": 4,
+      "gameId": 401872964
+    },
+    {
+      "team": "CLE",
+      "week": 5,
+      "gameId": 401872983
+    },
+    {
+      "team": "CLE",
+      "week": 6,
+      "gameId": 401872997
+    },
+    {
+      "team": "DAL",
+      "week": 1,
+      "gameId": 401872930
+    },
+    {
+      "team": "DAL",
+      "week": 2,
+      "gameId": 401872944
+    },
+    {
+      "team": "DAL",
+      "week": 3,
+      "gameId": 401872960
+    },
+    {
+      "team": "DAL",
+      "week": 4,
+      "gameId": 401872967
+    },
+    {
+      "team": "DAL",
+      "week": 5,
+      "gameId": 401872980
+    },
+    {
+      "team": "DAL",
+      "week": 6,
+      "gameId": 401873007
+    },
+    {
+      "team": "DEN",
+      "week": 1,
+      "gameId": 401872931
+    },
+    {
+      "team": "DEN",
+      "week": 2,
+      "gameId": 401872940
+    },
+    {
+      "team": "DEN",
+      "week": 3,
+      "gameId": 401872962
+    },
+    {
+      "team": "DEN",
+      "week": 4,
+      "gameId": 401872975
+    },
+    {
+      "team": "DEN",
+      "week": 5,
+      "gameId": 401872989
+    },
+    {
+      "team": "DEN",
+      "week": 6,
+      "gameId": 401872995
+    },
+    {
+      "team": "DET",
+      "week": 1,
+      "gameId": 401872923
+    },
+    {
+      "team": "DET",
+      "week": 2,
+      "gameId": 401872932
+    },
+    {
+      "team": "DET",
+      "week": 3,
+      "gameId": 401872954
+    },
+    {
+      "team": "DET",
+      "week": 4,
+      "gameId": 401872978
+    },
+    {
+      "team": "DET",
+      "week": 5,
+      "gameId": 401872991
+    },
+    {
+      "team": "GB",
+      "week": 1,
+      "gameId": 401872927
+    },
+    {
+      "team": "GB",
+      "week": 2,
+      "gameId": 401872936
+    },
+    {
+      "team": "GB",
+      "week": 3,
+      "gameId": 401872948
+    },
+    {
+      "team": "GB",
+      "week": 4,
+      "gameId": 401872968
+    },
+    {
+      "team": "GB",
+      "week": 5,
+      "gameId": 401872990
+    },
+    {
+      "team": "GB",
+      "week": 6,
+      "gameId": 401873007
+    },
+    {
+      "team": "TEN",
+      "week": 1,
+      "gameId": 401872924
+    },
+    {
+      "team": "TEN",
+      "week": 2,
+      "gameId": 401872939
+    },
+    {
+      "team": "TEN",
+      "week": 3,
+      "gameId": 401872956
+    },
+    {
+      "team": "TEN",
+      "week": 4,
+      "gameId": 401872973
+    },
+    {
+      "team": "TEN",
+      "week": 5,
+      "gameId": 401872984
+    },
+    {
+      "team": "TEN",
+      "week": 6,
+      "gameId": 401873003
+    }
+  ],
+  "weeklyUnchanged": true,
+  "modelsUnchanged": true,
+  "persistedRows": 614
+}

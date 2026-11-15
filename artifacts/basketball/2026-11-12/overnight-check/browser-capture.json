@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-12T07:33:18Z",
+  "captureMethod": "Authenticated Fantrax rendered UI transcription; no raw API export or hidden page data.",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "teamName": "Board Man Gets pAId",
+  "manager": "jxstovik",
+  "profile": "balanced",
+  "currentPeriod": {
+    "number": 2,
+    "dates": "2026-11-09/2026-11-15",
+    "opponent": "CatsByAtLeast1",
+    "matchupSnapshot": "6-1-1 CatsByAtLeast1, 1-6-1 Board Man Gets pAId (provisional live period result).",
+    "seasonStandingsSnapshot": "2-6-0; distinct from the live period matchup.",
+    "freshBoxscoreContext": {
+      "Markus Burton": {"date": "2026-11-09", "boxscoreId": "06od8", "stats": "20 PTS, 3 REB, 4 AST, 3 ST", "status": "previously transcribed; prospective actual only"},
+      "Javontae Campbell": {"date": "2026-11-09", "boxscoreId": "06qgh", "stats": "Absent from Cincinnati player table; Fantrax roster remains 0 GP.", "status": "no cause inferred; no clearance"},
+      "Jack Karasinski": {"date": "2026-11-09", "boxscoreId": "06qns", "stats": "Absent from Northwestern player table; Fantrax roster shows 1 GP.", "status": "Nov 9 note says could return Friday vs Boston University; opponent/date conflict with schedule, not clearance"},
+      "Jayden Reid": {"date": "2026-11-10", "boxscoreId": "06q3n", "stats": "30 MIN, 11 PTS, 2 REB, 2 AST, 1 3PTM, 4/11 FG, 2/4 FT", "status": "owned; active G; prospective actual only"},
+      "Keshawn Fisher": {"date": "2026-11-10", "boxscoreId": "06ruc", "stats": "31 MIN, 27 PTS, 4 REB, 3 AST, 1 BLK, 3 3PTM, 8/12 FG, 8/12 FT", "status": "owned; Reserve; not counted as a fantasy lineup contribution"}
+    }
+  },
+  "ownership": {
+    "observedCounts": {"total": 14, "active": 10, "reserve": 4},
+    "active": [
+      {"name": "Markus Burton", "slot": "G", "school": "Indiana"},
+      {"name": "Javontae Campbell", "slot": "G", "school": "Cincinnati"},
+      {"name": "Tavari Johnson", "slot": "G", "school": "Charleston"},
+      {"name": "Jayden Reid", "slot": "G", "school": "Memphis"},
+      {"name": "Kyle Evans", "slot": "F/C", "school": "NC State"},
+      {"name": "Jaiden Feroah", "slot": "F/C", "school": "Southern Utah"},
+      {"name": "Keyshawn Hall", "slot": "F/C", "school": "St. John's"},
+      {"name": "Pryce Sandfort", "slot": "F/C", "school": "Nebraska"},
+      {"name": "Daeshun Ruffin", "slot": "Flex", "school": "Jackson State"},
+      {"name": "Quion Williams", "slot": "Flex (disabled)", "school": "N/A", "note": "0 displayed GP, no listed games; identity, team, eligibility and counted schedule remain unresolved"}
+    ],
+    "reserve": [
+      {"name": "Keshawn Fisher", "slot": "Reserve", "school": "Winthrop", "eligibility": "G/F-C"},
+      {"name": "Michael James", "slot": "Reserve", "school": "Alabama State"},
+      {"name": "Trevan Leonhardt", "slot": "Reserve", "school": "Nebraska"},
+      {"name": "Jack Karasinski", "slot": "Reserve", "school": "Northwestern", "displayedGP": 1, "status": "return unconfirmed"}
+    ],
+    "transactionContext": "Approved Fisher/ Tyson and Reid/Cox changes remain reflected in current ownership. The exact Weisbrod/Quion pair was platform-rejected on Nov 9 across periods; no retry, deferment, substitute, queue or execution occurred."
+  },
+  "periods": {
+    "3": {
+      "dates": "2026-11-16/2026-11-22",
+      "opponent": "NorseUppers",
+      "ownedSchedules": {
+        "Markus Burton": ["Tue 11/17 @Ark 7:30 PM", "Fri 11/20 KY 8:00 PM"],
+        "Javontae Campbell": ["Wed 11/18 YSU 7:30 PM", "Sun 11/22 UMassL 2:00 PM"],
+        "Tavari Johnson": ["Thu 11/19 @Drake 7:30 PM"],
+        "Jayden Reid": ["Sun 11/22 Evans 2:00 PM"],
+        "Kyle Evans": ["Thu 11/19 Mur 6:00 PM"],
+        "Jaiden Feroah": ["Thu 11/19 @Tex 8:00 PM"],
+        "Keyshawn Hall": ["Wed 11/18 Sien 7:00 PM"],
+        "Pryce Sandfort": ["Wed 11/18 SDak 8:30 PM", "Sun 11/22 Butl 12:00 PM"],
+        "Daeshun Ruffin": ["Wed 11/18 @Baylor 12:00 PM"],
+        "Quion Williams": {"listedGames": [], "status": "unknown; N/A affiliation and zero schedule display are not verified eligibility or a universal zero"},
+        "Keshawn Fisher (Reserve)": ["Wed 11/18 Chat 6:30 PM", "Sat 11/21 @Woff 5:00 PM"],
+        "Michael James (Reserve)": ["Tue 11/17 @UCDav 9:00 PM", "Fri 11/20 @Fres 10:00 PM"],
+        "Trevan Leonhardt (Reserve)": ["Wed 11/18 SDak 8:30 PM", "Sun 11/22 Butl 12:00 PM"],
+        "Jack Karasinski (Reserve)": ["Mon 11/16 Colum 8:00 PM", "Fri 11/20 VaTec 3:00 PM", "Sun 11/22 @Dayt 1:00 PM"]
+      }
+    },
+    "4": {
+      "dates": "2026-11-23/2026-11-29",
+      "opponent": "Perks",
+      "ownedSchedules": {
+        "Markus Burton": ["Tue 11/24 JU 7:00 PM", "Fri 11/27 BGSU 6:00 PM"],
+        "Javontae Campbell": ["Thu 11/26 UGA 11:00 AM", "Fri 11/27 @BC 4:30 PM"],
+        "Tavari Johnson": ["Tue 11/24 UTEP 8:30 PM", "Sun 11/29 How 2:00 PM"],
+        "Jayden Reid": ["Wed 11/25 @PSU 5:00 PM", "Sun 11/29 @Dayt 1:00 PM"],
+        "Kyle Evans": ["Wed 11/25 Norf 7:00 PM", "Sat 11/28 Elon 12:00 PM"],
+        "Jaiden Feroah": ["Mon 11/23 @ArkSt 3:30 PM", "Tue 11/24 @FIU 1:00 PM", "Wed 11/25 LongB 1:00 PM"],
+        "Keyshawn Hall": ["Tue 11/24 @Oreg 10:30 PM"],
+        "Pryce Sandfort": ["Wed 11/25 South 5:00 PM"],
+        "Daeshun Ruffin": ["Wed 11/25 @OkSt 3:00 PM"],
+        "Quion Williams": {"listedGames": [], "status": "unknown; N/A affiliation and zero schedule display are not verified eligibility or a universal zero"},
+        "Keshawn Fisher (Reserve)": ["Mon 11/23 @Ill 8:00 PM", "Sat 11/28 opponent shown N/A 2:00 PM"],
+        "Michael James (Reserve)": ["Mon 11/23 @Cal 10:00 PM", "Sun 11/29 ARMon 5:00 PM"],
+        "Trevan Leonhardt (Reserve)": ["Wed 11/25 South 5:00 PM"],
+        "Jack Karasinski (Reserve)": ["Fri 11/27 NE 8:00 PM"]
+      }
+    }
+  },
+  "availableCohort": {
+    "view": "All Available Players, first page, 20 rows, Score order as displayed",
+    "claimsAvailableInUi": true,
+    "statusField": "FA",
+    "exhaustive": false,
+    "stableIdsRendered": false,
+    "rows": [
+      {"name":"Kam Sanders","school":"AF","pos":"G","class":"So","rank":2,"FG%":0.491,"3PTM":1.3,"FT%":0.645,"PTS":20.3,"REB":4.8,"AST":4.5,"ST":1.5,"BLK":0.5},
+      {"name":"Nassim Mashhour","school":"Oakl","pos":"G","class":"Jr","rank":4,"FG%":0.391,"3PTM":2.8,"FT%":0.963,"PTS":18.0,"REB":3.2,"AST":2.0,"ST":0.6,"BLK":0.0},
+      {"name":"Ben Hammond","school":"VaTec","pos":"G","class":"Jr","rank":6,"FG%":0.488,"3PTM":3.0,"FT%":0.950,"PTS":22.7,"REB":3.3,"AST":5.3,"ST":4.3,"BLK":0.0},
+      {"name":"Bobby Gardner","school":"MD-ES","pos":"G","class":"Jr","rank":10,"FG%":0.424,"3PTM":1.5,"FT%":0.789,"PTS":19.3,"REB":2.8,"AST":3.3,"ST":2.5,"BLK":0.5},
+      {"name":"Brady Koehler","school":"ND","pos":"F/C","class":"So","rank":11,"FG%":0.606,"3PTM":2.5,"FT%":0.722,"PTS":15.8,"REB":6.8,"AST":2.0,"ST":1.0,"BLK":1.5},
+      {"name":"Max Weisbrod","school":"NIU","pos":"G","class":"Sr","rank":14,"FG%":0.455,"3PTM":3.5,"FT%":0.714,"PTS":16.0,"REB":3.8,"AST":7.3,"ST":1.0,"BLK":0.0},
+      {"name":"Tyler Jones","school":"Albany","pos":"G","class":"Fr","rank":16,"FG%":0.468,"3PTM":1.0,"FT%":0.826,"PTS":16.8,"REB":2.8,"AST":3.5,"ST":2.3,"BLK":0.5},
+      {"name":"James O'Donnell","school":"Portl","pos":"F/C","class":"Jr","rank":17,"FG%":0.763,"3PTM":0.0,"FT%":0.760,"PTS":19.3,"REB":11.3,"AST":1.5,"ST":0.0,"BLK":1.0},
+      {"name":"Jacob Meyer","school":"GASt","pos":"G","class":"Sr","rank":18,"FG%":0.462,"3PTM":1.8,"FT%":0.667,"PTS":19.8,"REB":2.5,"AST":6.3,"ST":0.8,"BLK":0.3},
+      {"name":"Mike Price","school":"ChiSt","pos":"G","class":"Jr","rank":19,"FG%":0.415,"3PTM":3.3,"FT%":0.750,"PTS":22.0,"REB":1.3,"AST":2.3,"ST":0.8,"BLK":0.0},
+      {"name":"Chance Mallory","school":"UVA","pos":"G","class":"So","rank":21,"FG%":0.488,"3PTM":2.5,"FT%":0.750,"PTS":14.8,"REB":2.5,"AST":5.0,"ST":3.3,"BLK":0.0},
+      {"name":"Krystian Lewis","school":"Tul","pos":"G","class":"Jr","rank":22,"FG%":0.447,"3PTM":2.0,"FT%":0.949,"PTS":28.3,"REB":6.3,"AST":2.7,"ST":1.3,"BLK":0.0},
+      {"name":"Mynor Strong","school":"Toled","pos":"G","class":"Jr","rank":24,"FG%":0.463,"3PTM":1.0,"FT%":0.867,"PTS":16.8,"REB":2.5,"AST":2.5,"ST":4.0,"BLK":0.3},
+      {"name":"Tom House","school":"Furm","pos":"G","class":"Sr","rank":25,"FG%":0.590,"3PTM":3.0,"FT%":0.769,"PTS":19.5,"REB":3.0,"AST":1.3,"ST":0.8,"BLK":0.3},
+      {"name":"Dionte Neal","school":"UNCG","pos":"G","class":"Fr","rank":26,"FG%":0.556,"3PTM":0.8,"FT%":0.813,"PTS":16.5,"REB":2.3,"AST":6.8,"ST":1.5,"BLK":0.3},
+      {"name":"Jaylen Benard","school":"Longw","pos":"G","class":"Sr","rank":28,"FG%":0.477,"3PTM":1.3,"FT%":0.800,"PTS":14.8,"REB":8.8,"AST":2.5,"ST":2.0,"BLK":0.0},
+      {"name":"Aiden Derkack","school":"Dayt","pos":"G","class":"Fr","rank":29,"FG%":0.667,"3PTM":1.0,"FT%":0.793,"PTS":22.0,"REB":10.3,"AST":2.7,"ST":1.3,"BLK":0.3},
+      {"name":"Kanaan Carlyle","school":"FAU","pos":"G","class":"Sr","rank":32,"FG%":0.439,"3PTM":3.0,"FT%":0.875,"PTS":22.0,"REB":6.7,"AST":2.3,"ST":2.0,"BLK":0.0},
+      {"name":"Cameron Grant","school":"UNCG","pos":"G/F-C","class":"So","rank":33,"FG%":0.360,"3PTM":2.0,"FT%":1.000,"PTS":13.5,"REB":7.8,"AST":1.3,"ST":1.3,"BLK":1.8},
+      {"name":"Jake West","school":"NW","pos":"G","class":"So","rank":34,"FG%":0.524,"3PTM":2.3,"FT%":0.929,"PTS":21.3,"REB":3.0,"AST":8.7,"ST":1.0,"BLK":0.3}
+    ]
+  },
+  "candidateCards": [
+    {
+      "name": "Max Weisbrod",
+      "fantraxId": "06nff",
+      "availability": "First-page All Available Players view showed Claim and FA; not owned.",
+      "role": "NIU G, #6; Fantrax profile Rank G/Overall 8/14; 27% rostered and 21% started; 4 GP/4 GS, 30.8 MPG.",
+      "seasonPerGame": {"PTS":16.0,"REB":3.8,"AST":7.3,"ST":1.0,"BLK":0.0,"3PTM":3.5,"FG%":0.455,"FT%":0.714},
+      "latestBoxscore": {"date":"2026-11-11","boxscoreId":"06r1z","opponent":"N/A","line":"25 MIN, 14 PTS, 4 REB, 5 AST, 0 ST, 0 BLK, 2 threes; 6/15 FG, 0/0 FT"},
+      "upcomingGamesEastern": ["Sat 11/14 2:00 PM @Bellarmine","Wed 11/18 7:30 PM @Marquette","Sat 11/21 2:00 PM @Bowling Green","Wed 11/25 7:00 PM @SIU-Edwardsville","Sat 11/28 3:00 PM @Eastern Illinois"],
+      "listedGamesByPeriod": {"P3":2,"P4":2},
+      "news": "No new Weisbrod news article was visible in the opened profile; no clearance or eligibility claim established.",
+      "transactionHistory": "Nov 9 exact Weisbrod/Quion pair was rejected because Weisbrod claim eligibility was P2 and Quion drop/move eligibility was P3. Do not retry, substitute, defer or infer an effective-period rule from that single transaction."
+    },
+    {
+      "name": "Ben Hammond",
+      "availability": "First-page All Available Players view showed Claim and FA; not owned.",
+      "role": "Virginia Tech G, #3, EXP 3; profile Rank G/Overall 5/6; 52% rostered and 34% started; 3 GP/3 GS, 30.7 MPG.",
+      "seasonPerGame": {"PTS":22.7,"REB":3.3,"AST":5.3,"ST":4.3,"BLK":0.0,"3PTM":3.0,"FG%":0.488,"FT%":0.950},
+      "latestNews": "Fantrax Nov 11 5:53 PM EST: 32 PTS (9/16 FG, 3/5 3PT, 11/11 FT), 5 REB, 4 AST, 1 ST in 33 minutes vs Iowa; career high, fouled out.",
+      "upcomingGamesEastern": ["Fri 11/13 7:00 PM Mount St. Mary's","Mon 11/16 7:00 PM Richmond","Fri 11/20 3:00 PM @Northwestern","Sun 11/22 3:30 PM Oklahoma State","Fri 11/27 5:00 PM Old Dominion"],
+      "listedGamesByPeriod": {"P3":3,"P4":1},
+      "limitation": "Three starts plus fresh 33-minute game is bounded role evidence only; a three-game sample and a single high-scoring boxscore do not establish a stable forecast or acquisition value."
+    }
+  ],
+  "rulesReadback": {
+    "source": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+    "observedAt": "2026-11-12T07:33:18Z",
+    "lineupChangeSystem": "Managers enter lineup changes",
+    "executionCadence": "Weekly every Monday",
+    "lockOffset": "0:00 before scheduled start-time of game",
+    "lockScope": null,
+    "leagueTimezone": null,
+    "activationRule": null,
+    "gameCaps": null,
+    "shotMinimums": null,
+    "comparisonRounding": null,
+    "waivers": "Rotating priority, two-day period, 23+ hour minimum, anti-churning enabled; no processing instant or candidate-specific clearance observed.",
+    "inferenceBoundary": "The rules page does not establish whole-roster versus player-level lock, an exact local/UTC deadline, how claims activate, or whether all UI schedule rows count. Prior rejection proves only that Quion could not be dropped/moved in P2 while Weisbrod could be claimed in P2."
+  },
+  "statusLimits": [
+    "Campbell remains at zero displayed GP with no new status article; his last relevant Fantrax article is the Nov 2 foot-related DNP.",
+    "Karasinski remains at one displayed GP; the Nov 9 concussion note still says he could return Friday against Boston University, which conflicts with the schedule and remains unverified.",
+    "Quion's disabled Flex slot, N/A school and absent schedule remain unresolved; no synthetic schedule or stats were added."
+  ],
+  "actions": {"lineupChanges":0,"claims":0,"drops":0,"trades":0,"settingsChanges":0,"modelPromotions":0}
+}

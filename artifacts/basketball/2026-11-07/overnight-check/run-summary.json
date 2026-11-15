@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-07T07:28:43.983Z",
+  "triggerLocal": "2026-11-07T02:28:43.983-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": -76.017,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "browserAccess": "Authenticated IAB available; canonical league home loaded signed in. Read-only roster, schedule, player, news and availability pages captured.",
+  "freshReads": [
+    "Own roster remains same 14 identities and active/reserve slots (10/4), Balanced profile; period-two schedule Nov 9-15 refreshed and its visible rows match Nov6.",
+    "Fantrax roster YTD displayed current GP counts for all 14: Burton 2, Campbell 0, Cox 1, Tavari Johnson 2, Kyle Evans 2, Feroah 2, Hall 1, Sandfort 1, Ruffin 2, Quion Williams 0, James 1, Leonhardt 1, Tyson 0, Karasinski 1. These are results/status observations, not refreshed projection rates.",
+    "Fantrax home News/Latest Injury view: Nov6 Karasinski (concussion) out for Friday vs Stony Brook; Nov6 Tyson to remain ineligible this season after federal Court of Appeals decision; Campbell's latest relevant item remains Nov2 foot DNP. Tyson wording is attributed to Fantrax; no external primary corroboration performed.",
+    "Current Players page: first 20 visible Score-order available rows are in available-page1.json, all Claim/FA. Page one only; no full-pool inference.",
+    "Players Schedule view reset to a different Rank-order cohort and showed dates for period1 (Nov1-8); it does not validate the Score-order cohort's period2 schedules. Candidates remain excluded from model ranks.",
+    "Current next opponent remains CatsByAtLeast1 from prior Nov6 capture; no new opponent page refresh performed today."
+  ],
+  "period1": {
+    "number": 1,
+    "forecastRerun": false,
+    "reason": "Period-one games have started; immutable Nov2 pre-lock forecast preserved."
+  },
+  "period2": {
+    "number": 2,
+    "forecastRerun": true,
+    "input": "period-2-browser-capture.json",
+    "reportRevision": "caed61b878c6668a54b8d34ec374249fd9812d9a826517fbede4732065b4e80d",
+    "owned": 14,
+    "available": 0,
+    "status": "advisory-only-no-platform-writer",
+    "optimizerNote": "The arithmetic report still has the stale baseline's conditional lineup result; it is not lineup advice. Current Karasinski concussion news is only for Nov6; next-period recovery is unknown, so withhold the old Karasinski-over-Feroah swap pending refreshed status/rates and legal rules.",
+    "blockers": [
+      "baseline oldest dependency remains 2026-10-27T11:24:32Z",
+      "current minute/rate and role evidence incomplete",
+      "Campbell status not cleared",
+      "Tyson Fantrax news states season ineligibility",
+      "Karasinski Nov6 concussion/out news; Nov9-15 recovery unknown",
+      "exact lock scope/timezone/activation unresolved",
+      "game times not verified UTC instants; N/A counted-game eligibility unresolved",
+      "caps, shooting minimums and rounding unresolved",
+      "candidate schedules and complete available pool unknown"
+    ]
+  },
+  "historicalDoctor": {
+    "generatedAt": "2026-11-07T07:32:00.705Z",
+    "status": "partial; stale Oct25 pre-draft zero-player snapshot, separate from fresh weekly browser evidence",
+    "snapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b",
+    "reportDirectory": "data/basketball/mmioj1mvmvgsc3io/reports/541728aecaa22db6c6ffa504a6be1a92712111919e398a39bccef72df5d5d7c4"
+  },
+  "baseline": {
+    "correctedBoardRevision": "344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1",
+    "oldestDependencyObservedAt": "2026-10-27T11:24:32Z",
+    "refreshedOrRehashed": false
+  },
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationRecommendation": "NOTIFY: material Fantrax updates report Karasinski concussion/out Nov6 and Tyson season ineligibility; the current status evidence invalidates presenting the old optimizer swap as advice. Do not claim Nov9-15 availability, candidate schedule coverage, or action readiness."
+}

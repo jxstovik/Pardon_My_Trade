@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-10-31T06:30:00.041Z",
+  "triggerLocal": "2026-10-31T02:30:00.041-04:00",
+  "desiredLocal": "02:30 America/New_York",
+  "observedAt": "2026-10-31T06:32:00Z",
+  "captureMethod": "Supported authenticated Fantrax browser accessibility views; no raw API/HTTP access.",
+  "ownRoster": {
+    "teamId": "wwc1n3o4mvn1c6hk",
+    "displayName": "Board Man Gets pAId",
+    "identitySetMatchesPreviousCapture": true,
+    "players": [
+      {
+        "name": "Markus Burton",
+        "position": "G",
+        "slot": "G",
+        "school": "Ind"
+      },
+      {
+        "name": "Javontae Campbell",
+        "position": "G",
+        "slot": "G",
+        "school": "Cin"
+      },
+      {
+        "name": "Jalen Cox",
+        "position": "G",
+        "slot": "G",
+        "school": "USC"
+      },
+      {
+        "name": "Tavari Johnson",
+        "position": "G",
+        "slot": "G",
+        "school": "Charl"
+      },
+      {
+        "name": "Kyle Evans",
+        "position": "F/C",
+        "slot": "F/C",
+        "school": "NCSU"
+      },
+      {
+        "name": "Keyshawn Hall",
+        "position": "F/C",
+        "slot": "F/C",
+        "school": "StJon"
+      },
+      {
+        "name": "Jack Karasinski",
+        "position": "F/C",
+        "slot": "F/C",
+        "school": "NW"
+      },
+      {
+        "name": "Pryce Sandfort",
+        "position": "F/C",
+        "slot": "F/C",
+        "school": "Nebras"
+      },
+      {
+        "name": "Daeshun Ruffin",
+        "position": "G",
+        "slot": "Flx",
+        "school": "JackSt"
+      },
+      {
+        "name": "Quion Williams",
+        "position": "G",
+        "slot": "Flx",
+        "school": "ArkPB"
+      },
+      {
+        "name": "Michael James",
+        "position": "G",
+        "slot": "Reserve",
+        "school": "ASU"
+      },
+      {
+        "name": "Trevan Leonhardt",
+        "position": "G",
+        "slot": "Reserve",
+        "school": "Nebras"
+      },
+      {
+        "name": "Cade Tyson",
+        "position": "G, F/C",
+        "slot": "Reserve",
+        "school": "Minn"
+      },
+      {
+        "name": "Jaiden Feroah",
+        "position": "F/C",
+        "slot": "Reserve",
+        "school": "S UT"
+      }
+    ],
+    "active": 10,
+    "reserves": 4,
+    "period1Opponent": "JeffWischer",
+    "period2Opponent": "CatsByAtLeast1"
+  },
+  "period1": {
+    "number": 1,
+    "dates": [
+      "2026-11-01",
+      "2026-11-08"
+    ],
+    "ownScheduleRefreshed": true,
+    "candidatePage1ScheduleRefreshed": true,
+    "opponentRosterNotRefreshed": true,
+    "availablePage1Rows": 20,
+    "allDisplayedClaim": true,
+    "allDisplayedStatus": "FA",
+    "previousWFridayLabelNowAbsent": true,
+    "names": [
+      "JaQuan Johnson",
+      "Corey Hadnot",
+      "Michael McNair",
+      "Joshua Ward",
+      "Nasir Whitlock",
+      "Ty Robinson",
+      "Trey Campbell",
+      "Chaze Harris",
+      "Dennis Parker",
+      "Nils Machowski",
+      "Jed Miller",
+      "Tarence Guinyard",
+      "Krystian Lewis",
+      "Javon Bennett",
+      "Josiah Davis",
+      "Jaden Winston",
+      "Koree Cotton",
+      "Preston Edmead",
+      "Justin Pippen",
+      "LJ Wells"
+    ],
+    "currentCandidateRows": [
+      {
+        "id": "06nde",
+        "name": "JaQuan Johnson",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06h51",
+        "name": "Corey Hadnot",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06h0n",
+        "name": "Michael McNair",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "07133",
+        "name": "Joshua Ward",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06h4n",
+        "name": "Nasir Whitlock",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06n2p",
+        "name": "Ty Robinson",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "064gr",
+        "name": "Trey Campbell",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "071vo",
+        "name": "Chaze Harris",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06duc",
+        "name": "Dennis Parker",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06eod",
+        "name": "Nils Machowski",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "0653y",
+        "name": "Jed Miller",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06nn1",
+        "name": "Tarence Guinyard",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "071sq",
+        "name": "Krystian Lewis",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "065ev",
+        "name": "Javon Bennett",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "064lb",
+        "name": "Josiah Davis",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06hdq",
+        "name": "Jaden Winston",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06gr2",
+        "name": "Koree Cotton",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "071x0",
+        "name": "Preston Edmead",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "06q3e",
+        "name": "Justin Pippen",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      },
+      {
+        "id": "065vv",
+        "name": "LJ Wells",
+        "displayedButton": "Claim",
+        "displayedAvailability": "FA"
+      }
+    ],
+    "availabilityInterpretation": "These are the settled displayed FA labels and Claim buttons on page one. They do not prove waiver winners, a processing instant, or availability outside this page scope."
+  },
+  "period2": {
+    "number": 2,
+    "dates": [
+      "2026-11-09",
+      "2026-11-15"
+    ],
+    "ownScheduleRefreshed": true,
+    "opponentLabelObserved": "CatsByAtLeast1",
+    "opponentRosterNotCaptured": true
+  },
+  "availablePage2SpotCheck": {
+    "displayedRows": 20,
+    "allDisplayedClaim": true,
+    "freeAgentRows": 19,
+    "waiverRows": 1,
+    "waiverRow": {
+      "name": "Elijah Mahi",
+      "label": "W (Sat)"
+    },
+    "names": [
+      "Chance Westry",
+      "Sonny Wilson",
+      "Styles Phipps",
+      "Larry Hughes",
+      "Amir Lindsey",
+      "Tahaad Pettiford",
+      "Marqui Worthy",
+      "Ryan Sabol",
+      "Gage Lattimore",
+      "Ernest Shelton",
+      "Victor Valdes",
+      "Alex Wilkins",
+      "Tahj Staveskie",
+      "David Terrell",
+      "Trent Mosquera",
+      "Mohammad Habhab",
+      "Kashie Natt",
+      "Trevian Carson",
+      "Kenyon Giles",
+      "Elijah Mahi"
+    ],
+    "scope": "Players page 2 only; not an exhaustive pool and not full-pool reconciliation."
+  },
+  "officialRulesRead": {
+    "url": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+    "seasonBegins": "2026-11-01",
+    "seasonEnds": "2027-03-14",
+    "maxRoster": 14,
+    "maxActive": 10,
+    "maxReserve": 4,
+    "positionMaxima": {
+      "G": 4,
+      "F/C": 4,
+      "Flex": 2
+    },
+    "cadence": "weekly every Monday and zero minutes before scheduled game start retained from prior official rules read",
+    "stillUnknown": [
+      "exact lineup lock instant/timezone/scope",
+      "activation rule",
+      "counted games for N/A opponents",
+      "caps/minima/rounding"
+    ]
+  },
+  "unresolved": [
+    "exact waiver processing and clearance times; FA/Claim labels do not establish claim results",
+    "complete available pool and model-ranked exhaustive shortlist",
+    "current 2026-27 minutes, health/availability and role evidence",
+    "opponent roster/schedule for current and next period",
+    "UTC instants and counted-game eligibility",
+    "lock scope, timezone, activation, caps, shot minima, rounding"
+  ],
+  "liveActionsExecuted": 0,
+  "syntheticDataUsed": false,
+  "playerIdJoin": "Fantrax browser views exposed player names, schools, positions and game-link IDs but not stable player IDs in the row text. Stable player IDs in the weekly inputs are carried through the preserved prior capture crosswalk on exact name+school; this run did not observe raw API IDs."
+}

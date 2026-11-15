@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-05T13:41:03.187Z",
+  "checks": [
+    {
+      "actionId": "act-1793885958594-e41ior",
+      "status": "pending",
+      "risk": "high",
+      "expiresAt": "2026-11-05T14:09:18.594Z",
+      "payloadMatches": true,
+      "rosterUnchanged": true,
+      "periodMatches": true,
+      "ownedUnlockedDrop": true,
+      "acquisitionStatus": "FREEAGENT"
+    },
+    {
+      "actionId": "act-1793885958880-ro513t",
+      "status": "pending",
+      "risk": "high",
+      "expiresAt": "2026-11-05T14:09:18.880Z",
+      "payloadMatches": true,
+      "rosterUnchanged": true,
+      "periodMatches": true,
+      "ownedUnlockedDrop": true,
+      "acquisitionStatus": "FREEAGENT"
+    }
+  ],
+  "platformWrites": 0
+}

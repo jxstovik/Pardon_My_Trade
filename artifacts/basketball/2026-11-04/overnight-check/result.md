@@ -1,0 +1,15 @@
+# Basketball overnight check — November 4, 2026
+
+The existing scheduled check fired at **02:33:08.939 EST (07:33:08.939Z)**, **3 minutes 8.939 seconds after** the 02:30 local target. I left the active `banging-3s-basketball-workflow` automation, its 07:30 UTC recurrence, destination, and March 15 seasonal expiry unchanged. Visible notification delivery remains unverified.
+
+Authenticated Fantrax UI reads refreshed all 14 roster identities and 10 active/four reserve slots. In the period-two roster view, Jaiden Feroah is displayed active and Jack Karasinski in reserve; this is a slot observation, not an ownership or transaction change. Fantrax period 1 remains Nov 1–8 against JeffWischer, and its live matchup view displays **2–5–1 vs 5–2–1**. This is a live period status, not a final result. The injury report has no new relevant entry for our players; the Nov 2 Campbell DNP/undisclosed and Tyson eligibility-pending notes remain the latest relevant status evidence.
+
+I captured all 14 owned-player schedules for **period 2, Nov 9–15** and refreshed the first 20 Score-ordered available-player rows; all 20 display Claim/FA. The candidate list is page-one scope, not the full pool, and candidate schedules were not captured. The period-two opponent was not refreshed. The visible game times are labels, not verified instants; counted eligibility for N/A opponents, lineup lock scope/timezone/activation, caps, and percentage minimum/rounding remain unresolved.
+
+The current-period pre-lock report was **not** rerun because period-one games have started. The immutable Nov 2 pre-lock forecast remains preserved. I ran a separate conditional period-two forecast using the approved corrected board and the fresh owned schedule input: 14 owned players, 23 active appearances in the optimized lineup. The optimizer selects Karasinski instead of the current active Feroah slot. Treat this as research only: rates still depend on the Oct 27 baseline, current minutes/roles are not refreshed, and schedule/lock/counting rules remain unresolved. The forecast is **188 hours old at generation** relative to its Oct 27 board; no rates or source ages were reset. See the [period-two report](period-2-report/b4ed1cf9eb301ff8f563fc59f3e681a41007426dd91809f1881543f6a0352554/weekly-report.md) and [fresh schedule input](period-2-browser-capture.json).
+
+I also ran `doctor` and `report` against the existing saved Oct 25 pre-draft snapshot. That capture still has zero observed players and partial readiness; it remains historical and is separate from the refreshed live roster evidence.
+
+No claim, drop, trade, lineup write, model training/promotion, or code change occurred. No tests were run. The report output is advisory-only.
+
+**Notification recommendation: NOTIFY** because the refreshed active slot differs from the conditional optimizer's period-two selection (Feroah vs Karasinski). State clearly that stale rates and unresolved current status/lock/counting rules prevent qualified lineup advice; there is no action proposal or submission.

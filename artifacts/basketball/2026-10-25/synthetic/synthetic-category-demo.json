@@ -1,0 +1,47 @@
+{
+  "synthetic": true,
+  "label": "Arithmetic demonstration; no real players or forecasts",
+  "a": {
+    "PTS": 35,
+    "REB": 13,
+    "AST": 6,
+    "ST": 2,
+    "BLK": 4,
+    "3PTM": 3,
+    "FGM": 14,
+    "FGA": 25,
+    "FTM": 4,
+    "FTA": 5,
+    "FG%": 0.56,
+    "FT%": 0.8
+  },
+  "b": {
+    "PTS": 32,
+    "REB": 10,
+    "AST": 8,
+    "ST": 2,
+    "BLK": 2,
+    "3PTM": 4,
+    "FGM": 12,
+    "FGA": 24,
+    "FTM": 4,
+    "FTA": 6,
+    "FG%": 0.5,
+    "FT%": 0.6666666666666666
+  },
+  "explicitPolicy": {
+    "kind": "synthetic-exact",
+    "minimumFGA": 0,
+    "minimumFTA": 0
+  },
+  "categoryResults": {
+    "PTS": "win",
+    "REB": "win",
+    "AST": "loss",
+    "ST": "tie",
+    "BLK": "win",
+    "3PTM": "loss",
+    "FG%": "win",
+    "FT%": "win"
+  }
+}

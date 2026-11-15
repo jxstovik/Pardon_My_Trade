@@ -1,0 +1,274 @@
+import { rosterFingerprint } from "./action-executor.js";
+export const MODEL_POSITIONS = new Set([
+    "QB",
+    "RB",
+    "WR",
+    "TE",
+    "K",
+    "DST",
+    "FLEX"
+]);
+export const POSITION_BASELINE = {
+    QB: 16,
+    RB: 11,
+    WR: 10,
+    TE: 7,
+    K: 8,
+    DST: 7,
+    FLEX: 10
+};
+export const POSITION_VAR = {
+    QB: 25,
+    RB: 16,
+    WR: 16,
+    TE: 9,
+    K: 4,
+    DST: 9,
+    FLEX: 16
+};
+export function primaryModelPosition(positions) {
+    for (const position of positions) {
+        if (MODEL_POSITIONS.has(position))
+            return position;
+    }
+    return undefined;
+}
+/**
+ * True when a projection source emits rest-of-season (season-total) points
+ * rather than single-week points. Razzball no longer counts: its parser emits
+ * per-game rates (PPG when the page has one, otherwise total / Games).
+ * `fantasypros-*-ros` pages expose season totals, so they still rescale.
+ */
+export function projectionSourceIsRestOfSeason(source) {
+    return /ros|rest.?of.?season/i.test(source);
+}
+/**
+ * Convert a stored projection's points to a single-week scale so point
+ * predictions stay apples-to-apples with other weekly projections.
+ * Season-total sources are divided by the weeks remaining; weekly sources are
+ * returned unchanged. `weeksRemaining` undefined/<=0 means "unknown scale" and
+ * the points pass through.
+ */
+export function toWeeklyProjectionPoints(points, source, weeksRemaining) {
+    if (weeksRemaining === undefined || weeksRemaining <= 0)
+        return points;
+    return projectionSourceIsRestOfSeason(source) ? points / weeksRemaining : points;
+}
+/**
+ * Build per-player priors from a snapshot. When the snapshot carries
+ * projections, the projected points become the history mean (a reasonable
+ * pre-season prior); otherwise a position baseline is used so the orchestrator
+ * can still run offline.
+ *
+ * `weeksRemaining`: when supplied, rest-of-season projection sources are
+ * rescaled to a single-week mean (season total / weeks remaining) so the
+ * Bayesian prior stays on a weekly scale.
+ */
+export function buildPriorsFromSnapshot(snapshot, options = {}) {
+    const useProjections = options.useProjections ?? true;
+    const projectionByPlayer = new Map();
+    if (useProjections) {
+        for (const projection of snapshot.projections) {
+            projectionByPlayer.set(projection.player_id, {
+                points: projection.projected_points,
+                source: projection.source
+            });
+        }
+    }
+    const priors = [];
+    const seen = new Set();
+    for (const player of [...snapshot.players, ...snapshot.free_agents]) {
+        if (seen.has(player.player_id))
+            continue;
+        const position = primaryModelPosition(player.positions);
+        if (!position)
+            continue;
+        seen.add(player.player_id);
+        const stored = projectionByPlayer.get(player.player_id);
+        const historyMean = stored
+            ? toWeeklyProjectionPoints(stored.points, stored.source, options.weeksRemaining)
+            : POSITION_BASELINE[position];
+        priors.push({
+            playerId: player.player_id,
+            playerName: player.full_name,
+            position,
+            historyMean,
+            historyVar: POSITION_VAR[position]
+        });
+    }
+    return priors;
+}
+/**
+ * Derive a runnable `OrchestratorInput` from a canonical snapshot for a given
+ * team. Free-agent projected points come from the built models when available.
+ */
+export function buildOrchestratorInputFromSnapshot(snapshot, teamId, models) {
+    const league = snapshot.league;
+    const team = league.teams.find((t) => t.team_id === teamId);
+    if (!team)
+        throw new Error(`Team ${teamId} is not present in snapshot ${snapshot.snapshot_id}.`);
+    for (const slot of team.roster.starters) {
+        if (slot.player_id && !models.has(slot.player_id)) {
+            throw new Error(`Required starter ${slot.player_id} has no supported projection or learned model.`);
+        }
+    }
+    const rosterSlots = [];
+    const players = new Map([...snapshot.players, ...snapshot.free_agents].map((player) => [player.player_id, player]));
+    for (const slot of [...team.roster.starters, ...team.roster.bench]) {
+        if (!slot.player_id)
+            continue;
+        if (!models.has(slot.player_id))
+            continue;
+        const player = players.get(slot.player_id);
+        const eligiblePositions = player?.eligibility.eligible_slots?.length
+            ? player.eligibility.eligible_slots.filter((position) => MODEL_POSITIONS.has(position))
+            : (player?.positions ?? []).filter((position) => MODEL_POSITIONS.has(position));
+        const position = slot.slot_type !== "BN" && slot.slot_type !== "IR"
+            ? slot.slot_type
+            : primaryModelPosition(eligiblePositions) ?? primaryModelPosition(player?.positions ?? []) ?? "BN";
+        rosterSlots.push({
+            playerId: slot.player_id,
+            slot: position,
+            currentSlot: slot.slot_type,
+            eligiblePositions,
+            ...(slot.locked ? { locked: true } : {})
+        });
+    }
+    const starterCounts = (league.roster_settings?.slots ?? []).filter((slot) => !["BN", "IR"].includes(slot.slot)).map((slot) => ({
+        slot: slot.slot,
+        count: slot.count
+    }));
+    const freeAgents = [];
+    for (const player of snapshot.free_agents) {
+        const position = primaryModelPosition(player.positions);
+        if (!position)
+            continue;
+        const model = models.get(player.player_id);
+        if (!model)
+            continue;
+        const projectedPoints = model.mu;
+        freeAgents.push({ playerId: player.player_id, position, projectedPoints });
+    }
+    const opponents = league.teams
+        .filter((t) => t.team_id !== team.team_id)
+        .map((t) => ({
+        teamId: t.team_id,
+        players: rosterPlayerPositions(t.roster)
+    }));
+    return {
+        teamId: team.team_id,
+        rosterSlots,
+        starterCounts,
+        freeAgents,
+        opponents
+    };
+}
+export function buildSnapshotEnqueueOptions(snapshot, period) {
+    return {
+        preconditions: {
+            leagueExternalId: snapshot.league.external_id,
+            scoringPeriod: period,
+            snapshotId: snapshot.snapshot_id,
+            expectedRosterHashes: Object.fromEntries(snapshot.league.teams.map((team) => [team.team_id, rosterFingerprint(team.roster)])),
+            expectedFreeAgentIds: snapshot.free_agents.map((player) => player.player_id).sort(),
+            expectedFaabBudgets: snapshot.waiver_state.faab_budgets
+        }
+    };
+}
+function rosterPlayerPositions(roster) {
+    const result = [];
+    for (const slot of [...roster.starters, ...roster.bench, ...roster.injured_reserve]) {
+        if (!slot.player_id)
+            continue;
+        const position = primaryModelPosition([slot.slot_type]);
+        if (position)
+            result.push({ playerId: slot.player_id, position });
+    }
+    return result;
+}
+/**
+ * Best-effort merge of projection candidates (e.g. from `EspnProjectionSource`)
+ * into a snapshot by matching player full name. Returns a new snapshot; the
+ * original is not mutated. Used so imported ESPN leagues can seed model priors
+ * with real projected points instead of position baselines.
+ */
+export function mergeProjectionCandidates(snapshot, candidates) {
+    if (candidates.length === 0)
+        return snapshot;
+    const playersById = new Map();
+    const idsByName = new Map();
+    for (const player of [...snapshot.players, ...snapshot.free_agents]) {
+        const names = [player.full_name].map(normalizeName).filter(Boolean);
+        for (const name of names) {
+            const ids = idsByName.get(name) ?? new Set();
+            ids.add(player.player_id);
+            idsByName.set(name, ids);
+        }
+        for (const id of [player.player_id, player.external_id, player.external_ids.espn]) {
+            if (id)
+                playersById.set(id, player.player_id);
+        }
+    }
+    const existing = new Set(snapshot.projections.map((p) => p.player_id));
+    const additions = [];
+    for (const candidate of candidates) {
+        const playerId = (candidate.player_id ? playersById.get(candidate.player_id) : undefined)
+            ?? uniqueNameMatch(idsByName, candidate.name);
+        if (!playerId || existing.has(playerId))
+            continue;
+        existing.add(playerId);
+        const observedAt = candidate.observed_at ?? new Date().toISOString();
+        additions.push({
+            schema_version: "1.0.0",
+            created_at: observedAt,
+            updated_at: observedAt,
+            source_system: "espn",
+            source_record_id: `proj-${playerId}`,
+            projection_id: `proj-${playerId}`,
+            player_id: playerId,
+            source: "espn",
+            scoring_period: candidate.scoring_period ?? snapshot.league.season,
+            projected_stats: candidate.projected_stats,
+            projected_points: candidate.projected_points,
+            floor: candidate.floor,
+            ceiling: candidate.ceiling,
+            confidence: candidate.confidence
+        });
+    }
+    if (additions.length === 0)
+        return snapshot;
+    return {
+        ...snapshot,
+        projections: [...snapshot.projections, ...additions]
+    };
+}
+function uniqueNameMatch(idsByName, name) {
+    const ids = idsByName.get(normalizeName(name));
+    return ids?.size === 1 ? [...ids][0] : undefined;
+}
+/**
+ * Merge a set of `Projection` records (already matched to roster players) into
+ * a snapshot, de-duplicating by `player_id` while preferring higher-confidence
+ * entries for ties. Returns a new snapshot; the input is not mutated.
+ */
+export function mergeProjections(snapshot, projections) {
+    if (projections.length === 0)
+        return snapshot;
+    const byPlayer = new Map();
+    for (const existing of snapshot.projections) {
+        byPlayer.set(existing.player_id, existing);
+    }
+    for (const projection of projections) {
+        const current = byPlayer.get(projection.player_id);
+        if (!current || projection.confidence >= current.confidence) {
+            byPlayer.set(projection.player_id, projection);
+        }
+    }
+    return {
+        ...snapshot,
+        projections: [...byPlayer.values()]
+    };
+}
+function normalizeName(name) {
+    return name.trim().toLowerCase().replace(/\s+/g, " ");
+}

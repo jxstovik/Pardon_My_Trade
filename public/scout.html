@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101b1c">
+  <meta name="description" content="Weekly matchup, lineup and model forecast desk for Bored Man Gets Paid.">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/scout.css">
+  <title>Weekly matchup · Pardon My Trade</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">PMT <span>SCOUT DESK</span></a>
+    <nav class="nav-links" aria-label="Scout pages"><a class="active" href="/scout">Matchup</a><a href="/scout/players">Player lab</a><a href="/">Roster</a></nav>
+    <span id="dataStatus" class="freshness">Loading model outputs…</span>
+  </header>
+  <main class="page">
+    <section class="intro">
+      <div><p class="eyebrow">WEEK 5 · MODEL FORECAST</p><h1>The matchup desk</h1><p id="subtitle" class="muted">Current lineup, model recommendation, and scenario controls.</p></div>
+      <a class="settings-link" href="https://fantasy.espn.com/football/league/settings?leagueId=98806880&view=summary" target="_blank" rel="noreferrer">ESPN league rules ↗</a>
+    </section>
+    <div id="provenance" class="provenance"></div>
+    <div id="modelCaveat" class="model-caveat"></div>
+
+    <section class="hero card">
+      <div class="hero-head">
+        <div><p class="eyebrow">WEEKLY SCORING DISTRIBUTIONS</p><h2><span id="opponentName">opponent</span> <small id="opponentRecord"></small> vs <span id="ownerName">Your team</span> <small id="ownerRecord"></small></h2></div>
+        <label class="switch"><input id="chaseActive" type="checkbox" checked><span class="switch-track"></span><span>Ja’Marr Chase active</span></label>
+      </div>
+      <p class="subnote">Player outcomes come from PMT’s candidate metamodels, not ESPN’s displayed estimates. Baseline curves show your current, your recommended, and the opponent’s current lineup. Questionable player forecasts are conditional on playing; Q tags are not estimated play probabilities.</p>
+      <div id="baselineLegend" class="chart-legend"></div>
+      <div id="baselineChart" class="chart" role="img" aria-label="Scoring probability distributions for current and recommended lineups"></div>
+      <div id="baselineStats" class="distribution-cards"></div>
+      <div id="sensitivity" class="sensitivity"></div>
+    </section>
+
+    <section class="section-heading"><div><p class="eyebrow">HEAD-TO-HEAD LINEUP</p><h2 id="matchupTitle">Live matchup</h2></div><span id="lineupRule" class="muted"></span></section>
+    <section class="card matchup-card">
+      <div class="matchup-toolbar"><button id="resetOpponent" class="text-button" type="button">Reset opponent</button><span>Changes stay in this preview</span><div><button id="resetCurrent" class="text-button" type="button">Your current</button> <button id="resetOwner" class="text-button" type="button">Your recommendation</button></div></div>
+      <div class="matchup-head"><div><h3 id="opponentScenarioTitle"></h3><span class="muted">Opponent · left</span></div><span>Slot</span><div><h3 id="ownerScenarioTitle"></h3><span class="muted">Your team · right</span></div></div>
+      <p class="subnote">Each row shows two scoring density curves on the same point and density scales. Select a bench player or move an eligible starter between slots. Legal direct swaps exchange both players; empty a slot first when a direct swap is not eligible.</p>
+      <div id="matchupRows"></div><p id="swapMessage" class="callout" role="status" aria-live="polite"></p>
+    </section>
+    <details class="card rules-card"><summary><strong>Your current vs recommended lineup</strong><span class="tag" id="recommendedMean"></span></summary><div class="lineup-grid rules-content"><article><h3>Current <span id="currentMean"></span></h3><div id="currentLineup" class="lineup-table"></div></article><article><h3>Recommended</h3><div id="recommendedLineup" class="lineup-table"></div></article></div><p id="lineupDelta" class="callout"></p></details>
+    <section class="card scenario-result-card">
+      <div class="card-heading"><div><p class="eyebrow">SCENARIO PROJECTION</p><h3>How the matchup moves</h3></div><span class="tag">Model quantiles · independent player draws</span></div>
+      <div id="scenarioSummary" class="distribution-cards"></div>
+      <div id="scenarioLegend" class="chart-legend"></div>
+      <div id="scenarioChart" class="chart compact-chart" role="img" aria-label="What-if team scoring distributions"></div>
+      <p class="subnote">The win chance is conditional on the selected lineups and Chase toggle. Team simulations add independent player distributions, so they do not capture shared game-script or weather correlation.</p>
+    </section>
+
+    <section class="grid-two">
+      <article class="card"><div class="card-heading"><div><p class="eyebrow">WAIVER DESK</p><h2>Model-backed moves</h2></div><span class="tag">Modeled pool · ownership checked</span></div><div id="flexAdds" class="recommendation-list"></div><div id="dstAdds" class="recommendation-list"></div></article>
+      <article class="card"><div class="card-heading"><div><p class="eyebrow">ROSTER HOLD</p><h2>Start, bench, stash or cut</h2></div></div><div id="benchPlan" class="bench-plan"></div></article>
+    </section>
+
+    <section class="card news-card"><div class="card-heading"><div><p class="eyebrow">AVAILABILITY WATCH</p><h2>News that changes the range</h2></div><span class="tag">Retrieved Oct 8 · latest published reports</span></div><div id="newsList" class="news-list"></div></section>
+
+    <details class="card rules-card"><summary><span><p class="eyebrow">LEAGUE SETTINGS</p><strong>Scoring, lineup and transaction rules</strong></span><span class="tag">10 teams · PPR</span></summary><div id="rulesContent" class="rules-content"></div></details>
+
+    <details class="card rules-card"><summary><span><p class="eyebrow">MODEL CHECK</p><strong>2025 holdout performance</strong></span><span class="tag">Six candidate models</span></summary><div id="modelValidation" class="rules-content"></div><p class="subnote">MAE is mean absolute error in fantasy points; lower is better. Coverage is the observed share inside the model’s 10th–90th percentile interval (nominal 80%). Candidates are not promoted, and 2026 projections use NFL stats through Week 4.</p></details>
+
+    <footer>Forecasts are decision support. Candidate model artifacts are not promoted to PMT production. <a href="/scout/players">Compare individual scoring distributions ↗</a></footer>
+  </main>
+  <script src="/scout.js" defer></script>
+</body>
+</html>

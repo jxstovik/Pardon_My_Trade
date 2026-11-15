@@ -1,3 +1,4 @@
+import { parseEspnWaiverSettings } from "./espn-waiver-settings.js";
 import { PmtError } from "../../errors.js";
 import type {
   League,
@@ -17,6 +18,7 @@ import type {
 import type { PlatformReader } from "../platform-reader.js";
 import { EspnPlatformClient } from "./espn-platform-client.js";
 import { parseEspnTransactions } from "./espn-transaction-parser.js";
+import { ESPN_SCORING_STATS, type EspnScoringItem } from "./espn-scoring.js";
 import {
   loadEspnCredentials,
   mapEspnSlotToPosition,
@@ -42,15 +44,16 @@ interface EspnLeagueResponse {
     rosterPositions?: string[];
     rosterSize?: number;
     rosterSettings?: { lineupSlotCounts?: Record<string, number> };
-    scoringSettings?: { scoringItems?: Array<{ statId?: number; points?: number }> };
+    scoringSettings?: { scoringItems?: EspnScoringItem[] };
     waiverSettings?: Record<string, unknown>;
+    acquisitionSettings?: Record<string, unknown>;
     tradeReview?: { type?: number };
   };
   members?: Array<{ id: string; displayName: string; firstName?: string; lastName?: string }>;
   teams?: EspnTeam[];
   players?: EspnPlayer[];
   schedule?: EspnMatchup[];
-  scoringSettings?: { scoringItems?: Array<{ statId?: number; points?: number }> } & Record<string, unknown>;
+  scoringSettings?: { scoringItems?: EspnScoringItem[] } & Record<string, unknown>;
 }
 
 interface EspnTeam {
@@ -75,7 +78,7 @@ interface EspnTeam {
       lockedForScoringPeriod?: boolean;
       status?: string;
       injuryStatus?: string;
-      playerPoolEntry?: { player?: EspnPlayer };
+      playerPoolEntry?: { rosterLocked?: boolean; player?: EspnPlayer };
     }>;
     lineupSlotCounts?: Record<string, number>;
   };
@@ -86,6 +89,8 @@ interface EspnTeam {
 
 interface EspnPlayer {
   id: number;
+  fullName?: string;
+  displayName?: string;
   firstName?: string;
   lastName?: string;
   defaultPositionId?: number;
@@ -331,15 +336,26 @@ export class EspnPlatformReader implements PlatformReader {
     const rules: ScoringSettings["rules"] = [];
     for (const item of raw.scoringItems ?? []) {
       const definition = ESPN_SCORING_STATS[item.statId ?? -1];
-      if (!definition || typeof item.points !== "number") continue;
-      rules.push({
-        rule_id: `espn-stat-${item.statId}`,
-        category: definition.stat.split("_")[0],
-        stat: definition.stat,
-        points: item.points,
-        conditions: {},
-        applies_to_positions: definition.positions
-      });
+      if (!definition) continue;
+      // Overrides replace the base weight; zero is an explicit override too.
+      // ESPN keys these by player position (K=5, D/ST=16), not lineup slot.
+      const byPoints = new Map<number, PlayerPosition[]>();
+      for (const position of definition.positions) {
+        const positionId = Object.entries(ESPN_POSITION_ID).find(([, value]) => value === position)?.[0];
+        const points = (positionId ? item.pointsOverrides?.[positionId] : undefined) ?? item.points;
+        if (typeof points !== "number" || !Number.isFinite(points)) continue;
+        byPoints.set(points, [...(byPoints.get(points) ?? []), position]);
+      }
+      for (const [points, positions] of byPoints) {
+        rules.push({
+          rule_id: `espn-stat-${item.statId}${byPoints.size > 1 ? `-${positions.join("-")}` : ""}`,
+          category: definition.stat.split("_")[0],
+          stat: definition.stat,
+          points,
+          conditions: {},
+          applies_to_positions: positions
+        });
+      }
     }
     return { scoring_type: "custom", rules };
   }
@@ -439,12 +455,59 @@ export class EspnPlatformReader implements PlatformReader {
       .map((player) => this.mapPlayer(player));
   }
 
+  /** Distinguish an immediate free agent from a waiver claim before preparing a write. */
+  async getAcquisitionStatus(leagueExternalId: string, playerId: string): Promise<string | undefined> {
+    if (leagueExternalId !== this.client.credentials.leagueId) throw new Error("Acquisition status league mismatch.");
+    const league = await this.getLeagueRaw();
+    for (let offset = 0; offset < 45000; offset += 1500) {
+      const data = await this.client.getJson<{ players?: Array<{ player?: { id: number }; status?: string }> }>("", {
+        view: ["kona_player_info"], scope: { segment: 0, readHost: true }, query: { scoringPeriodId: league.scoringPeriodId ?? 1 },
+        filter: { players: { filterStatus: { value: ["FREEAGENT", "WAIVERS"] }, filterSlotIds: { value: [] }, limit: 1500, offset, sortPercOwned: { sortPriority: 1, sortAsc: false }, sortDraftRanks: { sortPriority: 100, sortAsc: true, value: "STANDARD" } } }
+      });
+      const match = data.players?.find((entry) => String(entry.player?.id) === playerId);
+      if (match) return match.status;
+      if ((data.players?.length ?? 0) < 1500) return undefined;
+    }
+    return undefined;
+  }
+
+  async getWaiverPlayerIds(leagueId: string): Promise<string[]> {
+    if (leagueId !== this.client.credentials.leagueId) throw new Error("Waiver pool scope mismatch.");
+    const league = await this.getLeagueRaw();
+    const ids: string[] = [];
+    for (let offset=0; offset<45000; offset+=1500) {
+      const data = await this.client.getJson<{players?: Array<{player?: {id: number}; status?: string}>}>("", {
+        view:["kona_player_info"],scope:{segment:0,readHost:true},query:{scoringPeriodId:league.scoringPeriodId ?? 1},
+        filter:{players:{filterStatus:{value:["WAIVERS"]},filterSlotIds:{value:[]},limit:1500,offset,sortPercOwned:{sortPriority:1,sortAsc:false}}}
+      });
+      if (!Array.isArray(data.players)) throw new Error("Waiver pool unavailable.");
+      for (const entry of data.players) if (entry.status === "WAIVERS" && entry.player?.id !== undefined) ids.push(String(entry.player.id));
+      if (data.players.length<1500) return ids;
+    }
+    throw new Error("Waiver pool pagination truncated.");
+  }
+
+  /** Authenticated pending claims only; missing view data is not proof of an empty queue. */
+  async getPendingWaiverClaims(leagueId: string, teamId: string): Promise<Array<{id: string; priority: number; items: Array<{playerId: number; type: string}>}>> {
+    if (leagueId !== this.client.credentials.leagueId) throw new Error("Pending waiver scope mismatch.");
+    const league = await this.getLeagueFresh();
+    if (String(league.id) !== leagueId || String(league.seasonId) !== this.client.credentials.season || !Number.isInteger(league.scoringPeriodId) || league.scoringPeriodId! < 1) throw new Error("Pending waiver scoring period unavailable or mismatched.");
+    const data = await this.client.getJson<{id?: number; seasonId?: number; transactions?: Array<{id: string; teamId: number; type: string; status: string; priority: number; items: Array<{playerId: number; type: string}>}>}>("", {
+      view: ["mTransactions2"], scope: {segment: 0, readHost: true},
+      query: { scoringPeriodId: league.scoringPeriodId! },
+      requireAuthenticatedRole: true,
+      filter: {transactions: {filterStatus: {value: ["PENDING"]}, filterType: {value: ["WAIVER"]}, filterTeamId: {value: [Number(teamId)]}}}
+    });
+    if (String(data.id) !== leagueId || String(data.seasonId) !== this.client.credentials.season || !Array.isArray(data.transactions)) throw new Error("Pending waiver view unavailable or mismatched.");
+    return data.transactions.filter(t=>String(t.teamId)===teamId && t.type === "WAIVER" && t.status === "PENDING").map(t=>({id:t.id,priority:t.priority,items:t.items}));
+  }
+
   async getWaiverState(_leagueExternalId: string): Promise<WaiverState> {
     const data = await this.getLeagueRaw();
     const now = new Date().toISOString();
     const order = (data.teams ?? [])
       .slice()
-      .sort((a, b) => (a.waiverRank ?? 0) - (b.waiverRank ?? 0))
+      .sort((a, b) => (a.waiverRank ?? Infinity) - (b.waiverRank ?? Infinity))
       .map((team) => String(team.id));
     const faabBudgets: Record<string, number> = {};
     for (const team of data.teams ?? []) {
@@ -520,7 +583,7 @@ export class EspnPlatformReader implements PlatformReader {
       const position = mapEspnSlotToPosition(slotId);
       const playerId = String(entry.playerId);
       const embeddedPlayer = entry.playerPoolEntry?.player ?? players.find((candidate) => candidate.id === entry.playerId);
-      const locked = entry.locked === true || entry.isLocked === true || entry.lockedForScoringPeriod === true
+      const locked = entry.locked === true || entry.isLocked === true || entry.lockedForScoringPeriod === true || entry.playerPoolEntry?.rosterLocked === true
         || embeddedPlayer?.locked === true || embeddedPlayer?.lockedInLineup === true
         || embeddedPlayer?.lockedForScoringPeriod === true
         || ["IN_PROGRESS", "FINAL", "COMPLETED"].includes(embeddedPlayer?.gameStatus?.toUpperCase() ?? "");
@@ -565,7 +628,7 @@ export class EspnPlatformReader implements PlatformReader {
   private mapPlayer(player: EspnPlayer): Player {
     const now = new Date().toISOString();
     const position = this.mapPosition(player.defaultPositionId);
-    const fullName = [player.firstName, player.lastName].filter(Boolean).join(" ").trim() || `Player ${player.id}`;
+    const fullName = player.fullName?.trim() || player.displayName?.trim() || [player.firstName, player.lastName].filter(Boolean).join(" ").trim() || `Player ${player.id}`;
     return {
       schema_version: "1.0.0",
       created_at: now,
@@ -610,16 +673,14 @@ export class EspnPlatformReader implements PlatformReader {
     if (normalized.includes("OUT")) return "out";
     if (normalized.includes("DOUBTFUL")) return "doubtful";
     if (normalized.includes("QUESTIONABLE")) return "questionable";
-    if (normalized.includes("IR") || normalized.includes("INJURED")) return "injured_reserve";
+    if (normalized === "IR" || normalized.includes("INJURY_RESERVE") || normalized.includes("INJURED")) return "injured_reserve";
     if (normalized.includes("SUSPENDED")) return "suspended";
     if (normalized.includes("BYE")) return "bye";
     return "active";
   }
 
   private mapWaiverSettings(data: EspnLeagueResponse): League["waiver_settings"] {
-    const raw = data.settings?.waiverSettings;
-    const type = raw && typeof raw === "object" && "type" in raw ? String((raw as Record<string, unknown>).type) : "rolling";
-    return { type: type === "FA" ? "none" : "rolling" };
+    return parseEspnWaiverSettings(data.settings?.acquisitionSettings, data.settings?.waiverSettings);
   }
 
   private mapTradeSettings(data: EspnLeagueResponse): League["trade_settings"] {
@@ -648,15 +709,3 @@ const ESPN_SLOT_ALIAS: Record<string, PlayerPosition> = {
 const POSITION_SET = new Set<PlayerPosition>([
   "QB", "RB", "WR", "TE", "K", "DST", "FLEX", "SUPER_FLEX", "BN", "IR"
 ]);
-
-const ESPN_SCORING_STATS: Record<number, { stat: string; positions: PlayerPosition[] }> = {
-  3: { stat: "passing_yards", positions: ["QB"] },
-  4: { stat: "passing_touchdowns", positions: ["QB"] },
-  20: { stat: "interceptions", positions: ["QB"] },
-  24: { stat: "rushing_yards", positions: ["QB", "RB", "WR", "TE"] },
-  25: { stat: "rushing_touchdowns", positions: ["QB", "RB", "WR", "TE"] },
-  53: { stat: "receptions", positions: ["RB", "WR", "TE"] },
-  42: { stat: "receiving_yards", positions: ["RB", "WR", "TE"] },
-  43: { stat: "receiving_touchdowns", positions: ["RB", "WR", "TE"] },
-  72: { stat: "fumbles_lost", positions: ["QB", "RB", "WR", "TE"] }
-};

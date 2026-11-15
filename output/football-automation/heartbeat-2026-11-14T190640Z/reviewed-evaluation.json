@@ -1,0 +1,367 @@
+{
+  "at": "2026-11-14T19:16:18.149Z",
+  "modelVersion": "weekly-2026-W10-19789406c2bc-368dedd8bda2-d1284c4271e7",
+  "cutoff": 9,
+  "capacity": {
+    "usedKnownReceipts": 0,
+    "externalPendingUnknown": true,
+    "reservedExternal": null,
+    "remaining": null,
+    "limit": 5,
+    "executionAllowed": false,
+    "reason": "Private pending-move read blocked by ESPN_AUTH_REQUIRED"
+  },
+  "availablePlayers": 902,
+  "availableModeled": 456,
+  "seasonEndWeek": 17,
+  "unknownHealthyCoverage": [],
+  "choices": [],
+  "lockedUnowned": [
+    {
+      "playerId": "5082424",
+      "name": "Dominic Zvada",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4575131",
+      "name": "Jacory Croskey-Merritt",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "3121422",
+      "name": "Terry McLaurin",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "-16019",
+      "name": "Giants D/ST",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "-16028",
+      "name": "Commanders D/ST",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4433970",
+      "name": "J.J. McCarthy",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4689114",
+      "name": "Jaxson Dart",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "5081432",
+      "name": "Antonio Williams",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4360635",
+      "name": "Chig Okonkwo",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4682648",
+      "name": "Malachi Fields",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4567156",
+      "name": "Treylon Burks",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "3068267",
+      "name": "Austin Ekeler",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4360516",
+      "name": "Tyrone Tracy Jr.",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "2969939",
+      "name": "Jameis Winston",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "2576980",
+      "name": "Marcus Mariota",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4040655",
+      "name": "Darnell Mooney",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "3930066",
+      "name": "Van Jefferson",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4426948",
+      "name": "Luke McCaffrey",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4429148",
+      "name": "Theo Johnson",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "3127586",
+      "name": "Jeremy McNichols",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4566158",
+      "name": "Ben Sauls",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4257188",
+      "name": "Charlie Jones",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4361577",
+      "name": "Dyami Brown",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "2975417",
+      "name": "Patrick Ricard",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "3123075",
+      "name": "Braxton Berrios",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4691889",
+      "name": "Greg Desrosiers Jr.",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4602667",
+      "name": "Jaylin Lane",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4243389",
+      "name": "Calvin Austin III",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4048228",
+      "name": "John Bates",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4690923",
+      "name": "Ben Sinnott",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "2531358",
+      "name": "Chris Manhertz",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4431562",
+      "name": "Phil Mafah",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4361088",
+      "name": "Colson Yankoff",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4432722",
+      "name": "Athan Kaliakmanis",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4424106",
+      "name": "Gunner Olszewski",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4590292",
+      "name": "Thomas Fidone II",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "5083297",
+      "name": "Jacoby Jones",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4421446",
+      "name": "Craig Reynolds",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4692590",
+      "name": "Jalin Hyatt",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4361100",
+      "name": "Jack Westover",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4570296",
+      "name": "Dalen Cambre",
+      "team": "19",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "5151317",
+      "name": "Robert Henry Jr.",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    },
+    {
+      "playerId": "4683111",
+      "name": "Jaden Bradley",
+      "team": "28",
+      "kickoff": "2026-11-13T01:15:00.000Z",
+      "gameId": "401873052",
+      "reason": "Already-started unowned game excluded from current-week automatic coverage; future-only claim value remains unresolved, not zero."
+    }
+  ],
+  "unreviewedCandidateRemainder": 0,
+  "platformWrites": 0
+}

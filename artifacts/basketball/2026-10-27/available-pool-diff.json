@@ -1,0 +1,42 @@
+{
+  "oldObservedAt": "2026-10-26T19:29:41.573603+00:00",
+  "newObservedAt": "2026-10-27T08:00:08.452079+00:00",
+  "oldCount": 5689,
+  "newCount": 5687,
+  "noLongerInAvailableExport": [
+    {
+      "id": "05wop",
+      "name": "Pablo Tamba",
+      "school": "LSU"
+    },
+    {
+      "id": "064zr",
+      "name": "Marquel Sutton",
+      "school": "LSU"
+    },
+    {
+      "id": "0651j",
+      "name": "RJ Luis",
+      "school": "LSU"
+    },
+    {
+      "id": "07a7t",
+      "name": "Mantas Rubstavicius",
+      "school": "Aub"
+    }
+  ],
+  "newlyInAvailableExport": [
+    {
+      "id": "064mr",
+      "name": "Tae Davis",
+      "school": "Okla"
+    },
+    {
+      "id": "06ngx",
+      "name": "Charles Johnston",
+      "school": "Furm"
+    }
+  ],
+  "sharedHistoricalStatChanges": 0,
+  "reasonForMembershipChanges": "unknown; not evidence of a league transaction or draft selection"
+}

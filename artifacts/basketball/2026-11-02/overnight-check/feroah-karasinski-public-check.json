@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-02",
+  "scope": "Targeted official public primary sources for Jaiden Feroah and Jack Karasinski before their first period-one games. No health inference from silence; not a full 14-player status audit.",
+  "sources": [
+    {
+      "player": "Jaiden Feroah",
+      "source": "Southern Utah official opener preview, published 2026-11-01",
+      "url": "https://suutbirds.com/news/2026/11/1/mens-basketball-thunderbirds-open-2026-27-season-monday-against-west-coast-baptist.aspx",
+      "finding": "Names Feroah as the top returning player and gives his 2025-26 production. It is role context, not a Nov 2 availability or starting confirmation."
+    },
+    {
+      "player": "Jaiden Feroah",
+      "source": "Southern Utah official live events and 2026-27 schedule",
+      "url": "https://suutbirds.com/coverage",
+      "finding": "Lists West Coast Baptist on Nov 2 at 8:00 PM MT; this aligns with the Fantrax 10:00 PM display label, a two-hour difference consistent with (but not proof of) an Eastern-time display."
+    },
+    {
+      "player": "Jack Karasinski",
+      "source": "Northwestern official opener preview, published 2026-11-01",
+      "url": "https://nusports.com/news/2026/11/1/wildcats-begin-2026-27-regular-season-at-home-against-binghamton",
+      "finding": "Names Karasinski a player to watch and recaps his 11-point Oct 25 exhibition. It does not confirm a starting slot or Nov 2 availability."
+    },
+    {
+      "player": "Jack Karasinski",
+      "source": "Northwestern official 2026-27 schedule",
+      "url": "https://nusports.com/sports/mens-basketball/schedule",
+      "finding": "The opener preview states Nov 2 Binghamton at 7:00 PM CT; Fantrax displays 8:00 PM, consistent with (but not proof of) an Eastern-time display."
+    }
+  ],
+  "status": "No current availability, health clearance, or confirmed starting lineup was found for either player. These sources do not clear lineup use.",
+  "otherReferences": [
+    "https://suutbirds.com/sports/mens-basketball/schedule",
+    "https://nusports.com/news/2026/10/25/northwestern-challenged-by-no-18-iowa-state-in-sunday-exhibition"
+  ]
+}

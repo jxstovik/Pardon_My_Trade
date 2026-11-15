@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "kind": "weekly-implementation-validation",
+  "realEvidence": {
+    "ownedPlayers": 14,
+    "inspectedAvailablePlayers": 20,
+    "identityExclusions": 0,
+    "sourceKind": "browser-field-transcription",
+    "observedAtLowerBound": "2026-10-29T01:52:03Z",
+    "inputFileSha256": "771ec1f619b2bbb018eeb26fdae97da6cdd5171cca6aa8fc5386fa88dafe06f7",
+    "statisticalBaselineRefreshed": false,
+    "gameInstantsFullyReconciled": false
+  },
+  "validation": {
+    "node": "26.11.1",
+    "build": "passed",
+    "compiledBasketballSuite": {
+      "passed": 67,
+      "failed": 0,
+      "loopbackPermission": "Existing copilot-server suite initially EPERM in sandbox; passed with permitted loopback access"
+    },
+    "finalTargetedWeeklyAndWorkflow": {
+      "passed": 19,
+      "failed": 0
+    }
+  },
+  "weeklyReportRevision": "8b0186b7651859af8eacb04456fba90203d8168ff385edd5b27d67324c03eeb0",
+  "savedEvidenceDoctorReportId": "551121afb4d9c6e2c19c6b2e6b358cc421b464e47f6d7f046fa48b704eb7737e",
+  "doctorCaveat": "Doctor still analyzes historical pre-draft capture; it does not include the newly captured 14-player weekly roster. Its stale/empty roster is superseded by weekly capture, not a refreshed source.",
+  "automation": {
+    "id": "banging-3s-basketball-workflow",
+    "updated": true,
+    "status": "ACTIVE",
+    "newScheduledInvocationObserved": false,
+    "cadence": "daily target08:00 America/New_York with weekday-specific weekly/waiver work and preserved UTC/DST procedure"
+  },
+  "liveActionsExecuted": 0,
+  "modelPromoted": false,
+  "trainedModel": false
+}

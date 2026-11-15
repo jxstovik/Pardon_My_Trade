@@ -1,0 +1,138 @@
+{
+  "coverage": {
+    "basis": "persisted_player_linked_items_only",
+    "scoped_player_count": 15,
+    "players_with_news_count": 5,
+    "players_without_observed_news_count": 10,
+    "unresolved_player_count": 0,
+    "source_completeness": "unknown",
+    "no_news_is_not_clearance": true
+  },
+  "scope": {
+    "league_id": "98806880",
+    "team_id": "7",
+    "selection": "roster_plus_explicit_candidates"
+  },
+  "omissions": {
+    "out_of_scope_count": 2337,
+    "unmapped_item_count": 291,
+    "unmapped_high_impact_count": 64,
+    "outside_window_count": 111,
+    "outside_window_high_impact_count": 17,
+    "invalid_timestamp_count": 0,
+    "invalid_timestamp_high_impact_count": 0,
+    "compacted_item_count": 0,
+    "remaining_count": 0,
+    "remaining_high_impact_count": 0
+  },
+  "snapshot_id": "espn-98806880-948872bc-9255-446c-8bd7-7d8a01cb7711-1794463494804",
+  "league_id": "98806880",
+  "counts": {
+    "espn": 75,
+    "razzball": 23
+  },
+  "degraded": {},
+  "ingested": 98,
+  "news": [
+    {
+      "news_id": "40699880:4890973",
+      "player_id": "4890973",
+      "full_name": "Ashton Jeanty",
+      "source": "espn",
+      "headline": "Fantasy buzz: Malik Willis placed on IR, are there any Dolphins you should start?",
+      "summary": "What does the Miami Dolphins' fantasy football outlook show with starting QB Malik Willis placed on IR?",
+      "impact": "high",
+      "published_at": "2026-11-10T21:54:11.000Z",
+      "ingested_at": "2026-11-11T08:01:28.551Z",
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis",
+      "text_truncated": false
+    },
+    {
+      "news_id": "50446940:4890973",
+      "player_id": "4890973",
+      "full_name": "Ashton Jeanty",
+      "source": "espn",
+      "headline": "Fantasy football matchup ranks: Upgrade Ollie Gordon II, downgrade Jordan Love",
+      "summary": "The most and least favorable matchups in the NFL for this week's games at the four key fantasy positions.",
+      "impact": "low",
+      "published_at": "2026-11-11T15:27:24.000Z",
+      "ingested_at": "2026-11-12T06:04:59.994Z",
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50446940/fantasy-football-rankings-best-worst-matchup-qb-rb-wr-te",
+      "text_truncated": false
+    },
+    {
+      "news_id": "50446573",
+      "player_id": "4595348",
+      "full_name": "Malik Nabers",
+      "source": "espn",
+      "headline": "Giants' Nabers calls Fox analyst Olsen's body language critique a 'lie'",
+      "summary": "Giants wide receiver Malik Nabers said Tuesday he posted on social media after the game because he thought the critique from Fox play-by-play announcer Joe Davis and analyst Greg Olsen about his body language and being a bad teammate was a \"lie.\"",
+      "impact": "low",
+      "published_at": "2026-11-11T00:27:35.000Z",
+      "ingested_at": "2026-11-11T08:01:28.551Z",
+      "source_url": "https://www.espn.com/nfl/story/_/id/50446573/giants-nabers-calls-fox-analyst-olsen-body-language-criticism-lie",
+      "text_truncated": false
+    },
+    {
+      "news_id": "50442966:3918298",
+      "player_id": "3918298",
+      "full_name": "Josh Allen",
+      "source": "espn",
+      "headline": "Gibbs, Allen, JSN and more Knockout league pickups for Week 10",
+      "summary": "As the number of teams shrink, the number of stars available in Knockout leagues grows. Here are the ones to get.",
+      "impact": "low",
+      "published_at": "2026-11-10T21:31:22.000Z",
+      "ingested_at": "2026-11-11T08:01:28.551Z",
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50442966/2026-fantasy-football-knockout-leagues-pickups-week-10",
+      "text_truncated": false
+    },
+    {
+      "news_id": "50442966:4426388",
+      "player_id": "4426388",
+      "full_name": "Jameson Williams",
+      "source": "espn",
+      "headline": "Gibbs, Allen, JSN and more Knockout league pickups for Week 10",
+      "summary": "As the number of teams shrink, the number of stars available in Knockout leagues grows. Here are the ones to get.",
+      "impact": "low",
+      "published_at": "2026-11-10T21:31:22.000Z",
+      "ingested_at": "2026-11-11T08:01:28.551Z",
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50442966/2026-fantasy-football-knockout-leagues-pickups-week-10",
+      "text_truncated": false
+    },
+    {
+      "news_id": "50444620:3040151",
+      "player_id": "3040151",
+      "full_name": "George Kittle",
+      "source": "espn",
+      "headline": "'Great move': Rich Eisen reacts to 49ers' trade for Keenan Allen",
+      "summary": "'Great move': Rich Eisen reacts to 49ers' trade for Keenan Allen",
+      "impact": "low",
+      "published_at": "2026-11-10T20:52:56.000Z",
+      "ingested_at": "2026-11-11T08:01:28.551Z",
+      "source_url": "https://www.espn.com/video/clip/_/id/50444620/rich-eisen-reacts-49ers-trade-keenan-allen",
+      "text_truncated": false
+    },
+    {
+      "news_id": "48476156:3918298",
+      "player_id": "3918298",
+      "full_name": "Josh Allen",
+      "source": "espn",
+      "headline": "2026 NFL awards tracker: Odds for MVP, Rookie of the Year and more",
+      "summary": "Who are the favorites to win seasonlong honors? Here are the odds for MVP, Rookie of the Year and more.",
+      "impact": "low",
+      "published_at": "2026-11-10T20:09:58.000Z",
+      "ingested_at": "2026-11-11T08:01:28.551Z",
+      "source_url": "https://www.espn.com/espn/betting/story/_/id/48476156/2026-nfl-awards-betting-odds-mvp-rookie-year-offensive-defensive-player-coach",
+      "text_truncated": false
+    }
+  ],
+  "total_count": 7,
+  "returned_count": 7,
+  "truncated": false,
+  "next_cursor": null,
+  "filters": {
+    "since": "2026-11-10T06:04:59.267Z",
+    "until": "2026-11-12T06:04:59.267Z"
+  },
+  "next_step": null
+}

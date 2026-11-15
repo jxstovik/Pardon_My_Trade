@@ -43,6 +43,8 @@ export interface EspnRequestScope {
 
 export interface EspnGetOptions {
   readonly view?: string[];
+  /** Private views must not silently degrade to public league responses. */
+  readonly requireAuthenticatedRole?: boolean;
   /**
    * Serialized into the `X-Fantasy-Filter` header. ESPN uses this on GET for
    * filtering and pagination, e.g. `{ players: { limit: 50, offset: 0 } }`.
@@ -136,6 +138,10 @@ export class EspnPlatformClient {
           await response.body?.cancel().catch(() => undefined);
           await delay(retryDelay(response, attempt));
           continue;
+        }
+        if (opts.requireAuthenticatedRole && response.ok) {
+          const role = response.headers.get("x-fantasy-role");
+          if (!role || role.toUpperCase() === "NONE") throw new PmtError({ code: "ESPN_AUTH_REQUIRED", source: "platform_adapter", message: "ESPN session is unauthenticated; refresh ESPN_S2 and SWID locally before reading private pending claims or submitting moves." });
         }
         return await this.parse<T>(response);
       } catch (error) {

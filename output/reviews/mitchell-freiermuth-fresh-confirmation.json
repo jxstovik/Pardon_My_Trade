@@ -1,0 +1,88 @@
+{
+  "readAt": "2026-10-14T23:07:13.750Z",
+  "leagueId": 98806880,
+  "season": 2026,
+  "week": 6,
+  "players": [
+    {
+      "id": "4890973",
+      "name": "Ashton Jeanty",
+      "slot": 2
+    },
+    {
+      "id": "4595348",
+      "name": "Malik Nabers",
+      "slot": 4
+    },
+    {
+      "id": "3918298",
+      "name": "Josh Allen",
+      "slot": 0
+    },
+    {
+      "id": "4426388",
+      "name": "Jameson Williams",
+      "slot": 20
+    },
+    {
+      "id": "3040151",
+      "name": "George Kittle",
+      "slot": 6
+    },
+    {
+      "id": "4569587",
+      "name": "Wan'Dale Robinson",
+      "slot": 23
+    },
+    {
+      "id": "3916148",
+      "name": "Tony Pollard",
+      "slot": 2
+    },
+    {
+      "id": "4360761",
+      "name": "Michael Wilson",
+      "slot": 4
+    },
+    {
+      "id": "4371733",
+      "name": "Kenny Gainwell",
+      "slot": 20
+    },
+    {
+      "id": "4568490",
+      "name": "RJ Harvey",
+      "slot": 20
+    },
+    {
+      "id": "4034949",
+      "name": "Eddy Pineiro",
+      "slot": 17
+    },
+    {
+      "id": "4428557",
+      "name": "Tyjae Spears",
+      "slot": 20
+    },
+    {
+      "id": "4032473",
+      "name": "Rashid Shaheed",
+      "slot": 20
+    },
+    {
+      "id": "4241474",
+      "name": "Brian Robinson Jr.",
+      "slot": 20
+    },
+    {
+      "id": "-16011",
+      "name": "Colts D/ST",
+      "slot": 16
+    },
+    {
+      "id": "4361411",
+      "name": "Pat Freiermuth",
+      "slot": 20
+    }
+  ]
+}

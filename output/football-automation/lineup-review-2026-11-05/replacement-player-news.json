@@ -1,0 +1,515 @@
+{
+  "at": "2026-11-05T16:09:44.723Z",
+  "rows": [
+    {
+      "id": "4887558",
+      "name": "Emanuel Wilson",
+      "position": "RB",
+      "modelMean": 10.513912107950349,
+      "news": [
+        {
+          "playerId": "4887558",
+          "status": "unverified",
+          "publishedAt": "2026-11-03T15:18:42.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4887558",
+          "text": "Wilson played just seven snaps -- all on special teams -- in Monday's 34-17 loss to the Bears. After logging double-digit carries in six of the Seahawks' previous seven games while scoring four touchdowns and averaging 66.4 scrimmage yards during that span, Wilson fell out of the game plan entirely in Week 8. With Zach Charbonnet (knee) getting cleared to make his 2026 debut, Jadarian Price (chest) returning from injured reserve and George Holani still on hand as an option on passing downs, the Seahawks had no reps available out of the backfield for Wilson. Unless Charbonnet or Price succumbs to another injury, Wilson's playing time on offense will likely remain scarce moving forward.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4360238",
+      "name": "Dameon Pierce",
+      "position": "RB",
+      "modelMean": 10.111537820054135,
+      "news": [
+        {
+          "playerId": "4360238",
+          "status": "unverified",
+          "publishedAt": "2026-10-28T21:17:25.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4360238",
+          "text": "The Eagles placed Pierce (undisclosed) on injured reserve Wednesday Pierce thus is joining fellow RBs Tank Bigsby (abdomen) and Will Shipley (foot) on IR, leaving Saquon Barkley and Jaydon Blue as the only players at the position on the Eagles' active roster. Pierce made a late exit from Monday's loss to the Cowboys, which followed Barkley's own earlier departure due to a back issue. Pierce's health concern is enough for him to miss at least four contests, meaning his next chance for game action is Sunday, Dec. 6, in Arizona.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4575131",
+      "name": "Jacory Croskey-Merritt",
+      "position": "RB",
+      "modelMean": 9.949461458094328,
+      "news": [
+        {
+          "playerId": "4575131",
+          "status": "unverified",
+          "publishedAt": "2026-10-19T20:28:22.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4575131",
+          "text": "The Commanders placed Croskey-Merritt (groin) on injured reserve Monday. Croskey-Merritt had already been ruled out for Monday's game against the 49ers, but his move to IR ensures that he'll miss at least an additional three contests beyond that. With Croskey-Merritt sidelined through Week 10, Rachaad White looks on track to serve as the Commanders' top option out of the backfield in the interim, while Austin Ekeler and Jeremy McNichols are on hand in complementary roles.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4429160",
+      "name": "De'Von Achane",
+      "position": "RB",
+      "modelMean": 9.390977413442771,
+      "news": [
+        {
+          "playerId": "4429160",
+          "status": "unverified",
+          "publishedAt": "2026-09-28T20:10:58.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4429160",
+          "text": "The Dolphins placed Achane (knee) on injured reserve Monday. Achane's move to injured reserve was merely a formality after head coach Jeff Hafley confirmed earlier Monday that the running back would be lost for the season after sustaining an ACL tear in his left knee during Sunday's 24-10 loss to Kansas City. With Achane out of the mix for the rest of 2026, the Dolphins are left with Jaylen Wright (foot) and Ollie Gordon as the lone running backs on the 53-man roster.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4685382",
+      "name": "Omarion Hampton",
+      "position": "RB",
+      "modelMean": 8.775018459751731,
+      "news": [
+        {
+          "playerId": "4685382",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T03:30:57.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4685382",
+          "text": "Hampton rushed nine times for 20 yards and brought in two of three targets for seven yards in the Chargers' 24-9 loss to the Rams on Sunday. Hampton logged just one more carry than Kimani Vidal and five more than Keaton Mitchell, as the Chargers' ground game continued to resemble a committee scenario. Hampton now has 45 rushing yards or fewer in four straight games, and he's logged single-digit carries in three of those contests. The second-year back is averaging just 3.5 yards per carry behind an injury-hampered offensive line as well, leaving his outlook bleak for a Week 9 home matchup against an aggressive Texans defense next Sunday.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4832955",
+      "name": "Emmett Johnson",
+      "position": "RB",
+      "modelMean": 8.099674613738966,
+      "news": [
+        {
+          "playerId": "4832955",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T02:34:37.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4832955",
+          "text": "Johnson carried the ball once for 15 yards and caught all five of his targets for 128 yards and a touchdown in Sunday's 28-24 loss to the Broncos. He added 44 yards on his only kickoff return. The rookie running back flashed his explosiveness on a 73-yard catch-and-run in the second quarter that produced Johnson's first career NFL touchdown. He came into Sunday with a 9-109-0 line on 11 targets through six games, and his six touches were firmly behind Kenneth Walker's 25, but Johnson's breakout performance can only encourage Andy Reid to find more ways to get the ball in his hands. Johnson will look to build on this effort in Week 9 against the Jets.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4686658",
+      "name": "Mike Washington Jr.",
+      "position": "RB",
+      "modelMean": 7.76317990631041,
+      "news": [
+        {
+          "playerId": "4686658",
+          "status": "unverified",
+          "publishedAt": "2026-11-04T22:11:03.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4686658",
+          "text": "Raiders head coach Klint Kubiak said Wednesday that the breakdown in carries between Washington and Ashton Jeanty will be determined on a week-to-week basis, Ryan McFadden of ESPN.com reports. Per Ryan McFadden of ESPN.com, Kubiak said that he \"absolutely\" believes that Jeanty can be a bell cow running back, but at least for the time being, he looks like he'll be part of a timeshare with Washington. Jeanty has seen his carry count drop or hold steady in each successive game since Week 1, culminating in the 2025 first-round pick logging just two carries in this past Sunday's 38-33 win over the Jets, while Washington carried a career-high 25 times for 83 yards. The split in carries may not be quite as dramatic in weeks to come, but Washington appears to have earned himself a sizable piece of the pie while he's averaging 4.3 yards per tote to Jeanty's 3.1 mark through eight games. Jeanty remains the Raiders' clear cut top option on passing downs over Washington, who has recorded just three receptions for 11 yards on six targets so far this season.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "5081397",
+      "name": "Dylan Sampson",
+      "position": "RB",
+      "modelMean": 7.6903217442806415,
+      "news": [
+        {
+          "playerId": "5081397",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T04:41:54.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/5081397",
+          "text": "Sampson rushed one time for seven yards and caught six of eight targets for 62 yards in Sunday's 27-6 loss to the Steelers. Sampson was out-carried 11 to one by Quinshon Judkins, but the former has carved out a role as the preferred pass-catching back for Cleveland since returning from injured reserve in Week 7. Over the last two games, Sampson has turned 11 targets into nine catches for 94 yards while adding seven carries for 52 yards. Sampson will have some PPR fantasy appeal during weeks when the Browns are projected to trail on the scoreboard.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4599739",
+      "name": "Kendre Miller",
+      "position": "RB",
+      "modelMean": 7.5013015943596795,
+      "news": [
+        {
+          "playerId": "4599739",
+          "status": "unverified",
+          "publishedAt": "2026-10-26T23:45:15.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4599739",
+          "text": "Miller rushed eight times for six yards in Sunday's 16-10 loss to the Steelers in Paris. The Saints got absolutely nothing going on the ground against Pittsburgh, rushing 17 times for 18 yards as a team, so it's not like Miller and his team-leading eight carries was the only issue. New Orleans heads into its bye in Week 8, and Travis Etienne (hamstring) will be eligible to come off injured reserve for Week 9 against the Browns. When both Etienne and Alvin Kamara were healthy and active together earlier this season, Miller was a healthy inactive.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4040761",
+      "name": "Devin Singletary",
+      "position": "RB",
+      "modelMean": 7.468000073809973,
+      "news": [
+        {
+          "playerId": "4040761",
+          "status": "unverified",
+          "publishedAt": "2026-10-28T23:13:32.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4040761",
+          "text": "Singletary is expected to handle a bigger role out of the Giants' backfield after Tyrone Tracy (hamstring) was placed on injured reserve Tuesday, Jordan Raanan of ESPN.com reports. The Giants have their bye in Week 8, but Tracy will be required to miss at least four games with his injury, so it appears Singletary and Cam Skattebo (hamstring) will form the backfield duo with Tracy sidelined and Najee Harris recently released. Singletary scored the game-winning touchdown in overtime last Sunday against the Texans, finishing with 55 total yards and the touchdown on eight touches. If Skattebo is healthy, he figures to operate as the lead back, but Singletary showed enough to warrant 6-to-10 touches with upside for more. He's worth picking up in most fantasy leagues.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4430968",
+      "name": "Kimani Vidal",
+      "position": "RB",
+      "modelMean": 7.39610716819165,
+      "news": [
+        {
+          "playerId": "4430968",
+          "status": "unverified",
+          "publishedAt": "2026-11-03T01:50:32.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4430968",
+          "text": "Vidal rushed eight times for 23 yards and caught both of his targets for seven yards in Sunday's 24-9 loss to the Rams. The Chargers continue to use a fantasy-unfriendly three-man backfield, giving all three of Vidal, Omarion Hampton and Keaton Mitchell meaningful touches and snaps. In a broken Los Angeles offense and crowded group of RBs, Vidal has minimal fantasy appeal outside of deeper formats.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "3915411",
+      "name": "Ty Johnson",
+      "position": "RB",
+      "modelMean": 6.882077065589834,
+      "news": [
+        {
+          "playerId": "3915411",
+          "status": "unverified",
+          "publishedAt": "2026-11-04T02:39:03.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/3915411",
+          "text": "Johnson took four carries for four yards and caught all three of his targets for 19 yards during Sunday's 36-10 win versus the Ravens. In a game that Buffalo ran away with in the second half, Johnson's four carries were a season high, but he couldn't produce much on those rush attempts. Ray Davis actually saw more carries (six) in Week 8 and was more effective as a rusher (30 yards). As long as lead back James Cook is available, Johnson won't have much utility in most fantasy formats.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4038441",
+      "name": "Justice Hill",
+      "position": "RB",
+      "modelMean": 6.869369782522098,
+      "news": [
+        {
+          "playerId": "4038441",
+          "status": "unverified",
+          "publishedAt": "2026-11-04T00:05:38.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4038441",
+          "text": "Hill (groin) was a full participant in Tuesday's practice. After the Ravens estimated him as a limited practice participant Monday on their initial Week 9 injury report, Hill took every rep Tuesday to clear up any concern about his availability heading into Thursday's game against the Jaguars. Hill should serve in his familiar role as the Ravens' top passing-down back in Week 9, with Derrick Henry continuing to lead the way on the ground.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4596334",
+      "name": "Keaton Mitchell",
+      "position": "RB",
+      "modelMean": 6.631366550372748,
+      "news": [
+        {
+          "playerId": "4596334",
+          "status": "unverified",
+          "publishedAt": "2026-11-03T02:39:59.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4596334",
+          "text": "Mitchell rushed four times for six yards and caught all three of his targets for 17 yards in Sunday's 24-9 loss to the Rams. Handpicked by first-year OC Mike McDaniel as a free-agent signing in the offseason, Mitchell has been a total non-factor for much of the first half of the season. With a career 5.7 yards per carry average, Mitchell is averaging just 3.7 yards per rush this season. Involved in a three-way backfield committee with Omarion Hampton and Kimani Vidal, Mitchell is waiver-wire fodder in normal-sized 12-team fantasy leagues.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4362619",
+      "name": "Chris Rodriguez Jr.",
+      "position": "RB",
+      "modelMean": 6.534288782196015,
+      "news": [
+        {
+          "playerId": "4362619",
+          "status": "unverified",
+          "publishedAt": "2026-11-04T20:33:40.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4362619",
+          "text": "Rodriguez (hand) doesn't carry an injury designation for Thursday night's game against the Ravens. Meanwhile, Bhayshul Tuten (ankle/foot) has been deemed questionable for the contest after being listed as a DNP on each of the Jaguars' injury reports, Monday through Wednesday. Given that Tuten has been the team's lead back this season, his playing status (and potential workload, if he's active Thursday) will provide valuable context related to the Week 9 fantasy prospects of Rodriguez, who could assume a larger backfield role versus Baltimore if Tuten ends up out or limited.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4869645",
+      "name": "Caleb Douglas",
+      "position": "WR",
+      "modelMean": 10.040930595860747,
+      "news": [
+        {
+          "playerId": "4869645",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T03:41:00.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4869645",
+          "text": "Douglas caught four of six targets for 43 yards in Sunday's 24-19 loss to the Patriots. In his second game back from a multi-week high-ankle sprain, Douglas led the team with 31 routes on Malik Willis' 36 dropbacks against New England. The rookie wideout's six targets tied Greg Dulcich and Malik Washington for the team lead on a day when Willis targeted nine different pass catchers. Through four games this season, Douglas has 13 grabs for 226 yards and two touchdowns on 19 targets. He's a low-volume, big-play threat on the outside for Miami, but Douglas will be in the mix as a streamer for next Sunday's date with a leaky Lions secondary.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "3121422",
+      "name": "Terry McLaurin",
+      "position": "WR",
+      "modelMean": 9.496082173176806,
+      "news": [
+        {
+          "playerId": "3121422",
+          "status": "unverified",
+          "publishedAt": "2026-10-30T17:12:28.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/3121422",
+          "text": "McLaurin (knee) underwent surgery Friday to repair the torn patellar tendon in his left knee, Nicki Jhabvala of The Athletic reports. The surgery was conducted in New York, and McLaurin has already been ruled out for the remainder of the 2026 season. His availability for the start of the 2027 campaign will also be in question, as the veteran wideout faces a lengthy rehab process. The Commanders will move forward with Stefon Diggs, Antonio Williams, Dyami Brown and Treylon Burks atop the wideout depth chart this season.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "5083754",
+      "name": "Ryan Flournoy",
+      "position": "WR",
+      "modelMean": 9.478848559183298,
+      "news": [
+        {
+          "playerId": "5083754",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T04:24:05.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/5083754",
+          "text": "Flournoy caught three of four targets for 38 yards and a touchdown in Sunday's 33-30 overtime loss to the Cardinals. Flournoy ran 26 routes on Dak Prescott's 38 dropbacks against Arizona, and with Dallas moving more toward three-wide sets and away from multiple tight-end sets while decreasing Jake Ferguson's (ankle) playing time, Flournoy has been a big beneficiary in recent weeks. Over the last four weeks, Flournoy has recorded 238 yards and two touchdowns on 18 grabs across 21 targets. He's achieved WR4 valuation in fantasy and would receive a major boost if CeeDee Lamb or George Pickens ever went down with an injury.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4870795",
+      "name": "Makai Lemon",
+      "position": "WR",
+      "modelMean": 9.218191706131739,
+      "news": [
+        {
+          "playerId": "4870795",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T04:53:42.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4870795",
+          "text": "Lemon caught six of nine targets for 57 yards in Sunday's 27-10 loss to the Commanders. Lemon has stepped up as Philadelphia's de facto No. 1 receiver in the ongoing absences of DeVonta Smith (hamstring) and Dontayvion Wicks (ankle). After setting career highs across the board with seven catches for 67 yards and his first NFL touchdown on eight targets in Week 7 against the Cowboys, Lemon led the Eagles in catches, receiving yards and targets Sunday night. The rookie 20th overall pick is building momentum ahead of a Week 9 home game against the Giants, but his target share would likely drop if Smith gains clearance to return.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "3916433",
+      "name": "Jakobi Meyers",
+      "position": "WR",
+      "modelMean": 9.139748115086448,
+      "news": [
+        {
+          "playerId": "3916433",
+          "status": "unverified",
+          "publishedAt": "2026-11-04T20:32:57.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/3916433",
+          "text": "Meyers (hamstring/ankle) does not carry an injury designation going into Thursday's game at the Ravens. Though Meyers was limited in practice, the Jaguars are not listing him on the injury report going into Thursday's game. The veteran has battled through bumps and bruises throughout the season but has yet to miss a game. He'll be good to go for Week 9 in Charm City.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "5081432",
+      "name": "Antonio Williams",
+      "position": "WR",
+      "modelMean": 8.896796987308798,
+      "news": [
+        {
+          "playerId": "5081432",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T05:04:39.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/5081432",
+          "text": "Williams caught five of seven targets for 54 yards during Sunday night's 27-10 win over the Eagles. Williams led the team in catches and targets while finishing second behind fellow wide receiver Treylon Burks (81) in receiving yards. With Terry McLaurin (knee) done for the year, Williams will have an opportunity to keep carving out a larger role for himself each week with Washington. On the year, the rookie wide receiver has now reeled in 23 of 33 targets for 259 yards and one touchdown over seven regular-season contests.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4683062",
+      "name": "Xavier Worthy",
+      "position": "WR",
+      "modelMean": 8.55944683586689,
+      "news": [
+        {
+          "playerId": "4683062",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T02:33:40.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4683062",
+          "text": "Worthy caught three of six targets for 13 yards during Sunday's 28-24 loss to the Broncos. Worthy put together another disappointing performance, reeling in three passes while failing to exceed 15 receiving yards for the second straight game. The wide receiver operated in a more prominent role for a couple weeks with Rashee Rice sidelined with a hamstring injury, but Rice returned to action Sunday and caught seven of eight targets for 53 yards. Worthy will continue to be an unappealing fantasy option ahead of the team's Week 9 matchup with the Jets.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4362921",
+      "name": "Tyquan Thornton",
+      "position": "WR",
+      "modelMean": 8.184832430041443,
+      "news": [
+        {
+          "playerId": "4362921",
+          "status": "unverified",
+          "publishedAt": "2026-10-13T18:29:06.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4362921",
+          "text": "The Chiefs placed Thornton (ankle) on injured reserve Tuesday. The transaction frees up a spot on the 53-man roster for linebacker Cam Jones, who was signed off the practice squad. After dislocating his left ankle in the Chiefs' Oct. 4 win over the Raiders and requiring surgery, Thornton is facing an estimated recovery timeline of 3-to-4 months, which means that he'll likely be sidelined until at least Week 17 or 18 in a best-case scenario. While Thornton is out, the Chiefs are expected to lean on Jalen Royals and Cyrus Allen to handle more reps in three-receiver sets alongside starters Rashee Rice (hamstring) and Xavier Worthy.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4361432",
+      "name": "Romeo Doubs",
+      "position": "WR",
+      "modelMean": 8.167095712356154,
+      "news": [
+        {
+          "playerId": "4361432",
+          "status": "unverified",
+          "publishedAt": "2026-10-19T23:53:01.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4361432",
+          "text": "Doubs (shoulder) is hopeful to return after the Patriots' Week 11 bye and isn't expected to face a long-term absence, Jeremy Fowler of ESPN.com reports. With Doubs already on injured reserve, this report offers a more encouraging timeline after Sunday's shoulder injury. He'll still need to miss at least four games, but a possible return after the bye would keep the Patriots from being without one of their key wide receivers for an extended stretch. Efton Chism and Kyle Williams will be in line for increased snaps alongside A.J. Brown and slot man DeMario Douglas with Doubs sidelined.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4586312",
+      "name": "Jaylin Noel",
+      "position": "WR",
+      "modelMean": 8.110286004724493,
+      "news": [
+        {
+          "playerId": "4586312",
+          "status": "unverified",
+          "publishedAt": "2026-10-28T22:30:42.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4586312",
+          "text": "Noel, who was placed on injured reserve earlier Wednesday, is expected to require surgery to address his toe injury and will miss the remainder of the season, Jonathan M. Alexander of the Houston Chronicle reports. Noel was forced out of this past Sunday's 27-21 overtime loss to the Giants after going down with the toe injury with just under nine minutes remaining in the fourth quarter. The loss of Noel is a major blow to the Texans, as he had been serving as the team's top return man in addition to emerging as a big-play threat on offense. Through Houston's first seven games, Noel had recorded 19 receptions for a team-leading 331 yards and two touchdowns and added 26 yards on four carries.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4682648",
+      "name": "Malachi Fields",
+      "position": "WR",
+      "modelMean": 8.043341889572243,
+      "news": [
+        {
+          "playerId": "4682648",
+          "status": "unverified",
+          "publishedAt": "2026-10-26T00:00:16.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4682648",
+          "text": "Fields caught four of five targets for 83 yards in Sunday's 27-21 overtime win over Houston. In J.J. McCarthy's first start of the season, Fields had his best performance as a pro, capping his day with a 47-yard catch-and-run in the first quarter. The rookie wideout set a new career high in both receiving yards and catches after hauling in exactly two passes in each of his first six games for the Giants. Fields will head into the Giants' bye with a 16-248-1 line on 30 targets before facing the Eagles in Week 9.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4428850",
+      "name": "Dontayvion Wicks",
+      "position": "WR",
+      "modelMean": 7.8826718260386475,
+      "news": [
+        {
+          "playerId": "4428850",
+          "status": "unverified",
+          "publishedAt": "2026-11-04T23:29:12.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4428850",
+          "text": "Wicks (ankle) was a non-participant at Wednesday's practice. Wicks hasn't practiced due to an ankle injury since preparation for a Week 6 matchup with the Panthers, missing the last two games in the process. He likely will need to mix into drills in some capacity Thursday and/or Friday to put himself in a position to return to action Sunday versus the Giants.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4429025",
+      "name": "Quentin Johnston",
+      "position": "WR",
+      "modelMean": 7.683926038117074,
+      "news": [
+        {
+          "playerId": "4429025",
+          "status": "unverified",
+          "publishedAt": "2026-11-02T05:19:26.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4429025",
+          "text": "Johnston caught all four of his targets for 37 yards in Sunday's 24-9 loss to the Rams. Johnston's four grabs marked a new personal single-game high through six games this season. One of the least efficient wideouts in the league, Johnston entered Sunday with just eight grabs for 165 yards on 22 targets. He hasn't been playable in fantasy football for weeks and will square off with a stingy Houston secondary in Week 9.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "4567156",
+      "name": "Treylon Burks",
+      "position": "WR",
+      "modelMean": 7.676166900744305,
+      "news": [
+        {
+          "playerId": "4567156",
+          "status": "unverified",
+          "publishedAt": "2026-11-05T00:39:15.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/4567156",
+          "text": "Burks (foot) did not practice Wednesday, Ben Standig of The Team 980 Washington D.C. reports. After back-to-back DNPs last Wednesday and Thursday, Burks got in a limited session Friday before being cleared to play Sunday night against Philly. He ended up recording three grabs for 81 yards as the Commanders' leading receiver in the contest. Burks should play plenty of snaps the rest of the season with Terry McLaurin (knee) done for the year.",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "3045523",
+      "name": "Kendrick Bourne",
+      "position": "WR",
+      "modelMean": 7.595793868040324,
+      "news": [
+        {
+          "playerId": "3045523",
+          "status": "unverified",
+          "publishedAt": "2026-11-03T21:12:49.000Z",
+          "retrievedAt": "2026-11-05T16:09:44.723Z",
+          "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/3045523",
+          "text": "Arizona placed Bourne (tibia) on injured reserve Tuesday, Darren Urban of the Cardinals' official site reports. Though Bourne is expected to avoid surgery after fracturing his right tibia during Sunday's 33-30 overtime win over the Cowboys, he's facing an expected recovery timeline of three months that effectively ends his season. With Bourne heading to IR, the Cardinals signed Harrison Wallace off their practice squad to replenish their depth at receiver. The 31-year-old Bourne will finish the 2026 campaign with 26 receptions for 263 yards and no touchdowns on 38 targets over eight appearances.",
+          "kind": "news"
+        }
+      ]
+    }
+  ]
+}

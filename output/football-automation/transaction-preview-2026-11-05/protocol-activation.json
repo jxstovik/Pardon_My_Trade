@@ -1,0 +1,35 @@
+{
+  "status": "enabled",
+  "leagueId": "98806880",
+  "teamId": "7",
+  "season": 2026,
+  "confirmedAcquisitions": [
+    {
+      "actionId": "act-1793888263139-6yktre",
+      "add": "Saints D/ST",
+      "drop": "Commanders D/ST",
+      "verified": true
+    },
+    {
+      "actionId": "act-1793888969761-9h2y6v",
+      "add": "Drew Stevens",
+      "drop": "Harrison Butker",
+      "verified": true
+    }
+  ],
+  "weeklyCapacity": {
+    "used": 2,
+    "remaining": 3,
+    "limit": 5
+  },
+  "modelVersion": "weekly-2026-W9-72a0f5e5d8e9-368dedd8bda2-d1284c4271e7",
+  "modelStatus": "candidate_not_promoted",
+  "healthyScenarioPlayers": 469,
+  "completedOutcomeGames": 121,
+  "activeAutomationId": "pmt-football-lineup-and-free-agent-checks",
+  "validation": {
+    "targetedProtocolTests": "passed",
+    "pythonTests": "8 passed",
+    "fullSuite": "445 passed, 1 pre-existing kickoff scheduler expectation mismatch (expected Luna, implementation Sol)"
+  }
+}

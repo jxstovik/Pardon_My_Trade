@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "browser-transcription",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "home": {
+    "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+    "observedAt": "2026-10-27T08:08:48.716Z",
+    "draftHeld": false,
+    "displayedDraftStart": "Wed Oct 28, 9:00 PM EDT",
+    "draftStart": "2026-10-28T21:00:00-04:00"
+  },
+  "ownRoster": {
+    "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=wwc1n3o4mvn1c6hk",
+    "observedAt": "2026-10-27T08:08:11.034Z",
+    "period": 1,
+    "active": 0,
+    "reserve": 0
+  },
+  "rules": {
+    "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/rules",
+    "observationWindowStart": "2026-10-27T07:57:19Z",
+    "observationWindowEnd": "2026-10-27T08:00:08.452079+00:00",
+    "sourceTimestampPolicy": "Conservative window start, not exact read time",
+    "changedKnownRules": [],
+    "snakeSlot": 6,
+    "rounds": 14,
+    "pickSeconds": 60,
+    "immediateAbsentAutopick": true
+  },
+  "apiSourcesRefreshed": false
+}

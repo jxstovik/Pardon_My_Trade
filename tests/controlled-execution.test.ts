@@ -75,29 +75,17 @@ function makeWriter(overrides: Partial<PlatformWriter> = {}): PlatformWriter & {
 
 test("ESPN writer submits the explicit FAAB waiver contract", async () => {
   const writer = new EspnPlatformWriter({
-    credentials: { leagueId: "lg1", season: "2026" },
-    fetchImpl: (async () => new Response(JSON.stringify({ ok: true }), { status: 200 })) as typeof fetch
+    credentials: { leagueId: "999", season: "2026", swid: "{fixture-member}", espnS2: "fixture-cookie" },
+    fetchImpl: (async (_input, init) => new Response(JSON.stringify(init?.method === "GET"
+      ? { id: 999, seasonId: 2026, scoringPeriodId: 5, teams: [{ id: 1, owners: ["fixture-member"] }] }
+      : { ok: true }), { status: 200 })) as typeof fetch
   });
-
-  await writer.submitWaiverClaim("lg1", {
-    type: "waiver_claim",
-    teamId: "1",
-    addPlayerId: "301",
-    dropPlayerId: "103",
-    faabBid: 17
-  });
-
-  const request = writer.client.recordedRequests[0];
-  assert.equal(request?.method, "POST");
-  assert.ok(request?.url.includes("/transactions/"));
+  await writer.submitWaiverClaim("999", { type: "waiver_claim", teamId: "1", addPlayerId: "301", dropPlayerId: "103", faabBid: 17 });
+  const request = writer.client.recordedRequests.find((request) => request.method === "POST");
+  assert.ok(request?.url.includes("/segments/0/leagues/999/transactions/"));
   assert.deepEqual(request?.body, {
-    type: "WAIVER",
-    memberId: 1,
-    bidAmount: 17,
-    transactItems: [
-      { type: "ADD", playerId: 301, fromTeamId: 0, toTeamId: 1 },
-      { type: "DROP", playerId: 103, fromTeamId: 1, toTeamId: 0 }
-    ]
+    isLeagueManager: false, teamId: 1, type: "WAIVER", memberId: "{fixture-member}", scoringPeriodId: 5, executionType: "EXECUTE", bidAmount: 17,
+    items: [{ type: "ADD", playerId: 301, toTeamId: 1 }, { type: "DROP", playerId: 103, fromTeamId: 1 }]
   });
 });
 
@@ -232,4 +220,16 @@ test("JSON execution store preserves receipts and audit across instances", async
   } finally {
     await rm(path, { force: true });
   }
+});
+
+test("waiver execution blocks a player who cleared waivers after approval", async () => {
+  const queue = new ActionQueue(new InMemoryActionQueueStore());
+  const reader = Object.assign(makeReader(new Map([["1", makeRoster("1", "p-1")]]), ["fa-1"]), { getAcquisitionStatus: async () => "FREEAGENT" });
+  const writer = makeWriter();
+  const pending = await queue.enqueue({type:"waiver_claim",teamId:"1",addPlayerId:"fa-1",dropPlayerId:"p-1",priority:1},"high","test",{preconditions:{leagueExternalId:"lg1"}});
+  await queue.approve(pending.actionId, "human");
+  const executor = new ActionExecutor({queue,reader,writer,store:new InMemoryActionExecutionStore(),leagueExternalId:"lg1"});
+  const result = await executor.execute(pending.actionId);
+  assert.equal(result.status,"blocked"); assert.equal(result.reason,"acquisition_status_changed");
+  assert.deepEqual(writer.calls,[]);
 });

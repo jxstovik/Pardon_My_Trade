@@ -1,0 +1,3514 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-10-27T17:58:40.142Z",
+  "kind": "actual-browser-performance-events-local-mock",
+  "records": [
+    {
+      "kind": "browser-click",
+      "actionId": "0ef93a7c-a969-465b-8dac-7b15d81882b5",
+      "clientTimeMs": 12648.699999988079,
+      "revision": "g8-e76d32210d192d71a185259f82dff5f5e5d4068a1b983eaac8610227469bfc33:14",
+      "receivedAt": "2026-10-27T17:47:03.254Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0ef93a7c-a969-465b-8dac-7b15d81882b5",
+      "clientTimeMs": 12885.600000023842,
+      "revision": "g1-341ed51e6a8b1d3be747bc4001aef60f682909d2eb52500509e6d65186e75a71:15",
+      "receivedAt": "2026-10-27T17:47:03.487Z",
+      "elapsedMs": 236.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0ef93a7c-a969-465b-8dac-7b15d81882b5",
+      "clientTimeMs": 12896,
+      "revision": "g1-341ed51e6a8b1d3be747bc4001aef60f682909d2eb52500509e6d65186e75a71:15",
+      "receivedAt": "2026-10-27T17:47:03.497Z",
+      "elapsedMs": 247.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "2fff4de6-12e4-413e-9da3-e5d713a4f95f",
+      "clientTimeMs": 13119.899999976158,
+      "revision": "g1-341ed51e6a8b1d3be747bc4001aef60f682909d2eb52500509e6d65186e75a71:15",
+      "receivedAt": "2026-10-27T17:47:03.722Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "2fff4de6-12e4-413e-9da3-e5d713a4f95f",
+      "clientTimeMs": 13332.800000011921,
+      "revision": "g2-b3f078de2ad0afc5cc121cf18875887bc34fdc2e0f9b0b2726a7c60e591a8f45:16",
+      "receivedAt": "2026-10-27T17:47:03.934Z",
+      "elapsedMs": 212.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "2fff4de6-12e4-413e-9da3-e5d713a4f95f",
+      "clientTimeMs": 13342,
+      "revision": "g2-b3f078de2ad0afc5cc121cf18875887bc34fdc2e0f9b0b2726a7c60e591a8f45:16",
+      "receivedAt": "2026-10-27T17:47:03.943Z",
+      "elapsedMs": 222.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "fce55852-931d-4866-808d-ebb5c490c4c3",
+      "clientTimeMs": 13523.600000023842,
+      "revision": "g2-b3f078de2ad0afc5cc121cf18875887bc34fdc2e0f9b0b2726a7c60e591a8f45:16",
+      "receivedAt": "2026-10-27T17:47:04.125Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "fce55852-931d-4866-808d-ebb5c490c4c3",
+      "clientTimeMs": 13794.600000023842,
+      "revision": "g7-06e3819f55f42548e9090af69b00f87e1ec343f3cc01baf59c901aad26597a67:17",
+      "receivedAt": "2026-10-27T17:47:04.397Z",
+      "elapsedMs": 271
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "fce55852-931d-4866-808d-ebb5c490c4c3",
+      "clientTimeMs": 13805.100000023842,
+      "revision": "g7-06e3819f55f42548e9090af69b00f87e1ec343f3cc01baf59c901aad26597a67:17",
+      "receivedAt": "2026-10-27T17:47:04.406Z",
+      "elapsedMs": 281.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "e419ece2-2885-47ff-be1c-f8ee3e0e6fc4",
+      "clientTimeMs": 13995.600000023842,
+      "revision": "g7-06e3819f55f42548e9090af69b00f87e1ec343f3cc01baf59c901aad26597a67:17",
+      "receivedAt": "2026-10-27T17:47:04.597Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "e419ece2-2885-47ff-be1c-f8ee3e0e6fc4",
+      "clientTimeMs": 14015.600000023842,
+      "revision": "g7-06e3819f55f42548e9090af69b00f87e1ec343f3cc01baf59c901aad26597a67:18",
+      "receivedAt": "2026-10-27T17:47:04.617Z",
+      "elapsedMs": 20
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "e419ece2-2885-47ff-be1c-f8ee3e0e6fc4",
+      "clientTimeMs": 14054.199999988079,
+      "revision": "g7-06e3819f55f42548e9090af69b00f87e1ec343f3cc01baf59c901aad26597a67:18",
+      "receivedAt": "2026-10-27T17:47:04.655Z",
+      "elapsedMs": 58.59999996423721
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0aea89a3-49f3-4859-bbba-e303ce84888d",
+      "clientTimeMs": 14341.699999988079,
+      "revision": "g7-06e3819f55f42548e9090af69b00f87e1ec343f3cc01baf59c901aad26597a67:18",
+      "receivedAt": "2026-10-27T17:47:04.943Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0aea89a3-49f3-4859-bbba-e303ce84888d",
+      "clientTimeMs": 14559.300000011921,
+      "revision": "g8-3ef515da334bb70eaa0c5c9d05246d385a843686e4a5932c3ca205567571f2a5:19",
+      "receivedAt": "2026-10-27T17:47:05.161Z",
+      "elapsedMs": 217.60000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0aea89a3-49f3-4859-bbba-e303ce84888d",
+      "clientTimeMs": 14601.600000023842,
+      "revision": "g8-3ef515da334bb70eaa0c5c9d05246d385a843686e4a5932c3ca205567571f2a5:19",
+      "receivedAt": "2026-10-27T17:47:05.203Z",
+      "elapsedMs": 259.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "919a790a-cf53-461e-815a-d23ff5cfb455",
+      "clientTimeMs": 14724.899999976158,
+      "revision": "g8-3ef515da334bb70eaa0c5c9d05246d385a843686e4a5932c3ca205567571f2a5:19",
+      "receivedAt": "2026-10-27T17:47:05.326Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "919a790a-cf53-461e-815a-d23ff5cfb455",
+      "clientTimeMs": 14983.300000011921,
+      "revision": "g12-7dc16f76aa866754521e529fafeb28e72b5e31f5a74172af4d5613deb9343f10:20",
+      "receivedAt": "2026-10-27T17:47:05.585Z",
+      "elapsedMs": 258.4000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "919a790a-cf53-461e-815a-d23ff5cfb455",
+      "clientTimeMs": 15001.699999988079,
+      "revision": "g12-7dc16f76aa866754521e529fafeb28e72b5e31f5a74172af4d5613deb9343f10:20",
+      "receivedAt": "2026-10-27T17:47:05.603Z",
+      "elapsedMs": 276.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "879b7c85-33c4-4370-8bf5-eccb9d9f1fda",
+      "clientTimeMs": 15186.600000023842,
+      "revision": "g12-7dc16f76aa866754521e529fafeb28e72b5e31f5a74172af4d5613deb9343f10:20",
+      "receivedAt": "2026-10-27T17:47:05.880Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "879b7c85-33c4-4370-8bf5-eccb9d9f1fda",
+      "clientTimeMs": 15308.5,
+      "revision": "g12-7dc16f76aa866754521e529fafeb28e72b5e31f5a74172af4d5613deb9343f10:21",
+      "receivedAt": "2026-10-27T17:47:05.913Z",
+      "elapsedMs": 121.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0f31c03d-fce4-4d21-bbfe-87d5f017ed1d",
+      "clientTimeMs": 15534.100000023842,
+      "revision": "g12-7dc16f76aa866754521e529fafeb28e72b5e31f5a74172af4d5613deb9343f10:22",
+      "receivedAt": "2026-10-27T17:47:06.136Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0f31c03d-fce4-4d21-bbfe-87d5f017ed1d",
+      "clientTimeMs": 15731.5,
+      "revision": "g13-bb4c5580bb7aef2f59eb084dee1c6ac2322f32d43e59696e39c834f2397e32a3:23",
+      "receivedAt": "2026-10-27T17:47:06.332Z",
+      "elapsedMs": 197.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0f31c03d-fce4-4d21-bbfe-87d5f017ed1d",
+      "clientTimeMs": 15739.600000023842,
+      "revision": "g13-bb4c5580bb7aef2f59eb084dee1c6ac2322f32d43e59696e39c834f2397e32a3:23",
+      "receivedAt": "2026-10-27T17:47:06.340Z",
+      "elapsedMs": 205.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "f2055495-e0b3-4a89-a505-445b146912ad",
+      "clientTimeMs": 15888.899999976158,
+      "revision": "g13-bb4c5580bb7aef2f59eb084dee1c6ac2322f32d43e59696e39c834f2397e32a3:23",
+      "receivedAt": "2026-10-27T17:47:06.490Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "f2055495-e0b3-4a89-a505-445b146912ad",
+      "clientTimeMs": 16174.699999988079,
+      "revision": "g21-7d388fbecada31bfaa20c811d5d0ab13959efcfb8b66af75c844c93b42bcd395:24",
+      "receivedAt": "2026-10-27T17:47:06.776Z",
+      "elapsedMs": 285.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "f2055495-e0b3-4a89-a505-445b146912ad",
+      "clientTimeMs": 16186.800000011921,
+      "revision": "g21-7d388fbecada31bfaa20c811d5d0ab13959efcfb8b66af75c844c93b42bcd395:24",
+      "receivedAt": "2026-10-27T17:47:06.788Z",
+      "elapsedMs": 297.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "17f52611-61cf-4475-8bd6-5d7741e248b1",
+      "clientTimeMs": 50963.89999997616,
+      "revision": "g21-7d388fbecada31bfaa20c811d5d0ab13959efcfb8b66af75c844c93b42bcd395:47",
+      "receivedAt": "2026-10-27T17:47:41.565Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "17f52611-61cf-4475-8bd6-5d7741e248b1",
+      "clientTimeMs": 51151.80000001192,
+      "revision": "g1-996b4291da744a2c0bf268468b81bef30f3c5c6f4cb77b695b9dfe620907355a:48",
+      "receivedAt": "2026-10-27T17:47:41.753Z",
+      "elapsedMs": 187.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "17f52611-61cf-4475-8bd6-5d7741e248b1",
+      "clientTimeMs": 51174.30000001192,
+      "revision": "g1-996b4291da744a2c0bf268468b81bef30f3c5c6f4cb77b695b9dfe620907355a:48",
+      "receivedAt": "2026-10-27T17:47:41.775Z",
+      "elapsedMs": 210.4000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "5fd5c48b-1033-4161-a75c-1a70b9e7cf25",
+      "clientTimeMs": 51327.5,
+      "revision": "g1-996b4291da744a2c0bf268468b81bef30f3c5c6f4cb77b695b9dfe620907355a:48",
+      "receivedAt": "2026-10-27T17:47:41.929Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "5fd5c48b-1033-4161-a75c-1a70b9e7cf25",
+      "clientTimeMs": 51519.10000002384,
+      "revision": "g2-e1f02696ee08b10db8577183bf7a28865d5b522984b573155c84a104ecb50d27:49",
+      "receivedAt": "2026-10-27T17:47:42.120Z",
+      "elapsedMs": 191.60000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "5fd5c48b-1033-4161-a75c-1a70b9e7cf25",
+      "clientTimeMs": 51540.39999997616,
+      "revision": "g2-e1f02696ee08b10db8577183bf7a28865d5b522984b573155c84a104ecb50d27:49",
+      "receivedAt": "2026-10-27T17:47:42.141Z",
+      "elapsedMs": 212.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "e116015d-7ce8-4118-a075-cd3dcac13703",
+      "clientTimeMs": 51690.80000001192,
+      "revision": "g2-e1f02696ee08b10db8577183bf7a28865d5b522984b573155c84a104ecb50d27:49",
+      "receivedAt": "2026-10-27T17:47:42.293Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "e116015d-7ce8-4118-a075-cd3dcac13703",
+      "clientTimeMs": 51933.39999997616,
+      "revision": "g7-77549e70be642a239df08c8b4af3855b02cc256fc7bfa5511629c3d882629dfd:50",
+      "receivedAt": "2026-10-27T17:47:42.535Z",
+      "elapsedMs": 242.5999999642372
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "e116015d-7ce8-4118-a075-cd3dcac13703",
+      "clientTimeMs": 51943.30000001192,
+      "revision": "g7-77549e70be642a239df08c8b4af3855b02cc256fc7bfa5511629c3d882629dfd:50",
+      "receivedAt": "2026-10-27T17:47:42.544Z",
+      "elapsedMs": 252.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "10017e8f-e665-40bd-befc-dfaaaa5854b4",
+      "clientTimeMs": 52210.5,
+      "revision": "g7-77549e70be642a239df08c8b4af3855b02cc256fc7bfa5511629c3d882629dfd:50",
+      "receivedAt": "2026-10-27T17:47:42.812Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "10017e8f-e665-40bd-befc-dfaaaa5854b4",
+      "clientTimeMs": 52237.19999998808,
+      "revision": "g7-77549e70be642a239df08c8b4af3855b02cc256fc7bfa5511629c3d882629dfd:51",
+      "receivedAt": "2026-10-27T17:47:42.839Z",
+      "elapsedMs": 26.69999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "10017e8f-e665-40bd-befc-dfaaaa5854b4",
+      "clientTimeMs": 52267,
+      "revision": "g7-77549e70be642a239df08c8b4af3855b02cc256fc7bfa5511629c3d882629dfd:51",
+      "receivedAt": "2026-10-27T17:47:42.868Z",
+      "elapsedMs": 56.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "db3b946e-3915-4d14-863e-951e209034f2",
+      "clientTimeMs": 52601.30000001192,
+      "revision": "g7-77549e70be642a239df08c8b4af3855b02cc256fc7bfa5511629c3d882629dfd:51",
+      "receivedAt": "2026-10-27T17:47:43.485Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "db3b946e-3915-4d14-863e-951e209034f2",
+      "clientTimeMs": 52900.60000002384,
+      "revision": "g7-77549e70be642a239df08c8b4af3855b02cc256fc7bfa5511629c3d882629dfd:52",
+      "receivedAt": "2026-10-27T17:47:43.502Z",
+      "elapsedMs": 299.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a8e04549-4b59-45b1-933e-1b4f224c1ade",
+      "clientTimeMs": 53500.69999998808,
+      "revision": "g8-abb9df96dcf7f66bb35e042d4727ed84aeb520003d972feaa15213991a8607e4:53",
+      "receivedAt": "2026-10-27T17:47:44.102Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a8e04549-4b59-45b1-933e-1b4f224c1ade",
+      "clientTimeMs": 53940.89999997616,
+      "revision": "g12-b2a24a1d02262ede861df6f2550a5c197c0bcd9e7e27f63fd3f458b174153717:54",
+      "receivedAt": "2026-10-27T17:47:44.543Z",
+      "elapsedMs": 440.19999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a8e04549-4b59-45b1-933e-1b4f224c1ade",
+      "clientTimeMs": 53959,
+      "revision": "g12-b2a24a1d02262ede861df6f2550a5c197c0bcd9e7e27f63fd3f458b174153717:54",
+      "receivedAt": "2026-10-27T17:47:44.561Z",
+      "elapsedMs": 458.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a7223cb1-269f-45cc-a6b8-cf9bf09b743c",
+      "clientTimeMs": 54334.39999997616,
+      "revision": "g12-b2a24a1d02262ede861df6f2550a5c197c0bcd9e7e27f63fd3f458b174153717:54",
+      "receivedAt": "2026-10-27T17:47:45.101Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a7223cb1-269f-45cc-a6b8-cf9bf09b743c",
+      "clientTimeMs": 54542.89999997616,
+      "revision": "g12-b2a24a1d02262ede861df6f2550a5c197c0bcd9e7e27f63fd3f458b174153717:55",
+      "receivedAt": "2026-10-27T17:47:45.157Z",
+      "elapsedMs": 208.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "fa2695b9-e879-4be2-863f-eff7bbba2e05",
+      "clientTimeMs": 54865,
+      "revision": "g12-b2a24a1d02262ede861df6f2550a5c197c0bcd9e7e27f63fd3f458b174153717:56",
+      "receivedAt": "2026-10-27T17:47:45.467Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "fa2695b9-e879-4be2-863f-eff7bbba2e05",
+      "clientTimeMs": 55215.10000002384,
+      "revision": "g13-39eb587008f572037c71d98da17e41d187b6a2fa03058d8b212353bdf5416da8:57",
+      "receivedAt": "2026-10-27T17:47:45.818Z",
+      "elapsedMs": 350.10000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "fa2695b9-e879-4be2-863f-eff7bbba2e05",
+      "clientTimeMs": 55240.60000002384,
+      "revision": "g13-39eb587008f572037c71d98da17e41d187b6a2fa03058d8b212353bdf5416da8:57",
+      "receivedAt": "2026-10-27T17:47:45.842Z",
+      "elapsedMs": 375.60000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "2cf088ad-b6a3-4945-9ce7-9f75aae0c6b8",
+      "clientTimeMs": 55545.10000002384,
+      "revision": "g13-39eb587008f572037c71d98da17e41d187b6a2fa03058d8b212353bdf5416da8:57",
+      "receivedAt": "2026-10-27T17:47:46.147Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "2cf088ad-b6a3-4945-9ce7-9f75aae0c6b8",
+      "clientTimeMs": 55943.19999998808,
+      "revision": "g21-6d547cb6dac2f1b84ecff5757e3afa312058d8d9620ffa6ff68a5c8c5a04968e:58",
+      "receivedAt": "2026-10-27T17:47:46.544Z",
+      "elapsedMs": 398.0999999642372
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "2cf088ad-b6a3-4945-9ce7-9f75aae0c6b8",
+      "clientTimeMs": 55957.69999998808,
+      "revision": "g21-6d547cb6dac2f1b84ecff5757e3afa312058d8d9620ffa6ff68a5c8c5a04968e:58",
+      "receivedAt": "2026-10-27T17:47:46.559Z",
+      "elapsedMs": 412.5999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "5d1414a5-a1c7-4a67-b25b-2d7927695dd8",
+      "clientTimeMs": 56243.80000001192,
+      "revision": "g21-6d547cb6dac2f1b84ecff5757e3afa312058d8d9620ffa6ff68a5c8c5a04968e:58",
+      "receivedAt": "2026-10-27T17:47:46.845Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "5d1414a5-a1c7-4a67-b25b-2d7927695dd8",
+      "clientTimeMs": 56531.69999998808,
+      "revision": "g23-a3ef342e881860b1e6a3de325c298c8fe07ec9612233741cff3a991ce4faf113:59",
+      "receivedAt": "2026-10-27T17:47:47.133Z",
+      "elapsedMs": 287.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "5d1414a5-a1c7-4a67-b25b-2d7927695dd8",
+      "clientTimeMs": 56544.19999998808,
+      "revision": "g23-a3ef342e881860b1e6a3de325c298c8fe07ec9612233741cff3a991ce4faf113:59",
+      "receivedAt": "2026-10-27T17:47:47.145Z",
+      "elapsedMs": 300.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "7f015fa5-517c-4b1f-a871-278305243e43",
+      "clientTimeMs": 56858,
+      "revision": "g23-a3ef342e881860b1e6a3de325c298c8fe07ec9612233741cff3a991ce4faf113:59",
+      "receivedAt": "2026-10-27T17:47:47.459Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "7f015fa5-517c-4b1f-a871-278305243e43",
+      "clientTimeMs": 56896.30000001192,
+      "revision": "g23-a3ef342e881860b1e6a3de325c298c8fe07ec9612233741cff3a991ce4faf113:60",
+      "receivedAt": "2026-10-27T17:47:47.498Z",
+      "elapsedMs": 38.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "7f015fa5-517c-4b1f-a871-278305243e43",
+      "clientTimeMs": 56932,
+      "revision": "g23-a3ef342e881860b1e6a3de325c298c8fe07ec9612233741cff3a991ce4faf113:60",
+      "receivedAt": "2026-10-27T17:47:47.534Z",
+      "elapsedMs": 74
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "157e8719-9b1a-49ab-b1c6-f2ad05104e18",
+      "clientTimeMs": 57295.10000002384,
+      "revision": "g23-a3ef342e881860b1e6a3de325c298c8fe07ec9612233741cff3a991ce4faf113:60",
+      "receivedAt": "2026-10-27T17:47:47.991Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "157e8719-9b1a-49ab-b1c6-f2ad05104e18",
+      "clientTimeMs": 57412.39999997616,
+      "revision": "g23-a3ef342e881860b1e6a3de325c298c8fe07ec9612233741cff3a991ce4faf113:61",
+      "receivedAt": "2026-10-27T17:47:48.019Z",
+      "elapsedMs": 117.29999995231628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b12bd6b8-23d8-47ba-8ced-64df574719ba",
+      "clientTimeMs": 58111.60000002384,
+      "revision": "g24-c19e60efcda8b7b740e729a52dbcc6e529aeda2b3cee9275d11624e5d55c9a3b:62",
+      "receivedAt": "2026-10-27T17:47:48.713Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "b12bd6b8-23d8-47ba-8ced-64df574719ba",
+      "clientTimeMs": 58536,
+      "revision": "g28-0d048f92ee282e4c267456b8dd3aefc0905e335e48919fb405e488996dd9b0ca:63",
+      "receivedAt": "2026-10-27T17:47:49.137Z",
+      "elapsedMs": 424.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b12bd6b8-23d8-47ba-8ced-64df574719ba",
+      "clientTimeMs": 58550.80000001192,
+      "revision": "g28-0d048f92ee282e4c267456b8dd3aefc0905e335e48919fb405e488996dd9b0ca:63",
+      "receivedAt": "2026-10-27T17:47:49.152Z",
+      "elapsedMs": 439.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "59468569-8c64-4bd1-92fe-13d9c28834fc",
+      "clientTimeMs": 58917,
+      "revision": "g28-0d048f92ee282e4c267456b8dd3aefc0905e335e48919fb405e488996dd9b0ca:63",
+      "receivedAt": "2026-10-27T17:47:49.567Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "59468569-8c64-4bd1-92fe-13d9c28834fc",
+      "clientTimeMs": 58989.30000001192,
+      "revision": "g28-0d048f92ee282e4c267456b8dd3aefc0905e335e48919fb405e488996dd9b0ca:64",
+      "receivedAt": "2026-10-27T17:47:49.591Z",
+      "elapsedMs": 72.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0b75e954-8b3b-4f9a-9e52-07303b0de7f1",
+      "clientTimeMs": 59323.60000002384,
+      "revision": "g28-0d048f92ee282e4c267456b8dd3aefc0905e335e48919fb405e488996dd9b0ca:65",
+      "receivedAt": "2026-10-27T17:47:49.925Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0b75e954-8b3b-4f9a-9e52-07303b0de7f1",
+      "clientTimeMs": 59651.60000002384,
+      "revision": "g29-bf7770ce490670791b4011190411ca7c0b9286c978d5bbab3d29c3c7d36740ce:66",
+      "receivedAt": "2026-10-27T17:47:50.253Z",
+      "elapsedMs": 328
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0b75e954-8b3b-4f9a-9e52-07303b0de7f1",
+      "clientTimeMs": 59668.30000001192,
+      "revision": "g29-bf7770ce490670791b4011190411ca7c0b9286c978d5bbab3d29c3c7d36740ce:66",
+      "receivedAt": "2026-10-27T17:47:50.270Z",
+      "elapsedMs": 344.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "49b1fedb-3acf-4df2-9f34-cd498ce7af88",
+      "clientTimeMs": 64638.60000002384,
+      "revision": "g29-bf7770ce490670791b4011190411ca7c0b9286c978d5bbab3d29c3c7d36740ce:69",
+      "receivedAt": "2026-10-27T17:47:55.430Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "49b1fedb-3acf-4df2-9f34-cd498ce7af88",
+      "clientTimeMs": 64863.39999997616,
+      "revision": "g29-bf7770ce490670791b4011190411ca7c0b9286c978d5bbab3d29c3c7d36740ce:70",
+      "receivedAt": "2026-10-27T17:47:55.470Z",
+      "elapsedMs": 224.79999995231628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a98a240c-8e28-4956-af27-7a837abfbb53",
+      "clientTimeMs": 65440.89999997616,
+      "revision": "g37-6644059ebae75db698f798aea207701898fa67af950d26b38bc2c84ed6c48ab5:71",
+      "receivedAt": "2026-10-27T17:47:56.042Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a98a240c-8e28-4956-af27-7a837abfbb53",
+      "clientTimeMs": 65697.89999997616,
+      "revision": "g39-129916ba5dc16e166d5c3d0228ae7c9062ef845bfa97f4f957c43a377d51c3a4:72",
+      "receivedAt": "2026-10-27T17:47:56.299Z",
+      "elapsedMs": 257
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a98a240c-8e28-4956-af27-7a837abfbb53",
+      "clientTimeMs": 65709.19999998808,
+      "revision": "g39-129916ba5dc16e166d5c3d0228ae7c9062ef845bfa97f4f957c43a377d51c3a4:72",
+      "receivedAt": "2026-10-27T17:47:56.310Z",
+      "elapsedMs": 268.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c772842c-0a24-4a33-b77f-73bb8884e71b",
+      "clientTimeMs": 66034.69999998808,
+      "revision": "g39-129916ba5dc16e166d5c3d0228ae7c9062ef845bfa97f4f957c43a377d51c3a4:72",
+      "receivedAt": "2026-10-27T17:47:56.637Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c772842c-0a24-4a33-b77f-73bb8884e71b",
+      "clientTimeMs": 66072.60000002384,
+      "revision": "g39-129916ba5dc16e166d5c3d0228ae7c9062ef845bfa97f4f957c43a377d51c3a4:73",
+      "receivedAt": "2026-10-27T17:47:56.674Z",
+      "elapsedMs": 37.90000003576279
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c772842c-0a24-4a33-b77f-73bb8884e71b",
+      "clientTimeMs": 66112.5,
+      "revision": "g39-129916ba5dc16e166d5c3d0228ae7c9062ef845bfa97f4f957c43a377d51c3a4:73",
+      "receivedAt": "2026-10-27T17:47:56.714Z",
+      "elapsedMs": 77.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "5751a744-f494-47c8-9c5a-e71b8b751217",
+      "clientTimeMs": 66439.19999998808,
+      "revision": "g39-129916ba5dc16e166d5c3d0228ae7c9062ef845bfa97f4f957c43a377d51c3a4:73",
+      "receivedAt": "2026-10-27T17:47:57.041Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "5751a744-f494-47c8-9c5a-e71b8b751217",
+      "clientTimeMs": 66811.80000001192,
+      "revision": "g40-399fe16653cd425d63fead4fae24c351a775569387243582990d55921770efd5:74",
+      "receivedAt": "2026-10-27T17:47:57.413Z",
+      "elapsedMs": 372.60000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "5751a744-f494-47c8-9c5a-e71b8b751217",
+      "clientTimeMs": 66830,
+      "revision": "g40-399fe16653cd425d63fead4fae24c351a775569387243582990d55921770efd5:74",
+      "receivedAt": "2026-10-27T17:47:57.432Z",
+      "elapsedMs": 390.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c2db44fb-8b0e-4c13-b246-92b467042752",
+      "clientTimeMs": 67115,
+      "revision": "g40-399fe16653cd425d63fead4fae24c351a775569387243582990d55921770efd5:74",
+      "receivedAt": "2026-10-27T17:47:57.716Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c2db44fb-8b0e-4c13-b246-92b467042752",
+      "clientTimeMs": 67534.10000002384,
+      "revision": "g44-f53b4aa3c6ff08c3d21f2ae553b611937bd9fe3be1961a284ce7f29ae2d8b97d:75",
+      "receivedAt": "2026-10-27T17:47:58.135Z",
+      "elapsedMs": 419.10000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c2db44fb-8b0e-4c13-b246-92b467042752",
+      "clientTimeMs": 67547,
+      "revision": "g44-f53b4aa3c6ff08c3d21f2ae553b611937bd9fe3be1961a284ce7f29ae2d8b97d:75",
+      "receivedAt": "2026-10-27T17:47:58.148Z",
+      "elapsedMs": 432
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "d88d990a-7c73-446f-8717-24225690b5b6",
+      "clientTimeMs": 67926.80000001192,
+      "revision": "g44-f53b4aa3c6ff08c3d21f2ae553b611937bd9fe3be1961a284ce7f29ae2d8b97d:75",
+      "receivedAt": "2026-10-27T17:47:58.573Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "d88d990a-7c73-446f-8717-24225690b5b6",
+      "clientTimeMs": 67994.5,
+      "revision": "g44-f53b4aa3c6ff08c3d21f2ae553b611937bd9fe3be1961a284ce7f29ae2d8b97d:76",
+      "receivedAt": "2026-10-27T17:47:58.596Z",
+      "elapsedMs": 67.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0d341b8c-e3f4-48de-bfb5-50a138acd23f",
+      "clientTimeMs": 68353.10000002384,
+      "revision": "g44-f53b4aa3c6ff08c3d21f2ae553b611937bd9fe3be1961a284ce7f29ae2d8b97d:77",
+      "receivedAt": "2026-10-27T17:47:58.955Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0d341b8c-e3f4-48de-bfb5-50a138acd23f",
+      "clientTimeMs": 68702.19999998808,
+      "revision": "g45-9330ba46b0fe47fa482692ac171a3a539d7e058733a7e93af151d03328ad72ee:78",
+      "receivedAt": "2026-10-27T17:47:59.304Z",
+      "elapsedMs": 349.0999999642372
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0d341b8c-e3f4-48de-bfb5-50a138acd23f",
+      "clientTimeMs": 68717.10000002384,
+      "revision": "g45-9330ba46b0fe47fa482692ac171a3a539d7e058733a7e93af151d03328ad72ee:78",
+      "receivedAt": "2026-10-27T17:47:59.318Z",
+      "elapsedMs": 364
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "3df08026-2e73-4613-8edb-400ce8f3cd5d",
+      "clientTimeMs": 69016.80000001192,
+      "revision": "g45-9330ba46b0fe47fa482692ac171a3a539d7e058733a7e93af151d03328ad72ee:78",
+      "receivedAt": "2026-10-27T17:47:59.618Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "3df08026-2e73-4613-8edb-400ce8f3cd5d",
+      "clientTimeMs": 69486.60000002384,
+      "revision": "g53-ea9d860f858e9c9ac3c5e1c24eaabb1527d69c724a1e6c53c7ba7582c3cc4c15:79",
+      "receivedAt": "2026-10-27T17:48:00.088Z",
+      "elapsedMs": 469.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "3df08026-2e73-4613-8edb-400ce8f3cd5d",
+      "clientTimeMs": 69503.30000001192,
+      "revision": "g53-ea9d860f858e9c9ac3c5e1c24eaabb1527d69c724a1e6c53c7ba7582c3cc4c15:79",
+      "receivedAt": "2026-10-27T17:48:00.104Z",
+      "elapsedMs": 486.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "63c5f796-1ecd-47b9-9263-ba452928f338",
+      "clientTimeMs": 69770.5,
+      "revision": "g53-ea9d860f858e9c9ac3c5e1c24eaabb1527d69c724a1e6c53c7ba7582c3cc4c15:79",
+      "receivedAt": "2026-10-27T17:48:00.371Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "63c5f796-1ecd-47b9-9263-ba452928f338",
+      "clientTimeMs": 70031.30000001192,
+      "revision": "g55-81a33a2f6f2c2342d866c814875229a380ab135e905ec0425a4f8850d78a5f24:80",
+      "receivedAt": "2026-10-27T17:48:00.633Z",
+      "elapsedMs": 260.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "63c5f796-1ecd-47b9-9263-ba452928f338",
+      "clientTimeMs": 70044.10000002384,
+      "revision": "g55-81a33a2f6f2c2342d866c814875229a380ab135e905ec0425a4f8850d78a5f24:80",
+      "receivedAt": "2026-10-27T17:48:00.645Z",
+      "elapsedMs": 273.60000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0ff7fdd3-276d-45f1-92e3-018396596134",
+      "clientTimeMs": 70352,
+      "revision": "g55-81a33a2f6f2c2342d866c814875229a380ab135e905ec0425a4f8850d78a5f24:80",
+      "receivedAt": "2026-10-27T17:48:00.953Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0ff7fdd3-276d-45f1-92e3-018396596134",
+      "clientTimeMs": 70390.80000001192,
+      "revision": "g55-81a33a2f6f2c2342d866c814875229a380ab135e905ec0425a4f8850d78a5f24:81",
+      "receivedAt": "2026-10-27T17:48:00.992Z",
+      "elapsedMs": 38.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0ff7fdd3-276d-45f1-92e3-018396596134",
+      "clientTimeMs": 70406.39999997616,
+      "revision": "g55-81a33a2f6f2c2342d866c814875229a380ab135e905ec0425a4f8850d78a5f24:81",
+      "receivedAt": "2026-10-27T17:48:01.009Z",
+      "elapsedMs": 54.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c6ddc379-28fc-4f13-a30b-4a1d9e0e70c2",
+      "clientTimeMs": 70752.80000001192,
+      "revision": "g55-81a33a2f6f2c2342d866c814875229a380ab135e905ec0425a4f8850d78a5f24:81",
+      "receivedAt": "2026-10-27T17:48:01.444Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c6ddc379-28fc-4f13-a30b-4a1d9e0e70c2",
+      "clientTimeMs": 70868.30000001192,
+      "revision": "g55-81a33a2f6f2c2342d866c814875229a380ab135e905ec0425a4f8850d78a5f24:82",
+      "receivedAt": "2026-10-27T17:48:01.476Z",
+      "elapsedMs": 115.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "85952915-664a-466b-ae45-043a2fec930d",
+      "clientTimeMs": 71468.10000002384,
+      "revision": "g56-bb484c74cce90c7599aa7fa6c28962420f5967e52c45276a2e7c360b7a0b8131:83",
+      "receivedAt": "2026-10-27T17:48:02.070Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "85952915-664a-466b-ae45-043a2fec930d",
+      "clientTimeMs": 72027,
+      "revision": "g60-2726fd4f893a2777d88336f5f3c9f926261e6f620ab8fbd2c23f41931d2d3dfa:84",
+      "receivedAt": "2026-10-27T17:48:02.630Z",
+      "elapsedMs": 558.8999999761581
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "85952915-664a-466b-ae45-043a2fec930d",
+      "clientTimeMs": 72048.30000001192,
+      "revision": "g60-2726fd4f893a2777d88336f5f3c9f926261e6f620ab8fbd2c23f41931d2d3dfa:84",
+      "receivedAt": "2026-10-27T17:48:02.650Z",
+      "elapsedMs": 580.1999999880791
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "f9c23360-72f4-4edb-a7cc-b5772899641b",
+      "clientTimeMs": 72540.89999997616,
+      "revision": "g60-2726fd4f893a2777d88336f5f3c9f926261e6f620ab8fbd2c23f41931d2d3dfa:84",
+      "receivedAt": "2026-10-27T17:48:03.226Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "f9c23360-72f4-4edb-a7cc-b5772899641b",
+      "clientTimeMs": 72696,
+      "revision": "g60-2726fd4f893a2777d88336f5f3c9f926261e6f620ab8fbd2c23f41931d2d3dfa:85",
+      "receivedAt": "2026-10-27T17:48:03.307Z",
+      "elapsedMs": 155.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "88a5a2a3-6133-418e-90f4-04f00b977199",
+      "clientTimeMs": 73052.60000002384,
+      "revision": "g60-2726fd4f893a2777d88336f5f3c9f926261e6f620ab8fbd2c23f41931d2d3dfa:86",
+      "receivedAt": "2026-10-27T17:48:03.655Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "88a5a2a3-6133-418e-90f4-04f00b977199",
+      "clientTimeMs": 73452.10000002384,
+      "revision": "g61-281a6b3cb2e73a515351865c7860dd51ca20808743e84fa3f4196b3c362d32e1:87",
+      "receivedAt": "2026-10-27T17:48:04.053Z",
+      "elapsedMs": 399.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "88a5a2a3-6133-418e-90f4-04f00b977199",
+      "clientTimeMs": 73470,
+      "revision": "g61-281a6b3cb2e73a515351865c7860dd51ca20808743e84fa3f4196b3c362d32e1:87",
+      "receivedAt": "2026-10-27T17:48:04.072Z",
+      "elapsedMs": 417.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0d9a5c72-022f-4eae-8550-15d42b27802b",
+      "clientTimeMs": 73779.60000002384,
+      "revision": "g61-281a6b3cb2e73a515351865c7860dd51ca20808743e84fa3f4196b3c362d32e1:87",
+      "receivedAt": "2026-10-27T17:48:04.590Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0d9a5c72-022f-4eae-8550-15d42b27802b",
+      "clientTimeMs": 74024.80000001192,
+      "revision": "g61-281a6b3cb2e73a515351865c7860dd51ca20808743e84fa3f4196b3c362d32e1:88",
+      "receivedAt": "2026-10-27T17:48:04.627Z",
+      "elapsedMs": 245.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "29ff58ea-12cd-4e0c-ad4e-2d5e73ccefb0",
+      "clientTimeMs": 74986.5,
+      "revision": "g69-bfa82323b3f302ecc82053b1d684aee30aac7cca563d4d299e38f24cea42054b:89",
+      "receivedAt": "2026-10-27T17:48:05.588Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "29ff58ea-12cd-4e0c-ad4e-2d5e73ccefb0",
+      "clientTimeMs": 75342.89999997616,
+      "revision": "g71-a3b79fa3bd256ed709b98d234ddbf8bfcd60d27d83236027cf8e5e0468914da2:90",
+      "receivedAt": "2026-10-27T17:48:05.944Z",
+      "elapsedMs": 356.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "29ff58ea-12cd-4e0c-ad4e-2d5e73ccefb0",
+      "clientTimeMs": 75358.30000001192,
+      "revision": "g71-a3b79fa3bd256ed709b98d234ddbf8bfcd60d27d83236027cf8e5e0468914da2:90",
+      "receivedAt": "2026-10-27T17:48:05.960Z",
+      "elapsedMs": 371.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "033637f9-9aa1-4b25-8b50-8df4df92f6b8",
+      "clientTimeMs": 75694.39999997616,
+      "revision": "g71-a3b79fa3bd256ed709b98d234ddbf8bfcd60d27d83236027cf8e5e0468914da2:90",
+      "receivedAt": "2026-10-27T17:48:06.296Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "033637f9-9aa1-4b25-8b50-8df4df92f6b8",
+      "clientTimeMs": 75748,
+      "revision": "g71-a3b79fa3bd256ed709b98d234ddbf8bfcd60d27d83236027cf8e5e0468914da2:91",
+      "receivedAt": "2026-10-27T17:48:06.350Z",
+      "elapsedMs": 53.60000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "033637f9-9aa1-4b25-8b50-8df4df92f6b8",
+      "clientTimeMs": 75766.39999997616,
+      "revision": "g71-a3b79fa3bd256ed709b98d234ddbf8bfcd60d27d83236027cf8e5e0468914da2:91",
+      "receivedAt": "2026-10-27T17:48:06.368Z",
+      "elapsedMs": 72
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "8b7309c6-cc13-45eb-b2e0-956362f724f4",
+      "clientTimeMs": 76114.10000002384,
+      "revision": "g71-a3b79fa3bd256ed709b98d234ddbf8bfcd60d27d83236027cf8e5e0468914da2:91",
+      "receivedAt": "2026-10-27T17:48:06.717Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "8b7309c6-cc13-45eb-b2e0-956362f724f4",
+      "clientTimeMs": 76505.39999997616,
+      "revision": "g72-b07371a082ef590275173a73d2eafb2847d4a1f279b11b5af0770622f2448fe5:92",
+      "receivedAt": "2026-10-27T17:48:07.107Z",
+      "elapsedMs": 391.2999999523163
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "8b7309c6-cc13-45eb-b2e0-956362f724f4",
+      "clientTimeMs": 76519.5,
+      "revision": "g72-b07371a082ef590275173a73d2eafb2847d4a1f279b11b5af0770622f2448fe5:92",
+      "receivedAt": "2026-10-27T17:48:07.121Z",
+      "elapsedMs": 405.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c6696771-579f-4e2e-992e-92dfb541d19e",
+      "clientTimeMs": 76801.30000001192,
+      "revision": "g72-b07371a082ef590275173a73d2eafb2847d4a1f279b11b5af0770622f2448fe5:92",
+      "receivedAt": "2026-10-27T17:48:07.524Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c6696771-579f-4e2e-992e-92dfb541d19e",
+      "clientTimeMs": 76969.89999997616,
+      "revision": "g72-b07371a082ef590275173a73d2eafb2847d4a1f279b11b5af0770622f2448fe5:93",
+      "receivedAt": "2026-10-27T17:48:07.572Z",
+      "elapsedMs": 168.5999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "7d7b3699-9fd6-4c65-842a-60c4494b2b48",
+      "clientTimeMs": 77716.89999997616,
+      "revision": "g76-add71ddb41d79d95bfa96163e240a946c41411361f3e529fc282e35026d6780f:94",
+      "receivedAt": "2026-10-27T17:48:08.318Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "7d7b3699-9fd6-4c65-842a-60c4494b2b48",
+      "clientTimeMs": 77785.39999997616,
+      "revision": "g76-add71ddb41d79d95bfa96163e240a946c41411361f3e529fc282e35026d6780f:95",
+      "receivedAt": "2026-10-27T17:48:08.387Z",
+      "elapsedMs": 68.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "7d7b3699-9fd6-4c65-842a-60c4494b2b48",
+      "clientTimeMs": 77803.30000001192,
+      "revision": "g76-add71ddb41d79d95bfa96163e240a946c41411361f3e529fc282e35026d6780f:95",
+      "receivedAt": "2026-10-27T17:48:08.405Z",
+      "elapsedMs": 86.40000003576279
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "78a5b308-e259-492d-b300-7ea2a0a06309",
+      "clientTimeMs": 78113.89999997616,
+      "revision": "g76-add71ddb41d79d95bfa96163e240a946c41411361f3e529fc282e35026d6780f:95",
+      "receivedAt": "2026-10-27T17:48:08.966Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "78a5b308-e259-492d-b300-7ea2a0a06309",
+      "clientTimeMs": 78381.30000001192,
+      "revision": "g76-add71ddb41d79d95bfa96163e240a946c41411361f3e529fc282e35026d6780f:96",
+      "receivedAt": "2026-10-27T17:48:08.983Z",
+      "elapsedMs": 267.4000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "d91da151-976e-4615-bc7b-5b6f3b5ab422",
+      "clientTimeMs": 97584.19999998808,
+      "revision": "g77-321272890b70aba058a794d5dccefda11532f9c0989f0eeef9e18dc63be08aaf:109",
+      "receivedAt": "2026-10-27T17:48:28.576Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "d91da151-976e-4615-bc7b-5b6f3b5ab422",
+      "clientTimeMs": 97996.10000002384,
+      "revision": "g77-321272890b70aba058a794d5dccefda11532f9c0989f0eeef9e18dc63be08aaf:110",
+      "receivedAt": "2026-10-27T17:48:28.598Z",
+      "elapsedMs": 411.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "44e99266-390f-4dcc-bcff-42220faef0a8",
+      "clientTimeMs": 98766.5,
+      "revision": "g85-31e0854f911ec9c23b25b4e9d1e9b3064d6ca580e9738814a01d62131adba513:111",
+      "receivedAt": "2026-10-27T17:48:29.367Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "44e99266-390f-4dcc-bcff-42220faef0a8",
+      "clientTimeMs": 99075.30000001192,
+      "revision": "g87-0030146526d58d3b84c782c8a68e7418ff95fa412296af275fff38ab32103810:112",
+      "receivedAt": "2026-10-27T17:48:29.676Z",
+      "elapsedMs": 308.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "44e99266-390f-4dcc-bcff-42220faef0a8",
+      "clientTimeMs": 99089.19999998808,
+      "revision": "g87-0030146526d58d3b84c782c8a68e7418ff95fa412296af275fff38ab32103810:112",
+      "receivedAt": "2026-10-27T17:48:29.691Z",
+      "elapsedMs": 322.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "53a404d3-0270-4990-b486-b59532ce349a",
+      "clientTimeMs": 99382.80000001192,
+      "revision": "g87-0030146526d58d3b84c782c8a68e7418ff95fa412296af275fff38ab32103810:112",
+      "receivedAt": "2026-10-27T17:48:29.984Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "53a404d3-0270-4990-b486-b59532ce349a",
+      "clientTimeMs": 99441.89999997616,
+      "revision": "g87-0030146526d58d3b84c782c8a68e7418ff95fa412296af275fff38ab32103810:113",
+      "receivedAt": "2026-10-27T17:48:30.043Z",
+      "elapsedMs": 59.09999996423721
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "53a404d3-0270-4990-b486-b59532ce349a",
+      "clientTimeMs": 99456.39999997616,
+      "revision": "g87-0030146526d58d3b84c782c8a68e7418ff95fa412296af275fff38ab32103810:113",
+      "receivedAt": "2026-10-27T17:48:30.058Z",
+      "elapsedMs": 73.59999996423721
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a49bd80f-9740-423b-aca8-40719ac56261",
+      "clientTimeMs": 99801.80000001192,
+      "revision": "g87-0030146526d58d3b84c782c8a68e7418ff95fa412296af275fff38ab32103810:113",
+      "receivedAt": "2026-10-27T17:48:30.404Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a49bd80f-9740-423b-aca8-40719ac56261",
+      "clientTimeMs": 100177.19999998808,
+      "revision": "g88-40b0b53475b8a6051927566006e44174ce1b6219533e48f6dc5f145be38fc2ef:114",
+      "receivedAt": "2026-10-27T17:48:30.778Z",
+      "elapsedMs": 375.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a49bd80f-9740-423b-aca8-40719ac56261",
+      "clientTimeMs": 100193.10000002384,
+      "revision": "g88-40b0b53475b8a6051927566006e44174ce1b6219533e48f6dc5f145be38fc2ef:114",
+      "receivedAt": "2026-10-27T17:48:30.795Z",
+      "elapsedMs": 391.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "5eeda63d-4963-43ca-a528-03c33d48e9da",
+      "clientTimeMs": 100474,
+      "revision": "g88-40b0b53475b8a6051927566006e44174ce1b6219533e48f6dc5f145be38fc2ef:114",
+      "receivedAt": "2026-10-27T17:48:31.076Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "5eeda63d-4963-43ca-a528-03c33d48e9da",
+      "clientTimeMs": 101120.80000001192,
+      "revision": "g92-071913ae8b1fb664a82c1c4a4b096ff2b4916978d16dc19ab2dd4b9e446b56b7:115",
+      "receivedAt": "2026-10-27T17:48:31.723Z",
+      "elapsedMs": 646.8000000119209
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "5eeda63d-4963-43ca-a528-03c33d48e9da",
+      "clientTimeMs": 101137.89999997616,
+      "revision": "g92-071913ae8b1fb664a82c1c4a4b096ff2b4916978d16dc19ab2dd4b9e446b56b7:115",
+      "receivedAt": "2026-10-27T17:48:31.739Z",
+      "elapsedMs": 663.8999999761581
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "e9c16c5f-804a-4c95-b5b7-d5d38c260ca3",
+      "clientTimeMs": 101490.39999997616,
+      "revision": "g92-071913ae8b1fb664a82c1c4a4b096ff2b4916978d16dc19ab2dd4b9e446b56b7:115",
+      "receivedAt": "2026-10-27T17:48:32.092Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "e9c16c5f-804a-4c95-b5b7-d5d38c260ca3",
+      "clientTimeMs": 101589.30000001192,
+      "revision": "g92-071913ae8b1fb664a82c1c4a4b096ff2b4916978d16dc19ab2dd4b9e446b56b7:116",
+      "receivedAt": "2026-10-27T17:48:32.191Z",
+      "elapsedMs": 98.90000003576279
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "e9c16c5f-804a-4c95-b5b7-d5d38c260ca3",
+      "clientTimeMs": 101608.10000002384,
+      "revision": "g92-071913ae8b1fb664a82c1c4a4b096ff2b4916978d16dc19ab2dd4b9e446b56b7:116",
+      "receivedAt": "2026-10-27T17:48:32.210Z",
+      "elapsedMs": 117.70000004768372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "679f27eb-7e27-4e74-832d-0aeab4a1ee15",
+      "clientTimeMs": 101888.5,
+      "revision": "g92-071913ae8b1fb664a82c1c4a4b096ff2b4916978d16dc19ab2dd4b9e446b56b7:116",
+      "receivedAt": "2026-10-27T17:48:32.490Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "679f27eb-7e27-4e74-832d-0aeab4a1ee15",
+      "clientTimeMs": 102283.89999997616,
+      "revision": "g93-133182b5e236e34edc8bd9ce59838e79701e60767015d6a18fa3dbdfda783367:117",
+      "receivedAt": "2026-10-27T17:48:32.885Z",
+      "elapsedMs": 395.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "679f27eb-7e27-4e74-832d-0aeab4a1ee15",
+      "clientTimeMs": 102311.39999997616,
+      "revision": "g93-133182b5e236e34edc8bd9ce59838e79701e60767015d6a18fa3dbdfda783367:117",
+      "receivedAt": "2026-10-27T17:48:32.913Z",
+      "elapsedMs": 422.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "698c740c-2ffe-444d-8f7b-0f25dad6419a",
+      "clientTimeMs": 102621.69999998808,
+      "revision": "g93-133182b5e236e34edc8bd9ce59838e79701e60767015d6a18fa3dbdfda783367:117",
+      "receivedAt": "2026-10-27T17:48:33.223Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "698c740c-2ffe-444d-8f7b-0f25dad6419a",
+      "clientTimeMs": 103295,
+      "revision": "g101-cca5eba9487ae73d1fb6e0d64cf6c1c17c535e54164e53604140a999d81c021a:118",
+      "receivedAt": "2026-10-27T17:48:33.896Z",
+      "elapsedMs": 673.3000000119209
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "698c740c-2ffe-444d-8f7b-0f25dad6419a",
+      "clientTimeMs": 103307.10000002384,
+      "revision": "g101-cca5eba9487ae73d1fb6e0d64cf6c1c17c535e54164e53604140a999d81c021a:118",
+      "receivedAt": "2026-10-27T17:48:33.908Z",
+      "elapsedMs": 685.4000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "5a105f7d-510e-42f9-810d-8d759881a013",
+      "clientTimeMs": 103500.80000001192,
+      "revision": "g101-cca5eba9487ae73d1fb6e0d64cf6c1c17c535e54164e53604140a999d81c021a:118",
+      "receivedAt": "2026-10-27T17:48:34.102Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "5a105f7d-510e-42f9-810d-8d759881a013",
+      "clientTimeMs": 103853.10000002384,
+      "revision": "g103-425af0b148569ad550e1d129464a7989e0a90cf7242adf2e72d0bae8902e486d:119",
+      "receivedAt": "2026-10-27T17:48:34.454Z",
+      "elapsedMs": 352.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "5a105f7d-510e-42f9-810d-8d759881a013",
+      "clientTimeMs": 103864.5,
+      "revision": "g103-425af0b148569ad550e1d129464a7989e0a90cf7242adf2e72d0bae8902e486d:119",
+      "receivedAt": "2026-10-27T17:48:34.465Z",
+      "elapsedMs": 363.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "14e3bb2a-72c3-47ed-8160-bd3edfd6f948",
+      "clientTimeMs": 104186.60000002384,
+      "revision": "g103-425af0b148569ad550e1d129464a7989e0a90cf7242adf2e72d0bae8902e486d:119",
+      "receivedAt": "2026-10-27T17:48:34.790Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "14e3bb2a-72c3-47ed-8160-bd3edfd6f948",
+      "clientTimeMs": 104275.80000001192,
+      "revision": "g103-425af0b148569ad550e1d129464a7989e0a90cf7242adf2e72d0bae8902e486d:120",
+      "receivedAt": "2026-10-27T17:48:34.878Z",
+      "elapsedMs": 89.19999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "14e3bb2a-72c3-47ed-8160-bd3edfd6f948",
+      "clientTimeMs": 104317.39999997616,
+      "revision": "g103-425af0b148569ad550e1d129464a7989e0a90cf7242adf2e72d0bae8902e486d:120",
+      "receivedAt": "2026-10-27T17:48:34.919Z",
+      "elapsedMs": 130.79999995231628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "cc6cf4e4-4c31-4c44-a2de-2d2d9a00a60a",
+      "clientTimeMs": 104590.69999998808,
+      "revision": "g103-425af0b148569ad550e1d129464a7989e0a90cf7242adf2e72d0bae8902e486d:120",
+      "receivedAt": "2026-10-27T17:48:35.193Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "cc6cf4e4-4c31-4c44-a2de-2d2d9a00a60a",
+      "clientTimeMs": 104947,
+      "revision": "g104-4b384a2917bcf4035691dbab348f8edefc81c139d9259ba15dc70692be49e24f:121",
+      "receivedAt": "2026-10-27T17:48:35.549Z",
+      "elapsedMs": 356.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "cc6cf4e4-4c31-4c44-a2de-2d2d9a00a60a",
+      "clientTimeMs": 104965.10000002384,
+      "revision": "g104-4b384a2917bcf4035691dbab348f8edefc81c139d9259ba15dc70692be49e24f:121",
+      "receivedAt": "2026-10-27T17:48:35.567Z",
+      "elapsedMs": 374.4000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b65a9033-75f1-47b2-bd37-1bc33ad74ffe",
+      "clientTimeMs": 105296.89999997616,
+      "revision": "g104-4b384a2917bcf4035691dbab348f8edefc81c139d9259ba15dc70692be49e24f:121",
+      "receivedAt": "2026-10-27T17:48:35.975Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b65a9033-75f1-47b2-bd37-1bc33ad74ffe",
+      "clientTimeMs": 105423.10000002384,
+      "revision": "g104-4b384a2917bcf4035691dbab348f8edefc81c139d9259ba15dc70692be49e24f:122",
+      "receivedAt": "2026-10-27T17:48:36.056Z",
+      "elapsedMs": 126.20000004768372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "806d4182-e00f-45e0-9bf2-5469695df68c",
+      "clientTimeMs": 106220.19999998808,
+      "revision": "g108-d2c7b82a1c5bdbb9146b350cfc242daf279e55e02345b1bfcf44df74a1a16324:123",
+      "receivedAt": "2026-10-27T17:48:36.822Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "806d4182-e00f-45e0-9bf2-5469695df68c",
+      "clientTimeMs": 106333.80000001192,
+      "revision": "g108-d2c7b82a1c5bdbb9146b350cfc242daf279e55e02345b1bfcf44df74a1a16324:124",
+      "receivedAt": "2026-10-27T17:48:36.936Z",
+      "elapsedMs": 113.60000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "806d4182-e00f-45e0-9bf2-5469695df68c",
+      "clientTimeMs": 106373,
+      "revision": "g108-d2c7b82a1c5bdbb9146b350cfc242daf279e55e02345b1bfcf44df74a1a16324:124",
+      "receivedAt": "2026-10-27T17:48:36.975Z",
+      "elapsedMs": 152.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "d220673a-d040-42fc-b635-6e97b285b431",
+      "clientTimeMs": 106625.60000002384,
+      "revision": "g108-d2c7b82a1c5bdbb9146b350cfc242daf279e55e02345b1bfcf44df74a1a16324:124",
+      "receivedAt": "2026-10-27T17:48:37.468Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "d220673a-d040-42fc-b635-6e97b285b431",
+      "clientTimeMs": 106886,
+      "revision": "g108-d2c7b82a1c5bdbb9146b350cfc242daf279e55e02345b1bfcf44df74a1a16324:125",
+      "receivedAt": "2026-10-27T17:48:37.487Z",
+      "elapsedMs": 260.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "fe824f75-b8cb-44fd-a1a5-3f3c3cc9f0da",
+      "clientTimeMs": 107257.39999997616,
+      "revision": "g109-28740363eb4a6bd9047a445b97a77493576614fd9fa6f0fcced2493c002f8ad7:126",
+      "receivedAt": "2026-10-27T17:48:37.859Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "fe824f75-b8cb-44fd-a1a5-3f3c3cc9f0da",
+      "clientTimeMs": 107618.10000002384,
+      "revision": "g114-71749baf538eab85d573656736d4b0f22277c83a492ba3c6c840aaf1e3c99781:127",
+      "receivedAt": "2026-10-27T17:48:38.220Z",
+      "elapsedMs": 360.7000000476837
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "fe824f75-b8cb-44fd-a1a5-3f3c3cc9f0da",
+      "clientTimeMs": 107629.89999997616,
+      "revision": "g114-71749baf538eab85d573656736d4b0f22277c83a492ba3c6c840aaf1e3c99781:127",
+      "receivedAt": "2026-10-27T17:48:38.231Z",
+      "elapsedMs": 372.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "f1cfbc90-95e9-4d17-9725-a345a5230050",
+      "clientTimeMs": 162731.30000001192,
+      "revision": "g114-71749baf538eab85d573656736d4b0f22277c83a492ba3c6c840aaf1e3c99781:164",
+      "receivedAt": "2026-10-27T17:49:33.344Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "f1cfbc90-95e9-4d17-9725-a345a5230050",
+      "clientTimeMs": 163213.10000002384,
+      "revision": "g1-98617c2726d5e8821ed9b8e44b08b4869775a8ae30c0929b41ba4834b2c92ffe:165",
+      "receivedAt": "2026-10-27T17:49:33.814Z",
+      "elapsedMs": 481.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "f1cfbc90-95e9-4d17-9725-a345a5230050",
+      "clientTimeMs": 163224.89999997616,
+      "revision": "g1-98617c2726d5e8821ed9b8e44b08b4869775a8ae30c0929b41ba4834b2c92ffe:165",
+      "receivedAt": "2026-10-27T17:49:33.826Z",
+      "elapsedMs": 493.5999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "3fd6bd0e-564c-4a6e-a30b-2b6204e3e9bb",
+      "clientTimeMs": 182022.39999997616,
+      "revision": "g1-98617c2726d5e8821ed9b8e44b08b4869775a8ae30c0929b41ba4834b2c92ffe:179",
+      "receivedAt": "2026-10-27T17:49:52.624Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "3fd6bd0e-564c-4a6e-a30b-2b6204e3e9bb",
+      "clientTimeMs": 182304.19999998808,
+      "revision": "g2-44fee3eddd7e0c0ae69b1889214c2ed6d7814b33eb968ef10cf511c8eda9690a:180",
+      "receivedAt": "2026-10-27T17:49:52.906Z",
+      "elapsedMs": 281.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "3fd6bd0e-564c-4a6e-a30b-2b6204e3e9bb",
+      "clientTimeMs": 182318.89999997616,
+      "revision": "g2-44fee3eddd7e0c0ae69b1889214c2ed6d7814b33eb968ef10cf511c8eda9690a:180",
+      "receivedAt": "2026-10-27T17:49:52.920Z",
+      "elapsedMs": 296.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "477d7acf-05af-42d0-a90d-31c73ec5dc59",
+      "clientTimeMs": 182627.10000002384,
+      "revision": "g2-44fee3eddd7e0c0ae69b1889214c2ed6d7814b33eb968ef10cf511c8eda9690a:180",
+      "receivedAt": "2026-10-27T17:49:53.229Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "477d7acf-05af-42d0-a90d-31c73ec5dc59",
+      "clientTimeMs": 183028.80000001192,
+      "revision": "g7-cc50cecc613642ac9e855762fd4c00ef8c776728e93879af7c06eab82cfe0cf4:181",
+      "receivedAt": "2026-10-27T17:49:53.638Z",
+      "elapsedMs": 401.69999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "477d7acf-05af-42d0-a90d-31c73ec5dc59",
+      "clientTimeMs": 183067.89999997616,
+      "revision": "g7-cc50cecc613642ac9e855762fd4c00ef8c776728e93879af7c06eab82cfe0cf4:181",
+      "receivedAt": "2026-10-27T17:49:53.669Z",
+      "elapsedMs": 440.7999999523163
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a85edbc6-a3e6-4900-9c62-32d0f7842ec4",
+      "clientTimeMs": 183423.19999998808,
+      "revision": "g7-cc50cecc613642ac9e855762fd4c00ef8c776728e93879af7c06eab82cfe0cf4:181",
+      "receivedAt": "2026-10-27T17:49:54.025Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a85edbc6-a3e6-4900-9c62-32d0f7842ec4",
+      "clientTimeMs": 183463.69999998808,
+      "revision": "g7-cc50cecc613642ac9e855762fd4c00ef8c776728e93879af7c06eab82cfe0cf4:182",
+      "receivedAt": "2026-10-27T17:49:54.066Z",
+      "elapsedMs": 40.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a85edbc6-a3e6-4900-9c62-32d0f7842ec4",
+      "clientTimeMs": 183481.89999997616,
+      "revision": "g7-cc50cecc613642ac9e855762fd4c00ef8c776728e93879af7c06eab82cfe0cf4:182",
+      "receivedAt": "2026-10-27T17:49:54.084Z",
+      "elapsedMs": 58.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0e17b611-cd3e-4542-8c56-41d4d974b4ae",
+      "clientTimeMs": 183824.10000002384,
+      "revision": "g7-cc50cecc613642ac9e855762fd4c00ef8c776728e93879af7c06eab82cfe0cf4:182",
+      "receivedAt": "2026-10-27T17:49:54.426Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0e17b611-cd3e-4542-8c56-41d4d974b4ae",
+      "clientTimeMs": 184178.80000001192,
+      "revision": "g8-d396b3f012f73978654ebb3df641964d37cd49feac44880ce4942dd80daa1a1b:183",
+      "receivedAt": "2026-10-27T17:49:54.780Z",
+      "elapsedMs": 354.69999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0e17b611-cd3e-4542-8c56-41d4d974b4ae",
+      "clientTimeMs": 184192.80000001192,
+      "revision": "g8-d396b3f012f73978654ebb3df641964d37cd49feac44880ce4942dd80daa1a1b:183",
+      "receivedAt": "2026-10-27T17:49:54.794Z",
+      "elapsedMs": 368.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "7af18998-d255-4e61-9316-938c4abdb30d",
+      "clientTimeMs": 184469,
+      "revision": "g8-d396b3f012f73978654ebb3df641964d37cd49feac44880ce4942dd80daa1a1b:183",
+      "receivedAt": "2026-10-27T17:49:55.071Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "7af18998-d255-4e61-9316-938c4abdb30d",
+      "clientTimeMs": 184853.19999998808,
+      "revision": "g12-a17b513d59b9fec81b09576cf994a887e0a519b295d20b544e37dc515558b2ad:184",
+      "receivedAt": "2026-10-27T17:49:55.455Z",
+      "elapsedMs": 384.19999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "7af18998-d255-4e61-9316-938c4abdb30d",
+      "clientTimeMs": 184868,
+      "revision": "g12-a17b513d59b9fec81b09576cf994a887e0a519b295d20b544e37dc515558b2ad:184",
+      "receivedAt": "2026-10-27T17:49:55.469Z",
+      "elapsedMs": 399
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "34014f94-caa7-41b4-b26a-529f34e9c335",
+      "clientTimeMs": 185188.10000002384,
+      "revision": "g12-a17b513d59b9fec81b09576cf994a887e0a519b295d20b544e37dc515558b2ad:184",
+      "receivedAt": "2026-10-27T17:49:55.790Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "34014f94-caa7-41b4-b26a-529f34e9c335",
+      "clientTimeMs": 185216,
+      "revision": "g12-a17b513d59b9fec81b09576cf994a887e0a519b295d20b544e37dc515558b2ad:185",
+      "receivedAt": "2026-10-27T17:49:55.818Z",
+      "elapsedMs": 27.899999976158142
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "34014f94-caa7-41b4-b26a-529f34e9c335",
+      "clientTimeMs": 185261.30000001192,
+      "revision": "g12-a17b513d59b9fec81b09576cf994a887e0a519b295d20b544e37dc515558b2ad:185",
+      "receivedAt": "2026-10-27T17:49:55.863Z",
+      "elapsedMs": 73.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "8ff90564-de3f-4926-a7fa-b9a6c66b60f8",
+      "clientTimeMs": 185586,
+      "revision": "g12-a17b513d59b9fec81b09576cf994a887e0a519b295d20b544e37dc515558b2ad:185",
+      "receivedAt": "2026-10-27T17:49:56.187Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "8ff90564-de3f-4926-a7fa-b9a6c66b60f8",
+      "clientTimeMs": 185935.89999997616,
+      "revision": "g13-32cd7bdcf9e92d6a65e999bd4bb900f69f99a613c493f2f6cfe72c6a4c9a222e:186",
+      "receivedAt": "2026-10-27T17:49:56.538Z",
+      "elapsedMs": 349.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "8ff90564-de3f-4926-a7fa-b9a6c66b60f8",
+      "clientTimeMs": 185950.39999997616,
+      "revision": "g13-32cd7bdcf9e92d6a65e999bd4bb900f69f99a613c493f2f6cfe72c6a4c9a222e:186",
+      "receivedAt": "2026-10-27T17:49:56.552Z",
+      "elapsedMs": 364.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "96040cc2-c95a-4889-b26f-f66657d08685",
+      "clientTimeMs": 186290.10000002384,
+      "revision": "g13-32cd7bdcf9e92d6a65e999bd4bb900f69f99a613c493f2f6cfe72c6a4c9a222e:186",
+      "receivedAt": "2026-10-27T17:49:57.000Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "96040cc2-c95a-4889-b26f-f66657d08685",
+      "clientTimeMs": 186443.30000001192,
+      "revision": "g13-32cd7bdcf9e92d6a65e999bd4bb900f69f99a613c493f2f6cfe72c6a4c9a222e:187",
+      "receivedAt": "2026-10-27T17:49:57.048Z",
+      "elapsedMs": 153.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "e61b2705-97a5-4965-ab9a-59e013744a7b",
+      "clientTimeMs": 187197.60000002384,
+      "revision": "g21-870f62902bd88ea1b4ca6c7f1296db842bbdefecd0d50f1abcd21796ff4e0bcd:188",
+      "receivedAt": "2026-10-27T17:49:57.799Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "e61b2705-97a5-4965-ab9a-59e013744a7b",
+      "clientTimeMs": 187483.69999998808,
+      "revision": "g23-4d8c9a8b1b8df486f1b30a3396a472d2c27182743e830b99a86927152750ec8c:189",
+      "receivedAt": "2026-10-27T17:49:58.085Z",
+      "elapsedMs": 286.0999999642372
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "e61b2705-97a5-4965-ab9a-59e013744a7b",
+      "clientTimeMs": 187497.89999997616,
+      "revision": "g23-4d8c9a8b1b8df486f1b30a3396a472d2c27182743e830b99a86927152750ec8c:189",
+      "receivedAt": "2026-10-27T17:49:58.099Z",
+      "elapsedMs": 300.2999999523163
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "3337ac88-d12c-4dee-b114-075f596240b1",
+      "clientTimeMs": 187826.69999998808,
+      "revision": "g23-4d8c9a8b1b8df486f1b30a3396a472d2c27182743e830b99a86927152750ec8c:189",
+      "receivedAt": "2026-10-27T17:49:58.451Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "3337ac88-d12c-4dee-b114-075f596240b1",
+      "clientTimeMs": 187869.69999998808,
+      "revision": "g23-4d8c9a8b1b8df486f1b30a3396a472d2c27182743e830b99a86927152750ec8c:190",
+      "receivedAt": "2026-10-27T17:49:58.472Z",
+      "elapsedMs": 43
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "127240c8-c126-4570-881f-e287ea5575be",
+      "clientTimeMs": 188241.5,
+      "revision": "g23-4d8c9a8b1b8df486f1b30a3396a472d2c27182743e830b99a86927152750ec8c:191",
+      "receivedAt": "2026-10-27T17:49:58.843Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "127240c8-c126-4570-881f-e287ea5575be",
+      "clientTimeMs": 188596.5,
+      "revision": "g24-d7a0991b6aafa675576b4d2fc1ea687c07b4c371ab02cc9148c0dee880e37cc3:192",
+      "receivedAt": "2026-10-27T17:49:59.198Z",
+      "elapsedMs": 355
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "127240c8-c126-4570-881f-e287ea5575be",
+      "clientTimeMs": 188609.19999998808,
+      "revision": "g24-d7a0991b6aafa675576b4d2fc1ea687c07b4c371ab02cc9148c0dee880e37cc3:192",
+      "receivedAt": "2026-10-27T17:49:59.210Z",
+      "elapsedMs": 367.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "f9b04f4a-9f4c-4fa3-a1a8-8641b26296dc",
+      "clientTimeMs": 188899.80000001192,
+      "revision": "g24-d7a0991b6aafa675576b4d2fc1ea687c07b4c371ab02cc9148c0dee880e37cc3:192",
+      "receivedAt": "2026-10-27T17:49:59.502Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "f9b04f4a-9f4c-4fa3-a1a8-8641b26296dc",
+      "clientTimeMs": 189284.19999998808,
+      "revision": "g28-97718221918ce99d9ecb30ad3f7e18580f296eeec53af534005e432d30e8460d:193",
+      "receivedAt": "2026-10-27T17:49:59.886Z",
+      "elapsedMs": 384.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "f9b04f4a-9f4c-4fa3-a1a8-8641b26296dc",
+      "clientTimeMs": 189299.19999998808,
+      "revision": "g28-97718221918ce99d9ecb30ad3f7e18580f296eeec53af534005e432d30e8460d:193",
+      "receivedAt": "2026-10-27T17:49:59.900Z",
+      "elapsedMs": 399.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "9c4ab49b-14ff-4387-b2c8-071050c9ed96",
+      "clientTimeMs": 189639.60000002384,
+      "revision": "g28-97718221918ce99d9ecb30ad3f7e18580f296eeec53af534005e432d30e8460d:193",
+      "receivedAt": "2026-10-27T17:50:00.241Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "9c4ab49b-14ff-4387-b2c8-071050c9ed96",
+      "clientTimeMs": 189688.5,
+      "revision": "g28-97718221918ce99d9ecb30ad3f7e18580f296eeec53af534005e432d30e8460d:194",
+      "receivedAt": "2026-10-27T17:50:00.291Z",
+      "elapsedMs": 48.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "9c4ab49b-14ff-4387-b2c8-071050c9ed96",
+      "clientTimeMs": 189707.69999998808,
+      "revision": "g28-97718221918ce99d9ecb30ad3f7e18580f296eeec53af534005e432d30e8460d:194",
+      "receivedAt": "2026-10-27T17:50:00.310Z",
+      "elapsedMs": 68.09999996423721
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "cc2888b1-d6ef-4fad-a7d2-fbd7d5de6b10",
+      "clientTimeMs": 190016.19999998808,
+      "revision": "g28-97718221918ce99d9ecb30ad3f7e18580f296eeec53af534005e432d30e8460d:194",
+      "receivedAt": "2026-10-27T17:50:00.617Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "cc2888b1-d6ef-4fad-a7d2-fbd7d5de6b10",
+      "clientTimeMs": 190358.30000001192,
+      "revision": "g29-c72bb1a80fc7a9abba826575a0ed27c79ebbdf6030366983b1ad3ac05a1a85c6:195",
+      "receivedAt": "2026-10-27T17:50:00.961Z",
+      "elapsedMs": 342.10000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "cc2888b1-d6ef-4fad-a7d2-fbd7d5de6b10",
+      "clientTimeMs": 190386.10000002384,
+      "revision": "g29-c72bb1a80fc7a9abba826575a0ed27c79ebbdf6030366983b1ad3ac05a1a85c6:195",
+      "receivedAt": "2026-10-27T17:50:00.988Z",
+      "elapsedMs": 369.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "5891beec-fedd-4f26-a79b-16fbf4f1d93a",
+      "clientTimeMs": 190674.19999998808,
+      "revision": "g29-c72bb1a80fc7a9abba826575a0ed27c79ebbdf6030366983b1ad3ac05a1a85c6:195",
+      "receivedAt": "2026-10-27T17:50:01.519Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "5891beec-fedd-4f26-a79b-16fbf4f1d93a",
+      "clientTimeMs": 190957.89999997616,
+      "revision": "g29-c72bb1a80fc7a9abba826575a0ed27c79ebbdf6030366983b1ad3ac05a1a85c6:196",
+      "receivedAt": "2026-10-27T17:50:01.826Z",
+      "elapsedMs": 283.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "168b2c24-555f-4afb-bb16-6d02c6d082c9",
+      "clientTimeMs": 196150.10000002384,
+      "revision": "g29-c72bb1a80fc7a9abba826575a0ed27c79ebbdf6030366983b1ad3ac05a1a85c6:200",
+      "receivedAt": "2026-10-27T17:50:06.751Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "168b2c24-555f-4afb-bb16-6d02c6d082c9",
+      "clientTimeMs": 196521,
+      "revision": "g37-453008fe9c51555b4cacab705950fe357d397116041d0d5cabb17b2a1b0b3761:201",
+      "receivedAt": "2026-10-27T17:50:07.122Z",
+      "elapsedMs": 370.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "168b2c24-555f-4afb-bb16-6d02c6d082c9",
+      "clientTimeMs": 196535.5,
+      "revision": "g37-453008fe9c51555b4cacab705950fe357d397116041d0d5cabb17b2a1b0b3761:201",
+      "receivedAt": "2026-10-27T17:50:07.137Z",
+      "elapsedMs": 385.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "8f821936-19d9-4df7-9043-9088dc586478",
+      "clientTimeMs": 196784.39999997616,
+      "revision": "g37-453008fe9c51555b4cacab705950fe357d397116041d0d5cabb17b2a1b0b3761:201",
+      "receivedAt": "2026-10-27T17:50:07.414Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "8f821936-19d9-4df7-9043-9088dc586478",
+      "clientTimeMs": 196832.30000001192,
+      "revision": "g37-453008fe9c51555b4cacab705950fe357d397116041d0d5cabb17b2a1b0b3761:202",
+      "receivedAt": "2026-10-27T17:50:07.435Z",
+      "elapsedMs": 47.90000003576279
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c9fb3cab-4591-44cb-a688-d45696e8d7e4",
+      "clientTimeMs": 197396.60000002384,
+      "revision": "g39-b10dcb977b757892f603ad1a348afee2191a69829a2c54154237f2024e2d181b:203",
+      "receivedAt": "2026-10-27T17:50:07.998Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c9fb3cab-4591-44cb-a688-d45696e8d7e4",
+      "clientTimeMs": 197434.19999998808,
+      "revision": "g39-b10dcb977b757892f603ad1a348afee2191a69829a2c54154237f2024e2d181b:204",
+      "receivedAt": "2026-10-27T17:50:08.036Z",
+      "elapsedMs": 37.59999996423721
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c9fb3cab-4591-44cb-a688-d45696e8d7e4",
+      "clientTimeMs": 197472.30000001192,
+      "revision": "g39-b10dcb977b757892f603ad1a348afee2191a69829a2c54154237f2024e2d181b:204",
+      "receivedAt": "2026-10-27T17:50:08.074Z",
+      "elapsedMs": 75.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c25be4f8-9733-4fb4-b929-ce2d48221d8c",
+      "clientTimeMs": 197799,
+      "revision": "g39-b10dcb977b757892f603ad1a348afee2191a69829a2c54154237f2024e2d181b:204",
+      "receivedAt": "2026-10-27T17:50:08.400Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c25be4f8-9733-4fb4-b929-ce2d48221d8c",
+      "clientTimeMs": 198167.30000001192,
+      "revision": "g40-caa8e9acae53b74f6724fad27d3e7cb04a62200c316dc6e7d4167ec8037dd41b:205",
+      "receivedAt": "2026-10-27T17:50:08.769Z",
+      "elapsedMs": 368.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c25be4f8-9733-4fb4-b929-ce2d48221d8c",
+      "clientTimeMs": 198186.39999997616,
+      "revision": "g40-caa8e9acae53b74f6724fad27d3e7cb04a62200c316dc6e7d4167ec8037dd41b:205",
+      "receivedAt": "2026-10-27T17:50:08.788Z",
+      "elapsedMs": 387.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "470b5a35-c088-4df3-b015-4ef7ae8dbbf0",
+      "clientTimeMs": 198530.39999997616,
+      "revision": "g40-caa8e9acae53b74f6724fad27d3e7cb04a62200c316dc6e7d4167ec8037dd41b:205",
+      "receivedAt": "2026-10-27T17:50:09.132Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "470b5a35-c088-4df3-b015-4ef7ae8dbbf0",
+      "clientTimeMs": 198981.80000001192,
+      "revision": "g44-be520dbe11817700d5b36b4fe75712416ca3a24c1e6e32f60716eab7f7b33b33:206",
+      "receivedAt": "2026-10-27T17:50:09.584Z",
+      "elapsedMs": 451.4000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "470b5a35-c088-4df3-b015-4ef7ae8dbbf0",
+      "clientTimeMs": 199010.30000001192,
+      "revision": "g44-be520dbe11817700d5b36b4fe75712416ca3a24c1e6e32f60716eab7f7b33b33:206",
+      "receivedAt": "2026-10-27T17:50:09.612Z",
+      "elapsedMs": 479.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "bc036723-5207-4a19-91f1-814ff9401e7e",
+      "clientTimeMs": 199398.19999998808,
+      "revision": "g44-be520dbe11817700d5b36b4fe75712416ca3a24c1e6e32f60716eab7f7b33b33:206",
+      "receivedAt": "2026-10-27T17:50:10.000Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "bc036723-5207-4a19-91f1-814ff9401e7e",
+      "clientTimeMs": 199432.19999998808,
+      "revision": "g44-be520dbe11817700d5b36b4fe75712416ca3a24c1e6e32f60716eab7f7b33b33:207",
+      "receivedAt": "2026-10-27T17:50:10.034Z",
+      "elapsedMs": 34
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "bc036723-5207-4a19-91f1-814ff9401e7e",
+      "clientTimeMs": 199471.10000002384,
+      "revision": "g44-be520dbe11817700d5b36b4fe75712416ca3a24c1e6e32f60716eab7f7b33b33:207",
+      "receivedAt": "2026-10-27T17:50:10.073Z",
+      "elapsedMs": 72.90000003576279
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b1e2bece-1346-4c39-8552-56e1b97aff42",
+      "clientTimeMs": 199797.89999997616,
+      "revision": "g44-be520dbe11817700d5b36b4fe75712416ca3a24c1e6e32f60716eab7f7b33b33:207",
+      "receivedAt": "2026-10-27T17:50:10.509Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b1e2bece-1346-4c39-8552-56e1b97aff42",
+      "clientTimeMs": 199932,
+      "revision": "g44-be520dbe11817700d5b36b4fe75712416ca3a24c1e6e32f60716eab7f7b33b33:208",
+      "receivedAt": "2026-10-27T17:50:10.534Z",
+      "elapsedMs": 134.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "bb79633a-809d-420c-83ce-dae7fea599a0",
+      "clientTimeMs": 200513.80000001192,
+      "revision": "g45-15757e9e892aee4abe1d8b3cfdd655c48d6d1caf92e56721738560422a1c610f:209",
+      "receivedAt": "2026-10-27T17:50:11.116Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "bb79633a-809d-420c-83ce-dae7fea599a0",
+      "clientTimeMs": 200998.10000002384,
+      "revision": "g53-de9efd1f9be1743810dc86a1f77899edbd6bf76779f72378c7aca1b233bf2fd7:210",
+      "receivedAt": "2026-10-27T17:50:11.599Z",
+      "elapsedMs": 484.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "bb79633a-809d-420c-83ce-dae7fea599a0",
+      "clientTimeMs": 201011.5,
+      "revision": "g53-de9efd1f9be1743810dc86a1f77899edbd6bf76779f72378c7aca1b233bf2fd7:210",
+      "receivedAt": "2026-10-27T17:50:11.613Z",
+      "elapsedMs": 497.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "678725b1-26cc-4f60-a78c-27cfd20dfb25",
+      "clientTimeMs": 201303.10000002384,
+      "revision": "g53-de9efd1f9be1743810dc86a1f77899edbd6bf76779f72378c7aca1b233bf2fd7:210",
+      "receivedAt": "2026-10-27T17:50:11.932Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "678725b1-26cc-4f60-a78c-27cfd20dfb25",
+      "clientTimeMs": 201346.30000001192,
+      "revision": "g53-de9efd1f9be1743810dc86a1f77899edbd6bf76779f72378c7aca1b233bf2fd7:211",
+      "receivedAt": "2026-10-27T17:50:11.947Z",
+      "elapsedMs": 43.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "fa7031ec-02f1-45e2-ba46-608bb7ce1055",
+      "clientTimeMs": 202038.89999997616,
+      "revision": "g55-a6898f0d659e45ee9f779eb28b857ab97988e13e9f177550484952b0d91b4243:212",
+      "receivedAt": "2026-10-27T17:50:12.640Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "fa7031ec-02f1-45e2-ba46-608bb7ce1055",
+      "clientTimeMs": 202085.80000001192,
+      "revision": "g55-a6898f0d659e45ee9f779eb28b857ab97988e13e9f177550484952b0d91b4243:213",
+      "receivedAt": "2026-10-27T17:50:12.687Z",
+      "elapsedMs": 46.90000003576279
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "fa7031ec-02f1-45e2-ba46-608bb7ce1055",
+      "clientTimeMs": 202120.10000002384,
+      "revision": "g55-a6898f0d659e45ee9f779eb28b857ab97988e13e9f177550484952b0d91b4243:213",
+      "receivedAt": "2026-10-27T17:50:12.722Z",
+      "elapsedMs": 81.20000004768372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "756d85fc-fc56-412f-995f-e683ffb01500",
+      "clientTimeMs": 202441.10000002384,
+      "revision": "g55-a6898f0d659e45ee9f779eb28b857ab97988e13e9f177550484952b0d91b4243:213",
+      "receivedAt": "2026-10-27T17:50:13.046Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "756d85fc-fc56-412f-995f-e683ffb01500",
+      "clientTimeMs": 202834.10000002384,
+      "revision": "g56-671b2690a0956e9dac446fb52ca17ae3df5e31fc0882027da457f244d19aee22:214",
+      "receivedAt": "2026-10-27T17:50:13.436Z",
+      "elapsedMs": 393
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "756d85fc-fc56-412f-995f-e683ffb01500",
+      "clientTimeMs": 202851,
+      "revision": "g56-671b2690a0956e9dac446fb52ca17ae3df5e31fc0882027da457f244d19aee22:214",
+      "receivedAt": "2026-10-27T17:50:13.452Z",
+      "elapsedMs": 409.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "0da2ad17-cc59-46df-93ac-646a17e9543b",
+      "clientTimeMs": 203108.39999997616,
+      "revision": "g56-671b2690a0956e9dac446fb52ca17ae3df5e31fc0882027da457f244d19aee22:214",
+      "receivedAt": "2026-10-27T17:50:13.710Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "0da2ad17-cc59-46df-93ac-646a17e9543b",
+      "clientTimeMs": 203615.10000002384,
+      "revision": "g60-667817d8a769f58ed4f9b75e70024426080e1cc2347f2e84f4e0abc3e512ffdd:215",
+      "receivedAt": "2026-10-27T17:50:14.217Z",
+      "elapsedMs": 506.7000000476837
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "0da2ad17-cc59-46df-93ac-646a17e9543b",
+      "clientTimeMs": 203633.10000002384,
+      "revision": "g60-667817d8a769f58ed4f9b75e70024426080e1cc2347f2e84f4e0abc3e512ffdd:215",
+      "receivedAt": "2026-10-27T17:50:14.235Z",
+      "elapsedMs": 524.7000000476837
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "ea9e0d3d-0f81-49c6-b13b-129885db1ad4",
+      "clientTimeMs": 203958.80000001192,
+      "revision": "g60-667817d8a769f58ed4f9b75e70024426080e1cc2347f2e84f4e0abc3e512ffdd:215",
+      "receivedAt": "2026-10-27T17:50:14.560Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "ea9e0d3d-0f81-49c6-b13b-129885db1ad4",
+      "clientTimeMs": 204007.69999998808,
+      "revision": "g60-667817d8a769f58ed4f9b75e70024426080e1cc2347f2e84f4e0abc3e512ffdd:216",
+      "receivedAt": "2026-10-27T17:50:14.610Z",
+      "elapsedMs": 48.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "ea9e0d3d-0f81-49c6-b13b-129885db1ad4",
+      "clientTimeMs": 204035.5,
+      "revision": "g60-667817d8a769f58ed4f9b75e70024426080e1cc2347f2e84f4e0abc3e512ffdd:216",
+      "receivedAt": "2026-10-27T17:50:14.637Z",
+      "elapsedMs": 76.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "bfe36113-d3e6-4088-aff0-a84db0971594",
+      "clientTimeMs": 204378.30000001192,
+      "revision": "g60-667817d8a769f58ed4f9b75e70024426080e1cc2347f2e84f4e0abc3e512ffdd:216",
+      "receivedAt": "2026-10-27T17:50:15.048Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "bfe36113-d3e6-4088-aff0-a84db0971594",
+      "clientTimeMs": 204501.19999998808,
+      "revision": "g60-667817d8a769f58ed4f9b75e70024426080e1cc2347f2e84f4e0abc3e512ffdd:217",
+      "receivedAt": "2026-10-27T17:50:15.103Z",
+      "elapsedMs": 122.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "838b03d7-d69a-4de2-a835-6956655ea63f",
+      "clientTimeMs": 205040.30000001192,
+      "revision": "g61-245bb58e4ced8bea2654b7e6c9f2f0ee153e391d56a4690bf9f7e2b13bedfb24:218",
+      "receivedAt": "2026-10-27T17:50:15.643Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "838b03d7-d69a-4de2-a835-6956655ea63f",
+      "clientTimeMs": 205568.39999997616,
+      "revision": "g69-46b892cbb8d632a80331bfee56e6faca2f308d6b6af4b3ab902b19bae716a792:219",
+      "receivedAt": "2026-10-27T17:50:16.169Z",
+      "elapsedMs": 528.0999999642372
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "838b03d7-d69a-4de2-a835-6956655ea63f",
+      "clientTimeMs": 205581.10000002384,
+      "revision": "g69-46b892cbb8d632a80331bfee56e6faca2f308d6b6af4b3ab902b19bae716a792:219",
+      "receivedAt": "2026-10-27T17:50:16.182Z",
+      "elapsedMs": 540.8000000119209
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "9c404be5-9406-4585-9048-ae33cd4e89bc",
+      "clientTimeMs": 205797.30000001192,
+      "revision": "g69-46b892cbb8d632a80331bfee56e6faca2f308d6b6af4b3ab902b19bae716a792:219",
+      "receivedAt": "2026-10-27T17:50:16.398Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "9c404be5-9406-4585-9048-ae33cd4e89bc",
+      "clientTimeMs": 206096.19999998808,
+      "revision": "g71-6a638429e055842772eb6a00c7e7ba7c0870bd2a6870685da43b7905be78007d:220",
+      "receivedAt": "2026-10-27T17:50:16.697Z",
+      "elapsedMs": 298.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "9c404be5-9406-4585-9048-ae33cd4e89bc",
+      "clientTimeMs": 206108.10000002384,
+      "revision": "g71-6a638429e055842772eb6a00c7e7ba7c0870bd2a6870685da43b7905be78007d:220",
+      "receivedAt": "2026-10-27T17:50:16.709Z",
+      "elapsedMs": 310.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "3061dccf-f978-4a95-86c0-ca45d659052a",
+      "clientTimeMs": 206425.89999997616,
+      "revision": "g71-6a638429e055842772eb6a00c7e7ba7c0870bd2a6870685da43b7905be78007d:220",
+      "receivedAt": "2026-10-27T17:50:17.028Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "3061dccf-f978-4a95-86c0-ca45d659052a",
+      "clientTimeMs": 206476,
+      "revision": "g71-6a638429e055842772eb6a00c7e7ba7c0870bd2a6870685da43b7905be78007d:221",
+      "receivedAt": "2026-10-27T17:50:17.078Z",
+      "elapsedMs": 50.10000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "3061dccf-f978-4a95-86c0-ca45d659052a",
+      "clientTimeMs": 206521,
+      "revision": "g71-6a638429e055842772eb6a00c7e7ba7c0870bd2a6870685da43b7905be78007d:221",
+      "receivedAt": "2026-10-27T17:50:17.123Z",
+      "elapsedMs": 95.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "597643f8-8c3a-4f75-9ef7-cad679b77c84",
+      "clientTimeMs": 206841.10000002384,
+      "revision": "g71-6a638429e055842772eb6a00c7e7ba7c0870bd2a6870685da43b7905be78007d:221",
+      "receivedAt": "2026-10-27T17:50:17.443Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "597643f8-8c3a-4f75-9ef7-cad679b77c84",
+      "clientTimeMs": 207201,
+      "revision": "g72-3c682eaf500e647a06c1a7b759cb29506fde2995191c82f3de3579c149c90346:222",
+      "receivedAt": "2026-10-27T17:50:17.802Z",
+      "elapsedMs": 359.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "597643f8-8c3a-4f75-9ef7-cad679b77c84",
+      "clientTimeMs": 207215.30000001192,
+      "revision": "g72-3c682eaf500e647a06c1a7b759cb29506fde2995191c82f3de3579c149c90346:222",
+      "receivedAt": "2026-10-27T17:50:17.816Z",
+      "elapsedMs": 374.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b62f5ea8-9d6b-4477-8b31-b7702bb44507",
+      "clientTimeMs": 207491.5,
+      "revision": "g72-3c682eaf500e647a06c1a7b759cb29506fde2995191c82f3de3579c149c90346:222",
+      "receivedAt": "2026-10-27T17:50:18.093Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "b62f5ea8-9d6b-4477-8b31-b7702bb44507",
+      "clientTimeMs": 207964.19999998808,
+      "revision": "g76-19bf135e78afa959960d6b4219c36a8bb8da65f0d7fbcffa5d7ae77e52762f4b:223",
+      "receivedAt": "2026-10-27T17:50:18.567Z",
+      "elapsedMs": 472.69999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b62f5ea8-9d6b-4477-8b31-b7702bb44507",
+      "clientTimeMs": 207983.10000002384,
+      "revision": "g76-19bf135e78afa959960d6b4219c36a8bb8da65f0d7fbcffa5d7ae77e52762f4b:223",
+      "receivedAt": "2026-10-27T17:50:18.584Z",
+      "elapsedMs": 491.60000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "7361634b-8fdd-41e1-8d36-3a75d8e973e5",
+      "clientTimeMs": 208320.19999998808,
+      "revision": "g76-19bf135e78afa959960d6b4219c36a8bb8da65f0d7fbcffa5d7ae77e52762f4b:223",
+      "receivedAt": "2026-10-27T17:50:18.922Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "7361634b-8fdd-41e1-8d36-3a75d8e973e5",
+      "clientTimeMs": 208385.19999998808,
+      "revision": "g76-19bf135e78afa959960d6b4219c36a8bb8da65f0d7fbcffa5d7ae77e52762f4b:224",
+      "receivedAt": "2026-10-27T17:50:18.987Z",
+      "elapsedMs": 65
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "7361634b-8fdd-41e1-8d36-3a75d8e973e5",
+      "clientTimeMs": 208403.89999997616,
+      "revision": "g76-19bf135e78afa959960d6b4219c36a8bb8da65f0d7fbcffa5d7ae77e52762f4b:224",
+      "receivedAt": "2026-10-27T17:50:19.006Z",
+      "elapsedMs": 83.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "695edeb7-b528-4aa4-82d4-e4b7d231dd26",
+      "clientTimeMs": 208706.80000001192,
+      "revision": "g76-19bf135e78afa959960d6b4219c36a8bb8da65f0d7fbcffa5d7ae77e52762f4b:224",
+      "receivedAt": "2026-10-27T17:50:19.546Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "695edeb7-b528-4aa4-82d4-e4b7d231dd26",
+      "clientTimeMs": 208966.30000001192,
+      "revision": "g76-19bf135e78afa959960d6b4219c36a8bb8da65f0d7fbcffa5d7ae77e52762f4b:225",
+      "receivedAt": "2026-10-27T17:50:19.568Z",
+      "elapsedMs": 259.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "dc75801b-a6f7-47a7-b0c2-f0aec6ca0535",
+      "clientTimeMs": 261538.19999998808,
+      "revision": "g77-373642404657cb8a0196fa5753f1cb50166cc9465a0d7b93ea51994351aed09c:261",
+      "receivedAt": "2026-10-27T17:51:12.140Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "dc75801b-a6f7-47a7-b0c2-f0aec6ca0535",
+      "clientTimeMs": 262080.69999998808,
+      "revision": "g85-cf788c573d074c26c266838d183f45737c35484024f5418a43c904d9177dc2b1:262",
+      "receivedAt": "2026-10-27T17:51:12.682Z",
+      "elapsedMs": 542.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "dc75801b-a6f7-47a7-b0c2-f0aec6ca0535",
+      "clientTimeMs": 262097,
+      "revision": "g85-cf788c573d074c26c266838d183f45737c35484024f5418a43c904d9177dc2b1:262",
+      "receivedAt": "2026-10-27T17:51:12.698Z",
+      "elapsedMs": 558.8000000119209
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "7f4616a3-1023-49c1-8bc4-7d1988ee41da",
+      "clientTimeMs": 262301.60000002384,
+      "revision": "g85-cf788c573d074c26c266838d183f45737c35484024f5418a43c904d9177dc2b1:262",
+      "receivedAt": "2026-10-27T17:51:12.902Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "7f4616a3-1023-49c1-8bc4-7d1988ee41da",
+      "clientTimeMs": 262595.5,
+      "revision": "g87-8c482621d5060102e95a588efa7edda97a57ec0d311903edf96210fd2cc7907a:263",
+      "receivedAt": "2026-10-27T17:51:13.196Z",
+      "elapsedMs": 293.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "7f4616a3-1023-49c1-8bc4-7d1988ee41da",
+      "clientTimeMs": 262606,
+      "revision": "g87-8c482621d5060102e95a588efa7edda97a57ec0d311903edf96210fd2cc7907a:263",
+      "receivedAt": "2026-10-27T17:51:13.207Z",
+      "elapsedMs": 304.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "ef69011e-ef48-4c4f-8980-9f9d13694ef1",
+      "clientTimeMs": 262889.8000000119,
+      "revision": "g87-8c482621d5060102e95a588efa7edda97a57ec0d311903edf96210fd2cc7907a:263",
+      "receivedAt": "2026-10-27T17:51:13.491Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "ef69011e-ef48-4c4f-8980-9f9d13694ef1",
+      "clientTimeMs": 262959.39999997616,
+      "revision": "g87-8c482621d5060102e95a588efa7edda97a57ec0d311903edf96210fd2cc7907a:264",
+      "receivedAt": "2026-10-27T17:51:13.561Z",
+      "elapsedMs": 69.59999996423721
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "ef69011e-ef48-4c4f-8980-9f9d13694ef1",
+      "clientTimeMs": 262982.6999999881,
+      "revision": "g87-8c482621d5060102e95a588efa7edda97a57ec0d311903edf96210fd2cc7907a:264",
+      "receivedAt": "2026-10-27T17:51:13.585Z",
+      "elapsedMs": 92.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "97146845-a8b3-4e53-ba7f-6cafc758dc8a",
+      "clientTimeMs": 263345.39999997616,
+      "revision": "g87-8c482621d5060102e95a588efa7edda97a57ec0d311903edf96210fd2cc7907a:264",
+      "receivedAt": "2026-10-27T17:51:13.949Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "97146845-a8b3-4e53-ba7f-6cafc758dc8a",
+      "clientTimeMs": 263775.1999999881,
+      "revision": "g88-d73c9afe65b2698c019d8981dfa886b8814c6017283e5c66581a7fe4d0be2594:265",
+      "receivedAt": "2026-10-27T17:51:14.376Z",
+      "elapsedMs": 429.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "97146845-a8b3-4e53-ba7f-6cafc758dc8a",
+      "clientTimeMs": 263789,
+      "revision": "g88-d73c9afe65b2698c019d8981dfa886b8814c6017283e5c66581a7fe4d0be2594:265",
+      "receivedAt": "2026-10-27T17:51:14.391Z",
+      "elapsedMs": 443.60000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "122bc808-4d1a-4581-8fc2-6dae3de05a3c",
+      "clientTimeMs": 264078.89999997616,
+      "revision": "g88-d73c9afe65b2698c019d8981dfa886b8814c6017283e5c66581a7fe4d0be2594:265",
+      "receivedAt": "2026-10-27T17:51:15.086Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "122bc808-4d1a-4581-8fc2-6dae3de05a3c",
+      "clientTimeMs": 264505.10000002384,
+      "revision": "g88-d73c9afe65b2698c019d8981dfa886b8814c6017283e5c66581a7fe4d0be2594:266",
+      "receivedAt": "2026-10-27T17:51:15.106Z",
+      "elapsedMs": 426.2000000476837
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c50f7bc4-6644-415a-bd0b-69f884fb4df4",
+      "clientTimeMs": 265351.89999997616,
+      "revision": "g92-9cc03d8145f0fd7ccef20b33620cf4745eb9c9a87295f2b59600d9bac4ef3b55:267",
+      "receivedAt": "2026-10-27T17:51:15.953Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c50f7bc4-6644-415a-bd0b-69f884fb4df4",
+      "clientTimeMs": 265440.89999997616,
+      "revision": "g92-9cc03d8145f0fd7ccef20b33620cf4745eb9c9a87295f2b59600d9bac4ef3b55:268",
+      "receivedAt": "2026-10-27T17:51:16.042Z",
+      "elapsedMs": 89
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c50f7bc4-6644-415a-bd0b-69f884fb4df4",
+      "clientTimeMs": 265481,
+      "revision": "g92-9cc03d8145f0fd7ccef20b33620cf4745eb9c9a87295f2b59600d9bac4ef3b55:268",
+      "receivedAt": "2026-10-27T17:51:16.083Z",
+      "elapsedMs": 129.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "ccb241ed-c191-4e91-8089-7370fe74474e",
+      "clientTimeMs": 265782,
+      "revision": "g92-9cc03d8145f0fd7ccef20b33620cf4745eb9c9a87295f2b59600d9bac4ef3b55:268",
+      "receivedAt": "2026-10-27T17:51:16.568Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "ccb241ed-c191-4e91-8089-7370fe74474e",
+      "clientTimeMs": 266009.5,
+      "revision": "g92-9cc03d8145f0fd7ccef20b33620cf4745eb9c9a87295f2b59600d9bac4ef3b55:269",
+      "receivedAt": "2026-10-27T17:51:16.914Z",
+      "elapsedMs": 227.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "36e5de04-e0b5-4131-a22e-711b0adf4fcc",
+      "clientTimeMs": 266589.8000000119,
+      "revision": "g93-f4dd90ae3d25b3945536ce56ef51b6250066bf17f93f6020097a11683423a9ea:270",
+      "receivedAt": "2026-10-27T17:51:17.191Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "36e5de04-e0b5-4131-a22e-711b0adf4fcc",
+      "clientTimeMs": 267503.60000002384,
+      "revision": "g101-42e7476043fe90d8f8c279647de70d0f7099589f27715bfc2b0ce5a239a2acc8:271",
+      "receivedAt": "2026-10-27T17:51:18.105Z",
+      "elapsedMs": 913.8000000119209
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "36e5de04-e0b5-4131-a22e-711b0adf4fcc",
+      "clientTimeMs": 267520,
+      "revision": "g101-42e7476043fe90d8f8c279647de70d0f7099589f27715bfc2b0ce5a239a2acc8:271",
+      "receivedAt": "2026-10-27T17:51:18.121Z",
+      "elapsedMs": 930.1999999880791
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "8e7f624c-4409-40bf-98ce-2814faaf1336",
+      "clientTimeMs": 267763.89999997616,
+      "revision": "g101-42e7476043fe90d8f8c279647de70d0f7099589f27715bfc2b0ce5a239a2acc8:271",
+      "receivedAt": "2026-10-27T17:51:18.365Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "8e7f624c-4409-40bf-98ce-2814faaf1336",
+      "clientTimeMs": 268168.89999997616,
+      "revision": "g103-402bab35676257d1c21a98c7b20861643ff60710dd9f4f38db797c12d1513fea:272",
+      "receivedAt": "2026-10-27T17:51:18.771Z",
+      "elapsedMs": 405
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "8e7f624c-4409-40bf-98ce-2814faaf1336",
+      "clientTimeMs": 268183.8000000119,
+      "revision": "g103-402bab35676257d1c21a98c7b20861643ff60710dd9f4f38db797c12d1513fea:272",
+      "receivedAt": "2026-10-27T17:51:18.785Z",
+      "elapsedMs": 419.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c56ca815-4490-4adb-9a9c-61e504cd1b91",
+      "clientTimeMs": 268471.8000000119,
+      "revision": "g103-402bab35676257d1c21a98c7b20861643ff60710dd9f4f38db797c12d1513fea:272",
+      "receivedAt": "2026-10-27T17:51:19.073Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c56ca815-4490-4adb-9a9c-61e504cd1b91",
+      "clientTimeMs": 268572,
+      "revision": "g103-402bab35676257d1c21a98c7b20861643ff60710dd9f4f38db797c12d1513fea:273",
+      "receivedAt": "2026-10-27T17:51:19.174Z",
+      "elapsedMs": 100.19999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c56ca815-4490-4adb-9a9c-61e504cd1b91",
+      "clientTimeMs": 268615.6999999881,
+      "revision": "g103-402bab35676257d1c21a98c7b20861643ff60710dd9f4f38db797c12d1513fea:273",
+      "receivedAt": "2026-10-27T17:51:19.218Z",
+      "elapsedMs": 143.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b6427439-c438-4a8f-9a44-834281ae5389",
+      "clientTimeMs": 268903.6999999881,
+      "revision": "g103-402bab35676257d1c21a98c7b20861643ff60710dd9f4f38db797c12d1513fea:273",
+      "receivedAt": "2026-10-27T17:51:19.505Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "b6427439-c438-4a8f-9a44-834281ae5389",
+      "clientTimeMs": 269227.39999997616,
+      "revision": "g104-e14980863dd9c982f99959c888ad2714577ad3c09eef6fbdb4778596f0173134:274",
+      "receivedAt": "2026-10-27T17:51:19.829Z",
+      "elapsedMs": 323.69999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b6427439-c438-4a8f-9a44-834281ae5389",
+      "clientTimeMs": 269242.10000002384,
+      "revision": "g104-e14980863dd9c982f99959c888ad2714577ad3c09eef6fbdb4778596f0173134:274",
+      "receivedAt": "2026-10-27T17:51:19.843Z",
+      "elapsedMs": 338.4000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c9f37f95-9571-4fa0-a490-f49f4719e322",
+      "clientTimeMs": 269476.60000002384,
+      "revision": "g104-e14980863dd9c982f99959c888ad2714577ad3c09eef6fbdb4778596f0173134:274",
+      "receivedAt": "2026-10-27T17:51:20.078Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c9f37f95-9571-4fa0-a490-f49f4719e322",
+      "clientTimeMs": 269963.39999997616,
+      "revision": "g108-6972178e1074c2f51b44f36088b835c7509050554215a2c2b3fae625891a3f3c:275",
+      "receivedAt": "2026-10-27T17:51:20.565Z",
+      "elapsedMs": 486.7999999523163
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c9f37f95-9571-4fa0-a490-f49f4719e322",
+      "clientTimeMs": 269977.8000000119,
+      "revision": "g108-6972178e1074c2f51b44f36088b835c7509050554215a2c2b3fae625891a3f3c:275",
+      "receivedAt": "2026-10-27T17:51:20.579Z",
+      "elapsedMs": 501.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "231bf1f6-3fa0-4840-ae79-514edb6b26aa",
+      "clientTimeMs": 270333.89999997616,
+      "revision": "g108-6972178e1074c2f51b44f36088b835c7509050554215a2c2b3fae625891a3f3c:275",
+      "receivedAt": "2026-10-27T17:51:20.935Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "231bf1f6-3fa0-4840-ae79-514edb6b26aa",
+      "clientTimeMs": 270380.89999997616,
+      "revision": "g108-6972178e1074c2f51b44f36088b835c7509050554215a2c2b3fae625891a3f3c:276",
+      "receivedAt": "2026-10-27T17:51:20.983Z",
+      "elapsedMs": 47
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "7a78b3c6-7c17-4d9d-98ec-e26a864b0dcc",
+      "clientTimeMs": 270751.60000002384,
+      "revision": "g108-6972178e1074c2f51b44f36088b835c7509050554215a2c2b3fae625891a3f3c:277",
+      "receivedAt": "2026-10-27T17:51:21.353Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "7a78b3c6-7c17-4d9d-98ec-e26a864b0dcc",
+      "clientTimeMs": 270873,
+      "revision": "g109-745c2e94e24bd1e15ddb5766749a8954a85912a561166383778c7a58bb7da37a:278",
+      "receivedAt": "2026-10-27T17:51:21.475Z",
+      "elapsedMs": 121.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "7a78b3c6-7c17-4d9d-98ec-e26a864b0dcc",
+      "clientTimeMs": 270890.60000002384,
+      "revision": "g109-745c2e94e24bd1e15ddb5766749a8954a85912a561166383778c7a58bb7da37a:278",
+      "receivedAt": "2026-10-27T17:51:21.492Z",
+      "elapsedMs": 139
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "f908c622-8d39-44e1-ba50-09a4ac3717b0",
+      "clientTimeMs": 271170.39999997616,
+      "revision": "g109-745c2e94e24bd1e15ddb5766749a8954a85912a561166383778c7a58bb7da37a:278",
+      "receivedAt": "2026-10-27T17:51:21.772Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "f908c622-8d39-44e1-ba50-09a4ac3717b0",
+      "clientTimeMs": 271601.1999999881,
+      "revision": "g114-47259b0de67fcecfd8518c6e246cafd7499cf3fdbad8564c3c025126ed80fa00:279",
+      "receivedAt": "2026-10-27T17:51:22.202Z",
+      "elapsedMs": 430.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "f908c622-8d39-44e1-ba50-09a4ac3717b0",
+      "clientTimeMs": 271614.3000000119,
+      "revision": "g114-47259b0de67fcecfd8518c6e246cafd7499cf3fdbad8564c3c025126ed80fa00:279",
+      "receivedAt": "2026-10-27T17:51:22.216Z",
+      "elapsedMs": 443.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "51f7b571-fe43-4822-963a-ba9734b5b4d9",
+      "clientTimeMs": 480,
+      "revision": "g114-47259b0de67fcecfd8518c6e246cafd7499cf3fdbad8564c3c025126ed80fa00:280",
+      "receivedAt": "2026-10-27T17:51:22.859Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "51f7b571-fe43-4822-963a-ba9734b5b4d9",
+      "clientTimeMs": 789.1999999880791,
+      "revision": "g1-0e94404ec2aeab6be9b7fc851243f6961c7b315cbb42c41dce7297688cba1e89:281",
+      "receivedAt": "2026-10-27T17:51:23.168Z",
+      "elapsedMs": 309.19999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "51f7b571-fe43-4822-963a-ba9734b5b4d9",
+      "clientTimeMs": 802.8999999761581,
+      "revision": "g1-0e94404ec2aeab6be9b7fc851243f6961c7b315cbb42c41dce7297688cba1e89:281",
+      "receivedAt": "2026-10-27T17:51:23.181Z",
+      "elapsedMs": 322.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "9d131267-6c4a-4236-b4a9-b8aa7bf4824b",
+      "clientTimeMs": 1014.0999999642372,
+      "revision": "g1-0e94404ec2aeab6be9b7fc851243f6961c7b315cbb42c41dce7297688cba1e89:281",
+      "receivedAt": "2026-10-27T17:51:23.393Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "9d131267-6c4a-4236-b4a9-b8aa7bf4824b",
+      "clientTimeMs": 1368.5999999642372,
+      "revision": "g1-0e94404ec2aeab6be9b7fc851243f6961c7b315cbb42c41dce7297688cba1e89:282",
+      "receivedAt": "2026-10-27T17:51:23.747Z",
+      "elapsedMs": 354.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "9d131267-6c4a-4236-b4a9-b8aa7bf4824b",
+      "clientTimeMs": 1401.699999988079,
+      "revision": "g1-0e94404ec2aeab6be9b7fc851243f6961c7b315cbb42c41dce7297688cba1e89:282",
+      "receivedAt": "2026-10-27T17:51:23.780Z",
+      "elapsedMs": 387.60000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "625462bb-fb82-4de3-b6a2-2ed3055cbe52",
+      "clientTimeMs": 1883.3999999761581,
+      "revision": "g1-0e94404ec2aeab6be9b7fc851243f6961c7b315cbb42c41dce7297688cba1e89:283",
+      "receivedAt": "2026-10-27T17:51:24.364Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "625462bb-fb82-4de3-b6a2-2ed3055cbe52",
+      "clientTimeMs": 2031.199999988079,
+      "revision": "g1-0e94404ec2aeab6be9b7fc851243f6961c7b315cbb42c41dce7297688cba1e89:284",
+      "receivedAt": "2026-10-27T17:51:24.684Z",
+      "elapsedMs": 147.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "3b00f895-7d2e-4c7c-8560-7dfe21ad058e",
+      "clientTimeMs": 2621.899999976158,
+      "revision": "g2-2798201d779fb4891afd8c0b42f7d6600901af4b9968b294c9acb1d8c356e050:285",
+      "receivedAt": "2026-10-27T17:51:25.000Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "3b00f895-7d2e-4c7c-8560-7dfe21ad058e",
+      "clientTimeMs": 2982.199999988079,
+      "revision": "g7-3faa893a802f111cbf6a5995a99f09542ebe1889df65b27896c655cf09e9bfc4:286",
+      "receivedAt": "2026-10-27T17:51:25.360Z",
+      "elapsedMs": 360.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "3b00f895-7d2e-4c7c-8560-7dfe21ad058e",
+      "clientTimeMs": 2999.599999964237,
+      "revision": "g7-3faa893a802f111cbf6a5995a99f09542ebe1889df65b27896c655cf09e9bfc4:286",
+      "receivedAt": "2026-10-27T17:51:25.378Z",
+      "elapsedMs": 377.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "779df8f9-2300-4d31-8801-daaf6292e037",
+      "clientTimeMs": 3392,
+      "revision": "g7-3faa893a802f111cbf6a5995a99f09542ebe1889df65b27896c655cf09e9bfc4:286",
+      "receivedAt": "2026-10-27T17:51:25.916Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "779df8f9-2300-4d31-8801-daaf6292e037",
+      "clientTimeMs": 3560.899999976158,
+      "revision": "g7-3faa893a802f111cbf6a5995a99f09542ebe1889df65b27896c655cf09e9bfc4:287",
+      "receivedAt": "2026-10-27T17:51:25.953Z",
+      "elapsedMs": 168.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "d04ee478-5afd-41d4-a52e-b1d43a121095",
+      "clientTimeMs": 3875.099999964237,
+      "revision": "g7-3faa893a802f111cbf6a5995a99f09542ebe1889df65b27896c655cf09e9bfc4:288",
+      "receivedAt": "2026-10-27T17:51:26.254Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "d04ee478-5afd-41d4-a52e-b1d43a121095",
+      "clientTimeMs": 4258.800000011921,
+      "revision": "g8-1ae03bc9c7ef9e6065f43b30e24679f8e84f3f2db844536056fe0ea0a86b7338:289",
+      "receivedAt": "2026-10-27T17:51:26.640Z",
+      "elapsedMs": 383.7000000476837
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "d04ee478-5afd-41d4-a52e-b1d43a121095",
+      "clientTimeMs": 4277.699999988079,
+      "revision": "g8-1ae03bc9c7ef9e6065f43b30e24679f8e84f3f2db844536056fe0ea0a86b7338:289",
+      "receivedAt": "2026-10-27T17:51:26.656Z",
+      "elapsedMs": 402.60000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c39510fc-d781-4793-8d5e-68b0ef5671ba",
+      "clientTimeMs": 4534,
+      "revision": "g8-1ae03bc9c7ef9e6065f43b30e24679f8e84f3f2db844536056fe0ea0a86b7338:289",
+      "receivedAt": "2026-10-27T17:51:26.912Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c39510fc-d781-4793-8d5e-68b0ef5671ba",
+      "clientTimeMs": 4955,
+      "revision": "g12-b4de1306b88e3a06a2e3baf9d4e5cf995c42fe81f941b0a88e99ec0b492017c2:290",
+      "receivedAt": "2026-10-27T17:51:27.333Z",
+      "elapsedMs": 421
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c39510fc-d781-4793-8d5e-68b0ef5671ba",
+      "clientTimeMs": 4969.599999964237,
+      "revision": "g12-b4de1306b88e3a06a2e3baf9d4e5cf995c42fe81f941b0a88e99ec0b492017c2:290",
+      "receivedAt": "2026-10-27T17:51:27.348Z",
+      "elapsedMs": 435.5999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "8bb63a03-3206-4cd2-adc3-3d7074e41f3f",
+      "clientTimeMs": 5680.399999976158,
+      "revision": "g12-b4de1306b88e3a06a2e3baf9d4e5cf995c42fe81f941b0a88e99ec0b492017c2:290",
+      "receivedAt": "2026-10-27T17:51:28.058Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "8bb63a03-3206-4cd2-adc3-3d7074e41f3f",
+      "clientTimeMs": 5746.199999988079,
+      "revision": "g12-b4de1306b88e3a06a2e3baf9d4e5cf995c42fe81f941b0a88e99ec0b492017c2:291",
+      "receivedAt": "2026-10-27T17:51:28.125Z",
+      "elapsedMs": 65.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "8bb63a03-3206-4cd2-adc3-3d7074e41f3f",
+      "clientTimeMs": 5784.099999964237,
+      "revision": "g12-b4de1306b88e3a06a2e3baf9d4e5cf995c42fe81f941b0a88e99ec0b492017c2:291",
+      "receivedAt": "2026-10-27T17:51:28.162Z",
+      "elapsedMs": 103.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "27fa23c7-0dd8-46f2-a899-28deb10c65c1",
+      "clientTimeMs": 5967.5,
+      "revision": "g12-b4de1306b88e3a06a2e3baf9d4e5cf995c42fe81f941b0a88e99ec0b492017c2:291",
+      "receivedAt": "2026-10-27T17:51:28.345Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "27fa23c7-0dd8-46f2-a899-28deb10c65c1",
+      "clientTimeMs": 6224.5,
+      "revision": "g13-44793451d737da58af8709cf0ead26b020b648e451c2f9d3a8f1bd4200cd8770:292",
+      "receivedAt": "2026-10-27T17:51:28.602Z",
+      "elapsedMs": 257
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "27fa23c7-0dd8-46f2-a899-28deb10c65c1",
+      "clientTimeMs": 6236.300000011921,
+      "revision": "g13-44793451d737da58af8709cf0ead26b020b648e451c2f9d3a8f1bd4200cd8770:292",
+      "receivedAt": "2026-10-27T17:51:28.614Z",
+      "elapsedMs": 268.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c842458d-1eba-479c-94c3-aed19b684b6a",
+      "clientTimeMs": 6486.199999988079,
+      "revision": "g13-44793451d737da58af8709cf0ead26b020b648e451c2f9d3a8f1bd4200cd8770:292",
+      "receivedAt": "2026-10-27T17:51:28.864Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c842458d-1eba-479c-94c3-aed19b684b6a",
+      "clientTimeMs": 6846,
+      "revision": "g21-4f419fa1740a720bf9388a0cdda20546dc4726381b4f31637065f29fa7167c53:293",
+      "receivedAt": "2026-10-27T17:51:29.224Z",
+      "elapsedMs": 359.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c842458d-1eba-479c-94c3-aed19b684b6a",
+      "clientTimeMs": 6861.399999976158,
+      "revision": "g21-4f419fa1740a720bf9388a0cdda20546dc4726381b4f31637065f29fa7167c53:293",
+      "receivedAt": "2026-10-27T17:51:29.239Z",
+      "elapsedMs": 375.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "40254e0b-cc4c-41fc-8ac2-47c2fda25c64",
+      "clientTimeMs": 7109.800000011921,
+      "revision": "g21-4f419fa1740a720bf9388a0cdda20546dc4726381b4f31637065f29fa7167c53:293",
+      "receivedAt": "2026-10-27T17:51:29.487Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "40254e0b-cc4c-41fc-8ac2-47c2fda25c64",
+      "clientTimeMs": 7401.800000011921,
+      "revision": "g23-51d3fec754bba4926e313504478a66d8d5b77ee13716c9cf1bee57fede623d1b:294",
+      "receivedAt": "2026-10-27T17:51:29.780Z",
+      "elapsedMs": 292
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "40254e0b-cc4c-41fc-8ac2-47c2fda25c64",
+      "clientTimeMs": 7419.599999964237,
+      "revision": "g23-51d3fec754bba4926e313504478a66d8d5b77ee13716c9cf1bee57fede623d1b:294",
+      "receivedAt": "2026-10-27T17:51:29.798Z",
+      "elapsedMs": 309.7999999523163
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "116258aa-3e0b-490c-9136-de6beca26950",
+      "clientTimeMs": 7726.199999988079,
+      "revision": "g23-51d3fec754bba4926e313504478a66d8d5b77ee13716c9cf1bee57fede623d1b:294",
+      "receivedAt": "2026-10-27T17:51:30.328Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "116258aa-3e0b-490c-9136-de6beca26950",
+      "clientTimeMs": 7971.199999988079,
+      "revision": "g23-51d3fec754bba4926e313504478a66d8d5b77ee13716c9cf1bee57fede623d1b:295",
+      "receivedAt": "2026-10-27T17:51:30.349Z",
+      "elapsedMs": 245
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "bcf6a1f6-68f4-4800-9311-e894f59d9778",
+      "clientTimeMs": 8271.199999988079,
+      "revision": "g23-51d3fec754bba4926e313504478a66d8d5b77ee13716c9cf1bee57fede623d1b:296",
+      "receivedAt": "2026-10-27T17:51:30.650Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "bcf6a1f6-68f4-4800-9311-e894f59d9778",
+      "clientTimeMs": 8621.099999964237,
+      "revision": "g24-4d283d7901f9ce744556ccb178c861fc2bac73ee0ec4c6bb1c9e722d5b0564b7:297",
+      "receivedAt": "2026-10-27T17:51:30.999Z",
+      "elapsedMs": 349.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "bcf6a1f6-68f4-4800-9311-e894f59d9778",
+      "clientTimeMs": 8634.199999988079,
+      "revision": "g24-4d283d7901f9ce744556ccb178c861fc2bac73ee0ec4c6bb1c9e722d5b0564b7:297",
+      "receivedAt": "2026-10-27T17:51:31.012Z",
+      "elapsedMs": 363
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a198e8e9-3a40-403a-a3ff-ccd19c49dcf0",
+      "clientTimeMs": 8920.099999964237,
+      "revision": "g24-4d283d7901f9ce744556ccb178c861fc2bac73ee0ec4c6bb1c9e722d5b0564b7:297",
+      "receivedAt": "2026-10-27T17:51:31.298Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a198e8e9-3a40-403a-a3ff-ccd19c49dcf0",
+      "clientTimeMs": 9270.199999988079,
+      "revision": "g28-00bbca51dedafaff8c774d298e62d971f5536d6613c354146c1a654b858882d7:298",
+      "receivedAt": "2026-10-27T17:51:31.648Z",
+      "elapsedMs": 350.10000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a198e8e9-3a40-403a-a3ff-ccd19c49dcf0",
+      "clientTimeMs": 9282.5,
+      "revision": "g28-00bbca51dedafaff8c774d298e62d971f5536d6613c354146c1a654b858882d7:298",
+      "receivedAt": "2026-10-27T17:51:31.660Z",
+      "elapsedMs": 362.4000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c060534e-106f-4419-a27f-57ca98e392df",
+      "clientTimeMs": 9601.5,
+      "revision": "g28-00bbca51dedafaff8c774d298e62d971f5536d6613c354146c1a654b858882d7:298",
+      "receivedAt": "2026-10-27T17:51:31.979Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c060534e-106f-4419-a27f-57ca98e392df",
+      "clientTimeMs": 9634.699999988079,
+      "revision": "g28-00bbca51dedafaff8c774d298e62d971f5536d6613c354146c1a654b858882d7:299",
+      "receivedAt": "2026-10-27T17:51:32.013Z",
+      "elapsedMs": 33.19999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c060534e-106f-4419-a27f-57ca98e392df",
+      "clientTimeMs": 9650.399999976158,
+      "revision": "g28-00bbca51dedafaff8c774d298e62d971f5536d6613c354146c1a654b858882d7:299",
+      "receivedAt": "2026-10-27T17:51:32.029Z",
+      "elapsedMs": 48.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a591935e-39e4-4c40-bbf6-06429fcafe5f",
+      "clientTimeMs": 10001.599999964237,
+      "revision": "g28-00bbca51dedafaff8c774d298e62d971f5536d6613c354146c1a654b858882d7:299",
+      "receivedAt": "2026-10-27T17:51:32.380Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a591935e-39e4-4c40-bbf6-06429fcafe5f",
+      "clientTimeMs": 10294.5,
+      "revision": "g29-099e6799dabdd2d834f75d959097d41a9bfde97b686fa3b0735d8565d783e79e:300",
+      "receivedAt": "2026-10-27T17:51:32.672Z",
+      "elapsedMs": 292.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a591935e-39e4-4c40-bbf6-06429fcafe5f",
+      "clientTimeMs": 10307.699999988079,
+      "revision": "g29-099e6799dabdd2d834f75d959097d41a9bfde97b686fa3b0735d8565d783e79e:300",
+      "receivedAt": "2026-10-27T17:51:32.728Z",
+      "elapsedMs": 306.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "1d4f2e2d-e9d9-4b83-b565-6d8ada866bc8",
+      "clientTimeMs": 20820.899999976158,
+      "revision": "g29-099e6799dabdd2d834f75d959097d41a9bfde97b686fa3b0735d8565d783e79e:307",
+      "receivedAt": "2026-10-27T17:51:43.198Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "1d4f2e2d-e9d9-4b83-b565-6d8ada866bc8",
+      "clientTimeMs": 21010.69999998808,
+      "revision": "g29-099e6799dabdd2d834f75d959097d41a9bfde97b686fa3b0735d8565d783e79e:308",
+      "receivedAt": "2026-10-27T17:51:43.389Z",
+      "elapsedMs": 189.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "1d4f2e2d-e9d9-4b83-b565-6d8ada866bc8",
+      "clientTimeMs": 21029.899999976158,
+      "revision": "g29-099e6799dabdd2d834f75d959097d41a9bfde97b686fa3b0735d8565d783e79e:308",
+      "receivedAt": "2026-10-27T17:51:43.407Z",
+      "elapsedMs": 209
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "4924ce46-635d-453e-953c-ecb2c5aae919",
+      "clientTimeMs": 21227.30000001192,
+      "revision": "g29-099e6799dabdd2d834f75d959097d41a9bfde97b686fa3b0735d8565d783e79e:308",
+      "receivedAt": "2026-10-27T17:51:43.766Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "4924ce46-635d-453e-953c-ecb2c5aae919",
+      "clientTimeMs": 21425.599999964237,
+      "revision": "g29-099e6799dabdd2d834f75d959097d41a9bfde97b686fa3b0735d8565d783e79e:309",
+      "receivedAt": "2026-10-27T17:51:43.804Z",
+      "elapsedMs": 198.29999995231628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a49e7669-3834-4bcd-ab9e-ef713ad01870",
+      "clientTimeMs": 22085.19999998808,
+      "revision": "g37-8951baa50973f62f2284c46fcd29adfc3df09f25568a8f4e322553238095df02:310",
+      "receivedAt": "2026-10-27T17:51:44.463Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a49e7669-3834-4bcd-ab9e-ef713ad01870",
+      "clientTimeMs": 22337.599999964237,
+      "revision": "g39-fe4ac2f6a09c2d4642f8c6d849a025d1e43e7efaa48d86a36e09f27905a17fa5:311",
+      "receivedAt": "2026-10-27T17:51:44.716Z",
+      "elapsedMs": 252.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a49e7669-3834-4bcd-ab9e-ef713ad01870",
+      "clientTimeMs": 22349.899999976158,
+      "revision": "g39-fe4ac2f6a09c2d4642f8c6d849a025d1e43e7efaa48d86a36e09f27905a17fa5:311",
+      "receivedAt": "2026-10-27T17:51:44.728Z",
+      "elapsedMs": 264.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "ada604ed-de42-428c-b271-9e9044a5d3bc",
+      "clientTimeMs": 22676.5,
+      "revision": "g39-fe4ac2f6a09c2d4642f8c6d849a025d1e43e7efaa48d86a36e09f27905a17fa5:311",
+      "receivedAt": "2026-10-27T17:51:45.298Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "ada604ed-de42-428c-b271-9e9044a5d3bc",
+      "clientTimeMs": 22940.099999964237,
+      "revision": "g39-fe4ac2f6a09c2d4642f8c6d849a025d1e43e7efaa48d86a36e09f27905a17fa5:312",
+      "receivedAt": "2026-10-27T17:51:45.329Z",
+      "elapsedMs": 263.5999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "1794ff7b-a709-460c-bb05-2d8b2552ce17",
+      "clientTimeMs": 23222.099999964237,
+      "revision": "g39-fe4ac2f6a09c2d4642f8c6d849a025d1e43e7efaa48d86a36e09f27905a17fa5:313",
+      "receivedAt": "2026-10-27T17:51:45.601Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "1794ff7b-a709-460c-bb05-2d8b2552ce17",
+      "clientTimeMs": 23573.5,
+      "revision": "g40-89bdc732dc411f5b9c11a3dcfe4766858a073c5a2916f5c1daab51ef61b2760c:314",
+      "receivedAt": "2026-10-27T17:51:45.953Z",
+      "elapsedMs": 351.4000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "1794ff7b-a709-460c-bb05-2d8b2552ce17",
+      "clientTimeMs": 23588.30000001192,
+      "revision": "g40-89bdc732dc411f5b9c11a3dcfe4766858a073c5a2916f5c1daab51ef61b2760c:314",
+      "receivedAt": "2026-10-27T17:51:45.966Z",
+      "elapsedMs": 366.2000000476837
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "3c458504-cf7d-429b-9539-55e6a1902dbd",
+      "clientTimeMs": 23872.19999998808,
+      "revision": "g40-89bdc732dc411f5b9c11a3dcfe4766858a073c5a2916f5c1daab51ef61b2760c:314",
+      "receivedAt": "2026-10-27T17:51:46.250Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "3c458504-cf7d-429b-9539-55e6a1902dbd",
+      "clientTimeMs": 24262.69999998808,
+      "revision": "g44-4da24cf93b65c6bc13308497ab9446ee60317f17b1124a9cb1ea723ed7a33c84:315",
+      "receivedAt": "2026-10-27T17:51:46.641Z",
+      "elapsedMs": 390.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "3c458504-cf7d-429b-9539-55e6a1902dbd",
+      "clientTimeMs": 24277.399999976158,
+      "revision": "g44-4da24cf93b65c6bc13308497ab9446ee60317f17b1124a9cb1ea723ed7a33c84:315",
+      "receivedAt": "2026-10-27T17:51:46.656Z",
+      "elapsedMs": 405.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c96834b4-d188-4e0b-bf81-a74c52334023",
+      "clientTimeMs": 24567.80000001192,
+      "revision": "g44-4da24cf93b65c6bc13308497ab9446ee60317f17b1124a9cb1ea723ed7a33c84:315",
+      "receivedAt": "2026-10-27T17:51:46.946Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c96834b4-d188-4e0b-bf81-a74c52334023",
+      "clientTimeMs": 24609.30000001192,
+      "revision": "g44-4da24cf93b65c6bc13308497ab9446ee60317f17b1124a9cb1ea723ed7a33c84:316",
+      "receivedAt": "2026-10-27T17:51:46.988Z",
+      "elapsedMs": 41.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c96834b4-d188-4e0b-bf81-a74c52334023",
+      "clientTimeMs": 24632.19999998808,
+      "revision": "g44-4da24cf93b65c6bc13308497ab9446ee60317f17b1124a9cb1ea723ed7a33c84:316",
+      "receivedAt": "2026-10-27T17:51:47.011Z",
+      "elapsedMs": 64.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b489d61d-f421-4121-b098-c300093162fb",
+      "clientTimeMs": 24970.399999976158,
+      "revision": "g44-4da24cf93b65c6bc13308497ab9446ee60317f17b1124a9cb1ea723ed7a33c84:316",
+      "receivedAt": "2026-10-27T17:51:47.349Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "b489d61d-f421-4121-b098-c300093162fb",
+      "clientTimeMs": 25272.30000001192,
+      "revision": "g45-1ec2270494f9ec9fb5dbbc864188c2f431ac36b6150eadb1455f3479533949f3:317",
+      "receivedAt": "2026-10-27T17:51:47.650Z",
+      "elapsedMs": 301.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b489d61d-f421-4121-b098-c300093162fb",
+      "clientTimeMs": 25286.69999998808,
+      "revision": "g45-1ec2270494f9ec9fb5dbbc864188c2f431ac36b6150eadb1455f3479533949f3:317",
+      "receivedAt": "2026-10-27T17:51:47.665Z",
+      "elapsedMs": 316.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "3e3124f9-82bc-478d-91f1-912a72a4ad2c",
+      "clientTimeMs": 25537.899999976158,
+      "revision": "g45-1ec2270494f9ec9fb5dbbc864188c2f431ac36b6150eadb1455f3479533949f3:317",
+      "receivedAt": "2026-10-27T17:51:47.916Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "3e3124f9-82bc-478d-91f1-912a72a4ad2c",
+      "clientTimeMs": 26027.80000001192,
+      "revision": "g53-c4e3d6c38c0c0b980605523d7f24fe7d5417abfd3b7873787241b6492d63505b:318",
+      "receivedAt": "2026-10-27T17:51:48.406Z",
+      "elapsedMs": 489.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "3e3124f9-82bc-478d-91f1-912a72a4ad2c",
+      "clientTimeMs": 26043.599999964237,
+      "revision": "g53-c4e3d6c38c0c0b980605523d7f24fe7d5417abfd3b7873787241b6492d63505b:318",
+      "receivedAt": "2026-10-27T17:51:48.422Z",
+      "elapsedMs": 505.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "fd262016-0c3f-4c79-a91a-26082b8cc0ca",
+      "clientTimeMs": 26292.5,
+      "revision": "g53-c4e3d6c38c0c0b980605523d7f24fe7d5417abfd3b7873787241b6492d63505b:318",
+      "receivedAt": "2026-10-27T17:51:48.670Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "fd262016-0c3f-4c79-a91a-26082b8cc0ca",
+      "clientTimeMs": 26557.899999976158,
+      "revision": "g55-3ca2af073863841371534a51314811ee2d401c349c5c8880775d726de3c2be2c:319",
+      "receivedAt": "2026-10-27T17:51:48.936Z",
+      "elapsedMs": 265.39999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "fd262016-0c3f-4c79-a91a-26082b8cc0ca",
+      "clientTimeMs": 26569.80000001192,
+      "revision": "g55-3ca2af073863841371534a51314811ee2d401c349c5c8880775d726de3c2be2c:319",
+      "receivedAt": "2026-10-27T17:51:48.947Z",
+      "elapsedMs": 277.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "5588d1d2-1187-4193-9343-53d976ecc52d",
+      "clientTimeMs": 26889.80000001192,
+      "revision": "g55-3ca2af073863841371534a51314811ee2d401c349c5c8880775d726de3c2be2c:319",
+      "receivedAt": "2026-10-27T17:51:49.268Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "5588d1d2-1187-4193-9343-53d976ecc52d",
+      "clientTimeMs": 26933.30000001192,
+      "revision": "g55-3ca2af073863841371534a51314811ee2d401c349c5c8880775d726de3c2be2c:320",
+      "receivedAt": "2026-10-27T17:51:49.312Z",
+      "elapsedMs": 43.5
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "5588d1d2-1187-4193-9343-53d976ecc52d",
+      "clientTimeMs": 26950.30000001192,
+      "revision": "g55-3ca2af073863841371534a51314811ee2d401c349c5c8880775d726de3c2be2c:320",
+      "receivedAt": "2026-10-27T17:51:49.329Z",
+      "elapsedMs": 60.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "ae328e3f-e8c2-4b3b-90a8-e64e33f02ab2",
+      "clientTimeMs": 27323.899999976158,
+      "revision": "g55-3ca2af073863841371534a51314811ee2d401c349c5c8880775d726de3c2be2c:320",
+      "receivedAt": "2026-10-27T17:51:49.918Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "ae328e3f-e8c2-4b3b-90a8-e64e33f02ab2",
+      "clientTimeMs": 27561.19999998808,
+      "revision": "g55-3ca2af073863841371534a51314811ee2d401c349c5c8880775d726de3c2be2c:321",
+      "receivedAt": "2026-10-27T17:51:49.939Z",
+      "elapsedMs": 237.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "74110a67-f05b-4c34-89d1-dd01da8a33c7",
+      "clientTimeMs": 28172.599999964237,
+      "revision": "g56-43b03948cc86afd40332d21ec1817eca709d419357119a08f8f70ed3a38a2a5a:322",
+      "receivedAt": "2026-10-27T17:51:50.551Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "74110a67-f05b-4c34-89d1-dd01da8a33c7",
+      "clientTimeMs": 28633.5,
+      "revision": "g60-bc92eb7e67711382e4744aeee35b652392a7db000bbba56d76ba7c38d379caca:323",
+      "receivedAt": "2026-10-27T17:51:51.011Z",
+      "elapsedMs": 460.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "74110a67-f05b-4c34-89d1-dd01da8a33c7",
+      "clientTimeMs": 28645.30000001192,
+      "revision": "g60-bc92eb7e67711382e4744aeee35b652392a7db000bbba56d76ba7c38d379caca:323",
+      "receivedAt": "2026-10-27T17:51:51.023Z",
+      "elapsedMs": 472.7000000476837
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "d5be171b-03c9-4448-9622-5dfe57f08984",
+      "clientTimeMs": 28985.899999976158,
+      "revision": "g60-bc92eb7e67711382e4744aeee35b652392a7db000bbba56d76ba7c38d379caca:323",
+      "receivedAt": "2026-10-27T17:51:51.364Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "d5be171b-03c9-4448-9622-5dfe57f08984",
+      "clientTimeMs": 29031.80000001192,
+      "revision": "g60-bc92eb7e67711382e4744aeee35b652392a7db000bbba56d76ba7c38d379caca:324",
+      "receivedAt": "2026-10-27T17:51:51.410Z",
+      "elapsedMs": 45.90000003576279
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "d5be171b-03c9-4448-9622-5dfe57f08984",
+      "clientTimeMs": 29048.19999998808,
+      "revision": "g60-bc92eb7e67711382e4744aeee35b652392a7db000bbba56d76ba7c38d379caca:324",
+      "receivedAt": "2026-10-27T17:51:51.427Z",
+      "elapsedMs": 62.30000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b90a35ba-3795-4560-867f-b4409fc7b95e",
+      "clientTimeMs": 29386.80000001192,
+      "revision": "g60-bc92eb7e67711382e4744aeee35b652392a7db000bbba56d76ba7c38d379caca:324",
+      "receivedAt": "2026-10-27T17:51:51.765Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "b90a35ba-3795-4560-867f-b4409fc7b95e",
+      "clientTimeMs": 29708.899999976158,
+      "revision": "g61-465e3a3f891d59885e89398a66f99d91a362706967dc419ec392286bb2d98002:325",
+      "receivedAt": "2026-10-27T17:51:52.087Z",
+      "elapsedMs": 322.0999999642372
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b90a35ba-3795-4560-867f-b4409fc7b95e",
+      "clientTimeMs": 29724.899999976158,
+      "revision": "g61-465e3a3f891d59885e89398a66f99d91a362706967dc419ec392286bb2d98002:325",
+      "receivedAt": "2026-10-27T17:51:52.104Z",
+      "elapsedMs": 338.0999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "9b416e26-4892-46e1-977b-b386da895e0d",
+      "clientTimeMs": 29950.899999976158,
+      "revision": "g61-465e3a3f891d59885e89398a66f99d91a362706967dc419ec392286bb2d98002:325",
+      "receivedAt": "2026-10-27T17:51:52.329Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "9b416e26-4892-46e1-977b-b386da895e0d",
+      "clientTimeMs": 30489.899999976158,
+      "revision": "g69-de496826af58ce89823cbe4a611756dfff814342598be748e88467a755f1b84c:326",
+      "receivedAt": "2026-10-27T17:51:52.868Z",
+      "elapsedMs": 539
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "9b416e26-4892-46e1-977b-b386da895e0d",
+      "clientTimeMs": 30503,
+      "revision": "g69-de496826af58ce89823cbe4a611756dfff814342598be748e88467a755f1b84c:326",
+      "receivedAt": "2026-10-27T17:51:52.881Z",
+      "elapsedMs": 552.1000000238419
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "baecb8b1-9e00-40a7-9fe0-ae3c8f3f2d04",
+      "clientTimeMs": 30728.30000001192,
+      "revision": "g69-de496826af58ce89823cbe4a611756dfff814342598be748e88467a755f1b84c:326",
+      "receivedAt": "2026-10-27T17:51:53.107Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "baecb8b1-9e00-40a7-9fe0-ae3c8f3f2d04",
+      "clientTimeMs": 31065.19999998808,
+      "revision": "g71-5840c4d14814fa48d9f431fc5e177a0949f42c6284b3a5cc2791641cd0440507:327",
+      "receivedAt": "2026-10-27T17:51:53.444Z",
+      "elapsedMs": 336.89999997615814
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "baecb8b1-9e00-40a7-9fe0-ae3c8f3f2d04",
+      "clientTimeMs": 31091.19999998808,
+      "revision": "g71-5840c4d14814fa48d9f431fc5e177a0949f42c6284b3a5cc2791641cd0440507:327",
+      "receivedAt": "2026-10-27T17:51:53.469Z",
+      "elapsedMs": 362.89999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "7429041b-ceb7-4114-b43e-a70d7fd61f77",
+      "clientTimeMs": 31451.099999964237,
+      "revision": "g71-5840c4d14814fa48d9f431fc5e177a0949f42c6284b3a5cc2791641cd0440507:327",
+      "receivedAt": "2026-10-27T17:51:53.830Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "7429041b-ceb7-4114-b43e-a70d7fd61f77",
+      "clientTimeMs": 31502.899999976158,
+      "revision": "g71-5840c4d14814fa48d9f431fc5e177a0949f42c6284b3a5cc2791641cd0440507:328",
+      "receivedAt": "2026-10-27T17:51:53.881Z",
+      "elapsedMs": 51.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "7429041b-ceb7-4114-b43e-a70d7fd61f77",
+      "clientTimeMs": 31520,
+      "revision": "g71-5840c4d14814fa48d9f431fc5e177a0949f42c6284b3a5cc2791641cd0440507:328",
+      "receivedAt": "2026-10-27T17:51:53.898Z",
+      "elapsedMs": 68.90000003576279
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "765730ef-f50a-40dd-b5f0-c9f27447621a",
+      "clientTimeMs": 31852.599999964237,
+      "revision": "g71-5840c4d14814fa48d9f431fc5e177a0949f42c6284b3a5cc2791641cd0440507:328",
+      "receivedAt": "2026-10-27T17:51:54.303Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "765730ef-f50a-40dd-b5f0-c9f27447621a",
+      "clientTimeMs": 31969,
+      "revision": "g71-5840c4d14814fa48d9f431fc5e177a0949f42c6284b3a5cc2791641cd0440507:329",
+      "receivedAt": "2026-10-27T17:51:54.348Z",
+      "elapsedMs": 116.40000003576279
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "412c3ebc-19fb-4ab5-9a7f-187a8098cc30",
+      "clientTimeMs": 32516.69999998808,
+      "revision": "g72-9dbffa3a70b66b5bbc0bbf1e35ec38ab7d9164bab63dfd654dcf2ed415a7a57a:330",
+      "receivedAt": "2026-10-27T17:51:54.895Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "412c3ebc-19fb-4ab5-9a7f-187a8098cc30",
+      "clientTimeMs": 32985.39999997616,
+      "revision": "g76-41dacd398aa25897d5d13843f872f7702a7f2f7ed53638cfac68e5c11b4072b4:331",
+      "receivedAt": "2026-10-27T17:51:55.364Z",
+      "elapsedMs": 468.69999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "412c3ebc-19fb-4ab5-9a7f-187a8098cc30",
+      "clientTimeMs": 32998.89999997616,
+      "revision": "g76-41dacd398aa25897d5d13843f872f7702a7f2f7ed53638cfac68e5c11b4072b4:331",
+      "receivedAt": "2026-10-27T17:51:55.377Z",
+      "elapsedMs": 482.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "13d67b4a-1f6a-4c82-9605-d58a4343c137",
+      "clientTimeMs": 33334.19999998808,
+      "revision": "g76-41dacd398aa25897d5d13843f872f7702a7f2f7ed53638cfac68e5c11b4072b4:331",
+      "receivedAt": "2026-10-27T17:51:55.863Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "13d67b4a-1f6a-4c82-9605-d58a4343c137",
+      "clientTimeMs": 33536.39999997616,
+      "revision": "g76-41dacd398aa25897d5d13843f872f7702a7f2f7ed53638cfac68e5c11b4072b4:332",
+      "receivedAt": "2026-10-27T17:51:55.940Z",
+      "elapsedMs": 202.19999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "4af65a9d-3ec7-45b0-aaf1-57e662f832a7",
+      "clientTimeMs": 33849.89999997616,
+      "revision": "g76-41dacd398aa25897d5d13843f872f7702a7f2f7ed53638cfac68e5c11b4072b4:333",
+      "receivedAt": "2026-10-27T17:51:56.228Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "4af65a9d-3ec7-45b0-aaf1-57e662f832a7",
+      "clientTimeMs": 34197.80000001192,
+      "revision": "g77-43c662c81c227bb90841f7a685d7433e46b6f6eae482b4e5aaa7efecd8f7adae:334",
+      "receivedAt": "2026-10-27T17:51:56.576Z",
+      "elapsedMs": 347.9000000357628
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "4af65a9d-3ec7-45b0-aaf1-57e662f832a7",
+      "clientTimeMs": 34210.89999997616,
+      "revision": "g77-43c662c81c227bb90841f7a685d7433e46b6f6eae482b4e5aaa7efecd8f7adae:334",
+      "receivedAt": "2026-10-27T17:51:56.589Z",
+      "elapsedMs": 361
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "a3196dd4-799f-4b96-907c-00ff4484772a",
+      "clientTimeMs": 64983.59999996424,
+      "revision": "g77-43c662c81c227bb90841f7a685d7433e46b6f6eae482b4e5aaa7efecd8f7adae:355",
+      "receivedAt": "2026-10-27T17:52:27.362Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "a3196dd4-799f-4b96-907c-00ff4484772a",
+      "clientTimeMs": 65530.80000001192,
+      "revision": "g85-2a141df2875d88478b4c297a7f80b143105725ea20eeb5d42b17287859b2dcfd:356",
+      "receivedAt": "2026-10-27T17:52:27.909Z",
+      "elapsedMs": 547.2000000476837
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "a3196dd4-799f-4b96-907c-00ff4484772a",
+      "clientTimeMs": 65545.09999996424,
+      "revision": "g85-2a141df2875d88478b4c297a7f80b143105725ea20eeb5d42b17287859b2dcfd:356",
+      "receivedAt": "2026-10-27T17:52:27.924Z",
+      "elapsedMs": 561.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "b82c281b-8a66-4c7c-b232-7fbfaa96f9b3",
+      "clientTimeMs": 65785.19999998808,
+      "revision": "g85-2a141df2875d88478b4c297a7f80b143105725ea20eeb5d42b17287859b2dcfd:356",
+      "receivedAt": "2026-10-27T17:52:28.164Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "b82c281b-8a66-4c7c-b232-7fbfaa96f9b3",
+      "clientTimeMs": 66162.80000001192,
+      "revision": "g87-ef790e5fd5d7b5e8996a9e95896cc677f827ffcf848da6672b54765efd24c793:357",
+      "receivedAt": "2026-10-27T17:52:28.541Z",
+      "elapsedMs": 377.60000002384186
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "b82c281b-8a66-4c7c-b232-7fbfaa96f9b3",
+      "clientTimeMs": 66178.89999997616,
+      "revision": "g87-ef790e5fd5d7b5e8996a9e95896cc677f827ffcf848da6672b54765efd24c793:357",
+      "receivedAt": "2026-10-27T17:52:28.557Z",
+      "elapsedMs": 393.69999998807907
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "344086ca-f069-40da-8d55-f5ee9b288c76",
+      "clientTimeMs": 66505.39999997616,
+      "revision": "g87-ef790e5fd5d7b5e8996a9e95896cc677f827ffcf848da6672b54765efd24c793:357",
+      "receivedAt": "2026-10-27T17:52:28.884Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "344086ca-f069-40da-8d55-f5ee9b288c76",
+      "clientTimeMs": 66586.69999998808,
+      "revision": "g87-ef790e5fd5d7b5e8996a9e95896cc677f827ffcf848da6672b54765efd24c793:358",
+      "receivedAt": "2026-10-27T17:52:28.965Z",
+      "elapsedMs": 81.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "344086ca-f069-40da-8d55-f5ee9b288c76",
+      "clientTimeMs": 66621.5,
+      "revision": "g87-ef790e5fd5d7b5e8996a9e95896cc677f827ffcf848da6672b54765efd24c793:358",
+      "receivedAt": "2026-10-27T17:52:29.000Z",
+      "elapsedMs": 116.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "409aa2db-9fac-493d-86d0-c1e4c6348da2",
+      "clientTimeMs": 66907.5,
+      "revision": "g87-ef790e5fd5d7b5e8996a9e95896cc677f827ffcf848da6672b54765efd24c793:358",
+      "receivedAt": "2026-10-27T17:52:29.285Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "409aa2db-9fac-493d-86d0-c1e4c6348da2",
+      "clientTimeMs": 67303.80000001192,
+      "revision": "g88-bd314581e1f7141d440fab387bc2996f623d4fa5ff9984640711ec48debfd03c:359",
+      "receivedAt": "2026-10-27T17:52:29.682Z",
+      "elapsedMs": 396.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "409aa2db-9fac-493d-86d0-c1e4c6348da2",
+      "clientTimeMs": 67317,
+      "revision": "g88-bd314581e1f7141d440fab387bc2996f623d4fa5ff9984640711ec48debfd03c:359",
+      "receivedAt": "2026-10-27T17:52:29.695Z",
+      "elapsedMs": 409.5
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "65248be4-7ebe-4bc2-b913-c2469419c26d",
+      "clientTimeMs": 67587.39999997616,
+      "revision": "g88-bd314581e1f7141d440fab387bc2996f623d4fa5ff9984640711ec48debfd03c:359",
+      "receivedAt": "2026-10-27T17:52:29.966Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "65248be4-7ebe-4bc2-b913-c2469419c26d",
+      "clientTimeMs": 68120.59999996424,
+      "revision": "g92-3a5616b4f38a8934dc0951950e5d179f08fa508aac025d00bc8e4434dedf4a53:360",
+      "receivedAt": "2026-10-27T17:52:30.499Z",
+      "elapsedMs": 533.1999999880791
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "65248be4-7ebe-4bc2-b913-c2469419c26d",
+      "clientTimeMs": 68134.30000001192,
+      "revision": "g92-3a5616b4f38a8934dc0951950e5d179f08fa508aac025d00bc8e4434dedf4a53:360",
+      "receivedAt": "2026-10-27T17:52:30.512Z",
+      "elapsedMs": 546.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "6f192c26-8e9e-4097-b7f5-4ae5f669c95e",
+      "clientTimeMs": 68420,
+      "revision": "g92-3a5616b4f38a8934dc0951950e5d179f08fa508aac025d00bc8e4434dedf4a53:360",
+      "receivedAt": "2026-10-27T17:52:30.798Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "6f192c26-8e9e-4097-b7f5-4ae5f669c95e",
+      "clientTimeMs": 68505.30000001192,
+      "revision": "g92-3a5616b4f38a8934dc0951950e5d179f08fa508aac025d00bc8e4434dedf4a53:361",
+      "receivedAt": "2026-10-27T17:52:30.883Z",
+      "elapsedMs": 85.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "6f192c26-8e9e-4097-b7f5-4ae5f669c95e",
+      "clientTimeMs": 68521.80000001192,
+      "revision": "g92-3a5616b4f38a8934dc0951950e5d179f08fa508aac025d00bc8e4434dedf4a53:361",
+      "receivedAt": "2026-10-27T17:52:30.901Z",
+      "elapsedMs": 101.80000001192093
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "cb9368c5-14e5-416c-82f9-911c4c7f7c5c",
+      "clientTimeMs": 68820.30000001192,
+      "revision": "g92-3a5616b4f38a8934dc0951950e5d179f08fa508aac025d00bc8e4434dedf4a53:361",
+      "receivedAt": "2026-10-27T17:52:31.199Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "cb9368c5-14e5-416c-82f9-911c4c7f7c5c",
+      "clientTimeMs": 69180.30000001192,
+      "revision": "g93-a88d081193316e1685cc4551d2ad7ebeac84c6797c27abdc2984dbc7c7efeaba:362",
+      "receivedAt": "2026-10-27T17:52:31.558Z",
+      "elapsedMs": 360
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "cb9368c5-14e5-416c-82f9-911c4c7f7c5c",
+      "clientTimeMs": 69193.69999998808,
+      "revision": "g93-a88d081193316e1685cc4551d2ad7ebeac84c6797c27abdc2984dbc7c7efeaba:362",
+      "receivedAt": "2026-10-27T17:52:31.572Z",
+      "elapsedMs": 373.39999997615814
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "83d10f3a-f76f-4c07-9b1a-c9fa146ffb56",
+      "clientTimeMs": 69541.5,
+      "revision": "g93-a88d081193316e1685cc4551d2ad7ebeac84c6797c27abdc2984dbc7c7efeaba:362",
+      "receivedAt": "2026-10-27T17:52:31.921Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "83d10f3a-f76f-4c07-9b1a-c9fa146ffb56",
+      "clientTimeMs": 70400.59999996424,
+      "revision": "g101-a08f22db4b47500458513e01de39bcc96fdc4983786ccd6f2fe8d17780e2039c:363",
+      "receivedAt": "2026-10-27T17:52:32.779Z",
+      "elapsedMs": 859.0999999642372
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "83d10f3a-f76f-4c07-9b1a-c9fa146ffb56",
+      "clientTimeMs": 70418.69999998808,
+      "revision": "g101-a08f22db4b47500458513e01de39bcc96fdc4983786ccd6f2fe8d17780e2039c:363",
+      "receivedAt": "2026-10-27T17:52:32.808Z",
+      "elapsedMs": 877.1999999880791
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "411e718d-ed7b-4aa1-b58b-2dc5cddc6b72",
+      "clientTimeMs": 70640.39999997616,
+      "revision": "g101-a08f22db4b47500458513e01de39bcc96fdc4983786ccd6f2fe8d17780e2039c:363",
+      "receivedAt": "2026-10-27T17:52:33.018Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "411e718d-ed7b-4aa1-b58b-2dc5cddc6b72",
+      "clientTimeMs": 70906.30000001192,
+      "revision": "g101-a08f22db4b47500458513e01de39bcc96fdc4983786ccd6f2fe8d17780e2039c:364",
+      "receivedAt": "2026-10-27T17:52:33.302Z",
+      "elapsedMs": 265.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "c1e59547-45e7-4e69-a2d0-26823f57924d",
+      "clientTimeMs": 71568.30000001192,
+      "revision": "g103-4fb60c59adae781a4c4716816c9aeee7162e3a8b5a0ae532f7a7d75fcc0c3175:365",
+      "receivedAt": "2026-10-27T17:52:33.947Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "c1e59547-45e7-4e69-a2d0-26823f57924d",
+      "clientTimeMs": 71662.5,
+      "revision": "g103-4fb60c59adae781a4c4716816c9aeee7162e3a8b5a0ae532f7a7d75fcc0c3175:366",
+      "receivedAt": "2026-10-27T17:52:34.041Z",
+      "elapsedMs": 94.19999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "c1e59547-45e7-4e69-a2d0-26823f57924d",
+      "clientTimeMs": 71696.89999997616,
+      "revision": "g103-4fb60c59adae781a4c4716816c9aeee7162e3a8b5a0ae532f7a7d75fcc0c3175:366",
+      "receivedAt": "2026-10-27T17:52:34.076Z",
+      "elapsedMs": 128.5999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "2cb1e43a-4f52-4161-8b60-831903c18936",
+      "clientTimeMs": 71969.09999996424,
+      "revision": "g103-4fb60c59adae781a4c4716816c9aeee7162e3a8b5a0ae532f7a7d75fcc0c3175:366",
+      "receivedAt": "2026-10-27T17:52:34.347Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "2cb1e43a-4f52-4161-8b60-831903c18936",
+      "clientTimeMs": 72292.09999996424,
+      "revision": "g104-6ed4220c19d4d0c1fe87dbc0a450dc1d94be3caf1b87f5e973fcbc8194a68e3f:367",
+      "receivedAt": "2026-10-27T17:52:34.670Z",
+      "elapsedMs": 323
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "2cb1e43a-4f52-4161-8b60-831903c18936",
+      "clientTimeMs": 72305,
+      "revision": "g104-6ed4220c19d4d0c1fe87dbc0a450dc1d94be3caf1b87f5e973fcbc8194a68e3f:367",
+      "receivedAt": "2026-10-27T17:52:34.683Z",
+      "elapsedMs": 335.9000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "db1b02b3-1713-475c-8d68-0b1039562f18",
+      "clientTimeMs": 72534,
+      "revision": "g104-6ed4220c19d4d0c1fe87dbc0a450dc1d94be3caf1b87f5e973fcbc8194a68e3f:367",
+      "receivedAt": "2026-10-27T17:52:34.912Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "db1b02b3-1713-475c-8d68-0b1039562f18",
+      "clientTimeMs": 73010.80000001192,
+      "revision": "g108-cc11d33574a5326e42b9447bde0224226f5c303c84f297eb5d14d055480b7d09:368",
+      "receivedAt": "2026-10-27T17:52:35.389Z",
+      "elapsedMs": 476.80000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "db1b02b3-1713-475c-8d68-0b1039562f18",
+      "clientTimeMs": 73027.09999996424,
+      "revision": "g108-cc11d33574a5326e42b9447bde0224226f5c303c84f297eb5d14d055480b7d09:368",
+      "receivedAt": "2026-10-27T17:52:35.405Z",
+      "elapsedMs": 493.0999999642372
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "ff9aa299-8e51-4415-9424-b0fa8c0bf2f5",
+      "clientTimeMs": 73351.09999996424,
+      "revision": "g108-cc11d33574a5326e42b9447bde0224226f5c303c84f297eb5d14d055480b7d09:368",
+      "receivedAt": "2026-10-27T17:52:35.729Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "ff9aa299-8e51-4415-9424-b0fa8c0bf2f5",
+      "clientTimeMs": 73452.39999997616,
+      "revision": "g108-cc11d33574a5326e42b9447bde0224226f5c303c84f297eb5d14d055480b7d09:369",
+      "receivedAt": "2026-10-27T17:52:35.830Z",
+      "elapsedMs": 101.30000001192093
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "ff9aa299-8e51-4415-9424-b0fa8c0bf2f5",
+      "clientTimeMs": 73491.5,
+      "revision": "g108-cc11d33574a5326e42b9447bde0224226f5c303c84f297eb5d14d055480b7d09:369",
+      "receivedAt": "2026-10-27T17:52:35.870Z",
+      "elapsedMs": 140.4000000357628
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "313e83d3-88a0-455a-a55d-c915096f6fc4",
+      "clientTimeMs": 73771.39999997616,
+      "revision": "g108-cc11d33574a5326e42b9447bde0224226f5c303c84f297eb5d14d055480b7d09:369",
+      "receivedAt": "2026-10-27T17:52:36.363Z"
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "313e83d3-88a0-455a-a55d-c915096f6fc4",
+      "clientTimeMs": 74017.5,
+      "revision": "g108-cc11d33574a5326e42b9447bde0224226f5c303c84f297eb5d14d055480b7d09:370",
+      "receivedAt": "2026-10-27T17:52:36.396Z",
+      "elapsedMs": 246.10000002384186
+    },
+    {
+      "kind": "browser-click",
+      "actionId": "4f4aae1e-39d5-470b-9218-64d607ff300c",
+      "clientTimeMs": 74395.80000001192,
+      "revision": "g109-ff0bde25fe1bfd45d973a7433b0e862824fb4492ba86473eda8102cd568def98:371",
+      "receivedAt": "2026-10-27T17:52:36.776Z"
+    },
+    {
+      "kind": "browser-api",
+      "actionId": "4f4aae1e-39d5-470b-9218-64d607ff300c",
+      "clientTimeMs": 74731.5,
+      "revision": "g114-ec3ef6ce7ff27cf981796435d35b8de5b233dd1f8f02688e188f46317a709795:372",
+      "receivedAt": "2026-10-27T17:52:37.109Z",
+      "elapsedMs": 335.69999998807907
+    },
+    {
+      "kind": "browser-render",
+      "actionId": "4f4aae1e-39d5-470b-9218-64d607ff300c",
+      "clientTimeMs": 74752,
+      "revision": "g114-ec3ef6ce7ff27cf981796435d35b8de5b233dd1f8f02688e188f46317a709795:372",
+      "receivedAt": "2026-10-27T17:52:37.130Z",
+      "elapsedMs": 356.19999998807907
+    }
+  ]
+}

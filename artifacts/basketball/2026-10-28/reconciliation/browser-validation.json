@@ -1,0 +1,36 @@
+{
+  "observedAt": "2026-10-29T00:24:00.025Z",
+  "url": "http://127.0.0.1:46063/",
+  "mode": "coach",
+  "activeBoardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "candidateReconciliationRevision": "344df1b91ab3126860cc43ec650a4b03835d9846cf16e067717d4f78a5d203f1",
+  "correctedBoardRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "evidenceHash": "062eb8105179549b2c3a47ba085a7cdf229c16102b5ae3b694809b4257f1d852",
+  "testedViews": [
+    "original",
+    "correctedCategory",
+    "providerFirst"
+  ],
+  "correctedFirstFour": [
+    "Tyler Tanner",
+    "Javontae Campbell",
+    "Tavari Johnson",
+    "Pryce Sandfort"
+  ],
+  "providerFirstFour": [
+    "Jeremy Fears",
+    "Tyler Tanner",
+    "Thomas Haugh",
+    "Jordan Smith"
+  ],
+  "staleProviderRanks": 29,
+  "expandedKaufmanExplanationPersistedAcrossPolling": true,
+  "selectedProfile": "balanced",
+  "ownSelections": 0,
+  "queuedPlayerId": null,
+  "liveActionsExecuted": 0,
+  "explicitFantraxObservationIngested": false,
+  "fantraxWritersPresent": false,
+  "comparisonSelectorsDoNotChangeSession": "Verified by compiled endpoint test and browser state observation; no candidate activation request sent",
+  "screenshot": "browser-comparison.jpg"
+}

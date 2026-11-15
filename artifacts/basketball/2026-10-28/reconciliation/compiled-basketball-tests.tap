@@ -1,0 +1,364 @@
+TAP version 13
+# Subtest: adaptive profiles build legal active-ten/reserve-four paths with shared eight-category and summed shooting evaluation
+ok 1 - adaptive profiles build legal active-ten/reserve-four paths with shared eight-category and summed shooting evaluation
+  ---
+  duration_ms: 367.20577
+  type: 'test'
+  ...
+# Subtest: active ten maximizes the shared eight-category score within each constructed roster
+ok 2 - active ten maximizes the shared eight-category score within each constructed roster
+  ---
+  duration_ms: 315.751262
+  type: 'test'
+  ...
+# Subtest: recommendations adapt to roster imbalance and observed guard run while exposing deterministic next-pick cases
+ok 3 - recommendations adapt to roster imbalance and observed guard run while exposing deterministic next-pick cases
+  ---
+  duration_ms: 995.466999
+  type: 'test'
+  ...
+# Subtest: known status blocks a forecasted player, and stale live state suppresses recommendations
+ok 4 - known status blocks a forecasted player, and stale live state suppresses recommendations
+  ---
+  duration_ms: 712.190304
+  type: 'test'
+  ...
+# Subtest: unforecasted own selection keeps eligibility visible and is omitted from invented category totals
+ok 5 - unforecasted own selection keeps eligibility visible and is omitted from invented category totals
+  ---
+  duration_ms: 374.468079
+  type: 'test'
+  ...
+# Subtest: identical board and session produce byte-stable advisory data with source ages
+ok 6 - identical board and session produce byte-stable advisory data with source ages
+  ---
+  duration_ms: 840.492937
+  type: 'test'
+  ...
+# Subtest: standalone dashboard is loopback scoped, journal revisions advance, and browser timings pair click to render
+ok 7 - standalone dashboard is loopback scoped, journal revisions advance, and browser timings pair click to render
+  ---
+  duration_ms: 673.887857
+  type: 'test'
+  ...
+# Subtest: serialized mock turn races allow one progression and one own pick with an exact local receipt
+ok 8 - serialized mock turn races allow one progression and one own pick with an exact local receipt
+  ---
+  duration_ms: 1271.365077
+  type: 'test'
+  ...
+# Subtest: an expired synthetic own-turn clock cannot be renewed by confirm
+ok 9 - an expired synthetic own-turn clock cannot be renewed by confirm
+  ---
+  duration_ms: 1105.749683
+  type: 'test'
+  ...
+# Subtest: scripted Balanced, Guards, and Bigs opponents finish with feasible eight-team rosters
+ok 10 - scripted Balanced, Guards, and Bigs opponents finish with feasible eight-team rosters
+  ---
+  duration_ms: 22594.621909
+  type: 'test'
+  ...
+# Subtest: coach mode ingests no implicit mock authority and rejects every pick-control route
+ok 11 - coach mode ingests no implicit mock authority and rejects every pick-control route
+  ---
+  duration_ms: 233.085043
+  type: 'test'
+  ...
+# Subtest: server rejects session scope mismatch before binding
+ok 12 - server rejects session scope mismatch before binding
+  ---
+  duration_ms: 8.316935
+  type: 'test'
+  ...
+# Subtest: reconciliation comparison is read-only and rejects foreign or tampered candidate bundles
+ok 13 - reconciliation comparison is read-only and rejects foreign or tampered candidate bundles
+  ---
+  duration_ms: 285.590741
+  type: 'test'
+  ...
+# Subtest: coach reads expire without cache renewal and rejected history persists a blocked last-good board
+ok 14 - coach reads expire without cache renewal and rejected history persists a blocked last-good board
+  ---
+  duration_ms: 908.727357
+  type: 'test'
+  ...
+# Subtest: clean server restart retains the journal and pause blocks further synthetic progression
+ok 15 - clean server restart retains the journal and pause blocks further synthetic progression
+  ---
+  duration_ms: 982.042517
+  type: 'test'
+  ...
+# Subtest: per-game forecast preserves provider fields, coherent eight-category shooting and explicit cold-start modeling
+ok 16 - per-game forecast preserves provider fields, coherent eight-category shooting and explicit cold-start modeling
+  ---
+  duration_ms: 11.055874
+  type: 'test'
+  ...
+# Subtest: provider-supported short history stays distinct from zero history and retains a review flag
+ok 17 - provider-supported short history stays distinct from zero history and retains a review flag
+  ---
+  duration_ms: 5.458581
+  type: 'test'
+  ...
+# Subtest: provider wrong-ID name/school joins, duplicate ranks, wrong season and future data fail closed
+ok 18 - provider wrong-ID name/school joins, duplicate ranks, wrong season and future data fail closed
+  ---
+  duration_ms: 4.327232
+  type: 'test'
+  ...
+# Subtest: turnovers do not affect ranking; insufficient reference cohorts never fabricate fallback
+ok 19 - turnovers do not affect ranking; insufficient reference cohorts never fabricate fallback
+  ---
+  duration_ms: 10.886597
+  type: 'test'
+  ...
+# Subtest: known out status leaves conditional forecast intact but excludes default pick recommendations
+ok 20 - known out status leaves conditional forecast intact but excludes default pick recommendations
+  ---
+  duration_ms: 8.113979
+  type: 'test'
+  ...
+# Subtest: matching honors dual eligibility, all ten active slots, four reserves and snake turns
+ok 21 - matching honors dual eligibility, all ten active slots, four reserves and snake turns
+  ---
+  duration_ms: 0.781964
+  type: 'test'
+  ...
+# Subtest: local recommender validates contiguous unique picks and stops on stale state or stale board inputs
+ok 22 - local recommender validates contiguous unique picks and stops on stale state or stale board inputs
+  ---
+  duration_ms: 7.34691
+  type: 'test'
+  ...
+# Subtest: DOM bootstrap verifies full snake ownership and preserves actual source time
+ok 23 - DOM bootstrap verifies full snake ownership and preserves actual source time
+  ---
+  duration_ms: 3.349077
+  type: 'test'
+  ...
+# Subtest: DOM bootstrap rejects wrong identity, partial/duplicate cells, extra content and unsupported live inference
+ok 24 - DOM bootstrap rejects wrong identity, partial/duplicate cells, extra content and unsupported live inference
+  ---
+  duration_ms: 5.493985
+  type: 'test'
+  ...
+# Subtest: historical display importer preserves rounded rates without enforcing exact box-score arithmetic
+ok 25 - historical display importer preserves rounded rates without enforcing exact box-score arithmetic
+  ---
+  duration_ms: 0.860247
+  type: 'test'
+  ...
+# Subtest: coherence outliers are retained and quarantined; zero displayed games remain unresolved
+ok 26 - coherence outliers are retained and quarantined; zero displayed games remain unresolved
+  ---
+  duration_ms: 1.014221
+  type: 'test'
+  ...
+# Subtest: history rejects wrong scope/season, missing attempts, fractional GP and malformed precision
+ok 27 - history rejects wrong scope/season, missing attempts, fractional GP and malformed precision
+  ---
+  duration_ms: 2.552488
+  type: 'test'
+  ...
+# Subtest: history is immutable, preserves source time on replay, and a failed import retains the prior pointer
+ok 28 - history is immutable, preserves source time on replay, and a failed import retains the prior pointer
+  ---
+  duration_ms: 15.300476
+  type: 'test'
+  ...
+# Subtest: repeated full snapshots are idempotent while clock refreshes preserve the state revision
+ok 29 - repeated full snapshots are idempotent while clock refreshes preserve the state revision
+  ---
+  duration_ms: 2.110943
+  type: 'test'
+  ...
+# Subtest: wrong scope, page, partial history, and identity failures preserve the last good state
+ok 30 - wrong scope, page, partial history, and identity failures preserve the last good state
+  ---
+  duration_ms: 1.903305
+  type: 'test'
+  ...
+# Subtest: history ownership, stable IDs, duplicates, sequence and scope are strict
+ok 31 - history ownership, stable IDs, duplicates, sequence and scope are strict
+  ---
+  duration_ms: 4.936037
+  type: 'test'
+  ...
+# Subtest: stale, future, and out-of-order observation times cannot replace a good state
+ok 32 - stale, future, and out-of-order observation times cannot replace a good state
+  ---
+  duration_ms: 2.133276
+  type: 'test'
+  ...
+# Subtest: turn, clock, phase, and venue-page agreement are required
+ok 33 - turn, clock, phase, and venue-page agreement are required
+  ---
+  duration_ms: 2.952031
+  type: 'test'
+  ...
+# Subtest: unmarked rewrites fail; explicit corrections and fresh local session IDs invalidate intents
+ok 34 - unmarked rewrites fail; explicit corrections and fresh local session IDs invalidate intents
+  ---
+  duration_ms: 3.876441
+  type: 'test'
+  ...
+# Subtest: mock action guard binds session, revision, player, turn, slot, expiry, and a safe clock
+ok 35 - mock action guard binds session, revision, player, turn, slot, expiry, and a safe clock
+  ---
+  duration_ms: 2.235986
+  type: 'test'
+  ...
+# Subtest: mock pick receipt requires the exact authoritative next selection
+ok 36 - mock pick receipt requires the exact authoritative next selection
+  ---
+  duration_ms: 2.287736
+  type: 'test'
+  ...
+# Subtest: journal leases one writer, persists corrections, and replays after restart
+ok 37 - journal leases one writer, persists corrections, and replays after restart
+  ---
+  duration_ms: 18.972755
+  type: 'test'
+  ...
+# Subtest: journal serializes concurrent appends in invocation order
+ok 38 - journal serializes concurrent appends in invocation order
+  ---
+  duration_ms: 11.076383
+  type: 'test'
+  ...
+# Subtest: fresh receipts cannot refresh an old acquisition or automatically clear pause
+ok 39 - fresh receipts cannot refresh an old acquisition or automatically clear pause
+  ---
+  duration_ms: 1.117982
+  type: 'test'
+  ...
+# Subtest: observed Fantrax view parameters are scoped but unknown or repeated query keys are rejected
+ok 40 - observed Fantrax view parameters are scoped but unknown or repeated query keys are rejected
+  ---
+  duration_ms: 1.718045
+  type: 'test'
+  ...
+# Subtest: a post-append publication failure poisons further writes until durable replay
+ok 41 - a post-append publication failure poisons further writes until durable replay
+  ---
+  duration_ms: 14.260188
+  type: 'test'
+  ...
+# Subtest: CSV boundary preserves quoted delimiters, escaped quotes, Unicode and embedded newlines
+ok 42 - CSV boundary preserves quoted delimiters, escaped quotes, Unicode and embedded newlines
+  ---
+  duration_ms: 0.892006
+  type: 'test'
+  ...
+# Subtest: official export keeps stable IDs and prior-season statistics separate from forecast claims
+ok 43 - official export keeps stable IDs and prior-season statistics separate from forecast claims
+  ---
+  duration_ms: 0.931347
+  type: 'test'
+  ...
+# Subtest: schema, scope, duplicates, invalid numeric data and incomplete rows fail closed
+ok 44 - schema, scope, duplicates, invalid numeric data and incomplete rows fail closed
+  ---
+  duration_ms: 1.870368
+  type: 'test'
+  ...
+# Subtest: pool import preserves original bytes, is repeatable, and detects raw/manifest tampering
+ok 45 - pool import preserves original bytes, is repeatable, and detects raw/manifest tampering
+  ---
+  duration_ms: 13.863381
+  type: 'test'
+  ...
+# Subtest: default forecast is exactly reproducible and zero historical attempts stay finite under zero prior strength
+ok 46 - default forecast is exactly reproducible and zero historical attempts stay finite under zero prior strength
+  ---
+  duration_ms: 99.120014
+  type: 'test'
+  ...
+# Subtest: reconciliation keeps a separate stat-free provider candidate, exact same-pool scoring, and safe import/rehearsal boundaries
+ok 47 - reconciliation keeps a separate stat-free provider candidate, exact same-pool scoring, and safe import/rehearsal boundaries
+  ---
+  duration_ms: 7083.635453
+  type: 'test'
+  ...
+# Subtest: evidence wrapper and upstream hashes bind manifest records fail-closed
+ok 48 - evidence wrapper and upstream hashes bind manifest records fail-closed
+  ---
+  duration_ms: 10.554659
+  type: 'test'
+  ...
+# Subtest: category aggregation uses attempt weights and all six counts, not mean player percentages
+ok 49 - category aggregation uses attempt weights and all six counts, not mean player percentages
+  ---
+  duration_ms: 1.340898
+  type: 'test'
+  ...
+# Subtest: real comparisons stay unsupported; zero attempts and configured minima stay explicit
+ok 50 - real comparisons stay unsupported; zero attempts and configured minima stay explicit
+  ---
+  duration_ms: 1.282469
+  type: 'test'
+  ...
+# Subtest: missing stats and impossible/coherency data fail before category calculation
+ok 51 - missing stats and impossible/coherency data fail before category calculation
+  ---
+  duration_ms: 3.714304
+  type: 'test'
+  ...
+# Subtest: calendar preserves exact offsets, inclusive endpoints and the accumulation cutoff discrepancy
+ok 52 - calendar preserves exact offsets, inclusive endpoints and the accumulation cutoff discrepancy
+  ---
+  duration_ms: 3.74021
+  type: 'test'
+  ...
+# Subtest: capture rejects unsupported version, unzoned source times and wrong league/partial roster scopes
+ok 53 - capture rejects unsupported version, unzoned source times and wrong league/partial roster scopes
+  ---
+  duration_ms: 22.111377
+  type: 'test'
+  ...
+# Subtest: rules, home and draft evidence must match the exact league and resource
+ok 54 - rules, home and draft evidence must match the exact league and resource
+  ---
+  duration_ms: 6.946686
+  type: 'test'
+  ...
+# Subtest: reimport is idempotent and failed import leaves the current immutable capture intact
+ok 55 - reimport is idempotent and failed import leaves the current immutable capture intact
+  ---
+  duration_ms: 20.598089
+  type: 'test'
+  ...
+# Subtest: strategy persistence audits pivots, preserves Balanced start, and expires one-period overlay
+ok 56 - strategy persistence audits pivots, preserves Balanced start, and expires one-period overlay
+  ---
+  duration_ms: 14.386208
+  type: 'test'
+  ...
+# Subtest: real partial readiness report saves without policy and never invents players/probabilities or source freshness
+ok 57 - real partial readiness report saves without policy and never invents players/probabilities or source freshness
+  ---
+  duration_ms: 20.498203
+  type: 'test'
+  ...
+# Subtest: HTTP probe uses explicit allowlisted GET; 403 does not return fixture data
+ok 58 - HTTP probe uses explicit allowlisted GET; 403 does not return fixture data
+  ---
+  duration_ms: 3.685522
+  type: 'test'
+  ...
+# Subtest: hashes are key-order stable and invalid JSON values fail
+ok 59 - hashes are key-order stable and invalid JSON values fail
+  ---
+  duration_ms: 0.720844
+  type: 'test'
+  ...
+1..59
+# tests 59
+# suites 0
+# pass 59
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 39557.988634

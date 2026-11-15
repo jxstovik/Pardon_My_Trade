@@ -1,0 +1,26 @@
+{
+  "own": {
+    "mean": 109.27131670342497,
+    "p10": 83.37330740370078,
+    "p25": 95.09431875054076,
+    "median": 108.839132024989,
+    "p75": 122.87990179804825,
+    "p90": 135.91286103400873
+  },
+  "opponent": {
+    "mean": 102.20078924807183,
+    "p10": 76.76029026175677,
+    "p25": 88.45844377078357,
+    "median": 101.8330975764785,
+    "p75": 115.65540145510808,
+    "p90": 127.89390662060065
+  },
+  "win_active": 0.5972,
+  "win_inactive_chase": 0.7971666666666667,
+  "lineup_note": "Keep Michael Wilson at FLEX; it leads your active roster by model mean.",
+  "add_note": "No available flex beats Michael Wilson (14.4). For RB depth, add Brian Robinson Jr. at 10.2 if you want a bench claim. If you need a roster spot, compare the lowest-projection bench player with your season-long depth needs; do not drop a starter solely for a one-week move.",
+  "dst_note": "The refreshed D/ST model's top visible stream is Raiders D/ST at 5.1, vs Bills at 3.5, using the league's points-allowed and total-yards-allowed tiers. Cowboys D/ST project 3.0; the model does not rank Dallas first despite the Mayfield news. Packers D/ST is the lower-value defense on your bench if you make a claim.",
+  "alt_def_note": "Adding and starting Raiders D/ST instead of Buffalo moves the model mean to 110.8 and the win chance to 62% with Chase active.",
+  "alt_def_mean": 110.81932778891147,
+  "alt_def_win": 0.6189
+}

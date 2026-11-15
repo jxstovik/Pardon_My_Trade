@@ -1,0 +1,80 @@
+{
+  "contract_version": "1.0.0",
+  "tool": "pmt_list_injury_alerts",
+  "generated_at": "2026-11-07T06:01:11.912Z",
+  "ok": true,
+  "data": {
+    "snapshot_id": "espn-98806880-70a4d1f1-9b4f-4894-b45e-d6ae9a82be75-1794031135257",
+    "scope": {
+      "league_id": "98806880",
+      "team_id": "7",
+      "selection": "roster_plus_explicit_candidates"
+    },
+    "coverage": {
+      "basis": "snapshot_status_not_live_injury_feed",
+      "scoped_player_count": 16,
+      "unresolved_player_count": 0,
+      "unknown_status_count": 0,
+      "source_completeness": "unknown",
+      "no_news_is_not_clearance": true,
+      "stale_alert_count": 0
+    },
+    "omissions": {
+      "out_of_scope_count": 1040,
+      "non_alert_status_count": 13,
+      "remaining_count": 0,
+      "remaining_high_impact_count": 0
+    },
+    "window_semantics": "Freshness only; stale current injury statuses remain visible.",
+    "players": [
+      {
+        "player_id": "4032473",
+        "full_name": "Rashid Shaheed",
+        "team": "26",
+        "positions": [
+          "WR"
+        ],
+        "status": "out",
+        "injury_status": "out",
+        "updated_at": "2026-11-07T05:58:55.623Z",
+        "stale": false,
+        "impact": "high"
+      },
+      {
+        "player_id": "4428557",
+        "full_name": "Tyjae Spears",
+        "team": "10",
+        "positions": [
+          "RB"
+        ],
+        "status": "out",
+        "injury_status": "out",
+        "updated_at": "2026-11-07T05:58:55.623Z",
+        "stale": false,
+        "impact": "high"
+      },
+      {
+        "player_id": "4568490",
+        "full_name": "RJ Harvey",
+        "team": "7",
+        "positions": [
+          "RB"
+        ],
+        "status": "injured_reserve",
+        "injury_status": "injured_reserve",
+        "updated_at": "2026-11-07T05:58:55.623Z",
+        "stale": false,
+        "impact": "high"
+      }
+    ],
+    "total_count": 3,
+    "returned_count": 3,
+    "truncated": false,
+    "next_cursor": null,
+    "filters": {
+      "since": "2026-11-05T05:59:03.539Z",
+      "until": "2026-11-07T05:59:03.539Z"
+    },
+    "next_step": null
+  }
+}

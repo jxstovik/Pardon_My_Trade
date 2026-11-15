@@ -1,0 +1,682 @@
+{
+  "kind": "actual-YTD-sensitivity-not-forecast",
+  "sourceReadWindowUTC": "2026-11-09 approximately 15:50–16:10Z",
+  "baselineRevision": "fd801aacc2d7fde69c5b0399d49d6769fad591605c6a27ca09e795e3091fa658",
+  "baselineAgePreserved": true,
+  "exclusions": {
+    "Tyson": "ineligible",
+    "Quion": "no verified college schedule",
+    "Campbell": "GTD, conservative bench scenario, not known out",
+    "Karasinski": "GTD concussion, conservative bench scenario, not known out"
+  },
+  "limits": [
+    "0–3 game samples, no calibrated forecasts",
+    "Shooting/count totals reconciled from rounded YTD displays where complete logs not captured",
+    "Future listed games are schedule scenarios, not validated counted starts",
+    "No opponent or acquisition activation model",
+    "No platform actions"
+  ],
+  "input": [
+    {
+      "name": "Markus Burton",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 21,
+        "REB": 4,
+        "AST": 9,
+        "ST": 2,
+        "BLK": 0,
+        "3PTM": 3,
+        "FGM": 7,
+        "FGA": 15,
+        "FTM": 4,
+        "FTA": 6
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Tavari Johnson",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 24,
+        "REB": 2,
+        "AST": 9,
+        "ST": 3,
+        "BLK": 1,
+        "3PTM": 5,
+        "FGM": 9,
+        "FGA": 19,
+        "FTM": 1,
+        "FTA": 2
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Kyle Evans",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 13,
+        "REB": 9,
+        "AST": 3,
+        "ST": 1,
+        "BLK": 4,
+        "3PTM": 1,
+        "FGM": 4,
+        "FGA": 9,
+        "FTM": 4,
+        "FTA": 4
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Jaiden Feroah",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "gp": 3,
+      "seasonTotals": {
+        "PTS": 27,
+        "REB": 14,
+        "AST": 4,
+        "ST": 1,
+        "BLK": 4,
+        "3PTM": 4,
+        "FGM": 11,
+        "FGA": 14,
+        "FTM": 1,
+        "FTA": 2
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Keyshawn Hall",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 39,
+        "REB": 13,
+        "AST": 2,
+        "ST": 2,
+        "BLK": 0,
+        "3PTM": 2,
+        "FGM": 14,
+        "FGA": 26,
+        "FTM": 9,
+        "FTA": 9
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Pryce Sandfort",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 45,
+        "REB": 6,
+        "AST": 6,
+        "ST": 4,
+        "BLK": 0,
+        "3PTM": 4,
+        "FGM": 16,
+        "FGA": 27,
+        "FTM": 9,
+        "FTA": 10
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Daeshun Ruffin",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 22,
+        "REB": 4,
+        "AST": 11,
+        "ST": 1,
+        "BLK": 0,
+        "3PTM": 0,
+        "FGM": 5,
+        "FGA": 18,
+        "FTM": 12,
+        "FTA": 14
+      },
+      "listedGames": 3
+    },
+    {
+      "name": "Michael James",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 1,
+      "seasonTotals": {
+        "PTS": 16,
+        "REB": 2,
+        "AST": 2,
+        "ST": 0,
+        "BLK": 0,
+        "3PTM": 3,
+        "FGM": 5,
+        "FGA": 11,
+        "FTM": 3,
+        "FTA": 3
+      },
+      "listedGames": 3
+    },
+    {
+      "name": "Trevan Leonhardt",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 7,
+        "REB": 5,
+        "AST": 7,
+        "ST": 2,
+        "BLK": 0,
+        "3PTM": 2,
+        "FGM": 2,
+        "FGA": 3,
+        "FTM": 1,
+        "FTA": 2
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Jalen Cox",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 2,
+        "REB": 0,
+        "AST": 0,
+        "ST": 1,
+        "BLK": 0,
+        "3PTM": 0,
+        "FGM": 1,
+        "FGA": 1,
+        "FTM": 0,
+        "FTA": 0
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Keshawn Fisher",
+      "eligibleGroups": [
+        "G",
+        "F/C"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 47,
+        "REB": 11,
+        "AST": 4,
+        "ST": 5,
+        "BLK": 4,
+        "3PTM": 7,
+        "FGM": 17,
+        "FGA": 25,
+        "FTM": 6,
+        "FTA": 8
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Max Weisbrod",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 3,
+      "seasonTotals": {
+        "PTS": 50,
+        "REB": 11,
+        "AST": 24,
+        "ST": 4,
+        "BLK": 0,
+        "3PTM": 12,
+        "FGM": 14,
+        "FGA": 29,
+        "FTM": 10,
+        "FTA": 14
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Jayden Reid",
+      "eligibleGroups": [
+        "G"
+      ],
+      "gp": 2,
+      "seasonTotals": {
+        "PTS": 58,
+        "REB": 2,
+        "AST": 8,
+        "ST": 5,
+        "BLK": 0,
+        "3PTM": 5,
+        "FGM": 17,
+        "FGA": 32,
+        "FTM": 19,
+        "FTA": 23
+      },
+      "listedGames": 2
+    },
+    {
+      "name": "Caleb Sanders",
+      "eligibleGroups": [
+        "F/C"
+      ],
+      "gp": 3,
+      "seasonTotals": {
+        "PTS": 56,
+        "REB": 22,
+        "AST": 8,
+        "ST": 3,
+        "BLK": 3,
+        "3PTM": 3,
+        "FGM": 18,
+        "FGA": 35,
+        "FTM": 17,
+        "FTA": 22
+      },
+      "listedGames": 2
+    }
+  ],
+  "scenarios": [
+    {
+      "acquisition": false,
+      "namedOpponentsOnly": false,
+      "result": {
+        "score": 34.38186963135125,
+        "active": [
+          {
+            "id": "Markus Burton",
+            "slot": "G1"
+          },
+          {
+            "id": "Tavari Johnson",
+            "slot": "G2"
+          },
+          {
+            "id": "Kyle Evans",
+            "slot": "F/C1"
+          },
+          {
+            "id": "Jaiden Feroah",
+            "slot": "F/C2"
+          },
+          {
+            "id": "Keyshawn Hall",
+            "slot": "F/C3"
+          },
+          {
+            "id": "Pryce Sandfort",
+            "slot": "F/C4"
+          },
+          {
+            "id": "Daeshun Ruffin",
+            "slot": "G3"
+          },
+          {
+            "id": "Michael James",
+            "slot": "G4"
+          },
+          {
+            "id": "Trevan Leonhardt",
+            "slot": "Flx1"
+          },
+          {
+            "id": "Jalen Cox",
+            "slot": "Flx2"
+          }
+        ],
+        "reserveIds": [],
+        "scheduledAppearances": 22,
+        "totals": {
+          "PTS": 250,
+          "REB": 60.333333333333336,
+          "AST": 61.16666666666667,
+          "ST": 17.166666666666668,
+          "BLK": 7.666666666666666,
+          "3PTM": 28.666666666666664,
+          "FGM": 82.83333333333333,
+          "FGA": 169.33333333333334,
+          "FTM": 55.666666666666664,
+          "FTA": 64.33333333333334,
+          "FG%": 0.48917322834645666,
+          "FT%": 0.8652849740932641
+        },
+        "lowTotals": {
+          "PTS": 250,
+          "REB": 60.333333333333336,
+          "AST": 61.16666666666667,
+          "ST": 17.166666666666668,
+          "BLK": 7.666666666666666,
+          "3PTM": 28.666666666666664,
+          "FGM": 82.83333333333333,
+          "FGA": 169.33333333333334,
+          "FTM": 55.666666666666664,
+          "FTA": 64.33333333333334,
+          "FG%": 0.48917322834645666,
+          "FT%": 0.8652849740932641
+        },
+        "highTotals": {
+          "PTS": 250,
+          "REB": 60.333333333333336,
+          "AST": 61.16666666666667,
+          "ST": 17.166666666666668,
+          "BLK": 7.666666666666666,
+          "3PTM": 28.666666666666664,
+          "FGM": 82.83333333333333,
+          "FGA": 169.33333333333334,
+          "FTM": 55.666666666666664,
+          "FTA": 64.33333333333334,
+          "FG%": 0.48917322834645666,
+          "FT%": 0.8652849740932641
+        }
+      }
+    },
+    {
+      "acquisition": false,
+      "namedOpponentsOnly": true,
+      "result": {
+        "score": 30.95737067209223,
+        "active": [
+          {
+            "id": "Markus Burton",
+            "slot": "G1"
+          },
+          {
+            "id": "Tavari Johnson",
+            "slot": "G2"
+          },
+          {
+            "id": "Kyle Evans",
+            "slot": "F/C1"
+          },
+          {
+            "id": "Jaiden Feroah",
+            "slot": "F/C2"
+          },
+          {
+            "id": "Keyshawn Hall",
+            "slot": "F/C3"
+          },
+          {
+            "id": "Pryce Sandfort",
+            "slot": "F/C4"
+          },
+          {
+            "id": "Daeshun Ruffin",
+            "slot": "G3"
+          },
+          {
+            "id": "Michael James",
+            "slot": "G4"
+          },
+          {
+            "id": "Trevan Leonhardt",
+            "slot": "Flx1"
+          },
+          {
+            "id": "Jalen Cox",
+            "slot": "Flx2"
+          }
+        ],
+        "reserveIds": [],
+        "scheduledAppearances": 20,
+        "totals": {
+          "PTS": 218,
+          "REB": 56.333333333333336,
+          "AST": 57.16666666666667,
+          "ST": 17.166666666666668,
+          "BLK": 7.666666666666666,
+          "3PTM": 22.666666666666664,
+          "FGM": 72.83333333333333,
+          "FGA": 147.33333333333334,
+          "FTM": 49.666666666666664,
+          "FTA": 58.333333333333336,
+          "FG%": 0.49434389140271484,
+          "FT%": 0.8514285714285713
+        },
+        "lowTotals": {
+          "PTS": 218,
+          "REB": 56.333333333333336,
+          "AST": 57.16666666666667,
+          "ST": 17.166666666666668,
+          "BLK": 7.666666666666666,
+          "3PTM": 22.666666666666664,
+          "FGM": 72.83333333333333,
+          "FGA": 147.33333333333334,
+          "FTM": 49.666666666666664,
+          "FTA": 58.333333333333336,
+          "FG%": 0.49434389140271484,
+          "FT%": 0.8514285714285713
+        },
+        "highTotals": {
+          "PTS": 218,
+          "REB": 56.333333333333336,
+          "AST": 57.16666666666667,
+          "ST": 17.166666666666668,
+          "BLK": 7.666666666666666,
+          "3PTM": 22.666666666666664,
+          "FGM": 72.83333333333333,
+          "FGA": 147.33333333333334,
+          "FTM": 49.666666666666664,
+          "FTA": 58.333333333333336,
+          "FG%": 0.49434389140271484,
+          "FT%": 0.8514285714285713
+        }
+      }
+    },
+    {
+      "acquisition": true,
+      "namedOpponentsOnly": false,
+      "result": {
+        "score": 48.547112429256366,
+        "active": [
+          {
+            "id": "Tavari Johnson",
+            "slot": "G1"
+          },
+          {
+            "id": "Kyle Evans",
+            "slot": "F/C1"
+          },
+          {
+            "id": "Jaiden Feroah",
+            "slot": "F/C2"
+          },
+          {
+            "id": "Keyshawn Hall",
+            "slot": "F/C3"
+          },
+          {
+            "id": "Pryce Sandfort",
+            "slot": "F/C4"
+          },
+          {
+            "id": "Daeshun Ruffin",
+            "slot": "G2"
+          },
+          {
+            "id": "Michael James",
+            "slot": "G3"
+          },
+          {
+            "id": "Keshawn Fisher",
+            "slot": "G4"
+          },
+          {
+            "id": "Max Weisbrod",
+            "slot": "Flx1"
+          },
+          {
+            "id": "Jayden Reid",
+            "slot": "Flx2"
+          }
+        ],
+        "reserveIds": [
+          "Markus Burton",
+          "Trevan Leonhardt"
+        ],
+        "scheduledAppearances": 22,
+        "totals": {
+          "PTS": 358.3333333333333,
+          "REB": 71.66666666666667,
+          "AST": 73.16666666666666,
+          "ST": 24.833333333333336,
+          "BLK": 11.666666666666666,
+          "3PTM": 43.666666666666664,
+          "FGM": 116.16666666666666,
+          "FGA": 226.66666666666669,
+          "FTM": 82.33333333333334,
+          "FTA": 96.66666666666666,
+          "FG%": 0.5125,
+          "FT%": 0.8517241379310346
+        },
+        "lowTotals": {
+          "PTS": 358.3333333333333,
+          "REB": 71.66666666666667,
+          "AST": 73.16666666666666,
+          "ST": 24.833333333333336,
+          "BLK": 11.666666666666666,
+          "3PTM": 43.666666666666664,
+          "FGM": 116.16666666666666,
+          "FGA": 226.66666666666669,
+          "FTM": 82.33333333333334,
+          "FTA": 96.66666666666666,
+          "FG%": 0.5125,
+          "FT%": 0.8517241379310346
+        },
+        "highTotals": {
+          "PTS": 358.3333333333333,
+          "REB": 71.66666666666667,
+          "AST": 73.16666666666666,
+          "ST": 24.833333333333336,
+          "BLK": 11.666666666666666,
+          "3PTM": 43.666666666666664,
+          "FGM": 116.16666666666666,
+          "FGA": 226.66666666666669,
+          "FTM": 82.33333333333334,
+          "FTA": 96.66666666666666,
+          "FG%": 0.5125,
+          "FT%": 0.8517241379310346
+        }
+      }
+    },
+    {
+      "acquisition": true,
+      "namedOpponentsOnly": true,
+      "result": {
+        "score": 43.5704516270847,
+        "active": [
+          {
+            "id": "Markus Burton",
+            "slot": "G1"
+          },
+          {
+            "id": "Tavari Johnson",
+            "slot": "G2"
+          },
+          {
+            "id": "Kyle Evans",
+            "slot": "F/C1"
+          },
+          {
+            "id": "Jaiden Feroah",
+            "slot": "F/C2"
+          },
+          {
+            "id": "Keyshawn Hall",
+            "slot": "F/C3"
+          },
+          {
+            "id": "Pryce Sandfort",
+            "slot": "F/C4"
+          },
+          {
+            "id": "Daeshun Ruffin",
+            "slot": "G3"
+          },
+          {
+            "id": "Keshawn Fisher",
+            "slot": "G4"
+          },
+          {
+            "id": "Max Weisbrod",
+            "slot": "Flx1"
+          },
+          {
+            "id": "Jayden Reid",
+            "slot": "Flx2"
+          }
+        ],
+        "reserveIds": [
+          "Michael James",
+          "Trevan Leonhardt"
+        ],
+        "scheduledAppearances": 20,
+        "totals": {
+          "PTS": 314.6666666666667,
+          "REB": 66,
+          "AST": 68.16666666666667,
+          "ST": 25.5,
+          "BLK": 11.666666666666666,
+          "3PTM": 33.666666666666664,
+          "FGM": 103.5,
+          "FGA": 199,
+          "FTM": 74,
+          "FTA": 89,
+          "FG%": 0.5201005025125628,
+          "FT%": 0.8314606741573034
+        },
+        "lowTotals": {
+          "PTS": 314.6666666666667,
+          "REB": 66,
+          "AST": 68.16666666666667,
+          "ST": 25.5,
+          "BLK": 11.666666666666666,
+          "3PTM": 33.666666666666664,
+          "FGM": 103.5,
+          "FGA": 199,
+          "FTM": 74,
+          "FTA": 89,
+          "FG%": 0.5201005025125628,
+          "FT%": 0.8314606741573034
+        },
+        "highTotals": {
+          "PTS": 314.6666666666667,
+          "REB": 66,
+          "AST": 68.16666666666667,
+          "ST": 25.5,
+          "BLK": 11.666666666666666,
+          "3PTM": 33.666666666666664,
+          "FGM": 103.5,
+          "FGA": 199,
+          "FTM": 74,
+          "FTA": 89,
+          "FG%": 0.5201005025125628,
+          "FT%": 0.8314606741573034
+        }
+      }
+    }
+  ]
+}

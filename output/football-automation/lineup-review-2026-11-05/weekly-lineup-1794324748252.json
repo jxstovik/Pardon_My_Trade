@@ -1,0 +1,186 @@
+{
+  "at": "2026-11-10T15:32:28.252Z",
+  "week": 10,
+  "leagueId": "98806880",
+  "teamId": "7",
+  "modelVersion": "weekly-2026-W10-a5f6795d8f00-368dedd8bda2-d1284c4271e7",
+  "objective": "maximum current-week model expected points subject to exact live eligibility, capacity and locks",
+  "mode": "preview",
+  "starters": [
+    {
+      "playerId": "3918298",
+      "slot": "QB",
+      "currentSlot": "QB",
+      "locked": false,
+      "eligiblePositions": [
+        "QB"
+      ],
+      "name": "Josh Allen",
+      "projectedPoints": 18.767258314591075
+    },
+    {
+      "playerId": "4890973",
+      "slot": "RB",
+      "currentSlot": "RB",
+      "locked": false,
+      "eligiblePositions": [
+        "RB",
+        "FLEX"
+      ],
+      "name": "Ashton Jeanty",
+      "projectedPoints": 14.110673463054074
+    },
+    {
+      "playerId": "3916148",
+      "slot": "RB",
+      "currentSlot": "BN",
+      "locked": false,
+      "eligiblePositions": [
+        "RB",
+        "FLEX"
+      ],
+      "name": "Tony Pollard",
+      "projectedPoints": 12.738420658387785
+    },
+    {
+      "playerId": "4595348",
+      "slot": "WR",
+      "currentSlot": "FLEX",
+      "locked": false,
+      "eligiblePositions": [
+        "WR",
+        "FLEX"
+      ],
+      "name": "Malik Nabers",
+      "projectedPoints": 18.344404342269787
+    },
+    {
+      "playerId": "4426388",
+      "slot": "WR",
+      "currentSlot": "WR",
+      "locked": false,
+      "eligiblePositions": [
+        "WR",
+        "FLEX"
+      ],
+      "name": "Jameson Williams",
+      "projectedPoints": 11.277524247632266
+    },
+    {
+      "playerId": "3040151",
+      "slot": "TE",
+      "currentSlot": "TE",
+      "locked": false,
+      "eligiblePositions": [
+        "TE",
+        "FLEX"
+      ],
+      "name": "George Kittle",
+      "projectedPoints": 11.694835741369348
+    },
+    {
+      "playerId": "-16018",
+      "slot": "DST",
+      "currentSlot": "DST",
+      "locked": false,
+      "eligiblePositions": [
+        "DST"
+      ],
+      "name": "Saints D/ST",
+      "projectedPoints": 5.083678604046658
+    },
+    {
+      "playerId": "5081335",
+      "slot": "K",
+      "currentSlot": "K",
+      "locked": false,
+      "eligiblePositions": [
+        "K"
+      ],
+      "name": "Drew Stevens",
+      "projectedPoints": 8.660592294471781
+    },
+    {
+      "playerId": "4569587",
+      "slot": "FLEX",
+      "currentSlot": "BN",
+      "locked": false,
+      "eligiblePositions": [
+        "WR",
+        "FLEX"
+      ],
+      "name": "Wan'Dale Robinson",
+      "projectedPoints": 10.619376955826192
+    }
+  ],
+  "changes": [
+    {
+      "playerId": "4595348",
+      "from": "FLEX",
+      "to": "WR",
+      "name": "Malik Nabers"
+    },
+    {
+      "playerId": "4360761",
+      "from": "WR",
+      "to": "BN",
+      "name": "Michael Wilson"
+    },
+    {
+      "playerId": "4371733",
+      "from": "RB",
+      "to": "BN",
+      "name": "Kenny Gainwell"
+    },
+    {
+      "playerId": "4569587",
+      "from": "BN",
+      "to": "FLEX",
+      "name": "Wan'Dale Robinson"
+    },
+    {
+      "playerId": "3916148",
+      "from": "BN",
+      "to": "RB",
+      "name": "Tony Pollard"
+    }
+  ],
+  "currentLegal": true,
+  "currentPoints": 87.93896700743498,
+  "expectedPoints": 111.29676462164896,
+  "expectedGain": 23.35779761421398,
+  "unavailable": [
+    {
+      "playerId": "4360761",
+      "name": "Michael Wilson",
+      "status": "OUT",
+      "bye": false
+    },
+    {
+      "playerId": "4371733",
+      "name": "Kenny Gainwell",
+      "status": "ACTIVE",
+      "bye": true
+    },
+    {
+      "playerId": "4568490",
+      "name": "RJ Harvey",
+      "status": "INJURY_RESERVE",
+      "bye": true
+    },
+    {
+      "playerId": "4428557",
+      "name": "Tyjae Spears",
+      "status": "OUT",
+      "bye": false
+    },
+    {
+      "playerId": "4032473",
+      "name": "Rashid Shaheed",
+      "status": "OUT",
+      "bye": false
+    }
+  ],
+  "executed": false,
+  "verified": false
+}

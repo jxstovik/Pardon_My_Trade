@@ -1,0 +1,14 @@
+{
+  "reason": "Prior role uncertainty follow-up; owned kicker remains locked, no current-week kicker rotation considered.",
+  "rows": [
+    {
+      "playerId": "5208518",
+      "status": "unverified",
+      "publishedAt": "2026-11-14T23:33:50.000Z",
+      "retrievedAt": "2026-11-15T06:05:34.198Z",
+      "sourceUrl": "https://www.espn.com/nfl/player/news/_/id/5208518",
+      "text": "The Saints elevated Smyth from their practice squad to their active roster Saturday. Smyth is thus set to serve as the Saints' kicker for the second straight week. In his 2026 debut last Sunday against Cleveland, he went 3-for-4 on field-goal attempts and 2-for-2 on point-after tries. If Smyth performs well Sunday, he'll likely be elevated again for Week 11 in Chicago.",
+      "kind": "news"
+    }
+  ]
+}

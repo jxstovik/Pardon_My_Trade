@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "leagueId": "mmioj1mvmvgsc3io",
+  "leagueSeason": "2026-27",
+  "sourceUrl": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players;scoringCategoryType=1;pageNumber=1;view=SCHEDULE_PERIOD",
+  "observedAt": "2026-10-27T08:06:49.483059+00:00",
+  "kind": "official-csv-export",
+  "view": "schedule-period",
+  "scope": "all-available-players",
+  "displayedDates": [
+    "Sun 11/1",
+    "Mon 11/2",
+    "Tue 11/3",
+    "Wed 11/4",
+    "Thu 11/5",
+    "Fri 11/6",
+    "Sat 11/7",
+    "Sun 11/8"
+  ],
+  "rawSha256": "dd644c8486abfeb4ac264fa3577447be476107b06c5392debde1399e1e3fa7dd",
+  "bytes": 751045,
+  "rows": 5687,
+  "rawOnly": true,
+  "verifiedUTCInstants": false,
+  "verifiedGameIds": false,
+  "yearAndTimezoneReconciled": false,
+  "warning": "Date-column and label-day discrepancies require reconciliation; blank cells are not proof of no scheduled game."
+}

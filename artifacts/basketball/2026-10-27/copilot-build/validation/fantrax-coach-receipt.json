@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "real-browser-pre-draft-local-coach-receipt",
+  "captureSha256": "7badbbb650d3f6dfcb41e0c2b2617956522ab5c56f6f47d2f0cc488b93fd5da1",
+  "capturedAt": "2026-10-27T17:57:14.122Z",
+  "receivedAt": "2026-10-27T17:57:27.740Z",
+  "sequence": 1,
+  "boardRevision": "e3298d4ba837c70fabc3256b5856eb669c2da77ae06e31a62a814febbc71520b",
+  "copilotRevision": "g1-201f05136be73f4842ff5a987fa3bbcb20fb2ab6371a1de935eb51838e136654",
+  "phase": "pre-draft",
+  "picks": 0,
+  "venue": "fantrax-league",
+  "liveActionsExecuted": 0,
+  "limitations": [
+    "Fresh pre-draft bootstrap only; live selected cells, player identity, clock and turn remain unverified.",
+    "DOM read was performed separately through supported browser tools. No Fantrax network request, queue, rank or pick was made by this helper."
+  ]
+}

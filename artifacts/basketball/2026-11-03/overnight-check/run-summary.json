@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "triggerAt": "2026-11-03T07:32:37.229Z",
+  "triggerLocal": "2026-11-03T02:32:37.229-05:00",
+  "desiredLocal": "02:30 America/New_York",
+  "triggerDeltaSecondsFromDesired": 157.229,
+  "automationIdentity": "banging-3s-basketball-workflow",
+  "configuredUtcHour": "07:30Z daily",
+  "identityDestinationActiveStateExpiryChanged": false,
+  "notificationDeliveryVerified": false,
+  "browserObservationWindow": { "startedAfterTrigger": true, "completedNoLaterThan": "2026-11-03T07:35:28Z" },
+  "freshReads": [
+    "current Fantrax period 1, Nov 1-Nov 8, and opponent JeffWischer",
+    "all 14 own roster identities and active/reserve slots; 10 active/four reserves",
+    "own period-one schedule and current opponent roster/schedule",
+    "current Tyler Tanner row resolves to Bellarmine game ID 06q3e, final",
+    "current 20 first-page available rows, all Claim / FA"
+  ],
+  "notFreshOrUnresolved": [
+    "underlying per-game baseline and approved corrected board retain oldest Oct 27 dependency",
+    "current candidate schedule unavailable; Schedule selection remained on Stats view",
+    "full available-player pool is not captured",
+    "lock scope, exact timezone/instant and activation unresolved",
+    "N/A opponent event counted-game eligibility unresolved",
+    "team/player caps and shot minimum/rounding semantics unresolved",
+    "current health/role evidence incomplete; Campbell DNP/undisclosed and Tyson eligibility pending"
+  ],
+  "matchupCurrent": { "team": "2-5-1", "opponent": "5-2-1", "final": false },
+  "actualResultsArchive": "artifacts/basketball/2026-11-03/overnight-check/observed-games.json",
+  "weeklyForecast": { "rerun": false, "reason": "Pre-lock forecast engine rejects started games; preserve Nov 2 immutable pre-lock report and do not replay it as fresh." },
+  "historicalDoctor": { "command": "doctor", "generatedAt": "2026-11-03T07:35:28Z", "snapshotId": "snapshot-2e07affe294b5eb5241fe762ed42f4e996dd7299c4550761728700f6aec5531b", "observedPlayers": 0, "status": "partial; stale Oct 25 pre-draft snapshot" },
+  "historicalReport": { "command": "report", "generatedAt": "2026-11-03T07:35:28Z", "separateFromFreshWeeklyReads": true },
+  "liveActionsExecuted": 0,
+  "modelTrainedOrPromoted": false,
+  "codeChanged": false,
+  "testsRun": false,
+  "notificationRecommendation": "NOTIFY: first completed-game evidence and fresh availability findings (Campbell DNP/undisclosed, Tyson eligibility pending); no qualified lineup recommendation because exact lock and counted-game rules remain unresolved."
+}

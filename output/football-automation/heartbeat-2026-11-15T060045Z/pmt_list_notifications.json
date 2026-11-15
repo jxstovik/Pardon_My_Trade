@@ -1,0 +1,1082 @@
+{
+  "contract_version": "1.0.0",
+  "tool": "pmt_list_notifications",
+  "generated_at": "2026-11-15T06:03:25.043Z",
+  "ok": true,
+  "data": {
+    "notifications": [
+      {
+        "notification_id": "notif-weekly-98806880-7-1794722568381",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1794722568381"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-15T06:02:46.842Z",
+        "expires_at": "2026-11-22T06:02:48.381Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1794384065403",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1794384065403"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-11T08:01:03.936Z",
+        "expires_at": "2026-11-18T08:01:05.403Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1794316964828",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1794316964828"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-10T13:22:43.355Z",
+        "expires_at": "2026-11-17T13:22:44.828Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793564747270",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793564747270"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-01T20:25:45.874Z",
+        "expires_at": "2026-11-08T20:25:47.270Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793563548270",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793563548270"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-01T20:05:46.641Z",
+        "expires_at": "2026-11-08T20:05:48.270Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793552448198",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793552448198"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-01T17:00:46.823Z",
+        "expires_at": "2026-11-08T17:00:48.198Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793520095799",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793520095799"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-01T08:01:34.213Z",
+        "expires_at": "2026-11-08T08:01:35.799Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793520055636",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793520055636"
+        ],
+        "action_required": false,
+        "created_at": "2026-11-01T08:00:54.100Z",
+        "expires_at": "2026-11-08T08:00:55.636Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793430095123",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793430095123"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-31T07:01:33.199Z",
+        "expires_at": "2026-11-07T07:01:35.123Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793430052411",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793430052411"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-31T07:00:51.005Z",
+        "expires_at": "2026-11-07T07:00:52.411Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793343662325",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793343662325"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-30T07:01:01.257Z",
+        "expires_at": "2026-11-06T07:01:02.325Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793343654822",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793343654822"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-30T07:00:53.589Z",
+        "expires_at": "2026-11-06T07:00:54.822Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793315747060",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793315747060"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-29T23:15:45.852Z",
+        "expires_at": "2026-11-05T23:15:47.060Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793274982476",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793274982476"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-29T11:56:21.049Z",
+        "expires_at": "2026-11-05T11:56:22.476Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793257279564",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793257279564"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-29T07:01:18.294Z",
+        "expires_at": "2026-11-05T07:01:19.564Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793257261293",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793257261293"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-29T07:00:59.997Z",
+        "expires_at": "2026-11-05T07:01:01.293Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793170862657",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793170862657"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-28T07:01:01.603Z",
+        "expires_at": "2026-11-04T07:01:02.657Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793104700477",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793104700477"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-27T12:38:18.922Z",
+        "expires_at": "2026-11-03T12:38:20.477Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793104458941",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793104458941"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-27T12:34:17.645Z",
+        "expires_at": "2026-11-03T12:34:18.941Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793104271311",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793104271311"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-27T12:31:09.790Z",
+        "expires_at": "2026-11-03T12:31:11.311Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793104058091",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793104058091"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-27T12:27:36.341Z",
+        "expires_at": "2026-11-03T12:27:38.091Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793103832129",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793103832129"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-27T12:23:50.697Z",
+        "expires_at": "2026-11-03T12:23:52.129Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793084486637",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793084486637"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-27T07:01:25.334Z",
+        "expires_at": "2026-11-03T07:01:26.637Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793084436392",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793084436392"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-27T07:00:35.189Z",
+        "expires_at": "2026-11-03T07:00:36.392Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1793056549223",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1793056549223"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-26T23:15:47.923Z",
+        "expires_at": "2026-11-02T23:15:49.223Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792998060772",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792998060772"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-26T07:00:59.426Z",
+        "expires_at": "2026-11-02T07:01:00.772Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792970447985",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792970447985"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-25T23:20:46.432Z",
+        "expires_at": "2026-11-01T23:20:47.985Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792956345434",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792956345434"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-25T19:25:43.830Z",
+        "expires_at": "2026-11-01T19:25:45.434Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792955145373",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792955145373"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-25T19:05:44.332Z",
+        "expires_at": "2026-11-01T19:05:45.373Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792933909195",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792933909195"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-25T13:11:48.173Z",
+        "expires_at": "2026-11-01T13:11:49.195Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792931445265",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792931445265"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-25T12:30:43.803Z",
+        "expires_at": "2026-11-01T12:30:45.265Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792911787715",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792911787715"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-25T07:03:06.528Z",
+        "expires_at": "2026-11-01T07:03:07.715Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792911685713",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792911685713"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-25T07:01:24.399Z",
+        "expires_at": "2026-11-01T07:01:25.713Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792843656801",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792843656801"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-24T12:07:34.632Z",
+        "expires_at": "2026-10-31T12:07:36.801Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792837389104",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792837389104"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-24T10:23:07.951Z",
+        "expires_at": "2026-10-31T10:23:09.104Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792837285919",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792837285919"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-24T10:21:24.701Z",
+        "expires_at": "2026-10-31T10:21:25.919Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792837072650",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792837072650"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-24T10:17:51.468Z",
+        "expires_at": "2026-10-31T10:17:52.650Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792836180546",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792836180546"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-24T10:02:59.349Z",
+        "expires_at": "2026-10-31T10:03:00.546Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792825269850",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792825269850"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-24T07:01:08.452Z",
+        "expires_at": "2026-10-31T07:01:09.850Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792739009682",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792739009682"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-23T07:03:28.591Z",
+        "expires_at": "2026-10-30T07:03:29.682Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792738905253",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792738905253"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-23T07:01:43.953Z",
+        "expires_at": "2026-10-30T07:01:45.253Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792710961382",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792710961382"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-22T23:16:00.099Z",
+        "expires_at": "2026-10-29T23:16:01.382Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792652593110",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792652593110"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-22T07:03:12.016Z",
+        "expires_at": "2026-10-29T07:03:13.110Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792652475556",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792652475556"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-22T07:01:14.504Z",
+        "expires_at": "2026-10-29T07:01:15.556Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792566140539",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792566140539"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-21T07:02:19.506Z",
+        "expires_at": "2026-10-28T07:02:20.539Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792566053723",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792566053723"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-21T07:00:52.521Z",
+        "expires_at": "2026-10-28T07:00:53.723Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792479901814",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792479901814"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-20T07:05:00.568Z",
+        "expires_at": "2026-10-27T07:05:01.814Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792479674521",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792479674521"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-20T07:01:13.440Z",
+        "expires_at": "2026-10-27T07:01:14.521Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792479653153",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792479653153"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-20T07:00:51.196Z",
+        "expires_at": "2026-10-27T07:00:53.153Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792451717384",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792451717384"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-19T23:15:16.289Z",
+        "expires_at": "2026-10-26T23:15:17.384Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792393311899",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792393311899"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-19T07:01:50.769Z",
+        "expires_at": "2026-10-26T07:01:51.899Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792393260814",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792393260814"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-19T07:00:59.816Z",
+        "expires_at": "2026-10-26T07:01:00.814Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792365614111",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792365614111"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T23:20:12.854Z",
+        "expires_at": "2026-10-25T23:20:14.111Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792351519281",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792351519281"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T19:25:17.660Z",
+        "expires_at": "2026-10-25T19:25:19.281Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792350319320",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792350319320"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T19:05:17.948Z",
+        "expires_at": "2026-10-25T19:05:19.320Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792340838349",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792340838349"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T16:27:17.268Z",
+        "expires_at": "2026-10-25T16:27:18.349Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792340642353",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792340642353"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T16:24:01.077Z",
+        "expires_at": "2026-10-25T16:24:02.353Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792340309940",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792340309940"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T16:18:28.536Z",
+        "expires_at": "2026-10-25T16:18:29.940Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792326635474",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792326635474"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T12:30:34.416Z",
+        "expires_at": "2026-10-25T12:30:35.474Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792306825459",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792306825459"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-18T07:00:24.315Z",
+        "expires_at": "2026-10-25T07:00:25.459Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792220426831",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792220426831"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-17T07:00:25.654Z",
+        "expires_at": "2026-10-24T07:00:26.831Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792134033242",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792134033242"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-16T07:00:32.023Z",
+        "expires_at": "2026-10-23T07:00:33.242Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792106125340",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792106125340"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-15T23:15:24.131Z",
+        "expires_at": "2026-10-22T23:15:25.340Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792047698021",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792047698021"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-15T07:01:37.016Z",
+        "expires_at": "2026-10-22T07:01:38.021Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792011065407",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792011065407"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-14T20:51:04.236Z",
+        "expires_at": "2026-10-21T20:51:05.407Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1792004552336",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1792004552336"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-14T19:02:31.245Z",
+        "expires_at": "2026-10-21T19:02:32.336Z",
+        "delivered": false
+      },
+      {
+        "notification_id": "notif-weekly-98806880-7-1791728099805",
+        "user_id": "manager-001",
+        "league_id": "98806880",
+        "priority": "medium",
+        "type": "weekly_planning_report",
+        "title": "Weekly fantasy football assistant report",
+        "body": "Review the lineup, waiver, and trade suggestions below before locking your lineup.",
+        "related_recommendation_ids": [
+          "weekly-98806880-7-1791728099805"
+        ],
+        "action_required": false,
+        "created_at": "2026-10-11T14:14:58.539Z",
+        "expires_at": "2026-10-18T14:14:59.805Z",
+        "delivered": false
+      }
+    ]
+  }
+}

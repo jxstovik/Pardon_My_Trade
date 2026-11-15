@@ -1,0 +1,779 @@
+{
+  "scenarios": {
+    "keep": {
+      "weeks": [
+        {
+          "week": 10,
+          "mean": 111.29676462164896,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 11,
+          "mean": 113.64260822377099,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 12,
+          "mean": 107.8339943834557,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 13,
+          "mean": 112.46834612601566,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Rico Dowdle",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 14,
+          "mean": 111.7509649143588,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 15,
+          "mean": 115.66054799466737,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 16,
+          "mean": 116.28504496182155,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Rico Dowdle",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 17,
+          "mean": 113.29711447679442,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Malik Nabers",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        }
+      ],
+      "weeks10_17": 902.2353857025334,
+      "weeks15_17": 345.24270743328333,
+      "week10_delta": 0.0,
+      "weeks10_17_delta": 0.0,
+      "weeks15_17_delta": 0.0
+    },
+    "original_offer": {
+      "weeks": [
+        {
+          "week": 10,
+          "mean": 108.03451186195748,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 11,
+          "mean": 110.53581420493512,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 12,
+          "mean": 104.98908918967979,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 13,
+          "mean": 109.09865989230637,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Bhayshul Tuten",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 14,
+          "mean": 108.71436648266216,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 15,
+          "mean": 114.23794872839022,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 16,
+          "mean": 114.2860632662693,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 17,
+          "mean": 110.54958691883085,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        }
+      ],
+      "weeks10_17": 880.4460405450313,
+      "weeks15_17": 339.0735989134904,
+      "week10_delta": -3.262252759691478,
+      "weeks10_17_delta": -21.78934515750211,
+      "weeks15_17_delta": -6.169108519792928
+    },
+    "counter_gibbs_rice_for_nabers_pollard": {
+      "weeks": [
+        {
+          "week": 10,
+          "mean": 115.14335335908042,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 11,
+          "mean": 114.84231895265727,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 12,
+          "mean": 110.75322649005444,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 13,
+          "mean": 117.7150505195665,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Rico Dowdle",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 14,
+          "mean": 114.909946649592,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 15,
+          "mean": 117.12207057373912,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 16,
+          "mean": 117.18102441545358,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Rico Dowdle",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 17,
+          "mean": 116.37579181961343,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        }
+      ],
+      "weeks10_17": 924.0427827797567,
+      "weeks15_17": 350.6788868088061,
+      "week10_delta": 3.8465887374314605,
+      "weeks10_17_delta": 21.8073970772233,
+      "weeks15_17_delta": 5.436179375522784
+    },
+    "gibbs_for_nabers": {
+      "weeks": [
+        {
+          "week": 10,
+          "mean": 114.21914615823914,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Tony Pollard",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 11,
+          "mean": 115.40645815620833,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Tony Pollard",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Ashton Jeanty",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 12,
+          "mean": 109.69467888447261,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Tony Pollard",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 13,
+          "mean": 116.67347327647175,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Tony Pollard",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Rico Dowdle",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 14,
+          "mean": 114.03291286472647,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Tony Pollard",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 15,
+          "mean": 117.60051107051807,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Tony Pollard",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Ashton Jeanty",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 16,
+          "mean": 117.64882743717365,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Tony Pollard",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Ashton Jeanty",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 17,
+          "mean": 115.10861121826423,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Jahmyr Gibbs",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Tony Pollard",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        }
+      ],
+      "weeks10_17": 920.3846190660743,
+      "weeks15_17": 350.35794972595596,
+      "week10_delta": 2.92238153659018,
+      "weeks10_17_delta": 18.149233363540816,
+      "weeks15_17_delta": 5.115242292672633
+    },
+    "london_tuten_for_nabers": {
+      "weeks": [
+        {
+          "week": 10,
+          "mean": 107.25470097460034,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Drake London",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 11,
+          "mean": 107.6121541926349,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Jameson Williams",
+            "WR2": "Wan'Dale Robinson",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 12,
+          "mean": 103.8440417918092,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Drake London",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 13,
+          "mean": 108.20419324060595,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Bhayshul Tuten",
+            "WR1": "Drake London",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 14,
+          "mean": 107.707125396939,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Drake London",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 15,
+          "mean": 113.10561865074193,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Drake London",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 16,
+          "mean": 113.2530341979432,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Drake London",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 17,
+          "mean": 109.44539823820045,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Drake London",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Bhayshul Tuten",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        }
+      ],
+      "weeks10_17": 870.426266683475,
+      "weeks15_17": 335.8040510868856,
+      "week10_delta": -4.0420636470486215,
+      "weeks10_17_delta": -31.80911901905847,
+      "weeks15_17_delta": -9.43865634639775
+    },
+    "rice_gordon_for_nabers": {
+      "weeks": [
+        {
+          "week": 10,
+          "mean": 106.61498813860824,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 11,
+          "mean": 109.19967778886047,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 12,
+          "mean": 103.34886211792558,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Ollie Gordon II",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 13,
+          "mean": 107.83185196177979,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ollie Gordon II",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 14,
+          "mean": 107.36204124009505,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Wan'Dale Robinson",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 15,
+          "mean": 111.70445191917054,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Ollie Gordon II",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 16,
+          "mean": 111.75623818097645,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Tony Pollard",
+            "RB2": "Ashton Jeanty",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Rico Dowdle",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        },
+        {
+          "week": 17,
+          "mean": 109.47478211477528,
+          "lineup": {
+            "QB": "Josh Allen",
+            "RB1": "Ashton Jeanty",
+            "RB2": "Tony Pollard",
+            "WR1": "Rashee Rice",
+            "WR2": "Jameson Williams",
+            "TE": "George Kittle",
+            "FLEX": "Ollie Gordon II",
+            "D/ST": "Saints D/ST",
+            "K": "Drew Stevens"
+          }
+        }
+      ],
+      "weeks10_17": 867.2928934621914,
+      "weeks15_17": 332.93547221492224,
+      "week10_delta": -4.681776483040721,
+      "weeks10_17_delta": -34.94249224034206,
+      "weeks15_17_delta": -12.307235218361086
+    }
+  },
+  "limitations": "Existing PMT lineup optimizer, frozen-role horizon through Week 17; current O/IR/D excluded, Q conditional on active. No future injury or role prediction; horizon unvalidated. No platform validation or writes."
+}

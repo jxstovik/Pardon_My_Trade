@@ -1,6 +1,7 @@
 import type { League, LeagueSnapshot, Player, Projection, Roster, Team } from "../models/types.js";
 import type { RuleEngine } from "../rules/rule-engine.js";
 import { scoreProjectionPoints } from "../rules/rule-engine.js";
+import { DEFAULT_DO_NOT_DROP_RANK_LIMIT, buildDoNotDropList } from "./do-not-drop.js";
 import type {
   DropCandidate,
   LineupCandidate,
@@ -13,6 +14,7 @@ import type {
 export interface DecisionEngineOptions {
   readonly lineupUpgradeThreshold?: number;
   readonly waiverUpgradeThreshold?: number;
+  readonly doNotDropRankLimit?: number;
 }
 
 export interface DecisionEngine {
@@ -29,6 +31,7 @@ const DEFAULT_WAVIER_THRESHOLD = 1.0;
 export class DefaultDecisionEngine implements DecisionEngine {
   private readonly lineupThreshold: number;
   private readonly waiverThreshold: number;
+  private readonly doNotDropRankLimit: number;
 
   constructor(
     private readonly ruleEngine: RuleEngine,
@@ -36,6 +39,7 @@ export class DefaultDecisionEngine implements DecisionEngine {
   ) {
     this.lineupThreshold = options.lineupUpgradeThreshold ?? DEFAULT_LINEUP_THRESHOLD;
     this.waiverThreshold = options.waiverUpgradeThreshold ?? DEFAULT_WAVIER_THRESHOLD;
+    this.doNotDropRankLimit = options.doNotDropRankLimit ?? DEFAULT_DO_NOT_DROP_RANK_LIMIT;
   }
 
   generateLineupCandidates(league: League, team: Team, players: Player[], projections: Projection[]): LineupCandidate[] {
@@ -102,7 +106,8 @@ export class DefaultDecisionEngine implements DecisionEngine {
     const capacity = this.slotCapacity(league);
     const isFull = rosterSize >= capacity;
 
-    const weakest = this.weakestRosteredPlayer(league, team, players, projectionByPlayer);
+    const doNotDrop = this.doNotDropPlayerIds(league, team, players, projectionByPlayer);
+    const weakest = this.weakestRosteredPlayer(league, team, players, projectionByPlayer, doNotDrop);
 
     for (const fa of freeAgents) {
       const faProjection = projectionByPlayer.get(fa.player_id);
@@ -135,10 +140,11 @@ export class DefaultDecisionEngine implements DecisionEngine {
   generateDropCandidates(league: League, team: Team, players: Player[], projections: Projection[]): DropCandidate[] {
     const projectionByPlayer = new Map(projections.map((projection) => [projection.player_id, projection]));
     const playerById = new Map(players.map((player) => [player.player_id, player]));
+    const doNotDrop = this.doNotDropPlayerIds(league, team, players, projectionByPlayer);
     const candidates: DropCandidate[] = [];
 
     for (const slot of [...team.roster.bench, ...team.roster.starters]) {
-      if (!slot.player_id) continue;
+      if (!slot.player_id || doNotDrop.has(slot.player_id)) continue;
       const player = playerById.get(slot.player_id);
       if (!player) continue;
 
@@ -243,16 +249,34 @@ export class DefaultDecisionEngine implements DecisionEngine {
     };
   }
 
-  private weakestRosteredPlayer(
+  private doNotDropPlayerIds(
     league: League,
     team: Team,
     players: Player[],
     projectionByPlayer: Map<string, Projection>
+  ): Set<string> {
+    const rosterPlayerIds = [...team.roster.starters, ...team.roster.bench, ...team.roster.injured_reserve]
+      .flatMap((slot) => slot.player_id ? [slot.player_id] : []);
+    const rankingValues = players.flatMap((player) => {
+      const projection = projectionByPlayer.get(player.player_id);
+      return projection
+        ? [{ playerId: player.player_id, value: scoreProjectionPoints(league.scoring_settings, projection, this.positionsOf(player)) }]
+        : [];
+    });
+    return buildDoNotDropList(rosterPlayerIds, rankingValues, this.doNotDropRankLimit);
+  }
+
+  private weakestRosteredPlayer(
+    league: League,
+    team: Team,
+    players: Player[],
+    projectionByPlayer: Map<string, Projection>,
+    doNotDrop: ReadonlySet<string>
   ): { player: Player; points: number } | undefined {
     const playerById = new Map(players.map((player) => [player.player_id, player]));
     let weakest: { player: Player; points: number } | undefined;
     for (const slot of [...team.roster.starters, ...team.roster.bench, ...team.roster.injured_reserve]) {
-      if (!slot.player_id) continue;
+      if (!slot.player_id || doNotDrop.has(slot.player_id)) continue;
       const player = playerById.get(slot.player_id);
       if (!player) continue;
       const projection = projectionByPlayer.get(player.player_id);

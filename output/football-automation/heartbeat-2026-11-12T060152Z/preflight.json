@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-12T06:04:10.125Z",
+  "week": 10,
+  "opponent": 2,
+  "available": 903,
+  "pending": null,
+  "pendingReadError": {
+    "code": "ESPN_AUTH_REQUIRED",
+    "message": "Initial private pending-claims read rejected unauthenticated session. Not retried.",
+    "recordedAt": "2026-11-12T06:04:08.190Z"
+  },
+  "ownedNews": 14,
+  "canonicalModelsSha256": "dc43a032e6ce4cd5cf841dbd7ef8b2596dc072090517453ba3afc27749f23b52",
+  "migrationLockDeleted": false
+}

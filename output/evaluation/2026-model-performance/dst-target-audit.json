@@ -1,0 +1,1582 @@
+[
+  {
+    "name": "Cardinals D/ST",
+    "week": 1,
+    "modelTrainingTarget": 12.0,
+    "espnActual": 12,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 12.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 2,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 3,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": -4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 4,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cardinals D/ST",
+    "week": 5,
+    "modelTrainingTarget": -3.0,
+    "espnActual": -3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -3.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 1,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 2,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 3,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 4,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Falcons D/ST",
+    "week": 5,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 10,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 10.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 1,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 2,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 3,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 4,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Ravens D/ST",
+    "week": 5,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 1,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 2,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 3,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bills D/ST",
+    "week": 5,
+    "modelTrainingTarget": -3.0,
+    "espnActual": -3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -3.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 1,
+    "modelTrainingTarget": -8.0,
+    "espnActual": -8,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": -8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 24.0,
+    "espnActual": 24,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 24.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Panthers D/ST",
+    "week": 4,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 1,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 2,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 3,
+    "modelTrainingTarget": 13.0,
+    "espnActual": 13,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 13.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 4,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bears D/ST",
+    "week": 5,
+    "modelTrainingTarget": -2.0,
+    "espnActual": -2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 1,
+    "modelTrainingTarget": 20.0,
+    "espnActual": 20,
+    "difference": 0.0,
+    "opponentFumblesLost": 4.0,
+    "nflverseReconstruction": 20.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 2,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 3,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 4,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Bengals D/ST",
+    "week": 5,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 1,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 2,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 3,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 4,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Browns D/ST",
+    "week": 5,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 11,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 11.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 1,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 2,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 3,
+    "modelTrainingTarget": -2.0,
+    "espnActual": -2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 4,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Cowboys D/ST",
+    "week": 5,
+    "modelTrainingTarget": -2.0,
+    "espnActual": -2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 1,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 2,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 3,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Broncos D/ST",
+    "week": 5,
+    "modelTrainingTarget": 14.0,
+    "espnActual": 14,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 14.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 1,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 2,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 3,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 4,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Lions D/ST",
+    "week": 5,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 3,
+    "modelTrainingTarget": -6.0,
+    "espnActual": -6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 10,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 10.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Packers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 19.0,
+    "espnActual": 19,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 19.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 1,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 2,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 3,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 10,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 10.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 4,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 3.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Texans D/ST",
+    "week": 5,
+    "modelTrainingTarget": 15.0,
+    "espnActual": 15,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 15.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 1,
+    "modelTrainingTarget": -5.0,
+    "espnActual": -5,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": -5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 2,
+    "modelTrainingTarget": -5.0,
+    "espnActual": -5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 3,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 4,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Colts D/ST",
+    "week": 5,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 1,
+    "modelTrainingTarget": 14.0,
+    "espnActual": 14,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 14.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 2,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 3,
+    "modelTrainingTarget": 13.0,
+    "espnActual": 13,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 12.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 4,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jaguars D/ST",
+    "week": 5,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 1,
+    "modelTrainingTarget": 14.0,
+    "espnActual": 14,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 13.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 2,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 3,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chiefs D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 1,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 2,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 11,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 11.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 3,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 4,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Rams D/ST",
+    "week": 5,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 13.0,
+    "espnActual": 13,
+    "difference": 0.0,
+    "opponentFumblesLost": 3.0,
+    "nflverseReconstruction": 13.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Chargers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 1,
+    "modelTrainingTarget": 14.0,
+    "espnActual": 14,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 14.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 2,
+    "modelTrainingTarget": 12.0,
+    "espnActual": 12,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 10.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 3,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 11,
+    "difference": 0.0,
+    "opponentFumblesLost": 3.0,
+    "nflverseReconstruction": 11.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 4,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Raiders D/ST",
+    "week": 5,
+    "modelTrainingTarget": -6.0,
+    "espnActual": -6,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": -6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 1,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 2,
+    "modelTrainingTarget": -4.0,
+    "espnActual": -4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 3,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 4,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Dolphins D/ST",
+    "week": 5,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 1,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 2,
+    "modelTrainingTarget": 16.0,
+    "espnActual": 16,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 16.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 3,
+    "modelTrainingTarget": 19.0,
+    "espnActual": 19,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 19.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 4,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 10,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 10.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Vikings D/ST",
+    "week": 5,
+    "modelTrainingTarget": 13.0,
+    "espnActual": 13,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 13.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 1,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 2,
+    "modelTrainingTarget": 20.0,
+    "espnActual": 20,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 20.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 3,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 4,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Patriots D/ST",
+    "week": 5,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 1,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 2,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 3,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 4,
+    "modelTrainingTarget": -5.0,
+    "espnActual": -5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Saints D/ST",
+    "week": 5,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 11,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 11.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 1,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 2,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 3,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 4,
+    "modelTrainingTarget": 16.0,
+    "espnActual": 16,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 16.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Giants D/ST",
+    "week": 5,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 1,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 11,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 11.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 2,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 3,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 4,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Jets D/ST",
+    "week": 5,
+    "modelTrainingTarget": 18.0,
+    "espnActual": 18,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 18.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 1,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 2,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 3,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 4,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Eagles D/ST",
+    "week": 5,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 19.0,
+    "espnActual": 19,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 19.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Steelers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 1,
+    "modelTrainingTarget": 14.0,
+    "espnActual": 14,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 14.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 2,
+    "modelTrainingTarget": 10.0,
+    "espnActual": 10,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 10.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 3,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 4,
+    "modelTrainingTarget": 12.0,
+    "espnActual": 12,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 12.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Seahawks D/ST",
+    "week": 5,
+    "modelTrainingTarget": 11.0,
+    "espnActual": 11,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 11.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 9.0,
+    "espnActual": 9,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 9.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 0.0,
+    "espnActual": 0,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 0.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 5.0,
+    "espnActual": 5,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 5.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "49ers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 20.0,
+    "espnActual": 20,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 20.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 1,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 2,
+    "modelTrainingTarget": 4.0,
+    "espnActual": 4,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 4.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 3,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 4,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Buccaneers D/ST",
+    "week": 5,
+    "modelTrainingTarget": 6.0,
+    "espnActual": 6,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 6.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 1,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 2,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 3,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 4,
+    "modelTrainingTarget": 1.0,
+    "espnActual": 1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Titans D/ST",
+    "week": 5,
+    "modelTrainingTarget": 2.0,
+    "espnActual": 2,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 2.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 1,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 3,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": 3.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 2,
+    "modelTrainingTarget": -1.0,
+    "espnActual": -1,
+    "difference": 0.0,
+    "opponentFumblesLost": 0.0,
+    "nflverseReconstruction": -1.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 3,
+    "modelTrainingTarget": 8.0,
+    "espnActual": 8,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 8.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 4,
+    "modelTrainingTarget": 7.0,
+    "espnActual": 7,
+    "difference": 0.0,
+    "opponentFumblesLost": 1.0,
+    "nflverseReconstruction": 7.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  },
+  {
+    "name": "Commanders D/ST",
+    "week": 5,
+    "modelTrainingTarget": 3.0,
+    "espnActual": 3,
+    "difference": 0.0,
+    "opponentFumblesLost": 2.0,
+    "nflverseReconstruction": 3.0,
+    "targetSource": "ESPN raw counts rescored with league rules"
+  }
+]

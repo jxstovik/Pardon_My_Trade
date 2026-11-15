@@ -1,0 +1,145 @@
+{
+  "at": "2026-11-08T06:04:19.743Z",
+  "modelVersion": "weekly-2026-W9-bbb261be576e-368dedd8bda2-d1284c4271e7",
+  "cutoff": 8,
+  "capacity": {
+    "used": 2,
+    "remaining": 3,
+    "limit": 5
+  },
+  "availablePlayers": 897,
+  "availableModeled": 437,
+  "seasonEndWeek": 17,
+  "unknownHealthyCoverage": [],
+  "choices": [
+    {
+      "action": {
+        "type": "waiver_claim",
+        "teamId": "7",
+        "addPlayerId": "4887558",
+        "dropPlayerId": "4361411",
+        "priority": 1
+      },
+      "nearTermGain": 0.5129223305143,
+      "seasonGain": 1.4672762267869928,
+      "weeklyGains": [
+        {
+          "week": 9,
+          "gain": 0.5129223305143
+        },
+        {
+          "week": 10,
+          "gain": 0
+        },
+        {
+          "week": 11,
+          "gain": 0
+        },
+        {
+          "week": 12,
+          "gain": 0
+        },
+        {
+          "week": 13,
+          "gain": 0.9543538962726927
+        },
+        {
+          "week": 14,
+          "gain": 0
+        },
+        {
+          "week": 15,
+          "gain": 0
+        },
+        {
+          "week": 16,
+          "gain": 0
+        },
+        {
+          "week": 17,
+          "gain": 0
+        }
+      ],
+      "probability": {
+        "nextWeek": {
+          "improves": 0.55078125,
+          "worsens": 0.44921875,
+          "ties": 0,
+          "expectedGain": 0.5129223305143,
+          "favorableMarginLowerBound": -0.02279114506329255
+        },
+        "nearTerm": {
+          "improves": 0.55078125,
+          "worsens": 0.44921875,
+          "ties": 0,
+          "expectedGain": 0.5129223305143,
+          "favorableMarginLowerBound": -0.02279114506329255
+        },
+        "season": {
+          "improves": 0.59375,
+          "worsens": 0.40625,
+          "ties": 0,
+          "expectedGain": 1.4672762267869928,
+          "favorableMarginLowerBound": 0.06471692464451788
+        },
+        "probabilityAddedPlayerStarts": 0.2222222222222222,
+        "probabilityAddedPlayerStartsNextWeek": 1,
+        "handcuffEvidence": [],
+        "stackEvidence": [],
+        "handcuffLeaders": [],
+        "stackQbIds": [],
+        "weeklyGains": [
+          {
+            "week": 9,
+            "gain": 0.5129223305143
+          },
+          {
+            "week": 10,
+            "gain": 0
+          },
+          {
+            "week": 11,
+            "gain": 0
+          },
+          {
+            "week": 12,
+            "gain": 0
+          },
+          {
+            "week": 13,
+            "gain": 0.9543538962726927
+          },
+          {
+            "week": 14,
+            "gain": 0
+          },
+          {
+            "week": 15,
+            "gain": 0
+          },
+          {
+            "week": 16,
+            "gain": 0
+          },
+          {
+            "week": 17,
+            "gain": 0
+          }
+        ],
+        "caveats": [
+          "Conditional model simulations, not calibrated probabilities; lineups selected before sampled scores; quantile tails clamped at fitted 5th/95th percentiles"
+        ]
+      },
+      "strategy": "lineup_upgrade",
+      "suggestions": {
+        "nearTermMet": false,
+        "seasonMet": false
+      },
+      "rationale": "lineup_upgrade: pregame-selected lineup, P(improve)/P(worsen) next week 0.551/0.449, next three 0.551/0.449; expected gains 0.51 near / 1.47 season. Six/twenty point suggestions do not gate a claim.",
+      "addName": "Emanuel Wilson",
+      "dropName": "Pat Freiermuth"
+    }
+  ],
+  "unreviewedCandidateRemainder": 436,
+  "platformWrites": 0
+}

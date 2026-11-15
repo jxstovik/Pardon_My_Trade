@@ -1,0 +1,19 @@
+# Football heartbeat — November 8, 2026
+
+Triggered 2026-11-08T05:58:15.466Z (00:58:15 EST), 104.534 seconds before intended 01:00. Completed 2026-11-08T06:05:03.959Z. No schedule changed.
+
+Live ownership, scoring, roster and IR capacity, locks, schedules, the complete 897-player available pool, traditional waiver rules and zero pending claims were revalidated for ESPN league 98806880, team 7, season 2026. PMT and ESPN both resolve active Week 9 versus team 9. Thursday kickoff already occurred; the fantasy season ends Week 17.
+
+Fresh isolated projection refresh persisted 681 ESPN rows and rebuilt 1,056 priors, with all nine starters covered. Exactly one normalized 48-hour feed refresh ingested 89 ESPN and 17 Razzball items without fetch failures. Source completeness remains unknown, with 270 stored items unmapped. Current injury watch and 15 individual owned-athlete reports were saved. Individual source text is unchanged from November 7.
+
+Fresh candidate version: weekly-2026-W9-bbb261be576e-368dedd8bda2-d1284c4271e7, built 2026-11-08T06:01:18.981398+00:00; status candidate_not_promoted. Independent CSV verification confirms all 121 completed games through Week 8, including all 14 Week 8 games and 2,945 modeled source rows, with no missing games. Every model, code, source, horizon and D/ST hash agrees. All six position fits retain validation evidence. Production store remains unchanged: 701b26d571809f7599ac4f885024c94dfc2d4d3059cb7a4e37bead300a87911e; no promotion. The 469 forecasts cover 437 available players; 460 available identities remain unresolved without unique statistical coverage.
+
+The before and final lineup runners verified the current lineup remains legal and optimal at 118.711657 modeled points, with zero changes: Allen; Jeanty/Gainwell; Jameson Williams/Michael Wilson; Kittle; Nabers FLEX; Stevens; Saints. Shaheed remains OUT and benched; Harvey remains IR; Spears and the known Week 9 bye players remain benched. Nabers, Wilson and Gainwell reports are unchanged. Conditional forecasts are not probabilities of being active; no last-minute availability guarantee is implied.
+
+The sole raw supported acquisition remains Emanuel Wilson for Freiermuth: +0.513 this week, +0.513 next three weeks and +1.467 through the remaining fantasy season. Fresh individual ESPN retrieval again confirms all seven snaps were on special teams, with no offensive reps. The role gate excluded him; the reviewed rerun returned zero acquisitions. No proposal, approval, submission or award occurred. Capacity remains two used and three remaining of five, counting both verified November 5 swaps. There are zero pending ESPN claims; durable submitted reservations would retain capacity until reconciliation.
+
+Harvey and Spears return-window reports now exceed the runner's seven-day evidence-age gate. Original publication timestamps were preserved, the stale bounds were excluded from executable evidence, and owned injuries were compared against conservative immediate conditional healthy-return baselines. No recovery date or recovery probability was invented. Missing statistical coverage remains protected.
+
+Confirmed ESPN writes: zero. Canonical receipts and production models are unchanged. The canonical migration lock was preserved and a dated SQLite backup was used for isolated refreshes. Two persistent October 30 MCP services were idle; no competing refresh, migration or training writer was found. Pregame archiving was skipped because kickoff had passed. Optional PDF publication was skipped because its previously reported helper path is obsolete; no new publication failure occurred and no old PDF was labeled current.
+
+No material change from November 7; user notification is not recommended. Keep the lineup and capacity. The next scheduled Thursday, November 12, 01:00 EST run must freshly resolve the active week and completed outcomes. No extra monitoring, schedule or external message was created.

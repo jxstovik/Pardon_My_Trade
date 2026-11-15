@@ -1,0 +1,243 @@
+{
+  "leagueId": "98806880",
+  "season": 2026,
+  "readAt": "2026-11-10T17:23:07.240Z",
+  "scoringPeriodId": 10,
+  "teams": [
+    {
+      "id": "1",
+      "name": "Your Knee's Hurt?",
+      "players": [
+        {
+          "id": "4429795",
+          "name": "Jahmyr Gibbs",
+          "status": "ACTIVE",
+          "position": 2,
+          "slot": 2
+        },
+        {
+          "id": "4426502",
+          "name": "Drake London",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 4
+        },
+        {
+          "id": "4428331",
+          "name": "Rashee Rice",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 4
+        },
+        {
+          "id": "4696981",
+          "name": "Cam Skattebo",
+          "status": "QUESTIONABLE",
+          "position": 2,
+          "slot": 20
+        },
+        {
+          "id": "4567750",
+          "name": "Emeka Egbuka",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 20
+        },
+        {
+          "id": "4882093",
+          "name": "Bhayshul Tuten",
+          "status": "ACTIVE",
+          "position": 2,
+          "slot": 23
+        },
+        {
+          "id": "16737",
+          "name": "Mike Evans",
+          "status": "QUESTIONABLE",
+          "position": 3,
+          "slot": 20
+        },
+        {
+          "id": "4429205",
+          "name": "Jordan Addison",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 20
+        },
+        {
+          "id": "4695883",
+          "name": "Jalen Coker",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 20
+        },
+        {
+          "id": "4685720",
+          "name": "Bryce Young",
+          "status": "ACTIVE",
+          "position": 1,
+          "slot": 0
+        },
+        {
+          "id": "4711533",
+          "name": "Ollie Gordon II",
+          "status": "ACTIVE",
+          "position": 2,
+          "slot": 2
+        },
+        {
+          "id": "4723820",
+          "name": "Omar Cooper Jr.",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 20
+        },
+        {
+          "id": "3929645",
+          "name": "Juwan Johnson",
+          "status": "ACTIVE",
+          "position": 4,
+          "slot": 6
+        },
+        {
+          "id": "4363538",
+          "name": "Chad Ryland",
+          "status": "ACTIVE",
+          "position": 5,
+          "slot": 17
+        },
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "status": "ACTIVE",
+          "position": 1,
+          "slot": 20
+        },
+        {
+          "id": "-16003",
+          "name": "Bears D/ST",
+          "position": 16,
+          "slot": 16
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Bored Man Gets Paid",
+      "players": [
+        {
+          "id": "4890973",
+          "name": "Ashton Jeanty",
+          "status": "ACTIVE",
+          "position": 2,
+          "slot": 2
+        },
+        {
+          "id": "4595348",
+          "name": "Malik Nabers",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 23
+        },
+        {
+          "id": "3918298",
+          "name": "Josh Allen",
+          "status": "ACTIVE",
+          "position": 1,
+          "slot": 0
+        },
+        {
+          "id": "4426388",
+          "name": "Jameson Williams",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 4
+        },
+        {
+          "id": "3040151",
+          "name": "George Kittle",
+          "status": "ACTIVE",
+          "position": 4,
+          "slot": 6
+        },
+        {
+          "id": "4569587",
+          "name": "Wan'Dale Robinson",
+          "status": "ACTIVE",
+          "position": 3,
+          "slot": 20
+        },
+        {
+          "id": "3916148",
+          "name": "Tony Pollard",
+          "status": "ACTIVE",
+          "position": 2,
+          "slot": 20
+        },
+        {
+          "id": "4360761",
+          "name": "Michael Wilson",
+          "status": "OUT",
+          "position": 3,
+          "slot": 4
+        },
+        {
+          "id": "4371733",
+          "name": "Kenny Gainwell",
+          "status": "ACTIVE",
+          "position": 2,
+          "slot": 2
+        },
+        {
+          "id": "4568490",
+          "name": "RJ Harvey",
+          "status": "INJURY_RESERVE",
+          "position": 2,
+          "slot": 20
+        },
+        {
+          "id": "4428557",
+          "name": "Tyjae Spears",
+          "status": "QUESTIONABLE",
+          "position": 2,
+          "slot": 20
+        },
+        {
+          "id": "4032473",
+          "name": "Rashid Shaheed",
+          "status": "QUESTIONABLE",
+          "position": 3,
+          "slot": 20
+        },
+        {
+          "id": "4361411",
+          "name": "Pat Freiermuth",
+          "status": "ACTIVE",
+          "position": 4,
+          "slot": 20
+        },
+        {
+          "id": "4038815",
+          "name": "Rico Dowdle",
+          "status": "ACTIVE",
+          "position": 2,
+          "slot": 20
+        },
+        {
+          "id": "-16018",
+          "name": "Saints D/ST",
+          "position": 16,
+          "slot": 16
+        },
+        {
+          "id": "5081335",
+          "name": "Drew Stevens",
+          "status": "ACTIVE",
+          "position": 5,
+          "slot": 17
+        }
+      ]
+    }
+  ],
+  "platformWrites": 0
+}

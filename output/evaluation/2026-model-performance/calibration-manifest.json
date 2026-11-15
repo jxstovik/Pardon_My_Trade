@@ -1,0 +1,209 @@
+{
+  "candidateVersion": "conformal-rank-bands-v1-094d7ceb508fa000",
+  "status": "candidate_not_promoted",
+  "method": "Non-shrinking conformalized quantile intervals; ceil((n+1)*0.8) nonconformity order statistic",
+  "grouping": "Pregame mean ranks 1-50 and 51-150; no outcome-based cohort selection",
+  "cutoffRule": "Each target week uses only completed earlier replay weeks. Week 1 remains unchanged. Final completed week is never used to fit its own interval correction.",
+  "sourceSha256": "90b79b550109ab919a57ea46375e9d2604b343a497e11b5c19ea0741913953b3",
+  "fits": [
+    {
+      "week": 1,
+      "band": "top50",
+      "calibrationWeeks": [],
+      "n": 0,
+      "offset": null,
+      "status": "insufficient_prior_outcomes"
+    },
+    {
+      "week": 1,
+      "band": "rank51to150",
+      "calibrationWeeks": [],
+      "n": 0,
+      "offset": null,
+      "status": "insufficient_prior_outcomes"
+    },
+    {
+      "week": 2,
+      "band": "top50",
+      "calibrationWeeks": [
+        1
+      ],
+      "n": 50,
+      "offset": 3.207296656139601,
+      "status": "prior_outcomes_only"
+    },
+    {
+      "week": 2,
+      "band": "rank51to150",
+      "calibrationWeeks": [
+        1
+      ],
+      "n": 99,
+      "offset": 1.909617596123269,
+      "status": "prior_outcomes_only"
+    },
+    {
+      "week": 3,
+      "band": "top50",
+      "calibrationWeeks": [
+        1,
+        2
+      ],
+      "n": 100,
+      "offset": 3.1060467220548635,
+      "status": "prior_outcomes_only"
+    },
+    {
+      "week": 3,
+      "band": "rank51to150",
+      "calibrationWeeks": [
+        1,
+        2
+      ],
+      "n": 198,
+      "offset": 1.5998683675213536,
+      "status": "prior_outcomes_only"
+    },
+    {
+      "week": 4,
+      "band": "top50",
+      "calibrationWeeks": [
+        1,
+        2,
+        3
+      ],
+      "n": 150,
+      "offset": 3.061191648383592,
+      "status": "prior_outcomes_only"
+    },
+    {
+      "week": 4,
+      "band": "rank51to150",
+      "calibrationWeeks": [
+        1,
+        2,
+        3
+      ],
+      "n": 298,
+      "offset": 1.4798695564494673,
+      "status": "prior_outcomes_only"
+    },
+    {
+      "week": 5,
+      "band": "top50",
+      "calibrationWeeks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 200,
+      "offset": 3.1060467220548635,
+      "status": "prior_outcomes_only"
+    },
+    {
+      "week": 5,
+      "band": "rank51to150",
+      "calibrationWeeks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "n": 398,
+      "offset": 1.8645930021506603,
+      "status": "prior_outcomes_only"
+    }
+  ],
+  "comparisons": [
+    {
+      "cohort": 50,
+      "scope": "rolling_W2_onward",
+      "weeks": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "before": {
+        "n": 200,
+        "mae": 8.281026948994759,
+        "coverage80": 0.7,
+        "meanIntervalWidth": 21.649734783317317
+      },
+      "after": {
+        "n": 200,
+        "mae": 8.281026948994759,
+        "coverage80": 0.79,
+        "meanIntervalWidth": 27.890025657633775
+      }
+    },
+    {
+      "cohort": 50,
+      "scope": "final_week_holdout",
+      "weeks": [
+        5
+      ],
+      "before": {
+        "n": 50,
+        "mae": 8.685989836936994,
+        "coverage80": 0.66,
+        "meanIntervalWidth": 21.259685991512253
+      },
+      "after": {
+        "n": 50,
+        "mae": 8.685989836936994,
+        "coverage80": 0.74,
+        "meanIntervalWidth": 27.47177943562198
+      }
+    },
+    {
+      "cohort": 150,
+      "scope": "rolling_W2_onward",
+      "weeks": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "before": {
+        "n": 599,
+        "mae": 7.386345227592353,
+        "coverage80": 0.662771285475793,
+        "meanIntervalWidth": 19.26368063669298
+      },
+      "after": {
+        "n": 599,
+        "mae": 7.386345227592353,
+        "coverage80": 0.7796327212020033,
+        "meanIntervalWidth": 23.62933780550766
+      }
+    },
+    {
+      "cohort": 150,
+      "scope": "final_week_holdout",
+      "weeks": [
+        5
+      ],
+      "before": {
+        "n": 150,
+        "mae": 7.99817768559587,
+        "coverage80": 0.6133333333333333,
+        "meanIntervalWidth": 18.97777489616684
+      },
+      "after": {
+        "n": 150,
+        "mae": 7.99817768559587,
+        "coverage80": 0.72,
+        "meanIntervalWidth": 23.534596713737624
+      }
+    }
+  ],
+  "limitations": [
+    "Five completed weeks; only four rolling calibration test weeks",
+    "Dependent player-week samples and drift: finite-sample exchangeability guarantee does not apply",
+    "Historical replay identity and availability limitations remain",
+    "D/ST representation in ranked cohorts is too small to validate defense-specific calibration",
+    "Promotion requires human request and PMT gates; this workflow never promotes"
+  ]
+}

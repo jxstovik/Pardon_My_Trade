@@ -146,7 +146,14 @@ export async function runSeasonRefresh(options: SeasonRefreshOptions = {}): Prom
   // rebuild priors/models from them. Prior weekly observations are re-applied
   // (chronologically) so the rebuild never wipes in-season model state.
   const refreshed = await repository.getLeagueSnapshot(pointer.snapshot_id);
-  const priors = buildPriorsFromSnapshot(refreshed ?? snapshot, { weeksRemaining });
+  const targetSnapshot = refreshed ?? snapshot;
+  // Season snapshots include every stored week. Never let insertion order or
+  // another week's rows choose the prior for an explicitly requested refresh.
+  const priors = buildPriorsFromSnapshot({
+    ...targetSnapshot,
+    scoring_period: scoringPeriod,
+    projections: targetSnapshot.projections.filter((projection) => projection.scoring_period === scoringPeriod)
+  }, { weeksRemaining });
   const historyPath = process.env.PMT_HISTORICAL_DATA_PATH;
   const weeklyObservations = historyPath ? await loadWeeklyObservations(historyPath) : [];
   const modelStore = new JsonModelStore(join(dataDir, "models.json"));

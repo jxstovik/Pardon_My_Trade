@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "kind": "fantrax-authenticated-browser-transcription",
+  "leagueId": "mmioj1mvmvgsc3io",
+  "teamId": "wwc1n3o4mvn1c6hk",
+  "teamName": "Board Man Gets pAId",
+  "season": "2026-27",
+  "period": { "number": 1, "firstDate": "2026-11-01", "lastDate": "2026-11-08", "opponentTeamId": "rlfm3uhjmvk7q70x", "opponentName": "JeffWischer" },
+  "browserObservationWindow": { "triggerAt": "2026-11-03T07:32:37.229Z", "completedNoLaterThan": "2026-11-03T07:35:28Z", "timezone": "America/New_York" },
+  "sources": {
+    "home": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home",
+    "ownRosterAndSchedule": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=wwc1n3o4mvn1c6hk;view=SCHEDULE_PERIOD",
+    "opponentRosterAndSchedule": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/team/roster;teamId=rlfm3uhjmvk7q70x;view=SCHEDULE_PERIOD",
+    "availablePlayers": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/players",
+    "playerNews": "https://www.fantrax.com/news/ncaab/injury-report"
+  },
+  "freshScope": {
+    "ownRoster": "All 14 identities and slots reconfirmed; 10 active and four reserves.",
+    "opponent": "JeffWischer reconfirmed as period-one opponent; all 14 identities, active/reserve slots, and period schedule refreshed.",
+    "scoringPeriod": "Fantrax displays Period 1 (Nov 1–Nov 8, 2026).",
+    "availablePage": "First 20 rows on the current Players page, Score order, all displaying Claim and FA. This is page scope only and not the full pool.",
+    "candidateSchedules": "Unknown. Switching the current available-player page to Schedule did not produce a schedule table; no candidate schedules were attached.",
+    "tannerScheduleDiscrepancy": "Current opponent schedule links Tyler Tanner vs Bellarmine as game 06q3e, final 47–93. This replaces the prior 06qjz row; retain prior discrepancy history."
+  },
+  "scheduleRows": {
+    "own": [
+      { "player": "Markus Burton", "games": [{"id":"06qjx","date":"2026-11-02","state":"final"},{"id":"06qjz","date":"2026-11-05","state":"scheduled","display":"BELL Thu 6:00PM"}] },
+      { "player": "Javontae Campbell", "games": [{"id":"06qg5","date":"2026-11-02","state":"final"},{"id":"06qgc","date":"2026-11-05","state":"scheduled","display":"WIGB Thu 7:00PM"}] },
+      { "player": "Jalen Cox", "games": [{"id":"06qv2","date":"2026-11-02","state":"final"},{"id":"06qt1","date":"2026-11-08","state":"scheduled","display":"WichSt Sun 11:00PM"}] },
+      { "player": "Tavari Johnson", "games": [{"id":"06uz4","date":"2026-11-02","state":"final"},{"id":"06s79","date":"2026-11-06","state":"scheduled","display":"N/A Fri 7:00PM"}] },
+      { "player": "Kyle Evans", "games": [{"id":"06r9n","date":"2026-11-02","state":"final"},{"id":"06r9w","date":"2026-11-06","state":"scheduled","display":"ETSU Fri 7:00PM"}] },
+      { "player": "Jaiden Feroah", "games": [{"id":"06shj","date":"2026-11-02","state":"final","countedEligibility":"unknown; opponent N/A"},{"id":"06shk","date":"2026-11-05","state":"scheduled","display":"N/A Thu 8:30PM"},{"id":"06shl","date":"2026-11-07","state":"scheduled","display":"N/A Sat 8:30PM"}] },
+      { "player": "Keyshawn Hall", "games": [{"id":"06ru4","date":"2026-11-02","state":"final"},{"id":"06sme","date":"2026-11-08","state":"scheduled","display":"Iona Sun 12:00PM"}] },
+      { "player": "Pryce Sandfort", "games": [{"id":"06o0f","date":"2026-11-02","state":"final"},{"id":"06o0p","date":"2026-11-07","state":"scheduled","display":"Prov Sat 7:00PM"}] },
+      { "player": "Daeshun Ruffin", "games": [{"id":"06p0q","date":"2026-11-02","state":"final"},{"id":"06qk0","date":"2026-11-05","state":"scheduled","display":"Tul Thu 7:30PM"}] },
+      { "player": "Quion Williams", "games": [{"id":"06s74","date":"2026-11-03","state":"scheduled","display":"@Ark Tue 8:00PM"},{"id":"06o5t","date":"2026-11-06","state":"scheduled","display":"@Baylor Fri 5:00PM"}] },
+      { "player": "Michael James", "games": [{"id":"06nuw","date":"2026-11-03","state":"scheduled","display":"@TAMU Tue 8:00PM"}] },
+      { "player": "Trevan Leonhardt", "games": [{"id":"06o0f","date":"2026-11-02","state":"final"},{"id":"06o0p","date":"2026-11-07","state":"scheduled","display":"Prov Sat 7:00PM"}] },
+      { "player": "Cade Tyson", "games": [{"id":"06qqm","date":"2026-11-02","state":"final"},{"id":"06qqq","date":"2026-11-06","state":"scheduled","display":"UST Fri 8:00PM"}] },
+      { "player": "Jack Karasinski", "games": [{"id":"06qnm","date":"2026-11-02","state":"final"},{"id":"06qnp","date":"2026-11-06","state":"scheduled","display":"Stony Fri 8:00PM"}] }
+    ],
+    "opponentJeffWischer": [
+      { "player":"Cruz Davis", "games":[{"id":"06p0q","date":"2026-11-02","state":"final"},{"id":"06p0r","date":"2026-11-05","state":"scheduled"}] },
+      { "player":"PJ Haggerty", "games":[{"id":"06nuw","date":"2026-11-03","state":"scheduled"},{"id":"06nvd","date":"2026-11-06","state":"scheduled"}] },
+      { "player":"Rodney Rice", "games":[{"id":"06qv2","date":"2026-11-02","state":"final"},{"id":"06qt1","date":"2026-11-08","state":"scheduled"}] },
+      { "player":"Tyler Tanner", "games":[{"id":"06q3e","date":"2026-11-02","state":"final","display":"BELL 47 @Vand 93"},{"id":"06q3h","date":"2026-11-05","state":"scheduled"}] },
+      { "player":"Alex Condon", "games":[{"id":"06nuq","date":"2026-11-02","state":"final"},{"id":"06nv1","date":"2026-11-05","state":"scheduled"}] },
+      { "player":"Will Heimbrodt", "games":[{"id":"06su6","date":"2026-11-02","state":"final"},{"id":"06qqw","date":"2026-11-07","state":"scheduled"}] },
+      { "player":"Amani Lyles", "games":[{"id":"06qg5","date":"2026-11-02","state":"final"},{"id":"06qgc","date":"2026-11-05","state":"scheduled"}] },
+      { "player":"Paulius Murauskas", "games":[{"id":"06qsr","date":"2026-11-02","state":"final"},{"id":"06qsx","date":"2026-11-06","state":"scheduled"}] },
+      { "player":"Ethan Potter", "games":[{"id":"06oi7","date":"2026-11-02","state":"final"},{"id":"06qbd","date":"2026-11-04","state":"scheduled","display":"N/A Wed 9:00PM"}] },
+      { "player":"Money Williams", "games":[{"id":"06nux","date":"2026-11-03","state":"scheduled"},{"id":"06o0o","date":"2026-11-06","state":"scheduled"}] },
+      { "player":"Baraka Okojie", "games":[{"id":"06r9o","date":"2026-11-02","state":"final"},{"id":"06r9v","date":"2026-11-06","state":"scheduled"}] },
+      { "player":"Dylan Faulkner", "games":[{"id":"06qqk","date":"2026-11-02","state":"final"},{"id":"06qqt","date":"2026-11-06","state":"scheduled"}] },
+      { "player":"Nick Townsend", "games":[{"id":"06q14","date":"2026-11-02","state":"final"},{"id":"06q17","date":"2026-11-06","state":"scheduled"}] },
+      { "player":"Patrick Wessler", "games":[{"id":"06nhu","date":"2026-11-02","state":"final","countedEligibility":"unknown; opponent N/A"},{"id":"06oaz","date":"2026-11-07","state":"scheduled"}] }
+    ],
+    "displayedTimesAreNotVerifiedInstants": true
+  },
+  "currentMatchup": { "boardManGetsPaid": "2-5-1", "jeffWischer": "5-2-1", "state": "in progress; opening results only, not a period outcome" },
+  "rosterStatusNotes": [
+    { "player": "Javontae Campbell", "date": "2026-11-02", "visibleText": "Campbell (undisclosed) did not take the court in Monday's 79-53 victory over American.", "fantraxRosterGP": 0, "source": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home", "interpretation": "DNP as reported by Fantrax; no further cause or duration inferred." },
+    { "player": "Cade Tyson", "date": "2026-11-02", "visibleText": "Tyson (not injury related) is still awaiting eligibility for the 2026-27 season and out for...", "fantraxRosterGP": 0, "source": "https://www.fantrax.com/fantasy/league/mmioj1mvmvgsc3io/home", "interpretation": "Eligibility pending as displayed; no return date inferred." }
+  ],
+  "completedOwnedPlayerGames": [
+    { "player": "Markus Burton", "gameId": "06qjx", "school": "Indiana", "result": "Indiana 91, Eastern Illinois 57 (Final)", "minutes": 24, "pts": 19, "fgm": 7, "fga": 8, "threePm": 3, "threePa": 3, "ftm": 2, "fta": 4, "reb": 2, "ast": 5, "st": 2, "blk": 0, "source": "https://www.fantrax.com/news/ncaab/boxscore/06qjx?view=GAMECAST" },
+    { "player": "Javontae Campbell", "gameId": "06qg5", "school": "Cincinnati", "result": "Cincinnati 79, American 53 (Final)", "appearance": "DNP per Nov 2 Fantrax news; no player boxscore row", "source": "https://www.fantrax.com/news/ncaab/boxscore/06qg5?view=GAMECAST" },
+    { "player": "Jalen Cox", "gameId": "06qv2", "school": "USC", "result": "USC 95, Milwaukee 63 (Final)", "minutes": 10, "pts": 2, "fgm": 1, "fga": 1, "threePm": 0, "threePa": 0, "ftm": 0, "fta": 0, "reb": 0, "ast": 0, "st": 0, "blk": 0, "tov": 1, "source": "https://www.fantrax.com/news/ncaab/boxscore/06qv2?view=GAMECAST" },
+    { "player": "Tavari Johnson", "gameId": "06uz4", "school": "Charleston", "result": "Charleston 111, South Wesleyan 55 (Final)", "minutes": 11, "pts": 4, "fgm": 2, "fga": 3, "threePm": 0, "threePa": 0, "ftm": 0, "fta": 0, "reb": 1, "ast": 7, "st": 0, "blk": 0, "source": "https://www.fantrax.com/news/ncaab/boxscore/06uz4?view=GAMECAST" },
+    { "player": "Kyle Evans", "gameId": "06r9n", "school": "North Carolina State", "result": "North Carolina State 83, Campbell 64 (Final)", "minutes": 15, "pts": 5, "fgm": 2, "fga": 5, "threePm": 1, "threePa": 1, "ftm": 0, "fta": 0, "reb": 3, "ast": 1, "st": 0, "blk": 2, "source": "https://www.fantrax.com/news/ncaab/boxscore/06r9n?view=GAMECAST" },
+    { "player": "Jaiden Feroah", "gameId": "06shj", "school": "Southern Utah", "result": "Southern Utah 134, opponent listed as N/A 69 (Final)", "minutes": 13, "pts": 4, "fgm": 2, "fga": 2, "threePm": 0, "threePa": 0, "ftm": 0, "fta": 0, "reb": 5, "ast": 0, "st": 0, "blk": 2, "source": "https://www.fantrax.com/news/ncaab/boxscore/06shj?view=GAMECAST", "countingEligibility": "unknown; opponent N/A preserved" },
+    { "player": "Keyshawn Hall", "gameId": "06ru4", "school": "St. John's", "result": "St. John's 78, Monmouth 63 (Final)", "minutes": 33, "pts": 26, "fgm": 9, "fga": 16, "threePm": 1, "threePa": 3, "ftm": 7, "fta": 7, "reb": 9, "ast": 2, "st": 2, "blk": 0, "source": "https://www.fantrax.com/news/ncaab/boxscore/06ru4?view=GAMECAST" },
+    { "player": "Pryce Sandfort", "gameId": "06o0f", "school": "Nebraska", "result": "Nebraska 106, Le Moyne 64 (Final)", "minutes": 26, "pts": 20, "fgm": 7, "fga": 13, "threePm": 1, "threePa": 6, "ftm": 5, "fta": 6, "reb": 5, "ast": 2, "st": 1, "blk": 0, "source": "https://www.fantrax.com/news/ncaab/boxscore/06o0f?view=GAMECAST" },
+    { "player": "Trevan Leonhardt", "gameId": "06o0f", "school": "Nebraska", "result": "Nebraska 106, Le Moyne 64 (Final)", "minutes": 21, "pts": 7, "fgm": 2, "fga": 2, "threePm": 2, "threePa": 2, "ftm": 1, "fta": 2, "reb": 5, "ast": 7, "st": 2, "blk": 0, "source": "https://www.fantrax.com/news/ncaab/boxscore/06o0f?view=GAMECAST" },
+    { "player": "Daeshun Ruffin", "gameId": "06p0q", "school": "Jackson State", "result": "Texas Tech 76, Jackson State 42 (Final)", "minutes": 26, "pts": 5, "fgm": 1, "fga": 3, "threePm": 0, "threePa": 2, "ftm": 3, "fta": 4, "reb": 2, "ast": 3, "st": 0, "blk": 0, "source": "https://www.fantrax.com/news/ncaab/boxscore/06p0q?view=GAMECAST" },
+    { "player": "Cade Tyson", "gameId": "06qqm", "school": "Minnesota", "result": "Minnesota 85, North Dakota 50 (Final)", "appearance": "No Tyson roster stat line; Fantrax Nov 2 injury/status panel says eligibility pending", "source": "https://www.fantrax.com/news/ncaab/boxscore/06qqm?view=GAMECAST" },
+    { "player": "Jack Karasinski", "gameId": "06qnm", "school": "Northwestern", "result": "Northwestern 86, Binghamton 60 (Final)", "minutes": 28, "pts": 24, "fgm": 8, "fga": 12, "threePm": 7, "threePa": 11, "ftm": 1, "fta": 3, "reb": 3, "ast": 1, "st": 0, "blk": 0, "source": "https://www.fantrax.com/news/ncaab/boxscore/06qnm?view=GAMECAST" }
+  ],
+  "limitations": [
+    "This is a first-night observation, not a seven-day fantasy-stat freeze or final matchup evaluation.",
+    "Fantrax schedule rows describe listed games, but 06shj's opponent is N/A and counted eligibility is unresolved; do not treat every scheduled/final event as a confirmed counted lineup appearance.",
+    "Minutes and event box scores are actual single-game observations, not current role projections or evidence to train/promote a model.",
+    "Current opponent matchup scoreboard is provisional and will change as period-one games finish.",
+    "No candidate schedules were matched; current first-page claims are not a complete available-player universe."
+  ]
+}

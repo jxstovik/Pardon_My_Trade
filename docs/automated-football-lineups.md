@@ -29,6 +29,24 @@ This narrow runner does not enable the generic `ff-run --auto` route, whose lega
 routing result can label an action executed without actually submitting it.
 The normal season daemon and advisory tools continue to queue proposals.
 
+For a complete model-based live roster review, run
+`node scripts/optimize-weekly-lineup.mjs` (preview), or append `--execute` to
+apply and verify the maximum-scoring legal starter assignment. This uses the
+current-week outcome-trained PMT artifact, exact ESPN eligible slot IDs and live
+starter counts, preserves every locked player, fails on missing coverage or an
+impossible full lineup, and leaves an already optimal lineup untouched. It does
+not activate IR players into an over-capacity active roster. Questionable-player
+forecasts are conditional; refresh when their designation changes and review
+individual practice/injury reports before kickoff. The runner shares the
+league/team lock with acquisitions and must be rerun after roster moves.
+
+The November 5 roster review also enabled replacing a redundant second TE when
+another owned TE dominates its weekly and remaining-season model value and a
+legal-lineup improvement qualifies. It does not require carrying two TEs or
+dropping one without a useful replacement. Individual source reports must check
+addition availability and actual offensive role; a roster Active flag alone is
+not evidence of a usable fantasy replacement.
+
 The Codex thread automation runs Thursday, Saturday and Sunday at 1 a.m. Eastern.
 Its Sol worker refreshes stale prior-week model inputs, checks weekly and ROS
 value, prepares a validated lineup and invokes this runner when improvement is

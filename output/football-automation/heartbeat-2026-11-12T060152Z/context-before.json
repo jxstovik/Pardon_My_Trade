@@ -1,0 +1,92 @@
+{
+  "pmt_get_current_scoring_period": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_current_scoring_period",
+    "generated_at": "2026-11-12T06:04:50.610Z",
+    "ok": true,
+    "data": {
+      "scoring_period": "2026-W10",
+      "week": 10,
+      "season": "2026",
+      "offseason": false,
+      "evaluated_at": "2026-11-12T06:04:50.610Z"
+    }
+  },
+  "pmt_get_inseason_status": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_inseason_status",
+    "generated_at": "2026-11-12T06:04:51.171Z",
+    "ok": true,
+    "data": {
+      "league": {
+        "league_id": "98806880",
+        "external_id": "98806880",
+        "name": "The Smaracko",
+        "platform": "espn",
+        "season": "2026"
+      },
+      "snapshot_id": "espn-98806880-ce9bfff0-fd3a-46cc-b580-f90e66a38f21-1794384063936",
+      "team": {
+        "team_id": "7",
+        "name": "Bored Man Gets Paid",
+        "manager_id": "7"
+      },
+      "requested_league_id": "98806880",
+      "requested_season": "2026",
+      "scoring_period": "2026-W10",
+      "offseason": false
+    }
+  },
+  "pmt_get_projection_status": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_projection_status",
+    "generated_at": "2026-11-12T06:04:54.065Z",
+    "ok": true,
+    "data": {
+      "periods": [
+        {
+          "scoring_period": "2026-ROS",
+          "count": 614
+        },
+        {
+          "scoring_period": "2026-W10",
+          "count": 685
+        },
+        {
+          "scoring_period": "2026-W5",
+          "count": 650
+        },
+        {
+          "scoring_period": "2026-W6",
+          "count": 659
+        },
+        {
+          "scoring_period": "2026-W7",
+          "count": 668
+        },
+        {
+          "scoring_period": "2026-W8",
+          "count": 670
+        }
+      ]
+    }
+  },
+  "pmt_get_model_status": {
+    "contract_version": "1.0.0",
+    "tool": "pmt_get_model_status",
+    "generated_at": "2026-11-12T06:04:54.066Z",
+    "ok": true,
+    "data": {
+      "model_store": {
+        "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-12T060152Z/runtime/models.json",
+        "exists": true,
+        "bytes": 370819,
+        "modified_at": "2026-11-12T06:04:10.047Z"
+      },
+      "probabilistic_projections": {
+        "path": "/home/jordan-stovik/Pardon_My_Trade/output/football-automation/heartbeat-2026-11-12T060152Z/runtime/probabilistic-projections.json",
+        "exists": false
+      }
+    }
+  }
+}

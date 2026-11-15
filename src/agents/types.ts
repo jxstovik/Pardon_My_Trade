@@ -61,6 +61,8 @@ export interface WaiverClaimAction {
   readonly addPlayerId: string;
   readonly dropPlayerId?: string;
   readonly faabBid?: number;
+  /** Manager claim preference, 1 = highest; distinct from league waiver rank. */
+  readonly priority?: number;
 }
 
 export interface ProposeTradeAction {
@@ -118,6 +120,7 @@ export interface OrchestratorResult {
   readonly lineup: RosterSlotInput[];
   readonly lineupExpectedPoints: number;
   readonly waiverCandidates: AddDropAction[];
+  readonly waiverClaims?: WaiverClaimAction[];
   readonly tradeCandidates: ProposeTradeAction[];
   readonly queued: QueuedAction[];
   readonly executed: AgentAction[];
